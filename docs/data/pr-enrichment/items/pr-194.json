@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-20T08:52:02.028Z",
+  "generatedAt": "2026-03-20T10:53:06.436Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 194,
-    "title": "11L Int6 QAT + Per-Dim SmearGate + SWA: 1.1453 BPB",
+    "title": "11L Int6 QAT + Per-Dim SmearGate + SWA: 1.1480 BPB (3-seed mean)",
     "state": "open",
-    "updatedAt": "2026-03-20T08:49:26Z",
-    "headSha": "6d4867a7b711a5d2ce313eb4d87130c36bde9ad4",
+    "updatedAt": "2026-03-20T10:46:52Z",
+    "headSha": "c4d2e3ab58ead1c0f38b40a0ea55c5380d707398",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/194",
     "authorLogin": "baudrillardsgh0st"
   },
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Int6 QAT with per-dimension SmearGate, SWA checkpoints, and high Muon weight decay keeps an 11-layer, 512-dim model quantization-friendly for the 16MB constraint.",
+    "summary": "Int6 QAT on an 11-layer 512-dim model plus per-dim SmearGate gating, SWA averaging, and high Muon weight decay to keep quantized weights stable.",
     "tags": [
       "quantization",
-      "optimizer",
-      "training-schedule",
-      "attention"
+      "architecture",
+      "muon",
+      "training-schedule"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Per-dimension SmearGate blending current and prior token embeddings",
-      "SWA over final half of training to smooth weights for quantization",
-      "High Muon weight decay plus int6 QAT with fp16 tied embeddings"
+      "Per-dim SmearGate gating",
+      "SWA checkpoint averaging",
+      "Int6 QAT with STE"
     ]
   },
   "compatibility": {

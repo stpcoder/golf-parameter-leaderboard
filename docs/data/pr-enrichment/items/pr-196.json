@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-20T10:22:47.782Z",
+  "generatedAt": "2026-03-20T10:52:57.079Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 196,
-    "title": "Add non-record submission: Structured-Memory FineWeb Smoke, 1xH100, val_bpb 1.7375",
+    "title": "Add non-record submission: Structured-Memory FineWeb Smoke",
     "state": "open",
-    "updatedAt": "2026-03-20T10:17:34Z",
+    "updatedAt": "2026-03-20T10:27:44Z",
     "headSha": "80065c1c8efd2b6a151d475011dea5edbaa4522a",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/196",
     "authorLogin": "sicauzxl"
@@ -19,7 +19,7 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Adapts a minimal structured-memory model into the official train_gpt FineWeb path to smoke-test evaluation, quantization, and artifact export.",
+    "summary": "Adapted a minimal structured-memory LM into the official train_gpt.py workflow to validate FineWeb/val_bpb evaluation, quantized export, and artifact-size accounting.",
     "tags": [
       "architecture",
       "evaluation",
@@ -29,9 +29,9 @@
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Structured-memory branch inside train_gpt.py",
-      "int8 + zlib artifact export under 16MB",
-      "Single-H100 FineWeb smoke with official val_bpb path"
+      "Structured-memory branch in official train_gpt path",
+      "Single-H100 FineWeb smoke via final_int8_zlib_roundtrip_exact",
+      "Int8+zlib export kept under 16MB"
     ]
   },
   "compatibility": {

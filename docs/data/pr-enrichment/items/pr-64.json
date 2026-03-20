@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-20T10:23:00.004Z",
+  "generatedAt": "2026-03-20T10:53:25.222Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 64,
     "title": "Record Update: val_bpb=0.9271 (val-only) + 1.1465 (standard)",
     "state": "open",
-    "updatedAt": "2026-03-20T10:03:40Z",
-    "headSha": "672f17de5c9fb0e772695dff11a81e092a70e0a4",
+    "updatedAt": "2026-03-20T10:32:05Z",
+    "headSha": "92d4a9122d506f2e87a19a33b493742c4ef015e4",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/64",
     "authorLogin": "yesbhautik"
   },
@@ -20,19 +20,19 @@
     "submissionCount": 2
   },
   "output": {
-    "summary": "SmearGate+BigramHash core with sliding-window eval, pairing val-only STE int6 QAT/compression with standard mixed int6/int8 export and fp16 passthrough.",
+    "summary": "SmearGate+BigramHash core w/ sliding-window eval, val-only STE fake-int6 QAT+zstd-22, and standard mixed int6/int8 export with fp16 passthrough.",
     "tags": [
       "val-only",
-      "sliding-window-eval",
+      "architecture",
       "quantization",
-      "optimizer"
+      "muon"
     ],
     "usesValOnly": true,
-    "valOnlyReasoning": "CombinedOptimal val-only submission trained solely on validation shards per the val-only regime.",
+    "valOnlyReasoning": "The Combined Optimal submission explicitly trains on the validation shard (val-only training regime).",
     "techniques": [
-      "SmearGate+BigramHash backbone with stride-64 sliding-window evaluation",
-      "Val-only STE fake-int6 QAT plus mixed int6/int8 post-quantization and zstd-22 compression",
-      "Standard track mixed int6/int8 export with fp16 tok_emb+c_k passthrough, Muon WD0.04, and SWA50"
+      "SmearGate+BigramHash sliding-window evaluation",
+      "STE fake-int6 QAT with zstd-22 memorization profile",
+      "Mixed int6/int8 export with fp16 passthrough plus Muon+SWA tuning"
     ]
   },
   "compatibility": {

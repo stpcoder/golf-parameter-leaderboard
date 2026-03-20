@@ -1,8 +1,31 @@
 {
-  "generatedAt": "2026-03-20T10:23:00.010Z",
+  "generatedAt": "2026-03-20T10:53:25.230Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 201,
+      "title": "Staging: LAWA-EMA frontier fork (pr162 base, SWA→LAWA)",
+      "status": "open",
+      "updatedAt": "2026-03-20T10:30:03Z",
+      "headSha": "2bbf09e41581941fe402e9db578ab705c1fc9ca0",
+      "generatedAt": "2026-03-20T10:52:53.330Z",
+      "summary": "Forks PR162 to add LAWA-EMA with per-step float32 shadow updates plus sliding-window evaluation in the staging profile for reproducible validation.",
+      "tags": [
+        "training-schedule",
+        "evaluation",
+        "sliding-window-eval"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-201.json"
+    },
     {
       "prNumber": 200,
       "title": "Record: SP4096 + Int6 QAT + NorMuon (val_bpb=1.2012)",
@@ -73,35 +96,13 @@
       "file": "items/pr-198.json"
     },
     {
-      "prNumber": 197,
-      "title": "Non-record: staging profile (LAWA + slide eval) on 8xH100 (val_bpb=1.18926428)",
-      "status": "open",
-      "updatedAt": "2026-03-20T09:27:48Z",
-      "headSha": "b7a199376e2f888febe1d4cb69085ada34cdc4db",
-      "generatedAt": "2026-03-20T09:52:57.995Z",
-      "summary": "Staging-profile run validates LAWA-enabled merged defaults with sliding-window eval on FineWeb sp1024 data using 8×H100 to benchmark reproducibility.",
-      "tags": [
-        "sliding-window-eval",
-        "training-schedule"
-      ],
-      "flags": {
-        "usesValOnly": false,
-        "usesValOnlyAi": false,
-        "usesValOnlyCollector": false
-      },
-      "compatibility": {
-        "valOnlyMatchesCollector": true
-      },
-      "file": "items/pr-197.json"
-    },
-    {
       "prNumber": 196,
-      "title": "Add non-record submission: Structured-Memory FineWeb Smoke, 1xH100, val_bpb 1.7375",
+      "title": "Add non-record submission: Structured-Memory FineWeb Smoke",
       "status": "open",
-      "updatedAt": "2026-03-20T10:17:34Z",
+      "updatedAt": "2026-03-20T10:27:44Z",
       "headSha": "80065c1c8efd2b6a151d475011dea5edbaa4522a",
-      "generatedAt": "2026-03-20T10:22:47.782Z",
-      "summary": "Adapts a minimal structured-memory model into the official train_gpt FineWeb path to smoke-test evaluation, quantization, and artifact export.",
+      "generatedAt": "2026-03-20T10:52:57.079Z",
+      "summary": "Adapted a minimal structured-memory LM into the official train_gpt.py workflow to validate FineWeb/val_bpb evaluation, quantized export, and artifact-size accounting.",
       "tags": [
         "architecture",
         "evaluation",
@@ -120,17 +121,17 @@
     },
     {
       "prNumber": 194,
-      "title": "11L Int6 QAT + Per-Dim SmearGate + SWA: 1.1453 BPB",
+      "title": "11L Int6 QAT + Per-Dim SmearGate + SWA: 1.1480 BPB (3-seed mean)",
       "status": "open",
-      "updatedAt": "2026-03-20T08:49:26Z",
-      "headSha": "6d4867a7b711a5d2ce313eb4d87130c36bde9ad4",
-      "generatedAt": "2026-03-20T08:52:02.028Z",
-      "summary": "Int6 QAT with per-dimension SmearGate, SWA checkpoints, and high Muon weight decay keeps an 11-layer, 512-dim model quantization-friendly for the 16MB constraint.",
+      "updatedAt": "2026-03-20T10:46:52Z",
+      "headSha": "c4d2e3ab58ead1c0f38b40a0ea55c5380d707398",
+      "generatedAt": "2026-03-20T10:53:06.436Z",
+      "summary": "Int6 QAT on an 11-layer 512-dim model plus per-dim SmearGate gating, SWA averaging, and high Muon weight decay to keep quantized weights stable.",
       "tags": [
         "quantization",
-        "optimizer",
-        "training-schedule",
-        "attention"
+        "architecture",
+        "muon",
+        "training-schedule"
       ],
       "flags": {
         "usesValOnly": false,
@@ -1624,12 +1625,13 @@
       "prNumber": 108,
       "title": "[Non-record] Depth-Recurrent 3×3 MLX — dev submission (Apple Silicon)",
       "status": "open",
-      "updatedAt": "2026-03-20T09:01:00Z",
-      "headSha": "b96f621673ec199423e7d278d35ee5d127caa2d6",
-      "generatedAt": "2026-03-20T09:22:32.661Z",
-      "summary": "Depth-recurrent GPT loops three unique Transformer blocks with AdaLN/FiLM conditioning, GQA, and compression for MLX Apple M3 dev runs.",
+      "updatedAt": "2026-03-20T10:28:06Z",
+      "headSha": "f031057f474d5549e633a281b5af57ddad40d628",
+      "generatedAt": "2026-03-20T10:53:10.123Z",
+      "summary": "Depth-recurrent GPT stacks three unique 3×3 loops with AdaLN/FiLM conditioning and GQA while compressing the 13.2M params to 9.35MB for non-record dev runs.",
       "tags": [
         "architecture",
+        "attention",
         "compression",
         "non-record"
       ],
@@ -2254,14 +2256,15 @@
     {
       "prNumber": 71,
       "title": "Add Parameter Golf submission: Depth12 Dim416 KV4",
-      "status": "open",
-      "updatedAt": "2026-03-20T09:17:22Z",
+      "status": "closed",
+      "updatedAt": "2026-03-20T10:42:02Z",
       "headSha": "adb33078a6e6a7334da7a9673d7fc0a8ed868de3",
-      "generatedAt": "2026-03-20T09:22:39.048Z",
-      "summary": "12-layer 416-dim tied-embedding transformer with KV4 heads and a 10-minute H100 run keeps the model within the 16MB constraint.",
+      "generatedAt": "2026-03-20T10:53:16.856Z",
+      "summary": "10-min 8×H100 run uses a deeper-narrower 12-layer, 416-dim Transformer with tied embeddings to stay under the 16MB cap while mirroring the baseline.",
       "tags": [
         "architecture",
-        "quantization"
+        "quantization",
+        "training-schedule"
       ],
       "flags": {
         "usesValOnly": false,
@@ -2372,15 +2375,15 @@
       "prNumber": 64,
       "title": "Record Update: val_bpb=0.9271 (val-only) + 1.1465 (standard)",
       "status": "open",
-      "updatedAt": "2026-03-20T10:03:40Z",
-      "headSha": "672f17de5c9fb0e772695dff11a81e092a70e0a4",
-      "generatedAt": "2026-03-20T10:23:00.004Z",
-      "summary": "SmearGate+BigramHash core with sliding-window eval, pairing val-only STE int6 QAT/compression with standard mixed int6/int8 export and fp16 passthrough.",
+      "updatedAt": "2026-03-20T10:32:05Z",
+      "headSha": "92d4a9122d506f2e87a19a33b493742c4ef015e4",
+      "generatedAt": "2026-03-20T10:53:25.222Z",
+      "summary": "SmearGate+BigramHash core w/ sliding-window eval, val-only STE fake-int6 QAT+zstd-22, and standard mixed int6/int8 export with fp16 passthrough.",
       "tags": [
         "val-only",
-        "sliding-window-eval",
+        "architecture",
         "quantization",
-        "optimizer"
+        "muon"
       ],
       "flags": {
         "usesValOnly": true,
