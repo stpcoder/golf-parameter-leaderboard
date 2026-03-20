@@ -25,7 +25,7 @@ for attempt in $(seq 1 "$ATTEMPTS"); do
   git checkout "$BRANCH"
   git reset --hard "origin/$BRANCH"
   git config user.name "stpcoder"
-  git config user.email "89475434+stpcoder@users.noreply.github.com"
+  git config user.email "thbrian@postech.ac.kr"
 
   npm run collect
   npm run enrich:prs
