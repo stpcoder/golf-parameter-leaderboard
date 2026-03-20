@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-19T19:37:07.218Z",
+  "generatedAt": "2026-03-20T17:24:11.114Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 122,
-    "title": "Record: Sliding Window Eval, 2048 Vocab Size, fp16 embeddings, SWA, NorMuon, FA3; val_bpb:1.1585",
+    "title": "Record: Sliding Window Eval, 2048 Vocab Size, fp16 embeddings, SWA, NorMuon, FA3; mean_val_bpb:1.160",
     "state": "open",
-    "updatedAt": "2026-03-19T19:34:18Z",
-    "headSha": "81056de88bef19657026c76165477969c078d0a7",
+    "updatedAt": "2026-03-20T17:11:09Z",
+    "headSha": "63c36ab5f1b437c905c088f46ac65313f3b28533",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/122",
     "authorLogin": "mtybadger"
   },
@@ -19,18 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "NorMuon + FlashAttention 3 run with quant-awareness, int6 weights/FP16 embeddings, 2048 vocab, 3× MLP, SWA, and sliding-window eval.",
+    "summary": "Combines a 2048-BPE tokenizer with fp16 embeddings, NorMuon blocks, int6 weights via FA3-aware fake quantization, SWA, and sliding-window eval.",
     "tags": [
-      "sliding-window-eval",
+      "tokenization",
       "quantization",
-      "architecture"
+      "architecture",
+      "evaluation"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "int6 row-wise quantization with fp16 embeddings",
-      "NorMuon+FA3 stack with 3× MLP over 2048 vocab",
-      "SWA checkpoint averaging during warmdown"
+      "2048 BPE tokenizer + fp16 embeddings to balance vocab/resolution",
+      "NorMuon blocks with FA3-backed int6 fake-quant training",
+      "SWA checkpoint averaging plus sliding-window eval (seqlen1024 stride64)"
     ]
   },
   "compatibility": {

@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-20T16:54:56.338Z",
+  "generatedAt": "2026-03-20T17:24:18.351Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 108,
-    "title": "[Non-record] Depth-Recurrent 3×3 MLX — dev submission (Apple Silicon)",
-    "state": "open",
-    "updatedAt": "2026-03-20T16:51:40Z",
-    "headSha": "655aeda48d155930bf42b98d2ac837674ce94882",
+    "title": "Record: 11L MLP3x + SmearGate + Error Correction Table",
+    "state": "closed",
+    "updatedAt": "2026-03-20T17:14:05Z",
+    "headSha": "f84301d0c8f99317b5acb1e1edc19bee871407b8",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/108",
     "authorLogin": "kellyvv"
   },
@@ -19,19 +19,17 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Depth-recurrent GPT cycles three unique 3×3 blocks with AdaLN/FiLM conditioning and GQA, trained on Apple Silicon via MLX with int8+zlib compression.",
+    "summary": "Eval builds a delta-encoded position→token correction table that boosts logits for fixed-val worst predictions via direct lookups.",
     "tags": [
-      "architecture",
-      "quantization",
       "evaluation",
+      "compression",
       "non-record"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Depth recurrence with 3 unique Transformer blocks looped 3×",
-      "AdaLN/FiLM per-loop gating plus sinusoidal cycle sigmoid gates with GQA",
-      "Int8+zlib compression paired with transient test-time adaptation"
+      "Delta+varint encoded position indexing to map fixed-val tokens",
+      "Eval-time logit boosting for matched positions to neutralize documented errors"
     ]
   },
   "compatibility": {
