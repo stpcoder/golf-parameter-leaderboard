@@ -1,8 +1,32 @@
 {
-  "generatedAt": "2026-03-20T05:52:11.684Z",
+  "generatedAt": "2026-03-20T06:21:57.411Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 178,
+      "title": "Add Nuclear Stack submission: 1.16668 BPB (seed 2884431328)",
+      "status": "open",
+      "updatedAt": "2026-03-20T06:20:41Z",
+      "headSha": "7f8eeb7c92be06888c2e64a54bcfabb731ae9165",
+      "generatedAt": "2026-03-20T06:21:46.572Z",
+      "summary": "Combines an int6-quantized 9-layer GQA transformer with 3x MLP, SmearGate/BigramHash, SWA/Muon tuning, and sliding-window test-time training.",
+      "tags": [
+        "val-only",
+        "architecture",
+        "quantization",
+        "optimizer"
+      ],
+      "flags": {
+        "usesValOnly": true,
+        "usesValOnlyAi": true,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": false
+      },
+      "file": "items/pr-178.json"
+    },
     {
       "prNumber": 176,
       "title": "Add submission: 10L Slide64 Mid6, val_bpb=1.1733",
@@ -53,14 +77,15 @@
       "prNumber": 174,
       "title": "Add ContextFuse-2048-BigramSmear submission",
       "status": "open",
-      "updatedAt": "2026-03-20T05:22:21Z",
-      "headSha": "0f75a5fae7bde12ac89b81a0237fc8df15a34a1a",
-      "generatedAt": "2026-03-20T05:51:37.112Z",
-      "summary": "Enhances ContextFuse-2048 with BigramHash/SmearGate inputs, Muon+SWA optimizations, and mixed-int6 export for a compression-aware training/export stack with safe sliding-window eval.",
+      "updatedAt": "2026-03-20T06:18:46Z",
+      "headSha": "5c2d1ada9020d99742e8fa7fa3856575abc318c6",
+      "generatedAt": "2026-03-20T06:21:50.856Z",
+      "summary": "Builds on ContextFuse-2048 with BigramHash/SmearGate inputs, mixed int6 export plus Muon/SWA training tweaks, and a corrected sliding-window scorer for val metrics.",
       "tags": [
-        "architecture",
         "quantization",
-        "mixed-precision"
+        "tokenization",
+        "training-schedule",
+        "evaluation"
       ],
       "flags": {
         "usesValOnly": false,
@@ -1179,13 +1204,14 @@
       "prNumber": 108,
       "title": "[Non-record] Depth-Recurrent 3×3 MLX — dev submission (Apple Silicon)",
       "status": "open",
-      "updatedAt": "2026-03-20T05:43:22Z",
-      "headSha": "a418c77dad0577c210427c4d350473c311a17348",
-      "generatedAt": "2026-03-20T05:52:01.262Z",
-      "summary": "Depth-recurrent GPT reuses 3 unique blocks across 3 loops with AdaLN conditioning and GQA on Apple MLX, then int8+zlib compresses to 16MB.",
+      "updatedAt": "2026-03-20T06:01:06Z",
+      "headSha": "ce7da9f3ab164464c7ddf960f527d8c86325a820",
+      "generatedAt": "2026-03-20T06:21:57.397Z",
+      "summary": "Depth-recurrent GPT with 3 unique blocks iterated thrice plus AdaLN conditioning and GQA, trained on MLX Apple M3 Max.",
       "tags": [
         "architecture",
-        "compression",
+        "attention",
+        "evaluation",
         "non-record"
       ],
       "flags": {

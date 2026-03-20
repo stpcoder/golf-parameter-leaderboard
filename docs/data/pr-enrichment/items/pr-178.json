@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-20T06:21:46.572Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 178,
+    "title": "Add Nuclear Stack submission: 1.16668 BPB (seed 2884431328)",
+    "state": "open",
+    "updatedAt": "2026-03-20T06:20:41Z",
+    "headSha": "7f8eeb7c92be06888c2e64a54bcfabb731ae9165",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/178",
+    "authorLogin": "timowhite88"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-20_NuclearStack_FarnsworthTech/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Combines an int6-quantized 9-layer GQA transformer with 3x MLP, SmearGate/BigramHash, SWA/Muon tuning, and sliding-window test-time training.",
+    "tags": [
+      "val-only",
+      "architecture",
+      "quantization",
+      "optimizer"
+    ],
+    "usesValOnly": true,
+    "valOnlyReasoning": "Full-model SGD test-time training adapts to validation data before sliding-window scoring.",
+    "techniques": [
+      "Per-row Int6 quantization with zstd compression",
+      "3x MLP with SmearGate and BigramHash in a 9-layer GQA stack",
+      "Sliding-window test-time SGD adaptation before scoring"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": true,
+    "finalUsesValOnly": true,
+    "valOnlyMatchesCollector": false
+  }
+}
