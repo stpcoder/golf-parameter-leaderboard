@@ -1,38 +1,39 @@
 {
-  "generatedAt": "2026-03-20T16:54:48.333Z",
+  "generatedAt": "2026-03-20T23:26:19.041Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 150,
     "title": "Record: Int6 QAT + BigramHash + Muon WD (val_bpb=1.1577)",
     "state": "open",
-    "updatedAt": "2026-03-20T16:25:37Z",
-    "headSha": "0aad0982206790b679f1dee9e5cfee7d58f646ac",
+    "updatedAt": "2026-03-20T23:25:18Z",
+    "headSha": "da669f60da874107f806f064e3e74a28ab85f374",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/150",
     "authorLogin": "yahya010"
   },
   "inputs": {
-    "hash": "333c1651a7101d4267d971ebe25bd793307b61c975586544bbd6b9a9c3a8cf24",
+    "hash": "c4f8d017d13e812b0ad5a78b677f8350df1124736cd3f84c8d4e37f273206c70",
     "readmePaths": [
+      "records/track_10min_16mb/2026-03-20_11L_SmearGate_OrthoInit_SWA_TTT/README.md",
       "records/track_10min_16mb/2026-03-20_Int6QAT_BigramHash_MLP1344/README.md",
       "records/track_10min_16mb/2026-03-20_Int6QAT_BigramHash_WD/README.md"
     ],
-    "submissionCount": 2
+    "submissionCount": 3
   },
   "output": {
-    "summary": "Ten-layer int6-QAT GPT stacks BigramHash context embeddings, 2.6× MLP, Muon+WD tuning, and sliding-window eval with zstd post-quant compression.",
+    "summary": "Stacked STE int6 QAT with BigramHash token-pair embeddings, expanded MLP, and Muon WD tuning plus sliding-window eval for tighter quantized transformer artifacts.",
     "tags": [
       "quantization",
       "architecture",
-      "training-schedule",
-      "compression"
+      "optimizer",
+      "evaluation"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "BigramHash bigram embeddings added pre-RMSNorm",
-      "STE int6 QAT + full quant [-31,31] with zstd-22",
-      "Muon 0.99/WD0.02, grad clip 0.3, sliding-window eval stride 64"
+      "STE int6 QAT with zero quant gap and zstd-22 compression",
+      "BigramHash bigram embedding injection before RMSNorm",
+      "Muon momentum and weight decay tuning paired with sliding-window evaluation"
     ]
   },
   "compatibility": {

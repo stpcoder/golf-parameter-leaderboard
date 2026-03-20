@@ -1,21 +1,92 @@
 {
-  "generatedAt": "2026-03-20T22:55:59.683Z",
+  "generatedAt": "2026-03-20T23:26:19.060Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
     {
-      "prNumber": 281,
-      "title": "Record: val_bpb=1.1374 (3-seed mean 1.1381), FA2+SWA+WD0.042",
+      "prNumber": 286,
+      "title": "Record: 10L Int5-MLP + SmearGate + BigramHash + Late QAT (val_bpb=1.1628)",
       "status": "open",
-      "updatedAt": "2026-03-20T22:50:29Z",
-      "headSha": "4d12c598caeb01a3e72a6d6703fdc1b3e092ebda",
-      "generatedAt": "2026-03-20T22:55:29.239Z",
-      "summary": "Farnsworth-derived 11L INT6 transformer with SmearGate+BigramHash, FlashAttention2, Muon+SWA, and weight-decay tuning to target ~15.5MB artifacts.",
+      "updatedAt": "2026-03-20T23:18:44Z",
+      "headSha": "3a456b975ff12b7b0ff8add8e4a9ed5f86946724",
+      "generatedAt": "2026-03-20T23:25:49.627Z",
+      "summary": "Mixed int5 MLP/int6 attention export plus SmearGate, BigramHash, Muon decay, SWA warmdown, and late QAT to fit a 10-layer ReLU² under 16MB.",
       "tags": [
+        "quantization",
         "architecture",
-        "attention",
         "optimizer",
         "training-schedule"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-286.json"
+    },
+    {
+      "prNumber": 285,
+      "title": "Add non-record local A100 TTT eval-stride0 submission",
+      "status": "open",
+      "updatedAt": "2026-03-20T23:08:11Z",
+      "headSha": "91ce9ca43d0db6650d91885f6c91fdfb56a08808",
+      "generatedAt": "2026-03-20T23:25:54.816Z",
+      "summary": "Local 1xA100 non-record run uses LoRA TTT with standard EVAL_STRIDE=0 and a 600s cap to seed the 16MB leaderboard.",
+      "tags": [
+        "non-record",
+        "training-schedule",
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-285.json"
+    },
+    {
+      "prNumber": 284,
+      "title": "Add non-record local A100 PR60-stack reproduction",
+      "status": "open",
+      "updatedAt": "2026-03-20T23:07:05Z",
+      "headSha": "217b7a9c40753561d17c2a5b1c9d9f45dd0f07da",
+      "generatedAt": "2026-03-20T23:25:59.127Z",
+      "summary": "Reproduces the PR60-style 10-layer stack with FP16 tied embeddings, Muon WD, overtone init, residual mixing, and sliding eval on 1×A100 under 600s.",
+      "tags": [
+        "sliding-window-eval",
+        "muon",
+        "architecture",
+        "non-record"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-284.json"
+    },
+    {
+      "prNumber": 281,
+      "title": "Non-record: val_bpb=1.1374, FA2+SWA adaptation of Farnsworth",
+      "status": "open",
+      "updatedAt": "2026-03-20T22:56:07Z",
+      "headSha": "4d12c598caeb01a3e72a6d6703fdc1b3e092ebda",
+      "generatedAt": "2026-03-20T23:26:04.244Z",
+      "summary": "Adapt FarnsworthEngine with FA2 FlashAttention fallback, INT6 quant, MUON WD tuning, SWA, and TTT for artifact-size-aware compression.",
+      "tags": [
+        "architecture",
+        "quantization",
+        "optimizer",
+        "evaluation"
       ],
       "flags": {
         "usesValOnly": false,
@@ -542,15 +613,14 @@
       "prNumber": 250,
       "title": "Complexity MoE v4: Token-Routed I64 + PID + CUDA Scatter + Int6 (26.5M params)",
       "status": "open",
-      "updatedAt": "2026-03-20T22:52:07Z",
-      "headSha": "f53a4514167a57dd034802a5131bf025e73c343b",
-      "generatedAt": "2026-03-20T22:55:54.869Z",
-      "summary": "Token-routed 4-expert SwiGLU MoE with PID mu dynamics, SGDR warm restarts, and CUDA-native Int6 scatter/gather with sliding-window evaluation.",
+      "updatedAt": "2026-03-20T23:17:43Z",
+      "headSha": "a4d696c8e2ede0464f354a2684bd50daba69a5a8",
+      "generatedAt": "2026-03-20T23:26:08.300Z",
+      "summary": "Token-routed 4-expert SwiGLU MoE with CUDA scatter, PID dynamics, and cosine warm-restart SGD, plus int6 compression for low-memory deployment.",
       "tags": [
         "architecture",
         "training-schedule",
-        "quantization",
-        "evaluation"
+        "quantization"
       ],
       "flags": {
         "usesValOnly": false,
@@ -991,13 +1061,13 @@
       "prNumber": 221,
       "title": "Submission: 10L + Sliding Window eval (mean val_bpb=1.1899)",
       "status": "open",
-      "updatedAt": "2026-03-20T15:44:20Z",
-      "headSha": "15f88066637ca0945ff484fa1ef36588d5af4c5b",
-      "generatedAt": "2026-03-20T15:54:07.271Z",
-      "summary": "Raised train_seq_len to 4096 for the 10-layer model and scored across stride-64 sliding windows so evaluation mirrors long-context training.",
+      "updatedAt": "2026-03-20T23:20:43Z",
+      "headSha": "f8aaba8575644ae5e783c4d040f85e40a27822e1",
+      "generatedAt": "2026-03-20T23:26:13.120Z",
+      "summary": "Trained the 10-layer model on 4k-token chunks and scored via stride-64 sliding windows so evaluation matches long-range training context.",
       "tags": [
         "training-schedule",
-        "sliding-window-eval",
+        "architecture",
         "evaluation"
       ],
       "flags": {
@@ -2233,15 +2303,15 @@
       "prNumber": 150,
       "title": "Record: Int6 QAT + BigramHash + Muon WD (val_bpb=1.1577)",
       "status": "open",
-      "updatedAt": "2026-03-20T16:25:37Z",
-      "headSha": "0aad0982206790b679f1dee9e5cfee7d58f646ac",
-      "generatedAt": "2026-03-20T16:54:48.333Z",
-      "summary": "Ten-layer int6-QAT GPT stacks BigramHash context embeddings, 2.6× MLP, Muon+WD tuning, and sliding-window eval with zstd post-quant compression.",
+      "updatedAt": "2026-03-20T23:25:18Z",
+      "headSha": "da669f60da874107f806f064e3e74a28ab85f374",
+      "generatedAt": "2026-03-20T23:26:19.041Z",
+      "summary": "Stacked STE int6 QAT with BigramHash token-pair embeddings, expanded MLP, and Muon WD tuning plus sliding-window eval for tighter quantized transformer artifacts.",
       "tags": [
         "quantization",
         "architecture",
-        "training-schedule",
-        "compression"
+        "optimizer",
+        "evaluation"
       ],
       "flags": {
         "usesValOnly": false,

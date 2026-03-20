@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-20T23:25:59.127Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 284,
+    "title": "Add non-record local A100 PR60-stack reproduction",
+    "state": "open",
+    "updatedAt": "2026-03-20T23:07:05Z",
+    "headSha": "217b7a9c40753561d17c2a5b1c9d9f45dd0f07da",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/284",
+    "authorLogin": "DanishjeetSingh"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-03-20_LocalA100_PR60Stack_Repro/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Reproduces the PR60-style 10-layer stack with FP16 tied embeddings, Muon WD, overtone init, residual mixing, and sliding eval on 1×A100 under 600s.",
+    "tags": [
+      "sliding-window-eval",
+      "muon",
+      "architecture",
+      "non-record"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "PR60 10-layer stack with spectral init and residual mix",
+      "FP16 tied embeddings exported via Muon weight decay",
+      "Sliding-window final evaluation under 600-second cap"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

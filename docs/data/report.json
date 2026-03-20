@@ -1,31 +1,25 @@
 {
-  "generatedAt": "2026-03-20T22:54:59.792Z",
+  "generatedAt": "2026-03-20T23:25:19.334Z",
   "sourceRepo": "openai/parameter-golf",
   "siteRoot": null,
   "tokenConfigured": true,
   "skipped": [
     {
-      "pr": 282,
+      "pr": 283,
       "reason": "no-record-submission-json"
-    },
-    {
-      "stage": "pull-request-readme",
-      "pr": 279,
-      "submissionPath": "records/track_10min_16mb/2026-03-20_Evreu1pro/submission.json",
-      "reason": "missing-or-unreadable-readme"
     }
   ],
   "errors": [],
   "incremental": {
     "mode": "incremental",
-    "cutoffUpdatedAt": "2026-03-20T22:24:57Z",
+    "cutoffUpdatedAt": "2026-03-20T22:52:57Z",
     "pagesScanned": 2,
     "prsScanned": 200,
-    "prsRefreshed": 7,
-    "prsReused": 193,
+    "prsRefreshed": 8,
+    "prsReused": 192,
     "stoppedEarly": true,
     "refreshFailures": 0,
-    "cacheEntries": 260,
+    "cacheEntries": 264,
     "retryWindowRetained": false
   }
 }

@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-20T23:25:54.816Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 285,
+    "title": "Add non-record local A100 TTT eval-stride0 submission",
+    "state": "open",
+    "updatedAt": "2026-03-20T23:08:11Z",
+    "headSha": "91ce9ca43d0db6650d91885f6c91fdfb56a08808",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/285",
+    "authorLogin": "DanishjeetSingh"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-03-20_LocalA100_TTT_EvalStride0/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Local 1xA100 non-record run uses LoRA TTT with standard EVAL_STRIDE=0 and a 600s cap to seed the 16MB leaderboard.",
+    "tags": [
+      "non-record",
+      "training-schedule",
+      "evaluation"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "LoRA TTT-enabled training",
+      "Standard final EVAL_STRIDE=0 evaluation",
+      "600s wallclock cap for 16MB baseline"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

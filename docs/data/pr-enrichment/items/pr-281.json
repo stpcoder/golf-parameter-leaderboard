@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-20T22:55:29.239Z",
+  "generatedAt": "2026-03-20T23:26:04.244Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 281,
-    "title": "Record: val_bpb=1.1374 (3-seed mean 1.1381), FA2+SWA+WD0.042",
+    "title": "Non-record: val_bpb=1.1374, FA2+SWA adaptation of Farnsworth",
     "state": "open",
-    "updatedAt": "2026-03-20T22:50:29Z",
+    "updatedAt": "2026-03-20T22:56:07Z",
     "headSha": "4d12c598caeb01a3e72a6d6703fdc1b3e092ebda",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/281",
     "authorLogin": "charmquark1984"
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Farnsworth-derived 11L INT6 transformer with SmearGate+BigramHash, FlashAttention2, Muon+SWA, and weight-decay tuning to target ~15.5MB artifacts.",
+    "summary": "Adapt FarnsworthEngine with FA2 FlashAttention fallback, INT6 quant, MUON WD tuning, SWA, and TTT for artifact-size-aware compression.",
     "tags": [
       "architecture",
-      "attention",
+      "quantization",
       "optimizer",
-      "training-schedule"
+      "evaluation"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "SmearGate and BigramHash blended features",
-      "Muon optimizer with SWA and precise WD targeting",
-      "FlashAttention 2 fallback atop INT6 quantization"
+      "INT6 mixed-precision 11-layer transformer with SmearGate and BigramHash",
+      "MUON optimizer with tuned weight decay and SWA warmdown to target ~15.5MB artifacts",
+      "TTT sliding-window eval on FA2 FlashAttention weights"
     ]
   },
   "compatibility": {

@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-20T23:25:49.627Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 286,
+    "title": "Record: 10L Int5-MLP + SmearGate + BigramHash + Late QAT (val_bpb=1.1628)",
+    "state": "open",
+    "updatedAt": "2026-03-20T23:18:44Z",
+    "headSha": "3a456b975ff12b7b0ff8add8e4a9ed5f86946724",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/286",
+    "authorLogin": "chris-buckley"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-20_10L_Int5MLP_SmearBigram_LateQAT/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Mixed int5 MLP/int6 attention export plus SmearGate, BigramHash, Muon decay, SWA warmdown, and late QAT to fit a 10-layer ReLU² under 16MB.",
+    "tags": [
+      "quantization",
+      "architecture",
+      "optimizer",
+      "training-schedule"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Mixed int5 MLP / int6 attention export with late QAT",
+      "SmearGate + BigramHash token-pair context without extra params",
+      "Muon optimizer with SWA warmdown and orthogonal init"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}
