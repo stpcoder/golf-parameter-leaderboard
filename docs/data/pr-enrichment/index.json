@@ -1,8 +1,56 @@
 {
-  "generatedAt": "2026-03-20T11:23:13.823Z",
+  "generatedAt": "2026-03-20T11:53:00.704Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 205,
+      "title": "MetaStack v3: 1.1792 sliding bpb, 10L BigramHash SmearGate OrthoInit SWA",
+      "status": "open",
+      "updatedAt": "2026-03-20T11:47:34Z",
+      "headSha": "ed1654a7b9a1c73086abd90e7db953343d7fbfc9",
+      "generatedAt": "2026-03-20T11:52:50.935Z",
+      "summary": "10-layer GPT blends BigramHash embeddings, SmearGate gating, OrthoInit, SWA, and mixed int5/int6 quantization under sliding-window eval.",
+      "tags": [
+        "architecture",
+        "quantization",
+        "training-schedule",
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-205.json"
+    },
+    {
+      "prNumber": 204,
+      "title": "Add record: INT6 10L SWA NorMuon, val_bpb=1.2320",
+      "status": "open",
+      "updatedAt": "2026-03-20T11:35:17Z",
+      "headSha": "cb598b3fe774fbe50c946a810b652284ca6ae987",
+      "generatedAt": "2026-03-20T11:52:55.061Z",
+      "summary": "10-layer GPT blends INT6 quantization, SWA snapshot averaging, and NorMuon optimizer with aggressive warmdown to hit 16MB while boosting pre-quant quality.",
+      "tags": [
+        "quantization",
+        "optimizer",
+        "architecture",
+        "training-schedule"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-204.json"
+    },
     {
       "prNumber": 201,
       "title": "Staging: LAWA-EMA frontier fork (pr162 base, SWA→LAWA)",
@@ -123,15 +171,14 @@
       "prNumber": 194,
       "title": "11L Int6 QAT + Per-Dim SmearGate + SWA: 1.1480 BPB (3-seed mean)",
       "status": "open",
-      "updatedAt": "2026-03-20T11:04:26Z",
-      "headSha": "c4d2e3ab58ead1c0f38b40a0ea55c5380d707398",
-      "generatedAt": "2026-03-20T11:23:00.904Z",
-      "summary": "Int6-aware 11-layer muon model employs per-dim SmearGate gating, SWA, and fp16 embedding passthrough for quant-friendly capacity under 16MB.",
+      "updatedAt": "2026-03-20T11:38:50Z",
+      "headSha": "9b9dbb0067e42dc7f3941bfe49d0cc13ff30b986",
+      "generatedAt": "2026-03-20T11:53:00.674Z",
+      "summary": "11L int6 QAT GPT blends per-dimension SmearGate, SWA, and high-Muon WD to keep weights quantization-friendly while using sliding-window eval.",
       "tags": [
         "quantization",
-        "muon",
         "training-schedule",
-        "compression"
+        "sliding-window-eval"
       ],
       "flags": {
         "usesValOnly": false,

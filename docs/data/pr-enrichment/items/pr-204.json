@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-20T11:52:55.061Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 204,
+    "title": "Add record: INT6 10L SWA NorMuon, val_bpb=1.2320",
+    "state": "open",
+    "updatedAt": "2026-03-20T11:35:17Z",
+    "headSha": "cb598b3fe774fbe50c946a810b652284ca6ae987",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/204",
+    "authorLogin": "Akasxh"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-20_INT6_10L_SWA_NorMuon/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "10-layer GPT blends INT6 quantization, SWA snapshot averaging, and NorMuon optimizer with aggressive warmdown to hit 16MB while boosting pre-quant quality.",
+    "tags": [
+      "quantization",
+      "optimizer",
+      "architecture",
+      "training-schedule"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "INT6 per-row quantization with amax scaling for 3.82x compression",
+      "SWA averaging of 50 warmdown snapshots before quantization",
+      "NorMuon optimizer plus Muon weight decay under a long cosine warmdown"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

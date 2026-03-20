@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-20T11:52:50.935Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 205,
+    "title": "MetaStack v3: 1.1792 sliding bpb, 10L BigramHash SmearGate OrthoInit SWA",
+    "state": "open",
+    "updatedAt": "2026-03-20T11:47:34Z",
+    "headSha": "ed1654a7b9a1c73086abd90e7db953343d7fbfc9",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/205",
+    "authorLogin": "xinpw8"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-20_MetaStack_v3_competitive/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "10-layer GPT blends BigramHash embeddings, SmearGate gating, OrthoInit, SWA, and mixed int5/int6 quantization under sliding-window eval.",
+    "tags": [
+      "architecture",
+      "quantization",
+      "training-schedule",
+      "evaluation"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "BigramHash+SmearGate token blending before projection",
+      "SWA-averaged Muon/AdamW regime with warmdown",
+      "Mixed int5 MLP and int6 attention quantization plus pruning"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}
