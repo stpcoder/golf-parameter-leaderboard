@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-20T13:53:37.668Z",
+  "generatedAt": "2026-03-20T14:54:03.069Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 108,
     "title": "[Non-record] Depth-Recurrent 3×3 MLX — dev submission (Apple Silicon)",
     "state": "open",
-    "updatedAt": "2026-03-20T13:49:42Z",
-    "headSha": "519744549518e5376d08d99801c47807c1a86ffb",
+    "updatedAt": "2026-03-20T14:28:19Z",
+    "headSha": "bdd81a008dfb41a7c89b85761d0afce222e51675",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/108",
     "authorLogin": "kellyvv"
   },
@@ -19,19 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Depth-recurrent GPT uses three unique blocks across three loops with AdaLN conditioning, GQA, and compression-aware params on Apple Silicon.",
+    "summary": "Depth-recurrent GPT reuses 3 unique blocks over 3 loops with AdaLN conditioning and GQA on Apple M3 via MLX, keeping the model under 10MB.",
     "tags": [
       "architecture",
-      "depth-width",
       "compression",
-      "evaluation"
+      "non-record"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Depth recurrence: 3 blocks iterated over 3 loops (9 effective layers)",
-      "AdaLN-conditioned loops with GQA heads and mini U-Net skips",
-      "Evaluation-time attention adaptation (TTT) during inference"
+      "AdaLN-conditioned depth recurrence with 3 looped blocks",
+      "GQA-enabled attention with 4 KV heads for compact capacity",
+      "int8+zlib compression to keep weights ~9.35MB"
     ]
   },
   "compatibility": {

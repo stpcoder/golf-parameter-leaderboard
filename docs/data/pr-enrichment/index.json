@@ -1,16 +1,63 @@
 {
-  "generatedAt": "2026-03-20T14:23:31.891Z",
+  "generatedAt": "2026-03-20T14:54:08.480Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
     {
+      "prNumber": 218,
+      "title": "qat + ttt + value embeddings",
+      "status": "open",
+      "updatedAt": "2026-03-20T14:32:21Z",
+      "headSha": "9d6b92ebe41cdb7baf8464eaf23ea1e13a750b5a",
+      "generatedAt": "2026-03-20T14:53:41.681Z",
+      "summary": "Combines per-row fake int8 QAT, shared gated value embeddings, and TTT LoRA with SWA plus temperature search atop a 10-layer Muon base.",
+      "tags": [
+        "quantization",
+        "architecture",
+        "training-schedule"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-218.json"
+    },
+    {
+      "prNumber": 217,
+      "title": "Record: SP4096 int6+zstd 10L496 overtone+phase sliding (val_bpb=1.1753)",
+      "status": "open",
+      "updatedAt": "2026-03-20T14:31:22Z",
+      "headSha": "42524bf08e2adccf6569d9df930dc7b0cc006263",
+      "generatedAt": "2026-03-20T14:53:48.139Z",
+      "summary": "10-layer 496-d model on SP4096 data uses int6-in-int8 quantization plus zstd22 and overtone/phase init, with sliding eval stride 64.",
+      "tags": [
+        "quantization",
+        "compression",
+        "sliding-window-eval",
+        "architecture"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-217.json"
+    },
+    {
       "prNumber": 215,
       "title": "Record: 11L Low-Rank Q192 (val_bpb=1.1548)",
       "status": "open",
-      "updatedAt": "2026-03-20T14:22:04Z",
+      "updatedAt": "2026-03-20T14:31:18Z",
       "headSha": "2dbf8aa64a0910aedcfa916d441f509139203920",
-      "generatedAt": "2026-03-20T14:23:31.858Z",
-      "summary": "11-layer transformer uses low-rank Q factorization to slim attention weights, speeding steps and making int6-friendly compression feasible inside the 16MB budget.",
+      "generatedAt": "2026-03-20T14:53:57.075Z",
+      "summary": "Factored each Q projection into a rank-192 bottleneck, allowing a deeper 11-layer encoder-decoder stack while tuning int6 quantization and sliding-window eval for 16MB track.",
       "tags": [
         "architecture",
         "quantization",
@@ -1812,15 +1859,14 @@
       "prNumber": 108,
       "title": "[Non-record] Depth-Recurrent 3×3 MLX — dev submission (Apple Silicon)",
       "status": "open",
-      "updatedAt": "2026-03-20T13:49:42Z",
-      "headSha": "519744549518e5376d08d99801c47807c1a86ffb",
-      "generatedAt": "2026-03-20T13:53:37.668Z",
-      "summary": "Depth-recurrent GPT uses three unique blocks across three loops with AdaLN conditioning, GQA, and compression-aware params on Apple Silicon.",
+      "updatedAt": "2026-03-20T14:28:19Z",
+      "headSha": "bdd81a008dfb41a7c89b85761d0afce222e51675",
+      "generatedAt": "2026-03-20T14:54:03.069Z",
+      "summary": "Depth-recurrent GPT reuses 3 unique blocks over 3 loops with AdaLN conditioning and GQA on Apple M3 via MLX, keeping the model under 10MB.",
       "tags": [
         "architecture",
-        "depth-width",
         "compression",
-        "evaluation"
+        "non-record"
       ],
       "flags": {
         "usesValOnly": false,
@@ -2160,16 +2206,17 @@
     },
     {
       "prNumber": 86,
-      "title": "Update:  MLP 3x + QAT + Int6 + Sliding Window (val_bpb 1.1652)",
+      "title": "Update: 11L MLP3x + WD=0.04 + zstd-22 (val_bpb 1.1502)",
       "status": "open",
-      "updatedAt": "2026-03-20T02:59:52Z",
-      "headSha": "8e4f5d15ba6a82e8589a11d297c98a8b1de1c005",
-      "generatedAt": "2026-03-20T03:20:47.344Z",
-      "summary": "Wider MLP (3× hidden) with int6 QAT weights, fp16 tied embeddings, and sliding-window stride-64 eval for the compressed 10m/16MB track.",
+      "updatedAt": "2026-03-20T14:28:49Z",
+      "headSha": "1641a23486b3a5675c8fcc51f734b394b525105f",
+      "generatedAt": "2026-03-20T14:54:08.469Z",
+      "summary": "11-layer FNet with 3x MLPs, int6 QAT, decoupled weight decay, zstd-22 compression, and sliding-window eval to hit 16MB under the 10min track.",
       "tags": [
         "quantization",
         "architecture",
-        "sliding-window-eval"
+        "compression",
+        "evaluation"
       ],
       "flags": {
         "usesValOnly": false,

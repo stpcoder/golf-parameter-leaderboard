@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-20T14:23:31.858Z",
+  "generatedAt": "2026-03-20T14:53:57.075Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 215,
     "title": "Record: 11L Low-Rank Q192 (val_bpb=1.1548)",
     "state": "open",
-    "updatedAt": "2026-03-20T14:22:04Z",
+    "updatedAt": "2026-03-20T14:31:18Z",
     "headSha": "2dbf8aa64a0910aedcfa916d441f509139203920",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/215",
     "authorLogin": "JayCheng113"
@@ -19,18 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "11-layer transformer uses low-rank Q factorization to slim attention weights, speeding steps and making int6-friendly compression feasible inside the 16MB budget.",
+    "summary": "Factored each Q projection into a rank-192 bottleneck, allowing a deeper 11-layer encoder-decoder stack while tuning int6 quantization and sliding-window eval for 16MB track.",
     "tags": [
       "architecture",
       "quantization",
       "evaluation"
     ],
     "usesValOnly": false,
-    "valOnlyReasoning": "",
+    "valOnlyReasoning": "False because all submissions train on full training data with standard validation scoring.",
     "techniques": [
-      "Factored Q projection (r=192) in the 11-layer transformer with encoder-decoder skips",
-      "Int6 per-row quantization plus zstd-22 compression to fit the 16MB artifact limit",
-      "Sliding-window evaluation (stride=64) for final scoring"
+      "Rank-192 low-rank Q factorization to shrink attention parameters",
+      "Extra encoder-decoder layers enabled by parameter savings",
+      "Int6 per-row quantization with sliding-window scoring"
     ]
   },
   "compatibility": {

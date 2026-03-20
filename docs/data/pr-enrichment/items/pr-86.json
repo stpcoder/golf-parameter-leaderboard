@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-20T03:20:47.344Z",
+  "generatedAt": "2026-03-20T14:54:08.469Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 86,
-    "title": "Update:  MLP 3x + QAT + Int6 + Sliding Window (val_bpb 1.1652)",
+    "title": "Update: 11L MLP3x + WD=0.04 + zstd-22 (val_bpb 1.1502)",
     "state": "open",
-    "updatedAt": "2026-03-20T02:59:52Z",
-    "headSha": "8e4f5d15ba6a82e8589a11d297c98a8b1de1c005",
+    "updatedAt": "2026-03-20T14:28:49Z",
+    "headSha": "1641a23486b3a5675c8fcc51f734b394b525105f",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/86",
     "authorLogin": "aruniyer"
   },
@@ -19,18 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Wider MLP (3× hidden) with int6 QAT weights, fp16 tied embeddings, and sliding-window stride-64 eval for the compressed 10m/16MB track.",
+    "summary": "11-layer FNet with 3x MLPs, int6 QAT, decoupled weight decay, zstd-22 compression, and sliding-window eval to hit 16MB under the 10min track.",
     "tags": [
       "quantization",
       "architecture",
-      "sliding-window-eval"
+      "compression",
+      "evaluation"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "MLP 3× hidden expansion with ReLU² layers",
-      "QAT int6 weights via STE in CastedLinear",
-      "Sliding-window eval stride 64 with fp16 tied embeddings"
+      "int6 quantization-aware training",
+      "zstd-22 compressed artifact",
+      "sliding-window stride=64 evaluation"
     ]
   },
   "compatibility": {
