@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-19T17:27:46.466Z",
+  "generatedAt": "2026-03-20T07:23:02.495Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 64,
     "title": "Record: val_bpb=0.9695 (val-only) + val_bpb=1.1629 (standard)",
     "state": "open",
-    "updatedAt": "2026-03-19T17:03:05Z",
-    "headSha": "978e90cd2bad14eef350e1a4ef8b64cfd59f631a",
+    "updatedAt": "2026-03-20T07:06:18Z",
+    "headSha": "672f17de5c9fb0e772695dff11a81e092a70e0a4",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/64",
     "authorLogin": "yesbhautik"
   },
@@ -20,19 +20,19 @@
     "submissionCount": 2
   },
   "output": {
-    "summary": "MLP-3x with STE int6 QAT, mixed quantization, tuned Muon and sliding-window eval, plus a val-only variant using the same architecture.",
+    "summary": "Val-only run stacks STE fake-int6 QAT with mixed post-training quant, widened 3× MLP, tuned Muon, and sliding-window eval for robust int6 deployment.",
     "tags": [
+      "val-only",
       "quantization",
       "sliding-window-eval",
-      "optimizer",
-      "val-only"
+      "optimizer"
     ],
     "usesValOnly": true,
-    "valOnlyReasoning": "CombinedOptimal submission explicitly trains on the validation shard per organizer-approved val-only regime.",
+    "valOnlyReasoning": "CombinedOptimal submission explicitly trains on validation shards under organizer-approved val-only regime.",
     "techniques": [
-      "MLP-3x + tuned Muon optimizer (momentum 0.99, LR 0.02, warmdown 3k, seq_len 4096)",
-      "STE fake-int6 QAT plus mixed int6/int8 post-training quantization",
-      "Sliding-window evaluation (stride 64) with shared architecture for val-only and standard runs"
+      "STE fake-int6 QAT plus int6/int8 mixed post-training quant",
+      "MLP 3× expansion with seq_len 4096 and tuned Muon (0.99 momentum, LR 0.02)",
+      "Sliding-window evaluation stride 64 to score long context"
     ]
   },
   "compatibility": {

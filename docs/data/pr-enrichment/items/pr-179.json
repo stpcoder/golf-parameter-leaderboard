@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-20T06:51:43.933Z",
+  "generatedAt": "2026-03-20T07:22:46.316Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 179,
-    "title": "Add 11L WD submissions: Non-Val SOTA record (1.1472 BPB) + Val-Only aside (0.9274 BPB)",
+    "title": "Record: 11L, int6+zstd, decoupled WD (val_bpb = 1.1472)",
     "state": "open",
-    "updatedAt": "2026-03-20T06:43:15Z",
-    "headSha": "2b39315347a7faa90811ef707b436f2f4d5a0c0b",
+    "updatedAt": "2026-03-20T07:15:40Z",
+    "headSha": "e25aee67b22361b15da1480e394f554d52c6d2fc",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/179",
     "authorLogin": "devin-cog"
   },
@@ -20,7 +20,7 @@
     "submissionCount": 2
   },
   "output": {
-    "summary": "11-layer GQA GPT uses tuned Muon weight decay and int6+fp16 quantization with sliding-window eval to fit under 16MB for the 10min track.",
+    "summary": "11-layer GQA GPT with decoupled Muon WD fits under 16MB via int6+zstd quantization and sliding-window eval for the 10min/16MB submission.",
     "tags": [
       "val-only",
       "architecture",
@@ -28,11 +28,11 @@
       "optimizer"
     ],
     "usesValOnly": false,
-    "valOnlyReasoning": "",
+    "valOnlyReasoning": "Main record trains on standard shards; val-only run is a non-record aside.",
     "techniques": [
-      "11-layer GPT with 4-KV-head GQA and tied embeddings",
-      "Decoupled Muon weight decay tuning to shrink the int6 quantization gap",
-      "Sliding-window eval (stride 64) with fp16 embeddings"
+      "11L GQA GPT with 4 KV heads",
+      "Decoupled Muon weight decay + higher LR to shrink quant gap",
+      "Int6 per-row quant + zstd compression with sliding-window eval"
     ]
   },
   "compatibility": {

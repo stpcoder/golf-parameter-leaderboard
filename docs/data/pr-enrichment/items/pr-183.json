@@ -1,0 +1,40 @@
+{
+  "generatedAt": "2026-03-20T07:22:21.311Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 183,
+    "title": "Non-record: Cache LM + LoRA TTT (negative result on cache, positive on TTT)",
+    "state": "open",
+    "updatedAt": "2026-03-20T07:12:15Z",
+    "headSha": "aa70710367d71a3b7a5ae7a8ed672d3750c09e79",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/183",
+    "authorLogin": "anantdgoel"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-03-19_CacheLM_LoRA_TTT/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Per-document rank-8 LoRA TTT on Q/V/lm_head paired with unigram cache LM interpolation to probe eval-time adaptivity on varied FineWeb docs.",
+    "tags": [
+      "evaluation",
+      "non-record"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "LoRA TTT adaptation per document chunk",
+      "decayed unigram cache LM interpolation"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

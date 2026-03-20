@@ -1,16 +1,179 @@
 {
-  "generatedAt": "2026-03-20T06:52:03.753Z",
+  "generatedAt": "2026-03-20T07:23:02.502Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
     {
-      "prNumber": 179,
-      "title": "Add 11L WD submissions: Non-Val SOTA record (1.1472 BPB) + Val-Only aside (0.9274 BPB)",
+      "prNumber": 186,
+      "title": "Combined SOTA: INT6 + SmearGate + BigramHash + SWA (val_bpb=1.1754)",
       "status": "open",
-      "updatedAt": "2026-03-20T06:43:15Z",
-      "headSha": "2b39315347a7faa90811ef707b436f2f4d5a0c0b",
-      "generatedAt": "2026-03-20T06:51:43.933Z",
-      "summary": "11-layer GQA GPT uses tuned Muon weight decay and int6+fp16 quantization with sliding-window eval to fit under 16MB for the 10min track.",
+      "updatedAt": "2026-03-20T07:19:55Z",
+      "headSha": "5dbb11815d3cef230c847ca2b81d5ca2ad7867a8",
+      "generatedAt": "2026-03-20T07:22:01.540Z",
+      "summary": "INT6 quantization, SmearGate+BigramHash context, wider MLP, and muon+SWA tuning under sliding-window eval to stay within 16MB.",
+      "tags": [
+        "quantization",
+        "architecture",
+        "optimizer",
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-186.json"
+    },
+    {
+      "prNumber": 185,
+      "title": "Non-record: Wider-shallower 4x768 + QAT (1xH100, 1.3043 bpb)",
+      "status": "open",
+      "updatedAt": "2026-03-20T07:20:30Z",
+      "headSha": "6ac12eea82a02f224d8ba7a89137a589cf3dc460",
+      "generatedAt": "2026-03-20T07:22:11.378Z",
+      "summary": "Wider-shallower 4x768 model with GQA, boosted QK gain, Muon tuning, and STE-based QAT to close the int8 gap on 1xH100.",
+      "tags": [
+        "architecture",
+        "attention",
+        "optimizer",
+        "quantization"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-185.json"
+    },
+    {
+      "prNumber": 184,
+      "title": "Record: Pre-Enrichment + Encoder Recurrence (val_bpb=1.1855)",
+      "status": "closed",
+      "updatedAt": "2026-03-20T07:17:21Z",
+      "headSha": "c2e9b1e48d0d380b0e2a04105edd534c1b4daac7",
+      "generatedAt": "2026-03-20T07:22:15.936Z",
+      "summary": "GELU pre-enrichment plus 2× encoder recurrence with RMS stabilization doubles encoder depth before sliding-window evaluation.",
+      "tags": [
+        "architecture",
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-184.json"
+    },
+    {
+      "prNumber": 183,
+      "title": "Non-record: Cache LM + LoRA TTT (negative result on cache, positive on TTT)",
+      "status": "open",
+      "updatedAt": "2026-03-20T07:12:15Z",
+      "headSha": "aa70710367d71a3b7a5ae7a8ed672d3750c09e79",
+      "generatedAt": "2026-03-20T07:22:21.311Z",
+      "summary": "Per-document rank-8 LoRA TTT on Q/V/lm_head paired with unigram cache LM interpolation to probe eval-time adaptivity on varied FineWeb docs.",
+      "tags": [
+        "evaluation",
+        "non-record"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-183.json"
+    },
+    {
+      "prNumber": 182,
+      "title": "Non-record: Linearized Neural Memory + TTT (val_bpb=1.1844)",
+      "status": "open",
+      "updatedAt": "2026-03-20T07:06:15Z",
+      "headSha": "7549fee12b415f1a279baaa1729ddd0ab53a2f27",
+      "generatedAt": "2026-03-20T07:22:28.338Z",
+      "summary": "Adds Titans-style linearized neural memory per block via cumsum causal linear attention, gated between attn and MLP, plus LoRA TTT, int6, Muon WD.",
+      "tags": [
+        "architecture",
+        "attention",
+        "quantization",
+        "optimizer"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-182.json"
+    },
+    {
+      "prNumber": 181,
+      "title": "Aweb Optimized Baseline — 1.2194 BPB",
+      "status": "open",
+      "updatedAt": "2026-03-20T06:55:29Z",
+      "headSha": "68a361890813785f0f76d1b626ae072ea60177bd",
+      "generatedAt": "2026-03-20T07:22:34.775Z",
+      "summary": "NaiveBaseline kept intact while env-vars crank Muon momentum, halve LRs, 3× MLP, 2048-token training, grad clip, and train-on-val for better quantized convergence.",
+      "tags": [
+        "val-only",
+        "optimizer",
+        "training-schedule"
+      ],
+      "flags": {
+        "usesValOnly": true,
+        "usesValOnlyAi": true,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": false
+      },
+      "file": "items/pr-181.json"
+    },
+    {
+      "prNumber": 180,
+      "title": "Record: 10L Int5-MLP + MuonWD=0.04 + SWA/50 (val_bpb=1.1453)",
+      "status": "open",
+      "updatedAt": "2026-03-20T07:02:47Z",
+      "headSha": "ab9ecb2f693a9490828b7833bbd08ac3cc9f9d21",
+      "generatedAt": "2026-03-20T07:22:40.776Z",
+      "summary": "Funds a 10th layer by quantizing MLPs to int5 while keeping attention int6, pairing MuonWD=0.04 with SWA/50 over SmearGate+BigramHash.",
+      "tags": [
+        "quantization",
+        "architecture",
+        "optimizer",
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-180.json"
+    },
+    {
+      "prNumber": 179,
+      "title": "Record: 11L, int6+zstd, decoupled WD (val_bpb = 1.1472)",
+      "status": "open",
+      "updatedAt": "2026-03-20T07:15:40Z",
+      "headSha": "e25aee67b22361b15da1480e394f554d52c6d2fc",
+      "generatedAt": "2026-03-20T07:22:46.316Z",
+      "summary": "11-layer GQA GPT with decoupled Muon WD fits under 16MB via int6+zstd quantization and sliding-window eval for the 10min/16MB submission.",
       "tags": [
         "val-only",
         "architecture",
@@ -362,15 +525,15 @@
       "prNumber": 161,
       "title": "Record:Add TTT-LoRA 512d submission (val_bpb=1.1957)",
       "status": "open",
-      "updatedAt": "2026-03-20T03:21:47Z",
+      "updatedAt": "2026-03-20T07:16:40Z",
       "headSha": "2f556296e47d76022b9594ecf1072637ca1c5a5b",
-      "generatedAt": "2026-03-20T03:51:06.750Z",
-      "summary": "512d transformer with LoRA test-time tuning rescues int8 quantization within the 10-minute/16MB budget",
+      "generatedAt": "2026-03-20T07:22:51.109Z",
+      "summary": "Baseline 512d/8h/4kv transformer with int8+zlib artifact plus TTT-LoRA test-time adaptation to reclaim quantization loss under the 10min/16MB cap.",
       "tags": [
         "architecture",
         "quantization",
-        "evaluation",
-        "training-schedule"
+        "training-schedule",
+        "evaluation"
       ],
       "flags": {
         "usesValOnly": false,
@@ -1764,16 +1927,15 @@
     },
     {
       "prNumber": 76,
-      "title": "[WIP] Int6 + Wider MLP 3x + FP16 Embed + Sliding Window (est. val_bpb ~1.160)",
+      "title": "Int6 QAT + Wider MLP 3x + FP16 Embed + Sliding Window (val_bpb 1.1599)",
       "status": "open",
-      "updatedAt": "2026-03-19T16:57:41Z",
-      "headSha": "e6bd4d200de10d84ac3993f49f0941055d9ea3d3",
-      "generatedAt": "2026-03-19T17:26:56.464Z",
-      "summary": "Combines int6 per-row quantization with wider MLP, fp16 tied embeddings, and sliding-window eval to shrink artifacts while boosting eval fidelity.",
+      "updatedAt": "2026-03-20T07:20:43Z",
+      "headSha": "f9ab40a5fddb370296be7ef5d8021802fd6d41ed",
+      "generatedAt": "2026-03-20T07:22:57.072Z",
+      "summary": "Combines delayed 6-bit QAT in the final 15% with a 3× wider MLP, per-row int6+FP16 embed quantization, and sliding-window evaluation.",
       "tags": [
         "quantization",
         "architecture",
-        "mixed-precision",
         "evaluation"
       ],
       "flags": {
@@ -1977,15 +2139,15 @@
       "prNumber": 64,
       "title": "Record: val_bpb=0.9695 (val-only) + val_bpb=1.1629 (standard)",
       "status": "open",
-      "updatedAt": "2026-03-19T17:03:05Z",
-      "headSha": "978e90cd2bad14eef350e1a4ef8b64cfd59f631a",
-      "generatedAt": "2026-03-19T17:27:46.466Z",
-      "summary": "MLP-3x with STE int6 QAT, mixed quantization, tuned Muon and sliding-window eval, plus a val-only variant using the same architecture.",
+      "updatedAt": "2026-03-20T07:06:18Z",
+      "headSha": "672f17de5c9fb0e772695dff11a81e092a70e0a4",
+      "generatedAt": "2026-03-20T07:23:02.495Z",
+      "summary": "Val-only run stacks STE fake-int6 QAT with mixed post-training quant, widened 3× MLP, tuned Muon, and sliding-window eval for robust int6 deployment.",
       "tags": [
+        "val-only",
         "quantization",
         "sliding-window-eval",
-        "optimizer",
-        "val-only"
+        "optimizer"
       ],
       "flags": {
         "usesValOnly": true,

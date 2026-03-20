@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-20T07:22:40.776Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 180,
+    "title": "Record: 10L Int5-MLP + MuonWD=0.04 + SWA/50 (val_bpb=1.1453)",
+    "state": "open",
+    "updatedAt": "2026-03-20T07:02:47Z",
+    "headSha": "ab9ecb2f693a9490828b7833bbd08ac3cc9f9d21",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/180",
+    "authorLogin": "thwu1"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-20_10L_Int5MLP_MuonWD04_SWA50/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Funds a 10th layer by quantizing MLPs to int5 while keeping attention int6, pairing MuonWD=0.04 with SWA/50 over SmearGate+BigramHash.",
+    "tags": [
+      "quantization",
+      "architecture",
+      "optimizer",
+      "evaluation"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Mixed int5 MLP / int6 attention quantization to shrink artifacts",
+      "MuonWD=0.04 paired with SWA/50 warmdown for quant-friendly training",
+      "Sliding-window stride=64 eval with SmearGate+BigramHash"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "generatedAt": "2026-03-20T07:22:34.775Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 181,
+    "title": "Aweb Optimized Baseline — 1.2194 BPB",
+    "state": "open",
+    "updatedAt": "2026-03-20T06:55:29Z",
+    "headSha": "68a361890813785f0f76d1b626ae072ea60177bd",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/181",
+    "authorLogin": "manfromnowhere143"
+  },
+  "inputs": {
+    "hash": "c4f8d017d13e812b0ad5a78b677f8350df1124736cd3f84c8d4e37f273206c70",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-20_AwebOptimizedBaseline/README.md",
+      "records/track_10min_16mb/2026-03-18_AwebBitNet/README.md",
+      "records/track_10min_16mb/2026-03-18_AwebDepthRecurrence/README.md"
+    ],
+    "submissionCount": 3
+  },
+  "output": {
+    "summary": "NaiveBaseline kept intact while env-vars crank Muon momentum, halve LRs, 3× MLP, 2048-token training, grad clip, and train-on-val for better quantized convergence.",
+    "tags": [
+      "val-only",
+      "optimizer",
+      "training-schedule"
+    ],
+    "usesValOnly": true,
+    "valOnlyReasoning": "TRAIN_ON_VAL=1 switches training to include validation shards per organizer-approved setup.",
+    "techniques": [
+      "Muon optimizer tuning with 0.99 momentum and extended warmdown",
+      "Expanded MLP multiplier to 3× within baseline parameter budget",
+      "2048-token sequences with 0.3 grad clipping for stable longer-context training"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": true,
+    "finalUsesValOnly": true,
+    "valOnlyMatchesCollector": false
+  }
+}
