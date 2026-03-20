@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-20T12:23:30.692Z",
+  "generatedAt": "2026-03-20T15:24:05.840Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 206,
     "title": "Record: Int6 STE + SmearGate + Seq2048 + OrthoInit + RoPE50K + SWA/100 (mean val_bpb=1.1507)",
     "state": "open",
-    "updatedAt": "2026-03-20T11:56:13Z",
-    "headSha": "12f3d7bde62c258e75cee764b9782f08ae32e5eb",
+    "updatedAt": "2026-03-20T14:58:05Z",
+    "headSha": "fb1b0345b4dd831035f5f2783ff73f5642b48219",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/206",
     "authorLogin": "dexhunter"
   },
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Combines Int6 STE quant-aware training with NorMuon optimization, SmearGate/U-Net context gating, RoPE50K, and frequent SWA in a 9-layer 16MB model.",
+    "summary": "Int6 STE quantization trains a NorMuon+WD 9-layer model with SmearGate gating, wider MLP, Seq2048+RoPE50K, SWA/100, and sliding-window eval.",
     "tags": [
       "quantization",
       "optimizer",
       "architecture",
-      "training-schedule"
+      "evaluation"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Int6 STE quantization-aware training with FP16 tied embeddings",
-      "NorMuon optimizer with SWA/100 warmdown averaging",
-      "SmearGate/U-Net skip gating plus RoPE50K for 2048-context"
+      "Int6 STE with NorMuon+decoupled WD for quant-aware training",
+      "SmearGate gating plus wider MLP within 16MB budget",
+      "Seq2048+RoPE50K context with SWA/100 and sliding-window evaluation"
     ]
   },
   "compatibility": {

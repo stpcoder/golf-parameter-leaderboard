@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-20T15:23:54.694Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 219,
+    "title": "Non-record: 12L Int5-MLP + Int6-Attn mixed quantization, val_bpb=1.1541",
+    "state": "open",
+    "updatedAt": "2026-03-20T15:07:42Z",
+    "headSha": "d21e7fb3389f057790581b61bb1bef04fe16d5aa",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/219",
+    "authorLogin": "alertcat"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-20_12L_Int5MLP_SmearGate_BigramHash/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Mixed int5 MLP and int6 attention quantization frees ~1.8MB to add a 12th transformer layer with SmearGate, BigramHash, and SWA.",
+    "tags": [
+      "quantization",
+      "architecture",
+      "attention"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Mixed int5/int6 quantization to pack more depth",
+      "12-layer GQA transformer with SmearGate and BigramHash",
+      "SWA on Muon/AdamW warmdown"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

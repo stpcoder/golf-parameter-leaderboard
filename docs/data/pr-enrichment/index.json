@@ -1,8 +1,76 @@
 {
-  "generatedAt": "2026-03-20T14:54:08.480Z",
+  "generatedAt": "2026-03-20T15:24:18.224Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 221,
+      "title": "10L + Sliding Window eval (mean val_bpb=1.1899)",
+      "status": "open",
+      "updatedAt": "2026-03-20T15:18:51Z",
+      "headSha": "15f88066637ca0945ff484fa1ef36588d5af4c5b",
+      "generatedAt": "2026-03-20T15:23:45.887Z",
+      "summary": "Train a 10-layer model on 4096-token sequences with sliding-window eval (stride 64) to expose longer context within the 10min/16MB regime.",
+      "tags": [
+        "sliding-window-eval",
+        "training-schedule"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-221.json"
+    },
+    {
+      "prNumber": 220,
+      "title": "[WIP] SSM LRU Baseline — First State Space Model Submission",
+      "status": "open",
+      "updatedAt": "2026-03-20T15:09:53Z",
+      "headSha": "52bbb352ac1a5c8b773a149ff1c7966cdd847786",
+      "generatedAt": "2026-03-20T15:23:49.475Z",
+      "summary": "Replaces transformer blocks with an LRU-based SSM using complex diagonal recurrence, gated projections, and MuonAdamW with SSM-specific param groups.",
+      "tags": [
+        "architecture",
+        "optimizer",
+        "non-record"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-220.json"
+    },
+    {
+      "prNumber": 219,
+      "title": "Non-record: 12L Int5-MLP + Int6-Attn mixed quantization, val_bpb=1.1541",
+      "status": "open",
+      "updatedAt": "2026-03-20T15:07:42Z",
+      "headSha": "d21e7fb3389f057790581b61bb1bef04fe16d5aa",
+      "generatedAt": "2026-03-20T15:23:54.694Z",
+      "summary": "Mixed int5 MLP and int6 attention quantization frees ~1.8MB to add a 12th transformer layer with SmearGate, BigramHash, and SWA.",
+      "tags": [
+        "quantization",
+        "architecture",
+        "attention"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-219.json"
+    },
     {
       "prNumber": 218,
       "title": "qat + ttt + value embeddings",
@@ -54,14 +122,14 @@
       "prNumber": 215,
       "title": "Record: 11L Low-Rank Q192 (val_bpb=1.1548)",
       "status": "open",
-      "updatedAt": "2026-03-20T14:31:18Z",
+      "updatedAt": "2026-03-20T15:01:45Z",
       "headSha": "2dbf8aa64a0910aedcfa916d441f509139203920",
-      "generatedAt": "2026-03-20T14:53:57.075Z",
-      "summary": "Factored each Q projection into a rank-192 bottleneck, allowing a deeper 11-layer encoder-decoder stack while tuning int6 quantization and sliding-window eval for 16MB track.",
+      "generatedAt": "2026-03-20T15:24:00.600Z",
+      "summary": "Factorized the Q projection to rank 192, add 11-layer encoder-decoder skips, and pair int6 per-row quantization with zstd to fit the 16MB budget while using sliding-window eval.",
       "tags": [
-        "architecture",
         "quantization",
-        "evaluation"
+        "architecture",
+        "compression"
       ],
       "flags": {
         "usesValOnly": false,
@@ -170,15 +238,15 @@
       "prNumber": 206,
       "title": "Record: Int6 STE + SmearGate + Seq2048 + OrthoInit + RoPE50K + SWA/100 (mean val_bpb=1.1507)",
       "status": "open",
-      "updatedAt": "2026-03-20T11:56:13Z",
-      "headSha": "12f3d7bde62c258e75cee764b9782f08ae32e5eb",
-      "generatedAt": "2026-03-20T12:23:30.692Z",
-      "summary": "Combines Int6 STE quant-aware training with NorMuon optimization, SmearGate/U-Net context gating, RoPE50K, and frequent SWA in a 9-layer 16MB model.",
+      "updatedAt": "2026-03-20T14:58:05Z",
+      "headSha": "fb1b0345b4dd831035f5f2783ff73f5642b48219",
+      "generatedAt": "2026-03-20T15:24:05.840Z",
+      "summary": "Int6 STE quantization trains a NorMuon+WD 9-layer model with SmearGate gating, wider MLP, Seq2048+RoPE50K, SWA/100, and sliding-window eval.",
       "tags": [
         "quantization",
         "optimizer",
         "architecture",
-        "training-schedule"
+        "evaluation"
       ],
       "flags": {
         "usesValOnly": false,
@@ -1040,15 +1108,15 @@
       "prNumber": 156,
       "title": "feat(record): Int6 STE + NorMuon + SWA + Sliding Window (val_bpb=1.16019)",
       "status": "open",
-      "updatedAt": "2026-03-20T02:07:58Z",
-      "headSha": "effbd870163a0c5f02bc13f16cf875b698bb81ce",
-      "generatedAt": "2026-03-20T02:20:04.102Z",
-      "summary": "Int6 STE quant + NorMuon optimizer + SWA lets a wider MLP with U-Net skips stay within 16MB, aided by sliding-window eval and zstd compression.",
+      "updatedAt": "2026-03-20T14:59:24Z",
+      "headSha": "2c12ff54420b2a2d94831ef013f0877e483a1284",
+      "generatedAt": "2026-03-20T15:24:11.021Z",
+      "summary": "Combines Int6 STE per-row fake quant, NorMuon + SWA tuning, and sliding-window eval to widen the MLP while staying under 16MB.",
       "tags": [
         "quantization",
         "optimizer",
-        "architecture",
-        "evaluation"
+        "evaluation",
+        "architecture"
       ],
       "flags": {
         "usesValOnly": false,
@@ -2395,17 +2463,17 @@
     },
     {
       "prNumber": 76,
-      "title": "Int6 QAT + Wider MLP 3x + FP16 Embed + Sliding Window + SmearGate + BigramHash + SWA + OrthoInit (val_bpb 1.1568)",
+      "title": "Int6 11L + SmearGate + BigramHash + SWA + OrthoInit + MuonWD (val_bpb 1.1555)",
       "status": "open",
-      "updatedAt": "2026-03-20T13:39:34Z",
-      "headSha": "0d64b289ce1b02c00f4a24ca9536568dd6acff42",
-      "generatedAt": "2026-03-20T13:53:57.264Z",
-      "summary": "Combines int6 per-row quantization, wider MLP, SmearGate+BigramHash context modules, and SWA/OrthoInit to boost capacity within the 16MB artifact budget.",
+      "updatedAt": "2026-03-20T15:12:44Z",
+      "headSha": "ba88459c1379a263ce3b934bc082e8cd0f4b6628",
+      "generatedAt": "2026-03-20T15:24:18.215Z",
+      "summary": "Int6 per-row quantized 11-layer model uses SmearGate gating, BigramHash context, SWA warmdown, OrthoInit scaling, and NTK-aware RoPE with sliding-window eval.",
       "tags": [
         "quantization",
-        "architecture",
+        "sliding-window-eval",
         "optimizer",
-        "evaluation"
+        "architecture"
       ],
       "flags": {
         "usesValOnly": false,

@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-20T13:53:57.264Z",
+  "generatedAt": "2026-03-20T15:24:18.215Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 76,
-    "title": "Int6 QAT + Wider MLP 3x + FP16 Embed + Sliding Window + SmearGate + BigramHash + SWA + OrthoInit (val_bpb 1.1568)",
+    "title": "Int6 11L + SmearGate + BigramHash + SWA + OrthoInit + MuonWD (val_bpb 1.1555)",
     "state": "open",
-    "updatedAt": "2026-03-20T13:39:34Z",
-    "headSha": "0d64b289ce1b02c00f4a24ca9536568dd6acff42",
+    "updatedAt": "2026-03-20T15:12:44Z",
+    "headSha": "ba88459c1379a263ce3b934bc082e8cd0f4b6628",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/76",
     "authorLogin": "unixmadtoonslab"
   },
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Combines int6 per-row quantization, wider MLP, SmearGate+BigramHash context modules, and SWA/OrthoInit to boost capacity within the 16MB artifact budget.",
+    "summary": "Int6 per-row quantized 11-layer model uses SmearGate gating, BigramHash context, SWA warmdown, OrthoInit scaling, and NTK-aware RoPE with sliding-window eval.",
     "tags": [
       "quantization",
-      "architecture",
+      "sliding-window-eval",
       "optimizer",
-      "evaluation"
+      "architecture"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Per-row int6 + zstd compression with delayed QAT focus",
-      "Wider MLP plus SmearGate and BigramHash context encodings",
-      "SWA warmdown with Muon WD and OrthoInit scaling"
+      "- Int6 per-row quantization with SmearGate gating and BigramHash context embedding",
+      "- SWA warmdown plus Muon optimizer with WD and OrthoInit scaling",
+      "- NTK-aware RoPE trained for >16k context and sliding-window stride=64 eval"
     ]
   },
   "compatibility": {

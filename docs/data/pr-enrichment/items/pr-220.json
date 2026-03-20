@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-20T15:23:49.475Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 220,
+    "title": "[WIP] SSM LRU Baseline — First State Space Model Submission",
+    "state": "open",
+    "updatedAt": "2026-03-20T15:09:53Z",
+    "headSha": "52bbb352ac1a5c8b773a149ff1c7966cdd847786",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/220",
+    "authorLogin": "timothywangdev"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-03-20_SSM_LRU_Baseline/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Replaces transformer blocks with an LRU-based SSM using complex diagonal recurrence, gated projections, and MuonAdamW with SSM-specific param groups.",
+    "tags": [
+      "architecture",
+      "optimizer",
+      "non-record"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "LRU SSM with complex diagonal recurrence",
+      "parallel scan via cumulative-sum trick",
+      "MuonAdamW with SSM-aware groups"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

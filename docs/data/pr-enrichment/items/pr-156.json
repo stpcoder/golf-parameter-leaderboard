@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-20T02:20:04.102Z",
+  "generatedAt": "2026-03-20T15:24:11.021Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 156,
     "title": "feat(record): Int6 STE + NorMuon + SWA + Sliding Window (val_bpb=1.16019)",
     "state": "open",
-    "updatedAt": "2026-03-20T02:07:58Z",
-    "headSha": "effbd870163a0c5f02bc13f16cf875b698bb81ce",
+    "updatedAt": "2026-03-20T14:59:24Z",
+    "headSha": "2c12ff54420b2a2d94831ef013f0877e483a1284",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/156",
     "authorLogin": "dexhunter"
   },
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Int6 STE quant + NorMuon optimizer + SWA lets a wider MLP with U-Net skips stay within 16MB, aided by sliding-window eval and zstd compression.",
+    "summary": "Combines Int6 STE per-row fake quant, NorMuon + SWA tuning, and sliding-window eval to widen the MLP while staying under 16MB.",
     "tags": [
       "quantization",
       "optimizer",
-      "architecture",
-      "evaluation"
+      "evaluation",
+      "architecture"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Per-row Int6 STE quantization with fp16 embeddings",
-      "NorMuon optimizer enhanced by SWA warmdown",
-      "Sliding-window eval with zstd keeping larger MLP under 16MB"
+      "Int6 STE per-row quantization with straight-through gradients",
+      "NorMuon optimizer with SWA warmdown averaging",
+      "Sliding-window evaluation plus compression to fit 16MB"
     ]
   },
   "compatibility": {
