@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-20T08:22:23.465Z",
+  "generatedAt": "2026-03-20T08:52:19.220Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 108,
     "title": "[Non-record] Depth-Recurrent 3×3 MLX — dev submission (Apple Silicon)",
     "state": "open",
-    "updatedAt": "2026-03-20T08:20:57Z",
-    "headSha": "7f2447dfb70043738e9e4979603277618a4f5947",
+    "updatedAt": "2026-03-20T08:46:22Z",
+    "headSha": "486e6b89f7d794a4cd5e3fffb97b01c1b693b521",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/108",
     "authorLogin": "kellyvv"
   },
@@ -19,17 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Depth-recurrent GPT (3 blocks × 3 loops) with AdaLN conditioning, GQA, and MLX training on Apple M3 Max.",
+    "summary": "Depth-recurrent 3×3 GPT with AdaLN conditioning and GQA fits a 13M-parameter model into 9.35MB while running on Apple Silicon via MLX.",
     "tags": [
       "architecture",
+      "depth-width",
+      "compression",
       "non-record"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Depth recurrence: 3 unique Transformer blocks iterated across 3 loops",
-      "Per-loop AdaLN/FiLM conditioning paired with GQA attention",
-      "Development via MLX on Apple M3 Max ahead of H100 validation"
+      "Depth recurrence with looped Transformer blocks",
+      "AdaLN+sigmoid gating for per-loop conditioning",
+      "Quantized+zlib compression to 9.35 MB"
     ]
   },
   "compatibility": {

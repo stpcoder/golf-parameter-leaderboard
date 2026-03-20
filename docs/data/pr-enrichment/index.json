@@ -1,8 +1,32 @@
 {
-  "generatedAt": "2026-03-20T08:22:28.633Z",
+  "generatedAt": "2026-03-20T08:52:19.234Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 194,
+      "title": "11L Int6 QAT + Per-Dim SmearGate + SWA: 1.1453 BPB",
+      "status": "open",
+      "updatedAt": "2026-03-20T08:49:26Z",
+      "headSha": "6d4867a7b711a5d2ce313eb4d87130c36bde9ad4",
+      "generatedAt": "2026-03-20T08:52:02.028Z",
+      "summary": "Int6 QAT with per-dimension SmearGate, SWA checkpoints, and high Muon weight decay keeps an 11-layer, 512-dim model quantization-friendly for the 16MB constraint.",
+      "tags": [
+        "quantization",
+        "optimizer",
+        "training-schedule",
+        "attention"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-194.json"
+    },
     {
       "prNumber": 193,
       "title": "Add CTM tail-QAT proxy non-record snapshot",
@@ -195,15 +219,15 @@
       "prNumber": 182,
       "title": "Non-record: Linearized Neural Memory + TTT (val_bpb=1.1844)",
       "status": "open",
-      "updatedAt": "2026-03-20T07:06:15Z",
+      "updatedAt": "2026-03-20T08:34:03Z",
       "headSha": "7549fee12b415f1a279baaa1729ddd0ab53a2f27",
-      "generatedAt": "2026-03-20T07:22:28.338Z",
-      "summary": "Adds Titans-style linearized neural memory per block via cumsum causal linear attention, gated between attn and MLP, plus LoRA TTT, int6, Muon WD.",
+      "generatedAt": "2026-03-20T08:52:07.835Z",
+      "summary": "Adds closed-form Titans-style neural memory per block via cumsum-driven causal linear attention gated before the MLP, plus LoRA TTT eval and int6/FP16 tweaks.",
       "tags": [
+        "non-record",
         "architecture",
-        "attention",
         "quantization",
-        "optimizer"
+        "attention"
       ],
       "flags": {
         "usesValOnly": false,
@@ -1369,14 +1393,14 @@
       "prNumber": 114,
       "title": "#1 on leaderboard: val_bpb=1.1574 — Int6 + MLP 3x + selective precision + optimized long-context training",
       "status": "open",
-      "updatedAt": "2026-03-20T02:33:57Z",
-      "headSha": "7f0584926ce698662712e3ce420a57878f34ba05",
-      "generatedAt": "2026-03-20T02:50:31.232Z",
-      "summary": "Int6 post-training quantization with fp16 selective precision and a tripled MLP width powers 2048-window training and stride-256 sliding-window eval within 16MB.",
+      "updatedAt": "2026-03-20T08:26:03Z",
+      "headSha": "b8bcb79007187280240dfa9275c8d80ad98941f3",
+      "generatedAt": "2026-03-20T08:52:14.832Z",
+      "summary": "Int6 post-training quantization frees artifact headroom for a 3x MLP while selective fp16 passthrough and 2048-length training support sliding-window eval.",
       "tags": [
         "quantization",
-        "architecture",
-        "sliding-window-eval"
+        "sliding-window-eval",
+        "architecture"
       ],
       "flags": {
         "usesValOnly": false,
@@ -1485,12 +1509,14 @@
       "prNumber": 108,
       "title": "[Non-record] Depth-Recurrent 3×3 MLX — dev submission (Apple Silicon)",
       "status": "open",
-      "updatedAt": "2026-03-20T08:20:57Z",
-      "headSha": "7f2447dfb70043738e9e4979603277618a4f5947",
-      "generatedAt": "2026-03-20T08:22:23.465Z",
-      "summary": "Depth-recurrent GPT (3 blocks × 3 loops) with AdaLN conditioning, GQA, and MLX training on Apple M3 Max.",
+      "updatedAt": "2026-03-20T08:46:22Z",
+      "headSha": "486e6b89f7d794a4cd5e3fffb97b01c1b693b521",
+      "generatedAt": "2026-03-20T08:52:19.220Z",
+      "summary": "Depth-recurrent 3×3 GPT with AdaLN conditioning and GQA fits a 13M-parameter model into 9.35MB while running on Apple Silicon via MLX.",
       "tags": [
         "architecture",
+        "depth-width",
+        "compression",
         "non-record"
       ],
       "flags": {

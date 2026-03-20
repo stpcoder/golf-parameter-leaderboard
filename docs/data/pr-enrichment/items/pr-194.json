@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-20T08:52:02.028Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 194,
+    "title": "11L Int6 QAT + Per-Dim SmearGate + SWA: 1.1453 BPB",
+    "state": "open",
+    "updatedAt": "2026-03-20T08:49:26Z",
+    "headSha": "6d4867a7b711a5d2ce313eb4d87130c36bde9ad4",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/194",
+    "authorLogin": "baudrillardsgh0st"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-20_11L_SmearV2_SWA/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Int6 QAT with per-dimension SmearGate, SWA checkpoints, and high Muon weight decay keeps an 11-layer, 512-dim model quantization-friendly for the 16MB constraint.",
+    "tags": [
+      "quantization",
+      "optimizer",
+      "training-schedule",
+      "attention"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Per-dimension SmearGate blending current and prior token embeddings",
+      "SWA over final half of training to smooth weights for quantization",
+      "High Muon weight decay plus int6 QAT with fp16 tied embeddings"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}
