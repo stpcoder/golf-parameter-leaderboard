@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-21T17:35:15.839Z",
+  "generatedAt": "2026-03-21T18:34:57.870Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 267,
     "title": "Record: val_bpb: 1.14020 [tested 3x on 8xh100]",
     "state": "open",
-    "updatedAt": "2026-03-21T17:05:51Z",
-    "headSha": "46bd727750509cc8a6aea8a0126981a68b27e3cd",
+    "updatedAt": "2026-03-21T18:33:46Z",
+    "headSha": "86c4b444b263602d02362fb3f20b783d113e7506",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/267",
     "authorLogin": "andrewgcodes"
   },
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Causal chunked eval-then-train TTT on validation shards combines int5 quantization, EMA/adaptive pruning, and exclusive self-attention in later layers.",
+    "summary": "Compliant causal chunk-wise eval-then-train TTT on validation with an int5-quantized 11-layer model using Muon/EMA/XSA to fit under 16MB.",
     "tags": [
       "val-only",
       "quantization",
-      "attention",
-      "training-schedule"
+      "sliding-window-eval",
+      "optimizer"
     ],
     "usesValOnly": true,
-    "valOnlyReasoning": "Validation-only shards are processed sequentially: each chunk is evaluated before any training, then training runs on that chunk without re-evaluating tokens.",
+    "valOnlyReasoning": "Training occurs on validation chunks via causal test-time training while obeying evaluation-first, single-pass rules.",
     "techniques": [
-      "Chunked eval-then-train causal TTT on validation shards",
-      "Int5 quantization with EMA and adaptive pruning for model sizing",
-      "Exclusive self-attention plus SmearGate on top layers"
+      "Causal chunk eval-then-train test-time training",
+      "Int5-all quantization with EMA model averaging",
+      "Muon optimizer + XSA + pruning to meet 16MB budget"
     ]
   },
   "compatibility": {

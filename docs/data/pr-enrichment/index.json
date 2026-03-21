@@ -1,8 +1,32 @@
 {
-  "generatedAt": "2026-03-21T18:04:35.140Z",
+  "generatedAt": "2026-03-21T18:35:01.986Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 356,
+      "title": "Non-record: PR315 repro on 1xH100 PCIe, int6+zstd (val_bpb=1.8338)",
+      "status": "open",
+      "updatedAt": "2026-03-21T18:19:12Z",
+      "headSha": "bd4300452ada4ba791b244a1b93e426b4e294943",
+      "generatedAt": "2026-03-21T18:34:52.502Z",
+      "summary": "Reproduced PR315 pipeline on one H100 PCIe using FlashAttention2 and Muon with shortened warmup/warmdown for int6+zstd QAT.",
+      "tags": [
+        "quantization",
+        "training-schedule",
+        "optimizer",
+        "non-record"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-356.json"
+    },
     {
       "prNumber": 355,
       "title": "Add non-record BigramHash4096 + MLP992 + LR0.08 + Slide64 submission",
@@ -1617,15 +1641,15 @@
       "prNumber": 267,
       "title": "Record: val_bpb: 1.14020 [tested 3x on 8xh100]",
       "status": "open",
-      "updatedAt": "2026-03-21T17:05:51Z",
-      "headSha": "46bd727750509cc8a6aea8a0126981a68b27e3cd",
-      "generatedAt": "2026-03-21T17:35:15.839Z",
-      "summary": "Causal chunked eval-then-train TTT on validation shards combines int5 quantization, EMA/adaptive pruning, and exclusive self-attention in later layers.",
+      "updatedAt": "2026-03-21T18:33:46Z",
+      "headSha": "86c4b444b263602d02362fb3f20b783d113e7506",
+      "generatedAt": "2026-03-21T18:34:57.870Z",
+      "summary": "Compliant causal chunk-wise eval-then-train TTT on validation with an int5-quantized 11-layer model using Muon/EMA/XSA to fit under 16MB.",
       "tags": [
         "val-only",
         "quantization",
-        "attention",
-        "training-schedule"
+        "sliding-window-eval",
+        "optimizer"
       ],
       "flags": {
         "usesValOnly": true,
@@ -3565,15 +3589,15 @@
       "prNumber": 149,
       "title": "Add Combined Int6 + QAT + Sliding Window submission",
       "status": "open",
-      "updatedAt": "2026-03-21T17:30:24Z",
-      "headSha": "d389270545e4a47f06e45ce68ced2b0645aea158",
-      "generatedAt": "2026-03-21T17:35:38.541Z",
-      "summary": "Combines Int6 quant, FP16-tied embeddings, and QAT with cosine warmdown plus batched sliding-window eval and Muon-aware updates.",
+      "updatedAt": "2026-03-21T18:32:39Z",
+      "headSha": "46ae482383b0a0ff6a50a0f7d029424a809efcc4",
+      "generatedAt": "2026-03-21T18:35:01.964Z",
+      "summary": "Integrates Int6 quant with FP16 tied embeddings plus late-stage STE QAT, batched sliding-window eval, Muon/AdamW splits, and cosine warmdown.",
       "tags": [
         "quantization",
-        "mixed-precision",
-        "training-schedule",
-        "evaluation"
+        "sliding-window-eval",
+        "optimizer",
+        "training-schedule"
       ],
       "flags": {
         "usesValOnly": false,

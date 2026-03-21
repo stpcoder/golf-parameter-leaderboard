@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-21T17:35:38.541Z",
+  "generatedAt": "2026-03-21T18:35:01.964Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 149,
     "title": "Add Combined Int6 + QAT + Sliding Window submission",
     "state": "open",
-    "updatedAt": "2026-03-21T17:30:24Z",
-    "headSha": "d389270545e4a47f06e45ce68ced2b0645aea158",
+    "updatedAt": "2026-03-21T18:32:39Z",
+    "headSha": "46ae482383b0a0ff6a50a0f7d029424a809efcc4",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/149",
     "authorLogin": "pleasedontddosme"
   },
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Combines Int6 quant, FP16-tied embeddings, and QAT with cosine warmdown plus batched sliding-window eval and Muon-aware updates.",
+    "summary": "Integrates Int6 quant with FP16 tied embeddings plus late-stage STE QAT, batched sliding-window eval, Muon/AdamW splits, and cosine warmdown.",
     "tags": [
       "quantization",
-      "mixed-precision",
-      "training-schedule",
-      "evaluation"
+      "sliding-window-eval",
+      "optimizer",
+      "training-schedule"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Int6 quant + FP16 tied embeddings with late-K passthrough",
-      "STE-based QAT in final 30% to shrink quant penalty",
-      "Batched sliding-window eval with cosine warmdown and Muon momentum warmup"
+      "Int6 quant + late-stage STE QAT",
+      "Batched sliding-window eval with overtone init",
+      "Muon/AdamW optimizer split & cosine warmdown"
     ]
   },
   "compatibility": {
