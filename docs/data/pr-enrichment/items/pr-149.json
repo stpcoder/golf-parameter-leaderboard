@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-21T20:05:18.449Z",
+  "generatedAt": "2026-03-21T20:35:19.008Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 149,
     "title": "Add Combined Int6 + QAT + Sliding Window submission",
     "state": "open",
-    "updatedAt": "2026-03-21T19:50:00Z",
-    "headSha": "e50fad3c3f75e370dd566eec111f5496f40be725",
+    "updatedAt": "2026-03-21T20:06:15Z",
+    "headSha": "bbd83c2fea1098460431b95833b18457ad72b747",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/149",
     "authorLogin": "pleasedontddosme"
   },
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Combines Int6 quant with FP16 tied embeddings, late-stage STE QAT, sliding-window eval, and Muon-aware schedule tweaks for low-penalty quantized inference.",
+    "summary": "Combines Int6 quant with late-stage STE-based QAT, FP16 tied embeddings, Muon weight decay splits, and batched sliding-window eval.",
     "tags": [
       "quantization",
-      "sliding-window-eval",
       "optimizer",
-      "training-schedule"
+      "sliding-window-eval",
+      "evaluation"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "STE-based QAT in last 30% to minimize quant penalty",
-      "Batched sliding-window eval with overtone init and phase-transition resid_mix",
-      "Muon-decoupled weight decay plus cosine warmdown and momentum warmup"
+      "Int6 quant + late-stage STE QAT",
+      "Muon decoupled weight decay and AdamW splits",
+      "Batched sliding-window eval with overtone init"
     ]
   },
   "compatibility": {

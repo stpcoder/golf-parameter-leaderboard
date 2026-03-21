@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-21T20:35:10.423Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 366,
+    "title": "Non-record: 10L Int5-MLP + TTT + Backout Connection",
+    "state": "open",
+    "updatedAt": "2026-03-21T20:14:21Z",
+    "headSha": "c4c3bfeeed5285e5298a5ff8daf0cfecb8f6fd7a",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/366",
+    "authorLogin": "shivnarainms22"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-03-21_TTT_BackoutConn_Int5MLP/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Adds a learned U-Net mid-layer residual subtraction plus val-token test-time SGD after quantization on thwu1 10L Int5 base.",
+    "tags": [
+      "val-only",
+      "architecture",
+      "training-schedule",
+      "evaluation"
+    ],
+    "usesValOnly": true,
+    "valOnlyReasoning": "Performs 3 epochs of SGD fine-tuning on validation tokens after quantization to adapt the model.",
+    "techniques": [
+      "Learned backout subtraction at the U-Net midpoint",
+      "Post-quantization test-time SGD on validation tokens",
+      "Mixed int5/int6 quantization with SWA"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": true,
+    "finalUsesValOnly": true,
+    "valOnlyMatchesCollector": false
+  }
+}

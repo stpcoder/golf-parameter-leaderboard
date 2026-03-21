@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-21T20:35:05.444Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 367,
+    "title": "Non-record: BitNet b1.58 - 68M ternary params, val_bpb=1.1770, systematic analysis of ternary limitations",
+    "state": "open",
+    "updatedAt": "2026-03-21T20:21:40Z",
+    "headSha": "8ca8ace2748575ae0441b9da2738becb4d535677",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/367",
+    "authorLogin": "ksang123"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-03-21_BitNet158_v2/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "BitNet's ternary Transformer widens its MLP, packs BitLinear STE weights via base-3, and raises LR/extends warmdown while simulating fp16 scales because int6 tricks fail.",
+    "tags": [
+      "quantization",
+      "architecture",
+      "training-schedule",
+      "non-record"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "BitLinear ternary projections with wider MLP packed via base-3 for 1.6 bpp artifacts",
+      "fp16 scale simulation during training to mirror serialized quantization rounding",
+      "Higher LR plus longer warmdown to stabilize noisy STE updates without int6 regularizers"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

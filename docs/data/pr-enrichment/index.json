@@ -1,8 +1,80 @@
 {
-  "generatedAt": "2026-03-21T20:05:18.469Z",
+  "generatedAt": "2026-03-21T20:35:19.026Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 368,
+      "title": "PROTEUS v4 — non-record submission (val_bpb: 1.2037)",
+      "status": "open",
+      "updatedAt": "2026-03-21T20:30:56Z",
+      "headSha": "79b6ce5e6b56e5a8c785f46ff12be381b205f78d",
+      "generatedAt": "2026-03-21T20:35:01.073Z",
+      "summary": "10-layer transformer mixes INT5 MLP and INT6 attention quantization with SmearGate/BigramHash/OrthoInit tweaks, Muon WD+EMA, and sliding-window eval.",
+      "tags": [
+        "quantization",
+        "optimizer",
+        "architecture",
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-368.json"
+    },
+    {
+      "prNumber": 367,
+      "title": "Non-record: BitNet b1.58 - 68M ternary params, val_bpb=1.1770, systematic analysis of ternary limitations",
+      "status": "open",
+      "updatedAt": "2026-03-21T20:21:40Z",
+      "headSha": "8ca8ace2748575ae0441b9da2738becb4d535677",
+      "generatedAt": "2026-03-21T20:35:05.444Z",
+      "summary": "BitNet's ternary Transformer widens its MLP, packs BitLinear STE weights via base-3, and raises LR/extends warmdown while simulating fp16 scales because int6 tricks fail.",
+      "tags": [
+        "quantization",
+        "architecture",
+        "training-schedule",
+        "non-record"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-367.json"
+    },
+    {
+      "prNumber": 366,
+      "title": "Non-record: 10L Int5-MLP + TTT + Backout Connection",
+      "status": "open",
+      "updatedAt": "2026-03-21T20:14:21Z",
+      "headSha": "c4c3bfeeed5285e5298a5ff8daf0cfecb8f6fd7a",
+      "generatedAt": "2026-03-21T20:35:10.423Z",
+      "summary": "Adds a learned U-Net mid-layer residual subtraction plus val-token test-time SGD after quantization on thwu1 10L Int5 base.",
+      "tags": [
+        "val-only",
+        "architecture",
+        "training-schedule",
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": true,
+        "usesValOnlyAi": true,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": false
+      },
+      "file": "items/pr-366.json"
+    },
     {
       "prNumber": 364,
       "title": "Record: Batch-Optimized 524K + Warmdown 4000 (val_bpb 1.1497)",
@@ -1407,10 +1479,10 @@
       "prNumber": 288,
       "title": "Non-record: Content-Dependent SmearGate (1.6795 BPB, RTX 4070)",
       "status": "open",
-      "updatedAt": "2026-03-21T19:54:48Z",
-      "headSha": "51d82121e2a0f1621529470f04ba2366a3bf7e25",
-      "generatedAt": "2026-03-21T20:05:09.834Z",
-      "summary": "Content-dependent SmearGate uses similarity between tokens to adjust blending, letting related tokens share more representation than dissimilar ones.",
+      "updatedAt": "2026-03-21T20:14:21Z",
+      "headSha": "52940f6c96737f25006a1dd5e5ee65446549817f",
+      "generatedAt": "2026-03-21T20:35:15.148Z",
+      "summary": "Content SmearGate modulates the blend gate with adjacent-token dot-product similarity so similar words mix more by adding just one scalar and a dot product.",
       "tags": [
         "architecture",
         "non-record"
@@ -3681,15 +3753,15 @@
       "prNumber": 149,
       "title": "Add Combined Int6 + QAT + Sliding Window submission",
       "status": "open",
-      "updatedAt": "2026-03-21T19:50:00Z",
-      "headSha": "e50fad3c3f75e370dd566eec111f5496f40be725",
-      "generatedAt": "2026-03-21T20:05:18.449Z",
-      "summary": "Combines Int6 quant with FP16 tied embeddings, late-stage STE QAT, sliding-window eval, and Muon-aware schedule tweaks for low-penalty quantized inference.",
+      "updatedAt": "2026-03-21T20:06:15Z",
+      "headSha": "bbd83c2fea1098460431b95833b18457ad72b747",
+      "generatedAt": "2026-03-21T20:35:19.008Z",
+      "summary": "Combines Int6 quant with late-stage STE-based QAT, FP16 tied embeddings, Muon weight decay splits, and batched sliding-window eval.",
       "tags": [
         "quantization",
-        "sliding-window-eval",
         "optimizer",
-        "training-schedule"
+        "sliding-window-eval",
+        "evaluation"
       ],
       "flags": {
         "usesValOnly": false,
