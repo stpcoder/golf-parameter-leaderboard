@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-21T11:01:25.332Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 333,
+    "title": "11L XSA4 + SmearGate + BigramHash + SWA + RoPE50K (mean val_bpb=1.1565, 3 seeds)",
+    "state": "open",
+    "updatedAt": "2026-03-21T10:39:47Z",
+    "headSha": "871fd864e7b303196e395db4d28e325953d5506b",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/333",
+    "authorLogin": "mahsumaktas"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-20_CombinedSOTA_INT6_SmearGate_BigramHash_SWA/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "11-layer transformer with XSA on final layers, SmearGate+BigramHash embeddings, INT6 quantization, SWA, RoPE50K, and 2.75x MLP tuning for the 16MB stack.",
+    "tags": [
+      "architecture",
+      "quantization",
+      "attention",
+      "training-schedule"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "XSA on last 4 layers paired with SmearGate+BigramHash embeddings and OrthoInit",
+      "INT6 per-row quantization with fp16 tied embeddings and late-K fp16 layers",
+      "SWA/50 with Muon WD 0.04, RoPE base 50K, and 2.75x MLP sizing for the 11L stack"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

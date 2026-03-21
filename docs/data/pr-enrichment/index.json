@@ -1,8 +1,56 @@
 {
-  "generatedAt": "2026-03-21T10:31:14.174Z",
+  "generatedAt": "2026-03-21T11:01:37.376Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 334,
+      "title": "Non-record: 11L PartialRoPE + LNScale + EMA + SWA + TTT (1xH100 80min, val_bpb=1.2108)",
+      "status": "open",
+      "updatedAt": "2026-03-21T10:42:02Z",
+      "headSha": "dc22ba87e0a36967b64e6646e92ba6760690b2a2",
+      "generatedAt": "2026-03-21T11:01:18.933Z",
+      "summary": "11-layer GPT pairs U-Net skips, PartialRoPE+LNScale+SmearGate, and BigramHash with Muon/Adam + EMA+SWA, int5/int6 quantization, sliding-window eval, and TTT.",
+      "tags": [
+        "architecture",
+        "optimizer",
+        "quantization",
+        "sliding-window-eval"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-334.json"
+    },
+    {
+      "prNumber": 333,
+      "title": "11L XSA4 + SmearGate + BigramHash + SWA + RoPE50K (mean val_bpb=1.1565, 3 seeds)",
+      "status": "open",
+      "updatedAt": "2026-03-21T10:39:47Z",
+      "headSha": "871fd864e7b303196e395db4d28e325953d5506b",
+      "generatedAt": "2026-03-21T11:01:25.332Z",
+      "summary": "11-layer transformer with XSA on final layers, SmearGate+BigramHash embeddings, INT6 quantization, SWA, RoPE50K, and 2.75x MLP tuning for the 16MB stack.",
+      "tags": [
+        "architecture",
+        "quantization",
+        "attention",
+        "training-schedule"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-333.json"
+    },
     {
       "prNumber": 332,
       "title": "Record: 12L Gradient-Guided Quant + Partial RoPE + LN Scale + EMA + XSA4 (val_bpb: 1.1320)",
@@ -1036,15 +1084,15 @@
       "prNumber": 279,
       "title": "Title: AtomLogic v3.2 Universal SOTA - 1.15 BPB Target",
       "status": "open",
-      "updatedAt": "2026-03-21T10:16:53Z",
-      "headSha": "eb6edf4c6d14d28d50e28daa25c22db07948088b",
-      "generatedAt": "2026-03-21T10:30:55.906Z",
-      "summary": "Universal Transformer stacks 20 iterations of a shared block with Value-Only MoE, VeRA TTT adaptation, Muon optimizer, and NF4 tied embeddings.",
+      "updatedAt": "2026-03-21T10:39:59Z",
+      "headSha": "5042a19ec7613b4c1f4bf0ce851c49c37dd40e22",
+      "generatedAt": "2026-03-21T11:01:32.697Z",
+      "summary": "Universal Transformer reuses a 20-iteration shared block with Value-only MoE, VeRA zero-leakage TTT, and Muon/NF4 precision.",
       "tags": [
         "architecture",
-        "attention",
         "optimizer",
-        "quantization"
+        "evaluation",
+        "non-record"
       ],
       "flags": {
         "usesValOnly": false,
@@ -1547,13 +1595,13 @@
       "prNumber": 250,
       "title": "Complexity MoE v4: Token-Routed I64 + PID + CUDA Scatter + Int6 (26.5M params)",
       "status": "open",
-      "updatedAt": "2026-03-21T10:30:32Z",
-      "headSha": "dc6824bb687c4011e9219612e8e3983481a7fe0c",
-      "generatedAt": "2026-03-21T10:31:00.733Z",
-      "summary": "Token-routed 4-expert SwiGLU MoE with PID-layer dynamics, CUDA scatter dispatch, int6 quantization, and SGDR schedule for the compact leaderboard target.",
+      "updatedAt": "2026-03-21T11:01:27Z",
+      "headSha": "64e352412f3fdbd9f3b4957d4c3cc15ed0da54f6",
+      "generatedAt": "2026-03-21T11:01:37.341Z",
+      "summary": "Token-routed 4-expert SwiGLU MoE with PID dynamics, CUDA scatter dispatch, SGDR schedule, and int6+zstd compression for <16MB leaderboard runs.",
       "tags": [
         "architecture",
-        "training-schedule",
+        "optimizer",
         "quantization",
         "evaluation"
       ],
@@ -2575,30 +2623,6 @@
         "valOnlyMatchesCollector": true
       },
       "file": "items/pr-187.json"
-    },
-    {
-      "prNumber": 186,
-      "title": "11L XSA + SmearGate + BigramHash + SWA (mean val_bpb=1.1565, 3 seeds)",
-      "status": "open",
-      "updatedAt": "2026-03-21T10:13:28Z",
-      "headSha": "871fd864e7b303196e395db4d28e325953d5506b",
-      "generatedAt": "2026-03-21T10:31:07.205Z",
-      "summary": "11-layer transformer stacks XSA on last 4 layers with SmearGate BigramHash, INT6+SWA, 2.75x MLP, RoPE50K and muon WD0.04 to enable quantization.",
-      "tags": [
-        "architecture",
-        "attention",
-        "quantization",
-        "muon"
-      ],
-      "flags": {
-        "usesValOnly": false,
-        "usesValOnlyAi": false,
-        "usesValOnlyCollector": false
-      },
-      "compatibility": {
-        "valOnlyMatchesCollector": true
-      },
-      "file": "items/pr-186.json"
     },
     {
       "prNumber": 185,
