@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-21T11:31:15.209Z",
+  "generatedAt": "2026-03-21T12:01:14.024Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "submissions": [
@@ -14073,16 +14073,16 @@
         "authorLogin": "kingjulio8238",
         "authorName": null,
         "createdAt": "2026-03-21T08:59:26Z",
-        "updatedAt": "2026-03-21T10:21:16Z",
-        "headSha": "aa611b48c58de9cedb8cdbedf8bdf25b336b20a7",
+        "updatedAt": "2026-03-21T11:37:06Z",
+        "headSha": "4d1ee25a4d2f23472553c730b514996095e00615",
         "headRepo": "kingjulio8238/parameter-golf"
       },
       "links": {
-        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/aa611b48c58de9cedb8cdbedf8bdf25b336b20a7/records/track_non_record_16mb/2026-03-21_MLX_TechniqueStack_MacPrototyping/submission.json",
-        "readme": "https://github.com/openai/parameter-golf/blob/aa611b48c58de9cedb8cdbedf8bdf25b336b20a7/records/track_non_record_16mb/2026-03-21_MLX_TechniqueStack_MacPrototyping/README.md",
-        "trainLog": "https://github.com/openai/parameter-golf/blob/aa611b48c58de9cedb8cdbedf8bdf25b336b20a7/records/track_non_record_16mb/2026-03-21_MLX_TechniqueStack_MacPrototyping/train.log",
-        "script": "https://github.com/openai/parameter-golf/blob/aa611b48c58de9cedb8cdbedf8bdf25b336b20a7/records/track_non_record_16mb/2026-03-21_MLX_TechniqueStack_MacPrototyping/train_gpt.py",
-        "folder": "https://github.com/openai/parameter-golf/tree/aa611b48c58de9cedb8cdbedf8bdf25b336b20a7/records/track_non_record_16mb/2026-03-21_MLX_TechniqueStack_MacPrototyping",
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/4d1ee25a4d2f23472553c730b514996095e00615/records/track_non_record_16mb/2026-03-21_MLX_TechniqueStack_MacPrototyping/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/4d1ee25a4d2f23472553c730b514996095e00615/records/track_non_record_16mb/2026-03-21_MLX_TechniqueStack_MacPrototyping/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/4d1ee25a4d2f23472553c730b514996095e00615/records/track_non_record_16mb/2026-03-21_MLX_TechniqueStack_MacPrototyping/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/4d1ee25a4d2f23472553c730b514996095e00615/records/track_non_record_16mb/2026-03-21_MLX_TechniqueStack_MacPrototyping/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/4d1ee25a4d2f23472553c730b514996095e00615/records/track_non_record_16mb/2026-03-21_MLX_TechniqueStack_MacPrototyping",
         "pr": "https://github.com/openai/parameter-golf/pull/328",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
@@ -17321,8 +17321,8 @@
         "authorLogin": "Complexity-ML",
         "authorName": null,
         "createdAt": "2026-03-20T18:48:09Z",
-        "updatedAt": "2026-03-21T11:27:49Z",
-        "headSha": "ec93cb10178bd37836172f06cc9dd8184083d18b",
+        "updatedAt": "2026-03-21T11:50:26Z",
+        "headSha": "4c7c7bf845dff10ed2d201a537ca1da9e75c0fc5",
         "headRepo": "Complexity-ML/parameter-golf"
       },
       "links": {

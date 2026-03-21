@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-21T11:31:27.297Z",
+  "generatedAt": "2026-03-21T12:01:25.873Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
@@ -171,15 +171,15 @@
       "prNumber": 328,
       "title": "Non-record: MLX prototyping harness with validated technique stack (val_bpb=1.9588, Mac)",
       "status": "open",
-      "updatedAt": "2026-03-21T10:21:16Z",
-      "headSha": "aa611b48c58de9cedb8cdbedf8bdf25b336b20a7",
-      "generatedAt": "2026-03-21T10:30:50.186Z",
-      "summary": "Mac MLX prototype validates KV2/GQA blocks with Int6 quant, FP16 embeddings, Muon WD, and sliding eval for compact 16MB leaderboard targets.",
+      "updatedAt": "2026-03-21T11:37:06Z",
+      "headSha": "4d1ee25a4d2f23472553c730b514996095e00615",
+      "generatedAt": "2026-03-21T12:01:20.399Z",
+      "summary": "Mac MLX prototype validates KV2 widths, int6 quant with FP16 embeddings plus Muon WD, and sliding/multi eval modes across 25+ experiments.",
       "tags": [
         "architecture",
         "quantization",
-        "evaluation",
-        "non-record"
+        "optimizer",
+        "evaluation"
       ],
       "flags": {
         "usesValOnly": false,
@@ -1619,15 +1619,15 @@
       "prNumber": 250,
       "title": "Complexity MoE v4: Token-Routed I64 + PID + CUDA Scatter + Int6 (26.5M params)",
       "status": "open",
-      "updatedAt": "2026-03-21T11:27:49Z",
-      "headSha": "ec93cb10178bd37836172f06cc9dd8184083d18b",
-      "generatedAt": "2026-03-21T11:31:27.263Z",
-      "summary": "Token-routed MoE with PID dynamics, CUDA scatter dispatch, and Int6 quant plus SGDR/SWA training with sliding-window evaluation.",
+      "updatedAt": "2026-03-21T11:50:26Z",
+      "headSha": "4c7c7bf845dff10ed2d201a537ca1da9e75c0fc5",
+      "generatedAt": "2026-03-21T12:01:25.833Z",
+      "summary": "Token-routed 4-expert SwiGLU MoE with PID dynamics, CUDA scatter dispatch, SGDR schedule, int6+zstd compression, and sliding-window evaluation.",
       "tags": [
         "architecture",
         "training-schedule",
         "quantization",
-        "evaluation"
+        "sliding-window-eval"
       ],
       "flags": {
         "usesValOnly": false,
