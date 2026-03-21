@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-21T01:26:22.724Z",
+  "generatedAt": "2026-03-21T01:56:39.208Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "submissions": [
@@ -8857,6 +8857,83 @@
       }
     },
     {
+      "id": "record-records-track_10min_16mb-2026-03-20_DepthRecurrent_768d_3x3",
+      "source": "pull_request",
+      "status": "open",
+      "category": "main-track",
+      "track": {
+        "path": "records/track_10min_16mb",
+        "slug": "track_10min_16mb",
+        "label": "10 Minute / 16MB",
+        "official": true,
+        "category": "main-track"
+      },
+      "record": {
+        "folderName": "2026-03-20_DepthRecurrent_768d_3x3",
+        "folderPath": "records/track_10min_16mb/2026-03-20_DepthRecurrent_768d_3x3",
+        "submissionPath": "records/track_10min_16mb/2026-03-20_DepthRecurrent_768d_3x3/submission.json",
+        "readmePath": "records/track_10min_16mb/2026-03-20_DepthRecurrent_768d_3x3/README.md",
+        "trainLogPath": "records/track_10min_16mb/2026-03-20_DepthRecurrent_768d_3x3/train.log",
+        "scriptPath": "records/track_10min_16mb/2026-03-20_DepthRecurrent_768d_3x3/train_gpt.py"
+      },
+      "submission": {
+        "author": "MrINVISO",
+        "githubId": "MrINVISO",
+        "name": "MrINVISO",
+        "blurb": null,
+        "date": "2026-03-21T01:36:57Z"
+      },
+      "metrics": {
+        "valBpb": 1.2271,
+        "valLoss": null,
+        "preQuantValBpb": null,
+        "preQuantValLoss": null,
+        "stepStop": null,
+        "wallclockSeconds": 600,
+        "evalTimeSeconds": null
+      },
+      "artifact": {
+        "bytesTotal": null,
+        "bytesCode": null,
+        "bytesModelInt8Zlib": null
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
+      "pr": {
+        "number": 298,
+        "title": "Ultimate recurrent: 21 techniques — depth recurrence, novel ops, LoRA…",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/298",
+        "authorLogin": "MrINVISO",
+        "authorName": null,
+        "createdAt": "2026-03-21T01:36:57Z",
+        "updatedAt": "2026-03-21T01:41:00Z",
+        "headSha": "b85b74ce46ab68d447f8f4cafc9f47c18f59a19b",
+        "headRepo": "MrINVISO/parameter-golf"
+      },
+      "links": {
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/b85b74ce46ab68d447f8f4cafc9f47c18f59a19b/records/track_10min_16mb/2026-03-20_DepthRecurrent_768d_3x3/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/b85b74ce46ab68d447f8f4cafc9f47c18f59a19b/records/track_10min_16mb/2026-03-20_DepthRecurrent_768d_3x3/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/b85b74ce46ab68d447f8f4cafc9f47c18f59a19b/records/track_10min_16mb/2026-03-20_DepthRecurrent_768d_3x3/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/b85b74ce46ab68d447f8f4cafc9f47c18f59a19b/records/track_10min_16mb/2026-03-20_DepthRecurrent_768d_3x3/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/b85b74ce46ab68d447f8f4cafc9f47c18f59a19b/records/track_10min_16mb/2026-03-20_DepthRecurrent_768d_3x3",
+        "pr": "https://github.com/openai/parameter-golf/pull/298",
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": false,
+        "hasPullRequest": true,
+        "listedInReadme": false
+      }
+    },
+    {
       "id": "record-records-track_non_record_16mb-2026-03-19_modal_8xh100_timed_validation",
       "source": "pull_request",
       "status": "closed",
@@ -15003,7 +15080,7 @@
       },
       "pr": {
         "number": 274,
-        "title": "[Non-record] Seq2048 + EMA + Council-Optimized Warmdown",
+        "title": "[Record] Stride-32 + Warmdown/Muon Tuning on SOTA #1: mean val_bpb=1.1403",
         "state": "open",
         "draft": false,
         "mergedAt": null,
@@ -15011,16 +15088,16 @@
         "authorLogin": "haikosys",
         "authorName": null,
         "createdAt": "2026-03-20T21:55:13Z",
-        "updatedAt": "2026-03-20T23:26:18Z",
-        "headSha": "eb9be9d5f9214ae10a1dbe3a2ee08ca66147f55e",
+        "updatedAt": "2026-03-21T01:38:25Z",
+        "headSha": "8e5acb5691b4ee360462a4ab4b245c9f65f3176b",
         "headRepo": "haikosys/parameter-golf"
       },
       "links": {
-        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/eb9be9d5f9214ae10a1dbe3a2ee08ca66147f55e/records/track_10min_16mb/2026-03-20_LoRATTT_Stride32_on_SOTA1/submission.json",
-        "readme": "https://github.com/openai/parameter-golf/blob/eb9be9d5f9214ae10a1dbe3a2ee08ca66147f55e/records/track_10min_16mb/2026-03-20_LoRATTT_Stride32_on_SOTA1/README.md",
-        "trainLog": "https://github.com/openai/parameter-golf/blob/eb9be9d5f9214ae10a1dbe3a2ee08ca66147f55e/records/track_10min_16mb/2026-03-20_LoRATTT_Stride32_on_SOTA1/train.log",
-        "script": "https://github.com/openai/parameter-golf/blob/eb9be9d5f9214ae10a1dbe3a2ee08ca66147f55e/records/track_10min_16mb/2026-03-20_LoRATTT_Stride32_on_SOTA1/train_gpt.py",
-        "folder": "https://github.com/openai/parameter-golf/tree/eb9be9d5f9214ae10a1dbe3a2ee08ca66147f55e/records/track_10min_16mb/2026-03-20_LoRATTT_Stride32_on_SOTA1",
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/8e5acb5691b4ee360462a4ab4b245c9f65f3176b/records/track_10min_16mb/2026-03-20_LoRATTT_Stride32_on_SOTA1/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/8e5acb5691b4ee360462a4ab4b245c9f65f3176b/records/track_10min_16mb/2026-03-20_LoRATTT_Stride32_on_SOTA1/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/8e5acb5691b4ee360462a4ab4b245c9f65f3176b/records/track_10min_16mb/2026-03-20_LoRATTT_Stride32_on_SOTA1/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/8e5acb5691b4ee360462a4ab4b245c9f65f3176b/records/track_10min_16mb/2026-03-20_LoRATTT_Stride32_on_SOTA1/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/8e5acb5691b4ee360462a4ab4b245c9f65f3176b/records/track_10min_16mb/2026-03-20_LoRATTT_Stride32_on_SOTA1",
         "pr": "https://github.com/openai/parameter-golf/pull/274",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
@@ -15080,7 +15157,7 @@
       },
       "pr": {
         "number": 274,
-        "title": "[Non-record] Seq2048 + EMA + Council-Optimized Warmdown",
+        "title": "[Record] Stride-32 + Warmdown/Muon Tuning on SOTA #1: mean val_bpb=1.1403",
         "state": "open",
         "draft": false,
         "mergedAt": null,
@@ -15088,16 +15165,93 @@
         "authorLogin": "haikosys",
         "authorName": null,
         "createdAt": "2026-03-20T21:55:13Z",
-        "updatedAt": "2026-03-20T23:26:18Z",
-        "headSha": "eb9be9d5f9214ae10a1dbe3a2ee08ca66147f55e",
+        "updatedAt": "2026-03-21T01:38:25Z",
+        "headSha": "8e5acb5691b4ee360462a4ab4b245c9f65f3176b",
         "headRepo": "haikosys/parameter-golf"
       },
       "links": {
-        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/eb9be9d5f9214ae10a1dbe3a2ee08ca66147f55e/records/track_10min_16mb/2026-03-20_Seq2048_EMA_CouncilOptimized/submission.json",
-        "readme": "https://github.com/openai/parameter-golf/blob/eb9be9d5f9214ae10a1dbe3a2ee08ca66147f55e/records/track_10min_16mb/2026-03-20_Seq2048_EMA_CouncilOptimized/README.md",
-        "trainLog": "https://github.com/openai/parameter-golf/blob/eb9be9d5f9214ae10a1dbe3a2ee08ca66147f55e/records/track_10min_16mb/2026-03-20_Seq2048_EMA_CouncilOptimized/train.log",
-        "script": "https://github.com/openai/parameter-golf/blob/eb9be9d5f9214ae10a1dbe3a2ee08ca66147f55e/records/track_10min_16mb/2026-03-20_Seq2048_EMA_CouncilOptimized/train_gpt.py",
-        "folder": "https://github.com/openai/parameter-golf/tree/eb9be9d5f9214ae10a1dbe3a2ee08ca66147f55e/records/track_10min_16mb/2026-03-20_Seq2048_EMA_CouncilOptimized",
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/8e5acb5691b4ee360462a4ab4b245c9f65f3176b/records/track_10min_16mb/2026-03-20_Seq2048_EMA_CouncilOptimized/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/8e5acb5691b4ee360462a4ab4b245c9f65f3176b/records/track_10min_16mb/2026-03-20_Seq2048_EMA_CouncilOptimized/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/8e5acb5691b4ee360462a4ab4b245c9f65f3176b/records/track_10min_16mb/2026-03-20_Seq2048_EMA_CouncilOptimized/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/8e5acb5691b4ee360462a4ab4b245c9f65f3176b/records/track_10min_16mb/2026-03-20_Seq2048_EMA_CouncilOptimized/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/8e5acb5691b4ee360462a4ab4b245c9f65f3176b/records/track_10min_16mb/2026-03-20_Seq2048_EMA_CouncilOptimized",
+        "pr": "https://github.com/openai/parameter-golf/pull/274",
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": false,
+        "hasPullRequest": true,
+        "listedInReadme": false
+      }
+    },
+    {
+      "id": "record-records-track_10min_16mb-2026-03-20_Stride32_WarmdownTuned_MuonTuned",
+      "source": "pull_request",
+      "status": "open",
+      "category": "main-track",
+      "track": {
+        "path": "records/track_10min_16mb",
+        "slug": "track_10min_16mb",
+        "label": "10 Minute / 16MB",
+        "official": true,
+        "category": "main-track"
+      },
+      "record": {
+        "folderName": "2026-03-20_Stride32_WarmdownTuned_MuonTuned",
+        "folderPath": "records/track_10min_16mb/2026-03-20_Stride32_WarmdownTuned_MuonTuned",
+        "submissionPath": "records/track_10min_16mb/2026-03-20_Stride32_WarmdownTuned_MuonTuned/submission.json",
+        "readmePath": "records/track_10min_16mb/2026-03-20_Stride32_WarmdownTuned_MuonTuned/README.md",
+        "trainLogPath": "records/track_10min_16mb/2026-03-20_Stride32_WarmdownTuned_MuonTuned/train.log",
+        "scriptPath": "records/track_10min_16mb/2026-03-20_Stride32_WarmdownTuned_MuonTuned/train_gpt.py"
+      },
+      "submission": {
+        "author": "haikosys",
+        "githubId": "haikosys",
+        "name": "Stride-32 Eval + Warmdown/Muon Tuning on SOTA #1",
+        "blurb": null,
+        "date": "2026-03-20"
+      },
+      "metrics": {
+        "valBpb": null,
+        "valLoss": null,
+        "preQuantValBpb": null,
+        "preQuantValLoss": null,
+        "stepStop": null,
+        "wallclockSeconds": null,
+        "evalTimeSeconds": null
+      },
+      "artifact": {
+        "bytesTotal": null,
+        "bytesCode": null,
+        "bytesModelInt8Zlib": null
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
+      "pr": {
+        "number": 274,
+        "title": "[Record] Stride-32 + Warmdown/Muon Tuning on SOTA #1: mean val_bpb=1.1403",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/274",
+        "authorLogin": "haikosys",
+        "authorName": null,
+        "createdAt": "2026-03-20T21:55:13Z",
+        "updatedAt": "2026-03-21T01:38:25Z",
+        "headSha": "8e5acb5691b4ee360462a4ab4b245c9f65f3176b",
+        "headRepo": "haikosys/parameter-golf"
+      },
+      "links": {
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/8e5acb5691b4ee360462a4ab4b245c9f65f3176b/records/track_10min_16mb/2026-03-20_Stride32_WarmdownTuned_MuonTuned/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/8e5acb5691b4ee360462a4ab4b245c9f65f3176b/records/track_10min_16mb/2026-03-20_Stride32_WarmdownTuned_MuonTuned/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/8e5acb5691b4ee360462a4ab4b245c9f65f3176b/records/track_10min_16mb/2026-03-20_Stride32_WarmdownTuned_MuonTuned/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/8e5acb5691b4ee360462a4ab4b245c9f65f3176b/records/track_10min_16mb/2026-03-20_Stride32_WarmdownTuned_MuonTuned/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/8e5acb5691b4ee360462a4ab4b245c9f65f3176b/records/track_10min_16mb/2026-03-20_Stride32_WarmdownTuned_MuonTuned",
         "pr": "https://github.com/openai/parameter-golf/pull/274",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },

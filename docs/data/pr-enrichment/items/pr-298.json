@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-21T01:56:49.272Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 298,
+    "title": "Ultimate recurrent: 21 techniques — depth recurrence, novel ops, LoRA…",
+    "state": "open",
+    "updatedAt": "2026-03-21T01:41:00Z",
+    "headSha": "b85b74ce46ab68d447f8f4cafc9f47c18f59a19b",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/298",
+    "authorLogin": "MrINVISO"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-20_DepthRecurrent_768d_3x3/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Depth-recurrent transformer stacks 3 shared layers over 3 passes with adaptive gating, low-rank recurrence/GRU carries, and compression-aware loss plus GQA attention.",
+    "tags": [
+      "architecture",
+      "attention",
+      "compression",
+      "regularization"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Shared 3-layer depth recurrence with adaptive gating and skip connections",
+      "Compression-aware auxiliary loss alongside low-rank recurrence/GRU carries",
+      "8q/2kv GQA plus sliding-window evaluation stride 64"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

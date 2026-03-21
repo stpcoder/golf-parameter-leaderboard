@@ -1,37 +1,38 @@
 {
-  "generatedAt": "2026-03-20T23:56:17.071Z",
+  "generatedAt": "2026-03-21T01:57:14.413Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 274,
-    "title": "[Non-record] Seq2048 + EMA + Council-Optimized Warmdown",
+    "title": "[Record] Stride-32 + Warmdown/Muon Tuning on SOTA #1: mean val_bpb=1.1403",
     "state": "open",
-    "updatedAt": "2026-03-20T23:26:18Z",
-    "headSha": "eb9be9d5f9214ae10a1dbe3a2ee08ca66147f55e",
+    "updatedAt": "2026-03-21T01:38:25Z",
+    "headSha": "8e5acb5691b4ee360462a4ab4b245c9f65f3176b",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/274",
     "authorLogin": "haikosys"
   },
   "inputs": {
-    "hash": "333c1651a7101d4267d971ebe25bd793307b61c975586544bbd6b9a9c3a8cf24",
+    "hash": "c4f8d017d13e812b0ad5a78b677f8350df1124736cd3f84c8d4e37f273206c70",
     "readmePaths": [
       "records/track_10min_16mb/2026-03-20_LoRATTT_Stride32_on_SOTA1/README.md",
-      "records/track_10min_16mb/2026-03-20_Seq2048_EMA_CouncilOptimized/README.md"
+      "records/track_10min_16mb/2026-03-20_Seq2048_EMA_CouncilOptimized/README.md",
+      "records/track_10min_16mb/2026-03-20_Stride32_WarmdownTuned_MuonTuned/README.md"
     ],
-    "submissionCount": 2
+    "submissionCount": 3
   },
   "output": {
-    "summary": "Seq2048, EMA weight averaging, and a council-optimized 5000-step warmdown with lower Muon LR/momentum refine the 10L baseline training regimen.",
+    "summary": "Adds stride-32 sliding-window eval and warmdown/momentum tuning with smaller batches to the Int5MLP BigramHash SWA base.",
     "tags": [
+      "evaluation",
       "training-schedule",
-      "muon",
-      "regularization"
+      "optimizer"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Seq2048 training for longer context per step",
-      "EMA weight averaging (decay=0.999)",
-      "Council-optimized 5000-step warmdown with lower Muon LR/momentum"
+      "- Stride-32 sliding-window evaluation",
+      "- Extended warmdown plus Muon momentum=0.95 tuning",
+      "- Reduced TRAIN_BATCH_TOKENS for more gradient steps"
     ]
   },
   "compatibility": {

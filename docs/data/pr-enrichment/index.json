@@ -1,8 +1,32 @@
 {
-  "generatedAt": "2026-03-21T01:26:52.332Z",
+  "generatedAt": "2026-03-21T01:57:14.454Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 298,
+      "title": "Ultimate recurrent: 21 techniques — depth recurrence, novel ops, LoRA…",
+      "status": "open",
+      "updatedAt": "2026-03-21T01:41:00Z",
+      "headSha": "b85b74ce46ab68d447f8f4cafc9f47c18f59a19b",
+      "generatedAt": "2026-03-21T01:56:49.272Z",
+      "summary": "Depth-recurrent transformer stacks 3 shared layers over 3 passes with adaptive gating, low-rank recurrence/GRU carries, and compression-aware loss plus GQA attention.",
+      "tags": [
+        "architecture",
+        "attention",
+        "compression",
+        "regularization"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-298.json"
+    },
     {
       "prNumber": 297,
       "title": "Late STE QAT + Int6 MLP3x + SmearGate + BigramHash + OrthoInit + Overtone + SWA + SGD TTT (int6+zstd-22)",
@@ -428,16 +452,16 @@
     },
     {
       "prNumber": 274,
-      "title": "[Non-record] Seq2048 + EMA + Council-Optimized Warmdown",
+      "title": "[Record] Stride-32 + Warmdown/Muon Tuning on SOTA #1: mean val_bpb=1.1403",
       "status": "open",
-      "updatedAt": "2026-03-20T23:26:18Z",
-      "headSha": "eb9be9d5f9214ae10a1dbe3a2ee08ca66147f55e",
-      "generatedAt": "2026-03-20T23:56:17.071Z",
-      "summary": "Seq2048, EMA weight averaging, and a council-optimized 5000-step warmdown with lower Muon LR/momentum refine the 10L baseline training regimen.",
+      "updatedAt": "2026-03-21T01:38:25Z",
+      "headSha": "8e5acb5691b4ee360462a4ab4b245c9f65f3176b",
+      "generatedAt": "2026-03-21T01:57:14.413Z",
+      "summary": "Adds stride-32 sliding-window eval and warmdown/momentum tuning with smaller batches to the Int5MLP BigramHash SWA base.",
       "tags": [
+        "evaluation",
         "training-schedule",
-        "muon",
-        "regularization"
+        "optimizer"
       ],
       "flags": {
         "usesValOnly": false,
