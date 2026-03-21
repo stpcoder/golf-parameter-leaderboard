@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-21T15:03:27.513Z",
+  "generatedAt": "2026-03-21T17:35:38.541Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 149,
     "title": "Add Combined Int6 + QAT + Sliding Window submission",
     "state": "open",
-    "updatedAt": "2026-03-21T15:00:52Z",
-    "headSha": "f2ed21be3bf6461754dac4961650ae85d50b5148",
+    "updatedAt": "2026-03-21T17:30:24Z",
+    "headSha": "d389270545e4a47f06e45ce68ced2b0645aea158",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/149",
     "authorLogin": "pleasedontddosme"
   },
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Blend Int6 quantization with late QAT, sliding-window eval, and cosine warmdown on a high-LR Muon schedule for a 9-layer GPT with FP16 tied embeddings.",
+    "summary": "Combines Int6 quant, FP16-tied embeddings, and QAT with cosine warmdown plus batched sliding-window eval and Muon-aware updates.",
     "tags": [
       "quantization",
-      "sliding-window-eval",
-      "optimizer",
-      "training-schedule"
+      "mixed-precision",
+      "training-schedule",
+      "evaluation"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Int6 QAT with STE in final 30% to minimize quant penalty",
-      "Batched sliding-window eval with cosine warmdown and higher Muon momentum warmup",
-      "FP16 tied embeddings/Late-K passthrough with AdamW and decoupled weight decay"
+      "Int6 quant + FP16 tied embeddings with late-K passthrough",
+      "STE-based QAT in final 30% to shrink quant penalty",
+      "Batched sliding-window eval with cosine warmdown and Muon momentum warmup"
     ]
   },
   "compatibility": {

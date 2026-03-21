@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-21T00:27:36.724Z",
+  "generatedAt": "2026-03-21T17:35:19.632Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 265,
     "title": "Record: 11L + Efficient Partial XSA (val_bpb: 1.1307) ",
     "state": "open",
-    "updatedAt": "2026-03-20T23:59:29Z",
+    "updatedAt": "2026-03-21T17:01:55Z",
     "headSha": "a81f85bd7f632e3e48ef6b1da0017b81d25998a7",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/265",
     "authorLogin": "unnir"
@@ -19,18 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "GQA-aware reshape enables low-cost Exclusive Self Attention applied only to the deepest three layers to curb self-value bias.",
+    "summary": "11-layer U-Net-style transformer applies GQA-aware exclusive self-attention only on the final three layers via free reshapes to cut overhead.",
     "tags": [
       "attention",
       "architecture",
-      "training-schedule"
+      "quantization"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "GQA-aware reshape to avoid repeat_interleave",
-      "Partial XSA on last three layers",
-      "Muon optimizer with SWA warmdown"
+      "Partial Exclusive Self-Attn on deepest layers",
+      "GQA-aligned reshape avoids repeat_interleave",
+      "FlashAttention3 with Muon optimizer"
     ]
   },
   "compatibility": {

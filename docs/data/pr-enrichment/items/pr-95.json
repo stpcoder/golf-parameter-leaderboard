@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-20T13:53:42.386Z",
+  "generatedAt": "2026-03-21T17:35:55.931Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 95,
     "title": "PROTEUS EMA — val_bpb: 1.2253",
     "state": "open",
-    "updatedAt": "2026-03-20T13:34:37Z",
+    "updatedAt": "2026-03-21T16:37:29Z",
     "headSha": "ef1863d2aa5e095b06d9155821397bc4d11ff4d1",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/95",
     "authorLogin": "MatoTeziTanka"
@@ -19,18 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Stacks EMA weight averaging, 2048-length context, FP16 embeddings, and sliding-window eval to lower INT8 quantization loss without architectural change.",
+    "summary": "EMA, seq2048, FP16 embeddings, and sliding-window eval stacked on the baseline to smooth weights and curb INT8 quant loss before zlib roundtrip.",
     "tags": [
-      "optimizer",
+      "quantization",
       "mixed-precision",
       "evaluation"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "EMA decay 0.999 every 10 steps",
-      "seq_len 2048 with FP16 embedding passthrough",
-      "stride-64 sliding-window evaluation"
+      "EMA weight averaging on fp32 parameters",
+      "Train/eval with seq_len 2048 plus stride-64 sliding-window eval",
+      "Keep tied embeddings in FP16 for quant, rest in INT8"
     ]
   },
   "compatibility": {

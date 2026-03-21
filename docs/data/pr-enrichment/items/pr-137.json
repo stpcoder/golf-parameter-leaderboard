@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-19T23:08:59.081Z",
+  "generatedAt": "2026-03-21T17:35:42.761Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 137,
     "title": "Record: Int6 + MLP 3x + STE QAT + NorMuon + sliding window (val_bpb 1.1666)",
     "state": "open",
-    "updatedAt": "2026-03-19T22:49:06Z",
-    "headSha": "b6ee3f7523195118261b8e1fd245a1a71f73c554",
+    "updatedAt": "2026-03-21T17:24:02Z",
+    "headSha": "40bd18486c653a64d416fcb928c34fd7db8a137f",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/137",
     "authorLogin": "abhishekgahlot2"
   },
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Combines STE fake-int6 QAT, NorMuon+SWA, and 3x-expanded MLP under mixed quantization with sliding-window evaluation.",
+    "summary": "Combines STE fake-int6 QAT, 3x MLP expansion, NorMuon updates, SWA averaging, and sliding-window eval to absorb extra capacity for int6 quantization.",
     "tags": [
       "quantization",
       "optimizer",
       "architecture",
-      "sliding-window-eval"
+      "evaluation"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "STE fake-int6 QAT across mixed-precision weights",
-      "NorMuon optimizer with SWA on the 3x-expansion MLP",
-      "Sliding-window stride=64 evaluation for near-full-context scoring"
+      "STE fake-int6 QAT on weights",
+      "NorMuon optimizer with SWA checkpoint averaging",
+      "Sliding-window eval (stride=64)"
     ]
   },
   "compatibility": {

@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-20T01:20:11.087Z",
+  "generatedAt": "2026-03-21T17:35:59.469Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 92,
     "title": "Record: 8192 Vocab, Sliding Window Eval, Selective Quantization; 1.194 val_bpb",
     "state": "open",
-    "updatedAt": "2026-03-20T01:04:52Z",
+    "updatedAt": "2026-03-21T16:37:14Z",
     "headSha": "ee5f6b33ef219fa01357bafe78fde10a02393f05",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/92",
     "authorLogin": "saikrishnarallabandi"
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "8-layer model uses SP-8192 tokenizer, NorMuon, stride-256 sliding window eval, and selective w6e8 quantization for compact, accurate scoring.",
+    "summary": "Combines SP-8192 tokenization, NorMuon optimization on an 8-layer seq4096 model, stride-256 sliding eval, and selective w6e8 quantization for compact high-quality scores.",
     "tags": [
-      "architecture",
+      "tokenization",
       "optimizer",
-      "quantization",
-      "evaluation"
+      "evaluation",
+      "quantization"
     ],
     "usesValOnly": false,
-    "valOnlyReasoning": "Val data is used only for evaluation as part of the standard track; training is on the regular regime.",
+    "valOnlyReasoning": "",
     "techniques": [
-      "SP-8192 tokenizer for denser tokens",
-      "stride-256 sliding-window validation for tighter bpb",
-      "selective w6e8 quantization (INT6 weights, INT8 embeddings)"
+      "SP-8192 tokenizer",
+      "NorMuon optimizer on 8-layer/4096",
+      "stride-256 sliding eval with selective w6e8 quant"
     ]
   },
   "compatibility": {

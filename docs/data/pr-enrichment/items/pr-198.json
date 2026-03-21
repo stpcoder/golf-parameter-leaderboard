@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-20T09:52:53.028Z",
+  "generatedAt": "2026-03-21T17:35:29.222Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 198,
     "title": "11-Layer Int6 + WD=0.04 + SWA + FA3 (val_bpb: 1.1318)",
     "state": "open",
-    "updatedAt": "2026-03-20T09:27:08Z",
+    "updatedAt": "2026-03-21T16:34:23Z",
     "headSha": "372bddea57f465c7217c5e26af2252a803221518",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/198",
     "authorLogin": "jfprincz"
@@ -19,18 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Int6 MuP-scaled 11-layer transformer uses WD=0.04 Muon+AdamW plus SWA and stride-64 sliding eval to fit extra capacity under 16 MB.",
+    "summary": "11-layer muP transformer pairs int6 compression with WD0.04 and SWA while scoring via stride-64 sliding windows to justify extra capacity.",
     "tags": [
       "quantization",
+      "architecture",
       "optimizer",
-      "training-schedule"
+      "sliding-window-eval"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Int6 MLP+attention quantization with zstd compression",
-      "Muon+AdamW WD=0.04 plus SWA warmdown averaging",
-      "Stride-64 sliding-window evaluation"
+      "int6 mixed quantization with muP init",
+      "Muon+AdamW WD0.04 plus SWA warmdown",
+      "stride-64 sliding-window evaluation"
     ]
   },
   "compatibility": {

@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-21T02:57:30.797Z",
+  "generatedAt": "2026-03-21T17:35:01.487Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 301,
-    "title": "Non-record: Int6 QAT + MLP1472 + Sliding Window (val_bpb=1.1958)",
+    "title": "Non-record: Int6 QAT + MLP1472 + SlidingWindow + TTT (val_bpb=1.1807)",
     "state": "open",
-    "updatedAt": "2026-03-21T02:52:19Z",
-    "headSha": "be0d113f9c7d58ca1bf7458d72222914e2d4987f",
+    "updatedAt": "2026-03-21T16:37:34Z",
+    "headSha": "21f3b85fac9892204ef789b58d586ec609462b04",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/301",
     "authorLogin": "lookin-zz"
   },
@@ -19,25 +19,25 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "9-layer 512d GPT uses int6 STE QAT, enlarged MLP1472, FP16 tied embeddings, long warmdown, and sliding-window eval to shrink the quant gap.",
+    "summary": "Int6 QAT GPT with a larger MLP uses sliding-window eval plus test-time SGD tuning (freeze first 2 blocks) for validation-focused refinement.",
     "tags": [
+      "val-only",
       "quantization",
-      "architecture",
-      "optimizer",
-      "evaluation"
+      "evaluation",
+      "architecture"
     ],
-    "usesValOnly": false,
-    "valOnlyReasoning": "",
+    "usesValOnly": true,
+    "valOnlyReasoning": "Test-time training runs 3 epochs of SGD on the validation shard while freezing the first two blocks.",
     "techniques": [
-      "Int6 STE QAT with FP16 tied embeddings",
-      "Aggressive warmdown + z-loss stabilization",
-      "Batched sliding-window eval (stride 64)"
+      "STE int6 QAT with warmdown",
+      "Sliding-window eval (stride 64)",
+      "Test-time training: 3-epoch SGD on val shard (freeze 2 blocks)"
     ]
   },
   "compatibility": {
     "collectorUsesValOnly": false,
-    "aiUsesValOnly": false,
-    "finalUsesValOnly": false,
-    "valOnlyMatchesCollector": true
+    "aiUsesValOnly": true,
+    "finalUsesValOnly": true,
+    "valOnlyMatchesCollector": false
   }
 }

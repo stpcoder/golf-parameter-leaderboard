@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-19T22:09:01.504Z",
+  "generatedAt": "2026-03-21T17:35:47.573Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 102,
     "title": "Int6 MLP3x + Tuned LR + SmearGate + SlidingWindow (val_bpb: 1.1618)",
     "state": "open",
-    "updatedAt": "2026-03-19T21:51:39Z",
+    "updatedAt": "2026-03-21T16:37:24Z",
     "headSha": "f58e6e0c1376bd892ba8f059dcc5914a15462584",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/102",
     "authorLogin": "unnir"
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Per-row int6 quant + zstd frees space for a 3× MLP GPT that blends bigrams via SmearGate before attention and uses sliding-window eval.",
+    "summary": "Stacked int6+zstd quantization, SmearGate bigram blending, and tuned Muon with sliding-window eval to fit a wider MLP3x under 16MB.",
     "tags": [
       "quantization",
-      "architecture",
+      "optimizer",
       "attention",
       "sliding-window-eval"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "int6 per-row quantization + zstd22",
-      "3x MLP hidden dim & SmearGate bigram blend",
-      "sliding-window evaluation stride 64"
+      "Int6 per-row quantization with zstd-22 compression",
+      "SmearGate mixes current and previous embeddings before attention",
+      "Sliding-window stride-64 evaluation"
     ]
   },
   "compatibility": {
