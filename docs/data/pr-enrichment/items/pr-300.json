@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-21T02:57:35.935Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 300,
+    "title": "Non-record: Shared-Core 8/12 @ 896 on 1xH100 SXM (1.9998 val_bpb)",
+    "state": "open",
+    "updatedAt": "2026-03-21T02:36:20Z",
+    "headSha": "e5e366078d8181a86868ef1c6dbd1595758bce0e",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/300",
+    "authorLogin": "Janksuu"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-03-20_SharedCore8x12d896_MLP1_1xH100SXM/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Shared-core recurrent transformer (8 layers, recurrence depth 12, 896-dim) int8+zlib quantized to stay under 16MB and validated on 1xH100 cloud hardware.",
+    "tags": [
+      "architecture",
+      "quantization",
+      "evaluation",
+      "non-record"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "shared-core recurrent transformer with recurrence depth 12",
+      "int8+zlib quantization to meet 16MB artifact cap",
+      "1xH100 SXM validation to demonstrate cloud-backed reproducibility"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

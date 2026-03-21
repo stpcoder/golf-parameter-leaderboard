@@ -1,8 +1,80 @@
 {
-  "generatedAt": "2026-03-21T02:27:41.668Z",
+  "generatedAt": "2026-03-21T02:57:35.981Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 302,
+      "title": "Non-record: 11L int5/int6 + XSA + online TTT w/ decay prior (single-run val_bpb=1.1520)",
+      "status": "open",
+      "updatedAt": "2026-03-21T02:53:47Z",
+      "headSha": "8e1895e8353016305b5866a9ce559dc5f5d26f6d",
+      "generatedAt": "2026-03-21T02:57:25.597Z",
+      "summary": "Non-record 11L int5/int6 model adds pre-Q/K RMSNorm, last-3-layer XSA, and Krause-decay online causal TTT with Reptile meta-learning.",
+      "tags": [
+        "quantization",
+        "attention",
+        "training-schedule",
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-302.json"
+    },
+    {
+      "prNumber": 301,
+      "title": "Non-record: Int6 QAT + MLP1472 + Sliding Window (val_bpb=1.1958)",
+      "status": "open",
+      "updatedAt": "2026-03-21T02:52:19Z",
+      "headSha": "be0d113f9c7d58ca1bf7458d72222914e2d4987f",
+      "generatedAt": "2026-03-21T02:57:30.797Z",
+      "summary": "9-layer 512d GPT uses int6 STE QAT, enlarged MLP1472, FP16 tied embeddings, long warmdown, and sliding-window eval to shrink the quant gap.",
+      "tags": [
+        "quantization",
+        "architecture",
+        "optimizer",
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-301.json"
+    },
+    {
+      "prNumber": 300,
+      "title": "Non-record: Shared-Core 8/12 @ 896 on 1xH100 SXM (1.9998 val_bpb)",
+      "status": "open",
+      "updatedAt": "2026-03-21T02:36:20Z",
+      "headSha": "e5e366078d8181a86868ef1c6dbd1595758bce0e",
+      "generatedAt": "2026-03-21T02:57:35.935Z",
+      "summary": "Shared-core recurrent transformer (8 layers, recurrence depth 12, 896-dim) int8+zlib quantized to stay under 16MB and validated on 1xH100 cloud hardware.",
+      "tags": [
+        "architecture",
+        "quantization",
+        "evaluation",
+        "non-record"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-300.json"
+    },
     {
       "prNumber": 299,
       "title": "[Non-record] LoRA TTT + HParams (val_bpb=1.16973333)",

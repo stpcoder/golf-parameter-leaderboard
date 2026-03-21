@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-21T02:57:30.797Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 301,
+    "title": "Non-record: Int6 QAT + MLP1472 + Sliding Window (val_bpb=1.1958)",
+    "state": "open",
+    "updatedAt": "2026-03-21T02:52:19Z",
+    "headSha": "be0d113f9c7d58ca1bf7458d72222914e2d4987f",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/301",
+    "authorLogin": "lookin-zz"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-03-21_Int6_QAT_MLP1472_SlidingWindow/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "9-layer 512d GPT uses int6 STE QAT, enlarged MLP1472, FP16 tied embeddings, long warmdown, and sliding-window eval to shrink the quant gap.",
+    "tags": [
+      "quantization",
+      "architecture",
+      "optimizer",
+      "evaluation"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Int6 STE QAT with FP16 tied embeddings",
+      "Aggressive warmdown + z-loss stabilization",
+      "Batched sliding-window eval (stride 64)"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

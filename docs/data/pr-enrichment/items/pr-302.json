@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-21T02:57:25.597Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 302,
+    "title": "Non-record: 11L int5/int6 + XSA + online TTT w/ decay prior (single-run val_bpb=1.1520)",
+    "state": "open",
+    "updatedAt": "2026-03-21T02:53:47Z",
+    "headSha": "8e1895e8353016305b5866a9ce559dc5f5d26f6d",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/302",
+    "authorLogin": "JackYoung27"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-20_NovelSOTA/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Non-record 11L int5/int6 model adds pre-Q/K RMSNorm, last-3-layer XSA, and Krause-decay online causal TTT with Reptile meta-learning.",
+    "tags": [
+      "quantization",
+      "attention",
+      "training-schedule",
+      "evaluation"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Pre-Q/K RMSNorm stabilizes RoPE-facing Q/K path under int5/int6",
+      "Online causal TTT with Krause-style decay prior adapting last three MLP blocks",
+      "Reptile meta-learning in the final 10% to prime eval-time adaptation"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}
