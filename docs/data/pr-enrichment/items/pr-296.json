@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-21T00:56:41.200Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 296,
+    "title": "[Non-record] Meta-Learned TTT + Error-Guided Adaptation Analysis (val_bpb=1.1645)",
+    "state": "open",
+    "updatedAt": "2026-03-21T00:28:41Z",
+    "headSha": "9605e98cbbc76ee92aac504327df2b00f28f26eb",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/296",
+    "authorLogin": "sseanliu"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-20_MetaTTT_v2/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Combines Reptile meta-learned TTT initialization with error-guided LoRA adaptation and depth exploration on compressed SmearGate models.",
+    "tags": [
+      "training-schedule",
+      "evaluation",
+      "compression",
+      "depth-width"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "Not using validation-only training.",
+    "techniques": [
+      "Reptile meta-training on final MLP layers",
+      "Error-guided LoRA TTT targeting top-loss windows",
+      "SmearGate + int6 depth scaling"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

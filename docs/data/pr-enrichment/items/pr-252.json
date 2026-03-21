@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-21T00:27:54.017Z",
+  "generatedAt": "2026-03-21T00:56:52.720Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 252,
     "title": "Add PR114 RunPod H100 SXM non-record submission",
     "state": "open",
-    "updatedAt": "2026-03-21T00:16:06Z",
+    "updatedAt": "2026-03-21T00:29:48Z",
     "headSha": "013954d4c19b8c483c1db239010ff850993cbced",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/252",
     "authorLogin": "greqone"
@@ -19,18 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Verifies the PR114 long-context SP-1024 selective-precision recipe on RunPod H100 SXM with mixed precision tied embeddings and a 16MB-compressed GQA package.",
+    "summary": "Repackaged PR114 long-context selective-precision recipe with 9-layer SP-1024 GQA, 2048-token windows, and mixed selective-precision fp16 export for RunPod verification.",
     "tags": [
       "architecture",
-      "quantization",
+      "mixed-precision",
       "non-record"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Selective-precision mixed FP16 tied embeddings",
-      "RunPod same-provider rerun verification",
-      "16MB-compressed GQA model"
+      "9-layer SP-1024 GQA with 2048-token scans",
+      "Mixed selective-precision export leveraging fp16 tied embeddings",
+      "RunPod same-provider reruns validate the recipe"
     ]
   },
   "compatibility": {

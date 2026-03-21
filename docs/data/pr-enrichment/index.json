@@ -1,20 +1,20 @@
 {
-  "generatedAt": "2026-03-21T00:28:44.543Z",
+  "generatedAt": "2026-03-21T00:56:59.627Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
     {
-      "prNumber": 295,
-      "title": "[Record Submission] QAT Int5/Int6 + Backout + U-Net Skips + BigramHash(10240) + SWA50 — val_bpb=1.1477",
+      "prNumber": 297,
+      "title": "Late STE QAT + Int6 MLP3x + SmearGate + BigramHash + OrthoInit + Overtone + SWA + SGD TTT (int6+zstd-22)",
       "status": "open",
-      "updatedAt": "2026-03-21T00:25:33Z",
-      "headSha": "580031b34e75638a8d9b5a9f3ec5b47be3ea8e29",
-      "generatedAt": "2026-03-21T00:26:40.407Z",
-      "summary": "Mixed int5/int6 STE QAT with backout, learned U-Net skips, and SWA on a BigramHash/SmearGate muon stack for quantization-ready outputs.",
+      "updatedAt": "2026-03-21T00:28:53Z",
+      "headSha": "6b710c10e331ab8bfff3d779f381278e35a56ca3",
+      "generatedAt": "2026-03-21T00:56:33.860Z",
+      "summary": "Combines a 9-layer 512 GPT with SmearGate/BigramHash, late STE QAT + SWA, int6+zstd compression, and full-model SGD TTT after sliding-window eval.",
       "tags": [
         "quantization",
         "architecture",
-        "muon",
+        "optimizer",
         "training-schedule"
       ],
       "flags": {
@@ -25,20 +25,21 @@
       "compatibility": {
         "valOnlyMatchesCollector": true
       },
-      "file": "items/pr-295.json"
+      "file": "items/pr-297.json"
     },
     {
-      "prNumber": 294,
+      "prNumber": 296,
       "title": "[Non-record] Meta-Learned TTT + Error-Guided Adaptation Analysis (val_bpb=1.1645)",
       "status": "open",
-      "updatedAt": "2026-03-21T00:21:08Z",
-      "headSha": "2d4c4229cc5df0bac17200c7bd7f864c97eef51a",
-      "generatedAt": "2026-03-21T00:26:45.614Z",
-      "summary": "Applies Reptile meta-learning to the late MLPs of SmearGate-compressed models while probing targeted LoRA-based high-loss test-time adaptation.",
+      "updatedAt": "2026-03-21T00:28:41Z",
+      "headSha": "9605e98cbbc76ee92aac504327df2b00f28f26eb",
+      "generatedAt": "2026-03-21T00:56:41.200Z",
+      "summary": "Combines Reptile meta-learned TTT initialization with error-guided LoRA adaptation and depth exploration on compressed SmearGate models.",
       "tags": [
-        "architecture",
         "training-schedule",
-        "evaluation"
+        "evaluation",
+        "compression",
+        "depth-width"
       ],
       "flags": {
         "usesValOnly": false,
@@ -48,7 +49,31 @@
       "compatibility": {
         "valOnlyMatchesCollector": true
       },
-      "file": "items/pr-294.json"
+      "file": "items/pr-296.json"
+    },
+    {
+      "prNumber": 295,
+      "title": "[Record Submission] QAT Int5/Int6 + Backout + U-Net Skips + BigramHash(10240) + SWA50 — val_bpb=1.1477",
+      "status": "open",
+      "updatedAt": "2026-03-21T00:33:09Z",
+      "headSha": "f96f6de179f942123341045e0d74f1adfa9daeee",
+      "generatedAt": "2026-03-21T00:56:46.507Z",
+      "summary": "Int5/Int6 QAT with U-Net skip encoder-decoder, learned Backout residual, and SWA to stabilize post-quantized BigramHash model.",
+      "tags": [
+        "quantization",
+        "architecture",
+        "training-schedule",
+        "tokenization"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-295.json"
     },
     {
       "prNumber": 293,
@@ -752,13 +777,13 @@
       "prNumber": 252,
       "title": "Add PR114 RunPod H100 SXM non-record submission",
       "status": "open",
-      "updatedAt": "2026-03-21T00:16:06Z",
+      "updatedAt": "2026-03-21T00:29:48Z",
       "headSha": "013954d4c19b8c483c1db239010ff850993cbced",
-      "generatedAt": "2026-03-21T00:27:54.017Z",
-      "summary": "Verifies the PR114 long-context SP-1024 selective-precision recipe on RunPod H100 SXM with mixed precision tied embeddings and a 16MB-compressed GQA package.",
+      "generatedAt": "2026-03-21T00:56:52.720Z",
+      "summary": "Repackaged PR114 long-context selective-precision recipe with 9-layer SP-1024 GQA, 2048-token windows, and mixed selective-precision fp16 export for RunPod verification.",
       "tags": [
         "architecture",
-        "quantization",
+        "mixed-precision",
         "non-record"
       ],
       "flags": {
@@ -2490,23 +2515,23 @@
       "prNumber": 150,
       "title": "Record: 11L Int6 QAT + SmearGate + OrthoInit + SWA + TTT (val_bpb=1.1478)",
       "status": "open",
-      "updatedAt": "2026-03-20T23:59:42Z",
-      "headSha": "ba19815c8c9645fea9e8acd16afa32d71919ce2e",
-      "generatedAt": "2026-03-21T00:28:34.192Z",
-      "summary": "11-layer 512-dim transformer stacks SmearGate, BigramHash, STE int6 QAT, NTK-RoPE, OrthoInit+muP, Muon optimizer, SWA, and val-data TTT before sliding-window eval.",
+      "updatedAt": "2026-03-21T00:46:31Z",
+      "headSha": "f1833d889d683a7c98d0501a39c333de1d3ffff6",
+      "generatedAt": "2026-03-21T00:56:59.607Z",
+      "summary": "Stacked Int6 QAT transformer blending SmearGate/BigramHash tokens with OrthoInit+muP, SWA warmdown, and TTT val-data SGD under sliding-window eval.",
       "tags": [
+        "val-only",
         "quantization",
-        "architecture",
-        "optimizer",
-        "evaluation"
+        "attention",
+        "optimizer"
       ],
       "flags": {
-        "usesValOnly": false,
-        "usesValOnlyAi": false,
+        "usesValOnly": true,
+        "usesValOnlyAi": true,
         "usesValOnlyCollector": false
       },
       "compatibility": {
-        "valOnlyMatchesCollector": true
+        "valOnlyMatchesCollector": false
       },
       "file": "items/pr-150.json"
     },

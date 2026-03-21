@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-21T00:28:34.192Z",
+  "generatedAt": "2026-03-21T00:56:59.607Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 150,
     "title": "Record: 11L Int6 QAT + SmearGate + OrthoInit + SWA + TTT (val_bpb=1.1478)",
     "state": "open",
-    "updatedAt": "2026-03-20T23:59:42Z",
-    "headSha": "ba19815c8c9645fea9e8acd16afa32d71919ce2e",
+    "updatedAt": "2026-03-21T00:46:31Z",
+    "headSha": "f1833d889d683a7c98d0501a39c333de1d3ffff6",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/150",
     "authorLogin": "yahya010"
   },
@@ -21,25 +21,25 @@
     "submissionCount": 3
   },
   "output": {
-    "summary": "11-layer 512-dim transformer stacks SmearGate, BigramHash, STE int6 QAT, NTK-RoPE, OrthoInit+muP, Muon optimizer, SWA, and val-data TTT before sliding-window eval.",
+    "summary": "Stacked Int6 QAT transformer blending SmearGate/BigramHash tokens with OrthoInit+muP, SWA warmdown, and TTT val-data SGD under sliding-window eval.",
     "tags": [
+      "val-only",
       "quantization",
-      "architecture",
-      "optimizer",
-      "evaluation"
+      "attention",
+      "optimizer"
     ],
-    "usesValOnly": false,
-    "valOnlyReasoning": "",
+    "usesValOnly": true,
+    "valOnlyReasoning": "TTT phase performs full-weight SGD updates on the validation shard to refine post-training weights.",
     "techniques": [
-      "STE int6 QAT with zstd compression",
-      "SmearGate+BigramHash enhanced token blending",
-      "Muon+SWA training with NTK-RoPE and TTT on validation data"
+      "Int6 STE QAT with SmearGate/BigramHash token blending",
+      "OrthoInit+muP-scaled projections with Muon optimizer",
+      "SWA warmdown plus TTT validation SGD"
     ]
   },
   "compatibility": {
     "collectorUsesValOnly": false,
-    "aiUsesValOnly": false,
-    "finalUsesValOnly": false,
-    "valOnlyMatchesCollector": true
+    "aiUsesValOnly": true,
+    "finalUsesValOnly": true,
+    "valOnlyMatchesCollector": false
   }
 }
