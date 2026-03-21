@@ -1,8 +1,32 @@
 {
-  "generatedAt": "2026-03-21T18:35:01.986Z",
+  "generatedAt": "2026-03-21T19:05:26.691Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 357,
+      "title": "docs: add TIPS.md and resolve environment dependency issues (#280, #82, #43)",
+      "status": "open",
+      "updatedAt": "2026-03-21T18:46:56Z",
+      "headSha": "4202ac96cf7fb3305b0296050a392181de2588dd",
+      "generatedAt": "2026-03-21T19:05:03.304Z",
+      "summary": "Adds flash-attn to requirements and a newcomer TIPS doc outlining Depth Recurrence, Muon tweaks, sliding-window eval, tokenizer-size rules, and layer tying guidance.",
+      "tags": [
+        "architecture",
+        "optimizer",
+        "tokenization",
+        "non-record"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-357.json"
+    },
     {
       "prNumber": 356,
       "title": "Non-record: PR315 repro on 1xH100 PCIe, int6+zstd (val_bpb=1.8338)",
@@ -756,12 +780,12 @@
       "prNumber": 315,
       "title": "Record: 11L Partial RoPE + LN Scale + EMA + Late QAT + XSA4 (val_bpb: 1.1248)",
       "status": "open",
-      "updatedAt": "2026-03-21T06:23:42Z",
+      "updatedAt": "2026-03-21T18:47:50Z",
       "headSha": "dfb05a5d6cfe7ccfb5def2ab129d69740c1bcd76",
-      "generatedAt": "2026-03-21T06:29:27.619Z",
-      "summary": "Adds partial RoPE, depth-scaled RMSNorm outputs, and late-onset int6 QAT atop the 11-layer muon+XSA stack.",
+      "generatedAt": "2026-03-21T19:05:08.658Z",
+      "summary": "11-layer Muon/EMA stack adds 16-dim partial RoPE, RMSNorm scaling, and late-triggered int6 QAT atop the XSA/SmearGate architecture.",
       "tags": [
-        "architecture",
+        "positional-encoding",
         "regularization",
         "quantization",
         "training-schedule"
@@ -1011,15 +1035,15 @@
       "prNumber": 301,
       "title": "Non-record: Int6 QAT + MLP1472 + SlidingWindow + TTT (val_bpb=1.1807)",
       "status": "open",
-      "updatedAt": "2026-03-21T16:37:34Z",
-      "headSha": "21f3b85fac9892204ef789b58d586ec609462b04",
-      "generatedAt": "2026-03-21T17:35:01.487Z",
-      "summary": "Int6 QAT GPT with a larger MLP uses sliding-window eval plus test-time SGD tuning (freeze first 2 blocks) for validation-focused refinement.",
+      "updatedAt": "2026-03-21T18:53:24Z",
+      "headSha": "962e116eb34899d8f6b9d430c03b1b354d668afc",
+      "generatedAt": "2026-03-21T19:05:15.406Z",
+      "summary": "Int6-QAT GPT with wider MLP, sliding-window stride-64 eval, and full-weight SGD test-time training on validation data.",
       "tags": [
         "val-only",
         "quantization",
-        "evaluation",
-        "architecture"
+        "architecture",
+        "sliding-window-eval"
       ],
       "flags": {
         "usesValOnly": true,
@@ -1641,15 +1665,15 @@
       "prNumber": 267,
       "title": "Record: val_bpb: 1.14020 [tested 3x on 8xh100]",
       "status": "open",
-      "updatedAt": "2026-03-21T18:33:46Z",
-      "headSha": "86c4b444b263602d02362fb3f20b783d113e7506",
-      "generatedAt": "2026-03-21T18:34:57.870Z",
-      "summary": "Compliant causal chunk-wise eval-then-train TTT on validation with an int5-quantized 11-layer model using Muon/EMA/XSA to fit under 16MB.",
+      "updatedAt": "2026-03-21T18:43:59Z",
+      "headSha": "736c142d86ea957fb69d7011f519148d0304ced0",
+      "generatedAt": "2026-03-21T19:05:23.190Z",
+      "summary": "11-layer Int5-fit model pairs XSA/EMA/pruning with muon optimizer tweaks and compliant chunked eval-then-train test-time adaptation.",
       "tags": [
         "val-only",
         "quantization",
-        "sliding-window-eval",
-        "optimizer"
+        "architecture",
+        "training-schedule"
       ],
       "flags": {
         "usesValOnly": true,
@@ -3021,30 +3045,6 @@
       "file": "items/pr-181.json"
     },
     {
-      "prNumber": 180,
-      "title": "Record: 10L Int5-MLP + BigramHash(10240) + SWA(0.4) + WD=0.04 (val_bpb=1.1428, mean 3 seeds)",
-      "status": "closed",
-      "updatedAt": "2026-03-20T18:51:12Z",
-      "headSha": "1a8be36c17e20b1fb53dbf4975e1d67f5b8a63e9",
-      "generatedAt": "2026-03-20T18:54:59.861Z",
-      "summary": "Mixed int5 MLP/int6 attention quantization buys space for a 10-layer GPT with MuonWD regularization, SWA late averaging, and BigramHash.",
-      "tags": [
-        "quantization",
-        "architecture",
-        "optimizer",
-        "training-schedule"
-      ],
-      "flags": {
-        "usesValOnly": false,
-        "usesValOnlyAi": false,
-        "usesValOnlyCollector": false
-      },
-      "compatibility": {
-        "valOnlyMatchesCollector": true
-      },
-      "file": "items/pr-180.json"
-    },
-    {
       "prNumber": 179,
       "title": "Record: 11L, int6+zstd, decoupled WD (val_bpb = 1.1472)",
       "status": "open",
@@ -3350,29 +3350,6 @@
         "valOnlyMatchesCollector": true
       },
       "file": "items/pr-163.json"
-    },
-    {
-      "prNumber": 162,
-      "title": "Record: Int6 MLP3x + SmearGate + BigramHash + MuonWD + SWA (mean val_bpb=1.1483)",
-      "status": "closed",
-      "updatedAt": "2026-03-20T18:48:27Z",
-      "headSha": "3c458dcdd4c32353ad714d275a653da1597a3979",
-      "generatedAt": "2026-03-20T18:55:14.210Z",
-      "summary": "Int6 quantization lets a 9-layer GPT scale to 3× MLP width while SmearGate/BigramHash embeddings and muP-informed Muon+SWA refine training.",
-      "tags": [
-        "quantization",
-        "architecture",
-        "optimizer"
-      ],
-      "flags": {
-        "usesValOnly": false,
-        "usesValOnlyAi": false,
-        "usesValOnlyCollector": false
-      },
-      "compatibility": {
-        "valOnlyMatchesCollector": true
-      },
-      "file": "items/pr-162.json"
     },
     {
       "prNumber": 161,
@@ -4430,39 +4407,17 @@
       "file": "items/pr-99.json"
     },
     {
-      "prNumber": 96,
-      "title": "Sliding Window + Long-Context Training: val_bpb=1.1764",
-      "status": "open",
-      "updatedAt": "2026-03-19T15:52:57Z",
-      "headSha": "50225c568f6307636b49c30ac1f5dd9874b12211",
-      "generatedAt": "2026-03-19T17:25:32.051Z",
-      "summary": "Train 2048 tokens with high Muon momentum, tight clipping, and stride-512 sliding-window eval to capture long context with more steps.",
-      "tags": [
-        "sliding-window-eval",
-        "optimizer",
-        "training-schedule"
-      ],
-      "flags": {
-        "usesValOnly": false,
-        "usesValOnlyAi": false,
-        "usesValOnlyCollector": false
-      },
-      "compatibility": {
-        "valOnlyMatchesCollector": true
-      },
-      "file": "items/pr-96.json"
-    },
-    {
       "prNumber": 95,
       "title": "PROTEUS EMA — val_bpb: 1.2253",
       "status": "open",
-      "updatedAt": "2026-03-21T16:37:29Z",
+      "updatedAt": "2026-03-21T18:50:40Z",
       "headSha": "ef1863d2aa5e095b06d9155821397bc4d11ff4d1",
-      "generatedAt": "2026-03-21T17:35:55.931Z",
-      "summary": "EMA, seq2048, FP16 embeddings, and sliding-window eval stacked on the baseline to smooth weights and curb INT8 quant loss before zlib roundtrip.",
+      "generatedAt": "2026-03-21T19:05:26.680Z",
+      "summary": "EMA averaging plus FP16 embedding passthrough, seq2048 training, and sliding-window eval keep quantized baseline weights and embeddings sharp.",
       "tags": [
+        "architecture",
+        "optimizer",
         "quantization",
-        "mixed-precision",
         "evaluation"
       ],
       "flags": {
@@ -4617,30 +4572,6 @@
       "file": "items/pr-88.json"
     },
     {
-      "prNumber": 86,
-      "title": "Update: 11L MLP3x + WD=0.04 + zstd-22 (val_bpb 1.1502)",
-      "status": "closed",
-      "updatedAt": "2026-03-20T18:44:49Z",
-      "headSha": "1641a23486b3a5675c8fcc51f734b394b525105f",
-      "generatedAt": "2026-03-20T18:55:28.879Z",
-      "summary": "11-layer MLP3x transformer with int6 QAT, tied embeddings, Muon/AdamW decay, zstd-22 compression, and sliding-window eval to fit 16MB.",
-      "tags": [
-        "quantization",
-        "sliding-window-eval",
-        "compression",
-        "architecture"
-      ],
-      "flags": {
-        "usesValOnly": false,
-        "usesValOnlyAi": false,
-        "usesValOnlyCollector": false
-      },
-      "compatibility": {
-        "valOnlyMatchesCollector": true
-      },
-      "file": "items/pr-86.json"
-    },
-    {
       "prNumber": 85,
       "title": "Record (pending): 92-experiment autoresearch + sliding window eval, pre-quant val_bpb=1.2156",
       "status": "open",
@@ -4783,29 +4714,6 @@
       "file": "items/pr-78.json"
     },
     {
-      "prNumber": 77,
-      "title": "[record bpb=1.195] sliding window + LoRA TTT",
-      "status": "closed",
-      "updatedAt": "2026-03-20T01:57:32Z",
-      "headSha": "9fed66c01eb86e9089b68580a2295cbffaef25de",
-      "generatedAt": "2026-03-20T02:20:23.598Z",
-      "summary": "Baseline training with document-isolated sliding-window eval adds per-document LoRA TTT (rank-8 on lm_head/q/v) to adapt each chunk.",
-      "tags": [
-        "sliding-window-eval",
-        "attention",
-        "evaluation"
-      ],
-      "flags": {
-        "usesValOnly": false,
-        "usesValOnlyAi": false,
-        "usesValOnlyCollector": false
-      },
-      "compatibility": {
-        "valOnlyMatchesCollector": true
-      },
-      "file": "items/pr-77.json"
-    },
-    {
       "prNumber": 76,
       "title": "12L Int5-MLP + SmearGate + BigramHash + SWA (val_bpb 1.1433)",
       "status": "open",
@@ -4875,30 +4783,6 @@
         "valOnlyMatchesCollector": true
       },
       "file": "items/pr-74.json"
-    },
-    {
-      "prNumber": 73,
-      "title": "Non-record: SwiGLU + warmdown fix + quarter batch (1x5090, 1.3281 bpb)",
-      "status": "closed",
-      "updatedAt": "2026-03-20T18:42:15Z",
-      "headSha": "b8a1426d0f4a4e3a6cd3aaa9071eb5a4904dbb58",
-      "generatedAt": "2026-03-20T18:55:49.311Z",
-      "summary": "SwiGLU MLPs, a time-fraction warmdown fix, and quarter-batch plus gradient accumulation boost optimizer steps on single RTX 5090 under the 16MB cap.",
-      "tags": [
-        "architecture",
-        "training-schedule",
-        "optimizer",
-        "non-record"
-      ],
-      "flags": {
-        "usesValOnly": false,
-        "usesValOnlyAi": false,
-        "usesValOnlyCollector": false
-      },
-      "compatibility": {
-        "valOnlyMatchesCollector": true
-      },
-      "file": "items/pr-73.json"
     },
     {
       "prNumber": 71,
@@ -4996,30 +4880,6 @@
       "file": "items/pr-66.json"
     },
     {
-      "prNumber": 65,
-      "title": "Record: Mixed Quant Int6/FP16 + SmearGate + OrthoInit + MLP 3x + Sliding Window, val_bpb=1.1556",
-      "status": "closed",
-      "updatedAt": "2026-03-20T18:40:28Z",
-      "headSha": "3aface5c0bcc40ca2e74918977d05c07ae8fa634",
-      "generatedAt": "2026-03-20T18:56:02.797Z",
-      "summary": "Combined SmearGate bigram gating, orthogonal init/Muon optimizer, and int6 STE QAT with sliding-window eval on a 9-layer transformer.",
-      "tags": [
-        "quantization",
-        "architecture",
-        "optimizer",
-        "evaluation"
-      ],
-      "flags": {
-        "usesValOnly": false,
-        "usesValOnlyAi": false,
-        "usesValOnlyCollector": false
-      },
-      "compatibility": {
-        "valOnlyMatchesCollector": true
-      },
-      "file": "items/pr-65.json"
-    },
-    {
       "prNumber": 64,
       "title": "Record: 11L XSA + EMA + TTT (mean val_bpb=1.1377)",
       "status": "open",
@@ -5044,30 +4904,6 @@
       "file": "items/pr-64.json"
     },
     {
-      "prNumber": 63,
-      "title": "Record: 10L Int6 QAT + Zstd MLP2.6x Muon0.99 Sliding Window (val_bpb 1.1598)",
-      "status": "closed",
-      "updatedAt": "2026-03-20T18:26:38Z",
-      "headSha": "510e3f6a9cc55a9e94b2dcc9ab4cbb3dbf3844de",
-      "generatedAt": "2026-03-20T18:56:14.303Z",
-      "summary": "STE int6 QAT + full int6 quantization with zstd-22 compression lets them widen to a 1344 hidden MLP and run sliding-window eval with Muon 0.99.",
-      "tags": [
-        "quantization",
-        "compression",
-        "architecture",
-        "evaluation"
-      ],
-      "flags": {
-        "usesValOnly": false,
-        "usesValOnlyAi": false,
-        "usesValOnlyCollector": false
-      },
-      "compatibility": {
-        "valOnlyMatchesCollector": true
-      },
-      "file": "items/pr-63.json"
-    },
-    {
       "prNumber": 62,
       "title": "WIP: Add adaptive eval-time context non-record MLX submission",
       "status": "open",
@@ -5088,30 +4924,6 @@
         "valOnlyMatchesCollector": true
       },
       "file": "items/pr-62.json"
-    },
-    {
-      "prNumber": 60,
-      "title": "Record: Sliding Window + FP16 Embed + 10L + Muon WD + Overtone Init (val_bpb=1.1748)",
-      "status": "closed",
-      "updatedAt": "2026-03-20T03:15:00Z",
-      "headSha": "56dc745ac25ad6702864dfb4e5b65b632af565e0",
-      "generatedAt": "2026-03-20T03:20:55.708Z",
-      "summary": "Combines sliding-window scoring, FP16 tied embeddings, Muon with decoupled weight decay, and spectral+residual inits to support a 10-layer config.",
-      "tags": [
-        "sliding-window-eval",
-        "mixed-precision",
-        "optimizer",
-        "architecture"
-      ],
-      "flags": {
-        "usesValOnly": false,
-        "usesValOnlyAi": false,
-        "usesValOnlyCollector": false
-      },
-      "compatibility": {
-        "valOnlyMatchesCollector": true
-      },
-      "file": "items/pr-60.json"
     },
     {
       "prNumber": 59,
@@ -5229,29 +5041,6 @@
         "valOnlyMatchesCollector": true
       },
       "file": "items/pr-53.json"
-    },
-    {
-      "prNumber": 52,
-      "title": "New SOTA attempt (val_bpb=1.2014)",
-      "status": "closed",
-      "updatedAt": "2026-03-19T21:04:16Z",
-      "headSha": "b6663e7cd939859772250305f8389d085e176951",
-      "generatedAt": "2026-03-19T21:08:22.405Z",
-      "summary": "Long-context (train seq 4096) 9×512 KV4 run with aggressive Muon tuning (0.99 momentum, low LR, warmdown) to sharpen quantized quality.",
-      "tags": [
-        "architecture",
-        "optimizer",
-        "training-schedule"
-      ],
-      "flags": {
-        "usesValOnly": false,
-        "usesValOnlyAi": false,
-        "usesValOnlyCollector": false
-      },
-      "compatibility": {
-        "valOnlyMatchesCollector": true
-      },
-      "file": "items/pr-52.json"
     },
     {
       "prNumber": 51,
@@ -5388,29 +5177,6 @@
         "valOnlyMatchesCollector": true
       },
       "file": "items/pr-40.json"
-    },
-    {
-      "prNumber": 39,
-      "title": "Record: 10L Mixed Precision: val_bpb=1.2147 (10 layers + int6 middle layers)",
-      "status": "closed",
-      "updatedAt": "2026-03-19T22:26:47Z",
-      "headSha": "13acc8545800aad5a0b6d421df0a38773c8490bf",
-      "generatedAt": "2026-03-19T22:39:29.656Z",
-      "summary": "10-layer transformer keeps int8 early/late layers, int6 middle layers, and uses lower Muon/Adam learning rates to fit under 16MB with better compression.",
-      "tags": [
-        "quantization",
-        "architecture",
-        "training-schedule"
-      ],
-      "flags": {
-        "usesValOnly": false,
-        "usesValOnlyAi": false,
-        "usesValOnlyCollector": false
-      },
-      "compatibility": {
-        "valOnlyMatchesCollector": true
-      },
-      "file": "items/pr-39.json"
     },
     {
       "prNumber": 37,

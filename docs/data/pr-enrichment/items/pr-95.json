@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-21T17:35:55.931Z",
+  "generatedAt": "2026-03-21T19:05:26.680Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 95,
     "title": "PROTEUS EMA — val_bpb: 1.2253",
     "state": "open",
-    "updatedAt": "2026-03-21T16:37:29Z",
+    "updatedAt": "2026-03-21T18:50:40Z",
     "headSha": "ef1863d2aa5e095b06d9155821397bc4d11ff4d1",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/95",
     "authorLogin": "MatoTeziTanka"
@@ -19,18 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "EMA, seq2048, FP16 embeddings, and sliding-window eval stacked on the baseline to smooth weights and curb INT8 quant loss before zlib roundtrip.",
+    "summary": "EMA averaging plus FP16 embedding passthrough, seq2048 training, and sliding-window eval keep quantized baseline weights and embeddings sharp.",
     "tags": [
+      "architecture",
+      "optimizer",
       "quantization",
-      "mixed-precision",
       "evaluation"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "EMA weight averaging on fp32 parameters",
-      "Train/eval with seq_len 2048 plus stride-64 sliding-window eval",
-      "Keep tied embeddings in FP16 for quant, rest in INT8"
+      "EMA weight averaging every 10 steps",
+      "FP16 embedding passthrough to avoid INT8 on tied embeddings",
+      "Sliding-window stride 64 eval with seq_len 2048"
     ]
   },
   "compatibility": {

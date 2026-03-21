@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-21T17:35:01.487Z",
+  "generatedAt": "2026-03-21T19:05:15.406Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 301,
     "title": "Non-record: Int6 QAT + MLP1472 + SlidingWindow + TTT (val_bpb=1.1807)",
     "state": "open",
-    "updatedAt": "2026-03-21T16:37:34Z",
-    "headSha": "21f3b85fac9892204ef789b58d586ec609462b04",
+    "updatedAt": "2026-03-21T18:53:24Z",
+    "headSha": "962e116eb34899d8f6b9d430c03b1b354d668afc",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/301",
     "authorLogin": "lookin-zz"
   },
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Int6 QAT GPT with a larger MLP uses sliding-window eval plus test-time SGD tuning (freeze first 2 blocks) for validation-focused refinement.",
+    "summary": "Int6-QAT GPT with wider MLP, sliding-window stride-64 eval, and full-weight SGD test-time training on validation data.",
     "tags": [
       "val-only",
       "quantization",
-      "evaluation",
-      "architecture"
+      "architecture",
+      "sliding-window-eval"
     ],
     "usesValOnly": true,
-    "valOnlyReasoning": "Test-time training runs 3 epochs of SGD on the validation shard while freezing the first two blocks.",
+    "valOnlyReasoning": "Applies full-weight SGD test-time training on validation data before evaluation.",
     "techniques": [
-      "STE int6 QAT with warmdown",
-      "Sliding-window eval (stride 64)",
-      "Test-time training: 3-epoch SGD on val shard (freeze 2 blocks)"
+      "Int6 STE QAT in final 20% of training",
+      "Sliding-window eval with stride 64",
+      "Full-weight SGD TTT freezing first two blocks"
     ]
   },
   "compatibility": {

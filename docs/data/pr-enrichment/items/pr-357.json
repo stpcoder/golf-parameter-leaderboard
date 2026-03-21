@@ -1,0 +1,58 @@
+{
+  "generatedAt": "2026-03-21T19:05:03.304Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 357,
+    "title": "docs: add TIPS.md and resolve environment dependency issues (#280, #82, #43)",
+    "state": "open",
+    "updatedAt": "2026-03-21T18:46:56Z",
+    "headSha": "4202ac96cf7fb3305b0296050a392181de2588dd",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/357",
+    "authorLogin": "adityagupta26"
+  },
+  "inputs": {
+    "hash": "557e42f8f3b49d66b76b0164dd367420b86fbaab5a58ed40450e0a0c21b5ebe8",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-20_Int6_MLP3x_SmearGate_BigramHash_MuonWD_SWA/README.md",
+      "records/track_10min_16mb/2026-03-19_MLP3x_QAT_Int6_SlidingWindow/README.md",
+      "records/track_10min_16mb/2026-03-19_smeargate_orthoinit_muonwd/README.md",
+      "records/track_10min_16mb/2026-03-19_WarmdownQuantization/README.md",
+      "records/track_10min_16mb/2026-03-19_Seq2048_FP16Emb_TunedLR/README.md",
+      "records/track_10min_16mb/2026-03-19_MixedQuant_Int6Int8_SlidingWindow/README.md",
+      "records/track_10min_16mb/2026-03-19_SlidingWindowEval/README.md",
+      "records/track_10min_16mb/2026-03-17_LoRA_TTT/README.md",
+      "records/track_10min_16mb/2026-03-19_TrainingOptSeq4096/README.md",
+      "records/track_10min_16mb/2026-03-18_LongContextSeq2048/README.md",
+      "records/track_10min_16mb/2026-03-19_10L_MixedPrecision/README.md",
+      "records/track_10min_16mb/2026-03-18_FP16Embed_WD3600/README.md",
+      "records/track_10min_16mb/2026-03-18_LowerLR/README.md",
+      "records/track_non_record_16mb/2026-03-19_SwiGLU_WarmdownFix_QuarterBatch_1x5090/README.md",
+      "records/track_10min_16mb/2026-03-20_10L_Int5MLP_MuonWD04_SWA50/README.md",
+      "records/track_10min_16mb/2026-03-19_SlidingWindow_FP16Emb_10L_MuonWD_OvertoneInit/README.md"
+    ],
+    "submissionCount": 16
+  },
+  "output": {
+    "summary": "Adds flash-attn to requirements and a newcomer TIPS doc outlining Depth Recurrence, Muon tweaks, sliding-window eval, tokenizer-size rules, and layer tying guidance.",
+    "tags": [
+      "architecture",
+      "optimizer",
+      "tokenization",
+      "non-record"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Added flash-attn dependency for RunPod compatibility",
+      "Documented Depth Recurrence, Muon, and sliding-window evaluation tips",
+      "Clarified tokenizer-size exemption and suggested layer tying strategies"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}
