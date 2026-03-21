@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-20T01:50:13.008Z",
+  "generatedAt": "2026-03-21T15:03:27.513Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 149,
     "title": "Add Combined Int6 + QAT + Sliding Window submission",
     "state": "open",
-    "updatedAt": "2026-03-20T01:43:25Z",
-    "headSha": "597924c0969d971ce1d44054fa2c79be67acf18f",
+    "updatedAt": "2026-03-21T15:00:52Z",
+    "headSha": "f2ed21be3bf6461754dac4961650ae85d50b5148",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/149",
     "authorLogin": "pleasedontddosme"
   },
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Combines Int6 quant with late-K passthrough, late-stage QAT, and sliding-window eval plus cosine warmdown and Muon/AdamW tweaks for robust compression.",
+    "summary": "Blend Int6 quantization with late QAT, sliding-window eval, and cosine warmdown on a high-LR Muon schedule for a 9-layer GPT with FP16 tied embeddings.",
     "tags": [
       "quantization",
-      "evaluation",
+      "sliding-window-eval",
       "optimizer",
       "training-schedule"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Int6 quant with late-K passthrough and final-30% QAT STE",
-      "Batched sliding-window evaluation with overtone init and resid_mix phase transition",
-      "Cosine warmdown plus Muon decoupled decay and AdamW for embeddings"
+      "Int6 QAT with STE in final 30% to minimize quant penalty",
+      "Batched sliding-window eval with cosine warmdown and higher Muon momentum warmup",
+      "FP16 tied embeddings/Late-K passthrough with AdamW and decoupled weight decay"
     ]
   },
   "compatibility": {

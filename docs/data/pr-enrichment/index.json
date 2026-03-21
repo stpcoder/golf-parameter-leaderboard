@@ -1,8 +1,32 @@
 {
-  "generatedAt": "2026-03-21T14:33:29.808Z",
+  "generatedAt": "2026-03-21T15:03:27.532Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 344,
+      "title": "Non-record: Autoresearch Heads4 + Step-based LR + Sliding Window (1xH100)",
+      "status": "open",
+      "updatedAt": "2026-03-21T14:57:21Z",
+      "headSha": "e8aaaf1f198fbe064b86e30fafcef809c6a0e2b7",
+      "generatedAt": "2026-03-21T15:03:22.294Z",
+      "summary": "Automated autoresearch loop reruns the SOTA stack (10L, BigramHash, SmearGate) to find NUM_HEADS=4 head_dim=128, step-based LR, sliding-window eval tweaks.",
+      "tags": [
+        "architecture",
+        "training-schedule",
+        "evaluation",
+        "non-record"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-344.json"
+    },
     {
       "prNumber": 342,
       "title": "Non-record: MLX-Optimized 12L 416d with SmearGate + BigramHash (val_bpb=1.9011, Mac)",
@@ -3379,13 +3403,13 @@
       "prNumber": 149,
       "title": "Add Combined Int6 + QAT + Sliding Window submission",
       "status": "open",
-      "updatedAt": "2026-03-20T01:43:25Z",
-      "headSha": "597924c0969d971ce1d44054fa2c79be67acf18f",
-      "generatedAt": "2026-03-20T01:50:13.008Z",
-      "summary": "Combines Int6 quant with late-K passthrough, late-stage QAT, and sliding-window eval plus cosine warmdown and Muon/AdamW tweaks for robust compression.",
+      "updatedAt": "2026-03-21T15:00:52Z",
+      "headSha": "f2ed21be3bf6461754dac4961650ae85d50b5148",
+      "generatedAt": "2026-03-21T15:03:27.513Z",
+      "summary": "Blend Int6 quantization with late QAT, sliding-window eval, and cosine warmdown on a high-LR Muon schedule for a 9-layer GPT with FP16 tied embeddings.",
       "tags": [
         "quantization",
-        "evaluation",
+        "sliding-window-eval",
         "optimizer",
         "training-schedule"
       ],
