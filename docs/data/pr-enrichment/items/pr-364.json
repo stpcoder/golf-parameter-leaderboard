@@ -1,0 +1,39 @@
+{
+  "generatedAt": "2026-03-21T20:04:55.809Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 364,
+    "title": "Record: Batch-Optimized 524K + Warmdown 4000 (val_bpb 1.1497)",
+    "state": "open",
+    "updatedAt": "2026-03-21T20:04:25Z",
+    "headSha": "9f0180d7be0bd021f59da4fbd82a0cd94c119927",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/364",
+    "authorLogin": "shikhar1729"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-21_BatchOpt_524K_SlidingEval/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Lower per-step batch tokens plus longer warmdown yield more optimizer updates that better match a ~7,300-step training trajectory.",
+    "tags": [
+      "training-schedule"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "- smaller TRAIN_BATCH_TOKENS for more optimizer steps",
+      "- extended WARMDOWN_ITERS to align the LR decay with the longer run"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

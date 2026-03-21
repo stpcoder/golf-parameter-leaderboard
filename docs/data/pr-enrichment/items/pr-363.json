@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-21T20:04:59.329Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 363,
+    "title": "Non-record: Depth Recurrence + Quantization Error Amplification Finding",
+    "state": "open",
+    "updatedAt": "2026-03-21T20:02:36Z",
+    "headSha": "baece73db755b2c7e9ff2927d35d02b3e401d830",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/363",
+    "authorLogin": "evangelinehelsinki"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-03-21_DepthRecurrence_MixedPrecisionQuant/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Shares four transformer blocks over three recurrence cycles with LoRA/XSA plus BigramHash and mixed-precision quantization to tame amplified errors.",
+    "tags": [
+      "architecture",
+      "quantization",
+      "attention",
+      "non-record"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Shared-depth recurrence with LoRA/XSA adaptations",
+      "BigramHash context plus int8 for recycled weights"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}
