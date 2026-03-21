@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-21T00:27:23.645Z",
+  "generatedAt": "2026-03-21T06:29:41.679Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 268,
     "title": "Record: 11L Int6 + SmearGate + BigramHash + Depth Recurrence",
     "state": "open",
-    "updatedAt": "2026-03-21T00:00:18Z",
-    "headSha": "0db1160f2ec64c3088e9b8a79abfcfc3b8dad814",
+    "updatedAt": "2026-03-21T06:23:12Z",
+    "headSha": "498bec4db923dc8d8ef0967d3d38e0c873831eea",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/268",
     "authorLogin": "brn-mwai"
   },
@@ -19,18 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Competitive 11L/512 model packs Int6+zstd quantization with SmearGate+BigramHash and introduces optional depth recurrence that loops shared blocks with iteration embeds.",
+    "summary": "11-layer int6-quantized Transformer adds optional depth recurrence looped block plus SmearGate/BigramHash to stretch 27M params under 16MB.",
     "tags": [
       "architecture",
       "quantization",
-      "evaluation"
+      "attention"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Depth recurrence: 2 prelude + shared block looped 7× + 2 coda with per-iteration embeddings",
-      "Int6 per-row quantization + zstd-22 with vectorized packing",
-      "Muon optimizer w/ weight decay 0.03 plus SWA"
+      "Depth recurrence shareable block guided by iteration embeddings",
+      "Int6 quantization with vectorized packing and zstd-22",
+      "Muon optimizer with SWA plus sliding-window eval"
     ]
   },
   "compatibility": {

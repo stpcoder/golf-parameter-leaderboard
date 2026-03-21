@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-21T06:29:27.619Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 315,
+    "title": "Record: 11L Partial RoPE + LN Scale + EMA + Late QAT + XSA4 (val_bpb: 1.1248)",
+    "state": "open",
+    "updatedAt": "2026-03-21T06:23:42Z",
+    "headSha": "dfb05a5d6cfe7ccfb5def2ab129d69740c1bcd76",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/315",
+    "authorLogin": "jfprincz"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-21_11L_XSA4_EMA_PartialRoPE_LateQAT_1.1248/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Adds partial RoPE, depth-scaled RMSNorm outputs, and late-onset int6 QAT atop the 11-layer muon+XSA stack.",
+    "tags": [
+      "architecture",
+      "regularization",
+      "quantization",
+      "training-schedule"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Partial RoPE on 25% of head dims",
+      "Layer-index 1/√(l+1) RMSNorm scaling",
+      "Late-onset STE int6 QAT"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

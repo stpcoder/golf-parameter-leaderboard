@@ -1,8 +1,103 @@
 {
-  "generatedAt": "2026-03-21T05:59:25.553Z",
+  "generatedAt": "2026-03-21T06:29:48.502Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 317,
+      "title": "Record: 11L XSA4 + EMA + TTT + Int6 MLP3x (val_bpb=1.1419)",
+      "status": "open",
+      "updatedAt": "2026-03-21T06:16:06Z",
+      "headSha": "0c2a5ac0904c2bed13eaf5a420ac5bf327c95cfe",
+      "generatedAt": "2026-03-21T06:29:17.882Z",
+      "summary": "11-layer MLP3x base adds XSA on final layers, EMA training, int6+zstd compression, and eval-time SGD test-time training with frozen early blocks.",
+      "tags": [
+        "architecture",
+        "attention",
+        "quantization",
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-317.json"
+    },
+    {
+      "prNumber": 316,
+      "title": "Non-record: 12L Low-Rank Q + QAT (1xH100, pre-quant 1.2035)",
+      "status": "open",
+      "updatedAt": "2026-03-21T06:19:38Z",
+      "headSha": "bda653c725c40b7ca64d7088ee6c381d6cc24921",
+      "generatedAt": "2026-03-21T06:29:23.356Z",
+      "summary": "12-layer transformer pairs Low-Rank Q factorization with QAT through a multi-stage pipeline while probing FTLE/Stride-OGD ideas before quantization.",
+      "tags": [
+        "architecture",
+        "quantization",
+        "training-schedule",
+        "non-record"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-316.json"
+    },
+    {
+      "prNumber": 315,
+      "title": "Record: 11L Partial RoPE + LN Scale + EMA + Late QAT + XSA4 (val_bpb: 1.1248)",
+      "status": "open",
+      "updatedAt": "2026-03-21T06:23:42Z",
+      "headSha": "dfb05a5d6cfe7ccfb5def2ab129d69740c1bcd76",
+      "generatedAt": "2026-03-21T06:29:27.619Z",
+      "summary": "Adds partial RoPE, depth-scaled RMSNorm outputs, and late-onset int6 QAT atop the 11-layer muon+XSA stack.",
+      "tags": [
+        "architecture",
+        "regularization",
+        "quantization",
+        "training-schedule"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-315.json"
+    },
+    {
+      "prNumber": 314,
+      "title": "11L Int4 MLP QAT + BigramHash(10240) + SWA",
+      "status": "open",
+      "updatedAt": "2026-03-21T06:04:26Z",
+      "headSha": "45f22cbd6618ab343681c0ad034986a643aa97b8",
+      "generatedAt": "2026-03-21T06:29:33.821Z",
+      "summary": "Int4 QAT on MLP weights buys space for an 11-layer transformer while keeping BigramHash+SWA innovations and tuned pruning.",
+      "tags": [
+        "quantization",
+        "architecture",
+        "training-schedule"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-314.json"
+    },
     {
       "prNumber": 313,
       "title": "non-record: LR warmdown on 1x A40 (1.723 bpb, 8.40MB)",
@@ -473,12 +568,13 @@
       "prNumber": 288,
       "title": "Non-record: Content-Dependent SmearGate (1.6795 BPB, RTX 4070)",
       "status": "open",
-      "updatedAt": "2026-03-21T01:10:58Z",
-      "headSha": "573066bd7c5be6926c5dba04e908767b2cd3a6ae",
-      "generatedAt": "2026-03-21T01:26:27.095Z",
-      "summary": "Content-dependent SmearGate modulates token blending by adjacent-embedding similarity to let similar tokens merge more while preserving dissimilar boundaries.",
+      "updatedAt": "2026-03-21T06:16:09Z",
+      "headSha": "8ba000657ac519804b2aa4a2d3f4996d588d945b",
+      "generatedAt": "2026-03-21T06:29:37.053Z",
+      "summary": "Content-dependent SmearGate gates blending by adjacent-token similarity so similar tokens smear together and dissimilar ones stay separate.",
       "tags": [
         "architecture",
+        "evaluation",
         "non-record"
       ],
       "flags": {
@@ -822,14 +918,14 @@
       "prNumber": 268,
       "title": "Record: 11L Int6 + SmearGate + BigramHash + Depth Recurrence",
       "status": "open",
-      "updatedAt": "2026-03-21T00:00:18Z",
-      "headSha": "0db1160f2ec64c3088e9b8a79abfcfc3b8dad814",
-      "generatedAt": "2026-03-21T00:27:23.645Z",
-      "summary": "Competitive 11L/512 model packs Int6+zstd quantization with SmearGate+BigramHash and introduces optional depth recurrence that loops shared blocks with iteration embeds.",
+      "updatedAt": "2026-03-21T06:23:12Z",
+      "headSha": "498bec4db923dc8d8ef0967d3d38e0c873831eea",
+      "generatedAt": "2026-03-21T06:29:41.679Z",
+      "summary": "11-layer int6-quantized Transformer adds optional depth recurrence looped block plus SmearGate/BigramHash to stretch 27M params under 16MB.",
       "tags": [
         "architecture",
         "quantization",
-        "evaluation"
+        "attention"
       ],
       "flags": {
         "usesValOnly": false,
@@ -845,14 +941,14 @@
       "prNumber": 267,
       "title": "Record: val_bpb: 1.14020 [tested 3x on 8xh100]",
       "status": "open",
-      "updatedAt": "2026-03-21T05:44:20Z",
-      "headSha": "dfd2bbb0c22d1c19efe038e623e35781c8bb0788",
-      "generatedAt": "2026-03-21T05:59:20.004Z",
-      "summary": "Int5-quantized 11L Muon/GQA model runs causal chunked eval-first test-time training with EMA and XSA on last layers.",
+      "updatedAt": "2026-03-21T06:22:05Z",
+      "headSha": "88adc4405cb555831d74642ea54a6b8b2cfa37e4",
+      "generatedAt": "2026-03-21T06:29:48.461Z",
+      "summary": "Int5-quantized 11-layer model with EMA/XSA uses chunked causal TTT that evaluates each validation chunk before training to keep scores one-pass.",
       "tags": [
-        "val-only",
         "quantization",
-        "muon",
+        "val-only",
+        "evaluation",
         "architecture"
       ],
       "flags": {

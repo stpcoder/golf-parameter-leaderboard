@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-21T06:29:17.882Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 317,
+    "title": "Record: 11L XSA4 + EMA + TTT + Int6 MLP3x (val_bpb=1.1419)",
+    "state": "open",
+    "updatedAt": "2026-03-21T06:16:06Z",
+    "headSha": "0c2a5ac0904c2bed13eaf5a420ac5bf327c95cfe",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/317",
+    "authorLogin": "chris-buckley"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-21_11L_XSA4_EMA_TTT_Int6_MLP3x_WD04/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "11-layer MLP3x base adds XSA on final layers, EMA training, int6+zstd compression, and eval-time SGD test-time training with frozen early blocks.",
+    "tags": [
+      "architecture",
+      "attention",
+      "quantization",
+      "evaluation"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "XSA on final layers with int6+zstd compression",
+      "EMA-updated 11L MLP3x backbone",
+      "Eval-time SGD TTT with frozen early blocks"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

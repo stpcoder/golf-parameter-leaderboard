@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-21T06:29:23.356Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 316,
+    "title": "Non-record: 12L Low-Rank Q + QAT (1xH100, pre-quant 1.2035)",
+    "state": "open",
+    "updatedAt": "2026-03-21T06:19:38Z",
+    "headSha": "bda653c725c40b7ca64d7088ee6c381d6cc24921",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/316",
+    "authorLogin": "SkywardSyntax"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-03-21_12L_LowRankQ_QAT_ResearchPipeline/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "12-layer transformer pairs Low-Rank Q factorization with QAT through a multi-stage pipeline while probing FTLE/Stride-OGD ideas before quantization.",
+    "tags": [
+      "architecture",
+      "quantization",
+      "training-schedule",
+      "non-record"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "low-rank Q factorization enabling extra depth",
+      "quantization-aware training with int7 STE",
+      "FTLE per-row precision ablation"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

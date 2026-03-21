@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-21T06:29:33.821Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 314,
+    "title": "11L Int4 MLP QAT + BigramHash(10240) + SWA",
+    "state": "open",
+    "updatedAt": "2026-03-21T06:04:26Z",
+    "headSha": "45f22cbd6618ab343681c0ad034986a643aa97b8",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/314",
+    "authorLogin": "aravhawk"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-21_11L_Int4MLP_QAT_SWA/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Int4 QAT on MLP weights buys space for an 11-layer transformer while keeping BigramHash+SWA innovations and tuned pruning.",
+    "tags": [
+      "quantization",
+      "architecture",
+      "training-schedule"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Int4 MLP QAT via STE fake quantization",
+      "Per-module magnitude pruning (5% MLP, 3% attention)",
+      "SWA + BigramHash(10240) preserved within 16MB"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}
