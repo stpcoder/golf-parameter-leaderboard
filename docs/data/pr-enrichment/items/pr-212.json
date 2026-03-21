@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-21T21:05:27.539Z",
+  "generatedAt": "2026-03-21T22:05:27.370Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 212,
     "title": "Record: 11L XSA + EMA + TTT + Partial RoPE + LN Scale — val_bpb=1.1401",
     "state": "open",
-    "updatedAt": "2026-03-21T20:53:15Z",
-    "headSha": "7c3e33a7a41ebcc78176b0d04ac07a4890e97c2c",
+    "updatedAt": "2026-03-21T21:58:40Z",
+    "headSha": "b47ae4ec869aae91ba844159c90e6a179112a529",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/212",
     "authorLogin": "mrdavtan"
   },
@@ -20,19 +20,19 @@
     "submissionCount": 2
   },
   "output": {
-    "summary": "11-layer transformer pairs exclusive self-attn on top layers with EMA+TTT, U-Net skips, partial RoPE/LN scaling, SmearGate+BigramHash, and late int6 QAT.",
+    "summary": "11-layer transformer combines XSA, EMA, test-time training, U-Net skips, Partial RoPE/LN scale, SmearGate/BigramHash, and late int6 quantization.",
     "tags": [
-      "attention",
       "architecture",
+      "attention",
       "quantization",
       "training-schedule"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Exclusive self-attention plus EMA weight averaging with TTT on validation",
-      "U-Net-style skips with Partial RoPE and layer-scaled LN for stabilized depth",
-      "SmearGate/BigramHash embeddings and late absmax int6 QAT rollout"
+      "Apply XSA+EMA before absmax int6 QAT",
+      "Run TTT with frozen initial blocks plus U-Net decoder skips",
+      "Use Partial RoPE/LN scale alongside SmearGate and BigramHash gating"
     ]
   },
   "compatibility": {

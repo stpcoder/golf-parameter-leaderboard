@@ -1,8 +1,31 @@
 {
-  "generatedAt": "2026-03-21T21:35:19.032Z",
+  "generatedAt": "2026-03-21T22:05:27.398Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 374,
+      "title": "Record: 11L + Tight SWA + Shared VE128 + Partial RoPE + LN Scale + XSA4 (val_bpb: 1.1246)",
+      "status": "open",
+      "updatedAt": "2026-03-21T22:00:01Z",
+      "headSha": "1323a3afae013ab7a4514ed3136efd34a038632e",
+      "generatedAt": "2026-03-21T22:05:20.752Z",
+      "summary": "11-layer model blends partial RoPE+XSA with shared value embeddings and U-Net skips while using tight SWA to keep quant-friendly averaging ahead of late int6 QAT.",
+      "tags": [
+        "architecture",
+        "quantization",
+        "training-schedule"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-374.json"
+    },
     {
       "prNumber": 373,
       "title": "Record: SwiGLU + BigramHash + SWA, val_bpb=1.1634 (8xH100 verified)",
@@ -2814,13 +2837,13 @@
       "prNumber": 212,
       "title": "Record: 11L XSA + EMA + TTT + Partial RoPE + LN Scale — val_bpb=1.1401",
       "status": "open",
-      "updatedAt": "2026-03-21T20:53:15Z",
-      "headSha": "7c3e33a7a41ebcc78176b0d04ac07a4890e97c2c",
-      "generatedAt": "2026-03-21T21:05:27.539Z",
-      "summary": "11-layer transformer pairs exclusive self-attn on top layers with EMA+TTT, U-Net skips, partial RoPE/LN scaling, SmearGate+BigramHash, and late int6 QAT.",
+      "updatedAt": "2026-03-21T21:58:40Z",
+      "headSha": "b47ae4ec869aae91ba844159c90e6a179112a529",
+      "generatedAt": "2026-03-21T22:05:27.370Z",
+      "summary": "11-layer transformer combines XSA, EMA, test-time training, U-Net skips, Partial RoPE/LN scale, SmearGate/BigramHash, and late int6 quantization.",
       "tags": [
-        "attention",
         "architecture",
+        "attention",
         "quantization",
         "training-schedule"
       ],
