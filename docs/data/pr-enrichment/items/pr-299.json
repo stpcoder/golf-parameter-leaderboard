@@ -1,0 +1,41 @@
+{
+  "generatedAt": "2026-03-21T02:27:13.750Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 299,
+    "title": "[Non-record] LoRA TTT + HParams (val_bpb=1.16973333)",
+    "state": "open",
+    "updatedAt": "2026-03-21T02:01:39Z",
+    "headSha": "0e2bd85b279b4cfddfe578d0b4127cd5f49891fb",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/299",
+    "authorLogin": "Mistobaan"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-20_better_baseline_params/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "LoRA TTT path reused with updated baseline defaults (8x768, 2048 seq, 262K-token batch) plus lower LRs, logit softcap 10, and beta1 0.70.",
+    "tags": [
+      "architecture",
+      "training-schedule"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Reuses the existing LoRA TTT per-document evaluation pipeline",
+      "Shifts defaults to 8x768 model with 2048 seq length and 262K-token batch",
+      "Lowers LR defaults, logit softcap, and beta1 to tune convergence"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

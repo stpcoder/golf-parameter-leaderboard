@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-20T12:23:25.449Z",
+  "generatedAt": "2026-03-21T02:27:32.783Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 208,
     "title": "Staging: Int6 MLP3x 11L + SmearGate + BigramHash4096x128 + MuonWD038 + SWA50 + DocSliding (single-run val_bpb=1.1568)",
-    "state": "open",
-    "updatedAt": "2026-03-20T12:13:21Z",
+    "state": "closed",
+    "updatedAt": "2026-03-21T02:21:36Z",
     "headSha": "11d2794d7c9fa8f1c632467fa64a02117ecde424",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/208",
     "authorLogin": "ajkpersonal"
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Dense 11x512 KV4 int6 model uses SmearGate, BigramHash, Muon WD, and SWA with doc-sliding int6_zstd_core export for leaderboard eval.",
+    "summary": "Dense 11x512 KV4 MLP3 w/ SmearGate, BigramHash, Muon WD, SWA, and doc-sliding int6_zstd_core export for the track candidate.",
     "tags": [
+      "architecture",
       "quantization",
-      "sliding-window-eval",
       "training-schedule",
-      "architecture"
+      "sliding-window-eval"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Dense 11x512 KV4 with SmearGate and MLP3x",
-      "BigramHash(4096x128)+Muon WD 0.038 with ADAM WD 0.01 and SWA50 schedule",
-      "Doc-sliding 2048/256 int6_zstd_core export"
+      "dense 11x512 KV4 MLP3 with SmearGate and BigramHash4096x128",
+      "Muon+ADAM weight decay plus SWA50 starting at 50% progress",
+      "legal int6_zstd_core doc_sliding 2048/256 export for evaluation"
     ]
   },
   "compatibility": {

@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-21T01:26:52.316Z",
+  "generatedAt": "2026-03-21T02:27:41.651Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 127,
     "title": "Non-record: Depth recurrence + widening + QAT + sliding window eval",
     "state": "open",
-    "updatedAt": "2026-03-21T01:20:29Z",
-    "headSha": "5486d814b98f08ebf4b7f206165290838658bcd2",
+    "updatedAt": "2026-03-21T02:10:55Z",
+    "headSha": "c2088151b43b91acc9b33ef2482d66bc14c74f65",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/127",
     "authorLogin": "matt-wright86"
   },
@@ -19,18 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Loops three shared transformer blocks with per-loop LoRA, widened 768-dim heads, ALBERT-style embeddings, QAT int6 quant, and sliding-window eval.",
+    "summary": "Looped 3-block transformer with per-iteration LoRA, ALBERT-style bottleneck, int6 QAT, and sliding-window NTK-scaled eval.",
     "tags": [
       "architecture",
       "quantization",
-      "evaluation"
+      "evaluation",
+      "training-schedule"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Depth recurrence with per-loop LoRA",
-      "ALBERT-style factorized embedding",
-      "Int6 QAT with sliding-window eval"
+      "Looped 3 physical blocks with per-loop LoRA adapters, widened 768-dim GQA, and factorized embeddings",
+      "Compile-time STE QAT/inference quantization with configurable compressor and export bits",
+      "Sliding-window eval with stride 64 and NTK-aware RoPE scaling for long contexts"
     ]
   },
   "compatibility": {

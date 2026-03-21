@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-21T01:56:49.272Z",
+  "generatedAt": "2026-03-21T02:27:20.807Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 298,
-    "title": "Ultimate recurrent: 21 techniques — depth recurrence, novel ops, LoRA…",
+    "title": "Ultimate recurrent: 21 techniques — depth recurrence, novel ops",
     "state": "open",
-    "updatedAt": "2026-03-21T01:41:00Z",
+    "updatedAt": "2026-03-21T02:03:41Z",
     "headSha": "b85b74ce46ab68d447f8f4cafc9f47c18f59a19b",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/298",
     "authorLogin": "MrINVISO"
@@ -19,19 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Depth-recurrent transformer stacks 3 shared layers over 3 passes with adaptive gating, low-rank recurrence/GRU carries, and compression-aware loss plus GQA attention.",
+    "summary": "Depth-recurrent transformer reuses three shared layers over three passes with adaptive controls, compression-aware loss, and novel recurrence/encoding ops.",
     "tags": [
       "architecture",
       "attention",
-      "compression",
-      "regularization"
+      "evaluation"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Shared 3-layer depth recurrence with adaptive gating and skip connections",
-      "Compression-aware auxiliary loss alongside low-rank recurrence/GRU carries",
-      "8q/2kv GQA plus sliding-window evaluation stride 64"
+      "Depth recurrence+adaptive control scales shared across passes",
+      "Compression-aware auxiliary loss with U-Net skips and GRU carries",
+      "Novel recurrence/encoding (Gradient Memory, Temporal Difference, Resonant Position Encoding)"
     ]
   },
   "compatibility": {

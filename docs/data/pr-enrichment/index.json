@@ -1,21 +1,42 @@
 {
-  "generatedAt": "2026-03-21T01:57:14.454Z",
+  "generatedAt": "2026-03-21T02:27:41.668Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
     {
-      "prNumber": 298,
-      "title": "Ultimate recurrent: 21 techniques — depth recurrence, novel ops, LoRA…",
+      "prNumber": 299,
+      "title": "[Non-record] LoRA TTT + HParams (val_bpb=1.16973333)",
       "status": "open",
-      "updatedAt": "2026-03-21T01:41:00Z",
+      "updatedAt": "2026-03-21T02:01:39Z",
+      "headSha": "0e2bd85b279b4cfddfe578d0b4127cd5f49891fb",
+      "generatedAt": "2026-03-21T02:27:13.750Z",
+      "summary": "LoRA TTT path reused with updated baseline defaults (8x768, 2048 seq, 262K-token batch) plus lower LRs, logit softcap 10, and beta1 0.70.",
+      "tags": [
+        "architecture",
+        "training-schedule"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-299.json"
+    },
+    {
+      "prNumber": 298,
+      "title": "Ultimate recurrent: 21 techniques — depth recurrence, novel ops",
+      "status": "open",
+      "updatedAt": "2026-03-21T02:03:41Z",
       "headSha": "b85b74ce46ab68d447f8f4cafc9f47c18f59a19b",
-      "generatedAt": "2026-03-21T01:56:49.272Z",
-      "summary": "Depth-recurrent transformer stacks 3 shared layers over 3 passes with adaptive gating, low-rank recurrence/GRU carries, and compression-aware loss plus GQA attention.",
+      "generatedAt": "2026-03-21T02:27:20.807Z",
+      "summary": "Depth-recurrent transformer reuses three shared layers over three passes with adaptive controls, compression-aware loss, and novel recurrence/encoding ops.",
       "tags": [
         "architecture",
         "attention",
-        "compression",
-        "regularization"
+        "evaluation"
       ],
       "flags": {
         "usesValOnly": false,
@@ -55,15 +76,13 @@
       "prNumber": 296,
       "title": "[Non-record] Meta-Learned TTT + Error-Guided Adaptation Analysis (val_bpb=1.1645)",
       "status": "open",
-      "updatedAt": "2026-03-21T00:28:41Z",
-      "headSha": "9605e98cbbc76ee92aac504327df2b00f28f26eb",
-      "generatedAt": "2026-03-21T00:56:41.200Z",
-      "summary": "Combines Reptile meta-learned TTT initialization with error-guided LoRA adaptation and depth exploration on compressed SmearGate models.",
+      "updatedAt": "2026-03-21T02:21:17Z",
+      "headSha": "e3a79587e6cab0e88a4d31aaab0e90dc59cd054a",
+      "generatedAt": "2026-03-21T02:27:27.261Z",
+      "summary": "Meta-learns SmearGate compressors with a Reptile TTT warm-up and analyzes targeted LoRA adaptation on hardest tokens plus depth changes.",
       "tags": [
         "training-schedule",
-        "evaluation",
-        "compression",
-        "depth-width"
+        "evaluation"
       ],
       "flags": {
         "usesValOnly": false,
@@ -1505,16 +1524,16 @@
     {
       "prNumber": 208,
       "title": "Staging: Int6 MLP3x 11L + SmearGate + BigramHash4096x128 + MuonWD038 + SWA50 + DocSliding (single-run val_bpb=1.1568)",
-      "status": "open",
-      "updatedAt": "2026-03-20T12:13:21Z",
+      "status": "closed",
+      "updatedAt": "2026-03-21T02:21:36Z",
       "headSha": "11d2794d7c9fa8f1c632467fa64a02117ecde424",
-      "generatedAt": "2026-03-20T12:23:25.449Z",
-      "summary": "Dense 11x512 KV4 int6 model uses SmearGate, BigramHash, Muon WD, and SWA with doc-sliding int6_zstd_core export for leaderboard eval.",
+      "generatedAt": "2026-03-21T02:27:32.783Z",
+      "summary": "Dense 11x512 KV4 MLP3 w/ SmearGate, BigramHash, Muon WD, SWA, and doc-sliding int6_zstd_core export for the track candidate.",
       "tags": [
+        "architecture",
         "quantization",
-        "sliding-window-eval",
         "training-schedule",
-        "architecture"
+        "sliding-window-eval"
       ],
       "flags": {
         "usesValOnly": false,
@@ -2468,13 +2487,14 @@
       "prNumber": 154,
       "title": "Non-record: Cross-layer parameter sharing + 4-bit QAT (RecurrentGPT)",
       "status": "open",
-      "updatedAt": "2026-03-20T07:33:21Z",
-      "headSha": "6d8eb28a1c3877660f35fe98b0cef461aeaf7fa3",
-      "generatedAt": "2026-03-20T07:52:31.807Z",
-      "summary": "RecurrentGPT packs 14-layer behavior into a 2-1-2 shared prelude/recurrent/coda stack with per-iteration gates plus 4-bit QAT under the 16MB cap.",
+      "updatedAt": "2026-03-21T02:17:50Z",
+      "headSha": "b6af3f1e6845e3027ba88ef7c9c38005314654f4",
+      "generatedAt": "2026-03-21T02:27:36.611Z",
+      "summary": "Prelude-recurrent-coda transformer shares a gated recurrent block and trains with 4-bit QAT to fit the 16MB budget.",
       "tags": [
         "architecture",
         "quantization",
+        "compression",
         "non-record"
       ],
       "flags": {
@@ -2912,14 +2932,15 @@
       "prNumber": 127,
       "title": "Non-record: Depth recurrence + widening + QAT + sliding window eval",
       "status": "open",
-      "updatedAt": "2026-03-21T01:20:29Z",
-      "headSha": "5486d814b98f08ebf4b7f206165290838658bcd2",
-      "generatedAt": "2026-03-21T01:26:52.316Z",
-      "summary": "Loops three shared transformer blocks with per-loop LoRA, widened 768-dim heads, ALBERT-style embeddings, QAT int6 quant, and sliding-window eval.",
+      "updatedAt": "2026-03-21T02:10:55Z",
+      "headSha": "c2088151b43b91acc9b33ef2482d66bc14c74f65",
+      "generatedAt": "2026-03-21T02:27:41.651Z",
+      "summary": "Looped 3-block transformer with per-iteration LoRA, ALBERT-style bottleneck, int6 QAT, and sliding-window NTK-scaled eval.",
       "tags": [
         "architecture",
         "quantization",
-        "evaluation"
+        "evaluation",
+        "training-schedule"
       ],
       "flags": {
         "usesValOnly": false,
