@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-22T19:12:22.392Z",
+  "generatedAt": "2026-03-22T19:42:05.954Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
@@ -29,17 +29,17 @@
     },
     {
       "prNumber": 453,
-      "title": "Add PR315-derived candidate record and looped-depth gate",
+      "title": "Exploratory: PR315-derived candidate and looped-depth gate",
       "status": "open",
-      "updatedAt": "2026-03-22T18:58:11Z",
+      "updatedAt": "2026-03-22T19:20:20Z",
       "headSha": "c39d7a34387ad80078cf17681eb020e1cd3b53db",
-      "generatedAt": "2026-03-22T19:12:01.068Z",
-      "summary": "Bakes the PR315 11L + XSA4 + EMA + partial RoPE + LN scale defaults into train_gpt while keeping optional packed-codec and gated long-doc TTT paths.",
+      "generatedAt": "2026-03-22T19:41:53.740Z",
+      "summary": "Builds on the PR315 base with Partial RoPE, LN scale, EMA, and XSA4 while adding custom codec/long-doc TTT gates plus a looped-depth gate branch for throughput probes.",
       "tags": [
         "architecture",
         "attention",
-        "optimizer",
-        "compression"
+        "compression",
+        "non-record"
       ],
       "flags": {
         "usesValOnly": false,
@@ -55,23 +55,23 @@
       "prNumber": 452,
       "title": "10L XSA + EMA + Partial RoPE + LN Scale + TTT — val_bpb 1.1365",
       "status": "open",
-      "updatedAt": "2026-03-22T18:55:35Z",
-      "headSha": "e96bad359374c5131ba6d06e71fc47c996c6fba4",
-      "generatedAt": "2026-03-22T19:12:07.469Z",
-      "summary": "Combines a 10-layer GPT with XSA on top layers, EMA, partial RoPE, LN scaling, and post-quant TTT SGD on validation data.",
+      "updatedAt": "2026-03-22T19:28:36Z",
+      "headSha": "31652365a8e6b7b353cb92537266e5e4fb3e5a3b",
+      "generatedAt": "2026-03-22T19:41:57.248Z",
+      "summary": "10-layer GPT uses XSA on top layers, EMA, partial RoPE with scaled LN, and TTT SGD after mixed Int5/Int6 quantization.",
       "tags": [
-        "val-only",
         "architecture",
         "quantization",
-        "evaluation"
+        "sliding-window-eval",
+        "training-schedule"
       ],
       "flags": {
-        "usesValOnly": true,
-        "usesValOnlyAi": true,
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
         "usesValOnlyCollector": false
       },
       "compatibility": {
-        "valOnlyMatchesCollector": false
+        "valOnlyMatchesCollector": true
       },
       "file": "items/pr-452.json"
     },
@@ -618,13 +618,14 @@
       "prNumber": 425,
       "title": "Codex/runpod 2026 03 20 checkpoint",
       "status": "open",
-      "updatedAt": "2026-03-22T16:02:39Z",
-      "headSha": "b3a7429792759ec1ea35a5a16e58fbcbde6f954f",
-      "generatedAt": "2026-03-22T16:11:08.732Z",
-      "summary": "Short H100 ablation splits eval seq lengths and adds ATTN_TWICE_ALPHA=0.05 with LoRA TTT to balance roundtrip vs TTT scoring.",
+      "updatedAt": "2026-03-22T19:12:21Z",
+      "headSha": "307f2d671f850497509a25818e7cc10d0aa871e1",
+      "generatedAt": "2026-03-22T19:42:01.019Z",
+      "summary": "Exploratory single‑GPU ablation split eval lengths and dialed ATTN_TWICE_ALPHA with LoRA‑TTT tweaks to balance roundtrip and TTT scoring under a 600s cap.",
       "tags": [
         "attention",
         "evaluation",
+        "training-schedule",
         "non-record"
       ],
       "flags": {
@@ -992,15 +993,15 @@
       "prNumber": 401,
       "title": "Record: 11L + EMA + Tight SWA + QAT0.15 + VE128 + Partial RoPE + LN Scale (val_bpb: 1.1243)",
       "status": "open",
-      "updatedAt": "2026-03-22T18:55:20Z",
-      "headSha": "bf17d79b081f68c8180f7776569fce6346fe443f",
-      "generatedAt": "2026-03-22T19:12:12.270Z",
-      "summary": "Stacks EMA-averaged weights into tight SWA checkpoints on an 11-layer U-Net Transformer while applying longer warmdown and earlier late int6 QAT with partial RoPE.",
+      "updatedAt": "2026-03-22T19:35:16Z",
+      "headSha": "5f9b9e9b58cb4125362705067909d17837212df1",
+      "generatedAt": "2026-03-22T19:42:05.892Z",
+      "summary": "Stack EMA+Tight SWA with earlier late QAT and longer warmdown on an 11-layer VE-enhanced transformer to shrink the int6 quant gap.",
       "tags": [
         "architecture",
-        "training-schedule",
         "optimizer",
-        "quantization"
+        "quantization",
+        "training-schedule"
       ],
       "flags": {
         "usesValOnly": false,

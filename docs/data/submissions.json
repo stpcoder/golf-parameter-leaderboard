@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-22T19:11:45.673Z",
+  "generatedAt": "2026-03-22T19:41:46.258Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "submissions": [
@@ -1296,7 +1296,7 @@
       },
       "pr": {
         "number": 453,
-        "title": "Add PR315-derived candidate record and looped-depth gate",
+        "title": "Exploratory: PR315-derived candidate and looped-depth gate",
         "state": "open",
         "draft": false,
         "mergedAt": null,
@@ -1304,7 +1304,7 @@
         "authorLogin": "Divyesh-Thirukonda",
         "authorName": null,
         "createdAt": "2026-03-22T18:58:11Z",
-        "updatedAt": "2026-03-22T18:58:11Z",
+        "updatedAt": "2026-03-22T19:20:20Z",
         "headSha": "c39d7a34387ad80078cf17681eb020e1cd3b53db",
         "headRepo": "Divyesh-Thirukonda/parameter-golf"
       },
@@ -1843,8 +1843,8 @@
         "authorLogin": "newjordan",
         "authorName": null,
         "createdAt": "2026-03-22T05:15:58Z",
-        "updatedAt": "2026-03-22T18:55:20Z",
-        "headSha": "bf17d79b081f68c8180f7776569fce6346fe443f",
+        "updatedAt": "2026-03-22T19:35:16Z",
+        "headSha": "5f9b9e9b58cb4125362705067909d17837212df1",
         "headRepo": "newjordan/parameter-golf"
       },
       "links": {
@@ -2767,16 +2767,16 @@
         "authorLogin": "ofirkris",
         "authorName": null,
         "createdAt": "2026-03-22T18:53:42Z",
-        "updatedAt": "2026-03-22T18:55:35Z",
-        "headSha": "e96bad359374c5131ba6d06e71fc47c996c6fba4",
+        "updatedAt": "2026-03-22T19:28:36Z",
+        "headSha": "31652365a8e6b7b353cb92537266e5e4fb3e5a3b",
         "headRepo": "ofirkris/parameter-golf-1"
       },
       "links": {
-        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/e96bad359374c5131ba6d06e71fc47c996c6fba4/records/track_10min_16mb/2026-03-22_XSA_EMA_PartialRoPE_LNScale_TTT/submission.json",
-        "readme": "https://github.com/openai/parameter-golf/blob/e96bad359374c5131ba6d06e71fc47c996c6fba4/records/track_10min_16mb/2026-03-22_XSA_EMA_PartialRoPE_LNScale_TTT/README.md",
-        "trainLog": "https://github.com/openai/parameter-golf/blob/e96bad359374c5131ba6d06e71fc47c996c6fba4/records/track_10min_16mb/2026-03-22_XSA_EMA_PartialRoPE_LNScale_TTT/train.log",
-        "script": "https://github.com/openai/parameter-golf/blob/e96bad359374c5131ba6d06e71fc47c996c6fba4/records/track_10min_16mb/2026-03-22_XSA_EMA_PartialRoPE_LNScale_TTT/train_gpt.py",
-        "folder": "https://github.com/openai/parameter-golf/tree/e96bad359374c5131ba6d06e71fc47c996c6fba4/records/track_10min_16mb/2026-03-22_XSA_EMA_PartialRoPE_LNScale_TTT",
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/31652365a8e6b7b353cb92537266e5e4fb3e5a3b/records/track_10min_16mb/2026-03-22_XSA_EMA_PartialRoPE_LNScale_TTT/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/31652365a8e6b7b353cb92537266e5e4fb3e5a3b/records/track_10min_16mb/2026-03-22_XSA_EMA_PartialRoPE_LNScale_TTT/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/31652365a8e6b7b353cb92537266e5e4fb3e5a3b/records/track_10min_16mb/2026-03-22_XSA_EMA_PartialRoPE_LNScale_TTT/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/31652365a8e6b7b353cb92537266e5e4fb3e5a3b/records/track_10min_16mb/2026-03-22_XSA_EMA_PartialRoPE_LNScale_TTT/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/31652365a8e6b7b353cb92537266e5e4fb3e5a3b/records/track_10min_16mb/2026-03-22_XSA_EMA_PartialRoPE_LNScale_TTT",
         "pr": "https://github.com/openai/parameter-golf/pull/452",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
@@ -16550,16 +16550,16 @@
         "authorLogin": "DeividasMat",
         "authorName": null,
         "createdAt": "2026-03-22T13:50:52Z",
-        "updatedAt": "2026-03-22T16:02:39Z",
-        "headSha": "b3a7429792759ec1ea35a5a16e58fbcbde6f954f",
+        "updatedAt": "2026-03-22T19:12:21Z",
+        "headSha": "307f2d671f850497509a25818e7cc10d0aa871e1",
         "headRepo": "DeividasMat/parameter-golf"
       },
       "links": {
-        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/b3a7429792759ec1ea35a5a16e58fbcbde6f954f/records/track_non_record_16mb/2026-03-20_Runpod1GPU_Ablations/submission.json",
-        "readme": "https://github.com/openai/parameter-golf/blob/b3a7429792759ec1ea35a5a16e58fbcbde6f954f/records/track_non_record_16mb/2026-03-20_Runpod1GPU_Ablations/README.md",
-        "trainLog": "https://github.com/openai/parameter-golf/blob/b3a7429792759ec1ea35a5a16e58fbcbde6f954f/records/track_non_record_16mb/2026-03-20_Runpod1GPU_Ablations/train.log",
-        "script": "https://github.com/openai/parameter-golf/blob/b3a7429792759ec1ea35a5a16e58fbcbde6f954f/records/track_non_record_16mb/2026-03-20_Runpod1GPU_Ablations/train_gpt.py",
-        "folder": "https://github.com/openai/parameter-golf/tree/b3a7429792759ec1ea35a5a16e58fbcbde6f954f/records/track_non_record_16mb/2026-03-20_Runpod1GPU_Ablations",
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/307f2d671f850497509a25818e7cc10d0aa871e1/records/track_non_record_16mb/2026-03-20_Runpod1GPU_Ablations/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/307f2d671f850497509a25818e7cc10d0aa871e1/records/track_non_record_16mb/2026-03-20_Runpod1GPU_Ablations/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/307f2d671f850497509a25818e7cc10d0aa871e1/records/track_non_record_16mb/2026-03-20_Runpod1GPU_Ablations/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/307f2d671f850497509a25818e7cc10d0aa871e1/records/track_non_record_16mb/2026-03-20_Runpod1GPU_Ablations/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/307f2d671f850497509a25818e7cc10d0aa871e1/records/track_non_record_16mb/2026-03-20_Runpod1GPU_Ablations",
         "pr": "https://github.com/openai/parameter-golf/pull/425",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
@@ -20174,16 +20174,16 @@
         "authorLogin": "DeividasMat",
         "authorName": null,
         "createdAt": "2026-03-22T13:50:52Z",
-        "updatedAt": "2026-03-22T16:02:39Z",
-        "headSha": "b3a7429792759ec1ea35a5a16e58fbcbde6f954f",
+        "updatedAt": "2026-03-22T19:12:21Z",
+        "headSha": "307f2d671f850497509a25818e7cc10d0aa871e1",
         "headRepo": "DeividasMat/parameter-golf"
       },
       "links": {
-        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/b3a7429792759ec1ea35a5a16e58fbcbde6f954f/records/_template/submission.json",
-        "readme": "https://github.com/openai/parameter-golf/blob/b3a7429792759ec1ea35a5a16e58fbcbde6f954f/records/_template/README.md",
-        "trainLog": "https://github.com/openai/parameter-golf/blob/b3a7429792759ec1ea35a5a16e58fbcbde6f954f/records/_template/train.log",
-        "script": "https://github.com/openai/parameter-golf/blob/b3a7429792759ec1ea35a5a16e58fbcbde6f954f/records/_template/train_gpt.py",
-        "folder": "https://github.com/openai/parameter-golf/tree/b3a7429792759ec1ea35a5a16e58fbcbde6f954f/records/_template",
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/307f2d671f850497509a25818e7cc10d0aa871e1/records/_template/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/307f2d671f850497509a25818e7cc10d0aa871e1/records/_template/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/307f2d671f850497509a25818e7cc10d0aa871e1/records/_template/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/307f2d671f850497509a25818e7cc10d0aa871e1/records/_template/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/307f2d671f850497509a25818e7cc10d0aa871e1/records/_template",
         "pr": "https://github.com/openai/parameter-golf/pull/425",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
@@ -20705,7 +20705,7 @@
       },
       "pr": {
         "number": 453,
-        "title": "Add PR315-derived candidate record and looped-depth gate",
+        "title": "Exploratory: PR315-derived candidate and looped-depth gate",
         "state": "open",
         "draft": false,
         "mergedAt": null,
@@ -20713,7 +20713,7 @@
         "authorLogin": "Divyesh-Thirukonda",
         "authorName": null,
         "createdAt": "2026-03-22T18:58:11Z",
-        "updatedAt": "2026-03-22T18:58:11Z",
+        "updatedAt": "2026-03-22T19:20:20Z",
         "headSha": "c39d7a34387ad80078cf17681eb020e1cd3b53db",
         "headRepo": "Divyesh-Thirukonda/parameter-golf"
       },
@@ -20782,7 +20782,7 @@
       },
       "pr": {
         "number": 453,
-        "title": "Add PR315-derived candidate record and looped-depth gate",
+        "title": "Exploratory: PR315-derived candidate and looped-depth gate",
         "state": "open",
         "draft": false,
         "mergedAt": null,
@@ -20790,7 +20790,7 @@
         "authorLogin": "Divyesh-Thirukonda",
         "authorName": null,
         "createdAt": "2026-03-22T18:58:11Z",
-        "updatedAt": "2026-03-22T18:58:11Z",
+        "updatedAt": "2026-03-22T19:20:20Z",
         "headSha": "c39d7a34387ad80078cf17681eb020e1cd3b53db",
         "headRepo": "Divyesh-Thirukonda/parameter-golf"
       },

@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-22T19:12:01.068Z",
+  "generatedAt": "2026-03-22T19:41:53.740Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 453,
-    "title": "Add PR315-derived candidate record and looped-depth gate",
+    "title": "Exploratory: PR315-derived candidate and looped-depth gate",
     "state": "open",
-    "updatedAt": "2026-03-22T18:58:11Z",
+    "updatedAt": "2026-03-22T19:20:20Z",
     "headSha": "c39d7a34387ad80078cf17681eb020e1cd3b53db",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/453",
     "authorLogin": "Divyesh-Thirukonda"
@@ -21,19 +21,19 @@
     "submissionCount": 3
   },
   "output": {
-    "summary": "Bakes the PR315 11L + XSA4 + EMA + partial RoPE + LN scale defaults into train_gpt while keeping optional packed-codec and gated long-doc TTT paths.",
+    "summary": "Builds on the PR315 base with Partial RoPE, LN scale, EMA, and XSA4 while adding custom codec/long-doc TTT gates plus a looped-depth gate branch for throughput probes.",
     "tags": [
       "architecture",
       "attention",
-      "optimizer",
-      "compression"
+      "compression",
+      "non-record"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Partial RoPE on 16/64 dims with LN-scale depth damping",
-      "XSA on last four layers with EMA plus muon/AdamW defaults",
-      "Optional packed export codec and budgeted long-document TTT gating"
+      "Partial RoPE + LN scale on PR315-derived XSA4 base",
+      "Custom codec plus gated long-document TTT experiments",
+      "Looped-depth gate branch for shared-core throughput probing"
     ]
   },
   "compatibility": {
