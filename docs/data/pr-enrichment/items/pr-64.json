@@ -1,37 +1,37 @@
 {
-  "generatedAt": "2026-03-21T03:27:53.907Z",
+  "generatedAt": "2026-03-22T01:06:06.142Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 64,
-    "title": "Record: 11L XSA + EMA + TTT (mean val_bpb=1.1377)",
+    "title": "Record: DominationV3 compact no-TTT (mean val_bpb=1.1349, 3 seeds)",
     "state": "open",
-    "updatedAt": "2026-03-21T03:10:54Z",
-    "headSha": "9827669914021e71ad1d7509d0b205ae47284793",
+    "updatedAt": "2026-03-22T00:36:48Z",
+    "headSha": "60bd8fda91e2910e13fb804b8ae330c86ed10bd7",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/64",
     "authorLogin": "yesbhautik"
   },
   "inputs": {
-    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "hash": "333c1651a7101d4267d971ebe25bd793307b61c975586544bbd6b9a9c3a8cf24",
     "readmePaths": [
+      "records/track_10min_16mb/2026-03-21_DominationV3/README.md",
       "records/track_10min_16mb/2026-03-21_DominationV2/README.md"
     ],
-    "submissionCount": 1
+    "submissionCount": 2
   },
   "output": {
-    "summary": "11-layer Muon-optimized GPT with XSA on the final layers, EMA smoothing, test-time SGD on pregraded tokens, BigramHash context, and int6/int8 quantization.",
+    "summary": "Compact 11-layer GPT with XSA on final 4 layers, EMA, BigramHash, and mixed int6 quantization under strict 10min/16MB limits.",
     "tags": [
-      "attention",
-      "optimizer",
+      "architecture",
       "quantization",
-      "evaluation"
+      "sliding-window-eval"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "XSA last-4-layer orthogonal projection plus EMA smoothing",
-      "TTT micro-SGD on already-evaluated tokens during eval",
-      "Int6 per-row quantization with BigramHash context"
+      "11-layer transformer with XSA on last 4 layers and EMA averaging",
+      "Mixed int6 quantization on mlp, attn, and token embeddings",
+      "BigramHash context with sliding-window evaluation"
     ]
   },
   "compatibility": {

@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-21T22:35:31.770Z",
+  "generatedAt": "2026-03-22T01:06:00.860Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 212,
-    "title": "Record: 11L XSA + EMA + TTT + Partial RoPE + LN Scale — val_bpb=1.1401",
+    "title": "Record: 11L XSA + EMA + TTT + Partial RoPE + LN Scale — val_bpb=1.1375",
     "state": "open",
-    "updatedAt": "2026-03-21T22:22:35Z",
-    "headSha": "86ef7a4e0abef2e72786b13a504ba7cf44b066d0",
+    "updatedAt": "2026-03-22T01:05:15Z",
+    "headSha": "b621f7ffe4b3b965ac88c8a3ab279155d51b8d27",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/212",
     "authorLogin": "mrdavtan"
   },
@@ -20,19 +20,19 @@
     "submissionCount": 2
   },
   "output": {
-    "summary": "Stacked transformer uses last-layer Exclusive Self Attention, EMA smoothing, U-Net skips, TTT refinement, Partial RoPE/LN scale, SmearGate/BigramHash, and late int6 QAT.",
+    "summary": "11-layer transformer pairs last-layer exclusive self-attention, EMA, TTT, U-Net skips, partial RoPE, LN scale, and late int6 QAT to hit the 10m/16MB budget.",
     "tags": [
-      "attention",
-      "optimizer",
+      "architecture",
+      "quantization",
       "training-schedule",
-      "quantization"
+      "evaluation"
     ],
     "usesValOnly": false,
-    "valOnlyReasoning": "Standard training with post-training validation tweaks; no val-only training regime.",
+    "valOnlyReasoning": "",
     "techniques": [
-      "XSA + U-Net skip connections reshaping attention outputs",
-      "EMA smoothing with 3-epoch Test-Time Training before eval",
-      "Partial RoPE + LN Scale with late absmax int6 QAT and auxiliary SmearGate/BigramHash"
+      "Exclusive self-attention with U-Net-style skips",
+      "Partial RoPE plus layer-scaled LN for zero-cost tuning",
+      "EMA + TTT prep before late int6 QAT"
     ]
   },
   "compatibility": {

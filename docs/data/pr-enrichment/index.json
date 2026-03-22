@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-22T00:35:59.973Z",
+  "generatedAt": "2026-03-22T01:06:06.149Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
@@ -101,15 +101,15 @@
       "prNumber": 376,
       "title": "Record: 9L MLP3x Full Stack + Custom Kernel Pipeline, val_bpb=1.1401",
       "status": "open",
-      "updatedAt": "2026-03-22T00:18:01Z",
-      "headSha": "b2f81b0f8e75d9efe775cd42ff48f6d99cef81d7",
-      "generatedAt": "2026-03-22T00:35:59.914Z",
-      "summary": "9-layer 512d transformer stacks GQA, NTK-RoPE, SmearGate/BigramHash, MLP 3x, muon+SWA, int6+zstd compression, and custom kernels for efficient sliding-window eval.",
+      "updatedAt": "2026-03-22T00:41:29Z",
+      "headSha": "c262d1fd596e75d9576bc0d16b76ed53394ec8e6",
+      "generatedAt": "2026-03-22T01:05:46.043Z",
+      "summary": "9-layer GQA transformer using SmearGate+BigramHash, Muon+SWA, NTK-RoPE, int6+zstd, and a custom Triton/CUDA kernel pipeline for fused ops.",
       "tags": [
         "architecture",
         "optimizer",
-        "compression",
-        "attention"
+        "quantization",
+        "compression"
       ],
       "flags": {
         "usesValOnly": false,
@@ -337,12 +337,15 @@
       "prNumber": 364,
       "title": "Record: Batch-Optimized 524K + Warmdown 4000 (val_bpb 1.1497)",
       "status": "open",
-      "updatedAt": "2026-03-21T20:04:25Z",
-      "headSha": "9f0180d7be0bd021f59da4fbd82a0cd94c119927",
-      "generatedAt": "2026-03-21T20:04:55.809Z",
-      "summary": "Lower per-step batch tokens plus longer warmdown yield more optimizer updates that better match a ~7,300-step training trajectory.",
+      "updatedAt": "2026-03-22T00:41:15Z",
+      "headSha": "df9a83db10e3fc2dbfa9de45f7a6da186639010a",
+      "generatedAt": "2026-03-22T01:05:51.095Z",
+      "summary": "Reduced batch tokens with longer warmdown and full-weight test-time training on the quantized model to get more updates and better sliding-window eval adaptation.",
       "tags": [
-        "training-schedule"
+        "quantization",
+        "optimizer",
+        "training-schedule",
+        "evaluation"
       ],
       "flags": {
         "usesValOnly": false,
@@ -1737,13 +1740,12 @@
       "prNumber": 288,
       "title": "Non-record: Content-Dependent SmearGate (1.6795 BPB, RTX 4070)",
       "status": "open",
-      "updatedAt": "2026-03-21T22:16:21Z",
-      "headSha": "d668ceedd32da955afc65c69655e60fa1a588686",
-      "generatedAt": "2026-03-21T22:35:21.331Z",
-      "summary": "SmearGate now modulates its blend between tokens by their embedding similarity so compound-like neighbors mix more while boundaries stay independent.",
+      "updatedAt": "2026-03-22T01:01:41Z",
+      "headSha": "4a015310924ac8927739e396c33b4fec4cfe2a26",
+      "generatedAt": "2026-03-22T01:05:55.654Z",
+      "summary": "Modulates SmearGate blend by adjacent-token similarity so similar tokens merge more, adding just one scale parameter and a dot product per position.",
       "tags": [
         "architecture",
-        "regularization",
         "non-record"
       ],
       "flags": {
@@ -2952,17 +2954,17 @@
     },
     {
       "prNumber": 212,
-      "title": "Record: 11L XSA + EMA + TTT + Partial RoPE + LN Scale — val_bpb=1.1401",
+      "title": "Record: 11L XSA + EMA + TTT + Partial RoPE + LN Scale — val_bpb=1.1375",
       "status": "open",
-      "updatedAt": "2026-03-21T22:22:35Z",
-      "headSha": "86ef7a4e0abef2e72786b13a504ba7cf44b066d0",
-      "generatedAt": "2026-03-21T22:35:31.770Z",
-      "summary": "Stacked transformer uses last-layer Exclusive Self Attention, EMA smoothing, U-Net skips, TTT refinement, Partial RoPE/LN scale, SmearGate/BigramHash, and late int6 QAT.",
+      "updatedAt": "2026-03-22T01:05:15Z",
+      "headSha": "b621f7ffe4b3b965ac88c8a3ab279155d51b8d27",
+      "generatedAt": "2026-03-22T01:06:00.860Z",
+      "summary": "11-layer transformer pairs last-layer exclusive self-attention, EMA, TTT, U-Net skips, partial RoPE, LN scale, and late int6 QAT to hit the 10m/16MB budget.",
       "tags": [
-        "attention",
-        "optimizer",
+        "architecture",
+        "quantization",
         "training-schedule",
-        "quantization"
+        "evaluation"
       ],
       "flags": {
         "usesValOnly": false,
@@ -5277,17 +5279,16 @@
     },
     {
       "prNumber": 64,
-      "title": "Record: 11L XSA + EMA + TTT (mean val_bpb=1.1377)",
+      "title": "Record: DominationV3 compact no-TTT (mean val_bpb=1.1349, 3 seeds)",
       "status": "open",
-      "updatedAt": "2026-03-21T03:10:54Z",
-      "headSha": "9827669914021e71ad1d7509d0b205ae47284793",
-      "generatedAt": "2026-03-21T03:27:53.907Z",
-      "summary": "11-layer Muon-optimized GPT with XSA on the final layers, EMA smoothing, test-time SGD on pregraded tokens, BigramHash context, and int6/int8 quantization.",
+      "updatedAt": "2026-03-22T00:36:48Z",
+      "headSha": "60bd8fda91e2910e13fb804b8ae330c86ed10bd7",
+      "generatedAt": "2026-03-22T01:06:06.142Z",
+      "summary": "Compact 11-layer GPT with XSA on final 4 layers, EMA, BigramHash, and mixed int6 quantization under strict 10min/16MB limits.",
       "tags": [
-        "attention",
-        "optimizer",
+        "architecture",
         "quantization",
-        "evaluation"
+        "sliding-window-eval"
       ],
       "flags": {
         "usesValOnly": false,
