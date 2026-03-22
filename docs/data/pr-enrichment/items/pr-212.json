@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-22T08:07:34.031Z",
+  "generatedAt": "2026-03-22T19:12:22.361Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 212,
-    "title": "Record: 11L EMA + TTT + Partial RoPE + LN Scale + XSA4 — mean val_bpb=1.1329 (3 seeds)",
+    "title": "Non-record: Negative findings on codebook quantization, magnitude pruning, multi-token prediction, embedding factorization",
     "state": "open",
-    "updatedAt": "2026-03-22T07:55:42Z",
-    "headSha": "a5fd524607960ce2db2e07c43002e5e6c922a7de",
+    "updatedAt": "2026-03-22T19:06:15Z",
+    "headSha": "7237476ab0f739fa3e8706a61428003966eac9dd",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/212",
     "authorLogin": "mrdavtan"
   },
@@ -20,18 +20,18 @@
     "submissionCount": 2
   },
   "output": {
-    "summary": "11-layer transformer pairs U-Net skip decoder, XSA-limited layers, SmearGate/BigramHash, and partial RoPE with EMA+TTT before int6+zstd compression.",
+    "summary": "11-layer int6 transformer with EMA/TTT/XSA tuning and zstd-22 compression, documenting broad ablations on quantization, pruning, and embedding factorization.",
     "tags": [
+      "quantization",
       "architecture",
-      "training-schedule",
-      "quantization"
+      "evaluation"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "U-Net skip decoder with learned weights",
-      "XSA on final layers plus partial RoPE/LN scaling",
-      "EMA weight averaging then TTT before quantized export"
+      "11-layer int6 model with EMA/TTT/XSA configuration",
+      "zstd-22 compressed artifacts keeping FP16 embedding exports off",
+      "Extensive negative findings on pruning, multi-token heads, codebook quant, and embedding SVD"
     ]
   },
   "compatibility": {

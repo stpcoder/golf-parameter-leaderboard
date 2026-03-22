@@ -1,0 +1,45 @@
+{
+  "generatedAt": "2026-03-22T19:12:01.068Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 453,
+    "title": "Add PR315-derived candidate record and looped-depth gate",
+    "state": "open",
+    "updatedAt": "2026-03-22T18:58:11Z",
+    "headSha": "c39d7a34387ad80078cf17681eb020e1cd3b53db",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/453",
+    "authorLogin": "Divyesh-Thirukonda"
+  },
+  "inputs": {
+    "hash": "c4f8d017d13e812b0ad5a78b677f8350df1124736cd3f84c8d4e37f273206c70",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-21_11L_XSA4_EMA_PartialRoPE_LateQAT_1.1248/README.md",
+      "records/track_10min_16mb/2026-03-22_11L_XSA4_EMA_PartialRoPE_LNScale_Entropy_LongDocTTT/README.md",
+      "records/track_non_record_16mb/2026-03-22_PR315_LoopedDepth_Gate/README.md"
+    ],
+    "submissionCount": 3
+  },
+  "output": {
+    "summary": "Bakes the PR315 11L + XSA4 + EMA + partial RoPE + LN scale defaults into train_gpt while keeping optional packed-codec and gated long-doc TTT paths.",
+    "tags": [
+      "architecture",
+      "attention",
+      "optimizer",
+      "compression"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Partial RoPE on 16/64 dims with LN-scale depth damping",
+      "XSA on last four layers with EMA plus muon/AdamW defaults",
+      "Optional packed export codec and budgeted long-document TTT gating"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-22T19:12:07.469Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 452,
+    "title": "10L XSA + EMA + Partial RoPE + LN Scale + TTT — val_bpb 1.1365",
+    "state": "open",
+    "updatedAt": "2026-03-22T18:55:35Z",
+    "headSha": "e96bad359374c5131ba6d06e71fc47c996c6fba4",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/452",
+    "authorLogin": "ofirkris"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-22_XSA_EMA_PartialRoPE_LNScale_TTT/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Combines a 10-layer GPT with XSA on top layers, EMA, partial RoPE, LN scaling, and post-quant TTT SGD on validation data.",
+    "tags": [
+      "val-only",
+      "architecture",
+      "quantization",
+      "evaluation"
+    ],
+    "usesValOnly": true,
+    "valOnlyReasoning": "Performs TTT-style SGD finetuning on held-out validation shard after quantization.",
+    "techniques": [
+      "Exclusive Self-Attention on top layers with partial RoPE and LN scaling",
+      "Int5 MLP/Int6 attention quant plus pruning with FP16 passthrough",
+      "Post-quant TTT SGD on validation data"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": true,
+    "finalUsesValOnly": true,
+    "valOnlyMatchesCollector": false
+  }
+}
