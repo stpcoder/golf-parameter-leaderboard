@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-22T06:36:57.345Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 407,
+    "title": "Add non-record 1xH200 fp16-embed baseline sweep submission",
+    "state": "open",
+    "updatedAt": "2026-03-22T06:09:07Z",
+    "headSha": "b354f8ad2eeb8c64110e975e16ca1bbe0c1cd94d",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/407",
+    "authorLogin": "itu-itis24-buyukhelvacigilm24"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-03-22_H200_SP1024_9x512_KV4_FP16Embed/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "SP-1024 baseline on 1xH200 keeps tok_emb.weight in fp16 during int8 export to lead the controlled sweep.",
+    "tags": [
+      "quantization",
+      "mixed-precision",
+      "non-record"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Exporter keeps tok_emb fp16 while emitting int8 model",
+      "Reuses SP-1024 baseline layout for sweep consistency",
+      "1xH200 10-minute sweep under 16MB cap to compare exporter tweaks"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

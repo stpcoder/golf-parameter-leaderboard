@@ -1,8 +1,54 @@
 {
-  "generatedAt": "2026-03-22T06:07:17.512Z",
+  "generatedAt": "2026-03-22T06:38:28.757Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 408,
+      "title": "First submission",
+      "status": "open",
+      "updatedAt": "2026-03-22T06:12:32Z",
+      "headSha": "47fc2d075bb3b4c3941ea5a156c1788f1131dea9",
+      "generatedAt": "2026-03-22T06:36:51.250Z",
+      "summary": "Halved batch tokens, doubled MLP width, tuned LRs/warmdown, and raised RoPE base to boost capacity while fitting 10min/16MB constraints.",
+      "tags": [
+        "architecture",
+        "training-schedule",
+        "positional-encoding"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-408.json"
+    },
+    {
+      "prNumber": 407,
+      "title": "Add non-record 1xH200 fp16-embed baseline sweep submission",
+      "status": "open",
+      "updatedAt": "2026-03-22T06:09:07Z",
+      "headSha": "b354f8ad2eeb8c64110e975e16ca1bbe0c1cd94d",
+      "generatedAt": "2026-03-22T06:36:57.345Z",
+      "summary": "SP-1024 baseline on 1xH200 keeps tok_emb.weight in fp16 during int8 export to lead the controlled sweep.",
+      "tags": [
+        "quantization",
+        "mixed-precision",
+        "non-record"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-407.json"
+    },
     {
       "prNumber": 406,
       "title": "Non-record: 11L XSA4 + EMA + SDTTT (3-seed mean val_bpb=1.1287)",
@@ -54,15 +100,14 @@
       "prNumber": 404,
       "title": "Non-record: 10L MLP3x int6 baseline (MLX smoke test)",
       "status": "open",
-      "updatedAt": "2026-03-22T05:31:27Z",
+      "updatedAt": "2026-03-22T06:25:55Z",
       "headSha": "84b47a2861aef4e66b0248a86ef4190724c0405a",
-      "generatedAt": "2026-03-22T05:36:41.917Z",
-      "summary": "Quick MLX smoke test runs a 10-layer, 512-dim MLP with 3x expansion and int6 compression to validate the pipeline end-to-end.",
+      "generatedAt": "2026-03-22T06:37:00.950Z",
+      "summary": "10-layer relu² MLP3x baseline with int6 quantization and zlib-9 compression to smoke-test the MLX pipeline.",
       "tags": [
         "architecture",
         "quantization",
-        "compression",
-        "non-record"
+        "compression"
       ],
       "flags": {
         "usesValOnly": false,
@@ -100,16 +145,17 @@
     },
     {
       "prNumber": 401,
-      "title": "Having a blast — PR374 base + EMA/QAT stack beats 1.1246",
+      "title": "Record: 11L + EMA + Tight SWA + QAT0.15 + VE128 + Partial RoPE + LN Scale (val_bpb: 1.1243)",
       "status": "open",
-      "updatedAt": "2026-03-22T06:04:08Z",
-      "headSha": "a47bfa24d519d133d4922a48fd0a2c335682e1b5",
-      "generatedAt": "2026-03-22T06:07:01.981Z",
-      "summary": "Tight SWA 11L/4KV/3xMLP model stacks EMA decay, late QAT threshold, and warmdown to stabilize quantization and shrink the gap.",
+      "updatedAt": "2026-03-22T06:36:15Z",
+      "headSha": "7351d10e985ca0380691aeb22c6a3c8a5423a02b",
+      "generatedAt": "2026-03-22T06:37:05.139Z",
+      "summary": "Stacks EMA with tight SWA checkpoints, extends warmdown, and triggers Late QAT earlier atop the 11-layer GQA/Partial RoPE transformer.",
       "tags": [
-        "architecture",
+        "training-schedule",
         "quantization",
-        "training-schedule"
+        "optimizer",
+        "architecture"
       ],
       "flags": {
         "usesValOnly": false,
@@ -120,30 +166,6 @@
         "valOnlyMatchesCollector": true
       },
       "file": "items/pr-401.json"
-    },
-    {
-      "prNumber": 400,
-      "title": "Record: 11L CANON-AC(last5)+DeltaGate Report (Humble Record Attempt, val_bpb: 1.1296)",
-      "status": "open",
-      "updatedAt": "2026-03-22T05:20:15Z",
-      "headSha": "f4952b1b0cf9009f05ecf227cef98848b04db34c",
-      "generatedAt": "2026-03-22T05:36:56.398Z",
-      "summary": "Scoped CANON placement with delta gate on the last five layers plus tight SWA on an 11L/512 GQA base, all in int6 with sliding-window eval.",
-      "tags": [
-        "architecture",
-        "quantization",
-        "training-schedule",
-        "evaluation"
-      ],
-      "flags": {
-        "usesValOnly": false,
-        "usesValOnlyAi": false,
-        "usesValOnlyCollector": false
-      },
-      "compatibility": {
-        "valOnlyMatchesCollector": true
-      },
-      "file": "items/pr-400.json"
     },
     {
       "prNumber": 399,
@@ -896,30 +918,6 @@
         "valOnlyMatchesCollector": true
       },
       "file": "items/pr-359.json"
-    },
-    {
-      "prNumber": 357,
-      "title": "docs: add TIPS.md and resolve environment dependency issues (#280, #82, #43)",
-      "status": "open",
-      "updatedAt": "2026-03-21T18:46:56Z",
-      "headSha": "4202ac96cf7fb3305b0296050a392181de2588dd",
-      "generatedAt": "2026-03-21T19:05:03.304Z",
-      "summary": "Adds flash-attn to requirements and a newcomer TIPS doc outlining Depth Recurrence, Muon tweaks, sliding-window eval, tokenizer-size rules, and layer tying guidance.",
-      "tags": [
-        "architecture",
-        "optimizer",
-        "tokenization",
-        "non-record"
-      ],
-      "flags": {
-        "usesValOnly": false,
-        "usesValOnlyAi": false,
-        "usesValOnlyCollector": false
-      },
-      "compatibility": {
-        "valOnlyMatchesCollector": true
-      },
-      "file": "items/pr-357.json"
     },
     {
       "prNumber": 356,
@@ -1740,6 +1738,30 @@
       "file": "items/pr-313.json"
     },
     {
+      "prNumber": 312,
+      "title": "Record: Int6 + Canon ACD (K=3) + Muon WD 0.04 + SWA + Sliding Eval (val_bpb=1.1668)",
+      "status": "open",
+      "updatedAt": "2026-03-22T04:47:59Z",
+      "headSha": "ba8b7c8a3d2863fde80edfc83c16008fffe1a21c",
+      "generatedAt": "2026-03-22T06:37:09.609Z",
+      "summary": "Pairs Canon ACD placement with mixed int6 PTQ on attention/MLP and Muon+Adam weight decay plus SWA, using sliding-window eval to track performance.",
+      "tags": [
+        "quantization",
+        "muon",
+        "architecture",
+        "sliding-window-eval"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-312.json"
+    },
+    {
       "prNumber": 310,
       "title": "Record: 10L Seq2048 TTT LoRA WarmdownQuant (val_bpb=1.1787)",
       "status": "open",
@@ -2187,14 +2209,13 @@
       "prNumber": 288,
       "title": "Non-record: Content-Dependent SmearGate (1.6795 BPB, RTX 4070)",
       "status": "open",
-      "updatedAt": "2026-03-22T06:00:31Z",
-      "headSha": "e4e9eedc6d30af5bac5ae75899b9abfb531f4628",
-      "generatedAt": "2026-03-22T06:07:10.874Z",
-      "summary": "Content-dependent SmearGate modulates per-token blending via adjacent embedding similarity to adapt mixing ratios instead of fixed gates.",
+      "updatedAt": "2026-03-22T06:37:02Z",
+      "headSha": "e96ac367498ad4224ffe7e09f1f2556c0685782a",
+      "generatedAt": "2026-03-22T06:37:14.252Z",
+      "summary": "Content-dependent SmearGate modulates the blend between adjacent embeddings via their dot-product similarity so similar tokens merge more tightly.",
       "tags": [
-        "non-record",
         "architecture",
-        "attention"
+        "non-record"
       ],
       "flags": {
         "usesValOnly": false,
@@ -2934,14 +2955,14 @@
     {
       "prNumber": 242,
       "title": "Crystal Curriculum — TF-IDF curriculum learning by Bee Bytez",
-      "status": "open",
-      "updatedAt": "2026-03-20T17:57:57Z",
+      "status": "closed",
+      "updatedAt": "2026-03-22T06:33:28Z",
       "headSha": "ea6acc85aa0640a47af6a81e4239a01675f31484",
-      "generatedAt": "2026-03-20T18:24:15.507Z",
-      "summary": "Info-density Crystallizer oversamples TF-IDF scored batches, then linearly blend to uniform curriculum while scaling to 10 layers with Muon weight decay.",
+      "generatedAt": "2026-03-22T06:37:19.522Z",
+      "summary": "TF-IDF Crystallizer oversamples candidate batches, decays from dense curriculum to uniform, and pairs Muon weight decay with a 10-layer transformer.",
       "tags": [
-        "muon",
         "training-schedule",
+        "optimizer",
         "architecture"
       ],
       "flags": {
@@ -3917,6 +3938,30 @@
       "file": "items/pr-181.json"
     },
     {
+      "prNumber": 180,
+      "title": "Record: 10L Int5-MLP + BigramHash(10240) + SWA(0.4) + WD=0.04 (val_bpb=1.1428, mean 3 seeds)",
+      "status": "closed",
+      "updatedAt": "2026-03-20T18:51:12Z",
+      "headSha": "1a8be36c17e20b1fb53dbf4975e1d67f5b8a63e9",
+      "generatedAt": "2026-03-22T06:37:26.836Z",
+      "summary": "Int5 MLP/int6 attention quantization frees budget for a 10th layer while Muon WD=0.04, SWA start_frac=0.4, and BigramHash10240 stabilize training.",
+      "tags": [
+        "quantization",
+        "architecture",
+        "optimizer",
+        "training-schedule"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-180.json"
+    },
+    {
       "prNumber": 179,
       "title": "Record: 11L, int6+zstd, decoupled WD (val_bpb = 1.1472)",
       "status": "open",
@@ -4222,6 +4267,30 @@
         "valOnlyMatchesCollector": true
       },
       "file": "items/pr-163.json"
+    },
+    {
+      "prNumber": 162,
+      "title": "Record: Int6 MLP3x + SmearGate + BigramHash + MuonWD + SWA (mean val_bpb=1.1483)",
+      "status": "closed",
+      "updatedAt": "2026-03-20T18:48:27Z",
+      "headSha": "3c458dcdd4c32353ad714d275a653da1597a3979",
+      "generatedAt": "2026-03-22T06:37:31.636Z",
+      "summary": "Int6-quantized GPT adds 3× MLP width, SmearGate/BigramHash context, and muon WD + SWA smoothing to keep weights quant-friendly.",
+      "tags": [
+        "quantization",
+        "architecture",
+        "optimizer",
+        "training-schedule"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-162.json"
     },
     {
       "prNumber": 161,
@@ -5417,6 +5486,30 @@
       "file": "items/pr-88.json"
     },
     {
+      "prNumber": 86,
+      "title": "Update: 11L MLP3x + WD=0.04 + zstd-22 (val_bpb 1.1502)",
+      "status": "closed",
+      "updatedAt": "2026-03-20T18:44:49Z",
+      "headSha": "1641a23486b3a5675c8fcc51f734b394b525105f",
+      "generatedAt": "2026-03-22T06:37:36.049Z",
+      "summary": "11-layer MLP3x GPT uses int6 QAT with decoupled weight decay and zstd-22 compression plus sliding-window eval to fit under 16MB.",
+      "tags": [
+        "quantization",
+        "architecture",
+        "training-schedule",
+        "sliding-window-eval"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-86.json"
+    },
+    {
       "prNumber": 85,
       "title": "Record (pending): 92-experiment autoresearch + sliding window eval, pre-quant val_bpb=1.2156",
       "status": "open",
@@ -5559,6 +5652,28 @@
       "file": "items/pr-78.json"
     },
     {
+      "prNumber": 77,
+      "title": "[record bpb=1.195] sliding window + LoRA TTT",
+      "status": "closed",
+      "updatedAt": "2026-03-20T01:57:32Z",
+      "headSha": "9fed66c01eb86e9089b68580a2295cbffaef25de",
+      "generatedAt": "2026-03-22T06:37:41.060Z",
+      "summary": "Eval runs LoRA test-time training per document over sliding 256-token chunks, scoring then adapting lm_head/Q/V adapters before resetting per doc.",
+      "tags": [
+        "sliding-window-eval",
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-77.json"
+    },
+    {
       "prNumber": 76,
       "title": "12L Int5-MLP + SmearGate + BigramHash + SWA (val_bpb 1.1433)",
       "status": "open",
@@ -5628,6 +5743,30 @@
         "valOnlyMatchesCollector": true
       },
       "file": "items/pr-74.json"
+    },
+    {
+      "prNumber": 73,
+      "title": "Non-record: SwiGLU + warmdown fix + quarter batch (1x5090, 1.3281 bpb)",
+      "status": "closed",
+      "updatedAt": "2026-03-20T18:42:15Z",
+      "headSha": "b8a1426d0f4a4e3a6cd3aaa9071eb5a4904dbb58",
+      "generatedAt": "2026-03-22T06:37:45.880Z",
+      "summary": "Fixes the warmdown schedule via a time-fraction limit, swaps in SwiGLU, and quarter-batches with grad accumulation to get more optimizer steps on 1×5090.",
+      "tags": [
+        "training-schedule",
+        "architecture",
+        "optimizer",
+        "non-record"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-73.json"
     },
     {
       "prNumber": 71,
@@ -5725,6 +5864,30 @@
       "file": "items/pr-66.json"
     },
     {
+      "prNumber": 65,
+      "title": "Record: Mixed Quant Int6/FP16 + SmearGate + OrthoInit + MLP 3x + Sliding Window, val_bpb=1.1556",
+      "status": "closed",
+      "updatedAt": "2026-03-20T18:40:28Z",
+      "headSha": "3aface5c0bcc40ca2e74918977d05c07ae8fa634",
+      "generatedAt": "2026-03-22T06:37:51.504Z",
+      "summary": "SmearGate bigram gating plus hash embeddings fuel a 9-layer 512d transformer with 3× MLP, orthogonal init, Muon WD, and int6 STE QAT before sliding-window eval.",
+      "tags": [
+        "quantization",
+        "optimizer",
+        "architecture",
+        "sliding-window-eval"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-65.json"
+    },
+    {
       "prNumber": 64,
       "title": "Record: DominationV3 + TTT (mean val_bpb=1.1336, 3 seeds)",
       "status": "open",
@@ -5749,6 +5912,30 @@
       "file": "items/pr-64.json"
     },
     {
+      "prNumber": 63,
+      "title": "Record: 10L Int6 QAT + Zstd MLP2.6x Muon0.99 Sliding Window (val_bpb 1.1598)",
+      "status": "closed",
+      "updatedAt": "2026-03-20T18:26:38Z",
+      "headSha": "510e3f6a9cc55a9e94b2dcc9ab4cbb3dbf3844de",
+      "generatedAt": "2026-03-22T06:37:56.584Z",
+      "summary": "Stacks STE int6 QAT with full int6+zstd compression so a 10L model can expand the MLP and run sliding-window evaluation gap-free.",
+      "tags": [
+        "quantization",
+        "compression",
+        "architecture",
+        "sliding-window-eval"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-63.json"
+    },
+    {
       "prNumber": 62,
       "title": "WIP: Add adaptive eval-time context non-record MLX submission",
       "status": "open",
@@ -5769,6 +5956,54 @@
         "valOnlyMatchesCollector": true
       },
       "file": "items/pr-62.json"
+    },
+    {
+      "prNumber": 61,
+      "title": "warmdown-quantization val_bpb = 1.2154 ",
+      "status": "closed",
+      "updatedAt": "2026-03-20T02:28:56Z",
+      "headSha": "6109533d1c80ba1c3d05cbfea6e1fbed375cf7c1",
+      "generatedAt": "2026-03-22T06:38:00.960Z",
+      "summary": "Aggressively warmdown LR to near-zero plus FP16 tied embeddings and NTK-RoPE tuning reduce int8 quantization penalty on 8xH100.",
+      "tags": [
+        "quantization",
+        "training-schedule",
+        "optimizer",
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-61.json"
+    },
+    {
+      "prNumber": 60,
+      "title": "Record: Sliding Window + FP16 Embed + 10L + Muon WD + Overtone Init (val_bpb=1.1748)",
+      "status": "closed",
+      "updatedAt": "2026-03-20T03:15:00Z",
+      "headSha": "56dc745ac25ad6702864dfb4e5b65b632af565e0",
+      "generatedAt": "2026-03-22T06:38:05.658Z",
+      "summary": "Uses sliding-window scoring with FP16 tied embeddings, Muon weight decay, 10 layers, and spectral+sigmoid resid-mix init for stronger generalization.",
+      "tags": [
+        "sliding-window-eval",
+        "mixed-precision",
+        "optimizer",
+        "architecture"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-60.json"
     },
     {
       "prNumber": 59,
@@ -5888,6 +6123,29 @@
       "file": "items/pr-53.json"
     },
     {
+      "prNumber": 52,
+      "title": "New SOTA attempt (val_bpb=1.2014)",
+      "status": "closed",
+      "updatedAt": "2026-03-19T21:04:16Z",
+      "headSha": "b6663e7cd939859772250305f8389d085e176951",
+      "generatedAt": "2026-03-22T06:38:10.730Z",
+      "summary": "4096-token training sequences plus aggressive Muon tuning (0.99 momentum, lower LR, longer warmup/warmdown) drive the new attempt.",
+      "tags": [
+        "architecture",
+        "optimizer",
+        "training-schedule"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-52.json"
+    },
+    {
       "prNumber": 51,
       "title": "[WIP] Depth-recurrent QAT: 3x4 loops, 768d, 15.6MB artifact",
       "status": "closed",
@@ -5908,6 +6166,52 @@
         "valOnlyMatchesCollector": true
       },
       "file": "items/pr-51.json"
+    },
+    {
+      "prNumber": 50,
+      "title": "Record: Sliding Window Eval (stride=64), val_bpb=1.1925",
+      "status": "closed",
+      "updatedAt": "2026-03-19T19:40:59Z",
+      "headSha": "4bbdf43eb3cc174ea9a9d8de81748bd339b71caf",
+      "generatedAt": "2026-03-22T06:38:15.763Z",
+      "summary": "Baseline 9x512 SP-1024 model uses stride-64 sliding-window eval to score each token with ~960 context before int8+zlib export.",
+      "tags": [
+        "sliding-window-eval",
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-50.json"
+    },
+    {
+      "prNumber": 49,
+      "title": "SOTA attempt (val_bpb=1.2064)",
+      "status": "closed",
+      "updatedAt": "2026-03-19T17:25:29Z",
+      "headSha": "99e72b1c02c0b485864c48710fab36dfe9475e6b",
+      "generatedAt": "2026-03-22T06:38:20.605Z",
+      "summary": "Tied-embed 9-layer 512-dim KV4 transformer trained at seq2048 with tuned LR split to validate the SXM 10-minute artifact under the 16MB cap.",
+      "tags": [
+        "architecture",
+        "training-schedule",
+        "quantization",
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-49.json"
     },
     {
       "prNumber": 48,
@@ -5977,6 +6281,29 @@
       "file": "items/pr-44.json"
     },
     {
+      "prNumber": 42,
+      "title": "fp16 tied embedding + warmdown/LR tuning (val_bpb 1.2197)",
+      "status": "closed",
+      "updatedAt": "2026-03-19T17:16:51Z",
+      "headSha": "a50fff562f0d343e695eea26b49f108b994a4028",
+      "generatedAt": "2026-03-22T06:38:24.732Z",
+      "summary": "Keep tied token/output embedding in FP16 during quantization, trim the MLP hidden width, and stretch warmdown with a higher matrix LR to match the 10-min/16MB regime.",
+      "tags": [
+        "quantization",
+        "training-schedule",
+        "architecture"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-42.json"
+    },
+    {
       "prNumber": 41,
       "title": "Add Modal 8xH100 timed validation non-record submission",
       "status": "closed",
@@ -6022,6 +6349,29 @@
         "valOnlyMatchesCollector": true
       },
       "file": "items/pr-40.json"
+    },
+    {
+      "prNumber": 39,
+      "title": "Record: 10L Mixed Precision: val_bpb=1.2147 (10 layers + int6 middle layers)",
+      "status": "closed",
+      "updatedAt": "2026-03-19T22:26:47Z",
+      "headSha": "13acc8545800aad5a0b6d421df0a38773c8490bf",
+      "generatedAt": "2026-03-22T06:38:28.754Z",
+      "summary": "10-layer model adds depth while using mixed int8/int6 precision and lower LR to stay under 16MB and improve post-quant validation.",
+      "tags": [
+        "architecture",
+        "quantization",
+        "training-schedule"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-39.json"
     },
     {
       "prNumber": 37,

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-19T21:08:22.405Z",
+  "generatedAt": "2026-03-22T06:38:10.730Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
@@ -19,7 +19,7 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Long-context (train seq 4096) 9×512 KV4 run with aggressive Muon tuning (0.99 momentum, low LR, warmdown) to sharpen quantized quality.",
+    "summary": "4096-token training sequences plus aggressive Muon tuning (0.99 momentum, lower LR, longer warmup/warmdown) drive the new attempt.",
     "tags": [
       "architecture",
       "optimizer",
@@ -28,9 +28,9 @@
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "4096-token training sequences",
-      "High-momentum low-LR Muon tuning",
-      "Extended warmdown schedule"
+      "Longer 4096-token context per training batch",
+      "High-momentum, lower-LR Muon optimizer with extended warmup",
+      "Extended warmdown and reduced batch size for denser updates"
     ]
   },
   "compatibility": {

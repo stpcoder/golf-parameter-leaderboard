@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-20T18:56:02.797Z",
+  "generatedAt": "2026-03-22T06:37:51.504Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
@@ -20,19 +20,19 @@
     "submissionCount": 2
   },
   "output": {
-    "summary": "Combined SmearGate bigram gating, orthogonal init/Muon optimizer, and int6 STE QAT with sliding-window eval on a 9-layer transformer.",
+    "summary": "SmearGate bigram gating plus hash embeddings fuel a 9-layer 512d transformer with 3× MLP, orthogonal init, Muon WD, and int6 STE QAT before sliding-window eval.",
     "tags": [
       "quantization",
-      "architecture",
       "optimizer",
-      "evaluation"
+      "architecture",
+      "sliding-window-eval"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "SmearGate bigram gate mixing current and previous embeddings",
-      "Orthogonal init plus Muon optimizer with decoupled weight decay",
-      "Int6 STE quantization-aware training paired with stride-64 sliding-window evaluation"
+      "SmearGate bigram gate + hash embeddings enrich input space",
+      "Int6 STE QAT with fp16 embedding passthrough to prep for compression",
+      "Muon optimizer + orthogonal init underpin wider 3× MLP transformer"
     ]
   },
   "compatibility": {

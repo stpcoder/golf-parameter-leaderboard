@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-20T18:55:14.210Z",
+  "generatedAt": "2026-03-22T06:37:31.636Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
@@ -19,18 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Int6 quantization lets a 9-layer GPT scale to 3× MLP width while SmearGate/BigramHash embeddings and muP-informed Muon+SWA refine training.",
+    "summary": "Int6-quantized GPT adds 3× MLP width, SmearGate/BigramHash context, and muon WD + SWA smoothing to keep weights quant-friendly.",
     "tags": [
       "quantization",
       "architecture",
-      "optimizer"
+      "optimizer",
+      "training-schedule"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Per-row int6 quantization frees budget for 3× MLP expansion",
-      "SmearGate and BigramHash embeddings inject learned bigram context",
-      "Muon WD with orthogonal init plus SWA smooths quantized weights"
+      "Per-row int6 quantization unlocking 3× MLP width",
+      "SmearGate + BigramHash embeddings for local bigrams",
+      "Muon WD with SWA weight smoothing"
     ]
   },
   "compatibility": {

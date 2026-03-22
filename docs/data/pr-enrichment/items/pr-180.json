@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-20T18:54:59.861Z",
+  "generatedAt": "2026-03-22T06:37:26.836Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
@@ -19,7 +19,7 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Mixed int5 MLP/int6 attention quantization buys space for a 10-layer GPT with MuonWD regularization, SWA late averaging, and BigramHash.",
+    "summary": "Int5 MLP/int6 attention quantization frees budget for a 10th layer while Muon WD=0.04, SWA start_frac=0.4, and BigramHash10240 stabilize training.",
     "tags": [
       "quantization",
       "architecture",
@@ -29,9 +29,9 @@
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Mixed int5 MLP / int6 attention quantization to shrink artifact size",
-      "Muon optimizer with WD=0.04 plus SmearGate/BigramHash architectural tweaks",
-      "SWA averaging from final 40% of warmdown checkpoints"
+      "Mixed int5 MLP / int6 attention quantization",
+      "BigramHash(10240) + SmearGate + OrthoInit stack",
+      "Muon WD=0.04 with SWA start_frac=0.4 averaging"
     ]
   },
   "compatibility": {

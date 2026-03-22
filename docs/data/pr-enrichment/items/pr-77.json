@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-20T02:20:23.598Z",
+  "generatedAt": "2026-03-22T06:37:41.060Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
@@ -19,18 +19,16 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Baseline training with document-isolated sliding-window eval adds per-document LoRA TTT (rank-8 on lm_head/q/v) to adapt each chunk.",
+    "summary": "Eval runs LoRA test-time training per document over sliding 256-token chunks, scoring then adapting lm_head/Q/V adapters before resetting per doc.",
     "tags": [
       "sliding-window-eval",
-      "attention",
       "evaluation"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "per-document LoRA adapters on lm_head/c_q/c_v",
-      "stride eval with 256-token chunks in 1024 context",
-      "Adam-trained rank-8 LoRAs reset per document"
+      "LoRA adapters on lm_head/c_q/c_v trained per chunk after scoring",
+      "Sliding 256-token chunks within 1024-token windows with per-document resets"
     ]
   },
   "compatibility": {

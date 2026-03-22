@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-22T06:38:00.960Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 61,
+    "title": "warmdown-quantization val_bpb = 1.2154 ",
+    "state": "closed",
+    "updatedAt": "2026-03-20T02:28:56Z",
+    "headSha": "6109533d1c80ba1c3d05cbfea6e1fbed375cf7c1",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/61",
+    "authorLogin": "saml212"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-19_WarmdownQuantization/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Aggressively warmdown LR to near-zero plus FP16 tied embeddings and NTK-RoPE tuning reduce int8 quantization penalty on 8xH100.",
+    "tags": [
+      "quantization",
+      "training-schedule",
+      "optimizer",
+      "evaluation"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Always-decaying warmdown LR to tighten weight ranges before quantization",
+      "FP16 tied embeddings kept outside int8 export to protect dual-role matrix",
+      "NTK-RoPE eval length tuned for well-trained 8xH100 models"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

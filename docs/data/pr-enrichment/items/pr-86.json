@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-20T18:55:28.879Z",
+  "generatedAt": "2026-03-22T06:37:36.049Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "11-layer MLP3x transformer with int6 QAT, tied embeddings, Muon/AdamW decay, zstd-22 compression, and sliding-window eval to fit 16MB.",
+    "summary": "11-layer MLP3x GPT uses int6 QAT with decoupled weight decay and zstd-22 compression plus sliding-window eval to fit under 16MB.",
     "tags": [
       "quantization",
-      "sliding-window-eval",
-      "compression",
-      "architecture"
+      "architecture",
+      "training-schedule",
+      "sliding-window-eval"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Int6 QAT on all block weights with FP16 tied embedding export",
-      "Decoupled Muon+AdamW weight decay (0.04) plus momentum warmup to 0.99",
-      "zstd-22 compression and stride-64 sliding-window evaluation to hold ~15.4MB artifacts"
+      "Int6 QAT with zstd-22 compression",
+      "11-layer MLP3x depth with decoupled WD",
+      "Sliding-window eval at stride 64"
     ]
   },
   "compatibility": {

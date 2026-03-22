@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-19T20:08:14.148Z",
+  "generatedAt": "2026-03-22T06:38:15.763Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
@@ -19,18 +19,17 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Sliding-window evaluation (stride 64) on the baseline 9x512 SP-1024 scores each token with ~960+ context, improving post-quant metrics without changing training.",
+    "summary": "Baseline 9x512 SP-1024 model uses stride-64 sliding-window eval to score each token with ~960 context before int8+zlib export.",
     "tags": [
       "sliding-window-eval",
-      "quantization",
       "evaluation"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "- Sliding window eval stride=64",
-      "- Score tokens with extensive context",
-      "- Int8+zlib post-quant artifact"
+      "Stride-64 sliding windows scoring rightmost tokens with ~960 context",
+      "Int8+zlib post-quant export matching baseline training",
+      "Batching 1,024 windows per forward pass for throughput"
     ]
   },
   "compatibility": {

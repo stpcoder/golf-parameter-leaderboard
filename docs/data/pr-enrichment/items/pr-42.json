@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-19T17:29:04.802Z",
+  "generatedAt": "2026-03-22T06:38:24.732Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
@@ -19,7 +19,7 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Keeps the tied embedding in fp16 while trimming MLP width and tuning warmdown/matrix LR so the 10-minute int8 export fits under 16MB.",
+    "summary": "Keep tied token/output embedding in FP16 during quantization, trim the MLP hidden width, and stretch warmdown with a higher matrix LR to match the 10-min/16MB regime.",
     "tags": [
       "quantization",
       "training-schedule",
@@ -28,9 +28,9 @@
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "FP16 pass-through for tied embedding during quantization",
-      "Trimmed MLP hidden size to stay within 16MB",
-      "Extended warmdown and boosted matrix LR for the 10-minute schedule"
+      "FP16 passthrough for tied token/output embedding",
+      "MLP hidden width cut to 992 to stay under 16MB",
+      "Longer warmdown (3600) plus higher matrix LR (0.06) for short-run convergence"
     ]
   },
   "compatibility": {

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-20T03:20:55.708Z",
+  "generatedAt": "2026-03-22T06:38:05.658Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
@@ -19,7 +19,7 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Combines sliding-window scoring, FP16 tied embeddings, Muon with decoupled weight decay, and spectral+residual inits to support a 10-layer config.",
+    "summary": "Uses sliding-window scoring with FP16 tied embeddings, Muon weight decay, 10 layers, and spectral+sigmoid resid-mix init for stronger generalization.",
     "tags": [
       "sliding-window-eval",
       "mixed-precision",
@@ -29,9 +29,9 @@
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Sliding-window eval (stride 64) with compiled forward_logits for full-context scoring",
-      "FP16 tied embeddings plus Muon optimizer with decoupled weight decay",
-      "Spectral overtone init and sigmoid residual mixing to stabilize 10-layer model"
+      "FP16 tied embeddings prevent compounding quantization errors",
+      "Muon WD plus extra layer lets Muon compress more effectively",
+      "Overtone spectral init and sigmoid resid_mix scheduling prime the representation"
     ]
   },
   "compatibility": {

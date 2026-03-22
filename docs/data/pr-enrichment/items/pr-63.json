@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-20T18:56:14.303Z",
+  "generatedAt": "2026-03-22T06:37:56.584Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "STE int6 QAT + full int6 quantization with zstd-22 compression lets them widen to a 1344 hidden MLP and run sliding-window eval with Muon 0.99.",
+    "summary": "Stacks STE int6 QAT with full int6+zstd compression so a 10L model can expand the MLP and run sliding-window evaluation gap-free.",
     "tags": [
       "quantization",
       "compression",
       "architecture",
-      "evaluation"
+      "sliding-window-eval"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
       "STE int6 QAT to eliminate quant gap",
-      "Full int6 weights with zstd-22 compression",
-      "Wider 1344-dim MLP + Muon 0.99 sliding-window eval"
+      "Full int6 + zstd-22 compressed weights",
+      "Expanded 1344-dim MLP with sliding-window eval"
     ]
   },
   "compatibility": {

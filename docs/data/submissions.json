@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-22T06:26:11.938Z",
+  "generatedAt": "2026-03-22T06:36:42.974Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "submissions": [
@@ -1296,7 +1296,7 @@
       },
       "pr": {
         "number": 401,
-        "title": "Having a blast — PR374 base + EMA/QAT stack beats 1.1246",
+        "title": "Record: 11L + EMA + Tight SWA + QAT0.15 + VE128 + Partial RoPE + LN Scale (val_bpb: 1.1243)",
         "state": "open",
         "draft": false,
         "mergedAt": null,
@@ -1304,8 +1304,8 @@
         "authorLogin": "newjordan",
         "authorName": null,
         "createdAt": "2026-03-22T05:15:58Z",
-        "updatedAt": "2026-03-22T06:20:31Z",
-        "headSha": "86b1161ade549acee7baabb237efdb689a36e13c",
+        "updatedAt": "2026-03-22T06:36:15Z",
+        "headSha": "7351d10e985ca0380691aeb22c6a3c8a5423a02b",
         "headRepo": "newjordan/parameter-golf"
       },
       "links": {
@@ -16165,16 +16165,16 @@
         "authorLogin": "trasnake87",
         "authorName": null,
         "createdAt": "2026-03-20T23:38:53Z",
-        "updatedAt": "2026-03-22T06:11:32Z",
-        "headSha": "2a1831baa8ce19e56cefd8ada891cd351806709e",
+        "updatedAt": "2026-03-22T06:35:44Z",
+        "headSha": "8e60c3e541f82d7dc81f0c820dfff277b5900575",
         "headRepo": "trasnake87/parameter-golf"
       },
       "links": {
-        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/2a1831baa8ce19e56cefd8ada891cd351806709e/records/track_non_record_16mb/2026-03-20_ContentSmearGate_RTX4070/submission.json",
-        "readme": "https://github.com/openai/parameter-golf/blob/2a1831baa8ce19e56cefd8ada891cd351806709e/records/track_non_record_16mb/2026-03-20_ContentSmearGate_RTX4070/README.md",
-        "trainLog": "https://github.com/openai/parameter-golf/blob/2a1831baa8ce19e56cefd8ada891cd351806709e/records/track_non_record_16mb/2026-03-20_ContentSmearGate_RTX4070/train.log",
-        "script": "https://github.com/openai/parameter-golf/blob/2a1831baa8ce19e56cefd8ada891cd351806709e/records/track_non_record_16mb/2026-03-20_ContentSmearGate_RTX4070/train_gpt.py",
-        "folder": "https://github.com/openai/parameter-golf/tree/2a1831baa8ce19e56cefd8ada891cd351806709e/records/track_non_record_16mb/2026-03-20_ContentSmearGate_RTX4070",
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/8e60c3e541f82d7dc81f0c820dfff277b5900575/records/track_non_record_16mb/2026-03-20_ContentSmearGate_RTX4070/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/8e60c3e541f82d7dc81f0c820dfff277b5900575/records/track_non_record_16mb/2026-03-20_ContentSmearGate_RTX4070/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/8e60c3e541f82d7dc81f0c820dfff277b5900575/records/track_non_record_16mb/2026-03-20_ContentSmearGate_RTX4070/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/8e60c3e541f82d7dc81f0c820dfff277b5900575/records/track_non_record_16mb/2026-03-20_ContentSmearGate_RTX4070/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/8e60c3e541f82d7dc81f0c820dfff277b5900575/records/track_non_record_16mb/2026-03-20_ContentSmearGate_RTX4070",
         "pr": "https://github.com/openai/parameter-golf/pull/288",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
@@ -21668,7 +21668,7 @@
     {
       "id": "record-records-track_10min_16mb-2026-03-20_CrystalCurriculum",
       "source": "pull_request",
-      "status": "open",
+      "status": "closed",
       "category": "main-track",
       "track": {
         "path": "records/track_10min_16mb",
@@ -21716,14 +21716,14 @@
       "pr": {
         "number": 242,
         "title": "Crystal Curriculum — TF-IDF curriculum learning by Bee Bytez",
-        "state": "open",
+        "state": "closed",
         "draft": false,
         "mergedAt": null,
         "htmlUrl": "https://github.com/openai/parameter-golf/pull/242",
         "authorLogin": "jamesrziggy",
         "authorName": null,
         "createdAt": "2026-03-20T17:57:57Z",
-        "updatedAt": "2026-03-20T17:57:57Z",
+        "updatedAt": "2026-03-22T06:33:28Z",
         "headSha": "ea6acc85aa0640a47af6a81e4239a01675f31484",
         "headRepo": "jamesrziggy/parameter-golf"
       },

@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-20T18:24:15.507Z",
+  "generatedAt": "2026-03-22T06:37:19.522Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 242,
     "title": "Crystal Curriculum — TF-IDF curriculum learning by Bee Bytez",
-    "state": "open",
-    "updatedAt": "2026-03-20T17:57:57Z",
+    "state": "closed",
+    "updatedAt": "2026-03-22T06:33:28Z",
     "headSha": "ea6acc85aa0640a47af6a81e4239a01675f31484",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/242",
     "authorLogin": "jamesrziggy"
@@ -19,18 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Info-density Crystallizer oversamples TF-IDF scored batches, then linearly blend to uniform curriculum while scaling to 10 layers with Muon weight decay.",
+    "summary": "TF-IDF Crystallizer oversamples candidate batches, decays from dense curriculum to uniform, and pairs Muon weight decay with a 10-layer transformer.",
     "tags": [
-      "muon",
       "training-schedule",
+      "optimizer",
       "architecture"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "TF-IDF Crystallizer scoring of multiple candidate batches",
-      "Curriculum schedule decays to uniform sampling after 70%",
-      "Muon optimizer weight decay with 10-layer transformer"
+      "TF-IDF Crystallizer scores 4 batch candidates by information density each step",
+      "Curriculum favors dense data until 70% of training then decays to uniform sampling",
+      "Muon weight decay plus an extra transformer layer to support compression"
     ]
   },
   "compatibility": {

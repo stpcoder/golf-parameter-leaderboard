@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-19T22:39:29.656Z",
+  "generatedAt": "2026-03-22T06:38:28.754Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
@@ -20,17 +20,18 @@
     "submissionCount": 2
   },
   "output": {
-    "summary": "10-layer transformer keeps int8 early/late layers, int6 middle layers, and uses lower Muon/Adam learning rates to fit under 16MB with better compression.",
+    "summary": "10-layer model adds depth while using mixed int8/int6 precision and lower LR to stay under 16MB and improve post-quant validation.",
     "tags": [
-      "quantization",
       "architecture",
+      "quantization",
       "training-schedule"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Layer-wise mixed int8/int6 quantization (int6 middle layers via step=4 rounding)",
-      "Lowered MATRIX/SCALAR/TIED_EMBED learning rates to 0.02/0.02/0.03"
+      "- int6 for middle layers to shrink artifact size",
+      "- lower MATRIX/SCALAR/TIED_LR to 0.02/0.02/0.03",
+      "- mixed int8 for early/late layers with int6 rounding step=4"
     ]
   },
   "compatibility": {

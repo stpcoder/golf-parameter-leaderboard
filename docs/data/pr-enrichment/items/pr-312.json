@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-22T05:06:32.887Z",
+  "generatedAt": "2026-03-22T06:37:09.609Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
@@ -12,24 +12,24 @@
     "authorLogin": "chanwoo-park-official"
   },
   "inputs": {
-    "hash": "b671bb55739f4dd4e9ff453427d862aaf2b4f319009e28fbdb53eae78ec60522",
+    "hash": "072662c123505c465dfcb1e80cbfb797fc5a748edd0e2a3564b0b095cec763f8",
     "readmePaths": [],
-    "submissionCount": 2
+    "submissionCount": 1
   },
   "output": {
-    "summary": "Pairs Canon ACD placements with mixed int6 quantization and Muon+Adam+SWA training while tracking sliding-window evals on the 9-layer decoder.",
+    "summary": "Pairs Canon ACD placement with mixed int6 PTQ on attention/MLP and Muon+Adam weight decay plus SWA, using sliding-window eval to track performance.",
     "tags": [
       "quantization",
+      "muon",
       "architecture",
-      "optimizer",
-      "evaluation"
+      "sliding-window-eval"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "mixed PTQ int6 on mlp/attn tensors",
-      "Canon ACD before attention/MLP to skip expensive B placement",
-      "Muon+Adam with SWA plus warmdown schedule"
+      "int6 PTQ applied to mlp/attn with other tensors int8",
+      "Canon ACD configuration avoiding costly B while amplifying MLP/attn effects",
+      "Muon+Adam weight decay schedule with SWA and sliding-window stride-64 evaluation"
     ]
   },
   "compatibility": {

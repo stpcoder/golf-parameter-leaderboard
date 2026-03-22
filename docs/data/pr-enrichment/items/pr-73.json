@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-20T18:55:49.311Z",
+  "generatedAt": "2026-03-22T06:37:45.880Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "SwiGLU MLPs, a time-fraction warmdown fix, and quarter-batch plus gradient accumulation boost optimizer steps on single RTX 5090 under the 16MB cap.",
+    "summary": "Fixes the warmdown schedule via a time-fraction limit, swaps in SwiGLU, and quarter-batches with grad accumulation to get more optimizer steps on 1×5090.",
     "tags": [
-      "architecture",
       "training-schedule",
+      "architecture",
       "optimizer",
       "non-record"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "SwiGLU replacing ReLU²",
-      "Time-fraction warmdown decay",
-      "Quarter batch with grad accumulation"
+      "Time-fraction warmdown schedule",
+      "SwiGLU activation instead of ReLU²",
+      "Quarter batch with gradient accumulation"
     ]
   },
   "compatibility": {

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-19T17:36:27.119Z",
+  "generatedAt": "2026-03-22T06:38:20.605Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "SP-1024 9x512 model trained at 2048 tokens with tuned per-parameter learning rates and int8+zlib verification for the 10-minute track.",
+    "summary": "Tied-embed 9-layer 512-dim KV4 transformer trained at seq2048 with tuned LR split to validate the SXM 10-minute artifact under the 16MB cap.",
     "tags": [
       "architecture",
       "training-schedule",
       "quantization",
-      "compression"
+      "evaluation"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "SP-1024 9x512 architecture running long-context (2048) training",
-      "Dedicated lr triplet (0.04/0.032/0.032) tuned for the longer sequence",
-      "Standalone int8+zlib verification pipeline for the record submission"
+      "KV4-headed 9×512 transformer with tied embeddings",
+      "Seq2048 batching with 0.04/0.032/0.032 LR splits",
+      "Standalone SXM 10-minute run reproducing int8+zlib artifact"
     ]
   },
   "compatibility": {

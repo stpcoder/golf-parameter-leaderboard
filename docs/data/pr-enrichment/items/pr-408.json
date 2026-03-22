@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-22T06:36:51.250Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 408,
+    "title": "First submission",
+    "state": "open",
+    "updatedAt": "2026-03-22T06:12:32Z",
+    "headSha": "47fc2d075bb3b4c3941ea5a156c1788f1131dea9",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/408",
+    "authorLogin": "markste-in"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-22_BatchOpt_MLP4_RoPE100k/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Halved batch tokens, doubled MLP width, tuned LRs/warmdown, and raised RoPE base to boost capacity while fitting 10min/16MB constraints.",
+    "tags": [
+      "architecture",
+      "training-schedule",
+      "positional-encoding"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "- Halved TRAIN_BATCH_TOKENS to roughly 98k so more optimizer steps fit the 600s window",
+      "- Increased MLP_MULT=4 while lowering MATRIX_LR/SCALAR_LR for wider FFN capacity",
+      "- Raised ROPE_BASE to 100k and shortened warmdown for extended positional coverage"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}
