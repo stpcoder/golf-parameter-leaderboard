@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-22T12:09:04.485Z",
+  "generatedAt": "2026-03-22T12:39:13.703Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "submissions": [
@@ -18953,6 +18953,83 @@
         "script": "https://github.com/openai/parameter-golf/blob/358a426ed9bf621a6814ece8d4901e4127633af4/records/track_10min_16mb/2026-03-22_TwoPhase_TTT_NormRepair/train_gpt.py",
         "folder": "https://github.com/openai/parameter-golf/tree/358a426ed9bf621a6814ece8d4901e4127633af4/records/track_10min_16mb/2026-03-22_TwoPhase_TTT_NormRepair",
         "pr": "https://github.com/openai/parameter-golf/pull/417",
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": false,
+        "hasPullRequest": true,
+        "listedInReadme": false
+      }
+    },
+    {
+      "id": "record-records-track_non_record_16mb-first-submission",
+      "source": "pull_request",
+      "status": "open",
+      "category": "non-record",
+      "track": {
+        "path": "records/track_non_record_16mb",
+        "slug": "track_non_record_16mb",
+        "label": "Non-record / 16MB",
+        "official": false,
+        "category": "non-record"
+      },
+      "record": {
+        "folderName": "first-submission",
+        "folderPath": "records/track_non_record_16mb/first-submission",
+        "submissionPath": "records/track_non_record_16mb/first-submission/submission.json",
+        "readmePath": "records/track_non_record_16mb/first-submission/README.md",
+        "trainLogPath": "records/track_non_record_16mb/first-submission/train.log",
+        "scriptPath": "records/track_non_record_16mb/first-submission/train_gpt.py"
+      },
+      "submission": {
+        "author": "Andreas",
+        "githubId": "andreasbis",
+        "name": "Andreas Test Submission",
+        "blurb": "Test submission based on the first place solution (10L Int5-MLP).",
+        "date": "2026-03-22"
+      },
+      "metrics": {
+        "valBpb": null,
+        "valLoss": 1.14276,
+        "preQuantValBpb": null,
+        "preQuantValLoss": null,
+        "stepStop": null,
+        "wallclockSeconds": null,
+        "evalTimeSeconds": null
+      },
+      "artifact": {
+        "bytesTotal": 15900000,
+        "bytesCode": null,
+        "bytesModelInt8Zlib": null
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
+      "pr": {
+        "number": 419,
+        "title": "feat: Add Andreas' first test submission",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/419",
+        "authorLogin": "AndreasBis",
+        "authorName": null,
+        "createdAt": "2026-03-22T12:14:26Z",
+        "updatedAt": "2026-03-22T12:18:43Z",
+        "headSha": "40f66287ccde17dd4163bfb46b1f41b6bb0f3366",
+        "headRepo": "AndreasBis/parameter-golf"
+      },
+      "links": {
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/40f66287ccde17dd4163bfb46b1f41b6bb0f3366/records/track_non_record_16mb/first-submission/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/40f66287ccde17dd4163bfb46b1f41b6bb0f3366/records/track_non_record_16mb/first-submission/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/40f66287ccde17dd4163bfb46b1f41b6bb0f3366/records/track_non_record_16mb/first-submission/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/40f66287ccde17dd4163bfb46b1f41b6bb0f3366/records/track_non_record_16mb/first-submission/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/40f66287ccde17dd4163bfb46b1f41b6bb0f3366/records/track_non_record_16mb/first-submission",
+        "pr": "https://github.com/openai/parameter-golf/pull/419",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
       "provenance": {

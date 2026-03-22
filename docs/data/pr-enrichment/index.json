@@ -1,8 +1,32 @@
 {
-  "generatedAt": "2026-03-22T12:09:18.864Z",
+  "generatedAt": "2026-03-22T12:39:17.995Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 419,
+      "title": "feat: Add Andreas' first test submission",
+      "status": "open",
+      "updatedAt": "2026-03-22T12:18:43Z",
+      "headSha": "40f66287ccde17dd4163bfb46b1f41b6bb0f3366",
+      "generatedAt": "2026-03-22T12:39:17.920Z",
+      "summary": "Test uses SOTA 10L Int5-MLP with BigramHash and SWA to validate the submission workflow.",
+      "tags": [
+        "architecture",
+        "quantization",
+        "training-schedule",
+        "non-record"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-419.json"
+    },
     {
       "prNumber": 418,
       "title": "Non-record: PrismLM v3 — DiffTransformer V2 + NorMuon + TrigramHash (val_bpb=1.1715)",
