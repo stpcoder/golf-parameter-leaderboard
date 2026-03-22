@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-22T06:06:55.718Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 405,
+    "title": "Non-record: 1x RTX 3090 baseline run (sp1024, 1 shard)",
+    "state": "open",
+    "updatedAt": "2026-03-22T05:57:30Z",
+    "headSha": "48436d003aee52f2458e9306f7854555d14046c2",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/405",
+    "authorLogin": "meett07"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-03-21_3090_Baseline_Run1/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Documented non-record baseline training fineweb10B_sp1024 on a single RTX 3090 with the fineweb_1024_bpe tokenizer via one shard.",
+    "tags": [
+      "tokenization",
+      "architecture",
+      "non-record"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "single GPU RTX 3090 run",
+      "fineweb10B_sp1024 data/tokenizer",
+      "single-shard training"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

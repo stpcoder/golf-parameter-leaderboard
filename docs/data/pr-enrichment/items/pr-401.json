@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-22T05:36:51.902Z",
+  "generatedAt": "2026-03-22T06:07:01.981Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 401,
     "title": "Having a blast — PR374 base + EMA/QAT stack beats 1.1246",
     "state": "open",
-    "updatedAt": "2026-03-22T05:15:58Z",
-    "headSha": "a9e5d065a59c083a553072423498a90c4fdeb4d6",
+    "updatedAt": "2026-03-22T06:04:08Z",
+    "headSha": "a47bfa24d519d133d4922a48fd0a2c335682e1b5",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/401",
     "authorLogin": "newjordan"
   },
@@ -19,19 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Stacked EMA decay, late-threshold QAT, and warmdown onto Tight SWA's 11L/4KV/3x2048 transformer to narrow the quant gap on PR374.",
+    "summary": "Tight SWA 11L/4KV/3xMLP model stacks EMA decay, late QAT threshold, and warmdown to stabilize quantization and shrink the gap.",
     "tags": [
       "architecture",
       "quantization",
-      "training-schedule",
-      "regularization"
+      "training-schedule"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "EMA decay layered on Tight SWA",
-      "Late-threshold QAT (0.15) with warmdown",
-      "Stride-64 sliding window eval"
+      "EMA stacking to nudge Tight SWA penalty negative",
+      "Late QAT threshold (0.15) with warmdown schedule to shrink quant gap",
+      "11L/4KV/3xMLP/2048 base architecture from PR374"
     ]
   },
   "compatibility": {

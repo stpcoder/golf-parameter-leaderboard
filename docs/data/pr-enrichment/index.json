@@ -1,8 +1,55 @@
 {
-  "generatedAt": "2026-03-22T05:37:17.005Z",
+  "generatedAt": "2026-03-22T06:07:17.512Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 406,
+      "title": "Non-record: 11L XSA4 + EMA + SDTTT (3-seed mean val_bpb=1.1287)",
+      "status": "open",
+      "updatedAt": "2026-03-22T05:58:23Z",
+      "headSha": "217c9f22c654d739036de3eaaa72683408a1d5eb",
+      "generatedAt": "2026-03-22T06:06:52.257Z",
+      "summary": "11-layer XSA4 stack w/ EMA snapshots and Self-Distillation TTT eval adaptation on top of the PR379 int6 QAT baseline.",
+      "tags": [
+        "val-only",
+        "architecture",
+        "quantization",
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": true,
+        "usesValOnlyAi": true,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": false
+      },
+      "file": "items/pr-406.json"
+    },
+    {
+      "prNumber": 405,
+      "title": "Non-record: 1x RTX 3090 baseline run (sp1024, 1 shard)",
+      "status": "open",
+      "updatedAt": "2026-03-22T05:57:30Z",
+      "headSha": "48436d003aee52f2458e9306f7854555d14046c2",
+      "generatedAt": "2026-03-22T06:06:55.718Z",
+      "summary": "Documented non-record baseline training fineweb10B_sp1024 on a single RTX 3090 with the fineweb_1024_bpe tokenizer via one shard.",
+      "tags": [
+        "tokenization",
+        "architecture",
+        "non-record"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-405.json"
+    },
     {
       "prNumber": 404,
       "title": "Non-record: 10L MLP3x int6 baseline (MLX smoke test)",
@@ -55,15 +102,14 @@
       "prNumber": 401,
       "title": "Having a blast — PR374 base + EMA/QAT stack beats 1.1246",
       "status": "open",
-      "updatedAt": "2026-03-22T05:15:58Z",
-      "headSha": "a9e5d065a59c083a553072423498a90c4fdeb4d6",
-      "generatedAt": "2026-03-22T05:36:51.902Z",
-      "summary": "Stacked EMA decay, late-threshold QAT, and warmdown onto Tight SWA's 11L/4KV/3x2048 transformer to narrow the quant gap on PR374.",
+      "updatedAt": "2026-03-22T06:04:08Z",
+      "headSha": "a47bfa24d519d133d4922a48fd0a2c335682e1b5",
+      "generatedAt": "2026-03-22T06:07:01.981Z",
+      "summary": "Tight SWA 11L/4KV/3xMLP model stacks EMA decay, late QAT threshold, and warmdown to stabilize quantization and shrink the gap.",
       "tags": [
         "architecture",
         "quantization",
-        "training-schedule",
-        "regularization"
+        "training-schedule"
       ],
       "flags": {
         "usesValOnly": false,
@@ -103,14 +149,14 @@
       "prNumber": 399,
       "title": "Record: Parallel Muon + Parameter Banking — 82.14ms/step (3.1% faster than PR #315)",
       "status": "open",
-      "updatedAt": "2026-03-22T05:23:48Z",
-      "headSha": "9c1de1a2f281a6dd5898da7919f945a9fc5a90ab",
-      "generatedAt": "2026-03-22T05:37:03.054Z",
-      "summary": "Optimizer overhaul packs weights into banks, uses Polar Express orthogonalization, and overlaps manual comm (Parallel Muon) for faster training.",
+      "updatedAt": "2026-03-22T05:59:17Z",
+      "headSha": "4db00576f082f77a8e36104e354952d8702c7a8e",
+      "generatedAt": "2026-03-22T06:07:06.765Z",
+      "summary": "Consolidates weights into parameter banks and pairs Polar Express orthogonalization with Parallel Muon’s async reduce-scatter/all-gather to speed optimizer steps.",
       "tags": [
         "optimizer",
-        "muon",
-        "architecture"
+        "architecture",
+        "muon"
       ],
       "flags": {
         "usesValOnly": false,
@@ -2141,13 +2187,14 @@
       "prNumber": 288,
       "title": "Non-record: Content-Dependent SmearGate (1.6795 BPB, RTX 4070)",
       "status": "open",
-      "updatedAt": "2026-03-22T01:36:34Z",
-      "headSha": "0593404dcbc8474a92ca17d3bacf41da31bfe9a9",
-      "generatedAt": "2026-03-22T02:06:25.721Z",
-      "summary": "Replaces static SmearGate with a content-dependent gate that modulates token blending via adjacent-token similarity dot products.",
+      "updatedAt": "2026-03-22T06:00:31Z",
+      "headSha": "e4e9eedc6d30af5bac5ae75899b9abfb531f4628",
+      "generatedAt": "2026-03-22T06:07:10.874Z",
+      "summary": "Content-dependent SmearGate modulates per-token blending via adjacent embedding similarity to adapt mixing ratios instead of fixed gates.",
       "tags": [
+        "non-record",
         "architecture",
-        "non-record"
+        "attention"
       ],
       "flags": {
         "usesValOnly": false,
@@ -5679,24 +5726,25 @@
     },
     {
       "prNumber": 64,
-      "title": "Record: DominationV3 compact no-TTT (mean val_bpb=1.1349, 3 seeds)",
+      "title": "Record: DominationV3 + TTT (mean val_bpb=1.1336, 3 seeds)",
       "status": "open",
-      "updatedAt": "2026-03-22T00:36:48Z",
-      "headSha": "60bd8fda91e2910e13fb804b8ae330c86ed10bd7",
-      "generatedAt": "2026-03-22T01:06:06.142Z",
-      "summary": "Compact 11-layer GPT with XSA on final 4 layers, EMA, BigramHash, and mixed int6 quantization under strict 10min/16MB limits.",
+      "updatedAt": "2026-03-22T05:48:59Z",
+      "headSha": "8fd0500b82f48c536d2be3f38af6a98fc3e6726d",
+      "generatedAt": "2026-03-22T06:07:17.506Z",
+      "summary": "11-layer GPT uses XSA on the top layers, EMA, int6 quantization, and per-dim SmearGate with eval-time SGD TTT on graded tokens.",
       "tags": [
-        "architecture",
+        "val-only",
+        "attention",
         "quantization",
-        "sliding-window-eval"
+        "evaluation"
       ],
       "flags": {
-        "usesValOnly": false,
-        "usesValOnlyAi": false,
+        "usesValOnly": true,
+        "usesValOnlyAi": true,
         "usesValOnlyCollector": false
       },
       "compatibility": {
-        "valOnlyMatchesCollector": true
+        "valOnlyMatchesCollector": false
       },
       "file": "items/pr-64.json"
     },

@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-22T01:06:06.142Z",
+  "generatedAt": "2026-03-22T06:07:17.506Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 64,
-    "title": "Record: DominationV3 compact no-TTT (mean val_bpb=1.1349, 3 seeds)",
+    "title": "Record: DominationV3 + TTT (mean val_bpb=1.1336, 3 seeds)",
     "state": "open",
-    "updatedAt": "2026-03-22T00:36:48Z",
-    "headSha": "60bd8fda91e2910e13fb804b8ae330c86ed10bd7",
+    "updatedAt": "2026-03-22T05:48:59Z",
+    "headSha": "8fd0500b82f48c536d2be3f38af6a98fc3e6726d",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/64",
     "authorLogin": "yesbhautik"
   },
@@ -20,24 +20,25 @@
     "submissionCount": 2
   },
   "output": {
-    "summary": "Compact 11-layer GPT with XSA on final 4 layers, EMA, BigramHash, and mixed int6 quantization under strict 10min/16MB limits.",
+    "summary": "11-layer GPT uses XSA on the top layers, EMA, int6 quantization, and per-dim SmearGate with eval-time SGD TTT on graded tokens.",
     "tags": [
-      "architecture",
+      "val-only",
+      "attention",
       "quantization",
-      "sliding-window-eval"
+      "evaluation"
     ],
-    "usesValOnly": false,
-    "valOnlyReasoning": "",
+    "usesValOnly": true,
+    "valOnlyReasoning": "TTT runs SGD at eval time exclusively on already-graded validation tokens, so the additional training uses only validation data.",
     "techniques": [
-      "11-layer transformer with XSA on last 4 layers and EMA averaging",
-      "Mixed int6 quantization on mlp, attn, and token embeddings",
-      "BigramHash context with sliding-window evaluation"
+      "XSA on last layers with EMA averaging",
+      "Int6 per-row quantization + BigramHash context",
+      "Eval-time SGD TTT on graded tokens"
     ]
   },
   "compatibility": {
     "collectorUsesValOnly": false,
-    "aiUsesValOnly": false,
-    "finalUsesValOnly": false,
-    "valOnlyMatchesCollector": true
+    "aiUsesValOnly": true,
+    "finalUsesValOnly": true,
+    "valOnlyMatchesCollector": false
   }
 }

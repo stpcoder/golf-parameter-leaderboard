@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-22T06:06:52.257Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 406,
+    "title": "Non-record: 11L XSA4 + EMA + SDTTT (3-seed mean val_bpb=1.1287)",
+    "state": "open",
+    "updatedAt": "2026-03-22T05:58:23Z",
+    "headSha": "217c9f22c654d739036de3eaaa72683408a1d5eb",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/406",
+    "authorLogin": "dentity007"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-22_11L_SDTTT_XSA4_EMA/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "11-layer XSA4 stack w/ EMA snapshots and Self-Distillation TTT eval adaptation on top of the PR379 int6 QAT baseline.",
+    "tags": [
+      "val-only",
+      "architecture",
+      "quantization",
+      "evaluation"
+    ],
+    "usesValOnly": true,
+    "valOnlyReasoning": "Eval-time Self-Distillation TTT fine-tunes on validation data before reporting BPB.",
+    "techniques": [
+      "XSA4 layers with EMA snapshot averaging",
+      "Int6 QAT + zstd compression for <16MB artifacts",
+      "Self-Distillation TTT eval-time adaptation"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": true,
+    "finalUsesValOnly": true,
+    "valOnlyMatchesCollector": false
+  }
+}
