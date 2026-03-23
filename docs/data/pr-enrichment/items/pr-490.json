@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-23T02:13:54.144Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 490,
+    "title": "Record: 11L Value Residual + Gated Attention + AdamW TTT (val_bpb=1.0891)",
+    "state": "open",
+    "updatedAt": "2026-03-23T01:48:57Z",
+    "headSha": "515f6e8749a34099008230aaad6ea7eadeeda49c",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/490",
+    "authorLogin": "amaljithkuttamath"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-23_11L_VR_GA_AdamWTTT_1.0891/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Adds ResFormer-style value residual blending and gated attention atop the 11L AdamW TTT stack to reuse block-0 V while gating per-head outputs.",
+    "tags": [
+      "architecture",
+      "attention",
+      "optimizer"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Value residual blending from block 0",
+      "Per-head sigmoid gating on attention",
+      "AdamW TTT fine-tune regimen"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}
