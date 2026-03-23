@@ -1,8 +1,32 @@
 {
-  "generatedAt": "2026-03-23T13:16:45.580Z",
+  "generatedAt": "2026-03-23T13:46:05.889Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 531,
+      "title": "Record: 11L + XSA4 + EMA + Late QAT + GPTQ-lite (1.1325 BPB)",
+      "status": "open",
+      "updatedAt": "2026-03-23T13:42:35Z",
+      "headSha": "5b197bed4ef50662d43f9b74826031d3cdd17c46",
+      "generatedAt": "2026-03-23T13:46:05.803Z",
+      "summary": "Combines XSA4 parameter reuse with 11-layer GPT, EMA, late QAT, and GPTQ-lite quantization under fullgraph compilation for the 10m/16MB run.",
+      "tags": [
+        "attention",
+        "architecture",
+        "quantization",
+        "training-schedule"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-531.json"
+    },
     {
       "prNumber": 530,
       "title": "Non-record: Basis Block Interpolation (novel negative result) + Hyperparameter Sweep (MATRIX_LR=0.03 improves SOTA by 0.059 bpb)",

@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-23T13:46:05.803Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 531,
+    "title": "Record: 11L + XSA4 + EMA + Late QAT + GPTQ-lite (1.1325 BPB)",
+    "state": "open",
+    "updatedAt": "2026-03-23T13:42:35Z",
+    "headSha": "5b197bed4ef50662d43f9b74826031d3cdd17c46",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/531",
+    "authorLogin": "pragnyanramtha"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-22_XSA4_EMA_GPQ/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Combines XSA4 parameter reuse with 11-layer GPT, EMA, late QAT, and GPTQ-lite quantization under fullgraph compilation for the 10m/16MB run.",
+    "tags": [
+      "attention",
+      "architecture",
+      "quantization",
+      "training-schedule"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Cross-layer Shared Attention frees params so 11-layer GPT fits the budget",
+      "Full-training EMA plus late-stage QAT before int6 GPTQ-lite clipping",
+      "fullgraph=True compilation to squeeze extra steps in 10-minute budget"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}
