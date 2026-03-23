@@ -1,8 +1,8 @@
 {
   "version": 1,
   "sourceRepo": "openai/parameter-golf",
-  "generatedAt": "2026-03-23T20:47:49.160Z",
-  "lastSeenUpdatedAt": "2026-03-23T20:39:48Z",
+  "generatedAt": "2026-03-23T21:18:16.750Z",
+  "lastSeenUpdatedAt": "2026-03-23T21:13:04Z",
   "prs": {
     "1": {
       "number": 1,
@@ -48852,7 +48852,7 @@
     },
     "573": {
       "number": 573,
-      "updatedAt": "2026-03-23T20:39:48Z",
+      "updatedAt": "2026-03-23T21:08:54Z",
       "pr": {
         "number": 573,
         "title": "Record: 11L XSA4 + Multi-Pass Streaming Score-First Legal TTT (3-seed mean val_bpb=1.0523) ",
@@ -48863,7 +48863,7 @@
         "authorLogin": "Sarimsaljook",
         "authorName": null,
         "createdAt": "2026-03-23T20:39:48Z",
-        "updatedAt": "2026-03-23T20:39:48Z",
+        "updatedAt": "2026-03-23T21:08:54Z",
         "headSha": "45a4408c7005a812af8a2a0cb4f99b26e533860a",
         "headRepo": "Sarimsaljook/parameter-golf"
       },
@@ -48926,7 +48926,7 @@
             "authorLogin": "Sarimsaljook",
             "authorName": null,
             "createdAt": "2026-03-23T20:39:48Z",
-            "updatedAt": "2026-03-23T20:39:48Z",
+            "updatedAt": "2026-03-23T21:08:54Z",
             "headSha": "45a4408c7005a812af8a2a0cb4f99b26e533860a",
             "headRepo": "Sarimsaljook/parameter-golf"
           },
@@ -48940,6 +48940,25 @@
           }
         }
       ]
+    },
+    "574": {
+      "number": 574,
+      "updatedAt": "2026-03-23T21:13:04Z",
+      "pr": {
+        "number": 574,
+        "title": "feat: parameter golf v15b - SWA tuned (1.1453 val_bpb)",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/574",
+        "authorLogin": "aktasbatuhan",
+        "authorName": null,
+        "createdAt": "2026-03-23T21:13:04Z",
+        "updatedAt": "2026-03-23T21:13:04Z",
+        "headSha": "c1dff88c514d413c918aa76ef9b1aac91fce095a",
+        "headRepo": "aktasbatuhan/parameter-golf"
+      },
+      "submissions": []
     }
   }
 }

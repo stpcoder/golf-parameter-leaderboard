@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-23T20:48:01.035Z",
+  "generatedAt": "2026-03-23T21:18:24.700Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
@@ -7,23 +7,22 @@
       "prNumber": 573,
       "title": "Record: 11L XSA4 + Multi-Pass Streaming Score-First Legal TTT (3-seed mean val_bpb=1.0523) ",
       "status": "open",
-      "updatedAt": "2026-03-23T20:39:48Z",
+      "updatedAt": "2026-03-23T21:08:54Z",
       "headSha": "45a4408c7005a812af8a2a0cb4f99b26e533860a",
-      "generatedAt": "2026-03-23T20:48:00.944Z",
-      "summary": "Multi-pass streaming score-first TTT ensembles per-token min NLL so every token gets late-pass adaptation while RoPE caches stay trainable.",
+      "generatedAt": "2026-03-23T21:18:24.606Z",
+      "summary": "Adds multi-pass streaming score-first legal TTT with per-token min-NLL ensembling plus a rotary cache fix on the 11L XSA stack’s quantized backbone.",
       "tags": [
-        "val-only",
         "evaluation",
-        "training-schedule",
-        "positional-encoding"
+        "architecture",
+        "quantization"
       ],
       "flags": {
-        "usesValOnly": true,
-        "usesValOnlyAi": true,
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
         "usesValOnlyCollector": false
       },
       "compatibility": {
-        "valOnlyMatchesCollector": false
+        "valOnlyMatchesCollector": true
       },
       "file": "items/pr-573.json"
     },
