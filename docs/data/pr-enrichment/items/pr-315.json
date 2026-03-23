@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-21T21:05:18.244Z",
+  "generatedAt": "2026-03-23T17:48:49.005Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 315,
     "title": "Record: 11L Partial RoPE + LN Scale + EMA + XSA4 (val_bpb: 1.1248)",
-    "state": "open",
-    "updatedAt": "2026-03-21T21:03:29Z",
+    "state": "closed",
+    "updatedAt": "2026-03-23T17:24:19Z",
     "headSha": "2951651bf36173538cfb3af07b309514a2bd9855",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/315",
     "authorLogin": "jfprincz"
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Builds on the XSA4/EMA stack by applying Partial RoPE to 25% of head dims and scaling RMSNorm outputs by 1/√(layer_idx+1) for deeper-layer stability.",
+    "summary": "11-layer stack adds partial RoPE plus 1/√(l+1) RMSNorm scaling atop XSA4+EMA with muP init and int6 quant.",
     "tags": [
-      "architecture",
       "attention",
-      "regularization",
-      "quantization"
+      "architecture",
+      "quantization",
+      "training-schedule"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Partial RoPE on 25% of head dims for mixed positional bias",
-      "Layer-wise RMSNorm scaling (1/√(layer_idx+1)) to damp deep layers",
-      "EMA + XSA4 stack with muP init and int6+zstd quantization"
+      "Partial RoPE on 25% of head dims with LN scaling to damp deep layers",
+      "XSA on last four layers with EMA and muP-scaled Muon/AdamW tuning",
+      "Int6 per-row quant on MLP/ attention plus int8 embeddings with zstd-22 compression"
     ]
   },
   "compatibility": {

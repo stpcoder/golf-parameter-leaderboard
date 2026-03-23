@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-20T09:52:43.922Z",
+  "generatedAt": "2026-03-23T17:49:21.729Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 199,
     "title": "Non-record: SWA and doc-isolated eval ablation — two negative findings at stride=64",
-    "state": "open",
-    "updatedAt": "2026-03-20T09:49:42Z",
+    "state": "closed",
+    "updatedAt": "2026-03-23T17:36:44Z",
     "headSha": "1524776662ca43c4fe2704a609b7592c87e021c4",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/199",
     "authorLogin": "mrdavtan"
@@ -19,18 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Controlled ablations isolate SWA’s effect under default warmdown and compare doc-isolated versus flat-stream sliding-window eval at stride 64 for quantized models.",
+    "summary": "Controlled stride-64 ablations show default-warmdown SWA doesn’t help int8 and doc-isolated sliding-window evaluation hurts context.",
     "tags": [
+      "quantization",
       "evaluation",
-      "sliding-window-eval",
-      "regularization"
+      "training-schedule"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Float32-accumulated SWA snapshot averaging post-warmdown",
-      "Doc-isolated vs flat-stream sliding-window eval comparison at stride=64",
-      "Single-architecture, single-seed runs to attribute effects"
+      "Controlled SWA vs baseline on a single warmdown schedule",
+      "Doc-isolated vs flat-stream sliding-window eval at stride 64",
+      "Float32 SWA accumulation with periodic snapshot sampling"
     ]
   },
   "compatibility": {

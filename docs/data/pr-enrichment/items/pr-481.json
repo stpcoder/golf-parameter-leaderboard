@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-23T05:44:18.003Z",
+  "generatedAt": "2026-03-23T17:48:28.040Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 481,
     "title": "Record: Cosine TTT scheduling with per-layer lr — mean val_bpb=1.0970 (3 seeds)",
-    "state": "open",
-    "updatedAt": "2026-03-23T05:29:02Z",
+    "state": "closed",
+    "updatedAt": "2026-03-23T17:33:06Z",
     "headSha": "c8e034d42a18c7ff8cef86deb30b8999eab013c4",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/481",
     "authorLogin": "mrdavtan"
@@ -19,19 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "TTT uses cosine decay plus per-layer lr groups to undo quantization damage, enhancing validation adaptation after the community-stack training run.",
+    "summary": "TTT adaptation deploys AdamW with cosine decay and per-layer lr ratios over 30 epochs on validation shards.",
     "tags": [
       "val-only",
       "training-schedule",
-      "optimizer",
-      "quantization"
+      "optimizer"
     ],
     "usesValOnly": true,
-    "valOnlyReasoning": "TTT fine-tunes on the validation shard tokens to adapt the quantized model at eval time.",
+    "valOnlyReasoning": "TTT fine-tunes on validation shards (DDP-sharded over contiguous token chunks) rather than training data.",
     "techniques": [
-      "Cosine-decayed AdamW TTT over 30 epochs",
-      "Layer-wise lr scaling per quantization damage",
-      "Validation-shard fine-tuning as eval adaptation"
+      "Cosine-annealed AdamW TTT over 30 epochs",
+      "Per-layer learning-rate multipliers tuned to quantization damage",
+      "DDP-sharded TTT on validation tokens"
     ]
   },
   "compatibility": {

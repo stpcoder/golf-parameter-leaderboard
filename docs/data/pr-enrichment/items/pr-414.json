@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-22T08:07:27.822Z",
+  "generatedAt": "2026-03-23T17:48:32.985Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 414,
     "title": "Record: 11L EMA + GPTQ-lite + warmdown3500 + QAT@0.15 (val_bpb=1.1233)",
-    "state": "open",
-    "updatedAt": "2026-03-22T07:48:40Z",
+    "state": "closed",
+    "updatedAt": "2026-03-23T17:26:08Z",
     "headSha": "15776db61ed3450a37bb5727628ae0f7bdd77f1b",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/414",
     "authorLogin": "signalrush"
@@ -19,19 +19,17 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Stacks EMA+Tight SWA warmdown with late QAT and per-row GPTQ-lite clip search on the 11L Muon-based stack before int6 quantization.",
+    "summary": "Applies EMA weight averaging, longer warmdown, and GPTQ-lite per-row clip search before Late QAT to tighten int6 quantization on the PR#374 stack.",
     "tags": [
       "quantization",
-      "mixed-precision",
-      "training-schedule",
-      "optimizer"
+      "training-schedule"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Per-row GPTQ-lite clip percentile search minimizing reconstruction MSE",
-      "EMA decay 0.997 smoothing alongside extended 3500-step warmdown",
-      "Late QAT at 0.15 feeding into int6+zstd model compression"
+      "EMA decay 0.997 every step",
+      "GPTQ-lite per-row clip percentile search",
+      "Warmdown 3500 with Late QAT threshold 0.15"
     ]
   },
   "compatibility": {

@@ -1,0 +1,44 @@
+{
+  "generatedAt": "2026-03-23T17:48:43.479Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 371,
+    "title": "Record: 11L XSA + EMA + TTT + Partial RoPE + LN Scale — val_bpb=1.1401",
+    "state": "closed",
+    "updatedAt": "2026-03-21T20:53:32Z",
+    "headSha": "7c3e33a7a41ebcc78176b0d04ac07a4890e97c2c",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/371",
+    "authorLogin": "mrdavtan"
+  },
+  "inputs": {
+    "hash": "333c1651a7101d4267d971ebe25bd793307b61c975586544bbd6b9a9c3a8cf24",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-21_11L_XSA_EMA_TTT/README.md",
+      "records/track_10min_16mb/2026-03-20_Int6_3xMLP/README.md"
+    ],
+    "submissionCount": 2
+  },
+  "output": {
+    "summary": "11-layer XSA + EMA base adds U-Net skips, partial RoPE/LN scaling, SmearGate/BigramHash, TTT, and late int6 QAT for sliding-window eval.",
+    "tags": [
+      "architecture",
+      "training-schedule",
+      "quantization",
+      "sliding-window-eval"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "U-Net skip additions before decoder blocks",
+      "SmearGate interpolation plus BigramHash hashing",
+      "Partial RoPE with LN scale and late absmax int6 QAT"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

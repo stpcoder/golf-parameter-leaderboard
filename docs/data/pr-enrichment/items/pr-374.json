@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-21T22:05:20.752Z",
+  "generatedAt": "2026-03-23T17:48:37.248Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 374,
     "title": "Record: 11L + Tight SWA + Shared VE128 + Partial RoPE + LN Scale + XSA4 (val_bpb: 1.1246)",
     "state": "open",
-    "updatedAt": "2026-03-21T22:00:01Z",
+    "updatedAt": "2026-03-23T17:25:28Z",
     "headSha": "1323a3afae013ab7a4514ed3136efd34a038632e",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/374",
     "authorLogin": "unnir"
@@ -19,18 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "11-layer model blends partial RoPE+XSA with shared value embeddings and U-Net skips while using tight SWA to keep quant-friendly averaging ahead of late int6 QAT.",
+    "summary": "An 11-layer transformer uses tight-scale SWA plus partial XSA/RoPE, shared VE128, and NTK-aware LN scaling to keep quant-friendly weights while boosting sliding-window quality.",
     "tags": [
       "architecture",
+      "training-schedule",
       "quantization",
-      "training-schedule"
+      "attention"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Tight SWA collecting scale<0.2 checkpoints",
-      "Partial RoPE+XSA4 with shared VE and U-Net skips",
-      "Late int6 QAT with zstd compression"
+      "tight scale-restricted SWA averaging",
+      "partial XSA/RoPE with NTK-informed LN scaling",
+      "shared VE128 table with per-layer scales"
     ]
   },
   "compatibility": {

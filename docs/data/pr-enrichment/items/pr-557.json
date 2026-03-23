@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-23T17:47:59.575Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 557,
+    "title": "Non-record: 10L + Batched LoRA TTT (val_bpb=1.1160)",
+    "state": "open",
+    "updatedAt": "2026-03-23T17:18:36Z",
+    "headSha": "ec01343ed6679f7eecc94e8fb31716fc53a8e7ad",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/557",
+    "authorLogin": "hypery11"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-24_10L_LoRA_TTT/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "10-layer gated transformer uses mixed int5/int6 quantization plus pruning and batched per-document LoRA TTT during eval.",
+    "tags": [
+      "quantization",
+      "architecture",
+      "evaluation"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Mixed int5/int6 quantization with 5% pruning and EMA on MLP/attention layers",
+      "Gated attention plus U-Net skip 10-layer design with 3× LeakyReLU MLPs",
+      "Batched rank-8 per-document LoRA TTT with Adam resets over 256-token chunks"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

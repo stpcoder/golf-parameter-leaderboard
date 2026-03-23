@@ -1,16 +1,109 @@
 {
-  "generatedAt": "2026-03-23T17:17:25.576Z",
+  "generatedAt": "2026-03-23T17:49:27.954Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
     {
+      "prNumber": 560,
+      "title": "Non-record: 1x RTX PRO 6000 Blackwell 10L Int5-MLP (1.1935 BPB)",
+      "status": "open",
+      "updatedAt": "2026-03-23T17:32:56Z",
+      "headSha": "2d6182bfc33af85f6ae5ac60a76f5658a9d93cbb",
+      "generatedAt": "2026-03-23T17:47:37.115Z",
+      "summary": "Ports the merged 10L Int5-MLP + BigramHash(10240) recipe to a single RTX PRO 6000 Blackwell with AMP/SDPA auto-selection and GQA fallback.",
+      "tags": [
+        "architecture",
+        "quantization",
+        "mixed-precision",
+        "non-record"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-560.json"
+    },
+    {
+      "prNumber": 559,
+      "title": "Non-record: TernaryRecurrentGPT - ternary 1.58-bit MLP + depth recurrence (1xL4 val_bpb=1.5348)",
+      "status": "open",
+      "updatedAt": "2026-03-23T17:23:02Z",
+      "headSha": "b83fd123a77ec4433df05082900b55e5581f45d0",
+      "generatedAt": "2026-03-23T17:47:46.889Z",
+      "summary": "Uses ternary 1.58-bit STE-quantized MLPs within looped 7-layer recurrence plus BigramHash/SmearGate and Muon+AdamW+SWA scheduling.",
+      "tags": [
+        "quantization",
+        "architecture",
+        "training-schedule"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-559.json"
+    },
+    {
+      "prNumber": 557,
+      "title": "Non-record: 10L + Batched LoRA TTT (val_bpb=1.1160)",
+      "status": "open",
+      "updatedAt": "2026-03-23T17:18:36Z",
+      "headSha": "ec01343ed6679f7eecc94e8fb31716fc53a8e7ad",
+      "generatedAt": "2026-03-23T17:47:59.575Z",
+      "summary": "10-layer gated transformer uses mixed int5/int6 quantization plus pruning and batched per-document LoRA TTT during eval.",
+      "tags": [
+        "quantization",
+        "architecture",
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-557.json"
+    },
+    {
+      "prNumber": 556,
+      "title": "Add first non-record local smoke submission",
+      "status": "open",
+      "updatedAt": "2026-03-23T17:19:49Z",
+      "headSha": "6888ce6b7e83d827eb444db37b8a88f8fe3f7c57",
+      "generatedAt": "2026-03-23T17:48:07.804Z",
+      "summary": "Local Apple Silicon MLX smoke workflow compares baseline versus an 8-layer cut to gauge depth-driven speed and artifact trade-offs for the 16MB non-record pipeline.",
+      "tags": [
+        "non-record",
+        "architecture",
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-556.json"
+    },
+    {
       "prNumber": 555,
       "title": "Add 11L Shared Sparse Sidecar + EMA + AdamW TTT (1.0916 mean)",
       "status": "open",
-      "updatedAt": "2026-03-23T17:11:43Z",
-      "headSha": "6eba72038ad4ea2b091ef2cdfd69cf360f7b7558",
-      "generatedAt": "2026-03-23T17:16:49.278Z",
-      "summary": "Adds a shared gated sparse sidecar reused at late layers for local refinement conditioned per site atop the AdamW-TTT 11-layer trunk.",
+      "updatedAt": "2026-03-23T17:29:37Z",
+      "headSha": "f231fd55b7e7af1e6bdd9ff44f362c883a8ef0a1",
+      "generatedAt": "2026-03-23T17:48:15.785Z",
+      "summary": "Adds a shared late-layer sparse sidecar reused across sites with learned embeddings and scales to refine representations on the AdamW-TTT 11-layer trunk.",
       "tags": [
         "architecture"
       ],
@@ -98,10 +191,10 @@
       "prNumber": 549,
       "title": "Record: LeakyReLU² + Legal Score-First TTT + Parallel Muon — val_bpb 1.1194 (3-seed mean)",
       "status": "open",
-      "updatedAt": "2026-03-23T17:13:05Z",
-      "headSha": "139d573eeefc2e981d32ab9b2c5085a4c3ec94c7",
-      "generatedAt": "2026-03-23T17:17:06.263Z",
-      "summary": "LeakyReLU(0.5)² MLPs, legal score-first chunked TTT, and Parameter Banking/Parallel Muon keep the architecture compliant while adapting validation chunks efficiently.",
+      "updatedAt": "2026-03-23T17:22:27Z",
+      "headSha": "b08d72a96e98cac8add0543982fccd35bc8f4f4d",
+      "generatedAt": "2026-03-23T17:48:22.081Z",
+      "summary": "LeakyReLU(0.5)² MLP stack with Parameter Banking + Parallel Muon optimizer, followed by score-first Legal TTT per 32K validation chunk.",
       "tags": [
         "val-only",
         "optimizer",
@@ -1257,16 +1350,15 @@
     {
       "prNumber": 481,
       "title": "Record: Cosine TTT scheduling with per-layer lr — mean val_bpb=1.0970 (3 seeds)",
-      "status": "open",
-      "updatedAt": "2026-03-23T05:29:02Z",
+      "status": "closed",
+      "updatedAt": "2026-03-23T17:33:06Z",
       "headSha": "c8e034d42a18c7ff8cef86deb30b8999eab013c4",
-      "generatedAt": "2026-03-23T05:44:18.003Z",
-      "summary": "TTT uses cosine decay plus per-layer lr groups to undo quantization damage, enhancing validation adaptation after the community-stack training run.",
+      "generatedAt": "2026-03-23T17:48:28.040Z",
+      "summary": "TTT adaptation deploys AdamW with cosine decay and per-layer lr ratios over 30 epochs on validation shards.",
       "tags": [
         "val-only",
         "training-schedule",
-        "optimizer",
-        "quantization"
+        "optimizer"
       ],
       "flags": {
         "usesValOnly": true,
@@ -2526,16 +2618,14 @@
     {
       "prNumber": 414,
       "title": "Record: 11L EMA + GPTQ-lite + warmdown3500 + QAT@0.15 (val_bpb=1.1233)",
-      "status": "open",
-      "updatedAt": "2026-03-22T07:48:40Z",
+      "status": "closed",
+      "updatedAt": "2026-03-23T17:26:08Z",
       "headSha": "15776db61ed3450a37bb5727628ae0f7bdd77f1b",
-      "generatedAt": "2026-03-22T08:07:27.822Z",
-      "summary": "Stacks EMA+Tight SWA warmdown with late QAT and per-row GPTQ-lite clip search on the 11L Muon-based stack before int6 quantization.",
+      "generatedAt": "2026-03-23T17:48:32.985Z",
+      "summary": "Applies EMA weight averaging, longer warmdown, and GPTQ-lite per-row clip search before Late QAT to tighten int6 quantization on the PR#374 stack.",
       "tags": [
         "quantization",
-        "mixed-precision",
-        "training-schedule",
-        "optimizer"
+        "training-schedule"
       ],
       "flags": {
         "usesValOnly": false,
@@ -3181,14 +3271,15 @@
       "prNumber": 374,
       "title": "Record: 11L + Tight SWA + Shared VE128 + Partial RoPE + LN Scale + XSA4 (val_bpb: 1.1246)",
       "status": "open",
-      "updatedAt": "2026-03-21T22:00:01Z",
+      "updatedAt": "2026-03-23T17:25:28Z",
       "headSha": "1323a3afae013ab7a4514ed3136efd34a038632e",
-      "generatedAt": "2026-03-21T22:05:20.752Z",
-      "summary": "11-layer model blends partial RoPE+XSA with shared value embeddings and U-Net skips while using tight SWA to keep quant-friendly averaging ahead of late int6 QAT.",
+      "generatedAt": "2026-03-23T17:48:37.248Z",
+      "summary": "An 11-layer transformer uses tight-scale SWA plus partial XSA/RoPE, shared VE128, and NTK-aware LN scaling to keep quant-friendly weights while boosting sliding-window quality.",
       "tags": [
         "architecture",
+        "training-schedule",
         "quantization",
-        "training-schedule"
+        "attention"
       ],
       "flags": {
         "usesValOnly": false,
@@ -3247,6 +3338,30 @@
         "valOnlyMatchesCollector": true
       },
       "file": "items/pr-372.json"
+    },
+    {
+      "prNumber": 371,
+      "title": "Record: 11L XSA + EMA + TTT + Partial RoPE + LN Scale — val_bpb=1.1401",
+      "status": "closed",
+      "updatedAt": "2026-03-21T20:53:32Z",
+      "headSha": "7c3e33a7a41ebcc78176b0d04ac07a4890e97c2c",
+      "generatedAt": "2026-03-23T17:48:43.479Z",
+      "summary": "11-layer XSA + EMA base adds U-Net skips, partial RoPE/LN scaling, SmearGate/BigramHash, TTT, and late int6 QAT for sliding-window eval.",
+      "tags": [
+        "architecture",
+        "training-schedule",
+        "quantization",
+        "sliding-window-eval"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-371.json"
     },
     {
       "prNumber": 370,
@@ -4212,6 +4327,30 @@
       "file": "items/pr-316.json"
     },
     {
+      "prNumber": 315,
+      "title": "Record: 11L Partial RoPE + LN Scale + EMA + XSA4 (val_bpb: 1.1248)",
+      "status": "closed",
+      "updatedAt": "2026-03-23T17:24:19Z",
+      "headSha": "2951651bf36173538cfb3af07b309514a2bd9855",
+      "generatedAt": "2026-03-23T17:48:49.005Z",
+      "summary": "11-layer stack adds partial RoPE plus 1/√(l+1) RMSNorm scaling atop XSA4+EMA with muP init and int6 quant.",
+      "tags": [
+        "attention",
+        "architecture",
+        "quantization",
+        "training-schedule"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-315.json"
+    },
+    {
       "prNumber": 314,
       "title": "11L Int4 MLP QAT + BigramHash(10240) + SWA",
       "status": "open",
@@ -4727,10 +4866,10 @@
       "prNumber": 288,
       "title": "Non-record: Hybrid Depth-Recurrent Transformer + Int5 Quantization Studies",
       "status": "open",
-      "updatedAt": "2026-03-23T14:28:21Z",
-      "headSha": "4027dbd047c4dd1239b05ee7b3fbcc4ec756a8e3",
-      "generatedAt": "2026-03-23T14:46:55.592Z",
-      "summary": "Hybrid depth-recurrent transformer loops 8 layers twice with unique int6 entry/exit, shared int8 layers, and precomputed word-position/copy/frequency features to tame quantization.",
+      "updatedAt": "2026-03-23T17:26:30Z",
+      "headSha": "a5193f3f08c26f48e6440e9d7d668a010c6c2f3c",
+      "generatedAt": "2026-03-23T17:48:56.580Z",
+      "summary": "Looped eight-layer transformer uses hybrid quantized entry/exit with shared int8 layers plus novel embedding features to prevent quantization compounding.",
       "tags": [
         "architecture",
         "quantization",
@@ -4750,11 +4889,11 @@
     {
       "prNumber": 287,
       "title": "Record: 11L XSA + EMA + Int6 MLP3x + WD=0.04 (val_bpb: 1.1271)",
-      "status": "open",
-      "updatedAt": "2026-03-23T00:46:29Z",
+      "status": "closed",
+      "updatedAt": "2026-03-23T17:23:10Z",
       "headSha": "d7583288464f252eeec6657c80f4cd3a74c0e5c5",
-      "generatedAt": "2026-03-23T01:14:10.900Z",
-      "summary": "11-layer GPT stacks muP-scaled 3x MLP with int6 quantization, final-layer XSA, and EMA weight averaging on Muon+AdamW.",
+      "generatedAt": "2026-03-23T17:49:04.265Z",
+      "summary": "11-layer muP transformer combines last-layer Exclusive Self Attention with EMA averaging on top of int6 quantization, SmearGate, and Muon training.",
       "tags": [
         "attention",
         "optimizer",
@@ -5147,11 +5286,11 @@
     {
       "prNumber": 265,
       "title": "Record: 11L + Efficient Partial XSA (val_bpb: 1.1307) ",
-      "status": "open",
-      "updatedAt": "2026-03-21T17:01:55Z",
+      "status": "closed",
+      "updatedAt": "2026-03-23T17:22:37Z",
       "headSha": "a81f85bd7f632e3e48ef6b1da0017b81d25998a7",
-      "generatedAt": "2026-03-21T17:35:19.632Z",
-      "summary": "11-layer U-Net-style transformer applies GQA-aware exclusive self-attention only on the final three layers via free reshapes to cut overhead.",
+      "generatedAt": "2026-03-23T17:49:10.320Z",
+      "summary": "11-layer transformer uses an efficient GQA-aware Exclusive Self Attention reshape, applied only to the deepest three layers to curb self-hooking without extra memory.",
       "tags": [
         "attention",
         "architecture",
@@ -5941,29 +6080,6 @@
       "file": "items/pr-213.json"
     },
     {
-      "prNumber": 212,
-      "title": "Non-record: Negative findings on codebook quantization, magnitude pruning, multi-token prediction, embedding factorization",
-      "status": "open",
-      "updatedAt": "2026-03-22T19:06:15Z",
-      "headSha": "7237476ab0f739fa3e8706a61428003966eac9dd",
-      "generatedAt": "2026-03-22T19:12:22.361Z",
-      "summary": "11-layer int6 transformer with EMA/TTT/XSA tuning and zstd-22 compression, documenting broad ablations on quantization, pruning, and embedding factorization.",
-      "tags": [
-        "quantization",
-        "architecture",
-        "evaluation"
-      ],
-      "flags": {
-        "usesValOnly": false,
-        "usesValOnlyAi": false,
-        "usesValOnlyCollector": false
-      },
-      "compatibility": {
-        "valOnlyMatchesCollector": true
-      },
-      "file": "items/pr-212.json"
-    },
-    {
       "prNumber": 209,
       "title": "Add non-record 11L int6 challenger 8xH100 attempt",
       "status": "open",
@@ -6132,15 +6248,15 @@
     {
       "prNumber": 199,
       "title": "Non-record: SWA and doc-isolated eval ablation — two negative findings at stride=64",
-      "status": "open",
-      "updatedAt": "2026-03-20T09:49:42Z",
+      "status": "closed",
+      "updatedAt": "2026-03-23T17:36:44Z",
       "headSha": "1524776662ca43c4fe2704a609b7592c87e021c4",
-      "generatedAt": "2026-03-20T09:52:43.922Z",
-      "summary": "Controlled ablations isolate SWA’s effect under default warmdown and compare doc-isolated versus flat-stream sliding-window eval at stride 64 for quantized models.",
+      "generatedAt": "2026-03-23T17:49:21.729Z",
+      "summary": "Controlled stride-64 ablations show default-warmdown SWA doesn’t help int8 and doc-isolated sliding-window evaluation hurts context.",
       "tags": [
+        "quantization",
         "evaluation",
-        "sliding-window-eval",
-        "regularization"
+        "training-schedule"
       ],
       "flags": {
         "usesValOnly": false,
@@ -7118,11 +7234,11 @@
     {
       "prNumber": 145,
       "title": "Non-record: QAT ablation — int8 QAT overhead exceeds quantization gap recovery",
-      "status": "open",
-      "updatedAt": "2026-03-20T01:07:51Z",
+      "status": "closed",
+      "updatedAt": "2026-03-23T17:36:48Z",
       "headSha": "6a1e68e9e4b13f7a8e994f15b096dbfe9e18fae5",
-      "generatedAt": "2026-03-20T01:19:53.572Z",
-      "summary": "Quant-match int8 QAT on the 9L×512 baseline uses torch.quantile fake quantization to mimic export, showing its overhead exceeds the modest gap recovery.",
+      "generatedAt": "2026-03-23T17:49:27.935Z",
+      "summary": "Per-row int8 QAT mirroring export percentiles uses torch.quantile, slowing steps 20% so lost tokens swamp the ~0.007 BPB gain.",
       "tags": [
         "quantization",
         "evaluation",

@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-23T17:47:46.889Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 559,
+    "title": "Non-record: TernaryRecurrentGPT - ternary 1.58-bit MLP + depth recurrence (1xL4 val_bpb=1.5348)",
+    "state": "open",
+    "updatedAt": "2026-03-23T17:23:02Z",
+    "headSha": "b83fd123a77ec4433df05082900b55e5581f45d0",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/559",
+    "authorLogin": "Parswanadh"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-22_TernaryRecurrent_NonRecord/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Uses ternary 1.58-bit STE-quantized MLPs within looped 7-layer recurrence plus BigramHash/SmearGate and Muon+AdamW+SWA scheduling.",
+    "tags": [
+      "quantization",
+      "architecture",
+      "training-schedule"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Ternary 1.58-bit STE quantization for MLP weights",
+      "Looped 7-layer recurrence with BigramHash+SmearGate gating",
+      "Muon+AdamW+SWA schedule (from 40%)"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

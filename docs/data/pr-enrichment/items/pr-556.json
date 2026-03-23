@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-23T17:48:07.804Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 556,
+    "title": "Add first non-record local smoke submission",
+    "state": "open",
+    "updatedAt": "2026-03-23T17:19:49Z",
+    "headSha": "6888ce6b7e83d827eb444db37b8a88f8fe3f7c57",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/556",
+    "authorLogin": "retryoos"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-03-23_LocalSmoke_MLX_8Layer_ParamCut/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Local Apple Silicon MLX smoke workflow compares baseline versus an 8-layer cut to gauge depth-driven speed and artifact trade-offs for the 16MB non-record pipeline.",
+    "tags": [
+      "non-record",
+      "architecture",
+      "evaluation"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "depth reduction for smaller artifact",
+      "Apple Silicon MLX local smoke workflow",
+      "baseline vs 8-layer comparison"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-20T01:19:53.572Z",
+  "generatedAt": "2026-03-23T17:49:27.935Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 145,
     "title": "Non-record: QAT ablation — int8 QAT overhead exceeds quantization gap recovery",
-    "state": "open",
-    "updatedAt": "2026-03-20T01:07:51Z",
+    "state": "closed",
+    "updatedAt": "2026-03-23T17:36:48Z",
     "headSha": "6a1e68e9e4b13f7a8e994f15b096dbfe9e18fae5",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/145",
     "authorLogin": "mrdavtan"
@@ -19,7 +19,7 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Quant-match int8 QAT on the 9L×512 baseline uses torch.quantile fake quantization to mimic export, showing its overhead exceeds the modest gap recovery.",
+    "summary": "Per-row int8 QAT mirroring export percentiles uses torch.quantile, slowing steps 20% so lost tokens swamp the ~0.007 BPB gain.",
     "tags": [
       "quantization",
       "evaluation",
@@ -28,9 +28,9 @@
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "per-row int8 fake quantization",
-      "torch.quantile percentile clipping",
-      "sliding-window comparison"
+      "per-row int8 QAT with torch.quantile clipping",
+      "warmup in bf16 then activate QAT at step ~6000",
+      "avoid torch.compile priming to keep fast baseline path"
     ]
   },
   "compatibility": {
