@@ -1,27 +1,20 @@
 {
-  "generatedAt": "2026-03-23T18:46:38.858Z",
+  "generatedAt": "2026-03-23T19:16:49.530Z",
   "sourceRepo": "openai/parameter-golf",
   "siteRoot": null,
   "tokenConfigured": true,
-  "skipped": [
-    {
-      "stage": "pull-request-readme",
-      "pr": 445,
-      "submissionPath": "records/track_10min_16mb/2026-03-22_11L_distill_v2_1.1233/submission.json",
-      "reason": "missing-or-unreadable-readme"
-    }
-  ],
+  "skipped": [],
   "errors": [],
   "incremental": {
     "mode": "incremental",
-    "cutoffUpdatedAt": "2026-03-23T18:13:58Z",
+    "cutoffUpdatedAt": "2026-03-23T18:41:28Z",
     "pagesScanned": 2,
     "prsScanned": 200,
-    "prsRefreshed": 12,
-    "prsReused": 188,
+    "prsRefreshed": 3,
+    "prsReused": 197,
     "stoppedEarly": true,
     "refreshFailures": 0,
-    "cacheEntries": 539,
+    "cacheEntries": 540,
     "retryWindowRetained": false
   }
 }

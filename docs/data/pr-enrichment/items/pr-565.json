@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-23T19:17:15.319Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 565,
+    "title": "draft: harshit baseline submission - Int4 NF4 + BigramHash + LoRA TTT",
+    "state": "open",
+    "updatedAt": "2026-03-23T19:00:24Z",
+    "headSha": "95be0a68510db19005aee8bbada15a7723569c91",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/565",
+    "authorLogin": "kulharshit21"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/harshit_baseline/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Combines Int4 NF4 QAT with a BigramHash vocab, LoRA TTT, and an MLP3x SmearGate stack layered with depth recurrence.",
+    "tags": [
+      "quantization",
+      "tokenization",
+      "architecture"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Int4 NF4 quantization-aware training",
+      "BigramHash vocabulary of 10240",
+      "LoRA TTT with MLP3x SmearGate and depth recurrence"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

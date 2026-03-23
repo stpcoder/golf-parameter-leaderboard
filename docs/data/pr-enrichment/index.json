@@ -1,8 +1,31 @@
 {
-  "generatedAt": "2026-03-23T18:48:18.114Z",
+  "generatedAt": "2026-03-23T19:17:50.493Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 565,
+      "title": "draft: harshit baseline submission - Int4 NF4 + BigramHash + LoRA TTT",
+      "status": "open",
+      "updatedAt": "2026-03-23T19:00:24Z",
+      "headSha": "95be0a68510db19005aee8bbada15a7723569c91",
+      "generatedAt": "2026-03-23T19:17:15.319Z",
+      "summary": "Combines Int4 NF4 QAT with a BigramHash vocab, LoRA TTT, and an MLP3x SmearGate stack layered with depth recurrence.",
+      "tags": [
+        "quantization",
+        "tokenization",
+        "architecture"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-565.json"
+    },
     {
       "prNumber": 564,
       "title": "Record: 11L Tight SWA + Partial RoPE + LN Scale + XSA4 (val_bpb: 1.1270)",
@@ -1236,23 +1259,22 @@
       "prNumber": 491,
       "title": "Value Residual + DenseFormer DWA + TTT",
       "status": "open",
-      "updatedAt": "2026-03-23T02:15:48Z",
+      "updatedAt": "2026-03-23T19:16:53Z",
       "headSha": "89a7210bf837c05346cd685d0bd85f502781ccfa",
-      "generatedAt": "2026-03-23T02:44:15.790Z",
-      "summary": "Blend ResFormer value residuals, DenseFormer depth-weighted averaging, and test-time AdamW tuning across scored validation windows atop the current SOTA.",
+      "generatedAt": "2026-03-23T19:17:20.351Z",
+      "summary": "Combines first-layer value residual blending, DenseFormer depth-weighted skip averaging, and score-then-train test-time tuning atop the 10-layer Muon stack.",
       "tags": [
-        "val-only",
+        "attention",
         "architecture",
-        "training-schedule",
         "evaluation"
       ],
       "flags": {
-        "usesValOnly": true,
-        "usesValOnlyAi": true,
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
         "usesValOnlyCollector": false
       },
       "compatibility": {
-        "valOnlyMatchesCollector": false
+        "valOnlyMatchesCollector": true
       },
       "file": "items/pr-491.json"
     },
@@ -1373,25 +1395,24 @@
     },
     {
       "prNumber": 484,
-      "title": "Non-record: Sequential TTT + Memorization Analysis (val_bpb=1.0476, 8xH100 SXM)",
+      "title": "Sequential TTT + Global Cosine Schedule + Memorization Analysis (val_bpb=1.0028, 8xH100 SXM)",
       "status": "open",
-      "updatedAt": "2026-03-23T08:52:20Z",
-      "headSha": "281d59e14eb8a05a1efa38836423f40bb1c48676",
-      "generatedAt": "2026-03-23T09:15:41.909Z",
-      "summary": "Uses SwiGLU+EMA quantized weights with sequential score-then-train TTT and sliding-window diagnostics to isolate adaptation vs memorization.",
+      "updatedAt": "2026-03-23T19:16:44Z",
+      "headSha": "3fb6b508d0c642e8b747e1aa8b25c649481de23e",
+      "generatedAt": "2026-03-23T19:17:50.416Z",
+      "summary": "Global cosine TTT with per-layer LR multipliers and memorization diagnostics stabilizes five-epoch adaptation while logging sliding BPB.",
       "tags": [
-        "val-only",
-        "evaluation",
         "training-schedule",
+        "evaluation",
         "quantization"
       ],
       "flags": {
-        "usesValOnly": true,
-        "usesValOnlyAi": true,
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
         "usesValOnlyCollector": false
       },
       "compatibility": {
-        "valOnlyMatchesCollector": false
+        "valOnlyMatchesCollector": true
       },
       "file": "items/pr-484.json"
     },

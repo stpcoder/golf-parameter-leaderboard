@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-23T02:44:15.790Z",
+  "generatedAt": "2026-03-23T19:17:20.351Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 491,
     "title": "Value Residual + DenseFormer DWA + TTT",
     "state": "open",
-    "updatedAt": "2026-03-23T02:15:48Z",
+    "updatedAt": "2026-03-23T19:16:53Z",
     "headSha": "89a7210bf837c05346cd685d0bd85f502781ccfa",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/491",
     "authorLogin": "ahmettrkck"
@@ -19,25 +19,24 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Blend ResFormer value residuals, DenseFormer depth-weighted averaging, and test-time AdamW tuning across scored validation windows atop the current SOTA.",
+    "summary": "Combines first-layer value residual blending, DenseFormer depth-weighted skip averaging, and score-then-train test-time tuning atop the 10-layer Muon stack.",
     "tags": [
-      "val-only",
+      "attention",
       "architecture",
-      "training-schedule",
       "evaluation"
     ],
-    "usesValOnly": true,
-    "valOnlyReasoning": "Test-time training fine-tunes via AdamW on already-scored validation windows before reporting.",
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
     "techniques": [
-      "Value residual blending of first-layer V vectors",
-      "DenseFormer depth-weighted averaging of all prior layers",
-      "Test-time AdamW updates on scored validation tokens"
+      "Layer-wise value residual blending",
+      "DenseFormer depth-weighted averaging",
+      "Score-then-train test-time tuning"
     ]
   },
   "compatibility": {
     "collectorUsesValOnly": false,
-    "aiUsesValOnly": true,
-    "finalUsesValOnly": true,
-    "valOnlyMatchesCollector": false
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
   }
 }

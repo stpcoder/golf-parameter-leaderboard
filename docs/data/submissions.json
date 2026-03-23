@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-23T18:47:15.793Z",
+  "generatedAt": "2026-03-23T19:17:09.502Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "submissions": [
@@ -163,6 +163,83 @@
       }
     },
     {
+      "id": "record-records-track_10min_16mb-2026-03-23_SwiGLU_EMA_TTT_EBLS",
+      "source": "pull_request",
+      "status": "open",
+      "category": "main-track",
+      "track": {
+        "path": "records/track_10min_16mb",
+        "slug": "track_10min_16mb",
+        "label": "10 Minute / 16MB",
+        "official": true,
+        "category": "main-track"
+      },
+      "record": {
+        "folderName": "2026-03-23_SwiGLU_EMA_TTT_EBLS",
+        "folderPath": "records/track_10min_16mb/2026-03-23_SwiGLU_EMA_TTT_EBLS",
+        "submissionPath": "records/track_10min_16mb/2026-03-23_SwiGLU_EMA_TTT_EBLS/submission.json",
+        "readmePath": "records/track_10min_16mb/2026-03-23_SwiGLU_EMA_TTT_EBLS/README.md",
+        "trainLogPath": "records/track_10min_16mb/2026-03-23_SwiGLU_EMA_TTT_EBLS/train.log",
+        "scriptPath": "records/track_10min_16mb/2026-03-23_SwiGLU_EMA_TTT_EBLS/train_gpt.py"
+      },
+      "submission": {
+        "author": "Robby Sneiderman",
+        "githubId": "Robby955",
+        "name": "Sequential TTT + Global Cosine Schedule + Memorization Analysis",
+        "blurb": "SwiGLU MLP, EMA, int5 quantization, 5-epoch sequential score-then-train TTT with global cosine LR decay and per-layer LR multipliers. Reports sliding-window BPB on TTT-adapted weights (1.0028) verified via memorization diagnostic (sliding < TTT-loop). Reproduced across two independent hardware instances (1.0022, 1.0028).",
+        "date": "2026-03-23T00:00:00Z"
+      },
+      "metrics": {
+        "valBpb": 1.0028,
+        "valLoss": 1.6932,
+        "preQuantValBpb": null,
+        "preQuantValLoss": null,
+        "stepStop": null,
+        "wallclockSeconds": null,
+        "evalTimeSeconds": null
+      },
+      "artifact": {
+        "bytesTotal": 15528857,
+        "bytesCode": 58274,
+        "bytesModelInt8Zlib": null
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
+      "pr": {
+        "number": 484,
+        "title": "Sequential TTT + Global Cosine Schedule + Memorization Analysis (val_bpb=1.0028, 8xH100 SXM)",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/484",
+        "authorLogin": "Robby955",
+        "authorName": null,
+        "createdAt": "2026-03-23T00:40:58Z",
+        "updatedAt": "2026-03-23T19:16:44Z",
+        "headSha": "3fb6b508d0c642e8b747e1aa8b25c649481de23e",
+        "headRepo": "Robby955/parameter-golf"
+      },
+      "links": {
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/3fb6b508d0c642e8b747e1aa8b25c649481de23e/records/track_10min_16mb/2026-03-23_SwiGLU_EMA_TTT_EBLS/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/3fb6b508d0c642e8b747e1aa8b25c649481de23e/records/track_10min_16mb/2026-03-23_SwiGLU_EMA_TTT_EBLS/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/3fb6b508d0c642e8b747e1aa8b25c649481de23e/records/track_10min_16mb/2026-03-23_SwiGLU_EMA_TTT_EBLS/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/3fb6b508d0c642e8b747e1aa8b25c649481de23e/records/track_10min_16mb/2026-03-23_SwiGLU_EMA_TTT_EBLS/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/3fb6b508d0c642e8b747e1aa8b25c649481de23e/records/track_10min_16mb/2026-03-23_SwiGLU_EMA_TTT_EBLS",
+        "pr": "https://github.com/openai/parameter-golf/pull/484",
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": false,
+        "hasPullRequest": true,
+        "listedInReadme": false
+      }
+    },
+    {
       "id": "record-records-track_10min_16mb-2026-03-19_PaidPrefix_8xH100",
       "source": "pull_request",
       "status": "open",
@@ -308,83 +385,6 @@
         "script": "https://github.com/openai/parameter-golf/blob/944352afa8dd40faa2c00bf17ad7b777f8bdf206/records/track_10min_16mb/2026-03-20_8L_PaidPrefix_SparseBlocks/train_gpt.py",
         "folder": "https://github.com/openai/parameter-golf/tree/944352afa8dd40faa2c00bf17ad7b777f8bdf206/records/track_10min_16mb/2026-03-20_8L_PaidPrefix_SparseBlocks",
         "pr": "https://github.com/openai/parameter-golf/pull/278",
-        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
-      },
-      "provenance": {
-        "onMain": false,
-        "hasPullRequest": true,
-        "listedInReadme": false
-      }
-    },
-    {
-      "id": "record-records-track_10min_16mb-2026-03-23_SwiGLU_EMA_TTT_EBLS",
-      "source": "pull_request",
-      "status": "open",
-      "category": "main-track",
-      "track": {
-        "path": "records/track_10min_16mb",
-        "slug": "track_10min_16mb",
-        "label": "10 Minute / 16MB",
-        "official": true,
-        "category": "main-track"
-      },
-      "record": {
-        "folderName": "2026-03-23_SwiGLU_EMA_TTT_EBLS",
-        "folderPath": "records/track_10min_16mb/2026-03-23_SwiGLU_EMA_TTT_EBLS",
-        "submissionPath": "records/track_10min_16mb/2026-03-23_SwiGLU_EMA_TTT_EBLS/submission.json",
-        "readmePath": "records/track_10min_16mb/2026-03-23_SwiGLU_EMA_TTT_EBLS/README.md",
-        "trainLogPath": "records/track_10min_16mb/2026-03-23_SwiGLU_EMA_TTT_EBLS/train.log",
-        "scriptPath": "records/track_10min_16mb/2026-03-23_SwiGLU_EMA_TTT_EBLS/train_gpt.py"
-      },
-      "submission": {
-        "author": "Robby Sneiderman",
-        "githubId": "Robby955",
-        "name": "SwiGLU + EMA + Sequential TTT + Memorization Analysis (Non-Record)",
-        "blurb": "SwiGLU MLP, EMA, int5 quantization, sequential score-then-train TTT (3 epochs). Reports sliding-window BPB on TTT-adapted weights (1.0476) rather than TTT-loop BPB (1.1032) based on memorization analysis showing multi-epoch TTT overfits at higher epoch counts. Includes EBLS gamma convergence findings.",
-        "date": "2026-03-23T00:00:00Z"
-      },
-      "metrics": {
-        "valBpb": 1.0476,
-        "valLoss": 1.7689,
-        "preQuantValBpb": null,
-        "preQuantValLoss": null,
-        "stepStop": null,
-        "wallclockSeconds": null,
-        "evalTimeSeconds": null
-      },
-      "artifact": {
-        "bytesTotal": 15184183,
-        "bytesCode": 53058,
-        "bytesModelInt8Zlib": null
-      },
-      "flags": {
-        "usesValOnly": false
-      },
-      "detection": {
-        "valOnlyConfidence": "none",
-        "valOnlyMatches": []
-      },
-      "pr": {
-        "number": 484,
-        "title": "Non-record: Sequential TTT + Memorization Analysis (val_bpb=1.0476, 8xH100 SXM)",
-        "state": "open",
-        "draft": false,
-        "mergedAt": null,
-        "htmlUrl": "https://github.com/openai/parameter-golf/pull/484",
-        "authorLogin": "Robby955",
-        "authorName": null,
-        "createdAt": "2026-03-23T00:40:58Z",
-        "updatedAt": "2026-03-23T08:52:20Z",
-        "headSha": "281d59e14eb8a05a1efa38836423f40bb1c48676",
-        "headRepo": "Robby955/parameter-golf"
-      },
-      "links": {
-        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/281d59e14eb8a05a1efa38836423f40bb1c48676/records/track_10min_16mb/2026-03-23_SwiGLU_EMA_TTT_EBLS/submission.json",
-        "readme": "https://github.com/openai/parameter-golf/blob/281d59e14eb8a05a1efa38836423f40bb1c48676/records/track_10min_16mb/2026-03-23_SwiGLU_EMA_TTT_EBLS/README.md",
-        "trainLog": "https://github.com/openai/parameter-golf/blob/281d59e14eb8a05a1efa38836423f40bb1c48676/records/track_10min_16mb/2026-03-23_SwiGLU_EMA_TTT_EBLS/train.log",
-        "script": "https://github.com/openai/parameter-golf/blob/281d59e14eb8a05a1efa38836423f40bb1c48676/records/track_10min_16mb/2026-03-23_SwiGLU_EMA_TTT_EBLS/train_gpt.py",
-        "folder": "https://github.com/openai/parameter-golf/tree/281d59e14eb8a05a1efa38836423f40bb1c48676/records/track_10min_16mb/2026-03-23_SwiGLU_EMA_TTT_EBLS",
-        "pr": "https://github.com/openai/parameter-golf/pull/484",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
       "provenance": {
@@ -25045,6 +25045,83 @@
       }
     },
     {
+      "id": "record-records-harshit_baseline",
+      "source": "pull_request",
+      "status": "open",
+      "category": "unknown",
+      "track": {
+        "path": "records/harshit_baseline",
+        "slug": "harshit_baseline",
+        "label": "harshit baseline",
+        "official": false,
+        "category": "unknown"
+      },
+      "record": {
+        "folderName": "harshit_baseline",
+        "folderPath": "records/harshit_baseline",
+        "submissionPath": "records/harshit_baseline/submission.json",
+        "readmePath": "records/harshit_baseline/README.md",
+        "trainLogPath": "records/harshit_baseline/train.log",
+        "scriptPath": "records/harshit_baseline/train_gpt.py"
+      },
+      "submission": {
+        "author": "Harshit Kulkarni",
+        "githubId": "kulharshit21",
+        "name": null,
+        "blurb": null,
+        "date": "2026-03-23T18:55:08Z"
+      },
+      "metrics": {
+        "valBpb": null,
+        "valLoss": null,
+        "preQuantValBpb": null,
+        "preQuantValLoss": null,
+        "stepStop": null,
+        "wallclockSeconds": null,
+        "evalTimeSeconds": null
+      },
+      "artifact": {
+        "bytesTotal": null,
+        "bytesCode": null,
+        "bytesModelInt8Zlib": null
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
+      "pr": {
+        "number": 565,
+        "title": "draft: harshit baseline submission - Int4 NF4 + BigramHash + LoRA TTT",
+        "state": "open",
+        "draft": true,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/565",
+        "authorLogin": "kulharshit21",
+        "authorName": null,
+        "createdAt": "2026-03-23T18:55:08Z",
+        "updatedAt": "2026-03-23T19:00:24Z",
+        "headSha": "95be0a68510db19005aee8bbada15a7723569c91",
+        "headRepo": "kulharshit21/parameter-golf"
+      },
+      "links": {
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/95be0a68510db19005aee8bbada15a7723569c91/records/harshit_baseline/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/95be0a68510db19005aee8bbada15a7723569c91/records/harshit_baseline/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/95be0a68510db19005aee8bbada15a7723569c91/records/harshit_baseline/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/95be0a68510db19005aee8bbada15a7723569c91/records/harshit_baseline/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/95be0a68510db19005aee8bbada15a7723569c91/records/harshit_baseline",
+        "pr": "https://github.com/openai/parameter-golf/pull/565",
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": false,
+        "hasPullRequest": true,
+        "listedInReadme": false
+      }
+    },
+    {
       "id": "record-records-track_10min_16mb-2026-03-19_pcloadloveletter_v1",
       "source": "pull_request",
       "status": "closed",
@@ -25564,7 +25641,7 @@
         "authorLogin": "ahmettrkck",
         "authorName": null,
         "createdAt": "2026-03-23T02:15:48Z",
-        "updatedAt": "2026-03-23T02:15:48Z",
+        "updatedAt": "2026-03-23T19:16:53Z",
         "headSha": "89a7210bf837c05346cd685d0bd85f502781ccfa",
         "headRepo": "ahmettrkck/parameter-golf"
       },
