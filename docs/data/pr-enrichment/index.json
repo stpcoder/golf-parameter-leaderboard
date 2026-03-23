@@ -1,8 +1,31 @@
 {
-  "generatedAt": "2026-03-23T10:15:38.965Z",
+  "generatedAt": "2026-03-23T10:45:44.273Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 522,
+      "title": "Add XSA + Value Residual + LoRA TTT + N-gram mixer submission",
+      "status": "open",
+      "updatedAt": "2026-03-23T10:16:49Z",
+      "headSha": "8c3086517a1ceb19007f9a38377afaf66fe22c50",
+      "generatedAt": "2026-03-23T10:45:38.607Z",
+      "summary": "Combines cross-window self-attention with value residuals, LoRA TTT adaptation, and an N-gram mixer for the compact 16MB/10min run.",
+      "tags": [
+        "attention",
+        "architecture",
+        "training-schedule"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-522.json"
+    },
     {
       "prNumber": 521,
       "title": "Add RIOM v1 shared-depth recurrence non-record submission",
@@ -1150,13 +1173,13 @@
       "prNumber": 458,
       "title": "10L XSA + EMA + Partial RoPE + LN Scale (val_bpb: 1.1365)",
       "status": "open",
-      "updatedAt": "2026-03-23T00:14:06Z",
+      "updatedAt": "2026-03-23T10:35:15Z",
       "headSha": "663a135c138bb4baa7378367a3a99932f657d578",
-      "generatedAt": "2026-03-23T00:45:04.735Z",
-      "summary": "10-layer 512d model applies XSA/EMA on final layers with Partial RoPE 16/64, LN scaling, SmearGate bigram hashing, Muon+AdamW mix, and quantized blocks.",
+      "generatedAt": "2026-03-23T10:45:44.201Z",
+      "summary": "10-layer 512d transformer mixes XSA in final layers with EMA/layer-norm scaling plus Partial RoPE and SmearGate hashing before Int5/Int6 quantization.",
       "tags": [
+        "attention",
         "architecture",
-        "optimizer",
         "quantization"
       ],
       "flags": {

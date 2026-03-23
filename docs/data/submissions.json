@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-23T10:15:10.602Z",
+  "generatedAt": "2026-03-23T10:45:27.468Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "submissions": [
@@ -3768,7 +3768,7 @@
         "authorLogin": "ofirkris",
         "authorName": null,
         "createdAt": "2026-03-22T20:32:55Z",
-        "updatedAt": "2026-03-23T00:14:06Z",
+        "updatedAt": "2026-03-23T10:35:15Z",
         "headSha": "663a135c138bb4baa7378367a3a99932f657d578",
         "headRepo": "ofirkris/parameter-golf-1"
       },
@@ -22957,6 +22957,83 @@
         "script": "https://github.com/openai/parameter-golf/blob/381ece0b8f6f876cdea2b10e3e411d12d9ea8010/records/track_10min_16mb/2026-03-XX_DepthRecurrence_eb1386/train_gpt.py",
         "folder": "https://github.com/openai/parameter-golf/tree/381ece0b8f6f876cdea2b10e3e411d12d9ea8010/records/track_10min_16mb/2026-03-XX_DepthRecurrence_eb1386",
         "pr": "https://github.com/openai/parameter-golf/pull/449",
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": false,
+        "hasPullRequest": true,
+        "listedInReadme": false
+      }
+    },
+    {
+      "id": "record-records-track_10min_16mb-2026-03-23_XSA_VR_LoRaTTT",
+      "source": "pull_request",
+      "status": "open",
+      "category": "main-track",
+      "track": {
+        "path": "records/track_10min_16mb",
+        "slug": "track_10min_16mb",
+        "label": "10 Minute / 16MB",
+        "official": true,
+        "category": "main-track"
+      },
+      "record": {
+        "folderName": "2026-03-23_XSA_VR_LoRaTTT",
+        "folderPath": "records/track_10min_16mb/2026-03-23_XSA_VR_LoRaTTT",
+        "submissionPath": "records/track_10min_16mb/2026-03-23_XSA_VR_LoRaTTT/submission.json",
+        "readmePath": "records/track_10min_16mb/2026-03-23_XSA_VR_LoRaTTT/README.md",
+        "trainLogPath": "records/track_10min_16mb/2026-03-23_XSA_VR_LoRaTTT/train.log",
+        "scriptPath": "records/track_10min_16mb/2026-03-23_XSA_VR_LoRaTTT/train_gpt.py"
+      },
+      "submission": {
+        "author": "Himanshukkk",
+        "githubId": "Himanshukkk",
+        "name": null,
+        "blurb": null,
+        "date": "2026-03-23T10:16:49Z"
+      },
+      "metrics": {
+        "valBpb": null,
+        "valLoss": null,
+        "preQuantValBpb": null,
+        "preQuantValLoss": null,
+        "stepStop": null,
+        "wallclockSeconds": null,
+        "evalTimeSeconds": null
+      },
+      "artifact": {
+        "bytesTotal": null,
+        "bytesCode": null,
+        "bytesModelInt8Zlib": null
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
+      "pr": {
+        "number": 522,
+        "title": "Add XSA + Value Residual + LoRA TTT + N-gram mixer submission",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/522",
+        "authorLogin": "Himanshukkk",
+        "authorName": null,
+        "createdAt": "2026-03-23T10:16:49Z",
+        "updatedAt": "2026-03-23T10:16:49Z",
+        "headSha": "8c3086517a1ceb19007f9a38377afaf66fe22c50",
+        "headRepo": "Himanshukkk/parameter-golf"
+      },
+      "links": {
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/8c3086517a1ceb19007f9a38377afaf66fe22c50/records/track_10min_16mb/2026-03-23_XSA_VR_LoRaTTT/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/8c3086517a1ceb19007f9a38377afaf66fe22c50/records/track_10min_16mb/2026-03-23_XSA_VR_LoRaTTT/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/8c3086517a1ceb19007f9a38377afaf66fe22c50/records/track_10min_16mb/2026-03-23_XSA_VR_LoRaTTT/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/8c3086517a1ceb19007f9a38377afaf66fe22c50/records/track_10min_16mb/2026-03-23_XSA_VR_LoRaTTT/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/8c3086517a1ceb19007f9a38377afaf66fe22c50/records/track_10min_16mb/2026-03-23_XSA_VR_LoRaTTT",
+        "pr": "https://github.com/openai/parameter-golf/pull/522",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
       "provenance": {

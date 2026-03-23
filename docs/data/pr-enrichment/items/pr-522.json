@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-23T10:45:38.607Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 522,
+    "title": "Add XSA + Value Residual + LoRA TTT + N-gram mixer submission",
+    "state": "open",
+    "updatedAt": "2026-03-23T10:16:49Z",
+    "headSha": "8c3086517a1ceb19007f9a38377afaf66fe22c50",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/522",
+    "authorLogin": "Himanshukkk"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-23_XSA_VR_LoRaTTT/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Combines cross-window self-attention with value residuals, LoRA TTT adaptation, and an N-gram mixer for the compact 16MB/10min run.",
+    "tags": [
+      "attention",
+      "architecture",
+      "training-schedule"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "- Cross-window XSA with gated value residuals",
+      "- LoRA-based test-time tuning for compact adaptation",
+      "- N-gram mixer head to fuse local context"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}
