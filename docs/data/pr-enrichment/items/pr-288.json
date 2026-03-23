@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-23T03:44:18.987Z",
+  "generatedAt": "2026-03-23T14:46:55.592Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 288,
     "title": "Non-record: Hybrid Depth-Recurrent Transformer + Int5 Quantization Studies",
     "state": "open",
-    "updatedAt": "2026-03-23T03:14:20Z",
-    "headSha": "b97dd45607ebc5a533af5a1d2d4d6abb1f943bba",
+    "updatedAt": "2026-03-23T14:28:21Z",
+    "headSha": "4027dbd047c4dd1239b05ee7b3fbcc4ec756a8e3",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/288",
     "authorLogin": "trasnake87"
   },
@@ -20,7 +20,7 @@
     "submissionCount": 2
   },
   "output": {
-    "summary": "Hybrid depth-recurrent loops with int6 entry/exit, int8 shared layers, and precomputed word-position/copy/frequency inputs to curb quantization compounding.",
+    "summary": "Hybrid depth-recurrent transformer loops 8 layers twice with unique int6 entry/exit, shared int8 layers, and precomputed word-position/copy/frequency features to tame quantization.",
     "tags": [
       "architecture",
       "quantization",
@@ -30,9 +30,9 @@
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Hybrid entry/exit quantization with int8-shared looped core",
-      "Depth recurrence for 16MB budget (8 layers × 2 loops)",
-      "Zero-cost word-position, copy-flag, and unigram frequency features"
+      "looped shared layers with hybrid int6/int8 quantization",
+      "zero-param precomputed word-position/copy/frequency inputs",
+      "per-loop learnable scales to stabilize recurrence"
     ]
   },
   "compatibility": {

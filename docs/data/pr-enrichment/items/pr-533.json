@@ -1,0 +1,41 @@
+{
+  "generatedAt": "2026-03-23T14:46:43.015Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 533,
+    "title": "GPTQ + Short TTT — val_bpb 1.1207 (seed 1337)",
+    "state": "open",
+    "updatedAt": "2026-03-23T14:42:23Z",
+    "headSha": "9fd191d5cf7937e1e59eabbc6cbcd44b9d64f147",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/533",
+    "authorLogin": "newjordan"
+  },
+  "inputs": {
+    "hash": "333c1651a7101d4267d971ebe25bd793307b61c975586544bbd6b9a9c3a8cf24",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-22_SpongeBath_TTT8_Stride32/README.md",
+      "records/track_10min_16mb/2026-03-23_Frugendorff_Squared_6x2_640d_MLP4/README.md"
+    ],
+    "submissionCount": 2
+  },
+  "output": {
+    "summary": "Base GPTQ model now swaps long EMA TTT for short 50-chunk SGD adaptation with frozen weights to prevent late-chunk drift while keeping the quant pipeline.",
+    "tags": [
+      "quantization",
+      "evaluation"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "Standard training plus test-time adaptation; no validation-only training regime.",
+    "techniques": [
+      "Short SGD TTT (50 chunks, no EMA) to capture quick adaptation",
+      "Int6 GPTQ weights with zstd-22 compression pipeline"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

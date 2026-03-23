@@ -1,8 +1,76 @@
 {
-  "generatedAt": "2026-03-23T14:16:05.127Z",
+  "generatedAt": "2026-03-23T14:46:55.633Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 534,
+      "title": "Non-record: 11L Partial RoPE + XSA4 + VE128 + Tight SWA + GPTQ-lite (val_bpb=1.1804)",
+      "status": "open",
+      "updatedAt": "2026-03-23T14:45:12Z",
+      "headSha": "a9ec87ab4d0c920fdcc86ca102850f5345fa292e",
+      "generatedAt": "2026-03-23T14:46:32.996Z",
+      "summary": "Stacks Partial RoPE/XSA4/VE128/Tight SWA while slimming MLP to 1,408 hidden and adding GPTQ-lite quantization to squeeze under 16MB with extra steps.",
+      "tags": [
+        "architecture",
+        "quantization",
+        "training-schedule"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-534.json"
+    },
+    {
+      "prNumber": 533,
+      "title": "GPTQ + Short TTT — val_bpb 1.1207 (seed 1337)",
+      "status": "open",
+      "updatedAt": "2026-03-23T14:42:23Z",
+      "headSha": "9fd191d5cf7937e1e59eabbc6cbcd44b9d64f147",
+      "generatedAt": "2026-03-23T14:46:43.015Z",
+      "summary": "Base GPTQ model now swaps long EMA TTT for short 50-chunk SGD adaptation with frozen weights to prevent late-chunk drift while keeping the quant pipeline.",
+      "tags": [
+        "quantization",
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-533.json"
+    },
+    {
+      "prNumber": 532,
+      "title": "Record: pcloadloveletter v6 — Novel Codebook+Huffman Compression + AdamW TTT (val_bpb=1.0487)",
+      "status": "open",
+      "updatedAt": "2026-03-23T14:44:17Z",
+      "headSha": "6379f921c22a322c322463e5768433f33bde488f",
+      "generatedAt": "2026-03-23T14:46:51.308Z",
+      "summary": "Codebook-quantized transformer weights pass through per-tensor Huffman coding in a custom PCLL pipeline so the GQA model stays under 16MB.",
+      "tags": [
+        "quantization",
+        "compression",
+        "optimizer"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-532.json"
+    },
     {
       "prNumber": 531,
       "title": "Record: 11L + XSA4 + EMA + Late QAT + GPTQ-lite (1.1325 BPB)",
@@ -4312,10 +4380,10 @@
       "prNumber": 288,
       "title": "Non-record: Hybrid Depth-Recurrent Transformer + Int5 Quantization Studies",
       "status": "open",
-      "updatedAt": "2026-03-23T03:14:20Z",
-      "headSha": "b97dd45607ebc5a533af5a1d2d4d6abb1f943bba",
-      "generatedAt": "2026-03-23T03:44:18.987Z",
-      "summary": "Hybrid depth-recurrent loops with int6 entry/exit, int8 shared layers, and precomputed word-position/copy/frequency inputs to curb quantization compounding.",
+      "updatedAt": "2026-03-23T14:28:21Z",
+      "headSha": "4027dbd047c4dd1239b05ee7b3fbcc4ec756a8e3",
+      "generatedAt": "2026-03-23T14:46:55.592Z",
+      "summary": "Hybrid depth-recurrent transformer loops 8 layers twice with unique int6 entry/exit, shared int8 layers, and precomputed word-position/copy/frequency features to tame quantization.",
       "tags": [
         "architecture",
         "quantization",
