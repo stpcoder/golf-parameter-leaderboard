@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-20T07:52:04.559Z",
+  "generatedAt": "2026-03-23T18:48:11.565Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 190,
     "title": "The Stinky Frost Recipe — 1.1725 BPB",
-    "state": "open",
-    "updatedAt": "2026-03-20T07:51:19Z",
+    "state": "closed",
+    "updatedAt": "2026-03-23T18:40:46Z",
     "headSha": "0d8b3f0911bb1a463b325d1f83c2dbc1cec7b574",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/190",
     "authorLogin": "newjordan"
@@ -19,19 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "9-layer GQA model leans on int6 QAT from 25% training, FP16 tied embeddings, SmearGate bigram blending, BigramHash context, Muon WD, and stride-64 sliding eval.",
+    "summary": "Combines int6 QAT with FP16 tied embeddings, SmearGate/BigramHash context prep, and Muon WD to keep a 9L/512d GQA model under 16MB.",
     "tags": [
       "quantization",
       "optimizer",
-      "attention",
-      "evaluation"
+      "architecture"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Int6 QAT with FP16 tied embeddings",
-      "SmearGate bigram blending plus BigramHash",
-      "Sliding-window eval stride 64"
+      "Early int6 quantization-aware training with FP16 tied embeddings",
+      "Learned SmearGate and BigramHash provide bigram context prior to attention",
+      "Muon optimizer with WD plus orthogonal init to stabilize int6 weights"
     ]
   },
   "compatibility": {

@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-23T18:47:21.904Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 564,
+    "title": "Record: 11L Tight SWA + Partial RoPE + LN Scale + XSA4 (val_bpb: 1.1270)",
+    "state": "open",
+    "updatedAt": "2026-03-23T18:41:28Z",
+    "headSha": "8257c099ac83660165681ef81023d4209555a696",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/564",
+    "authorLogin": "sadeghja1070"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-23_11L_TightSWA_PartialRoPE_LNScale_XSA4_1.1270/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "11-layer 512d transformer combines partial RoPE, LN scaling, XSA on final layers, and Tight SWA averaging to keep quantization-friendly weights.",
+    "tags": [
+      "architecture",
+      "training-schedule",
+      "quantization"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Tight SWA over last ~600 steps (scale<0.2, every 50)",
+      "Partial RoPE + LN scale with XSA on last four layers",
+      "Int6 per-row quantization paired with FlashAttention 3"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-23T17:17:25.516Z",
+  "generatedAt": "2026-03-23T18:47:52.065Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 401,
     "title": "Record: 11L + EMA + Tight SWA + QAT0.15 + VE128 + Partial RoPE + LN Scale (val_bpb: 1.1243)",
-    "state": "open",
-    "updatedAt": "2026-03-23T17:00:05Z",
+    "state": "closed",
+    "updatedAt": "2026-03-23T18:40:44Z",
     "headSha": "16db94f0fe1eecd86a4085858a7e02b7b7fee17d",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/401",
     "authorLogin": "newjordan"
@@ -19,18 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Stacked EMA and Tight SWA averaging with longer warmdown and earlier late QAT on an 11-layer U-Net-style transformer with partial RoPE and VE128.",
+    "summary": "Stacks EMA-fed tight SWA with earlier late QAT on an 11L U-Net GPT using Partial RoPE, VE128, and LN scaling for low-quantization bpb.",
     "tags": [
+      "architecture",
       "quantization",
-      "training-schedule",
-      "architecture"
+      "optimizer",
+      "training-schedule"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "EMA feeding Tight SWA checkpoints",
-      "Extended late int6 QAT window",
-      "U-Net skips with partial RoPE & VE128"
+      "EMA-fed tight SWA stacking",
+      "Late int6 QAT threshold 0.15 with extended warmdown",
+      "Partial RoPE + VE128 + LN scale"
     ]
   },
   "compatibility": {

@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-21T10:00:20.928Z",
+  "generatedAt": "2026-03-23T18:47:56.979Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 332,
     "title": "Record: 12L Gradient-Guided Quant + Partial RoPE + LN Scale + EMA + XSA4 (val_bpb: 1.1320)",
     "state": "open",
-    "updatedAt": "2026-03-21T09:45:02Z",
-    "headSha": "4b062e0a63a913fe9185156b2013f8b18972591b",
+    "updatedAt": "2026-03-23T18:34:40Z",
+    "headSha": "a4d62acba0bbf6ef462b75aeaa8d2666adfb86de",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/332",
     "authorLogin": "saml212"
   },
@@ -19,18 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Per-tensor gradient-guided adaptive quantization freed budget for a 12-layer stack with partial RoPE, LN scaling, XSA head tweaks, and EMA smoothing under 16 MB.",
+    "summary": "Uses gradient-guided per-tensor quant levels to fit a 12-layer model under 16MB while adding partial RoPE, LN scaling, EMA, and XSA tweaks.",
     "tags": [
       "quantization",
       "architecture",
-      "training-schedule"
+      "attention"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Gradient-guided int5/int6/int7 quant allocation",
-      "Partial RoPE + LN scale + XSA in upper layers",
-      "EMA every step instead of SWA"
+      "Gradient-guided sensitivity-based int5/6/7 quantization",
+      "Partial RoPE with XSA on final layers",
+      "Layer-index LN scaling plus EMA smoothing"
     ]
   },
   "compatibility": {

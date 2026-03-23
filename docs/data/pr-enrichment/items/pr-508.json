@@ -1,45 +1,42 @@
 {
-  "generatedAt": "2026-03-23T06:14:37.102Z",
+  "generatedAt": "2026-03-23T18:47:39.093Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 508,
     "title": "GPTQ + Early QAT + Legal TTT — 3-seed mean val_bpb 1.1215",
-    "state": "open",
-    "updatedAt": "2026-03-23T06:03:14Z",
+    "state": "closed",
+    "updatedAt": "2026-03-23T18:40:46Z",
     "headSha": "464f85912d1aa14ca0e1343f5d289cfc1b9c6218",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/508",
     "authorLogin": "newjordan"
   },
   "inputs": {
-    "hash": "c4f8d017d13e812b0ad5a78b677f8350df1124736cd3f84c8d4e37f273206c70",
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
     "readmePaths": [
-      "records/track_10min_16mb/2026-03-23_11L_GPTQ_TTT_EMA_QAT_1.1206/README.md",
-      "records/track_10min_16mb/2026-03-22_SpongeBath_TTT8_Stride32/README.md",
-      "records/track_10min_16mb/2026-03-23_Frugendorff_Squared_6x2_640d_MLP4/README.md"
+      "records/track_10min_16mb/2026-03-23_11L_GPTQ_TTT_EMA_QAT_1.1206/README.md"
     ],
-    "submissionCount": 3
+    "submissionCount": 1
   },
   "output": {
-    "summary": "Leverages GPTQ per-row int6 calibration, extended QAT with percentile-matched clipping, and score-first EMA TTT with cosine decay.",
+    "summary": "Combines GPTQ int6 per-row tuning, longer percentile-clipped QAT, and EMA-scored legal TTT on the 11L architecture.",
     "tags": [
-      "val-only",
       "quantization",
       "training-schedule",
       "evaluation"
     ],
-    "usesValOnly": true,
-    "valOnlyReasoning": "Legal score-first TTT trains on validation chunks using EMA scoring during evaluation.",
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
     "techniques": [
-      "GPTQ Hessian-aware int6 calibration",
-      "Extended QAT with percentile clipping",
-      "Score-first TTT with EMA scoring and cosine LR fix"
+      "GPTQ block-128 int6 with Hessian-aware per-row scaling",
+      "Extended QAT steps with 99.95th percentile STE clipping",
+      "Legal score-first TTT with EMA scoring and cosine LR fix"
     ]
   },
   "compatibility": {
     "collectorUsesValOnly": false,
-    "aiUsesValOnly": true,
-    "finalUsesValOnly": true,
-    "valOnlyMatchesCollector": false
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
   }
 }

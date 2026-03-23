@@ -1,8 +1,55 @@
 {
-  "generatedAt": "2026-03-23T18:17:02.090Z",
+  "generatedAt": "2026-03-23T18:48:18.114Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 564,
+      "title": "Record: 11L Tight SWA + Partial RoPE + LN Scale + XSA4 (val_bpb: 1.1270)",
+      "status": "open",
+      "updatedAt": "2026-03-23T18:41:28Z",
+      "headSha": "8257c099ac83660165681ef81023d4209555a696",
+      "generatedAt": "2026-03-23T18:47:21.904Z",
+      "summary": "11-layer 512d transformer combines partial RoPE, LN scaling, XSA on final layers, and Tight SWA averaging to keep quantization-friendly weights.",
+      "tags": [
+        "architecture",
+        "training-schedule",
+        "quantization"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-564.json"
+    },
+    {
+      "prNumber": 563,
+      "title": "Add submission: 10L Enhanced with BigramHash(12240) + SOTA techniques",
+      "status": "open",
+      "updatedAt": "2026-03-23T18:23:57Z",
+      "headSha": "fc825c02217f17a108c072b2553807d406443908",
+      "generatedAt": "2026-03-23T18:47:26.038Z",
+      "summary": "10-layer GQA transformer uses mixed int5/int6 quantization, BigramHash(12288) with SmearGate recurrence, muon+SWA optimization, and sliding-window eval for compact scoring.",
+      "tags": [
+        "quantization",
+        "optimizer",
+        "architecture",
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-563.json"
+    },
     {
       "prNumber": 562,
       "title": "Non-record: 1.1354 BPB — 10L TTT 22ep AdamW Cosine + LeakyReLU(0.5)² + TrigramHash",
@@ -470,14 +517,15 @@
     {
       "prNumber": 533,
       "title": "GPTQ + Short TTT — val_bpb 1.1207 (seed 1337)",
-      "status": "open",
-      "updatedAt": "2026-03-23T14:42:23Z",
+      "status": "closed",
+      "updatedAt": "2026-03-23T18:40:45Z",
       "headSha": "9fd191d5cf7937e1e59eabbc6cbcd44b9d64f147",
-      "generatedAt": "2026-03-23T14:46:43.015Z",
-      "summary": "Base GPTQ model now swaps long EMA TTT for short 50-chunk SGD adaptation with frozen weights to prevent late-chunk drift while keeping the quant pipeline.",
+      "generatedAt": "2026-03-23T18:47:33.338Z",
+      "summary": "Base GPTQ pipeline with short 50-chunk SGD-only TTT plus int6+zstd-22 compression to avoid late-chunk degradation while keeping architecture unchanged.",
       "tags": [
         "quantization",
-        "evaluation"
+        "evaluation",
+        "training-schedule"
       ],
       "flags": {
         "usesValOnly": false,
@@ -885,24 +933,23 @@
     {
       "prNumber": 508,
       "title": "GPTQ + Early QAT + Legal TTT — 3-seed mean val_bpb 1.1215",
-      "status": "open",
-      "updatedAt": "2026-03-23T06:03:14Z",
+      "status": "closed",
+      "updatedAt": "2026-03-23T18:40:46Z",
       "headSha": "464f85912d1aa14ca0e1343f5d289cfc1b9c6218",
-      "generatedAt": "2026-03-23T06:14:37.102Z",
-      "summary": "Leverages GPTQ per-row int6 calibration, extended QAT with percentile-matched clipping, and score-first EMA TTT with cosine decay.",
+      "generatedAt": "2026-03-23T18:47:39.093Z",
+      "summary": "Combines GPTQ int6 per-row tuning, longer percentile-clipped QAT, and EMA-scored legal TTT on the 11L architecture.",
       "tags": [
-        "val-only",
         "quantization",
         "training-schedule",
         "evaluation"
       ],
       "flags": {
-        "usesValOnly": true,
-        "usesValOnlyAi": true,
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
         "usesValOnlyCollector": false
       },
       "compatibility": {
-        "valOnlyMatchesCollector": false
+        "valOnlyMatchesCollector": true
       },
       "file": "items/pr-508.json"
     },
@@ -2057,13 +2104,14 @@
     {
       "prNumber": 445,
       "title": "Late Training Replay + EMA + GPTQ-lite (val_bpb=1.1236, 2-seed, no TTT on eval)",
-      "status": "open",
-      "updatedAt": "2026-03-23T00:58:59Z",
+      "status": "closed",
+      "updatedAt": "2026-03-23T18:40:47Z",
       "headSha": "cbcd7f71848a4c01d00df96d1d2a51fe395cdc2d",
-      "generatedAt": "2026-03-23T01:13:57.488Z",
-      "summary": "Replays the final 100 training batches twice at 10% LR before EMA so averaged weights absorb a sharpened signal without touching evaluation tokens.",
+      "generatedAt": "2026-03-23T18:47:47.517Z",
+      "summary": "Late training replay replays the last 100 training batches twice at 10% LR before EMA, sharpening final weights without touching eval data.",
       "tags": [
-        "training-schedule"
+        "training-schedule",
+        "quantization"
       ],
       "flags": {
         "usesValOnly": false,
@@ -2827,15 +2875,16 @@
     {
       "prNumber": 401,
       "title": "Record: 11L + EMA + Tight SWA + QAT0.15 + VE128 + Partial RoPE + LN Scale (val_bpb: 1.1243)",
-      "status": "open",
-      "updatedAt": "2026-03-23T17:00:05Z",
+      "status": "closed",
+      "updatedAt": "2026-03-23T18:40:44Z",
       "headSha": "16db94f0fe1eecd86a4085858a7e02b7b7fee17d",
-      "generatedAt": "2026-03-23T17:17:25.516Z",
-      "summary": "Stacked EMA and Tight SWA averaging with longer warmdown and earlier late QAT on an 11-layer U-Net-style transformer with partial RoPE and VE128.",
+      "generatedAt": "2026-03-23T18:47:52.065Z",
+      "summary": "Stacks EMA-fed tight SWA with earlier late QAT on an 11L U-Net GPT using Partial RoPE, VE128, and LN scaling for low-quantization bpb.",
       "tags": [
+        "architecture",
         "quantization",
-        "training-schedule",
-        "architecture"
+        "optimizer",
+        "training-schedule"
       ],
       "flags": {
         "usesValOnly": false,
@@ -3980,14 +4029,14 @@
       "prNumber": 332,
       "title": "Record: 12L Gradient-Guided Quant + Partial RoPE + LN Scale + EMA + XSA4 (val_bpb: 1.1320)",
       "status": "open",
-      "updatedAt": "2026-03-21T09:45:02Z",
-      "headSha": "4b062e0a63a913fe9185156b2013f8b18972591b",
-      "generatedAt": "2026-03-21T10:00:20.928Z",
-      "summary": "Per-tensor gradient-guided adaptive quantization freed budget for a 12-layer stack with partial RoPE, LN scaling, XSA head tweaks, and EMA smoothing under 16 MB.",
+      "updatedAt": "2026-03-23T18:34:40Z",
+      "headSha": "a4d62acba0bbf6ef462b75aeaa8d2666adfb86de",
+      "generatedAt": "2026-03-23T18:47:56.979Z",
+      "summary": "Uses gradient-guided per-tensor quant levels to fit a 12-layer model under 16MB while adding partial RoPE, LN scaling, EMA, and XSA tweaks.",
       "tags": [
         "quantization",
         "architecture",
-        "training-schedule"
+        "attention"
       ],
       "flags": {
         "usesValOnly": false,
@@ -4890,14 +4939,13 @@
       "prNumber": 288,
       "title": "Non-record: Hybrid Depth-Recurrent Transformer + Int5 Quantization Studies",
       "status": "open",
-      "updatedAt": "2026-03-23T17:26:30Z",
-      "headSha": "a5193f3f08c26f48e6440e9d7d668a010c6c2f3c",
-      "generatedAt": "2026-03-23T17:48:56.580Z",
-      "summary": "Looped eight-layer transformer uses hybrid quantized entry/exit with shared int8 layers plus novel embedding features to prevent quantization compounding.",
+      "updatedAt": "2026-03-23T18:36:18Z",
+      "headSha": "a38d06e1afad3c88aaa3b55c6eb754eec8824b1d",
+      "generatedAt": "2026-03-23T18:48:02.736Z",
+      "summary": "Hybrid depth-recurrent Transformer loops 8 layers twice with hybrid int6/int8 quantization to avoid compounding and adds precomputed position/copy/frequency features.",
       "tags": [
         "architecture",
         "quantization",
-        "depth-width",
         "non-record"
       ],
       "flags": {
@@ -5753,12 +5801,12 @@
     },
     {
       "prNumber": 236,
-      "title": "4 the Leaderboard: 11L Int6 + SmearGate + Batch Optimization (val_bpb=1.1400)",
+      "title": "Record: 11L Int6 + SmearGate + Batch Optimization (val_bpb=1.1400)",
       "status": "open",
-      "updatedAt": "2026-03-22T23:42:31Z",
-      "headSha": "e0e524a41d75d8e6fd617a55f04a3f67b12195cc",
-      "generatedAt": "2026-03-22T23:43:19.411Z",
-      "summary": "11-layer int6 model pairs SmearGate + BigramHash with a smaller batch for more steps and batched stride-64 sliding eval within the 10-minute budget.",
+      "updatedAt": "2026-03-23T18:33:43Z",
+      "headSha": "de52d4fac644e3c401ca85c3a78ca0578f30e3fc",
+      "generatedAt": "2026-03-23T18:48:07.291Z",
+      "summary": "Smaller batch size boosts step count in fixed-time int6-SmearGate 11L + BigramHash training with SWA and FlashAttention.",
       "tags": [
         "quantization",
         "architecture",
@@ -6460,16 +6508,15 @@
     {
       "prNumber": 190,
       "title": "The Stinky Frost Recipe — 1.1725 BPB",
-      "status": "open",
-      "updatedAt": "2026-03-20T07:51:19Z",
+      "status": "closed",
+      "updatedAt": "2026-03-23T18:40:46Z",
       "headSha": "0d8b3f0911bb1a463b325d1f83c2dbc1cec7b574",
-      "generatedAt": "2026-03-20T07:52:04.559Z",
-      "summary": "9-layer GQA model leans on int6 QAT from 25% training, FP16 tied embeddings, SmearGate bigram blending, BigramHash context, Muon WD, and stride-64 sliding eval.",
+      "generatedAt": "2026-03-23T18:48:11.565Z",
+      "summary": "Combines int6 QAT with FP16 tied embeddings, SmearGate/BigramHash context prep, and Muon WD to keep a 9L/512d GQA model under 16MB.",
       "tags": [
         "quantization",
         "optimizer",
-        "attention",
-        "evaluation"
+        "architecture"
       ],
       "flags": {
         "usesValOnly": false,
@@ -7726,16 +7773,17 @@
     },
     {
       "prNumber": 114,
-      "title": "#1 on leaderboard: val_bpb=1.1574 — Int6 + MLP 3x + selective precision + optimized long-context training",
+      "title": "Record: val_bpb=1.1574 — Int6 + MLP 3x + selective precision + optimized long-context training",
       "status": "open",
-      "updatedAt": "2026-03-22T23:37:07Z",
-      "headSha": "df4e221d02bf93b6f2580a7aeb2a6fb6782ae983",
-      "generatedAt": "2026-03-22T23:43:23.093Z",
-      "summary": "Int6 post-training quantization with fp16 passthrough lets a 3× wider MLP train at 2048 tokens while stride-256 sliding-window eval captures long context.",
+      "updatedAt": "2026-03-23T18:34:12Z",
+      "headSha": "266990989a9b3c5e08901d19265f349bfbc0eb64",
+      "generatedAt": "2026-03-23T18:48:18.099Z",
+      "summary": "Int6 quantization with fp16 selective precision frees space for 3× MLP while train@2048 and stride-256 sliding eval capture long contexts efficiently.",
       "tags": [
         "quantization",
         "architecture",
-        "evaluation"
+        "evaluation",
+        "training-schedule"
       ],
       "flags": {
         "usesValOnly": false,

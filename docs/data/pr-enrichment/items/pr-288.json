@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-23T17:48:56.580Z",
+  "generatedAt": "2026-03-23T18:48:02.736Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 288,
     "title": "Non-record: Hybrid Depth-Recurrent Transformer + Int5 Quantization Studies",
     "state": "open",
-    "updatedAt": "2026-03-23T17:26:30Z",
-    "headSha": "a5193f3f08c26f48e6440e9d7d668a010c6c2f3c",
+    "updatedAt": "2026-03-23T18:36:18Z",
+    "headSha": "a38d06e1afad3c88aaa3b55c6eb754eec8824b1d",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/288",
     "authorLogin": "trasnake87"
   },
@@ -20,19 +20,18 @@
     "submissionCount": 2
   },
   "output": {
-    "summary": "Looped eight-layer transformer uses hybrid quantized entry/exit with shared int8 layers plus novel embedding features to prevent quantization compounding.",
+    "summary": "Hybrid depth-recurrent Transformer loops 8 layers twice with hybrid int6/int8 quantization to avoid compounding and adds precomputed position/copy/frequency features.",
     "tags": [
       "architecture",
       "quantization",
-      "depth-width",
       "non-record"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Hybrid entry/exit + shared int8 looped layers",
-      "Enhanced embedding features (word-pos/copy/frequency)",
-      "Block-level torch.compile for loop control flow"
+      "hybrid int6/int8 entry-exit quantization for looped layers",
+      "depth-recurrence via 8-layer loop executed twice",
+      "precomputed word-position/copy/frequency input features"
     ]
   },
   "compatibility": {

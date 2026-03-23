@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-23T01:13:57.488Z",
+  "generatedAt": "2026-03-23T18:47:47.517Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 445,
     "title": "Late Training Replay + EMA + GPTQ-lite (val_bpb=1.1236, 2-seed, no TTT on eval)",
-    "state": "open",
-    "updatedAt": "2026-03-23T00:58:59Z",
+    "state": "closed",
+    "updatedAt": "2026-03-23T18:40:47Z",
     "headSha": "cbcd7f71848a4c01d00df96d1d2a51fe395cdc2d",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/445",
     "authorLogin": "newjordan"
@@ -19,15 +19,16 @@
     "submissionCount": 2
   },
   "output": {
-    "summary": "Replays the final 100 training batches twice at 10% LR before EMA so averaged weights absorb a sharpened signal without touching evaluation tokens.",
+    "summary": "Late training replay replays the last 100 training batches twice at 10% LR before EMA, sharpening final weights without touching eval data.",
     "tags": [
-      "training-schedule"
+      "training-schedule",
+      "quantization"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "late-stage low-LR replay of recent training batches",
-      "EMA consolidation after replay to capture the sharpened signal"
+      "Buffered late-stage replay at low LR before EMA",
+      "GPTQ-lite pipeline with EMA and late QAT"
     ]
   },
   "compatibility": {

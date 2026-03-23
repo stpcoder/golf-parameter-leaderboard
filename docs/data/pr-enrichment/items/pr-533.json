@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-23T14:46:43.015Z",
+  "generatedAt": "2026-03-23T18:47:33.338Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 533,
     "title": "GPTQ + Short TTT — val_bpb 1.1207 (seed 1337)",
-    "state": "open",
-    "updatedAt": "2026-03-23T14:42:23Z",
+    "state": "closed",
+    "updatedAt": "2026-03-23T18:40:45Z",
     "headSha": "9fd191d5cf7937e1e59eabbc6cbcd44b9d64f147",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/533",
     "authorLogin": "newjordan"
@@ -20,16 +20,18 @@
     "submissionCount": 2
   },
   "output": {
-    "summary": "Base GPTQ model now swaps long EMA TTT for short 50-chunk SGD adaptation with frozen weights to prevent late-chunk drift while keeping the quant pipeline.",
+    "summary": "Base GPTQ pipeline with short 50-chunk SGD-only TTT plus int6+zstd-22 compression to avoid late-chunk degradation while keeping architecture unchanged.",
     "tags": [
       "quantization",
-      "evaluation"
+      "evaluation",
+      "training-schedule"
     ],
     "usesValOnly": false,
-    "valOnlyReasoning": "Standard training plus test-time adaptation; no validation-only training regime.",
+    "valOnlyReasoning": "",
     "techniques": [
-      "Short SGD TTT (50 chunks, no EMA) to capture quick adaptation",
-      "Int6 GPTQ weights with zstd-22 compression pipeline"
+      "Int6+zstd-22 GPTQ quantization pipeline",
+      "Short 50-chunk SGD-only TTT without EMA",
+      "Standard 11L/512d GPT architecture with partial RoPE"
     ]
   },
   "compatibility": {

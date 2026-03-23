@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-22T23:43:23.093Z",
+  "generatedAt": "2026-03-23T18:48:18.099Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 114,
-    "title": "#1 on leaderboard: val_bpb=1.1574 — Int6 + MLP 3x + selective precision + optimized long-context training",
+    "title": "Record: val_bpb=1.1574 — Int6 + MLP 3x + selective precision + optimized long-context training",
     "state": "open",
-    "updatedAt": "2026-03-22T23:37:07Z",
-    "headSha": "df4e221d02bf93b6f2580a7aeb2a6fb6782ae983",
+    "updatedAt": "2026-03-23T18:34:12Z",
+    "headSha": "266990989a9b3c5e08901d19265f349bfbc0eb64",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/114",
     "authorLogin": "saml212"
   },
@@ -19,18 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Int6 post-training quantization with fp16 passthrough lets a 3× wider MLP train at 2048 tokens while stride-256 sliding-window eval captures long context.",
+    "summary": "Int6 quantization with fp16 selective precision frees space for 3× MLP while train@2048 and stride-256 sliding eval capture long contexts efficiently.",
     "tags": [
       "quantization",
       "architecture",
-      "evaluation"
+      "evaluation",
+      "training-schedule"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Int6 PTQ with fp16 passthrough for tied embeddings and late-key layers",
-      "2048-token training, 786K-token batches, and tight 0.3 gradient clipping",
-      "Sliding-window evaluation with stride 256 to expose long context"
+      "Post-training int6 quantization with fp16 embedding and late-K passthrough",
+      "Expanded MLP hidden size to 1536 within the 16MB budget",
+      "Train@2048 plus stride-256 sliding window eval with tight grad clipping"
     ]
   },
   "compatibility": {
