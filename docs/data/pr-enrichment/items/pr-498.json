@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-23T04:14:05.187Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 498,
+    "title": "The Frugendorff: Recursive Weight Sharing + MLP 4x (1.1478 BPB, 15.19MB)",
+    "state": "open",
+    "updatedAt": "2026-03-23T04:12:07Z",
+    "headSha": "497e08b4521476656fa5cb43269fd64b0c5b30b4",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/498",
+    "authorLogin": "newjordan"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-23_Frugendorff_Squared_6x2_640d_MLP4/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Recursive weight sharing loops 6 unique transformer blocks twice, freeing budget to expand each MLP to 4x while staying under 16MB.",
+    "tags": [
+      "architecture",
+      "quantization",
+      "compression"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Recursive weight sharing over 6 blocks to simulate 12-layer depth",
+      "MLP 4x hidden expansion with Relu-squared activations",
+      "Int6 per-row quantization plus zstd compression to hit 16MB budget"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}
