@@ -1,0 +1,41 @@
+{
+  "generatedAt": "2026-03-23T05:44:12.804Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 506,
+    "title": "Non-record: 2026-03-22_SuperchunkBPE_SP1024",
+    "state": "open",
+    "updatedAt": "2026-03-23T05:43:26Z",
+    "headSha": "aac28620cbda1f3f33f946217c578dea831ac6f0",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/506",
+    "authorLogin": "eshansinghal14"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-03-22_SuperchunkBPE_SP1024/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Superchunk BPE interleaves cross-chunk merges with base rustbpe merges so a 1024-vocab tokenizer learns both intra- and inter-chunk patterns in one table.",
+    "tags": [
+      "tokenization",
+      "non-record"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "RustBPE superchunk merge learning",
+      "Interleaved phase-1 and cross-chunk merges",
+      "Fineweb10B_custom shards"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

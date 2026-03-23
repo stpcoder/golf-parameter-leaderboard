@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-23T00:43:59.017Z",
+  "generatedAt": "2026-03-23T05:44:18.003Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 481,
     "title": "Record: Cosine TTT scheduling with per-layer lr — mean val_bpb=1.0970 (3 seeds)",
     "state": "open",
-    "updatedAt": "2026-03-23T00:28:26Z",
+    "updatedAt": "2026-03-23T05:29:02Z",
     "headSha": "c8e034d42a18c7ff8cef86deb30b8999eab013c4",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/481",
     "authorLogin": "mrdavtan"
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "TTT adapts the community stack via AdamW with cosine-decaying lr and per-layer lr groups to focus adaptation on high-damage MLP projections.",
+    "summary": "TTT uses cosine decay plus per-layer lr groups to undo quantization damage, enhancing validation adaptation after the community-stack training run.",
     "tags": [
       "val-only",
-      "optimizer",
       "training-schedule",
-      "evaluation"
+      "optimizer",
+      "quantization"
     ],
     "usesValOnly": true,
-    "valOnlyReasoning": "TTT performs eval-time adaptation using validation-token shards instead of training data.",
+    "valOnlyReasoning": "TTT fine-tunes on the validation shard tokens to adapt the quantized model at eval time.",
     "techniques": [
-      "Cosine lr decay for TTT",
-      "Per-layer lr scaling by quantization error",
-      "AdamW optimizer for TTT adaptation"
+      "Cosine-decayed AdamW TTT over 30 epochs",
+      "Layer-wise lr scaling per quantization damage",
+      "Validation-shard fine-tuning as eval adaptation"
     ]
   },
   "compatibility": {
