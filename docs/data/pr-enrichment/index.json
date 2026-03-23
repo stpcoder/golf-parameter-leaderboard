@@ -1,8 +1,31 @@
 {
-  "generatedAt": "2026-03-23T11:45:51.186Z",
+  "generatedAt": "2026-03-23T12:16:17.056Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 524,
+      "title": "Xsa vr lora ttt",
+      "status": "open",
+      "updatedAt": "2026-03-23T12:10:44Z",
+      "headSha": "577dee41d2b2349528584d38dc9425c503a3a4ad",
+      "generatedAt": "2026-03-23T12:15:50.539Z",
+      "summary": "XSA-VR Transformer with sliding-plus-cross attention, value-residual mixing, and ALiBi feeds self-distillation plus LoRA TTT/N-gram mixed evaluation.",
+      "tags": [
+        "architecture",
+        "training-schedule",
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-524.json"
+    },
     {
       "prNumber": 523,
       "title": "Add RIOM v1 shared-depth recurrence non-record submission",
@@ -24,29 +47,6 @@
         "valOnlyMatchesCollector": true
       },
       "file": "items/pr-523.json"
-    },
-    {
-      "prNumber": 522,
-      "title": "Add XSA + Value Residual + LoRA TTT + N-gram mixer submission",
-      "status": "open",
-      "updatedAt": "2026-03-23T10:16:49Z",
-      "headSha": "8c3086517a1ceb19007f9a38377afaf66fe22c50",
-      "generatedAt": "2026-03-23T10:45:38.607Z",
-      "summary": "Combines cross-window self-attention with value residuals, LoRA TTT adaptation, and an N-gram mixer for the compact 16MB/10min run.",
-      "tags": [
-        "attention",
-        "architecture",
-        "training-schedule"
-      ],
-      "flags": {
-        "usesValOnly": false,
-        "usesValOnlyAi": false,
-        "usesValOnlyCollector": false
-      },
-      "compatibility": {
-        "valOnlyMatchesCollector": true
-      },
-      "file": "items/pr-522.json"
     },
     {
       "prNumber": 518,
@@ -96,16 +96,15 @@
     {
       "prNumber": 516,
       "title": "Record: 11L NonTTT VR+GA MixedInt5/6: val_bpb=1.1428 (3-seed, 8xH100)",
-      "status": "open",
-      "updatedAt": "2026-03-23T08:53:25Z",
+      "status": "closed",
+      "updatedAt": "2026-03-23T12:05:28Z",
       "headSha": "cf0db784ce0b05165b64497ee0b96cf0bdae232f",
-      "generatedAt": "2026-03-23T09:15:15.993Z",
-      "summary": "Non-TTT run mixes cached value residuals with gated attention and selective Int5/Int6 quantization for a compact sliding-window eval pipeline.",
+      "generatedAt": "2026-03-23T12:15:56.320Z",
+      "summary": "Non-TTT run adds Value Residual caching plus gated attention while quantizing edge layers at int6 and MLP middles at int5 for better compression.",
       "tags": [
         "quantization",
         "attention",
-        "architecture",
-        "evaluation"
+        "architecture"
       ],
       "flags": {
         "usesValOnly": false,
@@ -167,15 +166,16 @@
     },
     {
       "prNumber": 512,
-      "title": "Record: PROTEUS v7 — 11L INT6 + LoRA TTT (mean val_bpb=0.9968)",
+      "title": "Record: PROTEUS v7 — 11L INT6 + LoRA TTT (mean val_bpb=0.9512, 3 seeds)",
       "status": "open",
-      "updatedAt": "2026-03-23T11:15:43Z",
+      "updatedAt": "2026-03-23T12:05:26Z",
       "headSha": "502a29f01510b50a872a8b3737dfe874a3478e2d",
-      "generatedAt": "2026-03-23T11:45:36.262Z",
-      "summary": "11-layer Proteus model uses INT6 uniform quant and depth-scaled residuals plus backward-looking multi-epoch LoRA TTT per document.",
+      "generatedAt": "2026-03-23T12:16:02.575Z",
+      "summary": "11-layer transformer using depth-scaled residuals, uniform INT6 quant, and batched backward LoRA TTT per document for compact eval adaptation.",
       "tags": [
         "quantization",
         "architecture",
+        "training-schedule",
         "evaluation"
       ],
       "flags": {
@@ -1638,15 +1638,15 @@
       "prNumber": 435,
       "title": "Radial bitnet submission",
       "status": "open",
-      "updatedAt": "2026-03-23T09:24:52Z",
-      "headSha": "f534e009a327d97a65f1f4deda149ee8e20ed14c",
-      "generatedAt": "2026-03-23T09:45:19.852Z",
-      "summary": "Radial-BitNet pairs ternary BitNet projections with analytic Radial Encoding and FRO optimizer to cram 15.6M params into 16MB.",
+      "updatedAt": "2026-03-23T12:15:50Z",
+      "headSha": "fab7c61166a9a65649aec869722d6714149bd10a",
+      "generatedAt": "2026-03-23T12:16:07.872Z",
+      "summary": "Radial-BitNet packs 15.6M ternary params into 16MB by combining BitNet quantization with radial positional injection and the FRO optimizer for 10-minute convergence.",
       "tags": [
         "quantization",
+        "architecture",
         "positional-encoding",
-        "optimizer",
-        "architecture"
+        "optimizer"
       ],
       "flags": {
         "usesValOnly": false,
@@ -2391,14 +2391,14 @@
       "prNumber": 392,
       "title": "WIP: Record: Copy Network + Dict Residual (LZ77 + Brotli compression-inspired)",
       "status": "open",
-      "updatedAt": "2026-03-22T03:30:47Z",
+      "updatedAt": "2026-03-23T11:45:44Z",
       "headSha": "1c54e9d6ea9cbfca1a3d7c4631ceadc0ad77b8fd",
-      "generatedAt": "2026-03-22T03:36:31.415Z",
-      "summary": "Frozen n-gram dictionary logits mix with transformer correction and a copy-pointer head to offload predictable/repetitive tokens before neural refinement.",
+      "generatedAt": "2026-03-23T12:16:16.997Z",
+      "summary": "Adds LZ77-inspired copy attention plus a frozen Brotli-style n-gram dictionary mixing into a small transformer to offload repetitive predictions.",
       "tags": [
         "architecture",
-        "compression",
-        "attention"
+        "attention",
+        "compression"
       ],
       "flags": {
         "usesValOnly": false,

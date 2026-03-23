@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-23T12:15:50.539Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 524,
+    "title": "Xsa vr lora ttt",
+    "state": "open",
+    "updatedAt": "2026-03-23T12:10:44Z",
+    "headSha": "577dee41d2b2349528584d38dc9425c503a3a4ad",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/524",
+    "authorLogin": "Himanshukkk"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-23_XSA_VR_LoRaTTT/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "XSA-VR Transformer with sliding-plus-cross attention, value-residual mixing, and ALiBi feeds self-distillation plus LoRA TTT/N-gram mixed evaluation.",
+    "tags": [
+      "architecture",
+      "training-schedule",
+      "evaluation"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "XSA-VR with gated cross-summary stream",
+      "self-distillation after 70% budget",
+      "LoRA test-time training plus N-gram mixing and temperature calibration"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}
