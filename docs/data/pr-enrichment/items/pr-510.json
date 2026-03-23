@@ -1,0 +1,40 @@
+{
+  "generatedAt": "2026-03-23T07:44:49.273Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 510,
+    "title": "Non-record: MUD optimizer — triangular Gram preconditioning (arxiv:2603.17970)",
+    "state": "open",
+    "updatedAt": "2026-03-23T07:22:27Z",
+    "headSha": "530f77f4304888c2f73cc9e8dbc5d948bc5128f4",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/510",
+    "authorLogin": "SelfAnush"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-03-22_MUD_Int5MLP_BigramHash_SWA/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Swaps Muon’s Newton-Schulz step for MUD’s triangular Gram preconditioning while keeping the SOTA architecture and quantization intact.",
+    "tags": [
+      "optimizer",
+      "non-record"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Triangular Gram preconditioning via mud_whiten replaces Newton-Schulz",
+      "Keeps Muon SOTA architecture/quantization/training loop unchanged"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}
