@@ -1,0 +1,40 @@
+{
+  "generatedAt": "2026-03-23T11:45:30.202Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 523,
+    "title": "Add RIOM v1 shared-depth recurrence non-record submission",
+    "state": "open",
+    "updatedAt": "2026-03-23T11:29:49Z",
+    "headSha": "ebe868ff8a1a5cc531cd790655aa2384e9be88b0",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/523",
+    "authorLogin": "hesong0222-dev"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-03-23_RIOM_v1_recur/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Shared-depth recurrence reuses 3 transformer blocks thrice with learned gates to keep the SP1024 pipeline unchanged while cutting parameters.",
+    "tags": [
+      "architecture",
+      "non-record"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "shared-depth recurrence with learned recurrence gates",
+      "parameter sharing preserves the SP1024 tokenizer/dataset path"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-23T02:44:23.721Z",
+  "generatedAt": "2026-03-23T11:45:42.965Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 473,
     "title": "Record: Legal Score-First TTT + Parallel Muon — val_bpb 1.1220 (3-seed mean)",
     "state": "open",
-    "updatedAt": "2026-03-23T02:31:06Z",
+    "updatedAt": "2026-03-23T11:36:19Z",
     "headSha": "ffe7c40dff3f0fdd78e8a5dd3ce9f6f7ab90230b",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/473",
     "authorLogin": "abaybektursun"
@@ -19,24 +19,24 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Combines Parameter Banking + Parallel Muon optimizer with legal score-first chunked TTT that adapts only on already-scored validation chunks.",
+    "summary": "Legal score-first TTT runs atop the GPTQ-lite/VE128 stack using Parameter Banking + Parallel Muon optimizer to score before SGD adaptation.",
     "tags": [
-      "val-only",
       "optimizer",
+      "muon",
       "evaluation"
     ],
-    "usesValOnly": true,
-    "valOnlyReasoning": "TTT adaptation trains on validation chunks after scoring them, so the eval phase includes explicit val-only training before each scored chunk.",
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
     "techniques": [
-      "Parameter Banking + Parallel Muon optimizer",
-      "Legal score-first chunked TTT under inference_mode",
-      "GPTQ-lite stack with VE128, XSA4, Tight SWA"
+      "Parameter Banking + Parallel Muon optimizer flow",
+      "Score-first TTT with inference_mode scoring before SGD adaptation",
+      "GPTQ-lite/VE128 stack with tight SWA"
     ]
   },
   "compatibility": {
     "collectorUsesValOnly": false,
-    "aiUsesValOnly": true,
-    "finalUsesValOnly": true,
-    "valOnlyMatchesCollector": false
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
   }
 }

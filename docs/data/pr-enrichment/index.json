@@ -1,8 +1,30 @@
 {
-  "generatedAt": "2026-03-23T10:45:44.273Z",
+  "generatedAt": "2026-03-23T11:45:51.186Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 523,
+      "title": "Add RIOM v1 shared-depth recurrence non-record submission",
+      "status": "open",
+      "updatedAt": "2026-03-23T11:29:49Z",
+      "headSha": "ebe868ff8a1a5cc531cd790655aa2384e9be88b0",
+      "generatedAt": "2026-03-23T11:45:30.202Z",
+      "summary": "Shared-depth recurrence reuses 3 transformer blocks thrice with learned gates to keep the SP1024 pipeline unchanged while cutting parameters.",
+      "tags": [
+        "architecture",
+        "non-record"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-523.json"
+    },
     {
       "prNumber": 522,
       "title": "Add XSA + Value Residual + LoRA TTT + N-gram mixer submission",
@@ -25,28 +47,6 @@
         "valOnlyMatchesCollector": true
       },
       "file": "items/pr-522.json"
-    },
-    {
-      "prNumber": 521,
-      "title": "Add RIOM v1 shared-depth recurrence non-record submission",
-      "status": "open",
-      "updatedAt": "2026-03-23T09:59:59Z",
-      "headSha": "4886f248020f2e8dbf6ec70c2db8c9b113f9fe2e",
-      "generatedAt": "2026-03-23T10:15:17.725Z",
-      "summary": "Shares three transformer blocks across three recurrence loops with learned gates to keep the 9-layer depth while reducing parameters.",
-      "tags": [
-        "architecture",
-        "non-record"
-      ],
-      "flags": {
-        "usesValOnly": false,
-        "usesValOnlyAi": false,
-        "usesValOnlyCollector": false
-      },
-      "compatibility": {
-        "valOnlyMatchesCollector": true
-      },
-      "file": "items/pr-521.json"
     },
     {
       "prNumber": 518,
@@ -169,14 +169,13 @@
       "prNumber": 512,
       "title": "Record: PROTEUS v7 — 11L INT6 + LoRA TTT (mean val_bpb=0.9968)",
       "status": "open",
-      "updatedAt": "2026-03-23T08:52:02Z",
+      "updatedAt": "2026-03-23T11:15:43Z",
       "headSha": "502a29f01510b50a872a8b3737dfe874a3478e2d",
-      "generatedAt": "2026-03-23T09:15:29.424Z",
-      "summary": "11-layer INT6 transformer uses depth-scaled residuals plus backward-looking multi-epoch per-document LoRA TTT.",
+      "generatedAt": "2026-03-23T11:45:36.262Z",
+      "summary": "11-layer Proteus model uses INT6 uniform quant and depth-scaled residuals plus backward-looking multi-epoch LoRA TTT per document.",
       "tags": [
         "quantization",
         "architecture",
-        "optimizer",
         "evaluation"
       ],
       "flags": {
@@ -892,22 +891,22 @@
       "prNumber": 473,
       "title": "Record: Legal Score-First TTT + Parallel Muon — val_bpb 1.1220 (3-seed mean)",
       "status": "open",
-      "updatedAt": "2026-03-23T02:31:06Z",
+      "updatedAt": "2026-03-23T11:36:19Z",
       "headSha": "ffe7c40dff3f0fdd78e8a5dd3ce9f6f7ab90230b",
-      "generatedAt": "2026-03-23T02:44:23.721Z",
-      "summary": "Combines Parameter Banking + Parallel Muon optimizer with legal score-first chunked TTT that adapts only on already-scored validation chunks.",
+      "generatedAt": "2026-03-23T11:45:42.965Z",
+      "summary": "Legal score-first TTT runs atop the GPTQ-lite/VE128 stack using Parameter Banking + Parallel Muon optimizer to score before SGD adaptation.",
       "tags": [
-        "val-only",
         "optimizer",
+        "muon",
         "evaluation"
       ],
       "flags": {
-        "usesValOnly": true,
-        "usesValOnlyAi": true,
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
         "usesValOnlyCollector": false
       },
       "compatibility": {
-        "valOnlyMatchesCollector": false
+        "valOnlyMatchesCollector": true
       },
       "file": "items/pr-473.json"
     },
@@ -1758,23 +1757,23 @@
       "prNumber": 430,
       "title": "Value Residual + Gated Attention + XSA + EMA + AdamW TTT — val_bpb pending H100",
       "status": "open",
-      "updatedAt": "2026-03-23T09:02:53Z",
-      "headSha": "8acadd01d9c685ac3fbbc0c9571c44caecafc806",
-      "generatedAt": "2026-03-23T09:15:53.234Z",
-      "summary": "Pairs SwiGLU + value-residual + gated-attention layers with Exclusive Self-Attn, EMA weights, and AdamW test-time tuning on thwu1’s base stack.",
+      "updatedAt": "2026-03-23T11:21:40Z",
+      "headSha": "d93fff7360b0c882bf06350f727193b38343de69",
+      "generatedAt": "2026-03-23T11:45:51.123Z",
+      "summary": "Stack swaps ReLU² for SwiGLU and layers in value-residual/gated attention, XSA, EMA, and AdamW test-time training before evaluation.",
       "tags": [
+        "val-only",
         "architecture",
         "attention",
-        "training-schedule",
-        "optimizer"
+        "training-schedule"
       ],
       "flags": {
-        "usesValOnly": false,
-        "usesValOnlyAi": false,
+        "usesValOnly": true,
+        "usesValOnlyAi": true,
         "usesValOnlyCollector": false
       },
       "compatibility": {
-        "valOnlyMatchesCollector": true
+        "valOnlyMatchesCollector": false
       },
       "file": "items/pr-430.json"
     },

@@ -1,8 +1,8 @@
 {
   "version": 1,
   "sourceRepo": "openai/parameter-golf",
-  "generatedAt": "2026-03-23T11:15:14.307Z",
-  "lastSeenUpdatedAt": "2026-03-23T10:35:15Z",
+  "generatedAt": "2026-03-23T11:45:22.974Z",
+  "lastSeenUpdatedAt": "2026-03-23T11:36:19Z",
   "prs": {
     "1": {
       "number": 1,
@@ -36040,7 +36040,7 @@
     },
     "430": {
       "number": 430,
-      "updatedAt": "2026-03-23T09:02:53Z",
+      "updatedAt": "2026-03-23T11:21:40Z",
       "pr": {
         "number": 430,
         "title": "Value Residual + Gated Attention + XSA + EMA + AdamW TTT — val_bpb pending H100",
@@ -36051,8 +36051,8 @@
         "authorLogin": "sahiee-dev",
         "authorName": null,
         "createdAt": "2026-03-22T15:12:45Z",
-        "updatedAt": "2026-03-23T09:02:53Z",
-        "headSha": "8acadd01d9c685ac3fbbc0c9571c44caecafc806",
+        "updatedAt": "2026-03-23T11:21:40Z",
+        "headSha": "d93fff7360b0c882bf06350f727193b38343de69",
         "headRepo": "sahiee-dev/parameter-golf"
       },
       "submissions": [
@@ -36114,16 +36114,16 @@
             "authorLogin": "sahiee-dev",
             "authorName": null,
             "createdAt": "2026-03-22T15:12:45Z",
-            "updatedAt": "2026-03-23T09:02:53Z",
-            "headSha": "8acadd01d9c685ac3fbbc0c9571c44caecafc806",
+            "updatedAt": "2026-03-23T11:21:40Z",
+            "headSha": "d93fff7360b0c882bf06350f727193b38343de69",
             "headRepo": "sahiee-dev/parameter-golf"
           },
           "links": {
-            "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/8acadd01d9c685ac3fbbc0c9571c44caecafc806/records/track_10min_16mb/2026-03-22_XSA_EMA_TTT_sahiee-dev/submission.json",
-            "readme": "https://github.com/openai/parameter-golf/blob/8acadd01d9c685ac3fbbc0c9571c44caecafc806/records/track_10min_16mb/2026-03-22_XSA_EMA_TTT_sahiee-dev/README.md",
-            "trainLog": "https://github.com/openai/parameter-golf/blob/8acadd01d9c685ac3fbbc0c9571c44caecafc806/records/track_10min_16mb/2026-03-22_XSA_EMA_TTT_sahiee-dev/train.log",
-            "script": "https://github.com/openai/parameter-golf/blob/8acadd01d9c685ac3fbbc0c9571c44caecafc806/records/track_10min_16mb/2026-03-22_XSA_EMA_TTT_sahiee-dev/train_gpt.py",
-            "folder": "https://github.com/openai/parameter-golf/tree/8acadd01d9c685ac3fbbc0c9571c44caecafc806/records/track_10min_16mb/2026-03-22_XSA_EMA_TTT_sahiee-dev",
+            "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/d93fff7360b0c882bf06350f727193b38343de69/records/track_10min_16mb/2026-03-22_XSA_EMA_TTT_sahiee-dev/submission.json",
+            "readme": "https://github.com/openai/parameter-golf/blob/d93fff7360b0c882bf06350f727193b38343de69/records/track_10min_16mb/2026-03-22_XSA_EMA_TTT_sahiee-dev/README.md",
+            "trainLog": "https://github.com/openai/parameter-golf/blob/d93fff7360b0c882bf06350f727193b38343de69/records/track_10min_16mb/2026-03-22_XSA_EMA_TTT_sahiee-dev/train.log",
+            "script": "https://github.com/openai/parameter-golf/blob/d93fff7360b0c882bf06350f727193b38343de69/records/track_10min_16mb/2026-03-22_XSA_EMA_TTT_sahiee-dev/train_gpt.py",
+            "folder": "https://github.com/openai/parameter-golf/tree/d93fff7360b0c882bf06350f727193b38343de69/records/track_10min_16mb/2026-03-22_XSA_EMA_TTT_sahiee-dev",
             "pr": "https://github.com/openai/parameter-golf/pull/430"
           }
         }
@@ -39949,7 +39949,7 @@
     },
     "473": {
       "number": 473,
-      "updatedAt": "2026-03-23T02:31:06Z",
+      "updatedAt": "2026-03-23T11:36:19Z",
       "pr": {
         "number": 473,
         "title": "Record: Legal Score-First TTT + Parallel Muon — val_bpb 1.1220 (3-seed mean)",
@@ -39960,7 +39960,7 @@
         "authorLogin": "abaybektursun",
         "authorName": null,
         "createdAt": "2026-03-22T23:28:14Z",
-        "updatedAt": "2026-03-23T02:31:06Z",
+        "updatedAt": "2026-03-23T11:36:19Z",
         "headSha": "ffe7c40dff3f0fdd78e8a5dd3ce9f6f7ab90230b",
         "headRepo": "abaybektursun/parameter-golf"
       },
@@ -40023,7 +40023,7 @@
             "authorLogin": "abaybektursun",
             "authorName": null,
             "createdAt": "2026-03-22T23:28:14Z",
-            "updatedAt": "2026-03-23T02:31:06Z",
+            "updatedAt": "2026-03-23T11:36:19Z",
             "headSha": "ffe7c40dff3f0fdd78e8a5dd3ce9f6f7ab90230b",
             "headRepo": "abaybektursun/parameter-golf"
           },
@@ -43352,7 +43352,7 @@
     },
     "512": {
       "number": 512,
-      "updatedAt": "2026-03-23T08:52:02Z",
+      "updatedAt": "2026-03-23T11:15:43Z",
       "pr": {
         "number": 512,
         "title": "Record: PROTEUS v7 — 11L INT6 + LoRA TTT (mean val_bpb=0.9968)",
@@ -43363,7 +43363,7 @@
         "authorLogin": "MatoTeziTanka",
         "authorName": null,
         "createdAt": "2026-03-23T07:58:41Z",
-        "updatedAt": "2026-03-23T08:52:02Z",
+        "updatedAt": "2026-03-23T11:15:43Z",
         "headSha": "502a29f01510b50a872a8b3737dfe874a3478e2d",
         "headRepo": "MatoTeziTanka/parameter-golf"
       },
@@ -43426,7 +43426,7 @@
             "authorLogin": "MatoTeziTanka",
             "authorName": null,
             "createdAt": "2026-03-23T07:58:41Z",
-            "updatedAt": "2026-03-23T08:52:02Z",
+            "updatedAt": "2026-03-23T11:15:43Z",
             "headSha": "502a29f01510b50a872a8b3737dfe874a3478e2d",
             "headRepo": "MatoTeziTanka/parameter-golf"
           },
@@ -43988,18 +43988,18 @@
     },
     "521": {
       "number": 521,
-      "updatedAt": "2026-03-23T09:59:59Z",
+      "updatedAt": "2026-03-23T11:34:40Z",
       "pr": {
         "number": 521,
-        "title": "Add RIOM v1 shared-depth recurrence non-record submission",
-        "state": "open",
-        "draft": true,
+        "title": "Superseded draft",
+        "state": "closed",
+        "draft": false,
         "mergedAt": null,
         "htmlUrl": "https://github.com/openai/parameter-golf/pull/521",
         "authorLogin": "hesong0222-dev",
         "authorName": null,
         "createdAt": "2026-03-23T09:59:59Z",
-        "updatedAt": "2026-03-23T09:59:59Z",
+        "updatedAt": "2026-03-23T11:34:40Z",
         "headSha": "4886f248020f2e8dbf6ec70c2db8c9b113f9fe2e",
         "headRepo": "hesong0222-dev/parameter-golf"
       },
@@ -44007,7 +44007,7 @@
         {
           "id": "pr-521-records-track_non_record_16mb-2026-03-23_RIOM_v1_recur-submission-json",
           "source": "pull_request",
-          "status": "open",
+          "status": "closed",
           "category": "non-record",
           "track": {
             "path": "records/track_non_record_16mb",
@@ -44054,15 +44054,15 @@
           },
           "pr": {
             "number": 521,
-            "title": "Add RIOM v1 shared-depth recurrence non-record submission",
-            "state": "open",
-            "draft": true,
+            "title": "Superseded draft",
+            "state": "closed",
+            "draft": false,
             "mergedAt": null,
             "htmlUrl": "https://github.com/openai/parameter-golf/pull/521",
             "authorLogin": "hesong0222-dev",
             "authorName": null,
             "createdAt": "2026-03-23T09:59:59Z",
-            "updatedAt": "2026-03-23T09:59:59Z",
+            "updatedAt": "2026-03-23T11:34:40Z",
             "headSha": "4886f248020f2e8dbf6ec70c2db8c9b113f9fe2e",
             "headRepo": "hesong0222-dev/parameter-golf"
           },
@@ -44164,6 +44164,97 @@
             "script": "https://github.com/openai/parameter-golf/blob/8c3086517a1ceb19007f9a38377afaf66fe22c50/records/track_10min_16mb/2026-03-23_XSA_VR_LoRaTTT/train_gpt.py",
             "folder": "https://github.com/openai/parameter-golf/tree/8c3086517a1ceb19007f9a38377afaf66fe22c50/records/track_10min_16mb/2026-03-23_XSA_VR_LoRaTTT",
             "pr": "https://github.com/openai/parameter-golf/pull/522"
+          }
+        }
+      ]
+    },
+    "523": {
+      "number": 523,
+      "updatedAt": "2026-03-23T11:29:49Z",
+      "pr": {
+        "number": 523,
+        "title": "Add RIOM v1 shared-depth recurrence non-record submission",
+        "state": "open",
+        "draft": true,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/523",
+        "authorLogin": "hesong0222-dev",
+        "authorName": null,
+        "createdAt": "2026-03-23T11:29:49Z",
+        "updatedAt": "2026-03-23T11:29:49Z",
+        "headSha": "ebe868ff8a1a5cc531cd790655aa2384e9be88b0",
+        "headRepo": "hesong0222-dev/parameter-golf"
+      },
+      "submissions": [
+        {
+          "id": "pr-523-records-track_non_record_16mb-2026-03-23_RIOM_v1_recur-submission-json",
+          "source": "pull_request",
+          "status": "open",
+          "category": "non-record",
+          "track": {
+            "path": "records/track_non_record_16mb",
+            "slug": "track_non_record_16mb",
+            "label": "Non-record / 16MB",
+            "official": false,
+            "category": "non-record"
+          },
+          "record": {
+            "folderName": "2026-03-23_RIOM_v1_recur",
+            "folderPath": "records/track_non_record_16mb/2026-03-23_RIOM_v1_recur",
+            "submissionPath": "records/track_non_record_16mb/2026-03-23_RIOM_v1_recur/submission.json",
+            "readmePath": "records/track_non_record_16mb/2026-03-23_RIOM_v1_recur/README.md",
+            "trainLogPath": "records/track_non_record_16mb/2026-03-23_RIOM_v1_recur/train.log",
+            "scriptPath": "records/track_non_record_16mb/2026-03-23_RIOM_v1_recur/train_gpt.py"
+          },
+          "submission": {
+            "author": "hesong0222-dev",
+            "githubId": "hesong0222-dev",
+            "name": "RIOM v1 Shared-Depth Recurrence (MLX dev smoke)",
+            "blurb": "Non-record RIOM development package: 3 shared transformer blocks repeated 3 times with learned recurrence gates, using the official SP1024 tokenizer/dataset and the first 1,048,576 validation tokens on Apple Silicon MLX.",
+            "date": "2026-03-23T00:00:00Z"
+          },
+          "metrics": {
+            "valBpb": 3.24862008,
+            "valLoss": 5.42207763,
+            "preQuantValBpb": 3.2439,
+            "preQuantValLoss": 5.4143,
+            "stepStop": 50,
+            "wallclockSeconds": 234.488,
+            "evalTimeSeconds": null
+          },
+          "artifact": {
+            "bytesTotal": 2324841,
+            "bytesCode": 51404,
+            "bytesModelInt8Zlib": 2273437
+          },
+          "flags": {
+            "usesValOnly": false
+          },
+          "detection": {
+            "valOnlyConfidence": "none",
+            "valOnlyMatches": []
+          },
+          "pr": {
+            "number": 523,
+            "title": "Add RIOM v1 shared-depth recurrence non-record submission",
+            "state": "open",
+            "draft": true,
+            "mergedAt": null,
+            "htmlUrl": "https://github.com/openai/parameter-golf/pull/523",
+            "authorLogin": "hesong0222-dev",
+            "authorName": null,
+            "createdAt": "2026-03-23T11:29:49Z",
+            "updatedAt": "2026-03-23T11:29:49Z",
+            "headSha": "ebe868ff8a1a5cc531cd790655aa2384e9be88b0",
+            "headRepo": "hesong0222-dev/parameter-golf"
+          },
+          "links": {
+            "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/ebe868ff8a1a5cc531cd790655aa2384e9be88b0/records/track_non_record_16mb/2026-03-23_RIOM_v1_recur/submission.json",
+            "readme": "https://github.com/openai/parameter-golf/blob/ebe868ff8a1a5cc531cd790655aa2384e9be88b0/records/track_non_record_16mb/2026-03-23_RIOM_v1_recur/README.md",
+            "trainLog": "https://github.com/openai/parameter-golf/blob/ebe868ff8a1a5cc531cd790655aa2384e9be88b0/records/track_non_record_16mb/2026-03-23_RIOM_v1_recur/train.log",
+            "script": "https://github.com/openai/parameter-golf/blob/ebe868ff8a1a5cc531cd790655aa2384e9be88b0/records/track_non_record_16mb/2026-03-23_RIOM_v1_recur/train_gpt.py",
+            "folder": "https://github.com/openai/parameter-golf/tree/ebe868ff8a1a5cc531cd790655aa2384e9be88b0/records/track_non_record_16mb/2026-03-23_RIOM_v1_recur",
+            "pr": "https://github.com/openai/parameter-golf/pull/523"
           }
         }
       ]
