@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-22T23:13:18.740Z",
+  "generatedAt": "2026-03-23T19:48:00.564Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 376,
     "title": "Record: 11L Next-Gen Stack + Custom Kernels, val_bpb=1.1399",
     "state": "open",
-    "updatedAt": "2026-03-22T23:05:03Z",
-    "headSha": "c9b6583b52e3590a7d0a570cdf5a1f952e1d6ffc",
+    "updatedAt": "2026-03-23T19:37:16Z",
+    "headSha": "962419301eac2eeb5f9f90b324f4be6029b39029",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/376",
     "authorLogin": "anthony-maio"
   },
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "11-layer stack pairs XSA, NTK-aware RoPE, SmearGate+BigramHash features, int5+zstd compression, Muon+SWA schedule, and custom kernels for fast 10-min runs.",
+    "summary": "11-layer transformer bundles XSA, partial NTK-RoPE, Muon+SWA training, int5+zstd compression, and custom Triton kernels for a compact Next-Gen Stack.",
     "tags": [
-      "sliding-window-eval",
+      "architecture",
       "quantization",
       "optimizer",
-      "attention"
+      "compression"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "SmearGate+BigramHash feature fusion",
-      "Muon optimizer with tight SWA warmdown",
-      "NTK-aware RoPE plus int5+zstd quantization"
+      "XSA with partial NTK-aware RoPE and depth-aware LN scaling",
+      "Int5 quantization plus GPTQ-lite search layered with zstd-22 compression",
+      "Muon optimizer with μP scaling and SWA tail averaging"
     ]
   },
   "compatibility": {

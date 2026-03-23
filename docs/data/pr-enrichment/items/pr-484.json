@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-23T19:17:50.416Z",
+  "generatedAt": "2026-03-23T19:47:54.584Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 484,
-    "title": "Sequential TTT + Global Cosine Schedule + Memorization Analysis (val_bpb=1.0028, 8xH100 SXM)",
+    "title": "Non-record: SwiGLU + EMA + TTT Memorization Analysis (val_bpb=1.1679)",
     "state": "open",
-    "updatedAt": "2026-03-23T19:16:44Z",
-    "headSha": "3fb6b508d0c642e8b747e1aa8b25c649481de23e",
+    "updatedAt": "2026-03-23T19:46:20Z",
+    "headSha": "1d7c2488fa490723ac228cfc2119f987cc62cb32",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/484",
     "authorLogin": "Robby955"
   },
@@ -19,18 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Global cosine TTT with per-layer LR multipliers and memorization diagnostics stabilizes five-epoch adaptation while logging sliding BPB.",
+    "summary": "Combines int5-quantized SwiGLU+EMA architecture with pruning and a sliding-window diagnostic plus cosine LR scheduling to detect TTT memorization.",
     "tags": [
-      "training-schedule",
+      "architecture",
+      "quantization",
       "evaluation",
-      "quantization"
+      "training-schedule"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Global cosine LR decay across all TTT epochs",
-      "Per-layer LR multipliers giving later layers higher adaptation rates",
-      "Sliding-window memorization diagnostic on adapted weights"
+      "TTT memorization diagnostic comparing sliding eval versus loop scores",
+      "global cosine LR with per-layer multipliers for multi-epoch TTT",
+      "SwiGLU+EMA int5-quantized 10-layer model with pruning and BigramHash"
     ]
   },
   "compatibility": {

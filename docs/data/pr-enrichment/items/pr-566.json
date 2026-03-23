@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-23T19:47:42.593Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 566,
+    "title": "deeprec v1",
+    "state": "closed",
+    "updatedAt": "2026-03-23T19:28:00Z",
+    "headSha": "38977811341448ff60c69a43b82ed3b12f68ccb7",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/566",
+    "authorLogin": "DerekWWang"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-23_DepthRecurrence_4x8_LoRA_UNet/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Shares four transformer blocks over eight iterations with per-iteration LoRA, U-Net skips, and learned layer scales to stabilize a deep recurrent body.",
+    "tags": [
+      "architecture",
+      "attention",
+      "training-schedule"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Looped depth recurrence with shared 4 blocks",
+      "Per-iteration LoRA adapters on attention outputs",
+      "U-Net skips plus layer-scale gating for stability"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

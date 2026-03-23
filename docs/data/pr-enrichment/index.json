@@ -1,8 +1,55 @@
 {
-  "generatedAt": "2026-03-23T19:17:50.493Z",
+  "generatedAt": "2026-03-23T19:48:05.360Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 568,
+      "title": "Record: PROTEUS v8 — 11L INT6 + LoRA TTT 5ep cosine (mean val_bpb=0.7853, 4 seeds)",
+      "status": "open",
+      "updatedAt": "2026-03-23T19:43:44Z",
+      "headSha": "0a263b7dbf0813d1767d1392ac127aea6173bc78",
+      "generatedAt": "2026-03-23T19:47:37.128Z",
+      "summary": "Depth-scaled 11-layer INT6 transformer runs LoRA TTT over five cosine-scheduled epochs with per-epoch scoring on sequential chunks.",
+      "tags": [
+        "quantization",
+        "training-schedule",
+        "evaluation",
+        "architecture"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-568.json"
+    },
+    {
+      "prNumber": 566,
+      "title": "deeprec v1",
+      "status": "closed",
+      "updatedAt": "2026-03-23T19:28:00Z",
+      "headSha": "38977811341448ff60c69a43b82ed3b12f68ccb7",
+      "generatedAt": "2026-03-23T19:47:42.593Z",
+      "summary": "Shares four transformer blocks over eight iterations with per-iteration LoRA, U-Net skips, and learned layer scales to stabilize a deep recurrent body.",
+      "tags": [
+        "architecture",
+        "attention",
+        "training-schedule"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-566.json"
+    },
     {
       "prNumber": 565,
       "title": "draft: harshit baseline submission - Int4 NF4 + BigramHash + LoRA TTT",
@@ -866,22 +913,23 @@
       "prNumber": 512,
       "title": "Record: PROTEUS v7 — 11L INT6 + LoRA TTT (mean val_bpb=0.9512, 3 seeds)",
       "status": "open",
-      "updatedAt": "2026-03-23T13:58:53Z",
+      "updatedAt": "2026-03-23T19:44:01Z",
       "headSha": "502a29f01510b50a872a8b3737dfe874a3478e2d",
-      "generatedAt": "2026-03-23T14:16:05.047Z",
-      "summary": "11-layer PROTEUS pairs INT6 uniform quantization and depth-scaled residuals with backward-looking per-document LoRA test-time training.",
+      "generatedAt": "2026-03-23T19:47:49.325Z",
+      "summary": "11-layer INT6 quantized transformer uses depth-scaled residuals plus backward-looking multi-epoch LoRA TTT for stable evaluation adaptation.",
       "tags": [
+        "val-only",
         "quantization",
         "architecture",
         "evaluation"
       ],
       "flags": {
-        "usesValOnly": false,
-        "usesValOnlyAi": false,
+        "usesValOnly": true,
+        "usesValOnlyAi": true,
         "usesValOnlyCollector": false
       },
       "compatibility": {
-        "valOnlyMatchesCollector": true
+        "valOnlyMatchesCollector": false
       },
       "file": "items/pr-512.json"
     },
@@ -1395,16 +1443,17 @@
     },
     {
       "prNumber": 484,
-      "title": "Sequential TTT + Global Cosine Schedule + Memorization Analysis (val_bpb=1.0028, 8xH100 SXM)",
+      "title": "Non-record: SwiGLU + EMA + TTT Memorization Analysis (val_bpb=1.1679)",
       "status": "open",
-      "updatedAt": "2026-03-23T19:16:44Z",
-      "headSha": "3fb6b508d0c642e8b747e1aa8b25c649481de23e",
-      "generatedAt": "2026-03-23T19:17:50.416Z",
-      "summary": "Global cosine TTT with per-layer LR multipliers and memorization diagnostics stabilizes five-epoch adaptation while logging sliding BPB.",
+      "updatedAt": "2026-03-23T19:46:20Z",
+      "headSha": "1d7c2488fa490723ac228cfc2119f987cc62cb32",
+      "generatedAt": "2026-03-23T19:47:54.584Z",
+      "summary": "Combines int5-quantized SwiGLU+EMA architecture with pruning and a sliding-window diagnostic plus cosine LR scheduling to detect TTT memorization.",
       "tags": [
-        "training-schedule",
+        "architecture",
+        "quantization",
         "evaluation",
-        "quantization"
+        "training-schedule"
       ],
       "flags": {
         "usesValOnly": false,
@@ -3319,15 +3368,15 @@
       "prNumber": 376,
       "title": "Record: 11L Next-Gen Stack + Custom Kernels, val_bpb=1.1399",
       "status": "open",
-      "updatedAt": "2026-03-22T23:05:03Z",
-      "headSha": "c9b6583b52e3590a7d0a570cdf5a1f952e1d6ffc",
-      "generatedAt": "2026-03-22T23:13:18.740Z",
-      "summary": "11-layer stack pairs XSA, NTK-aware RoPE, SmearGate+BigramHash features, int5+zstd compression, Muon+SWA schedule, and custom kernels for fast 10-min runs.",
+      "updatedAt": "2026-03-23T19:37:16Z",
+      "headSha": "962419301eac2eeb5f9f90b324f4be6029b39029",
+      "generatedAt": "2026-03-23T19:48:00.564Z",
+      "summary": "11-layer transformer bundles XSA, partial NTK-RoPE, Muon+SWA training, int5+zstd compression, and custom Triton kernels for a compact Next-Gen Stack.",
       "tags": [
-        "sliding-window-eval",
+        "architecture",
         "quantization",
         "optimizer",
-        "attention"
+        "compression"
       ],
       "flags": {
         "usesValOnly": false,
@@ -4516,14 +4565,14 @@
       "prNumber": 310,
       "title": "Record: 10L Seq2048 TTT LoRA WarmdownQuant (val_bpb=1.1787)",
       "status": "open",
-      "updatedAt": "2026-03-21T05:44:42Z",
-      "headSha": "d280bf00a78d44a5d71a442de80095a68b997279",
-      "generatedAt": "2026-03-21T05:59:10.144Z",
-      "summary": "10-layer, 2048-context transformer leans on warmdown-tightened weights plus TTT LoRA adapters to ease int8 quantization.",
+      "updatedAt": "2026-03-23T19:46:36Z",
+      "headSha": "926a9a925b3a456dc6b2d7768edb981759e51fc0",
+      "generatedAt": "2026-03-23T19:48:05.318Z",
+      "summary": "10-layer, 2048-context transformer uses Muon momentum tuning plus warmdown to tighten weights ahead of int8 eval with batched LoRA TTT adapters.",
       "tags": [
         "architecture",
-        "training-schedule",
         "quantization",
+        "training-schedule",
         "evaluation"
       ],
       "flags": {
