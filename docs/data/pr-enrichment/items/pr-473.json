@@ -1,42 +1,43 @@
 {
-  "generatedAt": "2026-03-23T11:45:42.965Z",
+  "generatedAt": "2026-03-23T13:16:39.598Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 473,
-    "title": "Record: Legal Score-First TTT + Parallel Muon — val_bpb 1.1220 (3-seed mean)",
+    "title": "Record: Legal Score-First TTT + Parallel Muon — val_bpb 1.1214 (3-seed mean)",
     "state": "open",
-    "updatedAt": "2026-03-23T11:36:19Z",
-    "headSha": "ffe7c40dff3f0fdd78e8a5dd3ce9f6f7ab90230b",
+    "updatedAt": "2026-03-23T12:59:57Z",
+    "headSha": "93e90ed15eff1c472773b7f9d7ee99ec2f61c89e",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/473",
     "authorLogin": "abaybektursun"
   },
   "inputs": {
     "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
     "readmePaths": [
-      "records/track_10min_16mb/2026-03-22_LegalTTT_ParallelMuon_1.1213/README.md"
+      "records/track_10min_16mb/2026-03-22_LegalTTT_ParallelMuon_1.1219/README.md"
     ],
     "submissionCount": 1
   },
   "output": {
-    "summary": "Legal score-first TTT runs atop the GPTQ-lite/VE128 stack using Parameter Banking + Parallel Muon optimizer to score before SGD adaptation.",
+    "summary": "Legal score-first TTT scores chunks before SGD adaptation on a PR#414-derived Parameter Banking + Parallel Muon stack with BigramHash/VE/XSA tweaks.",
     "tags": [
+      "val-only",
+      "sliding-window-eval",
       "optimizer",
-      "muon",
-      "evaluation"
+      "quantization"
     ],
-    "usesValOnly": false,
-    "valOnlyReasoning": "",
+    "usesValOnly": true,
+    "valOnlyReasoning": "TTT adaptation trains SGD on each scored validation chunk before scoring the next, so the eval phase performs validation-shard training.",
     "techniques": [
-      "Parameter Banking + Parallel Muon optimizer flow",
-      "Score-first TTT with inference_mode scoring before SGD adaptation",
-      "GPTQ-lite/VE128 stack with tight SWA"
+      "score-first sliding-window TTT",
+      "Parameter Banking + Parallel Muon optimizer stack",
+      "BigramHash(3072)/VE/XSA enhancements"
     ]
   },
   "compatibility": {
     "collectorUsesValOnly": false,
-    "aiUsesValOnly": false,
-    "finalUsesValOnly": false,
-    "valOnlyMatchesCollector": true
+    "aiUsesValOnly": true,
+    "finalUsesValOnly": true,
+    "valOnlyMatchesCollector": false
   }
 }

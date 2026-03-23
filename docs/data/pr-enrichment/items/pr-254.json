@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-21T20:05:14.860Z",
+  "generatedAt": "2026-03-23T13:16:45.543Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 254,
     "title": "Record: FarnsworthEngine v1 — TTT + 11L Int6 MLP3x, val_bpb=1.1303",
     "state": "open",
-    "updatedAt": "2026-03-21T19:52:11Z",
+    "updatedAt": "2026-03-23T13:03:46Z",
     "headSha": "479b8bcfa8ea0e5e7b711aff7f54fafb9b72b0c2",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/254",
     "authorLogin": "timowhite88"
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Stacks test-time SGD adaptation on val data atop an Int6 11-layer MLP3x with SmearGate+BigramHash, NTK-RoPE, Muon+SWA, sliding-window eval.",
+    "summary": "Stacking test-time SGD adaptation on a quantized 11-layer MLP3x with SmearGate/BigramHash plus Muon/SWA before sliding-window evaluation.",
     "tags": [
       "val-only",
-      "quantization",
       "optimizer",
+      "quantization",
       "architecture"
     ],
     "usesValOnly": true,
-    "valOnlyReasoning": "Full-weight Test-Time Training SGD on validation shards precedes scoring to adapt weights to val distribution.",
+    "valOnlyReasoning": "Per-record TTT, the full weight model is fine-tuned via SGD on validation shards before the sliding-window scoring pass.",
     "techniques": [
-      "Test-time SGD adaptation on val shards",
-      "Int6 mixed-precision MLP3x with SmearGate+BigramHash",
-      "Muon optimizer with SWA warmdown"
+      "Test-time training on validation shards before scoring",
+      "Int6 MLP3x with SmearGate, BigramHash, and NTK-RoPE",
+      "Muon optimizer with SWA and sliding-window eval"
     ]
   },
   "compatibility": {

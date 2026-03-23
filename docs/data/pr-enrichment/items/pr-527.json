@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-23T12:45:47.190Z",
+  "generatedAt": "2026-03-23T13:16:09.697Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 527,
     "title": "Submit 1x A100 QAT Fix - 1.4078 BPB (Non-Record)",
     "state": "open",
-    "updatedAt": "2026-03-23T12:44:12Z",
+    "updatedAt": "2026-03-23T12:48:41Z",
     "headSha": "9e0f7b95c4019f498403d3bbbe8964d5d6a1a035",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/527",
     "authorLogin": "Shuvam-Banerji-Seal"
@@ -19,19 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Single-A100 QAT refines CastedLinear clip estimator via w.abs().amax+clamp_min and rescales accumulation/LR scheduling to fit the 10-minute run.",
+    "summary": "Downscaled QAT run on single A100, retuned LR schedule and replaced torch.quantile with w.abs().amax to dodge Triton penalty.",
     "tags": [
       "quantization",
       "training-schedule",
-      "optimizer",
       "non-record"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "CastedLinear clip estimator using w.abs().amax(dim=1) clamp_min",
-      "Adjusted grad accumulation and LR schedule for single-device limits",
-      "Removed torch.quantile to dodge Triton compiler penalty"
+      "CastedLinear QAT with straight-through estimators",
+      "Clip scaling via w.abs().amax(dim=1) to avoid torch.quantile/Triton slowdown",
+      "Reduced grad accumulation to fit single-A100 LR schedule"
     ]
   },
   "compatibility": {
