@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-24T13:25:19.439Z",
+  "generatedAt": "2026-03-24T13:55:21.273Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 549,
     "title": "Record: LeakyReLU² + Legal Score-First TTT + Parallel Muon — val_bpb 1.1194 (3-seed mean)",
     "state": "closed",
-    "updatedAt": "2026-03-24T13:23:42Z",
+    "updatedAt": "2026-03-24T13:33:44Z",
     "headSha": "b08d72a96e98cac8add0543982fccd35bc8f4f4d",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/549",
     "authorLogin": "abaybektursun"
@@ -19,25 +19,25 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Combines LeakyReLU² MLPs, legal score-first TTT, and parameter banking with Parallel Muon in the 10min/16MB stack.",
+    "summary": "11-layer stack pairs LeakyReLU(0.5)² MLPs with Parameter Banking/Parallel Muon and legal score-first sliding-window TTT before SGD adaptation.",
     "tags": [
-      "val-only",
       "architecture",
-      "training-schedule",
-      "optimizer"
+      "optimizer",
+      "sliding-window-eval",
+      "quantization"
     ],
-    "usesValOnly": true,
-    "valOnlyReasoning": "TTT trains only on scored validation chunks (score-first sliding eval then SGD per chunk) before final scoring.",
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
     "techniques": [
-      "- LeakyReLU(0.5)² MLPs preserve gradient flow through the dense blocks",
-      "- Legal score-first TTT: sliding-window scoring then 3-epoch SGD per validation chunk",
-      "- Parameter Banking plus Parallel Muon optimizer for efficient steps"
+      "LeakyReLU(0.5)² MLP to keep gradients flowing",
+      "Legal score-first TTT: sliding-window scoring then SGD adaptation",
+      "Parameter Banking + Parallel Muon optimizer with GPTQ-lite int6"
     ]
   },
   "compatibility": {
     "collectorUsesValOnly": false,
-    "aiUsesValOnly": true,
-    "finalUsesValOnly": true,
-    "valOnlyMatchesCollector": false
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
   }
 }

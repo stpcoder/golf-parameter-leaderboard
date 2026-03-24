@@ -1,8 +1,79 @@
 {
-  "generatedAt": "2026-03-24T13:25:24.551Z",
+  "generatedAt": "2026-03-24T13:55:33.994Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 620,
+      "title": "Record: LeakyReLU(0.5)² + Per-Document LoRA TTT (mean val_bpb=0.9443, 3 seeds)",
+      "status": "open",
+      "updatedAt": "2026-03-24T13:42:28Z",
+      "headSha": "e323a65682be6692b48855edd50d3b2b7742ac22",
+      "generatedAt": "2026-03-24T13:55:05.387Z",
+      "summary": "11-layer U-Net uses LeakyReLU(0.5)² and per-document LoRA test-time training with Muon+SWA before int8+zstd-22 compression.",
+      "tags": [
+        "architecture",
+        "muon",
+        "quantization",
+        "optimizer"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-620.json"
+    },
+    {
+      "prNumber": 619,
+      "title": "non-record 16MB A100 SXM run (10L mixed int5/int6 + EMA + QAT)",
+      "status": "open",
+      "updatedAt": "2026-03-24T13:38:05Z",
+      "headSha": "03b38bcccc8d48c5fe54dd951afe471f7c62ad9a",
+      "generatedAt": "2026-03-24T13:55:09.817Z",
+      "summary": "10-layer GPT with 3x MLP uses mixed int5/int6 quant, EMA-exported weights, late QAT, and BigramHash-aware compression.",
+      "tags": [
+        "quantization",
+        "architecture",
+        "compression",
+        "non-record"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-619.json"
+    },
+    {
+      "prNumber": 617,
+      "title": "Add 11L TTT LoRA submission: SOTA architecture + per-document LoRA te…",
+      "status": "closed",
+      "updatedAt": "2026-03-24T13:28:26Z",
+      "headSha": "19c52d0b43045785dcc858c31d2ca9deb3afc6d8",
+      "generatedAt": "2026-03-24T13:55:14.457Z",
+      "summary": "Combines 11L EMA GPTQ-lite base with per-document LoRA adapters for test-time training during sliding-window evaluation.",
+      "tags": [
+        "architecture",
+        "quantization",
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-617.json"
+    },
     {
       "prNumber": 615,
       "title": "Record: Residual Input Mixing + mixed int6 GPTQ + grouped TTT + MLP 3.5x",
@@ -1152,23 +1223,23 @@
       "prNumber": 549,
       "title": "Record: LeakyReLU² + Legal Score-First TTT + Parallel Muon — val_bpb 1.1194 (3-seed mean)",
       "status": "closed",
-      "updatedAt": "2026-03-24T13:23:42Z",
+      "updatedAt": "2026-03-24T13:33:44Z",
       "headSha": "b08d72a96e98cac8add0543982fccd35bc8f4f4d",
-      "generatedAt": "2026-03-24T13:25:19.439Z",
-      "summary": "Combines LeakyReLU² MLPs, legal score-first TTT, and parameter banking with Parallel Muon in the 10min/16MB stack.",
+      "generatedAt": "2026-03-24T13:55:21.273Z",
+      "summary": "11-layer stack pairs LeakyReLU(0.5)² MLPs with Parameter Banking/Parallel Muon and legal score-first sliding-window TTT before SGD adaptation.",
       "tags": [
-        "val-only",
         "architecture",
-        "training-schedule",
-        "optimizer"
+        "optimizer",
+        "sliding-window-eval",
+        "quantization"
       ],
       "flags": {
-        "usesValOnly": true,
-        "usesValOnlyAi": true,
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
         "usesValOnlyCollector": false
       },
       "compatibility": {
-        "valOnlyMatchesCollector": false
+        "valOnlyMatchesCollector": true
       },
       "file": "items/pr-549.json"
     },
@@ -3345,14 +3416,14 @@
       "prNumber": 425,
       "title": "Codex/runpod 2026 03 20 checkpoint",
       "status": "open",
-      "updatedAt": "2026-03-22T19:12:21Z",
-      "headSha": "307f2d671f850497509a25818e7cc10d0aa871e1",
-      "generatedAt": "2026-03-22T19:42:01.019Z",
-      "summary": "Exploratory single‑GPU ablation split eval lengths and dialed ATTN_TWICE_ALPHA with LoRA‑TTT tweaks to balance roundtrip and TTT scoring under a 600s cap.",
+      "updatedAt": "2026-03-24T13:41:32Z",
+      "headSha": "38c4dbf3fa8777ff605b7aa58c4cecb0dc14cb18",
+      "generatedAt": "2026-03-24T13:55:27.773Z",
+      "summary": "1×H100 ablation splits eval seq lengths and adds ATTN_TWICE_ALPHA=0.05 with TTT LoRA to balance roundtrip vs TTT metrics under a 600s cap.",
       "tags": [
         "attention",
-        "evaluation",
         "training-schedule",
+        "evaluation",
         "non-record"
       ],
       "flags": {
@@ -4754,10 +4825,10 @@
       "prNumber": 340,
       "title": "V2 Prototype: SwiGLU + Dropout + MuonWD + MidLayerLoop",
       "status": "open",
-      "updatedAt": "2026-03-24T13:16:42Z",
-      "headSha": "4bd9884524c6ca3e963dbf6be47a7dbedf522aaf",
-      "generatedAt": "2026-03-24T13:25:24.501Z",
-      "summary": "SwiGLU MLP with Muon decay, dropout, targeted middle-layer recurrence, and EMA aims for depth-efficient training within tight compute and quantization constraints.",
+      "updatedAt": "2026-03-24T13:46:55Z",
+      "headSha": "879589afbb3e2be81088204ca472f823a6dda204",
+      "generatedAt": "2026-03-24T13:55:33.942Z",
+      "summary": "Prototype couples SwiGLU MLPs, MuonWD/dropout, and targeted mid-layer recurrence to boost depth efficiency within limited compute.",
       "tags": [
         "architecture",
         "regularization",

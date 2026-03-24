@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-24T13:55:14.457Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 617,
+    "title": "Add 11L TTT LoRA submission: SOTA architecture + per-document LoRA te…",
+    "state": "closed",
+    "updatedAt": "2026-03-24T13:28:26Z",
+    "headSha": "19c52d0b43045785dcc858c31d2ca9deb3afc6d8",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/617",
+    "authorLogin": "ryanadamsai"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-24_11L_TTT_LoRA_EMA_GPTQ-lite/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Combines 11L EMA GPTQ-lite base with per-document LoRA adapters for test-time training during sliding-window evaluation.",
+    "tags": [
+      "architecture",
+      "quantization",
+      "evaluation"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "11L EMA + GPTQ-lite architecture",
+      "Per-document chunked LoRA adapters on Q/V(+head) at eval",
+      "Sliding eval with doc isolation and LoRA resets"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}
