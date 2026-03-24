@@ -1,8 +1,8 @@
 {
   "version": 1,
   "sourceRepo": "openai/parameter-golf",
-  "generatedAt": "2026-03-24T18:56:44.105Z",
-  "lastSeenUpdatedAt": "2026-03-24T18:55:47Z",
+  "generatedAt": "2026-03-24T19:26:23.111Z",
+  "lastSeenUpdatedAt": "2026-03-24T19:22:31Z",
   "prs": {
     "1": {
       "number": 1,
@@ -14272,7 +14272,7 @@
     },
     "189": {
       "number": 189,
-      "updatedAt": "2026-03-23T19:20:26Z",
+      "updatedAt": "2026-03-24T19:22:31Z",
       "pr": {
         "number": 189,
         "title": "Harden TTT doc splitting for missing/trailing BOS edge cases",
@@ -14283,8 +14283,8 @@
         "authorLogin": "shuofengzhang",
         "authorName": null,
         "createdAt": "2026-03-20T07:36:51Z",
-        "updatedAt": "2026-03-23T19:20:26Z",
-        "headSha": "529d4b70a1b096e5c902787627b754678ff536da",
+        "updatedAt": "2026-03-24T19:22:31Z",
+        "headSha": "63fe66171778361321be4c63a26e22e2c2ea2666",
         "headRepo": "shuofengzhang/parameter-golf"
       },
       "submissions": []
@@ -50708,7 +50708,7 @@
     },
     "596": {
       "number": 596,
-      "updatedAt": "2026-03-24T18:55:47Z",
+      "updatedAt": "2026-03-24T19:21:05Z",
       "pr": {
         "number": 596,
         "title": "Record: DeepQuant V10b — 11L INT6 + 8ep LoRA TTT (val_bpb=0.6430)",
@@ -50719,7 +50719,7 @@
         "authorLogin": "AriaAnima",
         "authorName": null,
         "createdAt": "2026-03-24T03:09:15Z",
-        "updatedAt": "2026-03-24T18:55:47Z",
+        "updatedAt": "2026-03-24T19:21:05Z",
         "headSha": "9e4f467b3647c584b53282e3eb1b0ae4ec771927",
         "headRepo": "AriaAnima/parameter-golf"
       },
@@ -50782,7 +50782,7 @@
             "authorLogin": "AriaAnima",
             "authorName": null,
             "createdAt": "2026-03-24T03:09:15Z",
-            "updatedAt": "2026-03-24T18:55:47Z",
+            "updatedAt": "2026-03-24T19:21:05Z",
             "headSha": "9e4f467b3647c584b53282e3eb1b0ae4ec771927",
             "headRepo": "AriaAnima/parameter-golf"
           },
@@ -53949,6 +53949,44 @@
         "updatedAt": "2026-03-24T18:39:30Z",
         "headSha": "e6ff00857bdfb293f90e5864f59856ddf575bca2",
         "headRepo": "Robby955/parameter-golf"
+      },
+      "submissions": []
+    },
+    "640": {
+      "number": 640,
+      "updatedAt": "2026-03-24T19:01:27Z",
+      "pr": {
+        "number": 640,
+        "title": "Record Submission: 1.1570 BPB - 73.7M Ternary U-Net + NeoMuon + 4x relu²MLP + Factored Tied Emb + Poly5 Softcap + YaRN2048 + 8192BPE + FP8QAT + Bitmask-LZMA + Stride-16 Sliding",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/640",
+        "authorLogin": "CiprianFlorin-Ifrim",
+        "authorName": null,
+        "createdAt": "2026-03-24T19:01:27Z",
+        "updatedAt": "2026-03-24T19:01:27Z",
+        "headSha": "71b6bd095d7032d623ddeed417ba351d91b9db48",
+        "headRepo": "CiprianFlorin-Ifrim/openai-parameter-golf-challenge"
+      },
+      "submissions": []
+    },
+    "641": {
+      "number": 641,
+      "updatedAt": "2026-03-24T19:03:11Z",
+      "pr": {
+        "number": 641,
+        "title": "Notable Non-Record Submission: 1.1239 BPB - 106.2M Binary U-Net + NeoMuon + 4x relu²MLP + SmearGate + Factored Tied Emb + Poly5 Softcap + YaRN2048 + 8192BPE + FP8QAT + Bit-packing LZMA + Stride-16 Sliding",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/641",
+        "authorLogin": "CiprianFlorin-Ifrim",
+        "authorName": null,
+        "createdAt": "2026-03-24T19:02:34Z",
+        "updatedAt": "2026-03-24T19:03:11Z",
+        "headSha": "d5534cfd1a5b2b2ff2e23c15506764dd3a5cc680",
+        "headRepo": "CiprianFlorin-Ifrim/openai-parameter-golf-challenge"
       },
       "submissions": []
     }

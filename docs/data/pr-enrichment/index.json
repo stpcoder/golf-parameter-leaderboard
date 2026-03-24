@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-24T18:57:05.605Z",
+  "generatedAt": "2026-03-24T19:26:31.763Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
@@ -783,12 +783,13 @@
       "prNumber": 596,
       "title": "Record: DeepQuant V10b — 11L INT6 + 8ep LoRA TTT (val_bpb=0.6430)",
       "status": "closed",
-      "updatedAt": "2026-03-24T18:55:47Z",
+      "updatedAt": "2026-03-24T19:21:05Z",
       "headSha": "9e4f467b3647c584b53282e3eb1b0ae4ec771927",
-      "generatedAt": "2026-03-24T18:57:05.510Z",
-      "summary": "DeepQuant uses an INT6 11-layer base with 8-epoch per-document LoRA/bias TTT, cosine decay, temp rescaling, and eval-time budgeting to boost 16MB runs.",
+      "generatedAt": "2026-03-24T19:26:31.672Z",
+      "summary": "INT6 11-layer Transformer runs 8-epoch cosine LoRA TTT with bias tuning and temperature rescaling to specialize per-document eval outputs.",
       "tags": [
         "quantization",
+        "architecture",
         "training-schedule",
         "evaluation"
       ],
