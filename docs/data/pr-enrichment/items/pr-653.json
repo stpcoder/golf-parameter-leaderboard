@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-24T22:57:11.687Z",
+  "generatedAt": "2026-03-24T23:27:37.451Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 653,
     "title": "feat(arch): Mish² Activation & PyTorch Native SDPA GQA Core (1.155 BPB) 8xH100",
     "state": "open",
-    "updatedAt": "2026-03-24T22:49:20Z",
-    "headSha": "13176c111b134a096683c8d0a46aaeada9ed9d2f",
+    "updatedAt": "2026-03-24T23:16:09Z",
+    "headSha": "0618a7a70eef0a4bbab2c3400dc02d94aa4b90e9",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/653",
     "authorLogin": "demirelo"
   },
@@ -19,19 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Mixes Mish² MLPs, Parameter Banking/Parallel Muon optimization, and score-first legal TTT atop PyTorch FA2 attention for the 16MB/10min entry.",
+    "summary": "Mish²-powered 11-layer GPT uses Parameter Banking/Parallel Muon, a PyTorch-native GQA SDPA fallback, and score-first Legal TTT adaptation.",
     "tags": [
       "architecture",
       "optimizer",
-      "muon",
-      "training-schedule"
+      "evaluation"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Mish² activation across the 3×MLP stack",
-      "Parameter Banking with Parallel Muon optimizer",
-      "Score-first Legal TTT with sliding-window evaluation"
+      "Mish²-squared activation in the 3×MLP stack",
+      "Parameter Banking with Parallel Muon optimizer banks",
+      "PyTorch-native GQA-aware scaled-dot-product attention loop"
     ]
   },
   "compatibility": {

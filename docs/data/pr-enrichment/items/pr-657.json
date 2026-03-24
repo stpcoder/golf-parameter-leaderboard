@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-24T23:27:28.784Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 657,
+    "title": "Record: 11L LeakyReLU² + VRL + lzma — val_bpb 1.1234",
+    "state": "open",
+    "updatedAt": "2026-03-24T23:26:34Z",
+    "headSha": "e8ee0dc3b315ac6fee8d2eaa715e4a7d16e31442",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/657",
+    "authorLogin": "anthony-maio"
+  },
+  "inputs": {
+    "hash": "a36662e9918e38cdf05f74d9a75a167994a17c359f8664217fbee3daab8d3263",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-24_LeakyReLU2_VRL_LZMA/README.md"
+    ],
+    "submissionCount": 2
+  },
+  "output": {
+    "summary": "Uses LeakyReLU(0.5)² activation, Value Residual Learning, and lzma-compressed GPTQ-lite quantization on the 11-layer architecture to stay under 16MB.",
+    "tags": [
+      "architecture",
+      "compression",
+      "quantization"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "LeakyReLU(0.5)² MLP stack",
+      "Value Residual Learning gating",
+      "lzma-compressed GPTQ-lite int6 weights"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}
