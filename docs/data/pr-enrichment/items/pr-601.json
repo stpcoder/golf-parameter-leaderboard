@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-24T06:52:12.624Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 601,
+    "title": "Non-record: VR + GA + Late QAT + Full GPTQ — 1.1418 BPB, 15.7 MB",
+    "state": "open",
+    "updatedAt": "2026-03-24T06:32:12Z",
+    "headSha": "4357cbcbabd907918cbaa2629a50b43c5f6a1c1c",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/601",
+    "authorLogin": "anantdgoel"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-03-24_LateQAT_VR_GA_FullGPTQ_anantdgoel/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "11-layer GPT adds Value Residual+Gated Attention shortcuts, late-stage QAT, and Full GPTQ+Int5 post-training quantization to shrink to 15.7MB.",
+    "tags": [
+      "architecture",
+      "attention",
+      "quantization",
+      "training-schedule"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Value-residual V0 shortcut with gated per-head attention",
+      "Late-stage quantization-aware training triggered near final steps",
+      "Full GPTQ plus Int5 MLP post-training quantization pipeline"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

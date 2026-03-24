@@ -1,8 +1,32 @@
 {
-  "generatedAt": "2026-03-24T06:22:06.244Z",
+  "generatedAt": "2026-03-24T06:52:24.733Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 601,
+      "title": "Non-record: VR + GA + Late QAT + Full GPTQ — 1.1418 BPB, 15.7 MB",
+      "status": "open",
+      "updatedAt": "2026-03-24T06:32:12Z",
+      "headSha": "4357cbcbabd907918cbaa2629a50b43c5f6a1c1c",
+      "generatedAt": "2026-03-24T06:52:12.624Z",
+      "summary": "11-layer GPT adds Value Residual+Gated Attention shortcuts, late-stage QAT, and Full GPTQ+Int5 post-training quantization to shrink to 15.7MB.",
+      "tags": [
+        "architecture",
+        "attention",
+        "quantization",
+        "training-schedule"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-601.json"
+    },
     {
       "prNumber": 600,
       "title": "Non-record: TTT-LoRA Base — HumanAI Convention (val_bpb=1.2364)",
@@ -1400,17 +1424,16 @@
     },
     {
       "prNumber": 515,
-      "title": "Record: Atris Labs — val_bpb=1.2015, 10L MLP3x Int5/Int6 BigramHash SmearGate SWA",
+      "title": "Record: Atris Labs — 3-seed mean val_bpb=1.1807, 10L MLP3x Int5/Int6 BigramHash SmearGate SWA",
       "status": "open",
-      "updatedAt": "2026-03-23T10:07:30Z",
+      "updatedAt": "2026-03-24T06:44:56Z",
       "headSha": "a8ef14623d6faf9c8ae11e6ffd61de91718af387",
-      "generatedAt": "2026-03-23T10:15:31.334Z",
-      "summary": "10-layer MLP3x transformer adds BigramHash embeddings, SmearGate gating, SWA warmdown, and dual optimizers before Int5/Int6 quantization.",
+      "generatedAt": "2026-03-24T06:52:18.509Z",
+      "summary": "Atris Labs pairs a 10-layer MLP3x transformer with BigramHash+SmearGate, Muon+AdamW training, SWA warmdown, and Int5/Int6 quantization to fit 16MB.",
       "tags": [
         "architecture",
         "quantization",
-        "optimizer",
-        "training-schedule"
+        "optimizer"
       ],
       "flags": {
         "usesValOnly": false,
@@ -4496,13 +4519,14 @@
       "prNumber": 340,
       "title": "V2 Prototype: SwiGLU + Dropout + MuonWD + MidLayerLoop",
       "status": "open",
-      "updatedAt": "2026-03-21T12:44:14Z",
-      "headSha": "783d4b638f3e5acf0613320f5ee9f0fca770650f",
-      "generatedAt": "2026-03-21T13:32:14.822Z",
-      "summary": "Prototype combines SwiGLU MLPs with intense MuonWD/dropout regularization and a middle-layer recurrence loop to boost depth efficiency for constrained compute.",
+      "updatedAt": "2026-03-24T06:36:28Z",
+      "headSha": "5df76dfd360413235dad4b1529f9e0ba808189d6",
+      "generatedAt": "2026-03-24T06:52:24.684Z",
+      "summary": "Combines SwiGLU MLPs with 10% dropout, aggressive MuonWD, and mid-layer recurrence to boost depth/regularization under tight resource limits.",
       "tags": [
         "architecture",
         "regularization",
+        "quantization",
         "non-record"
       ],
       "flags": {

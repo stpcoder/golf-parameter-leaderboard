@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-24T06:21:45.320Z",
+  "generatedAt": "2026-03-24T06:52:00.247Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "submissions": [
@@ -5704,6 +5704,83 @@
         "script": "https://github.com/openai/parameter-golf/blob/0bfdfe4453bd6319db2758c313be459d10bb9ac1/records/track_10min_16mb/2026-03-23_10L_Int5MLP_DelayedPPM_K15/train_gpt.py",
         "folder": "https://github.com/openai/parameter-golf/tree/0bfdfe4453bd6319db2758c313be459d10bb9ac1/records/track_10min_16mb/2026-03-23_10L_Int5MLP_DelayedPPM_K15",
         "pr": "https://github.com/openai/parameter-golf/pull/511",
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": false,
+        "hasPullRequest": true,
+        "listedInReadme": false
+      }
+    },
+    {
+      "id": "record-records-track_non_record_16mb-2026-03-24_LateQAT_VR_GA_FullGPTQ_anantdgoel",
+      "source": "pull_request",
+      "status": "open",
+      "category": "non-record",
+      "track": {
+        "path": "records/track_non_record_16mb",
+        "slug": "track_non_record_16mb",
+        "label": "Non-record / 16MB",
+        "official": false,
+        "category": "non-record"
+      },
+      "record": {
+        "folderName": "2026-03-24_LateQAT_VR_GA_FullGPTQ_anantdgoel",
+        "folderPath": "records/track_non_record_16mb/2026-03-24_LateQAT_VR_GA_FullGPTQ_anantdgoel",
+        "submissionPath": "records/track_non_record_16mb/2026-03-24_LateQAT_VR_GA_FullGPTQ_anantdgoel/submission.json",
+        "readmePath": "records/track_non_record_16mb/2026-03-24_LateQAT_VR_GA_FullGPTQ_anantdgoel/README.md",
+        "trainLogPath": "records/track_non_record_16mb/2026-03-24_LateQAT_VR_GA_FullGPTQ_anantdgoel/train.log",
+        "scriptPath": "records/track_non_record_16mb/2026-03-24_LateQAT_VR_GA_FullGPTQ_anantdgoel/train_gpt.py"
+      },
+      "submission": {
+        "author": "anantdgoel",
+        "githubId": "anantdgoel",
+        "name": null,
+        "blurb": null,
+        "date": "2026-03-24T06:32:12Z"
+      },
+      "metrics": {
+        "valBpb": 1.1418,
+        "valLoss": null,
+        "preQuantValBpb": null,
+        "preQuantValLoss": null,
+        "stepStop": null,
+        "wallclockSeconds": null,
+        "evalTimeSeconds": null
+      },
+      "artifact": {
+        "bytesTotal": null,
+        "bytesCode": null,
+        "bytesModelInt8Zlib": null
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
+      "pr": {
+        "number": 601,
+        "title": "Non-record: VR + GA + Late QAT + Full GPTQ — 1.1418 BPB, 15.7 MB",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/601",
+        "authorLogin": "anantdgoel",
+        "authorName": null,
+        "createdAt": "2026-03-24T06:32:12Z",
+        "updatedAt": "2026-03-24T06:32:12Z",
+        "headSha": "4357cbcbabd907918cbaa2629a50b43c5f6a1c1c",
+        "headRepo": "anantdgoel/parameter-golf"
+      },
+      "links": {
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/4357cbcbabd907918cbaa2629a50b43c5f6a1c1c/records/track_non_record_16mb/2026-03-24_LateQAT_VR_GA_FullGPTQ_anantdgoel/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/4357cbcbabd907918cbaa2629a50b43c5f6a1c1c/records/track_non_record_16mb/2026-03-24_LateQAT_VR_GA_FullGPTQ_anantdgoel/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/4357cbcbabd907918cbaa2629a50b43c5f6a1c1c/records/track_non_record_16mb/2026-03-24_LateQAT_VR_GA_FullGPTQ_anantdgoel/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/4357cbcbabd907918cbaa2629a50b43c5f6a1c1c/records/track_non_record_16mb/2026-03-24_LateQAT_VR_GA_FullGPTQ_anantdgoel/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/4357cbcbabd907918cbaa2629a50b43c5f6a1c1c/records/track_non_record_16mb/2026-03-24_LateQAT_VR_GA_FullGPTQ_anantdgoel",
+        "pr": "https://github.com/openai/parameter-golf/pull/601",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
       "provenance": {
@@ -13616,7 +13693,7 @@
       },
       "pr": {
         "number": 515,
-        "title": "Record: Atris Labs — val_bpb=1.2015, 10L MLP3x Int5/Int6 BigramHash SmearGate SWA",
+        "title": "Record: Atris Labs — 3-seed mean val_bpb=1.1807, 10L MLP3x Int5/Int6 BigramHash SmearGate SWA",
         "state": "open",
         "draft": false,
         "mergedAt": null,
@@ -13624,7 +13701,7 @@
         "authorLogin": "keshav55",
         "authorName": null,
         "createdAt": "2026-03-23T08:48:13Z",
-        "updatedAt": "2026-03-23T10:07:30Z",
+        "updatedAt": "2026-03-24T06:44:56Z",
         "headSha": "a8ef14623d6faf9c8ae11e6ffd61de91718af387",
         "headRepo": "keshav55/parameter-golf"
       },
@@ -25872,16 +25949,16 @@
         "authorLogin": "starfly-web",
         "authorName": null,
         "createdAt": "2026-03-21T12:44:14Z",
-        "updatedAt": "2026-03-21T12:44:14Z",
-        "headSha": "783d4b638f3e5acf0613320f5ee9f0fca770650f",
+        "updatedAt": "2026-03-24T06:36:28Z",
+        "headSha": "5df76dfd360413235dad4b1529f9e0ba808189d6",
         "headRepo": "starfly-web/parameter-golf"
       },
       "links": {
-        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/783d4b638f3e5acf0613320f5ee9f0fca770650f/records/track_non_record_16mb/2026-03-21_SwiGLU_Dropout_MuonWD_MidLayerLoop/submission.json",
-        "readme": "https://github.com/openai/parameter-golf/blob/783d4b638f3e5acf0613320f5ee9f0fca770650f/records/track_non_record_16mb/2026-03-21_SwiGLU_Dropout_MuonWD_MidLayerLoop/README.md",
-        "trainLog": "https://github.com/openai/parameter-golf/blob/783d4b638f3e5acf0613320f5ee9f0fca770650f/records/track_non_record_16mb/2026-03-21_SwiGLU_Dropout_MuonWD_MidLayerLoop/train.log",
-        "script": "https://github.com/openai/parameter-golf/blob/783d4b638f3e5acf0613320f5ee9f0fca770650f/records/track_non_record_16mb/2026-03-21_SwiGLU_Dropout_MuonWD_MidLayerLoop/train_gpt.py",
-        "folder": "https://github.com/openai/parameter-golf/tree/783d4b638f3e5acf0613320f5ee9f0fca770650f/records/track_non_record_16mb/2026-03-21_SwiGLU_Dropout_MuonWD_MidLayerLoop",
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/5df76dfd360413235dad4b1529f9e0ba808189d6/records/track_non_record_16mb/2026-03-21_SwiGLU_Dropout_MuonWD_MidLayerLoop/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/5df76dfd360413235dad4b1529f9e0ba808189d6/records/track_non_record_16mb/2026-03-21_SwiGLU_Dropout_MuonWD_MidLayerLoop/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/5df76dfd360413235dad4b1529f9e0ba808189d6/records/track_non_record_16mb/2026-03-21_SwiGLU_Dropout_MuonWD_MidLayerLoop/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/5df76dfd360413235dad4b1529f9e0ba808189d6/records/track_non_record_16mb/2026-03-21_SwiGLU_Dropout_MuonWD_MidLayerLoop/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/5df76dfd360413235dad4b1529f9e0ba808189d6/records/track_non_record_16mb/2026-03-21_SwiGLU_Dropout_MuonWD_MidLayerLoop",
         "pr": "https://github.com/openai/parameter-golf/pull/340",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
@@ -26172,7 +26249,7 @@
       },
       "pr": {
         "number": 515,
-        "title": "Record: Atris Labs — val_bpb=1.2015, 10L MLP3x Int5/Int6 BigramHash SmearGate SWA",
+        "title": "Record: Atris Labs — 3-seed mean val_bpb=1.1807, 10L MLP3x Int5/Int6 BigramHash SmearGate SWA",
         "state": "open",
         "draft": false,
         "mergedAt": null,
@@ -26180,7 +26257,7 @@
         "authorLogin": "keshav55",
         "authorName": null,
         "createdAt": "2026-03-23T08:48:13Z",
-        "updatedAt": "2026-03-23T10:07:30Z",
+        "updatedAt": "2026-03-24T06:44:56Z",
         "headSha": "a8ef14623d6faf9c8ae11e6ffd61de91718af387",
         "headRepo": "keshav55/parameter-golf"
       },
