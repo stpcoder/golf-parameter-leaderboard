@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-24T14:56:32.264Z",
+  "generatedAt": "2026-03-24T15:25:14.697Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
@@ -525,14 +525,14 @@
     {
       "prNumber": 596,
       "title": "Record: DeepQuant V10b — 11L INT6 + 8ep LoRA TTT (val_bpb=0.6430)",
-      "status": "open",
-      "updatedAt": "2026-03-24T12:05:46Z",
+      "status": "closed",
+      "updatedAt": "2026-03-24T15:24:22Z",
       "headSha": "9e4f467b3647c584b53282e3eb1b0ae4ec771927",
-      "generatedAt": "2026-03-24T12:24:42.110Z",
-      "summary": "Applies 8-epoch per-document LoRA TTT with cosine decay, bias tuning, and temperature rescaling atop an INT6 11-layer model.",
+      "generatedAt": "2026-03-24T15:25:05.812Z",
+      "summary": "11-layer INT6 model leans on per-document 8-epoch cosine LoRA TTT with bias tuning, LM-head rank-16, and temp rescale to stay 16MB within eval budget.",
       "tags": [
-        "training-schedule",
         "quantization",
+        "training-schedule",
         "evaluation"
       ],
       "flags": {
@@ -943,14 +943,13 @@
       "prNumber": 569,
       "title": "Record: 11L VRL + LeakyReLU² + Full GPTQ (3-seed mean val_bpb=1.1175)",
       "status": "open",
-      "updatedAt": "2026-03-23T20:02:30Z",
+      "updatedAt": "2026-03-24T15:08:22Z",
       "headSha": "1a4f3aaf4c125882705386d26e2bb271b4907243",
-      "generatedAt": "2026-03-23T20:18:08.929Z",
-      "summary": "Value Residual Learning plus LeakyReLU(0.5)² MLPs and Muon optimizer warmup feed int6 Full GPTQ with pruning for <16MB output.",
+      "generatedAt": "2026-03-24T15:25:14.615Z",
+      "summary": "Adds layer-0 value residual learning gates to LeakyReLU² MLPs and leverages full GPTQ+pruning to shrink the 11-layer model within the 16MB budget.",
       "tags": [
         "architecture",
         "quantization",
-        "optimizer",
         "compression"
       ],
       "flags": {

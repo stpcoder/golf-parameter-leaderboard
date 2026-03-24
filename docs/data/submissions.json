@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-24T14:55:17.659Z",
+  "generatedAt": "2026-03-24T15:24:59.320Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "submissions": [
@@ -83,7 +83,7 @@
     {
       "id": "record-records-track_10min_16mb-2026-03-24_DeepQuant_V10b",
       "source": "pull_request",
-      "status": "open",
+      "status": "closed",
       "category": "main-track",
       "track": {
         "path": "records/track_10min_16mb",
@@ -131,14 +131,14 @@
       "pr": {
         "number": 596,
         "title": "Record: DeepQuant V10b — 11L INT6 + 8ep LoRA TTT (val_bpb=0.6430)",
-        "state": "open",
+        "state": "closed",
         "draft": false,
         "mergedAt": null,
         "htmlUrl": "https://github.com/openai/parameter-golf/pull/596",
         "authorLogin": "AriaAnima",
         "authorName": null,
         "createdAt": "2026-03-24T03:09:15Z",
-        "updatedAt": "2026-03-24T12:05:46Z",
+        "updatedAt": "2026-03-24T15:24:22Z",
         "headSha": "9e4f467b3647c584b53282e3eb1b0ae4ec771927",
         "headRepo": "AriaAnima/parameter-golf"
       },
@@ -2305,7 +2305,7 @@
         "authorLogin": "gowtham0992",
         "authorName": null,
         "createdAt": "2026-03-23T19:57:51Z",
-        "updatedAt": "2026-03-23T20:02:30Z",
+        "updatedAt": "2026-03-24T15:08:22Z",
         "headSha": "1a4f3aaf4c125882705386d26e2bb271b4907243",
         "headRepo": "gowtham0992/parameter-golf"
       },
