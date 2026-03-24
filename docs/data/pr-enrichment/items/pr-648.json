@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-24T21:56:51.074Z",
+  "generatedAt": "2026-03-24T22:57:21.737Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 648,
     "title": "Depth Recurrence (3+3 x 2 loops) + HW Optimizations",
-    "state": "open",
-    "updatedAt": "2026-03-24T21:47:52Z",
+    "state": "closed",
+    "updatedAt": "2026-03-24T22:36:40Z",
     "headSha": "cabf8147eceb23edc2177912fdb33f7b38540793",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/648",
     "authorLogin": "maorinka"
@@ -19,7 +19,7 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Looped 3+3 encoder/decoder blocks with per-loop scale/bias, preserving U-Net skips to reuse half the layers and free bytes for wider modules.",
+    "summary": "Loops 3 encoder + 3 decoder blocks twice with per-loop conditioning to preserve U-Net skips while freeing budget for wider MLPs/BigramHash inside the 16MB cap.",
     "tags": [
       "architecture",
       "training-schedule"
@@ -27,9 +27,9 @@
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Depth recurrence sharing 3+3 encoder/decoder layers looped twice",
-      "Per-loop learned affine conditioning with 1/√num_loops LR scaling",
-      "Hardware optimizations: async prefetch, pinned memory, NCCL tuning, GPU-resident SWA"
+      "Depth recurrence (3+3 unique layers looped twice) with per-loop scale/bias conditioning",
+      "LRs scaled by 1/sqrt(num_loops) to stabilize shared-weight gradients",
+      "Async prefetch, pinned memory, NCCL tweaks, and GPU-resident SWA to boost H100 throughput"
     ]
   },
   "compatibility": {

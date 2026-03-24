@@ -1,8 +1,32 @@
 {
-  "generatedAt": "2026-03-24T22:27:06.697Z",
+  "generatedAt": "2026-03-24T22:57:34.489Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 653,
+      "title": "feat(arch): Mish² Activation & PyTorch Native SDPA GQA Core (1.155 BPB) 8xH100",
+      "status": "open",
+      "updatedAt": "2026-03-24T22:49:20Z",
+      "headSha": "13176c111b134a096683c8d0a46aaeada9ed9d2f",
+      "generatedAt": "2026-03-24T22:57:11.687Z",
+      "summary": "Mixes Mish² MLPs, Parameter Banking/Parallel Muon optimization, and score-first legal TTT atop PyTorch FA2 attention for the 16MB/10min entry.",
+      "tags": [
+        "architecture",
+        "optimizer",
+        "muon",
+        "training-schedule"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-653.json"
+    },
     {
       "prNumber": 651,
       "title": "[WIP] Record: Hybrid architecture 8L 3:1 GDN/Transformer (val_bpb=1.2093)",
@@ -29,13 +53,12 @@
       "prNumber": 650,
       "title": "-0.0041 BPB by Reordering Training Data (Curriculum Learning)",
       "status": "open",
-      "updatedAt": "2026-03-24T22:26:28Z",
-      "headSha": "34ec67812f97c0a0d9e2dd37bf571c7c963fdbb9",
-      "generatedAt": "2026-03-24T22:27:01.589Z",
-      "summary": "Score shards with a tiny proxy model, sort hardest-first, and feed that curriculum via SHARD_ORDER so the base recipe trains on difficult data early.",
+      "updatedAt": "2026-03-24T22:48:57Z",
+      "headSha": "ca1a938d0ebc11cb0483df83f2aa584acaed503e",
+      "generatedAt": "2026-03-24T22:57:15.795Z",
+      "summary": "Reorders training shards by small-model perplexity ranking to break default ordering bias and expose harder data earlier.",
       "tags": [
         "training-schedule",
-        "evaluation",
         "non-record"
       ],
       "flags": {
@@ -51,11 +74,11 @@
     {
       "prNumber": 648,
       "title": "Depth Recurrence (3+3 x 2 loops) + HW Optimizations",
-      "status": "open",
-      "updatedAt": "2026-03-24T21:47:52Z",
+      "status": "closed",
+      "updatedAt": "2026-03-24T22:36:40Z",
       "headSha": "cabf8147eceb23edc2177912fdb33f7b38540793",
-      "generatedAt": "2026-03-24T21:56:51.074Z",
-      "summary": "Looped 3+3 encoder/decoder blocks with per-loop scale/bias, preserving U-Net skips to reuse half the layers and free bytes for wider modules.",
+      "generatedAt": "2026-03-24T22:57:21.737Z",
+      "summary": "Loops 3 encoder + 3 decoder blocks twice with per-loop conditioning to preserve U-Net skips while freeing budget for wider MLPs/BigramHash inside the 16MB cap.",
       "tags": [
         "architecture",
         "training-schedule"
@@ -545,15 +568,15 @@
       "prNumber": 619,
       "title": "non-record 16MB A100 SXM run (10L mixed int5/int6 + EMA + QAT)",
       "status": "open",
-      "updatedAt": "2026-03-24T21:41:27Z",
-      "headSha": "41dcc60b9236b4910343d47102b8ef001a1c348e",
-      "generatedAt": "2026-03-24T21:56:55.690Z",
-      "summary": "10-layer GPT with 3x MLP expansion packs BigramHash tokens and mixes int5/int6 quantization with EMA-exported weights and late QAT.",
+      "updatedAt": "2026-03-24T22:40:52Z",
+      "headSha": "2c3364deaf9ac054a768309035ede73fcc5d5a34",
+      "generatedAt": "2026-03-24T22:57:30.188Z",
+      "summary": "10-layer model pairs mixed int5/int6 quantization with EMA-exported weights and 15% late QAT plus BigramHash for a 16MB non-record run on A100.",
       "tags": [
         "quantization",
-        "regularization",
+        "optimizer",
         "tokenization",
-        "architecture"
+        "non-record"
       ],
       "flags": {
         "usesValOnly": false,
@@ -3686,15 +3709,14 @@
       "prNumber": 435,
       "title": "Radial bitnet submission",
       "status": "open",
-      "updatedAt": "2026-03-24T20:18:53Z",
-      "headSha": "a68bff4f2b4657c0e07dc6fce4b0a8f2670272e6",
-      "generatedAt": "2026-03-24T20:27:14.504Z",
-      "summary": "Compressed dual-branch transformer fuses BitNet ternary projections with radial token geometry and a bigram-hash branch trained with split FRO/AdamW and mixed int8/int6 export.",
+      "updatedAt": "2026-03-24T22:52:59Z",
+      "headSha": "56da17dff025b405fc579371667fbfcfb94e43df",
+      "generatedAt": "2026-03-24T22:57:34.422Z",
+      "summary": "Dual-branch compressed transformer uses FRO with radial token geometry, bigram hash, and BitNet ternary projections for fast convergence within the 16MB/10min budget.",
       "tags": [
-        "architecture",
         "optimizer",
-        "quantization",
-        "compression"
+        "architecture",
+        "quantization"
       ],
       "flags": {
         "usesValOnly": false,

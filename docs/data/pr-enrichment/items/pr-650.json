@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-24T22:27:01.589Z",
+  "generatedAt": "2026-03-24T22:57:15.795Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 650,
     "title": "-0.0041 BPB by Reordering Training Data (Curriculum Learning)",
     "state": "open",
-    "updatedAt": "2026-03-24T22:26:28Z",
-    "headSha": "34ec67812f97c0a0d9e2dd37bf571c7c963fdbb9",
+    "updatedAt": "2026-03-24T22:48:57Z",
+    "headSha": "ca1a938d0ebc11cb0483df83f2aa584acaed503e",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/650",
     "authorLogin": "abaybektursun"
   },
@@ -19,18 +19,16 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Score shards with a tiny proxy model, sort hardest-first, and feed that curriculum via SHARD_ORDER so the base recipe trains on difficult data early.",
+    "summary": "Reorders training shards by small-model perplexity ranking to break default ordering bias and expose harder data earlier.",
     "tags": [
       "training-schedule",
-      "evaluation",
       "non-record"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Model-scored curriculum ordering",
-      "Tiny proxy model for shard difficulty",
-      "SHARD_ORDER env var injection"
+      "Score shards with a lightweight model to estimate difficulty",
+      "Use SHARD_ORDER env to feed hardest-first shard sequence"
     ]
   },
   "compatibility": {

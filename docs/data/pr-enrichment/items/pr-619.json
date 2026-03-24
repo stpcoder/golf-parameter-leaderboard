@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-24T21:56:55.690Z",
+  "generatedAt": "2026-03-24T22:57:30.188Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 619,
     "title": "non-record 16MB A100 SXM run (10L mixed int5/int6 + EMA + QAT)",
     "state": "open",
-    "updatedAt": "2026-03-24T21:41:27Z",
-    "headSha": "41dcc60b9236b4910343d47102b8ef001a1c348e",
+    "updatedAt": "2026-03-24T22:40:52Z",
+    "headSha": "2c3364deaf9ac054a768309035ede73fcc5d5a34",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/619",
     "authorLogin": "zeal175"
   },
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "10-layer GPT with 3x MLP expansion packs BigramHash tokens and mixes int5/int6 quantization with EMA-exported weights and late QAT.",
+    "summary": "10-layer model pairs mixed int5/int6 quantization with EMA-exported weights and 15% late QAT plus BigramHash for a 16MB non-record run on A100.",
     "tags": [
       "quantization",
-      "regularization",
+      "optimizer",
       "tokenization",
-      "architecture"
+      "non-record"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "mixed int5/int6 quantization per block",
-      "EMA-exported weights with late QAT",
-      "BigramHash embeddings with 3x MLP expansion"
+      "Mixed int5/int6 quantization split between MLP and attention/bigram weights",
+      "EMA-exported weights with late-stage 15% QAT",
+      "BigramHash vocabulary/dimension to enrich token encoding"
     ]
   },
   "compatibility": {
