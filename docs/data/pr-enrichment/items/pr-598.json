@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-24T05:21:34.190Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 598,
+    "title": "Non-Record: BPB 1.1334 — 7000-Step Training + Mixed Int6/Int8 Quantization + Legal TTT",
+    "state": "open",
+    "updatedAt": "2026-03-24T04:54:11Z",
+    "headSha": "f94b154a740fcb0b8fa0304174c108f77a9f8d1c",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/598",
+    "authorLogin": "Christopher-Lee-McClendon"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-03-24_11L_GEPA_MixedQuant_7kSteps_LegalTTT/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "GEPA-trained 27M model relies on 7k-step warmdown, mixed int6/int8 quantization, and legal score-first TTT to boost base quality within 16MB.",
+    "tags": [
+      "architecture",
+      "quantization",
+      "training-schedule",
+      "optimizer"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Extended 7000-step warmdown on GEPA",
+      "Mixed int6 per-row and int8 per-tensor quantization",
+      "Legal score-first SGD TTT adaptation"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

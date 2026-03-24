@@ -1,21 +1,45 @@
 {
-  "generatedAt": "2026-03-24T04:51:27.993Z",
+  "generatedAt": "2026-03-24T05:21:44.209Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
     {
+      "prNumber": 598,
+      "title": "Non-Record: BPB 1.1334 — 7000-Step Training + Mixed Int6/Int8 Quantization + Legal TTT",
+      "status": "open",
+      "updatedAt": "2026-03-24T04:54:11Z",
+      "headSha": "f94b154a740fcb0b8fa0304174c108f77a9f8d1c",
+      "generatedAt": "2026-03-24T05:21:34.190Z",
+      "summary": "GEPA-trained 27M model relies on 7k-step warmdown, mixed int6/int8 quantization, and legal score-first TTT to boost base quality within 16MB.",
+      "tags": [
+        "architecture",
+        "quantization",
+        "training-schedule",
+        "optimizer"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-598.json"
+    },
+    {
       "prNumber": 597,
       "title": "Autoresearch over a Collective + Distributed Candidate Pool — M4 Air, val_bpb=1.9263 (non-record)",
       "status": "open",
-      "updatedAt": "2026-03-24T04:38:15Z",
-      "headSha": "de78d7c382e53365f6a3b8f14a32a101f9f7325c",
-      "generatedAt": "2026-03-24T04:51:18.039Z",
-      "summary": "Distributed bandit-driven candidate pool on M4 Air pairs mirrored recurrence + SwiGLU with Mac-tuned schedule to squeeze more steps into 10min runs.",
+      "updatedAt": "2026-03-24T04:51:49Z",
+      "headSha": "4602c2d1fbb0609dcfbf634d9251c3f9489cfd9b",
+      "generatedAt": "2026-03-24T05:21:38.223Z",
+      "summary": "Distributed autoresearch bandit on M4 Air scans candidate frontier and combines mirrored recurrence with SwiGLU to squeeze deep runs into 10-minute, 16GB-friendly experiments.",
       "tags": [
         "architecture",
         "training-schedule",
-        "evaluation",
-        "non-record"
+        "optimizer",
+        "evaluation"
       ],
       "flags": {
         "usesValOnly": false,
@@ -31,14 +55,15 @@
       "prNumber": 596,
       "title": "Record: DeepQuant V10b — 11L INT6 + 8ep LoRA TTT (val_bpb=0.6430)",
       "status": "open",
-      "updatedAt": "2026-03-24T04:31:00Z",
-      "headSha": "c2b3e67894d3bd25fff496e75178930c62bd0900",
-      "generatedAt": "2026-03-24T04:51:22.059Z",
-      "summary": "DeepQuant V10b pairs the 11-layer INT6 PROTEUS base with 8-epoch cosine LR LoRA TTT, bias tuning, and a post-TTT temperature rescale.",
+      "updatedAt": "2026-03-24T05:11:46Z",
+      "headSha": "b7b45e791cd4b807fcab56af2d0cc6fe3fe0c2ec",
+      "generatedAt": "2026-03-24T05:21:44.117Z",
+      "summary": "11-layer INT6 model pairs 8-epoch cosine LR LoRA TTT with bias tunes, temp rescale, and timed fallback to refine PROTEUS base adaptively.",
       "tags": [
+        "architecture",
         "quantization",
         "training-schedule",
-        "regularization"
+        "evaluation"
       ],
       "flags": {
         "usesValOnly": false,

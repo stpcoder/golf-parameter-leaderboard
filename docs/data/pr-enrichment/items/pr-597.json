@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-24T04:51:18.039Z",
+  "generatedAt": "2026-03-24T05:21:38.223Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 597,
     "title": "Autoresearch over a Collective + Distributed Candidate Pool — M4 Air, val_bpb=1.9263 (non-record)",
     "state": "open",
-    "updatedAt": "2026-03-24T04:38:15Z",
-    "headSha": "de78d7c382e53365f6a3b8f14a32a101f9f7325c",
+    "updatedAt": "2026-03-24T04:51:49Z",
+    "headSha": "4602c2d1fbb0609dcfbf634d9251c3f9489cfd9b",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/597",
     "authorLogin": "AnirudhaRamesh"
   },
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Distributed bandit-driven candidate pool on M4 Air pairs mirrored recurrence + SwiGLU with Mac-tuned schedule to squeeze more steps into 10min runs.",
+    "summary": "Distributed autoresearch bandit on M4 Air scans candidate frontier and combines mirrored recurrence with SwiGLU to squeeze deep runs into 10-minute, 16GB-friendly experiments.",
     "tags": [
       "architecture",
       "training-schedule",
-      "evaluation",
-      "non-record"
+      "optimizer",
+      "evaluation"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Evolutionary bandit candidate loop",
-      "Mirrored recurrence with SwiGLU",
-      "Mac-specific batch/warmdown tuning"
+      "evolutionary bandit-driven candidate selection",
+      "mirrored recurrence + SwiGLU for depth/memory reuse",
+      "mac-tailored schedule with tiny batches"
     ]
   },
   "compatibility": {
