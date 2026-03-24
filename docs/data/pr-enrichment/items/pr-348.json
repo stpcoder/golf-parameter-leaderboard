@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-22T03:36:41.314Z",
+  "generatedAt": "2026-03-24T14:26:46.449Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
@@ -9,7 +9,7 @@
     "updatedAt": "2026-03-22T03:29:55Z",
     "headSha": "e83a2778a4b5ec947f213ea8ad59f0754f70b8db",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/348",
-    "authorLogin": "fbedev"
+    "authorLogin": "EthanYangTW"
   },
   "inputs": {
     "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
@@ -19,19 +19,17 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "QAT with STE fake-quant applied int5 to MLP and int6 to attention, paired with 12288-bucket BigramHash and stride-32 eval windows plus pruning/SWA tweaks.",
+    "summary": "QAT with STE int5 MLP/int6 attention, larger BigramHash, stride-32 eval, and pruning+SWA keep the quantized 10-layer model tight.",
     "tags": [
       "quantization",
-      "tokenization",
-      "training-schedule",
-      "mixed-precision"
+      "training-schedule"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "QAT with STE int5 MLP/int6 attention",
-      "BigramHash(12288) with stride-32 evaluation",
-      "5% magnitude pruning and SWA every 50 steps"
+      "STE-driven QAT (int5 MLP, int6 attention)",
+      "BigramHash enlarged to 12288 with stride-32 eval overlap",
+      "5% magnitude pruning plus SWA every 50 steps"
     ]
   },
   "compatibility": {

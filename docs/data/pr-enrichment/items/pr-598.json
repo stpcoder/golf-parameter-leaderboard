@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-24T05:21:34.190Z",
+  "generatedAt": "2026-03-24T14:25:34.759Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 598,
     "title": "Non-Record: BPB 1.1334 — 7000-Step Training + Mixed Int6/Int8 Quantization + Legal TTT",
     "state": "open",
-    "updatedAt": "2026-03-24T04:54:11Z",
+    "updatedAt": "2026-03-24T14:16:54Z",
     "headSha": "f94b154a740fcb0b8fa0304174c108f77a9f8d1c",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/598",
     "authorLogin": "Christopher-Lee-McClendon"
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "GEPA-trained 27M model relies on 7k-step warmdown, mixed int6/int8 quantization, and legal score-first TTT to boost base quality within 16MB.",
+    "summary": "GEPA model trains 7000 steps with warmdown cosine and late mixed int6/int8 QAT quantization, then legal score-first TTT to stay under 16MB.",
     "tags": [
       "architecture",
       "quantization",
       "training-schedule",
-      "optimizer"
+      "evaluation"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Extended 7000-step warmdown on GEPA",
-      "Mixed int6 per-row and int8 per-tensor quantization",
-      "Legal score-first SGD TTT adaptation"
+      "7000-step warmdown cosine schedule before quantization",
+      "Mixed int6 per-row plus int8 per-tensor QAT compression",
+      "Legal score-first SGD TTT with frozen lower blocks"
     ]
   },
   "compatibility": {

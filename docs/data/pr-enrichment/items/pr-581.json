@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-24T02:20:35.798Z",
+  "generatedAt": "2026-03-24T14:25:52.100Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 581,
     "title": "Record: 11L Sidecar48 + Enhanced TTT (cosine LR, 20 epochs) — 1.0698 BPB (3-seed mean)",
-    "state": "open",
-    "updatedAt": "2026-03-24T02:06:03Z",
+    "state": "closed",
+    "updatedAt": "2026-03-24T14:11:54Z",
     "headSha": "3818043aecacf84460ac12c4216df85cc4d0b646",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/581",
     "authorLogin": "teddyoweh"
@@ -19,17 +19,16 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Shared sparse Sidecar48 base now runs 20-epoch test-time training with warmup, cosine LR decay, and WD to refine validation adaptation.",
+    "summary": "Extended sparse sidecar test-time training with 20 epochs of cosine-decayed LR, warmup, and weight decay for steadier adaptation.",
     "tags": [
-      "architecture",
       "training-schedule",
-      "regularization"
+      "optimizer"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "20-epoch TTT with cosine annealing",
-      "1-epoch warmup plus 0.01 weight decay for stable adaptation"
+      "20-epoch cosine annealing schedule with 1-epoch warmup",
+      "AdamW-style weight decay during TTT"
     ]
   },
   "compatibility": {

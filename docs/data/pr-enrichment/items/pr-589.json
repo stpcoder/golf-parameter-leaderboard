@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-23T23:49:30.637Z",
+  "generatedAt": "2026-03-24T14:25:47.281Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 589,
     "title": "Record: Late Soft-Round QAT + Score-First Backward-Looking TTT — val_bpb 1.1178",
-    "state": "open",
-    "updatedAt": "2026-03-23T23:44:39Z",
+    "state": "closed",
+    "updatedAt": "2026-03-24T13:58:40Z",
     "headSha": "54e0d20f0a684f8af9e4aaa243dc2de919a2ff1d",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/589",
     "authorLogin": "RoyiRa"
@@ -19,18 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Uses late-stage soft-round STE surrogate for int6 QAT and score-first backward-looking TTT that sequentially adapts on validation chunks.",
+    "summary": "Late-stage soft-round QAT plus score-first backward-looking TTT on validation chunks nudges int6 weights before EMA/SWA.",
     "tags": [
-      "val-only",
       "quantization",
-      "training-schedule",
+      "val-only",
       "evaluation"
     ],
     "usesValOnly": true,
-    "valOnlyReasoning": "TTT adaptation trains exclusively on segmented validation tokens, so the reported regime is val-only training.",
+    "valOnlyReasoning": "Validation tokens are split into chunks that are scored and then trained on via score-first backward-looking TTT, so the adaptation uses only validation shards.",
     "techniques": [
-      "Late soft-round STE surrogate for int6 QAT",
-      "Score-first backward-looking TTT on sequential validation chunks"
+      "Late soft-round surrogate for QAT",
+      "Score-first backward-looking TTT on 32K-token chunks",
+      "SGD adaptation with cosine LR decay under inference_mode scoring"
     ]
   },
   "compatibility": {

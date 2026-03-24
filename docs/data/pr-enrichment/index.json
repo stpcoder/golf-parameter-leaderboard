@@ -1,8 +1,55 @@
 {
-  "generatedAt": "2026-03-24T13:55:33.994Z",
+  "generatedAt": "2026-03-24T14:26:52.261Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 623,
+      "title": "[10min/16MB]  AWQ + Cyclic Momentum + ReLU² + 11L Shared — 1.1507 bpb",
+      "status": "open",
+      "updatedAt": "2026-03-24T14:22:27Z",
+      "headSha": "db9ea395e16ccc078847e64204c640a631d0925c",
+      "generatedAt": "2026-03-24T14:25:20.010Z",
+      "summary": "Combines AWQ per-channel scaling with cyclic Muon momentum, ReLU² MLPs, and 11-layer shared weights to power an efficient int5/int6 quantized 10min/16MB model.",
+      "tags": [
+        "quantization",
+        "optimizer",
+        "architecture"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-623.json"
+    },
+    {
+      "prNumber": 622,
+      "title": "Submission: 1.0941 BPB by David Weyh",
+      "status": "closed",
+      "updatedAt": "2026-03-24T14:20:49Z",
+      "headSha": "80c21690683dcfc5176c31d673e330be34d4d8f8",
+      "generatedAt": "2026-03-24T14:25:28.801Z",
+      "summary": "Document-level LoRA TTT fine-tunes c_proj/mlp_proj per document on a compressed INT8+Zlib 10-layer model to adapt causally before scoring.",
+      "tags": [
+        "val-only",
+        "quantization",
+        "training-schedule",
+        "architecture"
+      ],
+      "flags": {
+        "usesValOnly": true,
+        "usesValOnlyAi": true,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": false
+      },
+      "file": "items/pr-622.json"
+    },
     {
       "prNumber": 620,
       "title": "Record: LeakyReLU(0.5)² + Per-Document LoRA TTT (mean val_bpb=0.9443, 3 seeds)",
@@ -408,15 +455,15 @@
       "prNumber": 598,
       "title": "Non-Record: BPB 1.1334 — 7000-Step Training + Mixed Int6/Int8 Quantization + Legal TTT",
       "status": "open",
-      "updatedAt": "2026-03-24T04:54:11Z",
+      "updatedAt": "2026-03-24T14:16:54Z",
       "headSha": "f94b154a740fcb0b8fa0304174c108f77a9f8d1c",
-      "generatedAt": "2026-03-24T05:21:34.190Z",
-      "summary": "GEPA-trained 27M model relies on 7k-step warmdown, mixed int6/int8 quantization, and legal score-first TTT to boost base quality within 16MB.",
+      "generatedAt": "2026-03-24T14:25:34.759Z",
+      "summary": "GEPA model trains 7000 steps with warmdown cosine and late mixed int6/int8 QAT quantization, then legal score-first TTT to stay under 16MB.",
       "tags": [
         "architecture",
         "quantization",
         "training-schedule",
-        "optimizer"
+        "evaluation"
       ],
       "flags": {
         "usesValOnly": false,
@@ -478,24 +525,24 @@
     {
       "prNumber": 595,
       "title": "Record: Loqui Auris — 10L + SWA + Standard TTT (val_bpb=1.1100)",
-      "status": "open",
-      "updatedAt": "2026-03-24T03:02:11Z",
+      "status": "closed",
+      "updatedAt": "2026-03-24T14:12:38Z",
       "headSha": "7868f1244e333c7b7af2af2a51c67ea00a427f86",
-      "generatedAt": "2026-03-24T03:20:50.167Z",
-      "summary": "10-layer GQA transformer with SmearGate, BigramHash, SWA+quantization, and AdamW test-time training on validation data.",
+      "generatedAt": "2026-03-24T14:25:39.464Z",
+      "summary": "10-layer GQA transformer with ReLU², SmearGate+BigramHash skips, SWA, and standard AdamW TTT on the quantized weights for final tuning.",
       "tags": [
+        "val-only",
         "architecture",
-        "optimizer",
-        "quantization",
-        "evaluation"
+        "training-schedule",
+        "optimizer"
       ],
       "flags": {
-        "usesValOnly": false,
-        "usesValOnlyAi": false,
+        "usesValOnly": true,
+        "usesValOnlyAi": true,
         "usesValOnlyCollector": false
       },
       "compatibility": {
-        "valOnlyMatchesCollector": true
+        "valOnlyMatchesCollector": false
       },
       "file": "items/pr-595.json"
     },
@@ -550,15 +597,14 @@
     {
       "prNumber": 589,
       "title": "Record: Late Soft-Round QAT + Score-First Backward-Looking TTT — val_bpb 1.1178",
-      "status": "open",
-      "updatedAt": "2026-03-23T23:44:39Z",
+      "status": "closed",
+      "updatedAt": "2026-03-24T13:58:40Z",
       "headSha": "54e0d20f0a684f8af9e4aaa243dc2de919a2ff1d",
-      "generatedAt": "2026-03-23T23:49:30.637Z",
-      "summary": "Uses late-stage soft-round STE surrogate for int6 QAT and score-first backward-looking TTT that sequentially adapts on validation chunks.",
+      "generatedAt": "2026-03-24T14:25:47.281Z",
+      "summary": "Late-stage soft-round QAT plus score-first backward-looking TTT on validation chunks nudges int6 weights before EMA/SWA.",
       "tags": [
-        "val-only",
         "quantization",
-        "training-schedule",
+        "val-only",
         "evaluation"
       ],
       "flags": {
@@ -645,15 +691,14 @@
     {
       "prNumber": 581,
       "title": "Record: 11L Sidecar48 + Enhanced TTT (cosine LR, 20 epochs) — 1.0698 BPB (3-seed mean)",
-      "status": "open",
-      "updatedAt": "2026-03-24T02:06:03Z",
+      "status": "closed",
+      "updatedAt": "2026-03-24T14:11:54Z",
       "headSha": "3818043aecacf84460ac12c4216df85cc4d0b646",
-      "generatedAt": "2026-03-24T02:20:35.798Z",
-      "summary": "Shared sparse Sidecar48 base now runs 20-epoch test-time training with warmup, cosine LR decay, and WD to refine validation adaptation.",
+      "generatedAt": "2026-03-24T14:25:52.100Z",
+      "summary": "Extended sparse sidecar test-time training with 20 epochs of cosine-decayed LR, warmup, and weight decay for steadier adaptation.",
       "tags": [
-        "architecture",
         "training-schedule",
-        "regularization"
+        "optimizer"
       ],
       "flags": {
         "usesValOnly": false,
@@ -1132,11 +1177,11 @@
     {
       "prNumber": 555,
       "title": "Add 11L Shared Sparse Sidecar + EMA + AdamW TTT (1.0916 mean)",
-      "status": "open",
-      "updatedAt": "2026-03-23T17:29:37Z",
+      "status": "closed",
+      "updatedAt": "2026-03-24T14:10:18Z",
       "headSha": "f231fd55b7e7af1e6bdd9ff44f362c883a8ef0a1",
-      "generatedAt": "2026-03-23T17:48:15.785Z",
-      "summary": "Adds a shared late-layer sparse sidecar reused across sites with learned embeddings and scales to refine representations on the AdamW-TTT 11-layer trunk.",
+      "generatedAt": "2026-03-24T14:25:56.128Z",
+      "summary": "11-layer AdamW-TTT trunk adds a shared sparse sidecar reused across late layers with per-site embeddings and scales for cheap local refinement.",
       "tags": [
         "architecture"
       ],
@@ -1663,11 +1708,11 @@
     {
       "prNumber": 518,
       "title": "Record: 11L XSA4 + LeakyReLU(0.5)² + Cosine  TTT 50ep (val_bpb=1.0622)",
-      "status": "open",
-      "updatedAt": "2026-03-23T09:35:11Z",
+      "status": "closed",
+      "updatedAt": "2026-03-24T14:09:36Z",
       "headSha": "e246baab66757006e172d06c3fc0884259f64dc7",
-      "generatedAt": "2026-03-23T09:45:05.101Z",
-      "summary": "Enhance the 11-layer XSA4 stack with LeakyReLU(0.5)² and 50-epoch cosine TTT using per-layer LR groups plus Int6 GPTQ-lite quantization.",
+      "generatedAt": "2026-03-24T14:26:01.103Z",
+      "summary": "11-layer XSA stack using LeakyReLU(0.5)^2 and 50-epoch cosine TTT with per-layer LR groups on the prior frontier recipe.",
       "tags": [
         "architecture",
         "training-schedule",
@@ -2244,11 +2289,11 @@
     {
       "prNumber": 486,
       "title": "Record: 11L TrigramHash + ValueResidual + GradQuant + Cosine TTT (mean val_bpb=1.0887, best 1.0879)",
-      "status": "open",
-      "updatedAt": "2026-03-23T04:59:07Z",
+      "status": "closed",
+      "updatedAt": "2026-03-24T14:08:48Z",
       "headSha": "1c2a47ea8cd4687fbb27b418f50ef1cef722428f",
-      "generatedAt": "2026-03-23T05:14:27.174Z",
-      "summary": "Combines TrigramHash embedding, ResFormer-style value residuals, and gradient-guided adaptive quantization on the 11L EMA+AdamW TTT stack.",
+      "generatedAt": "2026-03-24T14:26:06.521Z",
+      "summary": "Adds trigram-hash embeddings, lightweight cross-layer value residuals, and gradient-guided adaptive INT5/6/7 quantization on top of 11L AdamW TTT.",
       "tags": [
         "architecture",
         "quantization"
@@ -2476,24 +2521,24 @@
     {
       "prNumber": 473,
       "title": "Record: Legal Score-First TTT + Parallel Muon — val_bpb 1.1214 (3-seed mean)",
-      "status": "open",
-      "updatedAt": "2026-03-23T17:05:14Z",
+      "status": "closed",
+      "updatedAt": "2026-03-24T13:59:54Z",
       "headSha": "7e29b788357d95ac8a8f2e2a0076e78c740144ed",
-      "generatedAt": "2026-03-23T17:17:20.004Z",
-      "summary": "Chunked score-first TTT adapts the Parameter Banking/Parallel Muon stack so each 32K validation chunk is scored before SGD-based updates.",
+      "generatedAt": "2026-03-24T14:26:25.956Z",
+      "summary": "Combines PR#414 stack with Parameter Banking + Parallel Muon optimizer and legal score-first TTT (SGD on 32K chunks) plus BigramHash3072.",
       "tags": [
-        "val-only",
         "optimizer",
-        "muon",
+        "training-schedule",
+        "evaluation",
         "architecture"
       ],
       "flags": {
-        "usesValOnly": true,
-        "usesValOnlyAi": true,
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
         "usesValOnlyCollector": false
       },
       "compatibility": {
-        "valOnlyMatchesCollector": false
+        "valOnlyMatchesCollector": true
       },
       "file": "items/pr-473.json"
     },
@@ -3063,11 +3108,11 @@
     {
       "prNumber": 442,
       "title": "Record: 11L EMA + AdamW TTT 10ep (mean val_bpb=1.1027)",
-      "status": "open",
-      "updatedAt": "2026-03-22T17:23:00Z",
+      "status": "closed",
+      "updatedAt": "2026-03-24T14:02:36Z",
       "headSha": "aef01ee4b91efc3f9ef0164b713b13551db91bf2",
-      "generatedAt": "2026-03-22T17:41:43.395Z",
-      "summary": "Swapping SGD for AdamW in test-time training cuts epochs/time in half while reusing the previous 11-layer EMA model and sliding-window eval.",
+      "generatedAt": "2026-03-24T14:26:31.824Z",
+      "summary": "Replaces SGD-based test-time training with AdamW and halved epochs to cut TTT runtime while keeping the 11L EMA/SmearGate stack intact.",
       "tags": [
         "optimizer",
         "evaluation"
@@ -3558,15 +3603,16 @@
     {
       "prNumber": 417,
       "title": "Record: 11L XSA4 + Tight SWA + FA3 + Two-Phase TTT (3-seed mean val_bpb=1.1227)",
-      "status": "open",
-      "updatedAt": "2026-03-22T10:44:18Z",
+      "status": "closed",
+      "updatedAt": "2026-03-24T14:02:09Z",
       "headSha": "550a5db6cda3e7c95b9ccb269a0399104eb193ff",
-      "generatedAt": "2026-03-22T11:08:58.835Z",
-      "summary": "11-layer XSA model uses FA3 Hopper plus two-phase TTT (norm recalibration then selective-block adaptation) atop tight SWA/int6 quantization.",
+      "generatedAt": "2026-03-24T14:26:39.830Z",
+      "summary": "Two-phase test-time training recalibrates the FA3 Hopper+XSA quantized model by unfreezing norms then last blocks while preserving Tight SWA.",
       "tags": [
         "attention",
+        "training-schedule",
         "quantization",
-        "training-schedule"
+        "evaluation"
       ],
       "flags": {
         "usesValOnly": false,
@@ -4707,6 +4753,28 @@
       "file": "items/pr-349.json"
     },
     {
+      "prNumber": 348,
+      "title": "Submission/qat bigram12k stride32",
+      "status": "open",
+      "updatedAt": "2026-03-22T03:29:55Z",
+      "headSha": "e83a2778a4b5ec947f213ea8ad59f0754f70b8db",
+      "generatedAt": "2026-03-24T14:26:46.449Z",
+      "summary": "QAT with STE int5 MLP/int6 attention, larger BigramHash, stride-32 eval, and pruning+SWA keep the quantized 10-layer model tight.",
+      "tags": [
+        "quantization",
+        "training-schedule"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-348.json"
+    },
+    {
       "prNumber": 347,
       "title": "LongContext 4096 + Full SOTA Stack & QAT Int4 → 16 Layers",
       "status": "open",
@@ -4825,15 +4893,15 @@
       "prNumber": 340,
       "title": "V2 Prototype: SwiGLU + Dropout + MuonWD + MidLayerLoop",
       "status": "open",
-      "updatedAt": "2026-03-24T13:46:55Z",
+      "updatedAt": "2026-03-24T14:17:37Z",
       "headSha": "879589afbb3e2be81088204ca472f823a6dda204",
-      "generatedAt": "2026-03-24T13:55:33.942Z",
-      "summary": "Prototype couples SwiGLU MLPs, MuonWD/dropout, and targeted mid-layer recurrence to boost depth efficiency within limited compute.",
+      "generatedAt": "2026-03-24T14:26:52.212Z",
+      "summary": "Prototype pairs SwiGLU MLPs with aggressive MuonWD/dropout and inner-layer recurrence, plus INT8+zlib compression for a 16MB-friendly H100-ready build.",
       "tags": [
         "architecture",
+        "muon",
         "regularization",
-        "quantization",
-        "non-record"
+        "quantization"
       ],
       "flags": {
         "usesValOnly": false,

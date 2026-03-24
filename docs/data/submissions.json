@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-24T13:54:56.026Z",
+  "generatedAt": "2026-03-24T14:25:12.096Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "submissions": [
@@ -1012,7 +1012,7 @@
     {
       "id": "record-records-track_10min_16mb-2026-03-23_11L-CosineTTT",
       "source": "pull_request",
-      "status": "open",
+      "status": "closed",
       "category": "main-track",
       "track": {
         "path": "records/track_10min_16mb",
@@ -1060,14 +1060,14 @@
       "pr": {
         "number": 518,
         "title": "Record: 11L XSA4 + LeakyReLU(0.5)² + Cosine  TTT 50ep (val_bpb=1.0622)",
-        "state": "open",
+        "state": "closed",
         "draft": false,
         "mergedAt": null,
         "htmlUrl": "https://github.com/openai/parameter-golf/pull/518",
         "authorLogin": "sofiabod",
         "authorName": null,
         "createdAt": "2026-03-23T09:35:11Z",
-        "updatedAt": "2026-03-23T09:35:11Z",
+        "updatedAt": "2026-03-24T14:09:36Z",
         "headSha": "e246baab66757006e172d06c3fc0884259f64dc7",
         "headRepo": "sofiabod/parameter-golf"
       },
@@ -1089,7 +1089,7 @@
     {
       "id": "record-records-track_10min_16mb-2026-03-24_11L_Sidecar48_EnhancedTTT20_CosineLR",
       "source": "pull_request",
-      "status": "open",
+      "status": "closed",
       "category": "main-track",
       "track": {
         "path": "records/track_10min_16mb",
@@ -1137,14 +1137,14 @@
       "pr": {
         "number": 581,
         "title": "Record: 11L Sidecar48 + Enhanced TTT (cosine LR, 20 epochs) — 1.0698 BPB (3-seed mean)",
-        "state": "open",
+        "state": "closed",
         "draft": false,
         "mergedAt": null,
         "htmlUrl": "https://github.com/openai/parameter-golf/pull/581",
         "authorLogin": "teddyoweh",
         "authorName": null,
         "createdAt": "2026-03-23T22:38:22Z",
-        "updatedAt": "2026-03-24T02:06:03Z",
+        "updatedAt": "2026-03-24T14:11:54Z",
         "headSha": "3818043aecacf84460ac12c4216df85cc4d0b646",
         "headRepo": "teddyoweh/parameter-golf"
       },
@@ -1320,7 +1320,7 @@
     {
       "id": "record-records-track_10min_16mb-2026-03-22_11L_Sidecar48_Bigram96_EMA_AdamWTTT",
       "source": "pull_request",
-      "status": "open",
+      "status": "closed",
       "category": "main-track",
       "track": {
         "path": "records/track_10min_16mb",
@@ -1368,14 +1368,14 @@
       "pr": {
         "number": 555,
         "title": "Add 11L Shared Sparse Sidecar + EMA + AdamW TTT (1.0916 mean)",
-        "state": "open",
+        "state": "closed",
         "draft": false,
         "mergedAt": null,
         "htmlUrl": "https://github.com/openai/parameter-golf/pull/555",
         "authorLogin": "ymrohit",
         "authorName": null,
         "createdAt": "2026-03-23T17:06:44Z",
-        "updatedAt": "2026-03-23T17:29:37Z",
+        "updatedAt": "2026-03-24T14:10:18Z",
         "headSha": "f231fd55b7e7af1e6bdd9ff44f362c883a8ef0a1",
         "headRepo": "ymrohit/parameter-golf"
       },
@@ -1386,6 +1386,83 @@
         "script": "https://github.com/openai/parameter-golf/blob/f231fd55b7e7af1e6bdd9ff44f362c883a8ef0a1/records/track_10min_16mb/2026-03-22_11L_Sidecar48_Bigram96_EMA_AdamWTTT/train_gpt.py",
         "folder": "https://github.com/openai/parameter-golf/tree/f231fd55b7e7af1e6bdd9ff44f362c883a8ef0a1/records/track_10min_16mb/2026-03-22_11L_Sidecar48_Bigram96_EMA_AdamWTTT",
         "pr": "https://github.com/openai/parameter-golf/pull/555",
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": false,
+        "hasPullRequest": true,
+        "listedInReadme": false
+      }
+    },
+    {
+      "id": "record-records-weyhe_submission",
+      "source": "pull_request",
+      "status": "closed",
+      "category": "unknown",
+      "track": {
+        "path": "records/weyhe_submission",
+        "slug": "weyhe_submission",
+        "label": "weyhe submission",
+        "official": false,
+        "category": "unknown"
+      },
+      "record": {
+        "folderName": "weyhe_submission",
+        "folderPath": "records/weyhe_submission",
+        "submissionPath": "records/weyhe_submission/submission.json",
+        "readmePath": "records/weyhe_submission/README.md",
+        "trainLogPath": "records/weyhe_submission/train.log",
+        "scriptPath": "records/weyhe_submission/train_gpt.py"
+      },
+      "submission": {
+        "author": "Upsalla",
+        "githubId": "dweyh",
+        "name": "David Weyh",
+        "blurb": null,
+        "date": "2026-03-24T13:58:44Z"
+      },
+      "metrics": {
+        "valBpb": 1.094169148563295,
+        "valLoss": null,
+        "preQuantValBpb": null,
+        "preQuantValLoss": null,
+        "stepStop": null,
+        "wallclockSeconds": null,
+        "evalTimeSeconds": null
+      },
+      "artifact": {
+        "bytesTotal": null,
+        "bytesCode": null,
+        "bytesModelInt8Zlib": null
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
+      "pr": {
+        "number": 622,
+        "title": "Submission: 1.0941 BPB by David Weyh",
+        "state": "closed",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/622",
+        "authorLogin": "Upsalla",
+        "authorName": null,
+        "createdAt": "2026-03-24T13:58:44Z",
+        "updatedAt": "2026-03-24T14:20:49Z",
+        "headSha": "80c21690683dcfc5176c31d673e330be34d4d8f8",
+        "headRepo": "Upsalla/parameter-golf"
+      },
+      "links": {
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/80c21690683dcfc5176c31d673e330be34d4d8f8/records/weyhe_submission/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/80c21690683dcfc5176c31d673e330be34d4d8f8/records/weyhe_submission/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/80c21690683dcfc5176c31d673e330be34d4d8f8/records/weyhe_submission/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/80c21690683dcfc5176c31d673e330be34d4d8f8/records/weyhe_submission/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/80c21690683dcfc5176c31d673e330be34d4d8f8/records/weyhe_submission",
+        "pr": "https://github.com/openai/parameter-golf/pull/622",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
       "provenance": {
@@ -1474,7 +1551,7 @@
     {
       "id": "record-records-track_10min_16mb-2026-03-23_11L_EMA_AdamWTTT10ep_1-1027",
       "source": "pull_request",
-      "status": "open",
+      "status": "closed",
       "category": "main-track",
       "track": {
         "path": "records/track_10min_16mb",
@@ -1522,14 +1599,14 @@
       "pr": {
         "number": 442,
         "title": "Record: 11L EMA + AdamW TTT 10ep (mean val_bpb=1.1027)",
-        "state": "open",
+        "state": "closed",
         "draft": false,
         "mergedAt": null,
         "htmlUrl": "https://github.com/openai/parameter-golf/pull/442",
         "authorLogin": "sjp611",
         "authorName": null,
         "createdAt": "2026-03-22T17:07:13Z",
-        "updatedAt": "2026-03-22T17:23:00Z",
+        "updatedAt": "2026-03-24T14:02:36Z",
         "headSha": "aef01ee4b91efc3f9ef0164b713b13551db91bf2",
         "headRepo": "sjp611/parameter-golf"
       },
@@ -1628,7 +1705,7 @@
     {
       "id": "record-records-track_10min_16mb-2026-03-23_LoquiAuris_10L_SWA_StandardTTT_1-1100",
       "source": "pull_request",
-      "status": "open",
+      "status": "closed",
       "category": "main-track",
       "track": {
         "path": "records/track_10min_16mb",
@@ -1676,14 +1753,14 @@
       "pr": {
         "number": 595,
         "title": "Record: Loqui Auris — 10L + SWA + Standard TTT (val_bpb=1.1100)",
-        "state": "open",
+        "state": "closed",
         "draft": false,
         "mergedAt": null,
         "htmlUrl": "https://github.com/openai/parameter-golf/pull/595",
         "authorLogin": "LoquiAuris",
         "authorName": null,
         "createdAt": "2026-03-24T02:56:33Z",
-        "updatedAt": "2026-03-24T03:02:11Z",
+        "updatedAt": "2026-03-24T14:12:38Z",
         "headSha": "7868f1244e333c7b7af2af2a51c67ea00a427f86",
         "headRepo": "LoquiAuris/parameter-golf"
       },
@@ -1705,7 +1782,7 @@
     {
       "id": "record-records-track_10min_16mb-2026-03-23_11L_TrigramHash_ValueResidual_GradQuant_TTT",
       "source": "pull_request",
-      "status": "open",
+      "status": "closed",
       "category": "main-track",
       "track": {
         "path": "records/track_10min_16mb",
@@ -1753,14 +1830,14 @@
       "pr": {
         "number": 486,
         "title": "Record: 11L TrigramHash + ValueResidual + GradQuant + Cosine TTT (mean val_bpb=1.0887, best 1.0879)",
-        "state": "open",
+        "state": "closed",
         "draft": false,
         "mergedAt": null,
         "htmlUrl": "https://github.com/openai/parameter-golf/pull/486",
         "authorLogin": "ndokutovich",
         "authorName": null,
         "createdAt": "2026-03-23T01:05:38Z",
-        "updatedAt": "2026-03-23T04:59:07Z",
+        "updatedAt": "2026-03-24T14:08:48Z",
         "headSha": "1c2a47ea8cd4687fbb27b418f50ef1cef722428f",
         "headRepo": "ndokutovich/parameter-golf"
       },
@@ -2250,7 +2327,7 @@
     {
       "id": "record-records-track_10min_16mb-2026-03-24_LeakyReLU2_LegalTTT_1-1178",
       "source": "pull_request",
-      "status": "open",
+      "status": "closed",
       "category": "main-track",
       "track": {
         "path": "records/track_10min_16mb",
@@ -2298,14 +2375,14 @@
       "pr": {
         "number": 589,
         "title": "Record: Late Soft-Round QAT + Score-First Backward-Looking TTT — val_bpb 1.1178",
-        "state": "open",
+        "state": "closed",
         "draft": false,
         "mergedAt": null,
         "htmlUrl": "https://github.com/openai/parameter-golf/pull/589",
         "authorLogin": "RoyiRa",
         "authorName": null,
         "createdAt": "2026-03-23T23:44:39Z",
-        "updatedAt": "2026-03-23T23:44:39Z",
+        "updatedAt": "2026-03-24T13:58:40Z",
         "headSha": "54e0d20f0a684f8af9e4aaa243dc2de919a2ff1d",
         "headRepo": "RoyiRa/parameter-golf"
       },
@@ -2866,7 +2943,7 @@
     {
       "id": "record-records-track_10min_16mb-2026-03-22_LegalTTT_ParallelMuon_1-1219",
       "source": "pull_request",
-      "status": "open",
+      "status": "closed",
       "category": "main-track",
       "track": {
         "path": "records/track_10min_16mb",
@@ -2914,14 +2991,14 @@
       "pr": {
         "number": 473,
         "title": "Record: Legal Score-First TTT + Parallel Muon — val_bpb 1.1214 (3-seed mean)",
-        "state": "open",
+        "state": "closed",
         "draft": false,
         "mergedAt": null,
         "htmlUrl": "https://github.com/openai/parameter-golf/pull/473",
         "authorLogin": "abaybektursun",
         "authorName": null,
         "createdAt": "2026-03-22T23:28:14Z",
-        "updatedAt": "2026-03-23T17:05:14Z",
+        "updatedAt": "2026-03-24T13:59:54Z",
         "headSha": "7e29b788357d95ac8a8f2e2a0076e78c740144ed",
         "headRepo": "abaybektursun/parameter-golf"
       },
@@ -5000,7 +5077,7 @@
         "authorLogin": "Christopher-Lee-McClendon",
         "authorName": null,
         "createdAt": "2026-03-24T04:54:11Z",
-        "updatedAt": "2026-03-24T04:54:11Z",
+        "updatedAt": "2026-03-24T14:16:54Z",
         "headSha": "f94b154a740fcb0b8fa0304174c108f77a9f8d1c",
         "headRepo": "Christopher-Lee-McClendon/parameter-golf"
       },
@@ -8482,6 +8559,83 @@
         "onMain": true,
         "hasPullRequest": true,
         "listedInReadme": true
+      }
+    },
+    {
+      "id": "record-records-track_10min_16mb-2025-03-24_AWQ_CyclMom_11L_shared",
+      "source": "pull_request",
+      "status": "open",
+      "category": "main-track",
+      "track": {
+        "path": "records/track_10min_16mb",
+        "slug": "track_10min_16mb",
+        "label": "10 Minute / 16MB",
+        "official": true,
+        "category": "main-track"
+      },
+      "record": {
+        "folderName": "2025-03-24_AWQ_CyclMom_11L_shared",
+        "folderPath": "records/track_10min_16mb/2025-03-24_AWQ_CyclMom_11L_shared",
+        "submissionPath": "records/track_10min_16mb/2025-03-24_AWQ_CyclMom_11L_shared/submission.json",
+        "readmePath": "records/track_10min_16mb/2025-03-24_AWQ_CyclMom_11L_shared/README.md",
+        "trainLogPath": "records/track_10min_16mb/2025-03-24_AWQ_CyclMom_11L_shared/train.log",
+        "scriptPath": "records/track_10min_16mb/2025-03-24_AWQ_CyclMom_11L_shared/train_gpt.py"
+      },
+      "submission": {
+        "author": "SPThole",
+        "githubId": "SPThole",
+        "name": "AWQ + Cyclic Momentum + ReLU² + 11L Shared",
+        "blurb": "Activation-Aware Weight Quantization (AWQ) closes the int5/int6 quant gap from 0.027 to 0.010 bpb. Cyclic Muon momentum (0.85-0.95 triangle wave) escapes sharp minima. ReLU² for sparser MLPs. 11 layers with 10 unique weights. Emerged from 21+ systematic experiments on 1×H100/A40 before scaling to 8×H100.",
+        "date": "2026-03-25T00:00:00Z"
+      },
+      "metrics": {
+        "valBpb": 1.15071578,
+        "valLoss": 1.94293025,
+        "preQuantValBpb": null,
+        "preQuantValLoss": null,
+        "stepStop": null,
+        "wallclockSeconds": null,
+        "evalTimeSeconds": null
+      },
+      "artifact": {
+        "bytesTotal": 15465308,
+        "bytesCode": 58616,
+        "bytesModelInt8Zlib": null
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
+      "pr": {
+        "number": 623,
+        "title": "[10min/16MB]  AWQ + Cyclic Momentum + ReLU² + 11L Shared — 1.1507 bpb",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/623",
+        "authorLogin": "SPThole",
+        "authorName": null,
+        "createdAt": "2026-03-24T14:22:27Z",
+        "updatedAt": "2026-03-24T14:22:27Z",
+        "headSha": "db9ea395e16ccc078847e64204c640a631d0925c",
+        "headRepo": "SPThole/parameter-golf"
+      },
+      "links": {
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/db9ea395e16ccc078847e64204c640a631d0925c/records/track_10min_16mb/2025-03-24_AWQ_CyclMom_11L_shared/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/db9ea395e16ccc078847e64204c640a631d0925c/records/track_10min_16mb/2025-03-24_AWQ_CyclMom_11L_shared/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/db9ea395e16ccc078847e64204c640a631d0925c/records/track_10min_16mb/2025-03-24_AWQ_CyclMom_11L_shared/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/db9ea395e16ccc078847e64204c640a631d0925c/records/track_10min_16mb/2025-03-24_AWQ_CyclMom_11L_shared/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/db9ea395e16ccc078847e64204c640a631d0925c/records/track_10min_16mb/2025-03-24_AWQ_CyclMom_11L_shared",
+        "pr": "https://github.com/openai/parameter-golf/pull/623",
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": false,
+        "hasPullRequest": true,
+        "listedInReadme": false
       }
     },
     {
@@ -18090,7 +18244,7 @@
         "authorLogin": "starfly-web",
         "authorName": null,
         "createdAt": "2026-03-21T12:44:14Z",
-        "updatedAt": "2026-03-24T13:46:55Z",
+        "updatedAt": "2026-03-24T14:17:37Z",
         "headSha": "879589afbb3e2be81088204ca472f823a6dda204",
         "headRepo": "starfly-web/parameter-golf"
       },
@@ -30668,7 +30822,7 @@
     {
       "id": "record-records-track_10min_16mb-2026-03-22_TwoPhase_TTT_NormRepair",
       "source": "pull_request",
-      "status": "open",
+      "status": "closed",
       "category": "main-track",
       "track": {
         "path": "records/track_10min_16mb",
@@ -30716,14 +30870,14 @@
       "pr": {
         "number": 417,
         "title": "Record: 11L XSA4 + Tight SWA + FA3 + Two-Phase TTT (3-seed mean val_bpb=1.1227)",
-        "state": "open",
+        "state": "closed",
         "draft": false,
         "mergedAt": null,
         "htmlUrl": "https://github.com/openai/parameter-golf/pull/417",
         "authorLogin": "EthanYangTW",
         "authorName": null,
         "createdAt": "2026-03-22T10:40:40Z",
-        "updatedAt": "2026-03-22T10:44:18Z",
+        "updatedAt": "2026-03-24T14:02:09Z",
         "headSha": "550a5db6cda3e7c95b9ccb269a0399104eb193ff",
         "headRepo": "EthanYangTW/parameter-golf"
       },
@@ -32639,17 +32793,17 @@
         "valOnlyMatches": []
       },
       "pr": {
-        "number": 417,
-        "title": "Record: 11L XSA4 + Tight SWA + FA3 + Two-Phase TTT (3-seed mean val_bpb=1.1227)",
+        "number": 348,
+        "title": "Submission/qat bigram12k stride32",
         "state": "open",
         "draft": false,
         "mergedAt": null,
-        "htmlUrl": "https://github.com/openai/parameter-golf/pull/417",
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/348",
         "authorLogin": "EthanYangTW",
         "authorName": null,
-        "createdAt": "2026-03-22T10:40:40Z",
-        "updatedAt": "2026-03-22T10:44:18Z",
-        "headSha": "550a5db6cda3e7c95b9ccb269a0399104eb193ff",
+        "createdAt": "2026-03-21T15:22:55Z",
+        "updatedAt": "2026-03-22T03:29:55Z",
+        "headSha": "e83a2778a4b5ec947f213ea8ad59f0754f70b8db",
         "headRepo": "EthanYangTW/parameter-golf"
       },
       "links": {
@@ -32658,7 +32812,7 @@
         "trainLog": "https://github.com/openai/parameter-golf/blob/e83a2778a4b5ec947f213ea8ad59f0754f70b8db/records/track_10min_16mb/2026-03-21_QAT_BigramHash12K_Stride32/train.log",
         "script": "https://github.com/openai/parameter-golf/blob/e83a2778a4b5ec947f213ea8ad59f0754f70b8db/records/track_10min_16mb/2026-03-21_QAT_BigramHash12K_Stride32/train_gpt.py",
         "folder": "https://github.com/openai/parameter-golf/tree/e83a2778a4b5ec947f213ea8ad59f0754f70b8db/records/track_10min_16mb/2026-03-21_QAT_BigramHash12K_Stride32",
-        "pr": "https://github.com/openai/parameter-golf/pull/417",
+        "pr": "https://github.com/openai/parameter-golf/pull/348",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
       "provenance": {

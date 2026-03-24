@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-23T17:17:20.004Z",
+  "generatedAt": "2026-03-24T14:26:25.956Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 473,
     "title": "Record: Legal Score-First TTT + Parallel Muon — val_bpb 1.1214 (3-seed mean)",
-    "state": "open",
-    "updatedAt": "2026-03-23T17:05:14Z",
+    "state": "closed",
+    "updatedAt": "2026-03-24T13:59:54Z",
     "headSha": "7e29b788357d95ac8a8f2e2a0076e78c740144ed",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/473",
     "authorLogin": "abaybektursun"
@@ -19,25 +19,25 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Chunked score-first TTT adapts the Parameter Banking/Parallel Muon stack so each 32K validation chunk is scored before SGD-based updates.",
+    "summary": "Combines PR#414 stack with Parameter Banking + Parallel Muon optimizer and legal score-first TTT (SGD on 32K chunks) plus BigramHash3072.",
     "tags": [
-      "val-only",
       "optimizer",
-      "muon",
+      "training-schedule",
+      "evaluation",
       "architecture"
     ],
-    "usesValOnly": true,
-    "valOnlyReasoning": "TTT adaptation trains solely on validation chunks during the evaluation phase.",
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
     "techniques": [
-      "Chunked score-first TTT with inference_mode scoring",
-      "Parameter Banking + Parallel Muon SGD per chunk",
-      "BigramHash(3072) + GPTQ-lite quantization"
+      "Score-first TTT over 32K chunks with inference_mode scoring then SGD+momentum adaptation",
+      "Parameter Banking + Parallel Muon optimizer on the PR#414-derived 11L/512d stack",
+      "BigramHash(3072) with XSA tail, Partial RoPE, VE128, EMA+SWA quantization pipeline"
     ]
   },
   "compatibility": {
     "collectorUsesValOnly": false,
-    "aiUsesValOnly": true,
-    "finalUsesValOnly": true,
-    "valOnlyMatchesCollector": false
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
   }
 }
