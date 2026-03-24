@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-24T03:20:50.167Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 595,
+    "title": "Record: Loqui Auris — 10L + SWA + Standard TTT (val_bpb=1.1100)",
+    "state": "open",
+    "updatedAt": "2026-03-24T03:02:11Z",
+    "headSha": "7868f1244e333c7b7af2af2a51c67ea00a427f86",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/595",
+    "authorLogin": "LoquiAuris"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-23_LoquiAuris_10L_SWA_StandardTTT_1.1100/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "10-layer GQA transformer with SmearGate, BigramHash, SWA+quantization, and AdamW test-time training on validation data.",
+    "tags": [
+      "architecture",
+      "optimizer",
+      "quantization",
+      "evaluation"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "10L GQA+SmearGate transformer with U-Net skips",
+      "SWA averaging over 29 checkpoints before quantizing",
+      "AdamW test-time training on validation data"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

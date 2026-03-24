@@ -1,37 +1,39 @@
 {
-  "generatedAt": "2026-03-24T00:19:45.103Z",
+  "generatedAt": "2026-03-24T03:21:03.011Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 435,
     "title": "Radial bitnet submission",
     "state": "open",
-    "updatedAt": "2026-03-23T23:58:30Z",
-    "headSha": "be658a9aed2b7134f28e495a7fb5bb1fdb8f7c92",
+    "updatedAt": "2026-03-24T03:12:31Z",
+    "headSha": "2ab59bbbf196b347405f7eefa97d4945caf4218f",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/435",
     "authorLogin": "rthgit"
   },
   "inputs": {
-    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "hash": "c4f8d017d13e812b0ad5a78b677f8350df1124736cd3f84c8d4e37f273206c70",
     "readmePaths": [
-      "records/track_10min_16mb/2026-03-22_RadialBitNet/README.md"
+      "records/track_10min_16mb/2026-03-22_RadialBitNet/README.md",
+      "records/track_10min_16mb/2026-03-24_Radial_TokenBranch/2026-03-24_Radial_MixedBridge/README.md",
+      "records/track_10min_16mb/2026-03-24_Radial_TokenBranch/README.md"
     ],
-    "submissionCount": 1
+    "submissionCount": 3
   },
   "output": {
-    "summary": "Aggressively compressed 15.6M LM using BitNet-style ternary projections, RadialEncoding, and the FRO optimizer to maximize capacity under the 16MB budget.",
+    "summary": "Dual-branch compressed transformer uses BitNet-style ternary projections, radial token branch, and FRO before mixed int8/int6 export.",
     "tags": [
-      "quantization",
-      "positional-encoding",
+      "architecture",
       "optimizer",
-      "compression"
+      "quantization",
+      "tokenization"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Ternary BitNet-style projections for query/key/value/output and MLP layers",
-      "Analytic RadialEncoding in place of learned positional embeddings",
-      "FRO optimizer tailored for short-horizon quantized training"
+      "BitNet-style ternary projections",
+      "Radial token geometry branch",
+      "FRO optimizer with mixed int8/int6 export"
     ]
   },
   "compatibility": {

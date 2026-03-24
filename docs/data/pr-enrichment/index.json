@@ -1,8 +1,32 @@
 {
-  "generatedAt": "2026-03-24T02:50:34.342Z",
+  "generatedAt": "2026-03-24T03:21:03.076Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 595,
+      "title": "Record: Loqui Auris — 10L + SWA + Standard TTT (val_bpb=1.1100)",
+      "status": "open",
+      "updatedAt": "2026-03-24T03:02:11Z",
+      "headSha": "7868f1244e333c7b7af2af2a51c67ea00a427f86",
+      "generatedAt": "2026-03-24T03:20:50.167Z",
+      "summary": "10-layer GQA transformer with SmearGate, BigramHash, SWA+quantization, and AdamW test-time training on validation data.",
+      "tags": [
+        "architecture",
+        "optimizer",
+        "quantization",
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-595.json"
+    },
     {
       "prNumber": 593,
       "title": "Record: Full GPTQ + LeakyReLU² + Parallel Muon — val_bpb 1.1171 (3-seed mean, no TTT)",
@@ -774,23 +798,23 @@
       "prNumber": 548,
       "title": "Record: Loqui Auris — 10L + LoRA TTT (mean val_bpb=1.0865, 2 seeds)",
       "status": "open",
-      "updatedAt": "2026-03-23T16:11:26Z",
-      "headSha": "849c02e8f7b633a7f7a20d7d31e660f1aae22891",
-      "generatedAt": "2026-03-23T16:16:48.730Z",
-      "summary": "10L GQA model trains with EMA and INT6 quantization, then runs batched per-document LoRA TTT on a fresh uncompiled copy to fit 16MB.",
+      "updatedAt": "2026-03-24T03:01:02Z",
+      "headSha": "c0d2a504839c847e3f9ea7380599bcb529551520",
+      "generatedAt": "2026-03-24T03:20:57.260Z",
+      "summary": "10-layer GQA Transformer with Int6 quantization, Muon+EMA training, and per-document LoRA TTT after torch.compile reset to keep adaptation paths active.",
       "tags": [
-        "architecture",
+        "val-only",
         "quantization",
-        "evaluation",
-        "training-schedule"
+        "optimizer",
+        "architecture"
       ],
       "flags": {
-        "usesValOnly": false,
-        "usesValOnlyAi": false,
+        "usesValOnly": true,
+        "usesValOnlyAi": true,
         "usesValOnlyCollector": false
       },
       "compatibility": {
-        "valOnlyMatchesCollector": true
+        "valOnlyMatchesCollector": false
       },
       "file": "items/pr-548.json"
     },
@@ -2730,15 +2754,15 @@
       "prNumber": 435,
       "title": "Radial bitnet submission",
       "status": "open",
-      "updatedAt": "2026-03-23T23:58:30Z",
-      "headSha": "be658a9aed2b7134f28e495a7fb5bb1fdb8f7c92",
-      "generatedAt": "2026-03-24T00:19:45.103Z",
-      "summary": "Aggressively compressed 15.6M LM using BitNet-style ternary projections, RadialEncoding, and the FRO optimizer to maximize capacity under the 16MB budget.",
+      "updatedAt": "2026-03-24T03:12:31Z",
+      "headSha": "2ab59bbbf196b347405f7eefa97d4945caf4218f",
+      "generatedAt": "2026-03-24T03:21:03.011Z",
+      "summary": "Dual-branch compressed transformer uses BitNet-style ternary projections, radial token branch, and FRO before mixed int8/int6 export.",
       "tags": [
-        "quantization",
-        "positional-encoding",
+        "architecture",
         "optimizer",
-        "compression"
+        "quantization",
+        "tokenization"
       ],
       "flags": {
         "usesValOnly": false,
