@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-25T02:28:28.396Z",
+  "generatedAt": "2026-03-25T02:58:29.853Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "submissions": [
@@ -16002,17 +16002,17 @@
         "valOnlyMatches": []
       },
       "pr": {
-        "number": 515,
-        "title": "Record: Atris Labs — 3-seed mean val_bpb=1.1807, 10L MLP3x Int5/Int6 BigramHash SmearGate SWA",
+        "number": 671,
+        "title": "Submission: Atris Labs v8 (audited seed42, clean branch)",
         "state": "open",
         "draft": false,
         "mergedAt": null,
-        "htmlUrl": "https://github.com/openai/parameter-golf/pull/515",
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/671",
         "authorLogin": "keshav55",
         "authorName": null,
-        "createdAt": "2026-03-23T08:48:13Z",
-        "updatedAt": "2026-03-24T06:44:56Z",
-        "headSha": "a8ef14623d6faf9c8ae11e6ffd61de91718af387",
+        "createdAt": "2026-03-25T02:41:12Z",
+        "updatedAt": "2026-03-25T02:41:12Z",
+        "headSha": "c586e4149bb2b36c8079f97095a4bd8b6292913a",
         "headRepo": "keshav55/parameter-golf"
       },
       "links": {
@@ -16021,7 +16021,7 @@
         "trainLog": "https://github.com/openai/parameter-golf/blob/a8ef14623d6faf9c8ae11e6ffd61de91718af387/records/track_10min_16mb/2026-03-22_AtrisLabs_v8/train.log",
         "script": "https://github.com/openai/parameter-golf/blob/a8ef14623d6faf9c8ae11e6ffd61de91718af387/records/track_10min_16mb/2026-03-22_AtrisLabs_v8/train_gpt.py",
         "folder": "https://github.com/openai/parameter-golf/tree/a8ef14623d6faf9c8ae11e6ffd61de91718af387/records/track_10min_16mb/2026-03-22_AtrisLabs_v8",
-        "pr": "https://github.com/openai/parameter-golf/pull/515",
+        "pr": "https://github.com/openai/parameter-golf/pull/671",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
       "provenance": {
@@ -29260,7 +29260,7 @@
         "authorLogin": "keshav55",
         "authorName": null,
         "createdAt": "2026-03-23T08:48:13Z",
-        "updatedAt": "2026-03-24T06:44:56Z",
+        "updatedAt": "2026-03-25T02:41:30Z",
         "headSha": "a8ef14623d6faf9c8ae11e6ffd61de91718af387",
         "headRepo": "keshav55/parameter-golf"
       },

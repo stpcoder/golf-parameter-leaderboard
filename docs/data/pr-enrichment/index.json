@@ -1,8 +1,32 @@
 {
-  "generatedAt": "2026-03-25T02:28:41.718Z",
+  "generatedAt": "2026-03-25T02:58:41.223Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 671,
+      "title": "Submission: Atris Labs v8 (audited seed42, clean branch)",
+      "status": "open",
+      "updatedAt": "2026-03-25T02:41:12Z",
+      "headSha": "c586e4149bb2b36c8079f97095a4bd8b6292913a",
+      "generatedAt": "2026-03-25T02:58:37.512Z",
+      "summary": "10-layer Transformer with MLP3x, BigramHash+SmearGate, Muon/Adam mix, SWA warmdown, and Int5/Int6 quantized weights to meet submission size.",
+      "tags": [
+        "architecture",
+        "optimizer",
+        "quantization",
+        "training-schedule"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-671.json"
+    },
     {
       "prNumber": 669,
       "title": "Add TRN hybrid non-record submission (1.4942 bpb, 1x RTX 5090)",
@@ -2568,14 +2592,15 @@
       "prNumber": 515,
       "title": "Record: Atris Labs — 3-seed mean val_bpb=1.1807, 10L MLP3x Int5/Int6 BigramHash SmearGate SWA",
       "status": "open",
-      "updatedAt": "2026-03-24T06:44:56Z",
+      "updatedAt": "2026-03-25T02:41:30Z",
       "headSha": "a8ef14623d6faf9c8ae11e6ffd61de91718af387",
-      "generatedAt": "2026-03-24T06:52:18.509Z",
-      "summary": "Atris Labs pairs a 10-layer MLP3x transformer with BigramHash+SmearGate, Muon+AdamW training, SWA warmdown, and Int5/Int6 quantization to fit 16MB.",
+      "generatedAt": "2026-03-25T02:58:41.144Z",
+      "summary": "10-layer GQA transformer with BigramHash+SmearGate, INT5/INT6 quantization, and Muon+AdamW tuning with SWA for the 16MB Parameter Golf budget.",
       "tags": [
-        "architecture",
         "quantization",
-        "optimizer"
+        "architecture",
+        "optimizer",
+        "training-schedule"
       ],
       "flags": {
         "usesValOnly": false,

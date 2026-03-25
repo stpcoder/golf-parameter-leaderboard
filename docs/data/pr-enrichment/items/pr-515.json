@@ -1,37 +1,37 @@
 {
-  "generatedAt": "2026-03-24T06:52:18.509Z",
+  "generatedAt": "2026-03-25T02:58:41.144Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 515,
     "title": "Record: Atris Labs — 3-seed mean val_bpb=1.1807, 10L MLP3x Int5/Int6 BigramHash SmearGate SWA",
     "state": "open",
-    "updatedAt": "2026-03-24T06:44:56Z",
+    "updatedAt": "2026-03-25T02:41:30Z",
     "headSha": "a8ef14623d6faf9c8ae11e6ffd61de91718af387",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/515",
     "authorLogin": "keshav55"
   },
   "inputs": {
-    "hash": "333c1651a7101d4267d971ebe25bd793307b61c975586544bbd6b9a9c3a8cf24",
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
     "readmePaths": [
-      "records/track_10min_16mb/2026-03-22_AtrisLabs_v8/README.md",
       "records/track_10min_16mb/2026-03-19_AtrisLabs/README.md"
     ],
-    "submissionCount": 2
+    "submissionCount": 1
   },
   "output": {
-    "summary": "Atris Labs pairs a 10-layer MLP3x transformer with BigramHash+SmearGate, Muon+AdamW training, SWA warmdown, and Int5/Int6 quantization to fit 16MB.",
+    "summary": "10-layer GQA transformer with BigramHash+SmearGate, INT5/INT6 quantization, and Muon+AdamW tuning with SWA for the 16MB Parameter Golf budget.",
     "tags": [
-      "architecture",
       "quantization",
-      "optimizer"
+      "architecture",
+      "optimizer",
+      "training-schedule"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Muon+AdamW training with SWA warmdown",
-      "BigramHash embeddings with SmearGate gates",
-      "Int5 MLP and Int6 attention quantization with pruning/compression"
+      "GQA transformer + BigramHash embeddings",
+      "SmearGate gating & SWA warmdown averaging",
+      "INT5/INT6 quantized weights with Muon+AdamW tuning"
     ]
   },
   "compatibility": {
