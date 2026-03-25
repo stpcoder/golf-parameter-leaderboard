@@ -1,8 +1,8 @@
 {
   "version": 1,
   "sourceRepo": "openai/parameter-golf",
-  "generatedAt": "2026-03-25T04:28:42.374Z",
-  "lastSeenUpdatedAt": "2026-03-25T04:25:46Z",
+  "generatedAt": "2026-03-25T04:58:55.427Z",
+  "lastSeenUpdatedAt": "2026-03-25T04:57:12Z",
   "prs": {
     "1": {
       "number": 1,
@@ -42717,7 +42717,7 @@
     },
     "505": {
       "number": 505,
-      "updatedAt": "2026-03-24T13:09:00Z",
+      "updatedAt": "2026-03-25T04:50:44Z",
       "pr": {
         "number": 505,
         "title": "Record: SwiGLU+VE128+NoTTT val_bpb=1.1181 (3-seed mean)",
@@ -42728,8 +42728,8 @@
         "authorLogin": "JoeProAI",
         "authorName": null,
         "createdAt": "2026-03-23T05:10:22Z",
-        "updatedAt": "2026-03-24T13:09:00Z",
-        "headSha": "7366ee93df03e92f54c1c0f4200421352c76c71b",
+        "updatedAt": "2026-03-25T04:50:44Z",
+        "headSha": "340a3a44a2dbe412d7f866930ad53b36665d2e41",
         "headRepo": "JoeProAI/parameter-golf"
       },
       "submissions": []
@@ -52714,7 +52714,7 @@
     },
     "623": {
       "number": 623,
-      "updatedAt": "2026-03-25T04:25:46Z",
+      "updatedAt": "2026-03-25T04:29:45Z",
       "pr": {
         "number": 623,
         "title": "[10min/16MB]  AWQ + Cyclic Momentum + ReLU² + 11L Shared — 1.1507 bpb",
@@ -52725,8 +52725,8 @@
         "authorLogin": "SPThole",
         "authorName": null,
         "createdAt": "2026-03-24T14:22:27Z",
-        "updatedAt": "2026-03-25T04:25:46Z",
-        "headSha": "d7ec40c18f1ec8f95d1411a5e2d24689172b8da8",
+        "updatedAt": "2026-03-25T04:29:45Z",
+        "headSha": "3019166619ecf05286820a336917f94da324ca40",
         "headRepo": "SPThole/parameter-golf"
       },
       "submissions": [
@@ -52788,87 +52788,16 @@
             "authorLogin": "SPThole",
             "authorName": null,
             "createdAt": "2026-03-24T14:22:27Z",
-            "updatedAt": "2026-03-25T04:25:46Z",
-            "headSha": "d7ec40c18f1ec8f95d1411a5e2d24689172b8da8",
+            "updatedAt": "2026-03-25T04:29:45Z",
+            "headSha": "3019166619ecf05286820a336917f94da324ca40",
             "headRepo": "SPThole/parameter-golf"
           },
           "links": {
-            "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/d7ec40c18f1ec8f95d1411a5e2d24689172b8da8/records/track_10min_16mb/2025-03-24_AWQ_CyclMom_11L_shared/submission.json",
-            "readme": "https://github.com/openai/parameter-golf/blob/d7ec40c18f1ec8f95d1411a5e2d24689172b8da8/records/track_10min_16mb/2025-03-24_AWQ_CyclMom_11L_shared/README.md",
-            "trainLog": "https://github.com/openai/parameter-golf/blob/d7ec40c18f1ec8f95d1411a5e2d24689172b8da8/records/track_10min_16mb/2025-03-24_AWQ_CyclMom_11L_shared/train.log",
-            "script": "https://github.com/openai/parameter-golf/blob/d7ec40c18f1ec8f95d1411a5e2d24689172b8da8/records/track_10min_16mb/2025-03-24_AWQ_CyclMom_11L_shared/train_gpt.py",
-            "folder": "https://github.com/openai/parameter-golf/tree/d7ec40c18f1ec8f95d1411a5e2d24689172b8da8/records/track_10min_16mb/2025-03-24_AWQ_CyclMom_11L_shared",
-            "pr": "https://github.com/openai/parameter-golf/pull/623"
-          }
-        },
-        {
-          "id": "pr-623-records-track_non_record_16mb-2026_03_24_cooccurrence-qk-init_from-exp18-submission-json",
-          "source": "pull_request",
-          "status": "open",
-          "category": "non-record",
-          "track": {
-            "path": "records/track_non_record_16mb",
-            "slug": "track_non_record_16mb",
-            "label": "Non-record / 16MB",
-            "official": false,
-            "category": "non-record"
-          },
-          "record": {
-            "folderName": "2026_03_24_cooccurrence-qk-init_from-exp18",
-            "folderPath": "records/track_non_record_16mb/2026_03_24_cooccurrence-qk-init_from-exp18",
-            "submissionPath": "records/track_non_record_16mb/2026_03_24_cooccurrence-qk-init_from-exp18/submission.json",
-            "readmePath": "records/track_non_record_16mb/2026_03_24_cooccurrence-qk-init_from-exp18/README.md",
-            "trainLogPath": "records/track_non_record_16mb/2026_03_24_cooccurrence-qk-init_from-exp18/train.log",
-            "scriptPath": "records/track_non_record_16mb/2026_03_24_cooccurrence-qk-init_from-exp18/train_gpt.py"
-          },
-          "submission": {
-            "author": "Sidhant Thole",
-            "githubId": "SPThole",
-            "name": "Co-occurrence QK Initialization",
-            "blurb": "Initializes W_Q and W_K in layer 0 from bigram co-occurrence SVD, giving attention a distributional head start. Scans 2M tokens at startup (<3s), applies SVD, projects into model space. Zero extra parameters. Built on exp18 baseline. Run on 1×H100. Based on PR #623.",
-            "date": "2026-03-24T19:15:00Z"
-          },
-          "metrics": {
-            "valBpb": 1.35252584,
-            "valLoss": 2.28368322,
-            "preQuantValBpb": 1.3245,
-            "preQuantValLoss": 2.2364,
-            "stepStop": 1099,
-            "wallclockSeconds": 600.138,
-            "evalTimeSeconds": null
-          },
-          "artifact": {
-            "bytesTotal": 15545987,
-            "bytesCode": 64061,
-            "bytesModelInt8Zlib": null
-          },
-          "flags": {
-            "usesValOnly": false
-          },
-          "detection": {
-            "valOnlyConfidence": "none",
-            "valOnlyMatches": []
-          },
-          "pr": {
-            "number": 623,
-            "title": "[10min/16MB]  AWQ + Cyclic Momentum + ReLU² + 11L Shared — 1.1507 bpb",
-            "state": "open",
-            "draft": false,
-            "mergedAt": null,
-            "htmlUrl": "https://github.com/openai/parameter-golf/pull/623",
-            "authorLogin": "SPThole",
-            "authorName": null,
-            "createdAt": "2026-03-24T14:22:27Z",
-            "updatedAt": "2026-03-25T04:25:46Z",
-            "headSha": "d7ec40c18f1ec8f95d1411a5e2d24689172b8da8",
-            "headRepo": "SPThole/parameter-golf"
-          },
-          "links": {
-            "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/d7ec40c18f1ec8f95d1411a5e2d24689172b8da8/records/track_non_record_16mb/2026_03_24_cooccurrence-qk-init_from-exp18/submission.json",
-            "readme": "https://github.com/openai/parameter-golf/blob/d7ec40c18f1ec8f95d1411a5e2d24689172b8da8/records/track_non_record_16mb/2026_03_24_cooccurrence-qk-init_from-exp18/README.md",
-            "trainLog": "https://github.com/openai/parameter-golf/blob/d7ec40c18f1ec8f95d1411a5e2d24689172b8da8/records/track_non_record_16mb/2026_03_24_cooccurrence-qk-init_from-exp18/train.log",
-            "script": "https://github.com/openai/parameter-golf/blob/d7ec40c18f1ec8f95d1411a5e2d24689172b8da8/records/track_non_record_16mb/2026_03_24_cooccurrence-qk-init_from-exp18/train_gpt.py",
-            "folder": "https://github.com/openai/parameter-golf/tree/d7ec40c18f1ec8f95d1411a5e2d24689172b8da8/records/track_non_record_16mb/2026_03_24_cooccurrence-qk-init_from-exp18",
+            "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/3019166619ecf05286820a336917f94da324ca40/records/track_10min_16mb/2025-03-24_AWQ_CyclMom_11L_shared/submission.json",
+            "readme": "https://github.com/openai/parameter-golf/blob/3019166619ecf05286820a336917f94da324ca40/records/track_10min_16mb/2025-03-24_AWQ_CyclMom_11L_shared/README.md",
+            "trainLog": "https://github.com/openai/parameter-golf/blob/3019166619ecf05286820a336917f94da324ca40/records/track_10min_16mb/2025-03-24_AWQ_CyclMom_11L_shared/train.log",
+            "script": "https://github.com/openai/parameter-golf/blob/3019166619ecf05286820a336917f94da324ca40/records/track_10min_16mb/2025-03-24_AWQ_CyclMom_11L_shared/train_gpt.py",
+            "folder": "https://github.com/openai/parameter-golf/tree/3019166619ecf05286820a336917f94da324ca40/records/track_10min_16mb/2025-03-24_AWQ_CyclMom_11L_shared",
             "pr": "https://github.com/openai/parameter-golf/pull/623"
           }
         }
@@ -56687,7 +56616,7 @@
     },
     "674": {
       "number": 674,
-      "updatedAt": "2026-03-25T03:50:12Z",
+      "updatedAt": "2026-03-25T04:30:23Z",
       "pr": {
         "number": 674,
         "title": "Podracing: 1.0461 BPB (3-seed mean)",
@@ -56698,7 +56627,7 @@
         "authorLogin": "newjordan",
         "authorName": null,
         "createdAt": "2026-03-25T03:50:12Z",
-        "updatedAt": "2026-03-25T03:50:12Z",
+        "updatedAt": "2026-03-25T04:30:23Z",
         "headSha": "a417febf795d447bb8f188684647075ff1ba80f1",
         "headRepo": "newjordan/parameter-golf-1"
       },
@@ -56885,6 +56814,187 @@
           }
         }
       ]
+    },
+    "678": {
+      "number": 678,
+      "updatedAt": "2026-03-25T04:36:28Z",
+      "pr": {
+        "number": 678,
+        "title": "Attention Warm-Start: Initializing Q/K from Bigram Co-occurrence SVD",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/678",
+        "authorLogin": "SPThole",
+        "authorName": null,
+        "createdAt": "2026-03-25T04:34:48Z",
+        "updatedAt": "2026-03-25T04:36:28Z",
+        "headSha": "f7a9e2decc4d26012d2220d7fe746e5ace983a09",
+        "headRepo": "SPThole/parameter-golf"
+      },
+      "submissions": [
+        {
+          "id": "pr-678-records-track_10min_16mb-2025-03-24_AWQ_CyclMom_11L_shared-submission-json",
+          "source": "pull_request",
+          "status": "open",
+          "category": "main-track",
+          "track": {
+            "path": "records/track_10min_16mb",
+            "slug": "track_10min_16mb",
+            "label": "10 Minute / 16MB",
+            "official": true,
+            "category": "main-track"
+          },
+          "record": {
+            "folderName": "2025-03-24_AWQ_CyclMom_11L_shared",
+            "folderPath": "records/track_10min_16mb/2025-03-24_AWQ_CyclMom_11L_shared",
+            "submissionPath": "records/track_10min_16mb/2025-03-24_AWQ_CyclMom_11L_shared/submission.json",
+            "readmePath": "records/track_10min_16mb/2025-03-24_AWQ_CyclMom_11L_shared/README.md",
+            "trainLogPath": "records/track_10min_16mb/2025-03-24_AWQ_CyclMom_11L_shared/train.log",
+            "scriptPath": "records/track_10min_16mb/2025-03-24_AWQ_CyclMom_11L_shared/train_gpt.py"
+          },
+          "submission": {
+            "author": "SPThole",
+            "githubId": "SPThole",
+            "name": "AWQ + Cyclic Momentum + ReLU² + 11L Shared",
+            "blurb": "Activation-Aware Weight Quantization (AWQ) closes the int5/int6 quant gap from 0.027 to 0.010 bpb. Cyclic Muon momentum (0.85-0.95 triangle wave) escapes sharp minima. ReLU² for sparser MLPs. 11 layers with 10 unique weights. Emerged from 21+ systematic experiments on 1×H100/A40 before scaling to 8×H100.",
+            "date": "2026-03-25T00:00:00Z"
+          },
+          "metrics": {
+            "valBpb": 1.15071578,
+            "valLoss": 1.94293025,
+            "preQuantValBpb": null,
+            "preQuantValLoss": null,
+            "stepStop": null,
+            "wallclockSeconds": null,
+            "evalTimeSeconds": null
+          },
+          "artifact": {
+            "bytesTotal": 15465308,
+            "bytesCode": 58616,
+            "bytesModelInt8Zlib": null
+          },
+          "flags": {
+            "usesValOnly": false
+          },
+          "detection": {
+            "valOnlyConfidence": "none",
+            "valOnlyMatches": []
+          },
+          "pr": {
+            "number": 678,
+            "title": "Attention Warm-Start: Initializing Q/K from Bigram Co-occurrence SVD",
+            "state": "open",
+            "draft": false,
+            "mergedAt": null,
+            "htmlUrl": "https://github.com/openai/parameter-golf/pull/678",
+            "authorLogin": "SPThole",
+            "authorName": null,
+            "createdAt": "2026-03-25T04:34:48Z",
+            "updatedAt": "2026-03-25T04:36:28Z",
+            "headSha": "f7a9e2decc4d26012d2220d7fe746e5ace983a09",
+            "headRepo": "SPThole/parameter-golf"
+          },
+          "links": {
+            "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/f7a9e2decc4d26012d2220d7fe746e5ace983a09/records/track_10min_16mb/2025-03-24_AWQ_CyclMom_11L_shared/submission.json",
+            "readme": "https://github.com/openai/parameter-golf/blob/f7a9e2decc4d26012d2220d7fe746e5ace983a09/records/track_10min_16mb/2025-03-24_AWQ_CyclMom_11L_shared/README.md",
+            "trainLog": "https://github.com/openai/parameter-golf/blob/f7a9e2decc4d26012d2220d7fe746e5ace983a09/records/track_10min_16mb/2025-03-24_AWQ_CyclMom_11L_shared/train.log",
+            "script": "https://github.com/openai/parameter-golf/blob/f7a9e2decc4d26012d2220d7fe746e5ace983a09/records/track_10min_16mb/2025-03-24_AWQ_CyclMom_11L_shared/train_gpt.py",
+            "folder": "https://github.com/openai/parameter-golf/tree/f7a9e2decc4d26012d2220d7fe746e5ace983a09/records/track_10min_16mb/2025-03-24_AWQ_CyclMom_11L_shared",
+            "pr": "https://github.com/openai/parameter-golf/pull/678"
+          }
+        },
+        {
+          "id": "pr-678-records-track_non_record_16mb-2026_03_24_cooccurrence-qk-init_from-exp18-submission-json",
+          "source": "pull_request",
+          "status": "open",
+          "category": "non-record",
+          "track": {
+            "path": "records/track_non_record_16mb",
+            "slug": "track_non_record_16mb",
+            "label": "Non-record / 16MB",
+            "official": false,
+            "category": "non-record"
+          },
+          "record": {
+            "folderName": "2026_03_24_cooccurrence-qk-init_from-exp18",
+            "folderPath": "records/track_non_record_16mb/2026_03_24_cooccurrence-qk-init_from-exp18",
+            "submissionPath": "records/track_non_record_16mb/2026_03_24_cooccurrence-qk-init_from-exp18/submission.json",
+            "readmePath": "records/track_non_record_16mb/2026_03_24_cooccurrence-qk-init_from-exp18/README.md",
+            "trainLogPath": "records/track_non_record_16mb/2026_03_24_cooccurrence-qk-init_from-exp18/train.log",
+            "scriptPath": "records/track_non_record_16mb/2026_03_24_cooccurrence-qk-init_from-exp18/train_gpt.py"
+          },
+          "submission": {
+            "author": "Sidhant Thole",
+            "githubId": "SPThole",
+            "name": "Co-occurrence QK Initialization",
+            "blurb": "Initializes W_Q and W_K in layer 0 from bigram co-occurrence SVD, giving attention a distributional head start. Scans 2M tokens at startup (<3s), applies SVD, projects into model space. Zero extra parameters. Built on exp18 baseline. Run on 1×H100. Based on PR #623.",
+            "date": "2026-03-24T19:15:00Z"
+          },
+          "metrics": {
+            "valBpb": 1.35252584,
+            "valLoss": 2.28368322,
+            "preQuantValBpb": 1.3245,
+            "preQuantValLoss": 2.2364,
+            "stepStop": 1099,
+            "wallclockSeconds": 600.138,
+            "evalTimeSeconds": null
+          },
+          "artifact": {
+            "bytesTotal": 15545987,
+            "bytesCode": 64061,
+            "bytesModelInt8Zlib": null
+          },
+          "flags": {
+            "usesValOnly": false
+          },
+          "detection": {
+            "valOnlyConfidence": "none",
+            "valOnlyMatches": []
+          },
+          "pr": {
+            "number": 678,
+            "title": "Attention Warm-Start: Initializing Q/K from Bigram Co-occurrence SVD",
+            "state": "open",
+            "draft": false,
+            "mergedAt": null,
+            "htmlUrl": "https://github.com/openai/parameter-golf/pull/678",
+            "authorLogin": "SPThole",
+            "authorName": null,
+            "createdAt": "2026-03-25T04:34:48Z",
+            "updatedAt": "2026-03-25T04:36:28Z",
+            "headSha": "f7a9e2decc4d26012d2220d7fe746e5ace983a09",
+            "headRepo": "SPThole/parameter-golf"
+          },
+          "links": {
+            "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/f7a9e2decc4d26012d2220d7fe746e5ace983a09/records/track_non_record_16mb/2026_03_24_cooccurrence-qk-init_from-exp18/submission.json",
+            "readme": "https://github.com/openai/parameter-golf/blob/f7a9e2decc4d26012d2220d7fe746e5ace983a09/records/track_non_record_16mb/2026_03_24_cooccurrence-qk-init_from-exp18/README.md",
+            "trainLog": "https://github.com/openai/parameter-golf/blob/f7a9e2decc4d26012d2220d7fe746e5ace983a09/records/track_non_record_16mb/2026_03_24_cooccurrence-qk-init_from-exp18/train.log",
+            "script": "https://github.com/openai/parameter-golf/blob/f7a9e2decc4d26012d2220d7fe746e5ace983a09/records/track_non_record_16mb/2026_03_24_cooccurrence-qk-init_from-exp18/train_gpt.py",
+            "folder": "https://github.com/openai/parameter-golf/tree/f7a9e2decc4d26012d2220d7fe746e5ace983a09/records/track_non_record_16mb/2026_03_24_cooccurrence-qk-init_from-exp18",
+            "pr": "https://github.com/openai/parameter-golf/pull/678"
+          }
+        }
+      ]
+    },
+    "679": {
+      "number": 679,
+      "updatedAt": "2026-03-25T04:57:12Z",
+      "pr": {
+        "number": 679,
+        "title": "Non-record: ASQU activation, Mixture of Convolutions, BankedLinear",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/679",
+        "authorLogin": "andrewmouldon",
+        "authorName": null,
+        "createdAt": "2026-03-25T04:54:36Z",
+        "updatedAt": "2026-03-25T04:57:12Z",
+        "headSha": "0e023b82f0a002b97381fd4943b71eceecadae14",
+        "headRepo": "andrewmouldon/parameter-golf"
+      },
+      "submissions": []
     }
   }
 }

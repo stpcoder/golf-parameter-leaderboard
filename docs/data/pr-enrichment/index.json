@@ -1,8 +1,30 @@
 {
-  "generatedAt": "2026-03-25T04:29:09.165Z",
+  "generatedAt": "2026-03-25T04:59:05.776Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 678,
+      "title": "Attention Warm-Start: Initializing Q/K from Bigram Co-occurrence SVD",
+      "status": "open",
+      "updatedAt": "2026-03-25T04:36:28Z",
+      "headSha": "f7a9e2decc4d26012d2220d7fe746e5ace983a09",
+      "generatedAt": "2026-03-25T04:59:05.672Z",
+      "summary": "Warm-starts layer-0 attention by initializing Q/K from PMI-like bigram co-occurrence SVD projected into model space before training.",
+      "tags": [
+        "architecture",
+        "non-record"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-678.json"
+    },
     {
       "prNumber": 676,
       "title": "SwiGLU MLP: parameter-neutral gated activation over LeakyReLU^2",
@@ -913,30 +935,6 @@
         "valOnlyMatchesCollector": true
       },
       "file": "items/pr-624.json"
-    },
-    {
-      "prNumber": 623,
-      "title": "[10min/16MB]  AWQ + Cyclic Momentum + ReLU² + 11L Shared — 1.1507 bpb",
-      "status": "open",
-      "updatedAt": "2026-03-25T04:25:46Z",
-      "headSha": "d7ec40c18f1ec8f95d1411a5e2d24689172b8da8",
-      "generatedAt": "2026-03-25T04:29:03.346Z",
-      "summary": "Combines AWQ per-channel quant scaling with cyclic Muon momentum, ReLU² MLPs, and a shared 11th layer to keep the 16MB model compact.",
-      "tags": [
-        "quantization",
-        "optimizer",
-        "architecture",
-        "non-record"
-      ],
-      "flags": {
-        "usesValOnly": false,
-        "usesValOnlyAi": false,
-        "usesValOnlyCollector": false
-      },
-      "compatibility": {
-        "valOnlyMatchesCollector": true
-      },
-      "file": "items/pr-623.json"
     },
     {
       "prNumber": 622,

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-25T04:28:42.400Z",
+  "generatedAt": "2026-03-25T04:58:55.454Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "submissions": [
@@ -10230,26 +10230,26 @@
         "valOnlyMatches": []
       },
       "pr": {
-        "number": 623,
-        "title": "[10min/16MB]  AWQ + Cyclic Momentum + ReLU² + 11L Shared — 1.1507 bpb",
+        "number": 678,
+        "title": "Attention Warm-Start: Initializing Q/K from Bigram Co-occurrence SVD",
         "state": "open",
         "draft": false,
         "mergedAt": null,
-        "htmlUrl": "https://github.com/openai/parameter-golf/pull/623",
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/678",
         "authorLogin": "SPThole",
         "authorName": null,
-        "createdAt": "2026-03-24T14:22:27Z",
-        "updatedAt": "2026-03-25T04:25:46Z",
-        "headSha": "d7ec40c18f1ec8f95d1411a5e2d24689172b8da8",
+        "createdAt": "2026-03-25T04:34:48Z",
+        "updatedAt": "2026-03-25T04:36:28Z",
+        "headSha": "f7a9e2decc4d26012d2220d7fe746e5ace983a09",
         "headRepo": "SPThole/parameter-golf"
       },
       "links": {
-        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/d7ec40c18f1ec8f95d1411a5e2d24689172b8da8/records/track_10min_16mb/2025-03-24_AWQ_CyclMom_11L_shared/submission.json",
-        "readme": "https://github.com/openai/parameter-golf/blob/d7ec40c18f1ec8f95d1411a5e2d24689172b8da8/records/track_10min_16mb/2025-03-24_AWQ_CyclMom_11L_shared/README.md",
-        "trainLog": "https://github.com/openai/parameter-golf/blob/d7ec40c18f1ec8f95d1411a5e2d24689172b8da8/records/track_10min_16mb/2025-03-24_AWQ_CyclMom_11L_shared/train.log",
-        "script": "https://github.com/openai/parameter-golf/blob/d7ec40c18f1ec8f95d1411a5e2d24689172b8da8/records/track_10min_16mb/2025-03-24_AWQ_CyclMom_11L_shared/train_gpt.py",
-        "folder": "https://github.com/openai/parameter-golf/tree/d7ec40c18f1ec8f95d1411a5e2d24689172b8da8/records/track_10min_16mb/2025-03-24_AWQ_CyclMom_11L_shared",
-        "pr": "https://github.com/openai/parameter-golf/pull/623",
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/3019166619ecf05286820a336917f94da324ca40/records/track_10min_16mb/2025-03-24_AWQ_CyclMom_11L_shared/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/3019166619ecf05286820a336917f94da324ca40/records/track_10min_16mb/2025-03-24_AWQ_CyclMom_11L_shared/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/3019166619ecf05286820a336917f94da324ca40/records/track_10min_16mb/2025-03-24_AWQ_CyclMom_11L_shared/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/3019166619ecf05286820a336917f94da324ca40/records/track_10min_16mb/2025-03-24_AWQ_CyclMom_11L_shared/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/3019166619ecf05286820a336917f94da324ca40/records/track_10min_16mb/2025-03-24_AWQ_CyclMom_11L_shared",
+        "pr": "https://github.com/openai/parameter-golf/pull/678",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
       "provenance": {
@@ -24013,26 +24013,26 @@
         "valOnlyMatches": []
       },
       "pr": {
-        "number": 623,
-        "title": "[10min/16MB]  AWQ + Cyclic Momentum + ReLU² + 11L Shared — 1.1507 bpb",
+        "number": 678,
+        "title": "Attention Warm-Start: Initializing Q/K from Bigram Co-occurrence SVD",
         "state": "open",
         "draft": false,
         "mergedAt": null,
-        "htmlUrl": "https://github.com/openai/parameter-golf/pull/623",
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/678",
         "authorLogin": "SPThole",
         "authorName": null,
-        "createdAt": "2026-03-24T14:22:27Z",
-        "updatedAt": "2026-03-25T04:25:46Z",
-        "headSha": "d7ec40c18f1ec8f95d1411a5e2d24689172b8da8",
+        "createdAt": "2026-03-25T04:34:48Z",
+        "updatedAt": "2026-03-25T04:36:28Z",
+        "headSha": "f7a9e2decc4d26012d2220d7fe746e5ace983a09",
         "headRepo": "SPThole/parameter-golf"
       },
       "links": {
-        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/d7ec40c18f1ec8f95d1411a5e2d24689172b8da8/records/track_non_record_16mb/2026_03_24_cooccurrence-qk-init_from-exp18/submission.json",
-        "readme": "https://github.com/openai/parameter-golf/blob/d7ec40c18f1ec8f95d1411a5e2d24689172b8da8/records/track_non_record_16mb/2026_03_24_cooccurrence-qk-init_from-exp18/README.md",
-        "trainLog": "https://github.com/openai/parameter-golf/blob/d7ec40c18f1ec8f95d1411a5e2d24689172b8da8/records/track_non_record_16mb/2026_03_24_cooccurrence-qk-init_from-exp18/train.log",
-        "script": "https://github.com/openai/parameter-golf/blob/d7ec40c18f1ec8f95d1411a5e2d24689172b8da8/records/track_non_record_16mb/2026_03_24_cooccurrence-qk-init_from-exp18/train_gpt.py",
-        "folder": "https://github.com/openai/parameter-golf/tree/d7ec40c18f1ec8f95d1411a5e2d24689172b8da8/records/track_non_record_16mb/2026_03_24_cooccurrence-qk-init_from-exp18",
-        "pr": "https://github.com/openai/parameter-golf/pull/623",
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/f7a9e2decc4d26012d2220d7fe746e5ace983a09/records/track_non_record_16mb/2026_03_24_cooccurrence-qk-init_from-exp18/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/f7a9e2decc4d26012d2220d7fe746e5ace983a09/records/track_non_record_16mb/2026_03_24_cooccurrence-qk-init_from-exp18/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/f7a9e2decc4d26012d2220d7fe746e5ace983a09/records/track_non_record_16mb/2026_03_24_cooccurrence-qk-init_from-exp18/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/f7a9e2decc4d26012d2220d7fe746e5ace983a09/records/track_non_record_16mb/2026_03_24_cooccurrence-qk-init_from-exp18/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/f7a9e2decc4d26012d2220d7fe746e5ace983a09/records/track_non_record_16mb/2026_03_24_cooccurrence-qk-init_from-exp18",
+        "pr": "https://github.com/openai/parameter-golf/pull/678",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
       "provenance": {
