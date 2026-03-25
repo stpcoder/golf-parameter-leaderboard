@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-25T22:04:42.455Z",
+  "generatedAt": "2026-03-25T22:34:59.498Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 491,
     "title": "Value Residual + DenseFormer DWA + TTT",
     "state": "open",
-    "updatedAt": "2026-03-25T21:35:44Z",
-    "headSha": "6f4e4bc40cc9e994769acb364ef13a19f932e455",
+    "updatedAt": "2026-03-25T22:12:44Z",
+    "headSha": "26893df677a3f1e600dc0d35b1243ac3708f9a94",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/491",
     "authorLogin": "ahmettrkck"
   },
@@ -20,19 +20,19 @@
     "submissionCount": 2
   },
   "output": {
-    "summary": "Combines value-residual blending, DenseFormer depth-weighted averaging, and test-time tuning on scored validation windows to extend the 10-layer base stack.",
+    "summary": "Combines ResFormer-style value residual blending, DenseFormer DWA mixing, and legal test-time training on scored validation windows.",
     "tags": [
       "val-only",
       "architecture",
-      "evaluation",
-      "training-schedule"
+      "training-schedule",
+      "evaluation"
     ],
     "usesValOnly": true,
-    "valOnlyReasoning": "Fine-tunes on already-scored validation tokens during sliding-window evaluation via AdamW test-time training.",
+    "valOnlyReasoning": "Fine-tunes on already-scored validation windows via test-time training during sliding-window eval.",
     "techniques": [
-      "Value-residual blending of first-layer V vectors",
-      "DenseFormer depth-weighted averaging over previous layers",
-      "AdamW test-time tuning on scored validation windows"
+      "Value residual mixes first-layer V into later layers without extra params",
+      "DenseFormer depth-weighted averaging generalizes U-Net skip connections",
+      "Test-time training fine-tunes on scored validation windows via AdamW"
     ]
   },
   "compatibility": {

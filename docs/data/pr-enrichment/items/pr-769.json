@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-25T21:34:17.635Z",
+  "generatedAt": "2026-03-25T22:34:38.465Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 769,
     "title": "PROTEUS+STYX — val_bpb 0.8508 (3-seed mean) — LeakyReLU(0.9)² + 5-gram Eval Cache",
     "state": "open",
-    "updatedAt": "2026-03-25T21:30:27Z",
-    "headSha": "93f6a6aa4e5748e726dcec5c80c5678dd7d823c0",
+    "updatedAt": "2026-03-25T22:22:11Z",
+    "headSha": "1c51c1042a1f6a81af271c5a00a8bd66b927dbb4",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/769",
     "authorLogin": "MatoTeziTanka"
   },
@@ -19,18 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "PROTEUS+STYX stack pairs LeakyReLU(0.9)² with a backward-looking 5-gram eval cache blending 0.8 model/0.2 cache to capture FineWeb n-gram reuse.",
+    "summary": "Applies LeakyReLU(0.9)² activations with a backward-looking 5-gram eval cache blended 0.8/0.2 during sliding-window evaluation.",
     "tags": [
       "architecture",
       "evaluation",
-      "quantization"
+      "sliding-window-eval"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "LeakyReLU(0.9)² activation",
-      "Backward-looking 5-gram eval cache",
-      "Fixed 0.8/0.2 blend during sliding-window eval"
+      "LeakyReLU(0.9)² activation stack",
+      "Backward-looking 5-gram hash cache with fixed-alpha blending",
+      "Stride verification at zero overlap"
     ]
   },
   "compatibility": {

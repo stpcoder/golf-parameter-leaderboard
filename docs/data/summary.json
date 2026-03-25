@@ -1,14 +1,14 @@
 {
-  "generatedAt": "2026-03-25T22:04:09.545Z",
+  "generatedAt": "2026-03-25T22:34:24.044Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "counts": {
-    "submissions": 601,
+    "submissions": 603,
     "official": 1,
-    "openPr": 480,
+    "openPr": 482,
     "mergedPr": 21,
     "closedPr": 99,
-    "prBacked": 601,
+    "prBacked": 603,
     "readmeListed": 20,
     "collectorErrors": 0
   },
@@ -91,7 +91,7 @@
       }
     },
     "openPrMainTrack": {
-      "id": "record-records-track_10min_16mb-2026-03-24_V18_ManifoldGuided_Sparsemax",
+      "id": "record-records-track_10min_16mb-2026-03-25_Julius_LeakyReLU_Chimera",
       "source": "pull_request",
       "status": "open",
       "category": "main-track",
@@ -103,23 +103,23 @@
         "category": "main-track"
       },
       "record": {
-        "folderName": "2026-03-24_V18_ManifoldGuided_Sparsemax",
-        "folderPath": "records/track_10min_16mb/2026-03-24_V18_ManifoldGuided_Sparsemax",
-        "submissionPath": "records/track_10min_16mb/2026-03-24_V18_ManifoldGuided_Sparsemax/submission.json",
-        "readmePath": "records/track_10min_16mb/2026-03-24_V18_ManifoldGuided_Sparsemax/README.md",
-        "trainLogPath": "records/track_10min_16mb/2026-03-24_V18_ManifoldGuided_Sparsemax/train.log",
-        "scriptPath": "records/track_10min_16mb/2026-03-24_V18_ManifoldGuided_Sparsemax/train_gpt.py"
+        "folderName": "2026-03-25_Julius_LeakyReLU_Chimera",
+        "folderPath": "records/track_10min_16mb/2026-03-25_Julius_LeakyReLU_Chimera",
+        "submissionPath": "records/track_10min_16mb/2026-03-25_Julius_LeakyReLU_Chimera/submission.json",
+        "readmePath": "records/track_10min_16mb/2026-03-25_Julius_LeakyReLU_Chimera/README.md",
+        "trainLogPath": "records/track_10min_16mb/2026-03-25_Julius_LeakyReLU_Chimera/train.log",
+        "scriptPath": "records/track_10min_16mb/2026-03-25_Julius_LeakyReLU_Chimera/train_gpt.py"
       },
       "submission": {
-        "author": "Raahil Gadhoke",
-        "githubId": "raahilg",
-        "name": "V18 Manifold-Guided Architecture + Sparsemax Routing",
-        "blurb": "Physics-simulated token manifold (5-force Hessian eigendecomposition) + GNN-style 4-hop geodesic message passing with sparsemax routing + manifold-guided attention. Not a transformer. Precomputes complete 1024-token statistical structure into a 320-dim spectral coordinate system, reducing the model's job from construction+navigation to just navigation.",
-        "date": "2026-03-24"
+        "author": "julius",
+        "githubId": "julius",
+        "name": "Chimera tweaks - LeakyReLU(0.5)^2 + 2048 Context + 3500 Warmdown",
+        "blurb": "Applying LeakyReLU with 2048 sequence length, expanded BigramHash, and extended warmdown to the Chimera baseline",
+        "date": "2026-03-25T00:00:00Z"
       },
       "metrics": {
-        "valBpb": 0.4343,
-        "valLoss": null,
+        "valBpb": 0.5588,
+        "valLoss": 0.9435,
         "preQuantValBpb": null,
         "preQuantValLoss": null,
         "stepStop": null,
@@ -127,7 +127,7 @@
         "evalTimeSeconds": null
       },
       "artifact": {
-        "bytesTotal": 15701332,
+        "bytesTotal": 15302060,
         "bytesCode": null,
         "bytesModelInt8Zlib": null
       },
@@ -139,26 +139,26 @@
         "valOnlyMatches": []
       },
       "pr": {
-        "number": 663,
-        "title": "V18 Manifold-Guided Architecture — val_bpb 0.434",
+        "number": 722,
+        "title": "parameter golf submission - Julius",
         "state": "open",
         "draft": false,
         "mergedAt": null,
-        "htmlUrl": "https://github.com/openai/parameter-golf/pull/663",
-        "authorLogin": "raahilg",
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/722",
+        "authorLogin": "magicjulio",
         "authorName": null,
-        "createdAt": "2026-03-25T00:23:35Z",
-        "updatedAt": "2026-03-25T17:48:56Z",
-        "headSha": "452c1f433294eeb7d850a77e401717c470c4d4d0",
-        "headRepo": "raahilg/parameter-golf"
+        "createdAt": "2026-03-25T14:19:58Z",
+        "updatedAt": "2026-03-25T14:19:58Z",
+        "headSha": "98072979e3edc6857d2ec811629292d9644d9166",
+        "headRepo": "magicjulio/parameter-golf"
       },
       "links": {
-        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/452c1f433294eeb7d850a77e401717c470c4d4d0/records/track_10min_16mb/2026-03-24_V18_ManifoldGuided_Sparsemax/submission.json",
-        "readme": "https://github.com/openai/parameter-golf/blob/452c1f433294eeb7d850a77e401717c470c4d4d0/records/track_10min_16mb/2026-03-24_V18_ManifoldGuided_Sparsemax/README.md",
-        "trainLog": "https://github.com/openai/parameter-golf/blob/452c1f433294eeb7d850a77e401717c470c4d4d0/records/track_10min_16mb/2026-03-24_V18_ManifoldGuided_Sparsemax/train.log",
-        "script": "https://github.com/openai/parameter-golf/blob/452c1f433294eeb7d850a77e401717c470c4d4d0/records/track_10min_16mb/2026-03-24_V18_ManifoldGuided_Sparsemax/train_gpt.py",
-        "folder": "https://github.com/openai/parameter-golf/tree/452c1f433294eeb7d850a77e401717c470c4d4d0/records/track_10min_16mb/2026-03-24_V18_ManifoldGuided_Sparsemax",
-        "pr": "https://github.com/openai/parameter-golf/pull/663",
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/98072979e3edc6857d2ec811629292d9644d9166/records/track_10min_16mb/2026-03-25_Julius_LeakyReLU_Chimera/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/98072979e3edc6857d2ec811629292d9644d9166/records/track_10min_16mb/2026-03-25_Julius_LeakyReLU_Chimera/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/98072979e3edc6857d2ec811629292d9644d9166/records/track_10min_16mb/2026-03-25_Julius_LeakyReLU_Chimera/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/98072979e3edc6857d2ec811629292d9644d9166/records/track_10min_16mb/2026-03-25_Julius_LeakyReLU_Chimera/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/98072979e3edc6857d2ec811629292d9644d9166/records/track_10min_16mb/2026-03-25_Julius_LeakyReLU_Chimera",
+        "pr": "https://github.com/openai/parameter-golf/pull/722",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
       "provenance": {

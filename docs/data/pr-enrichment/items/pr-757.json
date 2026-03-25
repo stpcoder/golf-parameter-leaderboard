@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-25T21:34:45.410Z",
+  "generatedAt": "2026-03-25T22:34:47.951Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 757,
     "title": "Record: Aggressive SGD TTT (3-seed mean val_bpb=1.1124)",
     "state": "open",
-    "updatedAt": "2026-03-25T21:27:41Z",
+    "updatedAt": "2026-03-25T22:14:41Z",
     "headSha": "777ed6762dd2ecc442170772776727eca9f74391",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/757",
     "authorLogin": "fielding"
@@ -19,18 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Base 11L model uses score-first SGD TTT on validation with aggressive LR and epochs plus full unfreeze to amplify adaptation gains.",
+    "summary": "After base 11L training, evaluation runs score-first TTT with full-layer SGD at LR 1.0+ for 30 epochs to embrace aggressive val-only tuning.",
     "tags": [
       "val-only",
-      "training-schedule",
-      "optimizer"
+      "optimizer",
+      "training-schedule"
     ],
     "usesValOnly": true,
-    "valOnlyReasoning": "TTT explicitly fine-tunes on the validation shard via SGD after base training, so the submission trains on validation-only data.",
+    "valOnlyReasoning": "TTT adapts every weight via SGD on the validation shard during evaluation, so it trains exclusively on validation data before scoring.",
     "techniques": [
-      "Score-first SGD TTT with LR ≈1.0 and 30 epochs",
-      "Unfreeze every block during TTT so high LR converges",
-      "Int6+zstd quantization followed by sliding-window evaluation"
+      "Score-first SGD TTT with LR 1.0+ across all transformer layers",
+      "30-epoch val-only schedule fits in the eval budget",
+      "Unfreeze every block so aggressive LR updates converge"
     ]
   },
   "compatibility": {

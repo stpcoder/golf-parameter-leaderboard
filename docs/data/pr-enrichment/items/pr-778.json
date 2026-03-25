@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-25T22:34:34.657Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 778,
+    "title": "Record: 11L Full GPTQ + Multi-Order N-gram Backoff (fixed-alpha 0.9757 / entropy-adaptive 0.9605, 3-seed)",
+    "state": "open",
+    "updatedAt": "2026-03-25T22:30:05Z",
+    "headSha": "5dc9345dd8d2d1e3d516cc9605427f22a5602cff",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/778",
+    "authorLogin": "raahilshah"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-25_11L_FullGPTQ_NgramBackoff_0.9757/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "11L GPTQ int6 model blends fixed or entropy-weighted multi-order backward-looking n-gram cache after full Hessian calibration within the training budget.",
+    "tags": [
+      "quantization",
+      "architecture",
+      "evaluation"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "11L GQA/LeakyReLU GPTQ int6 with reserved-budget full Hessian calibration",
+      "Multi-order backward-looking n-gram cache interpolated with a fixed or entropy-derived alpha",
+      "Entropy-derived alpha depends solely on model output distribution"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}
