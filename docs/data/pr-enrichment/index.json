@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-25T07:30:33.999Z",
+  "generatedAt": "2026-03-25T08:00:18.839Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
@@ -7,14 +7,14 @@
       "prNumber": 693,
       "title": "Record: CROWN-Q + Full GPTQ + SWA/EMA Blend — val_bpb 1.1186 (3-seed mean)",
       "status": "open",
-      "updatedAt": "2026-03-25T07:28:34Z",
+      "updatedAt": "2026-03-25T07:33:34Z",
       "headSha": "f4636fd77c1342b93ae5a9ed80bf922775c54be3",
-      "generatedAt": "2026-03-25T07:30:02.410Z",
-      "summary": "Warmdown CROWN-Q curvature penalty steers weights into flat minima before full Cholesky GPTQ, then a SWA/EMA blend is exported and sliding-window evaluated.",
+      "generatedAt": "2026-03-25T08:00:07.987Z",
+      "summary": "Warmdown CROWN-Q curvature penalty plus SWA/EMA mix before full Cholesky GPTQ on an 11L GQA model, evaluated with sliding windows.",
       "tags": [
         "quantization",
+        "architecture",
         "training-schedule",
-        "optimizer",
         "evaluation"
       ],
       "flags": {
@@ -868,10 +868,10 @@
       "prNumber": 638,
       "title": "Record: 11L XSA-all + LeakyReLU(0.5)² + VR + GA (val_bpb=1.1164, pending 3-seed)",
       "status": "open",
-      "updatedAt": "2026-03-25T07:03:42Z",
-      "headSha": "320bdb3c548daeccc226847c10ab248113a244ee",
-      "generatedAt": "2026-03-25T07:30:19.896Z",
-      "summary": "11-layer GQA stack applies XSA everywhere plus LeakyReLU(0.5)^2 with value-residual and gated attention, then int6+zstd-21 compresses the artifact.",
+      "updatedAt": "2026-03-25T07:35:44Z",
+      "headSha": "b64318c143a9a76cd7694c0702e4dd14b278fefb",
+      "generatedAt": "2026-03-25T08:00:13.893Z",
+      "summary": "Combines XSA across all 11 layers with LeakyReLU(0.5)^2, value residuals, gated attention, and int6 sliding evaluation for a non-TTT stack.",
       "tags": [
         "architecture",
         "attention",
@@ -938,15 +938,15 @@
       "prNumber": 635,
       "title": "Non-record: 11L MLP3.5x LeakyReLU(0.5)^2 + Full SOTA Stack (mean val_bpb=1.1330, 8xH100 SXM)",
       "status": "open",
-      "updatedAt": "2026-03-25T07:28:27Z",
-      "headSha": "3b95b3cbbf5826f40f303ef0ea2947f866852e3c",
-      "generatedAt": "2026-03-25T07:30:28.195Z",
-      "summary": "11-layer 512d transformer stacks MLP 3.5x with LeakyReLU(0.5)^2, SmearGate, gated/XSA attention, and Value Residuals with Partial RoPE to boost expressivity.",
+      "updatedAt": "2026-03-25T07:51:38Z",
+      "headSha": "ae6fd8c016aaf9720afcc96b18b7ac95e2b40d31",
+      "generatedAt": "2026-03-25T08:00:18.739Z",
+      "summary": "11-layer 512d transformer pairs MLP3.5x LeakyReLU^2 with SmearGate/hash embeddings, gated attention, partial RoPE, and int6 GPTQ-lite quant+QAT.",
       "tags": [
         "architecture",
+        "attention",
         "training-schedule",
-        "quantization",
-        "evaluation"
+        "quantization"
       ],
       "flags": {
         "usesValOnly": false,
