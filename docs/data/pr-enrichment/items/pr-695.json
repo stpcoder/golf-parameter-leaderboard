@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-25T08:30:14.851Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 695,
+    "title": "Record: 11L XSA6 + Warmdown3000 + QAT@0.30 (val_bpb=1.1352, 2-seed mean)",
+    "state": "open",
+    "updatedAt": "2026-03-25T08:23:28Z",
+    "headSha": "e508c8c66fe1710b5218e15d9c9e33a6dd0b42dd",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/695",
+    "authorLogin": "0xNoramiya"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-25_11L_XSA6_WD3000_QAT030_1.1352/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Extends the stack with six XSA context-only layers while shortening warmdown and triggering QAT earlier for int6 readiness within the same architecture.",
+    "tags": [
+      "architecture",
+      "training-schedule",
+      "quantization"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Extended final six layers with XSA context-only attention",
+      "Shortened warmdown and raised QAT threshold for earlier int6 adaptation",
+      "Ablated key hyperparameters on RTX 4060 Ti to find transfer-friendly knobs"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

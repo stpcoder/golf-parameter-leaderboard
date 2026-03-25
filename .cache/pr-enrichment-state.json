@@ -2,7 +2,7 @@
   "version": 1,
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
-  "generatedAt": "2026-03-25T08:00:18.839Z",
+  "generatedAt": "2026-03-25T08:30:26.463Z",
   "prs": {
     "6": {
       "signature": "2026-03-20-pr-enrichment-v2-approach-first:11373420c1f50e6a83599fb25bb73f38a6555cb7:closed:2026-03-18T18:34:32Z",
@@ -1191,12 +1191,6 @@
       "file": "items/pr-303.json",
       "updatedAt": "2026-03-21T04:18:39Z",
       "headSha": "9227d8ed39663e0547e930a41ddb8d43b8a877c4"
-    },
-    "304": {
-      "signature": "2026-03-20-pr-enrichment-v2-approach-first:0667a5b342c5415abd8827632f31c891a6d24c83:open:2026-03-21T03:10:47Z",
-      "file": "items/pr-304.json",
-      "updatedAt": "2026-03-21T03:10:47Z",
-      "headSha": "0667a5b342c5415abd8827632f31c891a6d24c83"
     },
     "305": {
       "signature": "2026-03-20-pr-enrichment-v2-approach-first:94bb5ffd1e2e7a026fd6fb526d098dba7c4c9510:open:2026-03-22T15:51:44Z",
@@ -2663,10 +2657,10 @@
       "headSha": "4315a016ddfaec02f17120afddafcf12d43b9ed9"
     },
     "635": {
-      "signature": "2026-03-20-pr-enrichment-v2-approach-first:ae6fd8c016aaf9720afcc96b18b7ac95e2b40d31:open:2026-03-25T07:51:38Z",
+      "signature": "2026-03-20-pr-enrichment-v2-approach-first:d1dc0e6faa59a21785fd088fa0b91dced29a80eb:open:2026-03-25T08:24:12Z",
       "file": "items/pr-635.json",
-      "updatedAt": "2026-03-25T07:51:38Z",
-      "headSha": "ae6fd8c016aaf9720afcc96b18b7ac95e2b40d31"
+      "updatedAt": "2026-03-25T08:24:12Z",
+      "headSha": "d1dc0e6faa59a21785fd088fa0b91dced29a80eb"
     },
     "636": {
       "signature": "2026-03-20-pr-enrichment-v2-approach-first:34494eb6d1cae616587dfa404ab2c8ed8e83ba5a:open:2026-03-24T18:20:23Z",
@@ -2907,6 +2901,24 @@
       "file": "items/pr-693.json",
       "updatedAt": "2026-03-25T07:33:34Z",
       "headSha": "f4636fd77c1342b93ae5a9ed80bf922775c54be3"
+    },
+    "694": {
+      "signature": "2026-03-20-pr-enrichment-v2-approach-first:345f145c54d9c7526e010bdc19cf43b5902fe998:open:2026-03-25T08:16:17Z",
+      "file": "items/pr-694.json",
+      "updatedAt": "2026-03-25T08:16:17Z",
+      "headSha": "345f145c54d9c7526e010bdc19cf43b5902fe998"
+    },
+    "695": {
+      "signature": "2026-03-20-pr-enrichment-v2-approach-first:e508c8c66fe1710b5218e15d9c9e33a6dd0b42dd:open:2026-03-25T08:23:28Z",
+      "file": "items/pr-695.json",
+      "updatedAt": "2026-03-25T08:23:28Z",
+      "headSha": "e508c8c66fe1710b5218e15d9c9e33a6dd0b42dd"
+    },
+    "696": {
+      "signature": "2026-03-20-pr-enrichment-v2-approach-first:9fafabe59e0f2a6051e090eed579df00484634b5:open:2026-03-25T08:25:12Z",
+      "file": "items/pr-696.json",
+      "updatedAt": "2026-03-25T08:25:12Z",
+      "headSha": "9fafabe59e0f2a6051e090eed579df00484634b5"
     }
   }
 }

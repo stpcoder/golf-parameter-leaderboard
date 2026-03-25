@@ -1,0 +1,44 @@
+{
+  "generatedAt": "2026-03-25T08:30:19.089Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 694,
+    "title": "10L Int5-MLP + BigramHash(4096) + SWA (1.1507 BPB)",
+    "state": "open",
+    "updatedAt": "2026-03-25T08:16:17Z",
+    "headSha": "345f145c54d9c7526e010bdc19cf43b5902fe998",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/694",
+    "authorLogin": "Bortlesboat"
+  },
+  "inputs": {
+    "hash": "333c1651a7101d4267d971ebe25bd793307b61c975586544bbd6b9a9c3a8cf24",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-25_10L_Int5MLP_BigramHash4096_SWA/README.md",
+      "records/track_10min_16mb/2026-03-20_Int5MLP_BigramHash_SWA_NeuralCache_TTT/README.md"
+    ],
+    "submissionCount": 2
+  },
+  "output": {
+    "summary": "10-layer GQA model couples reduced BigramHash, SmearGate/U-Net skips, and Muon+SWA training with mixed int5/int6 weights plus zstd post-quant compression.",
+    "tags": [
+      "architecture",
+      "quantization",
+      "regularization",
+      "training-schedule"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Mixed int5 MLP/int6 attention weights with post-quant zstd compression",
+      "SmearGate + U-Net skip connections within 10-layer GQA stack",
+      "Muon optimizer with warmdown/SWA averaging"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

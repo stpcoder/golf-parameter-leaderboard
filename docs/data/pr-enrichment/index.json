@@ -1,8 +1,79 @@
 {
-  "generatedAt": "2026-03-25T08:00:18.839Z",
+  "generatedAt": "2026-03-25T08:30:26.463Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 696,
+      "title": "Add non-record JEPA byte-level encoder-decoder submission",
+      "status": "open",
+      "updatedAt": "2026-03-25T08:25:12Z",
+      "headSha": "9fafabe59e0f2a6051e090eed579df00484634b5",
+      "generatedAt": "2026-03-25T08:30:09.870Z",
+      "summary": "Byte-level JEPA encoder-decoder with patch latents, INT6 optimal-clip quantization, and sliding-window SGD TTT replaces causal GPT for the 16MB track.",
+      "tags": [
+        "architecture",
+        "quantization",
+        "compression",
+        "training-schedule"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-696.json"
+    },
+    {
+      "prNumber": 695,
+      "title": "Record: 11L XSA6 + Warmdown3000 + QAT@0.30 (val_bpb=1.1352, 2-seed mean)",
+      "status": "open",
+      "updatedAt": "2026-03-25T08:23:28Z",
+      "headSha": "e508c8c66fe1710b5218e15d9c9e33a6dd0b42dd",
+      "generatedAt": "2026-03-25T08:30:14.851Z",
+      "summary": "Extends the stack with six XSA context-only layers while shortening warmdown and triggering QAT earlier for int6 readiness within the same architecture.",
+      "tags": [
+        "architecture",
+        "training-schedule",
+        "quantization"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-695.json"
+    },
+    {
+      "prNumber": 694,
+      "title": "10L Int5-MLP + BigramHash(4096) + SWA (1.1507 BPB)",
+      "status": "open",
+      "updatedAt": "2026-03-25T08:16:17Z",
+      "headSha": "345f145c54d9c7526e010bdc19cf43b5902fe998",
+      "generatedAt": "2026-03-25T08:30:19.089Z",
+      "summary": "10-layer GQA model couples reduced BigramHash, SmearGate/U-Net skips, and Muon+SWA training with mixed int5/int6 weights plus zstd post-quant compression.",
+      "tags": [
+        "architecture",
+        "quantization",
+        "regularization",
+        "training-schedule"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-694.json"
+    },
     {
       "prNumber": 693,
       "title": "Record: CROWN-Q + Full GPTQ + SWA/EMA Blend — val_bpb 1.1186 (3-seed mean)",
@@ -938,14 +1009,14 @@
       "prNumber": 635,
       "title": "Non-record: 11L MLP3.5x LeakyReLU(0.5)^2 + Full SOTA Stack (mean val_bpb=1.1330, 8xH100 SXM)",
       "status": "open",
-      "updatedAt": "2026-03-25T07:51:38Z",
-      "headSha": "ae6fd8c016aaf9720afcc96b18b7ac95e2b40d31",
-      "generatedAt": "2026-03-25T08:00:18.739Z",
-      "summary": "11-layer 512d transformer pairs MLP3.5x LeakyReLU^2 with SmearGate/hash embeddings, gated attention, partial RoPE, and int6 GPTQ-lite quant+QAT.",
+      "updatedAt": "2026-03-25T08:24:12Z",
+      "headSha": "d1dc0e6faa59a21785fd088fa0b91dced29a80eb",
+      "generatedAt": "2026-03-25T08:30:26.368Z",
+      "summary": "11-layer 512d transformer blends SmearGate, Value Residual, Gated+XSA attention with MLP3.5x LeakyReLU, late QAT, and Muon training.",
       "tags": [
         "architecture",
         "attention",
-        "training-schedule",
+        "optimizer",
         "quantization"
       ],
       "flags": {
@@ -6658,28 +6729,6 @@
         "valOnlyMatchesCollector": true
       },
       "file": "items/pr-305.json"
-    },
-    {
-      "prNumber": 304,
-      "title": "Non-record: QAT + Neural Cache + LoRA TTT",
-      "status": "open",
-      "updatedAt": "2026-03-21T03:10:47Z",
-      "headSha": "0667a5b342c5415abd8827632f31c891a6d24c83",
-      "generatedAt": "2026-03-21T03:27:38.974Z",
-      "summary": "Stacks QAT, neural cache, and entropy-gated per-document LoRA TTT atop the Int5-MLP+BigramHash+SWA recipe for eval-time robustness.",
-      "tags": [
-        "quantization",
-        "evaluation"
-      ],
-      "flags": {
-        "usesValOnly": false,
-        "usesValOnlyAi": false,
-        "usesValOnlyCollector": false
-      },
-      "compatibility": {
-        "valOnlyMatchesCollector": true
-      },
-      "file": "items/pr-304.json"
     },
     {
       "prNumber": 303,
