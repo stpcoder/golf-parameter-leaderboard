@@ -1,8 +1,55 @@
 {
-  "generatedAt": "2026-03-25T12:01:59.610Z",
+  "generatedAt": "2026-03-25T12:31:42.777Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 705,
+      "title": "Byte-Level Tokenizer-Free Transformer: 1.2151 BPB (beats baseline 1.2244)",
+      "status": "open",
+      "updatedAt": "2026-03-25T12:15:21Z",
+      "headSha": "8a8dc76070b990629b83b434b88a308e11d9224e",
+      "generatedAt": "2026-03-25T12:31:23.431Z",
+      "summary": "A 13-layer pure self-attention transformer runs directly on raw UTF-8 bytes with SmearGate, byte-bigram hash features, and U-Net skips.",
+      "tags": [
+        "architecture",
+        "tokenization",
+        "attention",
+        "quantization"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-705.json"
+    },
+    {
+      "prNumber": 704,
+      "title": "Add int8 shared-block bigram+cache prototype",
+      "status": "open",
+      "updatedAt": "2026-03-25T12:05:57Z",
+      "headSha": "365dfc02675a2ed3a4d0c77f3983780328634175",
+      "generatedAt": "2026-03-25T12:31:28.250Z",
+      "summary": "Shared-block transformer uses LSQ-lite per-row QAT plus logit fusion with bigram/cache priors for a compact int8 prototype.",
+      "tags": [
+        "architecture",
+        "quantization",
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-704.json"
+    },
     {
       "prNumber": 703,
       "title": "Record: PR549 + MiLe decay + 8-bit Muon + 1.04x LR + Cache+Backout — val_bpb 1.1176",
@@ -1055,14 +1102,15 @@
       "prNumber": 638,
       "title": "Record: 11L XSA-all + LeakyReLU(0.5)² + VR + GA (val_bpb=1.1164, pending 3-seed)",
       "status": "open",
-      "updatedAt": "2026-03-25T10:53:17Z",
-      "headSha": "b72167fc56f47f9fe0ffdf6d382d188faa5fa789",
-      "generatedAt": "2026-03-25T11:01:07.800Z",
-      "summary": "Uses XSA on all 11 layers plus LeakyReLU(0.5)^2, value-residual gated attention, and int6 per-row quant to push an 11L/512d GPT record.",
+      "updatedAt": "2026-03-25T12:17:02Z",
+      "headSha": "c46eceef29ce8b53225e40a02d62c170250d3da3",
+      "generatedAt": "2026-03-25T12:31:33.751Z",
+      "summary": "11-layer GQA stack pairs XSA on every layer with LeakyReLU(0.5)^2, value residuals, gated attention, and int6 quantization to squeeze in under 16MB.",
       "tags": [
         "architecture",
         "attention",
-        "quantization"
+        "quantization",
+        "evaluation"
       ],
       "flags": {
         "usesValOnly": false,
@@ -4574,15 +4622,15 @@
       "prNumber": 430,
       "title": "Value Residual + Gated Attention + XSA + EMA + AdamW TTT — val_bpb pending H100",
       "status": "open",
-      "updatedAt": "2026-03-25T11:49:30Z",
-      "headSha": "87f0a746e24c0a55a8904bbb503c59a676cf70c6",
-      "generatedAt": "2026-03-25T12:01:59.550Z",
-      "summary": "Builds on a SwiGLU base with value residuals, gated attention, XSA, EMA, and AdamW test-time training on validation tokens for evaluation.",
+      "updatedAt": "2026-03-25T12:14:40Z",
+      "headSha": "c238975cad2758403f6f82f9d1eb79c5ff574159",
+      "generatedAt": "2026-03-25T12:31:42.715Z",
+      "summary": "Builds on the thwu1 base with SwiGLU MLP, per-layer value residuals/gated attention, XSA, EMA, and AdamW test-time finetuning on validation tokens.",
       "tags": [
-        "attention",
+        "val-only",
         "architecture",
-        "training-schedule",
-        "val-only"
+        "attention",
+        "training-schedule"
       ],
       "flags": {
         "usesValOnly": true,

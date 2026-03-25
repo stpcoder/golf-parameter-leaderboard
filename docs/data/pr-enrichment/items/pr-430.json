@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-25T12:01:59.550Z",
+  "generatedAt": "2026-03-25T12:31:42.715Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 430,
     "title": "Value Residual + Gated Attention + XSA + EMA + AdamW TTT — val_bpb pending H100",
     "state": "open",
-    "updatedAt": "2026-03-25T11:49:30Z",
-    "headSha": "87f0a746e24c0a55a8904bbb503c59a676cf70c6",
+    "updatedAt": "2026-03-25T12:14:40Z",
+    "headSha": "c238975cad2758403f6f82f9d1eb79c5ff574159",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/430",
     "authorLogin": "sahiee-dev"
   },
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Builds on a SwiGLU base with value residuals, gated attention, XSA, EMA, and AdamW test-time training on validation tokens for evaluation.",
+    "summary": "Builds on the thwu1 base with SwiGLU MLP, per-layer value residuals/gated attention, XSA, EMA, and AdamW test-time finetuning on validation tokens.",
     "tags": [
-      "attention",
+      "val-only",
       "architecture",
-      "training-schedule",
-      "val-only"
+      "attention",
+      "training-schedule"
     ],
     "usesValOnly": true,
-    "valOnlyReasoning": "Performs AdamW test-time training on validation tokens with bottom layers frozen before evaluation, restoring original weights afterward.",
+    "valOnlyReasoning": "Runs AdamW test-time training on held-out validation tokens before each evaluation, which is explicit validation-shard training.",
     "techniques": [
-      "Per-layer value residuals and gated attention",
-      "Exclusive self-attention in final layers with EMA-tracked weights",
-      "AdamW-based test-time training on validation shards"
+      "Value residual and gated attention per transformer block",
+      "Exclusive Self Attention (XSA) in final layers",
+      "EMA weights plus AdamW test-time training on validation tokens"
     ]
   },
   "compatibility": {
