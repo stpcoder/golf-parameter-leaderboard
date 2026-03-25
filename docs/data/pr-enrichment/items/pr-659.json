@@ -1,0 +1,38 @@
+{
+  "generatedAt": "2026-03-25T00:28:19.802Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 659,
+    "title": "Record: 5-gram Eval Cache + LeakyReLU² + Parallel Muon val_bpb: 1.0920 (3-seed mean, std 0.0007) | ~15.9 MB | 8×H100 SXM",
+    "state": "open",
+    "updatedAt": "2026-03-25T00:00:05Z",
+    "headSha": "b6d1eca55ff6c3b866d63a5a0c6f1cd779328b54",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/659",
+    "authorLogin": "deanbrr"
+  },
+  "inputs": {
+    "hash": "072662c123505c465dfcb1e80cbfb797fc5a748edd0e2a3564b0b095cec763f8",
+    "readmePaths": [],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Adds online 5-gram eval cache with confidence-gated log-sum-exp mixing for backward-looking safety-gated predictions during sliding-window evaluation.",
+    "tags": [
+      "evaluation"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "online 5-gram cache lookups",
+      "confidence-gated log-sum-exp mixing",
+      "strict backward-only safety gate"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

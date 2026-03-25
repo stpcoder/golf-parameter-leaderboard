@@ -1,8 +1,123 @@
 {
-  "generatedAt": "2026-03-24T23:58:08.489Z",
+  "generatedAt": "2026-03-25T00:28:23.112Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 663,
+      "title": "V18 Manifold-Guided Architecture — val_bpb 0.434",
+      "status": "open",
+      "updatedAt": "2026-03-25T00:23:35Z",
+      "headSha": "1a6118bdb0f0608decfcc6dfed56571c318c0b27",
+      "generatedAt": "2026-03-25T00:28:00.211Z",
+      "summary": "Physics-precomputed token manifold feeds sparsemax-routed 4-hop GNN message passing so the model only navigates fixed geometry, not building it.",
+      "tags": [
+        "architecture",
+        "attention",
+        "quantization",
+        "training-schedule"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-663.json"
+    },
+    {
+      "prNumber": 662,
+      "title": "Add non-record streaming legal TTT late-block submission",
+      "status": "open",
+      "updatedAt": "2026-03-25T00:23:33Z",
+      "headSha": "4ac6bcf10c7bd638ba72b5fbdd7f56dc1d40cf6a",
+      "generatedAt": "2026-03-25T00:28:06.387Z",
+      "summary": "Reuses the March 23 LeakyReLU^2 parallel muon stack but switches to streaming legal TTT that updates only the last four blocks online.",
+      "tags": [
+        "evaluation",
+        "muon"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-662.json"
+    },
+    {
+      "prNumber": 661,
+      "title": "Non-record: 30ep Cosine TTT on SwiGLU + U-Net (1xH100, val_bpb=1.1175)",
+      "status": "open",
+      "updatedAt": "2026-03-25T00:08:43Z",
+      "headSha": "04738a3caa13b9de016049bd3fa3a6fac9b0fa47",
+      "generatedAt": "2026-03-25T00:28:11.126Z",
+      "summary": "PR increases cosine TTT to 30 epochs on the PR462 SwiGLU + U-Net stack with BigramHash, EMA, and compression.",
+      "tags": [
+        "training-schedule",
+        "architecture",
+        "quantization",
+        "non-record"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-661.json"
+    },
+    {
+      "prNumber": 660,
+      "title": "Non-record: Soft MoE Exploration — Dense Gating Fixes Sparse Router Collapse Under 16MB (WIP, val_bpb=1.1826)",
+      "status": "open",
+      "updatedAt": "2026-03-25T00:06:06Z",
+      "headSha": "016985b6f8c04a8f37f2c98879b8af5a80e75f1c",
+      "generatedAt": "2026-03-25T00:28:15.654Z",
+      "summary": "Dense Soft MoE gating keeps all experts active, avoids sparse router collapse, and stays torch.compile friendly under 16MB constraints.",
+      "tags": [
+        "non-record",
+        "architecture",
+        "quantization",
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-660.json"
+    },
+    {
+      "prNumber": 659,
+      "title": "Record: 5-gram Eval Cache + LeakyReLU² + Parallel Muon val_bpb: 1.0920 (3-seed mean, std 0.0007) | ~15.9 MB | 8×H100 SXM",
+      "status": "open",
+      "updatedAt": "2026-03-25T00:00:05Z",
+      "headSha": "b6d1eca55ff6c3b866d63a5a0c6f1cd779328b54",
+      "generatedAt": "2026-03-25T00:28:19.802Z",
+      "summary": "Adds online 5-gram eval cache with confidence-gated log-sum-exp mixing for backward-looking safety-gated predictions during sliding-window evaluation.",
+      "tags": [
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-659.json"
+    },
     {
       "prNumber": 658,
       "title": "Non-record: LoRA TTT exploration on SOTA base (negative result)",
@@ -5072,13 +5187,14 @@
       "prNumber": 363,
       "title": "Non-record: Depth Recurrence in Parameter-Constrained Transformers — What Works, What Doesn't, and Why",
       "status": "open",
-      "updatedAt": "2026-03-24T23:54:13Z",
-      "headSha": "bce292e4062d8ebdc7f290a7c5e692e3c292b73b",
-      "generatedAt": "2026-03-24T23:58:08.435Z",
-      "summary": "Looped-depth recurrence shares core blocks and uses int8-aware noise to tame quantization compounding in parameter-constrained training.",
+      "updatedAt": "2026-03-25T00:07:25Z",
+      "headSha": "46788638f485c0da9de9f8f26b844be8991163f1",
+      "generatedAt": "2026-03-25T00:28:23.058Z",
+      "summary": "Depth-recurrent looped transformer shares a few blocks with per-cycle LoRA adapters, BigramHash, and noisy QAT to tame quantization error amplification under mixed-precision.",
       "tags": [
         "architecture",
         "quantization",
+        "evaluation",
         "non-record"
       ],
       "flags": {

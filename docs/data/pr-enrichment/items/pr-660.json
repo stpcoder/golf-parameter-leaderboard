@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-25T00:28:15.654Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 660,
+    "title": "Non-record: Soft MoE Exploration — Dense Gating Fixes Sparse Router Collapse Under 16MB (WIP, val_bpb=1.1826)",
+    "state": "open",
+    "updatedAt": "2026-03-25T00:06:06Z",
+    "headSha": "016985b6f8c04a8f37f2c98879b8af5a80e75f1c",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/660",
+    "authorLogin": "HugoOchoaLP"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-03-24_SoftMoE_exploration/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Dense Soft MoE gating keeps all experts active, avoids sparse router collapse, and stays torch.compile friendly under 16MB constraints.",
+    "tags": [
+      "non-record",
+      "architecture",
+      "quantization",
+      "evaluation"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Dense Soft MoE replacing sparse gating",
+      "Torch.compile-compatible routing for faster steps",
+      "Int5 MLP and Int6 attention quantization"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "generatedAt": "2026-03-25T00:28:06.387Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 662,
+    "title": "Add non-record streaming legal TTT late-block submission",
+    "state": "open",
+    "updatedAt": "2026-03-25T00:23:33Z",
+    "headSha": "4ac6bcf10c7bd638ba72b5fbdd7f56dc1d40cf6a",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/662",
+    "authorLogin": "simon-marcus"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-24_StreamingLegalTTT_LateBlocks_NonRecord/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Reuses the March 23 LeakyReLU^2 parallel muon stack but switches to streaming legal TTT that updates only the last four blocks online.",
+    "tags": [
+      "evaluation",
+      "muon"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Streaming TTT over scored suffix batches",
+      "Late-block-only adaptation (last 4 transformer blocks)",
+      "LeakyReLU(0.5)^2 base with parallel muon architecture"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

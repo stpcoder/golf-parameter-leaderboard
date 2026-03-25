@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-25T00:28:11.126Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 661,
+    "title": "Non-record: 30ep Cosine TTT on SwiGLU + U-Net (1xH100, val_bpb=1.1175)",
+    "state": "open",
+    "updatedAt": "2026-03-25T00:08:43Z",
+    "headSha": "04738a3caa13b9de016049bd3fa3a6fac9b0fa47",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/661",
+    "authorLogin": "andrewbaggio1"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-03-24_CosineTTT30ep_SwiGLU_1xH100/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "PR increases cosine TTT to 30 epochs on the PR462 SwiGLU + U-Net stack with BigramHash, EMA, and compression.",
+    "tags": [
+      "training-schedule",
+      "architecture",
+      "quantization",
+      "non-record"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "SwiGLU + U-Net backbone with BigramHash, SmearGate, and EMA",
+      "Cosine TTT schedule extended to 30 epochs",
+      "Late QAT with Int6+zstd compression"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}
