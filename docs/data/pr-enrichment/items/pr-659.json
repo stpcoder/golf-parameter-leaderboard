@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-25T01:28:24.267Z",
+  "generatedAt": "2026-03-25T01:58:28.535Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 659,
     "title": "Record: 5-gram Eval Cache + LeakyReLU² + Parallel Muon val_bpb: 1.0920 (3-seed mean, std 0.0007) | ~15.9 MB | 8×H100 SXM",
     "state": "closed",
-    "updatedAt": "2026-03-25T01:12:49Z",
+    "updatedAt": "2026-03-25T01:56:47Z",
     "headSha": "d9349d06fca5021e39ecb906d09516b2146f8114",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/659",
     "authorLogin": "deanbrr"
@@ -19,15 +19,17 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "LeakyReLU Parallel Muon eval adds an online backward-looking 5-gram cache with confidence-gated mixing to sharpen predictions via CPU lookups.",
+    "summary": "Adds confidence-gated online 5-gram cache mixing during sliding-window eval on LeakyReLU/Parallel Muon to capture repeats without extra GPU cost.",
     "tags": [
-      "evaluation"
+      "evaluation",
+      "sliding-window-eval"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Sliding-window eval with confidence-gated log-sum-exp mixing",
-      "Online CPU 5-gram cache built from already-scored tokens"
+      "Confidence-gated online 5-gram cache with log-sum-exp mixing",
+      "Safety gate ensures n-gram mixing never worsens predictions",
+      "Zero-GPU CPU dict lookups accumulate backward-looking statistics"
     ]
   },
   "compatibility": {

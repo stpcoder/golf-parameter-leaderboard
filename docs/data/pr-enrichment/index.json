@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-25T01:28:33.470Z",
+  "generatedAt": "2026-03-25T01:58:33.182Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
@@ -219,12 +219,13 @@
       "prNumber": 659,
       "title": "Record: 5-gram Eval Cache + LeakyReLU² + Parallel Muon val_bpb: 1.0920 (3-seed mean, std 0.0007) | ~15.9 MB | 8×H100 SXM",
       "status": "closed",
-      "updatedAt": "2026-03-25T01:12:49Z",
+      "updatedAt": "2026-03-25T01:56:47Z",
       "headSha": "d9349d06fca5021e39ecb906d09516b2146f8114",
-      "generatedAt": "2026-03-25T01:28:24.267Z",
-      "summary": "LeakyReLU Parallel Muon eval adds an online backward-looking 5-gram cache with confidence-gated mixing to sharpen predictions via CPU lookups.",
+      "generatedAt": "2026-03-25T01:58:28.535Z",
+      "summary": "Adds confidence-gated online 5-gram cache mixing during sliding-window eval on LeakyReLU/Parallel Muon to capture repeats without extra GPU cost.",
       "tags": [
-        "evaluation"
+        "evaluation",
+        "sliding-window-eval"
       ],
       "flags": {
         "usesValOnly": false,
@@ -893,15 +894,15 @@
     {
       "prNumber": 615,
       "title": "Record: Residual Input Mixing + mixed int6 GPTQ + grouped TTT + MLP 3.5x",
-      "status": "open",
-      "updatedAt": "2026-03-24T13:21:47Z",
+      "status": "closed",
+      "updatedAt": "2026-03-25T01:51:15Z",
       "headSha": "1d2995e88e9217c099513dd5ad75ba3e52035b4e",
-      "generatedAt": "2026-03-24T13:25:03.908Z",
-      "summary": "Denser residual mixing lets each block blend current, earlier, and original inputs, paired with mixed int6 GPTQ and grouped AdamW TTT.",
+      "generatedAt": "2026-03-25T01:58:33.089Z",
+      "summary": "Dense residual mixing per block plus grouped AdamW TTT adapts a mixed int6 per-row GPTQ model with 3.5x MLP to reuse longer-range features.",
       "tags": [
         "architecture",
-        "quantization",
-        "optimizer"
+        "optimizer",
+        "quantization"
       ],
       "flags": {
         "usesValOnly": false,

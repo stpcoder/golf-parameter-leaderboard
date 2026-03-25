@@ -1,8 +1,8 @@
 {
   "version": 1,
   "sourceRepo": "openai/parameter-golf",
-  "generatedAt": "2026-03-25T01:27:58.857Z",
-  "lastSeenUpdatedAt": "2026-03-25T01:25:36Z",
+  "generatedAt": "2026-03-25T01:58:18.700Z",
+  "lastSeenUpdatedAt": "2026-03-25T01:56:47Z",
   "prs": {
     "1": {
       "number": 1,
@@ -52202,18 +52202,18 @@
     },
     "615": {
       "number": 615,
-      "updatedAt": "2026-03-24T13:21:47Z",
+      "updatedAt": "2026-03-25T01:51:15Z",
       "pr": {
         "number": 615,
         "title": "Record: Residual Input Mixing + mixed int6 GPTQ + grouped TTT + MLP 3.5x",
-        "state": "open",
+        "state": "closed",
         "draft": false,
         "mergedAt": null,
         "htmlUrl": "https://github.com/openai/parameter-golf/pull/615",
         "authorLogin": "danialht",
         "authorName": null,
         "createdAt": "2026-03-24T13:21:47Z",
-        "updatedAt": "2026-03-24T13:21:47Z",
+        "updatedAt": "2026-03-25T01:51:15Z",
         "headSha": "1d2995e88e9217c099513dd5ad75ba3e52035b4e",
         "headRepo": "danialht/parameter-golf"
       },
@@ -52221,7 +52221,7 @@
         {
           "id": "pr-615-records-track_10min_16mb-2026-03-23_MixResiduals_Int6_GPTQ_BigramHash8192-submission-json",
           "source": "pull_request",
-          "status": "open",
+          "status": "closed",
           "category": "main-track",
           "track": {
             "path": "records/track_10min_16mb",
@@ -52269,14 +52269,14 @@
           "pr": {
             "number": 615,
             "title": "Record: Residual Input Mixing + mixed int6 GPTQ + grouped TTT + MLP 3.5x",
-            "state": "open",
+            "state": "closed",
             "draft": false,
             "mergedAt": null,
             "htmlUrl": "https://github.com/openai/parameter-golf/pull/615",
             "authorLogin": "danialht",
             "authorName": null,
             "createdAt": "2026-03-24T13:21:47Z",
-            "updatedAt": "2026-03-24T13:21:47Z",
+            "updatedAt": "2026-03-25T01:51:15Z",
             "headSha": "1d2995e88e9217c099513dd5ad75ba3e52035b4e",
             "headRepo": "danialht/parameter-golf"
           },
@@ -55178,7 +55178,7 @@
     },
     "659": {
       "number": 659,
-      "updatedAt": "2026-03-25T01:12:49Z",
+      "updatedAt": "2026-03-25T01:56:47Z",
       "pr": {
         "number": 659,
         "title": "Record: 5-gram Eval Cache + LeakyReLU² + Parallel Muon val_bpb: 1.0920 (3-seed mean, std 0.0007) | ~15.9 MB | 8×H100 SXM",
@@ -55189,7 +55189,7 @@
         "authorLogin": "deanbrr",
         "authorName": null,
         "createdAt": "2026-03-25T00:00:05Z",
-        "updatedAt": "2026-03-25T01:12:49Z",
+        "updatedAt": "2026-03-25T01:56:47Z",
         "headSha": "d9349d06fca5021e39ecb906d09516b2146f8114",
         "headRepo": "deanbrr/parameter-golf"
       },
@@ -55252,7 +55252,7 @@
             "authorLogin": "deanbrr",
             "authorName": null,
             "createdAt": "2026-03-25T00:00:05Z",
-            "updatedAt": "2026-03-25T01:12:49Z",
+            "updatedAt": "2026-03-25T01:56:47Z",
             "headSha": "d9349d06fca5021e39ecb906d09516b2146f8114",
             "headRepo": "deanbrr/parameter-golf"
           },
