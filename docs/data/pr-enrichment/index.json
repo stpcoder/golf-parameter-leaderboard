@@ -1,8 +1,32 @@
 {
-  "generatedAt": "2026-03-25T03:28:39.119Z",
+  "generatedAt": "2026-03-25T03:58:45.316Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 673,
+      "title": "Add submission snapshots for grant-backed runs",
+      "status": "open",
+      "updatedAt": "2026-03-25T03:47:16Z",
+      "headSha": "4e465ee7c8c8c3adbfa9c2db9631bdd15b68a791",
+      "generatedAt": "2026-03-25T03:58:45.193Z",
+      "summary": "Adds snapshots: MLX val-only sliding-window pipeline plus two pending 10-minute int6/QAT stacks (MLP sizing, SWA/Bigram/SmearGate) awaiting H100 logs.",
+      "tags": [
+        "val-only",
+        "sliding-window-eval",
+        "quantization",
+        "non-record"
+      ],
+      "flags": {
+        "usesValOnly": true,
+        "usesValOnlyAi": true,
+        "usesValOnlyCollector": true
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-673.json"
+    },
     {
       "prNumber": 672,
       "title": "Record: 30ep Cosine TTT on LeakyReLU² stack (3-seed mean val_bpb=1.0781)",

@@ -1,0 +1,45 @@
+{
+  "generatedAt": "2026-03-25T03:58:45.193Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 673,
+    "title": "Add submission snapshots for grant-backed runs",
+    "state": "open",
+    "updatedAt": "2026-03-25T03:47:16Z",
+    "headSha": "4e465ee7c8c8c3adbfa9c2db9631bdd15b68a791",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/673",
+    "authorLogin": "Aristide021"
+  },
+  "inputs": {
+    "hash": "c4f8d017d13e812b0ad5a78b677f8350df1124736cd3f84c8d4e37f273206c70",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-03-19_ValOnly_SlidingWindow_mlx/README.md",
+      "records/track_10min_16mb/2026-03-21_SWA_BigramHash_SmearGate_Int5MLP_MuonWD/README.md",
+      "records/track_10min_16mb/2026-03-19_QAT_Int6_MLP3_SlidingWindow/README.md"
+    ],
+    "submissionCount": 3
+  },
+  "output": {
+    "summary": "Adds snapshots: MLX val-only sliding-window pipeline plus two pending 10-minute int6/QAT stacks (MLP sizing, SWA/Bigram/SmearGate) awaiting H100 logs.",
+    "tags": [
+      "val-only",
+      "sliding-window-eval",
+      "quantization",
+      "non-record"
+    ],
+    "usesValOnly": true,
+    "valOnlyReasoning": "Training and evaluation both read the 2M-token validation shard so the model learns to compress the exact eval corpus.",
+    "techniques": [
+      "Val-only training on the 2M-token validation shard",
+      "Sliding-window evaluation with stride 64 for extended context",
+      "Int6/QAT stacks with MLP sizing, SWA, BigramHash, and SmearGate"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": true,
+    "aiUsesValOnly": true,
+    "finalUsesValOnly": true,
+    "valOnlyMatchesCollector": true
+  }
+}
