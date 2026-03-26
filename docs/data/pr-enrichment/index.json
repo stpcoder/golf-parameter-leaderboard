@@ -1,8 +1,32 @@
 {
-  "generatedAt": "2026-03-25T23:36:15.481Z",
+  "generatedAt": "2026-03-26T00:05:49.513Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 784,
+      "title": "Non-record: Depth Recurrence + XSA + LeakyReLU² (val_bpb 1.2065)",
+      "status": "open",
+      "updatedAt": "2026-03-25T23:48:01Z",
+      "headSha": "697f820632b8682a927a1c37957498b0ae64dd4b",
+      "generatedAt": "2026-03-26T00:05:30.926Z",
+      "summary": "Depth recurrence with Cross-Repeat Skip, XSA on final layers, LeakyReLU(0.5)², and GPTQ-lite/zstd post-processing for a compact non-record entry.",
+      "tags": [
+        "architecture",
+        "attention",
+        "quantization",
+        "compression"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-784.json"
+    },
     {
       "prNumber": 783,
       "title": "Non-record: PR703 + shard-order curriculum + GPTQ cache-backout (1.1171)",
@@ -76,21 +100,22 @@
       "prNumber": 779,
       "title": "Record: BackoffNgramMixer + Drift-Free TTT (3-seed mean val_bpb=0.6683)",
       "status": "open",
-      "updatedAt": "2026-03-25T23:33:39Z",
+      "updatedAt": "2026-03-25T23:49:58Z",
       "headSha": "611612ee244acd290b7c30d952c8159816532e43",
-      "generatedAt": "2026-03-25T23:35:47.598Z",
-      "summary": "Eval-time BackoffNgramMixer mixes multi-order n-gram stats with the model via entropy-adaptive alpha while drift-free TTT tweaks (Q-only, low eta/lr) keep adaptation stable.",
+      "generatedAt": "2026-03-26T00:05:38.974Z",
+      "summary": "BackoffNgramMixer mixes 2-7 order counts via entropy-scaled alpha and pairs with drift-free Q-only TTT adaptation to smooth eval-time compression.",
       "tags": [
-        "training-schedule",
-        "evaluation"
+        "val-only",
+        "evaluation",
+        "training-schedule"
       ],
       "flags": {
-        "usesValOnly": false,
-        "usesValOnlyAi": false,
+        "usesValOnly": true,
+        "usesValOnlyAi": true,
         "usesValOnlyCollector": false
       },
       "compatibility": {
-        "valOnlyMatchesCollector": true
+        "valOnlyMatchesCollector": false
       },
       "file": "items/pr-779.json"
     },
@@ -1465,15 +1490,15 @@
       "prNumber": 696,
       "title": "Add non-record JEPA byte-level encoder-decoder submission",
       "status": "open",
-      "updatedAt": "2026-03-25T21:38:47Z",
-      "headSha": "f32b6c066d33ea42f555ce0bffcd60b0cd4fa452",
-      "generatedAt": "2026-03-25T22:04:36.349Z",
-      "summary": "Byte-level JEPA encoder-decoder with depth-recurrent encoder, patched latents, INT6 quantization, and sliding-window TTT adaptation.",
+      "updatedAt": "2026-03-25T23:43:31Z",
+      "headSha": "0f532ea62d7665d9a25e4d2175af50c533f44ed7",
+      "generatedAt": "2026-03-26T00:05:44.636Z",
+      "summary": "JEPA encoder-decoder using byte-level patches and depth-recurrent latents feeding a causal decoder, INT6 quant+LZMA, plus sliding-window TTT.",
       "tags": [
         "architecture",
         "quantization",
         "compression",
-        "evaluation"
+        "sliding-window-eval"
       ],
       "flags": {
         "usesValOnly": false,
@@ -9932,10 +9957,10 @@
       "prNumber": 182,
       "title": "Non-record: Linearized Neural Memory + TTT (val_bpb=1.1844)",
       "status": "open",
-      "updatedAt": "2026-03-25T22:45:19Z",
-      "headSha": "6461ec1391db5020188617b74952fae03cb5737a",
-      "generatedAt": "2026-03-25T23:04:50.825Z",
-      "summary": "Linearized Titans-style neural memory per block (cumsum causal linear attention) plus LoRA TTT, overtone init, and FP16/int6 mixed precision for compact evaluation.",
+      "updatedAt": "2026-03-26T00:03:48Z",
+      "headSha": "3cf05f9aaea4f2f02dd479d3e1a0051270e6725f",
+      "generatedAt": "2026-03-26T00:05:49.484Z",
+      "summary": "Adds Titans-style closed-form neural memory in each block plus LoRA TTT eval and mixed-precision quantization to embed adaptation in the forward pass.",
       "tags": [
         "architecture",
         "attention",
@@ -10563,29 +10588,6 @@
         "valOnlyMatchesCollector": true
       },
       "file": "items/pr-149.json"
-    },
-    {
-      "prNumber": 148,
-      "title": "Depth Recurrence + Cross-Repeat Skip + Sliding Window Eval",
-      "status": "open",
-      "updatedAt": "2026-03-20T01:41:57Z",
-      "headSha": "fa293060e34a5cc455e6392fbcb337c4f1a5b42f",
-      "generatedAt": "2026-03-20T01:50:26.942Z",
-      "summary": "Shared 3-block depth recurrence with cross-repeat skips, value embeddings, and sliding-window eval boosts effective depth efficiently.",
-      "tags": [
-        "architecture",
-        "depth-width",
-        "evaluation"
-      ],
-      "flags": {
-        "usesValOnly": false,
-        "usesValOnlyAi": false,
-        "usesValOnlyCollector": false
-      },
-      "compatibility": {
-        "valOnlyMatchesCollector": true
-      },
-      "file": "items/pr-148.json"
     },
     {
       "prNumber": 147,

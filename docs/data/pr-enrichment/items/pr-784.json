@@ -1,0 +1,44 @@
+{
+  "generatedAt": "2026-03-26T00:05:30.926Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 784,
+    "title": "Non-record: Depth Recurrence + XSA + LeakyReLU² (val_bpb 1.2065)",
+    "state": "open",
+    "updatedAt": "2026-03-25T23:48:01Z",
+    "headSha": "697f820632b8682a927a1c37957498b0ae64dd4b",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/784",
+    "authorLogin": "iverbovoy"
+  },
+  "inputs": {
+    "hash": "333c1651a7101d4267d971ebe25bd793307b61c975586544bbd6b9a9c3a8cf24",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-03-26_DepthRecurrence_XSA_LeakyReLU/README.md",
+      "records/track_10min_16mb/2026-03-20_DepthRecurrence_CrossRepeatSkip/README.md"
+    ],
+    "submissionCount": 2
+  },
+  "output": {
+    "summary": "Depth recurrence with Cross-Repeat Skip, XSA on final layers, LeakyReLU(0.5)², and GPTQ-lite/zstd post-processing for a compact non-record entry.",
+    "tags": [
+      "architecture",
+      "attention",
+      "quantization",
+      "compression"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Cross-Repeat Skip depth recurrence",
+      "XSA + LeakyReLU(0.5)² in final repeats",
+      "GPTQ-lite quant + zstd-22 compression"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

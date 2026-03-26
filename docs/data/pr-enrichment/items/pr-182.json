@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-25T23:04:50.825Z",
+  "generatedAt": "2026-03-26T00:05:49.484Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 182,
     "title": "Non-record: Linearized Neural Memory + TTT (val_bpb=1.1844)",
     "state": "open",
-    "updatedAt": "2026-03-25T22:45:19Z",
-    "headSha": "6461ec1391db5020188617b74952fae03cb5737a",
+    "updatedAt": "2026-03-26T00:03:48Z",
+    "headSha": "3cf05f9aaea4f2f02dd479d3e1a0051270e6725f",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/182",
     "authorLogin": "mihir-s-05"
   },
@@ -19,7 +19,7 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Linearized Titans-style neural memory per block (cumsum causal linear attention) plus LoRA TTT, overtone init, and FP16/int6 mixed precision for compact evaluation.",
+    "summary": "Adds Titans-style closed-form neural memory in each block plus LoRA TTT eval and mixed-precision quantization to embed adaptation in the forward pass.",
     "tags": [
       "architecture",
       "attention",
@@ -29,9 +29,9 @@
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Linearized Titans memory as causal linear attention via cumsum",
-      "LoRA test-time tuning with overtone init and phase-transition residual mix",
-      "FP16 embedding bypass plus int6 layers with Muon weight decay"
+      "Titan-inspired linearized neural memory via causal linear attention",
+      "LoRA TTT per-document rank-8 adaptation",
+      "FP16 embedding bypass with int6 quantized middles"
     ]
   },
   "compatibility": {
