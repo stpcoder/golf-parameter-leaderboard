@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-26T07:36:58.291Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 826,
+    "title": "Record: Order-9 N-gram Backoff + Score-First TTT + GPTQ-Int5 (0.2951 BPB)",
+    "state": "closed",
+    "updatedAt": "2026-03-26T07:19:14Z",
+    "headSha": "aac1d32f8b38ecc5f422714accd765d013fcdb9e",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/826",
+    "authorLogin": "himanshudongre"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-27_ChunkNgram_0.2951/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Combines score-first LoRA TTT with an order-9 n-gram cache that entropy-interpolates with the neural model before GPTQ int5 export.",
+    "tags": [
+      "evaluation",
+      "architecture",
+      "quantization"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Score-first LoRA TTT on Q/V/LM head",
+      "Order-9 n-gram cache with entropy-adaptive interpolation",
+      "Full Hessian GPTQ int5 export"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-26T07:08:14.340Z",
+  "generatedAt": "2026-03-26T07:37:23.039Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 754,
     "title": "Non-Record: 11L Parallel Muon + LeakyReLU² MLP3x + Legal TTT (val_bpb 1.1253)",
     "state": "open",
-    "updatedAt": "2026-03-26T06:48:32Z",
-    "headSha": "daff73e3f44db97af7b95ddcfb0da3f9416fb921",
+    "updatedAt": "2026-03-26T07:25:19Z",
+    "headSha": "51af1baf30f05a5a1808cbcb5824a3850b968f8a",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/754",
     "authorLogin": "aryanbhosale"
   },
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "11L 512d stack mixes Parallel Muon banking with batched Newton-Schulz, LeakyReLU² MLP3x, and legal score-first TTT fine-tuning.",
+    "summary": "11L Transformer couples Parallel Muon parameter banking with LeakyReLU² MLP3x and a legal score-first TTT workflow to fine-tune quantized weights.",
     "tags": [
       "muon",
-      "architecture",
       "quantization",
-      "training-schedule"
+      "training-schedule",
+      "architecture"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Parallel Muon banking + batched Newton-Schulz preconditioning",
-      "LeakyReLU(0.5)² MLP3× with SmearGate, gated attention, and U-Net skips",
-      "Legal score-first TTT after EMA+SWA with SGD momentum"
+      "Parallel Muon banking plus batched Newton-Schulz optimizer",
+      "LeakyReLU(0.5)² MLP3x within gated/XSA4 attention stack",
+      "Legal score-first TTT with sliding-window scoring then SGD"
     ]
   },
   "compatibility": {

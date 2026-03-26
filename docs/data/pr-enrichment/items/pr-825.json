@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-26T07:37:03.095Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 825,
+    "title": "Record: Order-Adaptive BackoffMixer (mean val_bpb=0.5440)",
+    "state": "open",
+    "updatedAt": "2026-03-26T07:07:51Z",
+    "headSha": "79ae889affcfa7d1f97534206adfac413ef61f34",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/825",
+    "authorLogin": "hypery11"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-26_OrderAdaptive_BackoffMixer/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "11-layer XSA-all transformer with int5 Soft-Round QAT feeds an order-adaptive entropy-gated BackoffNgramMixer that blends multi-order scores via per-order thresholds.",
+    "tags": [
+      "architecture",
+      "attention",
+      "compression",
+      "evaluation"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "11L XSA-all transformer with EMA, Tight SWA, and Soft-Round QAT",
+      "Score-first backoff mixer using backward multi-order cache",
+      "Per-order entropy gating for deterministic mixing"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

@@ -1,27 +1,25 @@
 {
-  "generatedAt": "2026-03-26T07:06:13.010Z",
+  "generatedAt": "2026-03-26T07:36:28.286Z",
   "sourceRepo": "openai/parameter-golf",
   "siteRoot": null,
   "tokenConfigured": true,
   "skipped": [
     {
-      "stage": "pull-request-readme",
-      "pr": 819,
-      "submissionPath": "records/track_10min_16mb/2026-03-25_PES_RosehipV1/submission.json",
-      "reason": "missing-or-unreadable-readme"
+      "pr": 827,
+      "reason": "no-record-submission-json"
     }
   ],
   "errors": [],
   "incremental": {
     "mode": "incremental",
-    "cutoffUpdatedAt": "2026-03-26T06:36:16Z",
+    "cutoffUpdatedAt": "2026-03-26T07:05:13Z",
     "pagesScanned": 2,
     "prsScanned": 200,
-    "prsRefreshed": 12,
-    "prsReused": 188,
+    "prsRefreshed": 6,
+    "prsReused": 194,
     "stoppedEarly": true,
     "refreshFailures": 0,
-    "cacheEntries": 787,
+    "cacheEntries": 790,
     "retryWindowRetained": false
   }
 }

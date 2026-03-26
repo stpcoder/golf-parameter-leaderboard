@@ -1,33 +1,35 @@
 {
-  "generatedAt": "2026-03-26T07:07:21.889Z",
+  "generatedAt": "2026-03-26T07:37:18.791Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 819,
     "title": "Add PES RosehipV1: Precision Error Signal + frontier stack",
     "state": "open",
-    "updatedAt": "2026-03-26T06:43:13Z",
-    "headSha": "ea241c2b5047fb5b5513dbd59a956139862717c5",
+    "updatedAt": "2026-03-26T07:17:42Z",
+    "headSha": "fc8aa7f9af552f30a9cdc3b3f79df75a8ee9b81a",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/819",
     "authorLogin": "Tetrahedroned"
   },
   "inputs": {
-    "hash": "072662c123505c465dfcb1e80cbfb797fc5a748edd0e2a3564b0b095cec763f8",
-    "readmePaths": [],
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-25_PES_RosehipV1/README.md"
+    ],
     "submissionCount": 1
   },
   "output": {
-    "summary": "Introduces PES RosehipV1 with a Rosehip-inspired Precision Error Signal correction module and a frontier stack combining XSA, VRL, EMA, and LeakyReLU².",
+    "summary": "Adds PES inter-layer correction units atop XSA/VRL/EMA + LeakyReLU² frontier stack so the residual stream self-corrects across transformer blocks.",
     "tags": [
       "architecture",
-      "regularization",
-      "training-schedule"
+      "attention",
+      "regularization"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Precision Error Signal inter-layer correction",
-      "Frontier stack: XSA, VRL, EMA, LeakyReLU²"
+      "PES learns per-layer error correction via tiny MLPs with learnable α scalars",
+      "Frontier stack layers leverage XSA, VRL, EMA smoothing, and LeakyReLU² activations"
     ]
   },
   "compatibility": {

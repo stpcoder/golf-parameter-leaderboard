@@ -1,16 +1,63 @@
 {
-  "generatedAt": "2026-03-26T07:08:25.769Z",
+  "generatedAt": "2026-03-26T07:37:23.148Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
     {
+      "prNumber": 826,
+      "title": "Record: Order-9 N-gram Backoff + Score-First TTT + GPTQ-Int5 (0.2951 BPB)",
+      "status": "closed",
+      "updatedAt": "2026-03-26T07:19:14Z",
+      "headSha": "aac1d32f8b38ecc5f422714accd765d013fcdb9e",
+      "generatedAt": "2026-03-26T07:36:58.291Z",
+      "summary": "Combines score-first LoRA TTT with an order-9 n-gram cache that entropy-interpolates with the neural model before GPTQ int5 export.",
+      "tags": [
+        "evaluation",
+        "architecture",
+        "quantization"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-826.json"
+    },
+    {
+      "prNumber": 825,
+      "title": "Record: Order-Adaptive BackoffMixer (mean val_bpb=0.5440)",
+      "status": "open",
+      "updatedAt": "2026-03-26T07:07:51Z",
+      "headSha": "79ae889affcfa7d1f97534206adfac413ef61f34",
+      "generatedAt": "2026-03-26T07:37:03.095Z",
+      "summary": "11-layer XSA-all transformer with int5 Soft-Round QAT feeds an order-adaptive entropy-gated BackoffNgramMixer that blends multi-order scores via per-order thresholds.",
+      "tags": [
+        "architecture",
+        "attention",
+        "compression",
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-825.json"
+    },
+    {
       "prNumber": 824,
       "title": "GatedAttn + ValueResid + XSA6 + HedgeMixer + Legal TTT — val_bpb: 1.08965 (3-seed mean)",
       "status": "open",
-      "updatedAt": "2026-03-26T07:05:13Z",
+      "updatedAt": "2026-03-26T07:17:35Z",
       "headSha": "d7572869ea4e901edaba49917cb0f1f2a688ae26",
-      "generatedAt": "2026-03-26T07:07:03.820Z",
-      "summary": "Adds per-head gated attention scalars and per-block value-residual mixing atop HedgeMixer and XSA6 stack with FP32 control tensors to guide quantized eval.",
+      "generatedAt": "2026-03-26T07:37:08.127Z",
+      "summary": "Adds per-head gated scaling and per-block value residual injection to HedgeMixer while keeping control scalars in FP32 for quantization safety.",
       "tags": [
         "architecture",
         "attention",
@@ -101,14 +148,14 @@
       "prNumber": 819,
       "title": "Add PES RosehipV1: Precision Error Signal + frontier stack",
       "status": "open",
-      "updatedAt": "2026-03-26T06:43:13Z",
-      "headSha": "ea241c2b5047fb5b5513dbd59a956139862717c5",
-      "generatedAt": "2026-03-26T07:07:21.889Z",
-      "summary": "Introduces PES RosehipV1 with a Rosehip-inspired Precision Error Signal correction module and a frontier stack combining XSA, VRL, EMA, and LeakyReLU².",
+      "updatedAt": "2026-03-26T07:17:42Z",
+      "headSha": "fc8aa7f9af552f30a9cdc3b3f79df75a8ee9b81a",
+      "generatedAt": "2026-03-26T07:37:18.791Z",
+      "summary": "Adds PES inter-layer correction units atop XSA/VRL/EMA + LeakyReLU² frontier stack so the residual stream self-corrects across transformer blocks.",
       "tags": [
         "architecture",
-        "regularization",
-        "training-schedule"
+        "attention",
+        "regularization"
       ],
       "flags": {
         "usesValOnly": false,
@@ -1369,15 +1416,15 @@
       "prNumber": 754,
       "title": "Non-Record: 11L Parallel Muon + LeakyReLU² MLP3x + Legal TTT (val_bpb 1.1253)",
       "status": "open",
-      "updatedAt": "2026-03-26T06:48:32Z",
-      "headSha": "daff73e3f44db97af7b95ddcfb0da3f9416fb921",
-      "generatedAt": "2026-03-26T07:08:14.340Z",
-      "summary": "11L 512d stack mixes Parallel Muon banking with batched Newton-Schulz, LeakyReLU² MLP3x, and legal score-first TTT fine-tuning.",
+      "updatedAt": "2026-03-26T07:25:19Z",
+      "headSha": "51af1baf30f05a5a1808cbcb5824a3850b968f8a",
+      "generatedAt": "2026-03-26T07:37:23.039Z",
+      "summary": "11L Transformer couples Parallel Muon parameter banking with LeakyReLU² MLP3x and a legal score-first TTT workflow to fine-tune quantized weights.",
       "tags": [
         "muon",
-        "architecture",
         "quantization",
-        "training-schedule"
+        "training-schedule",
+        "architecture"
       ],
       "flags": {
         "usesValOnly": false,

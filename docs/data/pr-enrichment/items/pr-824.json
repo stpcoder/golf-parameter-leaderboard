@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-26T07:07:03.820Z",
+  "generatedAt": "2026-03-26T07:37:08.127Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 824,
     "title": "GatedAttn + ValueResid + XSA6 + HedgeMixer + Legal TTT — val_bpb: 1.08965 (3-seed mean)",
     "state": "open",
-    "updatedAt": "2026-03-26T07:05:13Z",
+    "updatedAt": "2026-03-26T07:17:35Z",
     "headSha": "d7572869ea4e901edaba49917cb0f1f2a688ae26",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/824",
     "authorLogin": "sahiee-dev"
@@ -19,7 +19,7 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Adds per-head gated attention scalars and per-block value-residual mixing atop HedgeMixer and XSA6 stack with FP32 control tensors to guide quantized eval.",
+    "summary": "Adds per-head gated scaling and per-block value residual injection to HedgeMixer while keeping control scalars in FP32 for quantization safety.",
     "tags": [
       "architecture",
       "attention",
@@ -28,9 +28,9 @@
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Per-head gated attention scalars learn head contributions",
-      "Per-block value-residual term injects initial embedding into residual stream",
-      "FP32 control tensors bypass GPTQ for the new scalars"
+      "Per-head FP32 gate scaling of attention outputs",
+      "Per-block FP32 scalar injecting initial embedding into residual stream",
+      "Control scalars registered to bypass GPTQ quantization"
     ]
   },
   "compatibility": {
