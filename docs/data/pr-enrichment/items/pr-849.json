@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-26T13:40:40.097Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 849,
+    "title": "Record: 11L Int5 + 6-Expert HedgeMixer + LeakyReLU(0.9)^2 + TTT (val_bpb=1.1105)",
+    "state": "open",
+    "updatedAt": "2026-03-26T13:17:46Z",
+    "headSha": "2a8dbdc8092e50fdaa8670b97137930ab69f0e3b",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/849",
+    "authorLogin": "dttdrv"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-26_11L_Int5_HedgeMixer_LeakyReLU09_TTT/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "11-layer 512d GPT applies HedgeMixer n-gram ensemble with LeakyReLU(0.9)^2 and score-first TTT before GPTQ int5 compression.",
+    "tags": [
+      "architecture",
+      "quantization",
+      "evaluation"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "Standard training with TTT evaluation; no val-only training regime.",
+    "techniques": [
+      "- HedgeMixer combining neural, unigram–4gram, and entropy predictors",
+      "- Score-first TTT with block freeze, byte-weighted loss, and Polyak averaging",
+      "- GPTQ int5 quantization plus zstd-22 compression"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

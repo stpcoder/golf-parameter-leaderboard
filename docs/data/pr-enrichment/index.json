@@ -1,8 +1,54 @@
 {
-  "generatedAt": "2026-03-26T13:09:08.086Z",
+  "generatedAt": "2026-03-26T13:40:49.805Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 850,
+      "title": "Record: 0.3212 BPB — Complementary N-gram 65K + Int5 GPTQ + LoRA TTT",
+      "status": "open",
+      "updatedAt": "2026-03-26T13:34:01Z",
+      "headSha": "0444ef13e132a596356801dc7fa1da5bca7f1269",
+      "generatedAt": "2026-03-26T13:39:38.254Z",
+      "summary": "Combines complementary training with entropy-adaptive order-9 n-gram caching on 65K chunks plus LoRA TTT and full Hessian GPTQ int5.",
+      "tags": [
+        "quantization",
+        "optimizer",
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-850.json"
+    },
+    {
+      "prNumber": 849,
+      "title": "Record: 11L Int5 + 6-Expert HedgeMixer + LeakyReLU(0.9)^2 + TTT (val_bpb=1.1105)",
+      "status": "open",
+      "updatedAt": "2026-03-26T13:17:46Z",
+      "headSha": "2a8dbdc8092e50fdaa8670b97137930ab69f0e3b",
+      "generatedAt": "2026-03-26T13:40:40.097Z",
+      "summary": "11-layer 512d GPT applies HedgeMixer n-gram ensemble with LeakyReLU(0.9)^2 and score-first TTT before GPTQ int5 compression.",
+      "tags": [
+        "architecture",
+        "quantization",
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-849.json"
+    },
     {
       "prNumber": 846,
       "title": "Record: Two-Pass N-gram Rescoring (val_bpb 0.1434)",
@@ -8067,13 +8113,13 @@
       "prNumber": 347,
       "title": "LongContext 4096 + Full SOTA Stack + QAT Int4/Int6 → 16 Layers",
       "status": "open",
-      "updatedAt": "2026-03-26T12:31:58Z",
-      "headSha": "4c492e6e73db1d5bb12b46186f9aa3cffb63ea7a",
-      "generatedAt": "2026-03-26T12:39:16.743Z",
-      "summary": "Builds on PR#549 SOTA stack by doubling context to 4096 while pairing nibble-packed 16L depth with universal bank QAT/int4+int6 quantization to stay under 16MB.",
+      "updatedAt": "2026-03-26T13:28:33Z",
+      "headSha": "1cc698c348bae2c9f800a40f994dd6374a04c195",
+      "generatedAt": "2026-03-26T13:40:49.755Z",
+      "summary": "Extends the PR #549 stack with 4k context and layered int6/int4 QAT (including bank weights) to prep 16-layer exports under 16MB.",
       "tags": [
-        "architecture",
         "quantization",
+        "architecture",
         "training-schedule"
       ],
       "flags": {
@@ -10755,29 +10801,6 @@
         "valOnlyMatchesCollector": true
       },
       "file": "items/pr-190.json"
-    },
-    {
-      "prNumber": 185,
-      "title": "Record: 11L Int5 + 6-Expert HedgeMixer + LeakyReLU(0.9)^2 + TTT (val_bpb=1.1105)",
-      "status": "open",
-      "updatedAt": "2026-03-26T11:13:47Z",
-      "headSha": "e98cb864a8ff00691cbc964114ec2ca9d34f55d4",
-      "generatedAt": "2026-03-26T11:39:06.569Z",
-      "summary": "11-layer 512-dim LM with GatedAttention/ValueResidual + LeakyReLU(0.9)^2 pairs HedgeMixer experts with score-first TTT and int5 GPTQ compression.",
-      "tags": [
-        "architecture",
-        "quantization",
-        "evaluation"
-      ],
-      "flags": {
-        "usesValOnly": false,
-        "usesValOnlyAi": false,
-        "usesValOnlyCollector": false
-      },
-      "compatibility": {
-        "valOnlyMatchesCollector": true
-      },
-      "file": "items/pr-185.json"
     },
     {
       "prNumber": 183,
