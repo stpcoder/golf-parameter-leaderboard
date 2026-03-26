@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-26T05:06:53.270Z",
+  "generatedAt": "2026-03-26T05:37:03.851Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 811,
     "title": "Record: Complementary Training + Backoff N-gram Mixer — 0.4377 BPB",
-    "state": "open",
-    "updatedAt": "2026-03-26T04:53:38Z",
+    "state": "closed",
+    "updatedAt": "2026-03-26T05:31:44Z",
     "headSha": "29eac0c169f84141dc53c1c3bdf0b1ee64aafdcf",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/811",
     "authorLogin": "quietsmile"
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Reproduces complementary bigram-weighted training with entropy-adaptive BackoffNgramMixer, score-first AdamW TTT, and stride=128 eval for compact leaderboard runs.",
+    "summary": "Reproduced complementary training with BackoffNgramMixer on 8×L20Z, using legal score-first AdamW TTT, block freezing, and stride-128 eval to keep the model compact.",
     "tags": [
-      "quantization",
       "optimizer",
+      "training-schedule",
       "architecture",
       "evaluation"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Complementary bigram-weighted loss reweighting (COMPLEMENT_ALPHA=0.5)",
-      "BackoffNgramMixer orders 2-10 with entropy-adaptive alpha mixing",
-      "Score-first AdamW TTT (4 epochs, freeze 2 blocks) plus stride=128 eval and Int6+lzma packing"
+      "Bigram-weighted complementary loss to focus the neural model on hard tokens",
+      "BackoffNgramMixer (orders 2-10) with entropy-adaptive mixing during evaluation",
+      "Legal score-first AdamW TTT with frozen blocks and stride-128 evaluation"
     ]
   },
   "compatibility": {

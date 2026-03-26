@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-26T05:06:44.040Z",
+  "generatedAt": "2026-03-26T05:36:56.579Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 812,
     "title": "[non-record track] BankLinear: cross-layer shared weight bank with learned + random mixtures",
     "state": "open",
-    "updatedAt": "2026-03-26T05:02:51Z",
+    "updatedAt": "2026-03-26T05:21:17Z",
     "headSha": "2e8b9633af7846ecb6d69d56fa8166cbd58c2287",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/812",
     "authorLogin": "andrewmouldon"
@@ -19,18 +19,17 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Shares QKV parameters by composing per-layer weights from learned and random bases via mixing coefficients, letting depth reuse structure without hard recurrence.",
+    "summary": "BankLinear composes per-layer QKV weights from a shared bank of learned and random matrices, letting layers mix reusable bases with their own coefficients.",
     "tags": [
       "architecture",
-      "compression",
+      "attention",
       "non-record"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "shared learned + random weight bank",
-      "per-layer mixing coefficients",
-      "depth-aware coefficient initialization"
+      "Shared bank of learned + fixed random matrices",
+      "Layer-specific mixing coefficients with depth-aware initialization"
     ]
   },
   "compatibility": {

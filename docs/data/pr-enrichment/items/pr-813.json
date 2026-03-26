@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-26T05:36:52.667Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 813,
+    "title": "Record: BackoffNgramMixer (mean val_bpb=0.6671)",
+    "state": "open",
+    "updatedAt": "2026-03-26T05:18:05Z",
+    "headSha": "96818653b74634a50690f2efc6d219095ebab0dd",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/813",
+    "authorLogin": "hypery11"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-26_BackoffNgramMixer/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "11-layer XSA-all transformer uses entropy-adaptive BackoffNgramMixer across orders 2-7 with a score-first cache for backward-looking context mixing.",
+    "tags": [
+      "architecture",
+      "attention",
+      "quantization"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Entropy-adaptive BackoffNgramMixer",
+      "Score-first backward-looking cache",
+      "int5 quantization + zstd compression"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

@@ -1,37 +1,35 @@
 {
-  "generatedAt": "2026-03-26T02:06:08.393Z",
+  "generatedAt": "2026-03-26T05:37:23.296Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 796,
-    "title": "Record: 0.6567 BPB — Prefill Cache + 7-Gram Entropy-Adaptive + EBLS",
+    "title": "Record: 0.4374 BPB — Distributed Prefill + Order-Adaptive 15-Gram + EBLS",
     "state": "open",
-    "updatedAt": "2026-03-26T01:41:00Z",
-    "headSha": "5a9adcf78905d47c5589dd9678f5701a645e923d",
+    "updatedAt": "2026-03-26T05:28:20Z",
+    "headSha": "d19036d842535f8acce816fcdc5b2c93fa0a4d9c",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/796",
     "authorLogin": "Robby955"
   },
   "inputs": {
     "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
     "readmePaths": [
-      "records/track_10min_16mb/2026-03-25_PrefillCache_7gram_EBLS/README.md"
+      "records/track_10min_16mb/2026-03-26_PrefillCache_15gram_AdaptiveGating/README.md"
     ],
     "submissionCount": 1
   },
   "output": {
-    "summary": "Each rank pre-fills causal 7-gram caches before sliding evaluation, entropy-gating n-gram/model blends on top of EBLS+XSA-all with Val-GPTQ quantization.",
+    "summary": "Distributed prefill of 15-gram caches plus order-adaptive entropy gating on EBLS/LoRA keeps multi-GPU sliding eval aligned with sequential scoring.",
     "tags": [
-      "evaluation",
-      "quantization",
       "architecture",
-      "sliding-window-eval"
+      "evaluation"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "distributed pre-fill of n-gram caches",
-      "entropy-adaptive blending during sliding eval",
-      "EBLS with XSA-all + Val-GPTQ int6"
+      "Distributed cache pre-fill before scoring to mirror single-GPU context history",
+      "Order-adaptive entropy gating with sigmoid interpolation across 2–15 gram orders",
+      "EBLS shared-block + LoRA deviations to fit transformer in 16MB"
     ]
   },
   "compatibility": {

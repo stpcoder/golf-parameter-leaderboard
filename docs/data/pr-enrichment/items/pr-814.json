@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-26T05:36:47.182Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 814,
+    "title": "Record: X-WING 3D Cubric + Complementary Training (val_bpb=0.4820)",
+    "state": "open",
+    "updatedAt": "2026-03-26T05:25:30Z",
+    "headSha": "4ce0d59417ee4edaf677030a71ed910cc6b18167",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/814",
+    "authorLogin": "newjordan"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-26_XWING_Cubric3D_complementary_8xH100/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Shared chunk-updated n-gram tables mix with warm-started 3D cubric alphas and complementary training so the neural model focuses where n-grams falter.",
+    "tags": [
+      "sliding-window-eval",
+      "quantization",
+      "regularization"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "3D cubric multipliers over order×entropy×count warm-started to skip convergence",
+      "Complementary training downweights bigram-predictable tokens to specialize the model",
+      "Shared chunk-based n-gram tables plus sliding-window eval with GPTQ quant"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

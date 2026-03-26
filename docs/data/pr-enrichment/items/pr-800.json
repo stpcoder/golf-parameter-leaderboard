@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-26T04:36:53.255Z",
+  "generatedAt": "2026-03-26T05:37:17.896Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 800,
     "title": "Record: X-WING — Shared N-gram Tables + Cubric (val_bpb=0.5644)",
     "state": "open",
-    "updatedAt": "2026-03-26T04:22:25Z",
-    "headSha": "659b8b2e3b4c4c09eec4c6c5e2e72fd5b724025c",
+    "updatedAt": "2026-03-26T05:22:35Z",
+    "headSha": "7b29d6b5e32db72c66f6a6db26109fda8e46b5e0",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/800",
     "authorLogin": "newjordan"
   },
@@ -25,18 +25,16 @@
     "submissionCount": 7
   },
   "output": {
-    "summary": "Chunk-based shared n-gram tables give every rank the full token view while Cubric per-order adaptive alphas tune how much each order influences scoring.",
+    "summary": "Chunk-based shared n-gram tables let each rank see all 62M tokens; Cubric per-order adaptive alphas damp orders 2-3 while boosting 5-7.",
     "tags": [
       "architecture",
-      "evaluation",
-      "regularization"
+      "evaluation"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Chunk-based shared n-gram tables synchronize rank updates",
-      "Per-order Cubric adaptive alpha tunes order trust",
-      "Entropy-driven alpha scaling keeps evaluation label-free"
+      "chunk-based shared n-gram tables aggregating counts across ranks",
+      "per-order Cubric alpha scaling to suppress noisy low orders and amplify reliable high ones"
     ]
   },
   "compatibility": {

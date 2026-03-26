@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-26T04:36:38.587Z",
+  "generatedAt": "2026-03-26T05:37:10.715Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 809,
     "title": "Record: Chunk-Based N-gram Backoff + Score-First TTT (0.295 BPB)",
     "state": "open",
-    "updatedAt": "2026-03-26T04:26:02Z",
+    "updatedAt": "2026-03-26T05:24:48Z",
     "headSha": "e6aca8ce6cea140349bf70f5a3245b81a67d4651",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/809",
     "authorLogin": "AayushBaniya2006"
@@ -19,19 +19,17 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Eval-time order-9 chunked N-gram backoff cache with entropy-adaptive mixing and per-order boosts plus score-first TTT on an 11L GQA model.",
+    "summary": "Chunk-based order-9 n-gram backoff with entropy-adaptive interpolation and synchronized multi-GPU cache updates complements the GPTQ int5 model plus score-first TTT.",
     "tags": [
       "evaluation",
-      "architecture",
-      "training-schedule",
       "quantization"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Chunked order-9 N-gram cache with entropy-adaptive mixing and per-order multipliers",
-      "Synchronized multi-GPU cache updates per 1M-token chunk",
-      "Score-first TTT LoRA tuning"
+      "Chunk-based order-9 n-gram cache with entropy-adaptive interpolation",
+      "Synchronized 1M-token chunk updates across GPUs to maximize cache utility",
+      "Score-first TTT with LoRA/AdamW on already-scored validation tokens"
     ]
   },
   "compatibility": {

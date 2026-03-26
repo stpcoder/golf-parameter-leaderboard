@@ -1,19 +1,65 @@
 {
-  "generatedAt": "2026-03-26T05:07:06.005Z",
+  "generatedAt": "2026-03-26T05:37:28.297Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
     {
+      "prNumber": 814,
+      "title": "Record: X-WING 3D Cubric + Complementary Training (val_bpb=0.4820)",
+      "status": "open",
+      "updatedAt": "2026-03-26T05:25:30Z",
+      "headSha": "4ce0d59417ee4edaf677030a71ed910cc6b18167",
+      "generatedAt": "2026-03-26T05:36:47.182Z",
+      "summary": "Shared chunk-updated n-gram tables mix with warm-started 3D cubric alphas and complementary training so the neural model focuses where n-grams falter.",
+      "tags": [
+        "sliding-window-eval",
+        "quantization",
+        "regularization"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-814.json"
+    },
+    {
+      "prNumber": 813,
+      "title": "Record: BackoffNgramMixer (mean val_bpb=0.6671)",
+      "status": "open",
+      "updatedAt": "2026-03-26T05:18:05Z",
+      "headSha": "96818653b74634a50690f2efc6d219095ebab0dd",
+      "generatedAt": "2026-03-26T05:36:52.667Z",
+      "summary": "11-layer XSA-all transformer uses entropy-adaptive BackoffNgramMixer across orders 2-7 with a score-first cache for backward-looking context mixing.",
+      "tags": [
+        "architecture",
+        "attention",
+        "quantization"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-813.json"
+    },
+    {
       "prNumber": 812,
       "title": "[non-record track] BankLinear: cross-layer shared weight bank with learned + random mixtures",
       "status": "open",
-      "updatedAt": "2026-03-26T05:02:51Z",
+      "updatedAt": "2026-03-26T05:21:17Z",
       "headSha": "2e8b9633af7846ecb6d69d56fa8166cbd58c2287",
-      "generatedAt": "2026-03-26T05:06:44.040Z",
-      "summary": "Shares QKV parameters by composing per-layer weights from learned and random bases via mixing coefficients, letting depth reuse structure without hard recurrence.",
+      "generatedAt": "2026-03-26T05:36:56.579Z",
+      "summary": "BankLinear composes per-layer QKV weights from a shared bank of learned and random matrices, letting layers mix reusable bases with their own coefficients.",
       "tags": [
         "architecture",
-        "compression",
+        "attention",
         "non-record"
       ],
       "flags": {
@@ -29,14 +75,14 @@
     {
       "prNumber": 811,
       "title": "Record: Complementary Training + Backoff N-gram Mixer — 0.4377 BPB",
-      "status": "open",
-      "updatedAt": "2026-03-26T04:53:38Z",
+      "status": "closed",
+      "updatedAt": "2026-03-26T05:31:44Z",
       "headSha": "29eac0c169f84141dc53c1c3bdf0b1ee64aafdcf",
-      "generatedAt": "2026-03-26T05:06:53.270Z",
-      "summary": "Reproduces complementary bigram-weighted training with entropy-adaptive BackoffNgramMixer, score-first AdamW TTT, and stride=128 eval for compact leaderboard runs.",
+      "generatedAt": "2026-03-26T05:37:03.851Z",
+      "summary": "Reproduced complementary training with BackoffNgramMixer on 8×L20Z, using legal score-first AdamW TTT, block freezing, and stride-128 eval to keep the model compact.",
       "tags": [
-        "quantization",
         "optimizer",
+        "training-schedule",
         "architecture",
         "evaluation"
       ],
@@ -78,14 +124,12 @@
       "prNumber": 809,
       "title": "Record: Chunk-Based N-gram Backoff + Score-First TTT (0.295 BPB)",
       "status": "open",
-      "updatedAt": "2026-03-26T04:26:02Z",
+      "updatedAt": "2026-03-26T05:24:48Z",
       "headSha": "e6aca8ce6cea140349bf70f5a3245b81a67d4651",
-      "generatedAt": "2026-03-26T04:36:38.587Z",
-      "summary": "Eval-time order-9 chunked N-gram backoff cache with entropy-adaptive mixing and per-order boosts plus score-first TTT on an 11L GQA model.",
+      "generatedAt": "2026-03-26T05:37:10.715Z",
+      "summary": "Chunk-based order-9 n-gram backoff with entropy-adaptive interpolation and synchronized multi-GPU cache updates complements the GPTQ int5 model plus score-first TTT.",
       "tags": [
         "evaluation",
-        "architecture",
-        "training-schedule",
         "quantization"
       ],
       "flags": {
@@ -284,14 +328,13 @@
       "prNumber": 800,
       "title": "Record: X-WING — Shared N-gram Tables + Cubric (val_bpb=0.5644)",
       "status": "open",
-      "updatedAt": "2026-03-26T04:22:25Z",
-      "headSha": "659b8b2e3b4c4c09eec4c6c5e2e72fd5b724025c",
-      "generatedAt": "2026-03-26T04:36:53.255Z",
-      "summary": "Chunk-based shared n-gram tables give every rank the full token view while Cubric per-order adaptive alphas tune how much each order influences scoring.",
+      "updatedAt": "2026-03-26T05:22:35Z",
+      "headSha": "7b29d6b5e32db72c66f6a6db26109fda8e46b5e0",
+      "generatedAt": "2026-03-26T05:37:17.896Z",
+      "summary": "Chunk-based shared n-gram tables let each rank see all 62M tokens; Cubric per-order adaptive alphas damp orders 2-3 while boosting 5-7.",
       "tags": [
         "architecture",
-        "evaluation",
-        "regularization"
+        "evaluation"
       ],
       "flags": {
         "usesValOnly": false,
@@ -373,17 +416,15 @@
     },
     {
       "prNumber": 796,
-      "title": "Record: 0.6567 BPB — Prefill Cache + 7-Gram Entropy-Adaptive + EBLS",
+      "title": "Record: 0.4374 BPB — Distributed Prefill + Order-Adaptive 15-Gram + EBLS",
       "status": "open",
-      "updatedAt": "2026-03-26T01:41:00Z",
-      "headSha": "5a9adcf78905d47c5589dd9678f5701a645e923d",
-      "generatedAt": "2026-03-26T02:06:08.393Z",
-      "summary": "Each rank pre-fills causal 7-gram caches before sliding evaluation, entropy-gating n-gram/model blends on top of EBLS+XSA-all with Val-GPTQ quantization.",
+      "updatedAt": "2026-03-26T05:28:20Z",
+      "headSha": "d19036d842535f8acce816fcdc5b2c93fa0a4d9c",
+      "generatedAt": "2026-03-26T05:37:23.296Z",
+      "summary": "Distributed prefill of 15-gram caches plus order-adaptive entropy gating on EBLS/LoRA keeps multi-GPU sliding eval aligned with sequential scoring.",
       "tags": [
-        "evaluation",
-        "quantization",
         "architecture",
-        "sliding-window-eval"
+        "evaluation"
       ],
       "flags": {
         "usesValOnly": false,
@@ -1604,10 +1645,10 @@
       "prNumber": 718,
       "title": "Non-record Submission: CrystalGPT + Diamond Fusion — Ternary Crystal Architecture",
       "status": "open",
-      "updatedAt": "2026-03-25T13:39:21Z",
-      "headSha": "d3eda5019c9d9d63669402193ca67ee830a98da9",
-      "generatedAt": "2026-03-25T14:01:52.159Z",
-      "summary": "CrystalGPT reuses a single transformer block with crystal modulation gates, ternary voting, and Diamond Fusion consensus to reduce parameters.",
+      "updatedAt": "2026-03-26T05:30:53Z",
+      "headSha": "7355025132d09e268e5b6e5708d07d76cc0cfbc0",
+      "generatedAt": "2026-03-26T05:37:28.188Z",
+      "summary": "CrystalGPT reuses one transformer block with per-iteration crystal modulation, diamond fusion consensus, and ternary voting for param-efficient recurrence.",
       "tags": [
         "architecture",
         "attention",
