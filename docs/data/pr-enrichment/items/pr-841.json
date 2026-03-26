@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-26T11:38:57.328Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 841,
+    "title": "Add 11L XSA11 + BigramHash3072 + AdamW Legal TTT submission",
+    "state": "open",
+    "updatedAt": "2026-03-26T11:12:34Z",
+    "headSha": "cc84adfbabd5d3c43606e5eece78fffd3f70677c",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/841",
+    "authorLogin": "someone114514"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-26_11L_XSA11_Bigram3072_AdamWLegalTTT/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "11-layer 512d transformer pairs full-depth XSA and BigramHash3072/112 with Parameter Banking+Parallel Muon plus AdamW legal TTT.",
+    "tags": [
+      "architecture",
+      "quantization",
+      "optimizer"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Full-depth XSA with BigramHash3072 buckets and 112-d bigram embedding",
+      "Parameter Banking plus Parallel Muon for matrix weights",
+      "Score-first legal TTT tuned with AdamW"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

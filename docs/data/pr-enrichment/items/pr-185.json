@@ -1,37 +1,36 @@
 {
-  "generatedAt": "2026-03-22T05:37:11.692Z",
+  "generatedAt": "2026-03-26T11:39:06.569Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 185,
-    "title": "Non-record: Wider-shallower 4x768 + QAT (1xH100, 1.3043 bpb)",
+    "title": "Record: 11L Int5 + 6-Expert HedgeMixer + LeakyReLU(0.9)^2 + TTT (val_bpb=1.1105)",
     "state": "open",
-    "updatedAt": "2026-03-22T05:18:02Z",
-    "headSha": "1a3c9e4a67b66c56a525b551308fac895f0428ae",
+    "updatedAt": "2026-03-26T11:13:47Z",
+    "headSha": "e98cb864a8ff00691cbc964114ec2ca9d34f55d4",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/185",
     "authorLogin": "dttdrv"
   },
   "inputs": {
     "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
     "readmePaths": [
-      "records/track_non_record_16mb/2026-03-22_SP1024_11x512_Int6_CoreStack_1xH100/README.md"
+      "records/track_10min_16mb/2026-03-26_11L_Int5_HedgeMixer_LeakyReLU09_TTT/README.md"
     ],
     "submissionCount": 1
   },
   "output": {
-    "summary": "Wider-shallower 4×768 GQA transformer trained with Muon optimizer and QAT to shrink int8 gap while tuning batch size/wallclock on 1×H100.",
+    "summary": "11-layer 512-dim LM with GatedAttention/ValueResidual + LeakyReLU(0.9)^2 pairs HedgeMixer experts with score-first TTT and int5 GPTQ compression.",
     "tags": [
       "architecture",
       "quantization",
-      "optimizer",
-      "non-record"
+      "evaluation"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "GQA-enhanced 4-layer stack with higher QK gain",
-      "Muon lr=0.06, grad clip 0.5, beta2=0.99 for single-GPU balance",
-      "Straight-through estimator QAT after warmup to align int8/FP32 losses"
+      "6-expert Hedge context mixer with adaptive multiplicative weights",
+      "LeakyReLU(0.9)^2 plus GatedAttention/ValueResidual blocks",
+      "Score-first TTT with Polyak-averaged byte-weighted loss and int5 GPTQ"
     ]
   },
   "compatibility": {
