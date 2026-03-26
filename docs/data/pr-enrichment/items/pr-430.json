@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-26T03:37:01.715Z",
+  "generatedAt": "2026-03-26T04:36:58.884Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 430,
     "title": "Value Residual + Gated Attention + XSA + EMA + AdamW TTT — val_bpb pending H100",
     "state": "open",
-    "updatedAt": "2026-03-26T03:17:56Z",
-    "headSha": "61e1497dcd048664d96e0f6e2eeb53f2852773b3",
+    "updatedAt": "2026-03-26T04:30:22Z",
+    "headSha": "6efe80079ac82a854655b182df6a0c17d6ebcf35",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/430",
     "authorLogin": "sahiee-dev"
   },
@@ -19,24 +19,24 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Stacks SwiGLU, value-residual + gated attention, XSA, EMA, and AdamW test-time training atop thwu1 base to reinforce deep-layer signal flow.",
+    "summary": "Adds SwiGLU, value-residual+gated attention, XSA, EMA, and AdamW test-time training on thwu1 base to sharpen deep-layer signals before eval.",
     "tags": [
-      "val-only",
-      "architecture",
       "attention",
+      "architecture",
       "training-schedule"
     ],
-    "usesValOnly": true,
-    "valOnlyReasoning": "Runs AdamW test-time training on validation tokens (three epochs with frozen bottom layers) ahead of each evaluation.",
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
     "techniques": [
-      "SwiGLU MLP plus value-residual and gated attention on the thwu1 10-layer base",
-      "EMA shadow weights paired with AdamW test-time training over validation data"
+      "SwiGLU with gated attention + value residual per block",
+      "Exclusive self-attention in final layers with EMA shadow weights",
+      "AdamW test-time training on validation tokens"
     ]
   },
   "compatibility": {
     "collectorUsesValOnly": false,
-    "aiUsesValOnly": true,
-    "finalUsesValOnly": true,
-    "valOnlyMatchesCollector": false
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
   }
 }

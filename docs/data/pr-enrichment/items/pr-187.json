@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-26T04:07:09.810Z",
+  "generatedAt": "2026-03-26T04:37:05.775Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 187,
-    "title": "Record: EMA-GPU + Multi-Order N-gram Backoff (val_bpb=0.9408)",
+    "title": "Record: EMA-GPU + Multi-Order N-gram Backoff + PE Confidence (val_bpb=0.9393)",
     "state": "open",
-    "updatedAt": "2026-03-26T03:41:38Z",
-    "headSha": "08d7068b819834f5e9d8c7b9116d222676301c82",
+    "updatedAt": "2026-03-26T04:26:31Z",
+    "headSha": "7e07f4d14d0ec0a74edff7d1cf92d80ac392a88c",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/187",
     "authorLogin": "Idan3011"
   },
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "GPU-resident EMA, GELU pre-enrichment, XSA, and entropy-adaptive multi-order backward n-gram backoff power this record submission’s architecture+evaluation combo.",
+    "summary": "GPU-resident EMA plus entropy-adaptive multi-order n-gram backoff with pre-enrichment confidence accelerates training and enriches sliding-window eval cache.",
     "tags": [
-      "optimizer",
-      "architecture",
+      "sliding-window-eval",
       "quantization",
-      "evaluation"
+      "attention",
+      "architecture"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "GPU-resident EMA updates",
-      "Entropy-adaptive multi-order backward n-gram backoff",
-      "GELU pre-enrichment with XSA on final layers"
+      "GPU-resident EMA keeps shadow weights local to boost step throughput",
+      "Score-first, backward-look multi-order n-gram backoff with entropy-adaptive alpha built during sliding-window eval",
+      "Pre-enrichment confidence signal modulates n-gram mixing after GELU/SmearGate embed prep"
     ]
   },
   "compatibility": {

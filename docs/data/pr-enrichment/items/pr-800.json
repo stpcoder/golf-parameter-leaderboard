@@ -1,19 +1,20 @@
 {
-  "generatedAt": "2026-03-26T03:36:51.000Z",
+  "generatedAt": "2026-03-26T04:36:53.255Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 800,
     "title": "Record: X-WING — Shared N-gram Tables + Cubric (val_bpb=0.5644)",
     "state": "open",
-    "updatedAt": "2026-03-26T03:26:10Z",
-    "headSha": "77a9267af960b12d8f21250a3bc8f4921b25c225",
+    "updatedAt": "2026-03-26T04:22:25Z",
+    "headSha": "659b8b2e3b4c4c09eec4c6c5e2e72fd5b724025c",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/800",
     "authorLogin": "newjordan"
   },
   "inputs": {
-    "hash": "9fc9fa9c8df429319712fb0ce803d1845895c93d5efca0571205b4d8990484d0",
+    "hash": "91206a35b78630edd324560142af570e5c3e70b496d2b7f0a8971106a4fd6406",
     "readmePaths": [
+      "records/track_10min_16mb/2026-03-26_XWING_YellowII_3Dcubric_complementary_8xH100/README.md",
       "records/track_10min_16mb/2026-03-26_XWING_shared_tables_cubric_8xH100/README.md",
       "records/track_10min_16mb/2026-03-25_PodracerIII_cubric_lite_8xH100/README.md",
       "records/track_10min_16mb/2026-03-25_PodracingII_backoff7gram_8xH100/README.md",
@@ -21,19 +22,21 @@
       "records/track_10min_16mb/2026-03-22_SpongeBath_TTT8_Stride32/README.md",
       "records/track_10min_16mb/2026-03-23_Frugendorff_Squared_6x2_640d_MLP4/README.md"
     ],
-    "submissionCount": 6
+    "submissionCount": 7
   },
   "output": {
-    "summary": "Chunked shared n-gram tables give every rank full token stats while Cubric per-order alphas suppress low orders and boost higher ones.",
+    "summary": "Chunk-based shared n-gram tables give every rank the full token view while Cubric per-order adaptive alphas tune how much each order influences scoring.",
     "tags": [
-      "evaluation"
+      "architecture",
+      "evaluation",
+      "regularization"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Chunk-based shared n-gram table updates for all ranks",
-      "Cubric per-order adaptive alpha scaling",
-      "Score-first legality with chunk-aligned updates"
+      "Chunk-based shared n-gram tables synchronize rank updates",
+      "Per-order Cubric adaptive alpha tunes order trust",
+      "Entropy-driven alpha scaling keeps evaluation label-free"
     ]
   },
   "compatibility": {

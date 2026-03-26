@@ -1,8 +1,55 @@
 {
-  "generatedAt": "2026-03-26T04:07:09.838Z",
+  "generatedAt": "2026-03-26T04:37:05.802Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 809,
+      "title": "Record: Chunk-Based N-gram Backoff + Score-First TTT (0.295 BPB)",
+      "status": "open",
+      "updatedAt": "2026-03-26T04:26:02Z",
+      "headSha": "e6aca8ce6cea140349bf70f5a3245b81a67d4651",
+      "generatedAt": "2026-03-26T04:36:38.587Z",
+      "summary": "Eval-time order-9 chunked N-gram backoff cache with entropy-adaptive mixing and per-order boosts plus score-first TTT on an 11L GQA model.",
+      "tags": [
+        "evaluation",
+        "architecture",
+        "training-schedule",
+        "quantization"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-809.json"
+    },
+    {
+      "prNumber": 808,
+      "title": "Record: 0.6364 BPB - Depth Recurrence + Multi-Order N-gram Backoff",
+      "status": "open",
+      "updatedAt": "2026-03-26T04:18:04Z",
+      "headSha": "b00c823bc9e3e32214324efb68f18eea43f9f50c",
+      "generatedAt": "2026-03-26T04:36:44.868Z",
+      "summary": "Depth recurrence stack augmented with entropy-weighted multi-order n-gram backoff and multi-GPU prefill for eval-time scoring.",
+      "tags": [
+        "architecture",
+        "depth-width",
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-808.json"
+    },
     {
       "prNumber": 807,
       "title": "Non-record: Sequential Momentum TTT (val_bpb=1.0116, 3-seed mean, 4xA10G)",
@@ -166,12 +213,14 @@
       "prNumber": 800,
       "title": "Record: X-WING — Shared N-gram Tables + Cubric (val_bpb=0.5644)",
       "status": "open",
-      "updatedAt": "2026-03-26T03:26:10Z",
-      "headSha": "77a9267af960b12d8f21250a3bc8f4921b25c225",
-      "generatedAt": "2026-03-26T03:36:51.000Z",
-      "summary": "Chunked shared n-gram tables give every rank full token stats while Cubric per-order alphas suppress low orders and boost higher ones.",
+      "updatedAt": "2026-03-26T04:22:25Z",
+      "headSha": "659b8b2e3b4c4c09eec4c6c5e2e72fd5b724025c",
+      "generatedAt": "2026-03-26T04:36:53.255Z",
+      "summary": "Chunk-based shared n-gram tables give every rank the full token view while Cubric per-order adaptive alphas tune how much each order influences scoring.",
       "tags": [
-        "evaluation"
+        "architecture",
+        "evaluation",
+        "regularization"
       ],
       "flags": {
         "usesValOnly": false,
@@ -1063,29 +1112,6 @@
         "valOnlyMatchesCollector": true
       },
       "file": "items/pr-754.json"
-    },
-    {
-      "prNumber": 752,
-      "title": "Record: Depth Recurrence + SGD TTT : 1.1182 BPB",
-      "status": "open",
-      "updatedAt": "2026-03-25T17:51:33Z",
-      "headSha": "42a08be70c9514b67fc19f354c88484f0d758e07",
-      "generatedAt": "2026-03-25T18:03:00.612Z",
-      "summary": "Combines depth recurrence on layers 4-5 with score-first SGD TTT adaptation over 32K-token chunks atop PR#549’s LeakyReLU² + Parallel Muon stack.",
-      "tags": [
-        "architecture",
-        "optimizer",
-        "training-schedule"
-      ],
-      "flags": {
-        "usesValOnly": false,
-        "usesValOnlyAi": false,
-        "usesValOnlyCollector": false
-      },
-      "compatibility": {
-        "valOnlyMatchesCollector": true
-      },
-      "file": "items/pr-752.json"
     },
     {
       "prNumber": 751,
@@ -6173,23 +6199,22 @@
       "prNumber": 430,
       "title": "Value Residual + Gated Attention + XSA + EMA + AdamW TTT — val_bpb pending H100",
       "status": "open",
-      "updatedAt": "2026-03-26T03:17:56Z",
-      "headSha": "61e1497dcd048664d96e0f6e2eeb53f2852773b3",
-      "generatedAt": "2026-03-26T03:37:01.715Z",
-      "summary": "Stacks SwiGLU, value-residual + gated attention, XSA, EMA, and AdamW test-time training atop thwu1 base to reinforce deep-layer signal flow.",
+      "updatedAt": "2026-03-26T04:30:22Z",
+      "headSha": "6efe80079ac82a854655b182df6a0c17d6ebcf35",
+      "generatedAt": "2026-03-26T04:36:58.884Z",
+      "summary": "Adds SwiGLU, value-residual+gated attention, XSA, EMA, and AdamW test-time training on thwu1 base to sharpen deep-layer signals before eval.",
       "tags": [
-        "val-only",
-        "architecture",
         "attention",
+        "architecture",
         "training-schedule"
       ],
       "flags": {
-        "usesValOnly": true,
-        "usesValOnlyAi": true,
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
         "usesValOnlyCollector": false
       },
       "compatibility": {
-        "valOnlyMatchesCollector": false
+        "valOnlyMatchesCollector": true
       },
       "file": "items/pr-430.json"
     },
@@ -10229,17 +10254,17 @@
     },
     {
       "prNumber": 187,
-      "title": "Record: EMA-GPU + Multi-Order N-gram Backoff (val_bpb=0.9408)",
+      "title": "Record: EMA-GPU + Multi-Order N-gram Backoff + PE Confidence (val_bpb=0.9393)",
       "status": "open",
-      "updatedAt": "2026-03-26T03:41:38Z",
-      "headSha": "08d7068b819834f5e9d8c7b9116d222676301c82",
-      "generatedAt": "2026-03-26T04:07:09.810Z",
-      "summary": "GPU-resident EMA, GELU pre-enrichment, XSA, and entropy-adaptive multi-order backward n-gram backoff power this record submission’s architecture+evaluation combo.",
+      "updatedAt": "2026-03-26T04:26:31Z",
+      "headSha": "7e07f4d14d0ec0a74edff7d1cf92d80ac392a88c",
+      "generatedAt": "2026-03-26T04:37:05.775Z",
+      "summary": "GPU-resident EMA plus entropy-adaptive multi-order n-gram backoff with pre-enrichment confidence accelerates training and enriches sliding-window eval cache.",
       "tags": [
-        "optimizer",
-        "architecture",
+        "sliding-window-eval",
         "quantization",
-        "evaluation"
+        "attention",
+        "architecture"
       ],
       "flags": {
         "usesValOnly": false,
