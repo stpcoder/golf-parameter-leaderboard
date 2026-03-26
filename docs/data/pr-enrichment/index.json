@@ -1,8 +1,79 @@
 {
-  "generatedAt": "2026-03-26T04:37:05.802Z",
+  "generatedAt": "2026-03-26T05:07:06.005Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 812,
+      "title": "[non-record track] BankLinear: cross-layer shared weight bank with learned + random mixtures",
+      "status": "open",
+      "updatedAt": "2026-03-26T05:02:51Z",
+      "headSha": "2e8b9633af7846ecb6d69d56fa8166cbd58c2287",
+      "generatedAt": "2026-03-26T05:06:44.040Z",
+      "summary": "Shares QKV parameters by composing per-layer weights from learned and random bases via mixing coefficients, letting depth reuse structure without hard recurrence.",
+      "tags": [
+        "architecture",
+        "compression",
+        "non-record"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-812.json"
+    },
+    {
+      "prNumber": 811,
+      "title": "Record: Complementary Training + Backoff N-gram Mixer — 0.4377 BPB",
+      "status": "open",
+      "updatedAt": "2026-03-26T04:53:38Z",
+      "headSha": "29eac0c169f84141dc53c1c3bdf0b1ee64aafdcf",
+      "generatedAt": "2026-03-26T05:06:53.270Z",
+      "summary": "Reproduces complementary bigram-weighted training with entropy-adaptive BackoffNgramMixer, score-first AdamW TTT, and stride=128 eval for compact leaderboard runs.",
+      "tags": [
+        "quantization",
+        "optimizer",
+        "architecture",
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-811.json"
+    },
+    {
+      "prNumber": 810,
+      "title": "Record: EMA-GPU + Multi-Order N-gram Backoff + PE Confidence (val_bpb=0.9393)",
+      "status": "open",
+      "updatedAt": "2026-03-26T04:43:28Z",
+      "headSha": "7ff8cf76265896333c98dab8c72e92f8c30b4ff0",
+      "generatedAt": "2026-03-26T05:06:59.246Z",
+      "summary": "Keeps EMA on GPU while leveraging GELU pre-enrichment, XSA, and confidence-weighted entropy-adaptive multi-order n-gram backoff for evaluation.",
+      "tags": [
+        "architecture",
+        "attention",
+        "evaluation",
+        "training-schedule"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-810.json"
+    },
     {
       "prNumber": 809,
       "title": "Record: Chunk-Based N-gram Backoff + Score-First TTT (0.295 BPB)",
@@ -788,12 +859,12 @@
     },
     {
       "prNumber": 769,
-      "title": "PROTEUS+STYX — val_bpb 0.8508 (3-seed mean) — LeakyReLU(0.9)² + 5-gram Eval Cache",
+      "title": "PROTEUS+STYX — val_bpb 0.8495 (3-seed mean) — LeakyReLU(0.9)² + 5-gram Eval Cache",
       "status": "open",
-      "updatedAt": "2026-03-26T00:20:03Z",
-      "headSha": "1c51c1042a1f6a81af271c5a00a8bd66b927dbb4",
-      "generatedAt": "2026-03-26T00:36:21.882Z",
-      "summary": "PROTEUS+STYX pairs a steeper LeakyReLU² activation with a backward-looking 5-gram hash cache and fixed blending during sliding-window eval.",
+      "updatedAt": "2026-03-26T04:40:56Z",
+      "headSha": "ca847e29a3ce3d61b7cf41f14828a6b95dca13c4",
+      "generatedAt": "2026-03-26T05:07:05.892Z",
+      "summary": "11-layer PROTEUS+STYX uses LeakyReLU(0.9)² and a fixed-alpha backward-looking 5-gram hash cache during sliding-window eval.",
       "tags": [
         "architecture",
         "evaluation",
@@ -10251,30 +10322,6 @@
         "valOnlyMatchesCollector": true
       },
       "file": "items/pr-190.json"
-    },
-    {
-      "prNumber": 187,
-      "title": "Record: EMA-GPU + Multi-Order N-gram Backoff + PE Confidence (val_bpb=0.9393)",
-      "status": "open",
-      "updatedAt": "2026-03-26T04:26:31Z",
-      "headSha": "7e07f4d14d0ec0a74edff7d1cf92d80ac392a88c",
-      "generatedAt": "2026-03-26T04:37:05.775Z",
-      "summary": "GPU-resident EMA plus entropy-adaptive multi-order n-gram backoff with pre-enrichment confidence accelerates training and enriches sliding-window eval cache.",
-      "tags": [
-        "sliding-window-eval",
-        "quantization",
-        "attention",
-        "architecture"
-      ],
-      "flags": {
-        "usesValOnly": false,
-        "usesValOnlyAi": false,
-        "usesValOnlyCollector": false
-      },
-      "compatibility": {
-        "valOnlyMatchesCollector": true
-      },
-      "file": "items/pr-187.json"
     },
     {
       "prNumber": 185,

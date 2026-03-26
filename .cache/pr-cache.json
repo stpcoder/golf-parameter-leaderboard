@@ -1,8 +1,8 @@
 {
   "version": 1,
   "sourceRepo": "openai/parameter-golf",
-  "generatedAt": "2026-03-26T04:36:31.806Z",
-  "lastSeenUpdatedAt": "2026-03-26T04:35:59Z",
+  "generatedAt": "2026-03-26T05:06:20.747Z",
+  "lastSeenUpdatedAt": "2026-03-26T05:02:51Z",
   "prs": {
     "1": {
       "number": 1,
@@ -14304,18 +14304,18 @@
     },
     "187": {
       "number": 187,
-      "updatedAt": "2026-03-26T04:26:31Z",
+      "updatedAt": "2026-03-26T04:37:25Z",
       "pr": {
         "number": 187,
         "title": "Record: EMA-GPU + Multi-Order N-gram Backoff + PE Confidence (val_bpb=0.9393)",
-        "state": "open",
+        "state": "closed",
         "draft": false,
         "mergedAt": null,
         "htmlUrl": "https://github.com/openai/parameter-golf/pull/187",
         "authorLogin": "Idan3011",
         "authorName": null,
         "createdAt": "2026-03-20T07:23:51Z",
-        "updatedAt": "2026-03-26T04:26:31Z",
+        "updatedAt": "2026-03-26T04:37:25Z",
         "headSha": "7e07f4d14d0ec0a74edff7d1cf92d80ac392a88c",
         "headRepo": "Idan3011/parameter-golf"
       },
@@ -14323,7 +14323,7 @@
         {
           "id": "pr-187-records-track_10min_16mb-2026-03-20_PreEnrich_EncoderRecurrence-submission-json",
           "source": "pull_request",
-          "status": "open",
+          "status": "closed",
           "category": "main-track",
           "track": {
             "path": "records/track_10min_16mb",
@@ -14371,14 +14371,14 @@
           "pr": {
             "number": 187,
             "title": "Record: EMA-GPU + Multi-Order N-gram Backoff + PE Confidence (val_bpb=0.9393)",
-            "state": "open",
+            "state": "closed",
             "draft": false,
             "mergedAt": null,
             "htmlUrl": "https://github.com/openai/parameter-golf/pull/187",
             "authorLogin": "Idan3011",
             "authorName": null,
             "createdAt": "2026-03-20T07:23:51Z",
-            "updatedAt": "2026-03-26T04:26:31Z",
+            "updatedAt": "2026-03-26T04:37:25Z",
             "headSha": "7e07f4d14d0ec0a74edff7d1cf92d80ac392a88c",
             "headRepo": "Idan3011/parameter-golf"
           },
@@ -65339,10 +65339,10 @@
     },
     "769": {
       "number": 769,
-      "updatedAt": "2026-03-26T00:20:03Z",
+      "updatedAt": "2026-03-26T04:40:56Z",
       "pr": {
         "number": 769,
-        "title": "PROTEUS+STYX — val_bpb 0.8508 (3-seed mean) — LeakyReLU(0.9)² + 5-gram Eval Cache",
+        "title": "PROTEUS+STYX — val_bpb 0.8495 (3-seed mean) — LeakyReLU(0.9)² + 5-gram Eval Cache",
         "state": "open",
         "draft": false,
         "mergedAt": null,
@@ -65350,8 +65350,8 @@
         "authorLogin": "MatoTeziTanka",
         "authorName": null,
         "createdAt": "2026-03-25T21:28:08Z",
-        "updatedAt": "2026-03-26T00:20:03Z",
-        "headSha": "1c51c1042a1f6a81af271c5a00a8bd66b927dbb4",
+        "updatedAt": "2026-03-26T04:40:56Z",
+        "headSha": "ca847e29a3ce3d61b7cf41f14828a6b95dca13c4",
         "headRepo": "MatoTeziTanka/parameter-golf"
       },
       "submissions": [
@@ -65379,11 +65379,11 @@
             "author": "Mato (Light Speed Up)",
             "githubId": "MatoTeziTanka",
             "name": "PROTEUS+STYX: LeakyReLU(0.9)² + 5-gram Eval Cache",
-            "blurb": "Slope 0.9 LeakyReLU² + backward-looking 5-gram hash cache during sliding window eval. Fixed-alpha blending (0.8 model / 0.2 cache), numpy hash tables (4M buckets), strictly backward-looking. No training data access during eval. Verified at stride=2048 (zero overlap): 0.8709 BPB. Built with PROTEUS+STYX by Light Speed Up — lightspeedup.com",
-            "date": "2026-03-25T00:00:00Z"
+            "blurb": "Slope 0.9 LeakyReLU² + backward-looking 5-gram hash cache during sliding window eval. Fixed-alpha blending (0.8 model / 0.2 cache), numpy hash tables (4M buckets), strictly backward-looking. No training data access during eval. Verified at stride=2048 (zero overlap): 0.8709 BPB. Cross-model audited by GPT Codex (gpt-5.4). Built with PROTEUS+STYX by Light Speed Up — lightspeedup.com",
+            "date": "2026-03-26T00:00:00Z"
           },
           "metrics": {
-            "valBpb": 0.8508,
+            "valBpb": 0.8495,
             "valLoss": null,
             "preQuantValBpb": null,
             "preQuantValLoss": null,
@@ -65392,8 +65392,8 @@
             "evalTimeSeconds": null
           },
           "artifact": {
-            "bytesTotal": 15878748,
-            "bytesCode": 54397,
+            "bytesTotal": 15921591,
+            "bytesCode": 72603,
             "bytesModelInt8Zlib": null
           },
           "flags": {
@@ -65405,7 +65405,7 @@
           },
           "pr": {
             "number": 769,
-            "title": "PROTEUS+STYX — val_bpb 0.8508 (3-seed mean) — LeakyReLU(0.9)² + 5-gram Eval Cache",
+            "title": "PROTEUS+STYX — val_bpb 0.8495 (3-seed mean) — LeakyReLU(0.9)² + 5-gram Eval Cache",
             "state": "open",
             "draft": false,
             "mergedAt": null,
@@ -65413,16 +65413,16 @@
             "authorLogin": "MatoTeziTanka",
             "authorName": null,
             "createdAt": "2026-03-25T21:28:08Z",
-            "updatedAt": "2026-03-26T00:20:03Z",
-            "headSha": "1c51c1042a1f6a81af271c5a00a8bd66b927dbb4",
+            "updatedAt": "2026-03-26T04:40:56Z",
+            "headSha": "ca847e29a3ce3d61b7cf41f14828a6b95dca13c4",
             "headRepo": "MatoTeziTanka/parameter-golf"
           },
           "links": {
-            "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/1c51c1042a1f6a81af271c5a00a8bd66b927dbb4/records/track_10min_16mb/2026-03-25_PROTEUS_STYX_Ngram_0.8508/submission.json",
-            "readme": "https://github.com/openai/parameter-golf/blob/1c51c1042a1f6a81af271c5a00a8bd66b927dbb4/records/track_10min_16mb/2026-03-25_PROTEUS_STYX_Ngram_0.8508/README.md",
-            "trainLog": "https://github.com/openai/parameter-golf/blob/1c51c1042a1f6a81af271c5a00a8bd66b927dbb4/records/track_10min_16mb/2026-03-25_PROTEUS_STYX_Ngram_0.8508/train.log",
-            "script": "https://github.com/openai/parameter-golf/blob/1c51c1042a1f6a81af271c5a00a8bd66b927dbb4/records/track_10min_16mb/2026-03-25_PROTEUS_STYX_Ngram_0.8508/train_gpt.py",
-            "folder": "https://github.com/openai/parameter-golf/tree/1c51c1042a1f6a81af271c5a00a8bd66b927dbb4/records/track_10min_16mb/2026-03-25_PROTEUS_STYX_Ngram_0.8508",
+            "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/ca847e29a3ce3d61b7cf41f14828a6b95dca13c4/records/track_10min_16mb/2026-03-25_PROTEUS_STYX_Ngram_0.8508/submission.json",
+            "readme": "https://github.com/openai/parameter-golf/blob/ca847e29a3ce3d61b7cf41f14828a6b95dca13c4/records/track_10min_16mb/2026-03-25_PROTEUS_STYX_Ngram_0.8508/README.md",
+            "trainLog": "https://github.com/openai/parameter-golf/blob/ca847e29a3ce3d61b7cf41f14828a6b95dca13c4/records/track_10min_16mb/2026-03-25_PROTEUS_STYX_Ngram_0.8508/train.log",
+            "script": "https://github.com/openai/parameter-golf/blob/ca847e29a3ce3d61b7cf41f14828a6b95dca13c4/records/track_10min_16mb/2026-03-25_PROTEUS_STYX_Ngram_0.8508/train_gpt.py",
+            "folder": "https://github.com/openai/parameter-golf/tree/ca847e29a3ce3d61b7cf41f14828a6b95dca13c4/records/track_10min_16mb/2026-03-25_PROTEUS_STYX_Ngram_0.8508",
             "pr": "https://github.com/openai/parameter-golf/pull/769"
           }
         }
@@ -69752,6 +69752,279 @@
             "script": "https://github.com/openai/parameter-golf/blob/e6aca8ce6cea140349bf70f5a3245b81a67d4651/records/track_10min_16mb/2026-03-26_ChunkNgram_TTT_LeakyReLU09_GPTQ5/train_gpt.py",
             "folder": "https://github.com/openai/parameter-golf/tree/e6aca8ce6cea140349bf70f5a3245b81a67d4651/records/track_10min_16mb/2026-03-26_ChunkNgram_TTT_LeakyReLU09_GPTQ5",
             "pr": "https://github.com/openai/parameter-golf/pull/809"
+          }
+        }
+      ]
+    },
+    "810": {
+      "number": 810,
+      "updatedAt": "2026-03-26T04:43:28Z",
+      "pr": {
+        "number": 810,
+        "title": "Record: EMA-GPU + Multi-Order N-gram Backoff + PE Confidence (val_bpb=0.9393)",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/810",
+        "authorLogin": "Idan3011",
+        "authorName": null,
+        "createdAt": "2026-03-26T04:39:04Z",
+        "updatedAt": "2026-03-26T04:43:28Z",
+        "headSha": "7ff8cf76265896333c98dab8c72e92f8c30b4ff0",
+        "headRepo": "Idan3011/parameter-golf"
+      },
+      "submissions": [
+        {
+          "id": "pr-810-records-track_10min_16mb-2026-03-20_PreEnrich_EncoderRecurrence-submission-json",
+          "source": "pull_request",
+          "status": "open",
+          "category": "main-track",
+          "track": {
+            "path": "records/track_10min_16mb",
+            "slug": "track_10min_16mb",
+            "label": "10 Minute / 16MB",
+            "official": true,
+            "category": "main-track"
+          },
+          "record": {
+            "folderName": "2026-03-20_PreEnrich_EncoderRecurrence",
+            "folderPath": "records/track_10min_16mb/2026-03-20_PreEnrich_EncoderRecurrence",
+            "submissionPath": "records/track_10min_16mb/2026-03-20_PreEnrich_EncoderRecurrence/submission.json",
+            "readmePath": "records/track_10min_16mb/2026-03-20_PreEnrich_EncoderRecurrence/README.md",
+            "trainLogPath": "records/track_10min_16mb/2026-03-20_PreEnrich_EncoderRecurrence/train.log",
+            "scriptPath": "records/track_10min_16mb/2026-03-20_PreEnrich_EncoderRecurrence/train_gpt.py"
+          },
+          "submission": {
+            "author": "Idanr",
+            "githubId": "idan3011",
+            "name": "EMA-GPU + Multi-Order N-gram Backoff + Pre-Enrichment Confidence + XSA",
+            "blurb": "EMA on GPU (64.7ms/step, 9268 steps). Multi-order n-gram backoff (2-11) with entropy-adaptive alpha + pre-enrichment confidence modulation (novel). GELU pre-enrichment + XSA-4 + SmearGate + BigramHash + int6 QAT + lzma. 10L 512d.",
+            "date": "2026-03-26T04:30:00Z"
+          },
+          "metrics": {
+            "valBpb": 0.93933506,
+            "valLoss": 1.93793804,
+            "preQuantValBpb": 1.1646,
+            "preQuantValLoss": 1.9663,
+            "stepStop": 9268,
+            "wallclockSeconds": 600.031,
+            "evalTimeSeconds": 188.105
+          },
+          "artifact": {
+            "bytesTotal": 14942971,
+            "bytesCode": 64223,
+            "bytesModelInt8Zlib": null
+          },
+          "flags": {
+            "usesValOnly": false
+          },
+          "detection": {
+            "valOnlyConfidence": "none",
+            "valOnlyMatches": []
+          },
+          "pr": {
+            "number": 810,
+            "title": "Record: EMA-GPU + Multi-Order N-gram Backoff + PE Confidence (val_bpb=0.9393)",
+            "state": "open",
+            "draft": false,
+            "mergedAt": null,
+            "htmlUrl": "https://github.com/openai/parameter-golf/pull/810",
+            "authorLogin": "Idan3011",
+            "authorName": null,
+            "createdAt": "2026-03-26T04:39:04Z",
+            "updatedAt": "2026-03-26T04:43:28Z",
+            "headSha": "7ff8cf76265896333c98dab8c72e92f8c30b4ff0",
+            "headRepo": "Idan3011/parameter-golf"
+          },
+          "links": {
+            "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/7ff8cf76265896333c98dab8c72e92f8c30b4ff0/records/track_10min_16mb/2026-03-20_PreEnrich_EncoderRecurrence/submission.json",
+            "readme": "https://github.com/openai/parameter-golf/blob/7ff8cf76265896333c98dab8c72e92f8c30b4ff0/records/track_10min_16mb/2026-03-20_PreEnrich_EncoderRecurrence/README.md",
+            "trainLog": "https://github.com/openai/parameter-golf/blob/7ff8cf76265896333c98dab8c72e92f8c30b4ff0/records/track_10min_16mb/2026-03-20_PreEnrich_EncoderRecurrence/train.log",
+            "script": "https://github.com/openai/parameter-golf/blob/7ff8cf76265896333c98dab8c72e92f8c30b4ff0/records/track_10min_16mb/2026-03-20_PreEnrich_EncoderRecurrence/train_gpt.py",
+            "folder": "https://github.com/openai/parameter-golf/tree/7ff8cf76265896333c98dab8c72e92f8c30b4ff0/records/track_10min_16mb/2026-03-20_PreEnrich_EncoderRecurrence",
+            "pr": "https://github.com/openai/parameter-golf/pull/810"
+          }
+        }
+      ]
+    },
+    "811": {
+      "number": 811,
+      "updatedAt": "2026-03-26T04:53:38Z",
+      "pr": {
+        "number": 811,
+        "title": "Record: Complementary Training + Backoff N-gram Mixer — 0.4377 BPB",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/811",
+        "authorLogin": "quietsmile",
+        "authorName": null,
+        "createdAt": "2026-03-26T04:53:38Z",
+        "updatedAt": "2026-03-26T04:53:38Z",
+        "headSha": "29eac0c169f84141dc53c1c3bdf0b1ee64aafdcf",
+        "headRepo": "quietsmile/parameter-golf"
+      },
+      "submissions": [
+        {
+          "id": "pr-811-records-track_10min_16mb-2026-03-26_ComplementaryBackoff_NgramMixer_0-4377-submission-json",
+          "source": "pull_request",
+          "status": "open",
+          "category": "main-track",
+          "track": {
+            "path": "records/track_10min_16mb",
+            "slug": "track_10min_16mb",
+            "label": "10 Minute / 16MB",
+            "official": true,
+            "category": "main-track"
+          },
+          "record": {
+            "folderName": "2026-03-26_ComplementaryBackoff_NgramMixer_0.4377",
+            "folderPath": "records/track_10min_16mb/2026-03-26_ComplementaryBackoff_NgramMixer_0.4377",
+            "submissionPath": "records/track_10min_16mb/2026-03-26_ComplementaryBackoff_NgramMixer_0.4377/submission.json",
+            "readmePath": "records/track_10min_16mb/2026-03-26_ComplementaryBackoff_NgramMixer_0.4377/README.md",
+            "trainLogPath": "records/track_10min_16mb/2026-03-26_ComplementaryBackoff_NgramMixer_0.4377/train.log",
+            "scriptPath": "records/track_10min_16mb/2026-03-26_ComplementaryBackoff_NgramMixer_0.4377/train_gpt.py"
+          },
+          "submission": {
+            "author": "quietsmile",
+            "githubId": "quietsmile",
+            "name": "Complementary Training + Backoff N-gram Mixer (Reproduction)",
+            "blurb": "Reproduction of PR #803's complementary training approach on 8xL20Z (H100). Bigram-weighted loss reweighting (COMPLEMENT_ALPHA=0.5) trains the neural model to specialize on tokens n-gram caches can't predict. BackoffNgramMixer (orders 2-10, 4M hash buckets) with entropy-adaptive alpha (0.20+0.55*sigmoid(2*(H-3.0))). Legal score-first AdamW TTT (4 epochs, lr=5e-4, freeze first 2 blocks). Int6 mixed quantization + lzma. Evaluated with stride=128.",
+            "date": "2026-03-26T12:00:00Z"
+          },
+          "metrics": {
+            "valBpb": 0.4377,
+            "valLoss": 0.73909041,
+            "preQuantValBpb": null,
+            "preQuantValLoss": null,
+            "stepStop": 7003,
+            "wallclockSeconds": 600.074,
+            "evalTimeSeconds": 449.857
+          },
+          "artifact": {
+            "bytesTotal": 15875857,
+            "bytesCode": 87336,
+            "bytesModelInt8Zlib": null
+          },
+          "flags": {
+            "usesValOnly": false
+          },
+          "detection": {
+            "valOnlyConfidence": "none",
+            "valOnlyMatches": []
+          },
+          "pr": {
+            "number": 811,
+            "title": "Record: Complementary Training + Backoff N-gram Mixer — 0.4377 BPB",
+            "state": "open",
+            "draft": false,
+            "mergedAt": null,
+            "htmlUrl": "https://github.com/openai/parameter-golf/pull/811",
+            "authorLogin": "quietsmile",
+            "authorName": null,
+            "createdAt": "2026-03-26T04:53:38Z",
+            "updatedAt": "2026-03-26T04:53:38Z",
+            "headSha": "29eac0c169f84141dc53c1c3bdf0b1ee64aafdcf",
+            "headRepo": "quietsmile/parameter-golf"
+          },
+          "links": {
+            "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/29eac0c169f84141dc53c1c3bdf0b1ee64aafdcf/records/track_10min_16mb/2026-03-26_ComplementaryBackoff_NgramMixer_0.4377/submission.json",
+            "readme": "https://github.com/openai/parameter-golf/blob/29eac0c169f84141dc53c1c3bdf0b1ee64aafdcf/records/track_10min_16mb/2026-03-26_ComplementaryBackoff_NgramMixer_0.4377/README.md",
+            "trainLog": "https://github.com/openai/parameter-golf/blob/29eac0c169f84141dc53c1c3bdf0b1ee64aafdcf/records/track_10min_16mb/2026-03-26_ComplementaryBackoff_NgramMixer_0.4377/train.log",
+            "script": "https://github.com/openai/parameter-golf/blob/29eac0c169f84141dc53c1c3bdf0b1ee64aafdcf/records/track_10min_16mb/2026-03-26_ComplementaryBackoff_NgramMixer_0.4377/train_gpt.py",
+            "folder": "https://github.com/openai/parameter-golf/tree/29eac0c169f84141dc53c1c3bdf0b1ee64aafdcf/records/track_10min_16mb/2026-03-26_ComplementaryBackoff_NgramMixer_0.4377",
+            "pr": "https://github.com/openai/parameter-golf/pull/811"
+          }
+        }
+      ]
+    },
+    "812": {
+      "number": 812,
+      "updatedAt": "2026-03-26T05:02:51Z",
+      "pr": {
+        "number": 812,
+        "title": "[non-record track] BankLinear: cross-layer shared weight bank with learned + random mixtures",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/812",
+        "authorLogin": "andrewmouldon",
+        "authorName": null,
+        "createdAt": "2026-03-26T05:02:51Z",
+        "updatedAt": "2026-03-26T05:02:51Z",
+        "headSha": "2e8b9633af7846ecb6d69d56fa8166cbd58c2287",
+        "headRepo": "andrewmouldon/parameter-golf"
+      },
+      "submissions": [
+        {
+          "id": "pr-812-records-track_non_record_16mb-2026-03-18_BankLinear-submission-json",
+          "source": "pull_request",
+          "status": "open",
+          "category": "non-record",
+          "track": {
+            "path": "records/track_non_record_16mb",
+            "slug": "track_non_record_16mb",
+            "label": "Non-record / 16MB",
+            "official": false,
+            "category": "non-record"
+          },
+          "record": {
+            "folderName": "2026-03-18_BankLinear",
+            "folderPath": "records/track_non_record_16mb/2026-03-18_BankLinear",
+            "submissionPath": "records/track_non_record_16mb/2026-03-18_BankLinear/submission.json",
+            "readmePath": "records/track_non_record_16mb/2026-03-18_BankLinear/README.md",
+            "trainLogPath": "records/track_non_record_16mb/2026-03-18_BankLinear/train.log",
+            "scriptPath": "records/track_non_record_16mb/2026-03-18_BankLinear/train_gpt.py"
+          },
+          "submission": {
+            "author": "Andrew Mouldon",
+            "githubId": "andrewmouldon",
+            "name": "BankLinear: compositional weight sharing via learned + random basis mixtures",
+            "blurb": "Replaces per-layer weights with mixtures over a shared bank of learned and random matrices, enabling parameter reuse across depth under tight budgets.",
+            "date": "2026-03-25T00:00:00Z"
+          },
+          "metrics": {
+            "valBpb": 1.2223,
+            "valLoss": 2.0733,
+            "preQuantValBpb": null,
+            "preQuantValLoss": null,
+            "stepStop": null,
+            "wallclockSeconds": null,
+            "evalTimeSeconds": null
+          },
+          "artifact": {
+            "bytesTotal": 15739602,
+            "bytesCode": 50835,
+            "bytesModelInt8Zlib": null
+          },
+          "flags": {
+            "usesValOnly": false
+          },
+          "detection": {
+            "valOnlyConfidence": "none",
+            "valOnlyMatches": []
+          },
+          "pr": {
+            "number": 812,
+            "title": "[non-record track] BankLinear: cross-layer shared weight bank with learned + random mixtures",
+            "state": "open",
+            "draft": false,
+            "mergedAt": null,
+            "htmlUrl": "https://github.com/openai/parameter-golf/pull/812",
+            "authorLogin": "andrewmouldon",
+            "authorName": null,
+            "createdAt": "2026-03-26T05:02:51Z",
+            "updatedAt": "2026-03-26T05:02:51Z",
+            "headSha": "2e8b9633af7846ecb6d69d56fa8166cbd58c2287",
+            "headRepo": "andrewmouldon/parameter-golf"
+          },
+          "links": {
+            "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/2e8b9633af7846ecb6d69d56fa8166cbd58c2287/records/track_non_record_16mb/2026-03-18_BankLinear/submission.json",
+            "readme": "https://github.com/openai/parameter-golf/blob/2e8b9633af7846ecb6d69d56fa8166cbd58c2287/records/track_non_record_16mb/2026-03-18_BankLinear/README.md",
+            "trainLog": "https://github.com/openai/parameter-golf/blob/2e8b9633af7846ecb6d69d56fa8166cbd58c2287/records/track_non_record_16mb/2026-03-18_BankLinear/train.log",
+            "script": "https://github.com/openai/parameter-golf/blob/2e8b9633af7846ecb6d69d56fa8166cbd58c2287/records/track_non_record_16mb/2026-03-18_BankLinear/train_gpt.py",
+            "folder": "https://github.com/openai/parameter-golf/tree/2e8b9633af7846ecb6d69d56fa8166cbd58c2287/records/track_non_record_16mb/2026-03-18_BankLinear",
+            "pr": "https://github.com/openai/parameter-golf/pull/812"
           }
         }
       ]

@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-26T05:06:59.246Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 810,
+    "title": "Record: EMA-GPU + Multi-Order N-gram Backoff + PE Confidence (val_bpb=0.9393)",
+    "state": "open",
+    "updatedAt": "2026-03-26T04:43:28Z",
+    "headSha": "7ff8cf76265896333c98dab8c72e92f8c30b4ff0",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/810",
+    "authorLogin": "Idan3011"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-20_PreEnrich_EncoderRecurrence/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Keeps EMA on GPU while leveraging GELU pre-enrichment, XSA, and confidence-weighted entropy-adaptive multi-order n-gram backoff for evaluation.",
+    "tags": [
+      "architecture",
+      "attention",
+      "evaluation",
+      "training-schedule"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "GPU-resident EMA state to speed up steps",
+      "Entropy-adaptive multi-order n-gram cache weighted by pre-enrichment confidence",
+      "GELU pre-enrichment funnel + XSA on final layers"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

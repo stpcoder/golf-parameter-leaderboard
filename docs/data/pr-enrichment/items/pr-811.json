@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-26T05:06:53.270Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 811,
+    "title": "Record: Complementary Training + Backoff N-gram Mixer — 0.4377 BPB",
+    "state": "open",
+    "updatedAt": "2026-03-26T04:53:38Z",
+    "headSha": "29eac0c169f84141dc53c1c3bdf0b1ee64aafdcf",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/811",
+    "authorLogin": "quietsmile"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-26_ComplementaryBackoff_NgramMixer_0.4377/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Reproduces complementary bigram-weighted training with entropy-adaptive BackoffNgramMixer, score-first AdamW TTT, and stride=128 eval for compact leaderboard runs.",
+    "tags": [
+      "quantization",
+      "optimizer",
+      "architecture",
+      "evaluation"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Complementary bigram-weighted loss reweighting (COMPLEMENT_ALPHA=0.5)",
+      "BackoffNgramMixer orders 2-10 with entropy-adaptive alpha mixing",
+      "Score-first AdamW TTT (4 epochs, freeze 2 blocks) plus stride=128 eval and Int6+lzma packing"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}
