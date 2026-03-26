@@ -1,0 +1,39 @@
+{
+  "generatedAt": "2026-03-26T07:07:21.889Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 819,
+    "title": "Add PES RosehipV1: Precision Error Signal + frontier stack",
+    "state": "open",
+    "updatedAt": "2026-03-26T06:43:13Z",
+    "headSha": "ea241c2b5047fb5b5513dbd59a956139862717c5",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/819",
+    "authorLogin": "Tetrahedroned"
+  },
+  "inputs": {
+    "hash": "072662c123505c465dfcb1e80cbfb797fc5a748edd0e2a3564b0b095cec763f8",
+    "readmePaths": [],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Introduces PES RosehipV1 with a Rosehip-inspired Precision Error Signal correction module and a frontier stack combining XSA, VRL, EMA, and LeakyReLU².",
+    "tags": [
+      "architecture",
+      "regularization",
+      "training-schedule"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Precision Error Signal inter-layer correction",
+      "Frontier stack: XSA, VRL, EMA, LeakyReLU²"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

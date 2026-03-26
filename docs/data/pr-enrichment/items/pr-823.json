@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-26T07:07:09.007Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 823,
+    "title": "Add non-record 16MB submission: MOEA outer-loop proxy F2 on 1xRTX 3090",
+    "state": "open",
+    "updatedAt": "2026-03-26T07:05:04Z",
+    "headSha": "06f3a1fa7350af438b3cf6d727dc3955b8c6b88f",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/823",
+    "authorLogin": "ai-wes"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-03-25_MOEA_OuterLoop_Proxy_1x3090/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Distills MOEA outer-loop search into a compact GQA transformer with tied embeddings and a runnable proxy eval on 1x RTX 3090.",
+    "tags": [
+      "non-record",
+      "architecture",
+      "compression"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "Training was a standard proxy run, not an explicit validation-only regime.",
+    "techniques": [
+      "MOEA outer-loop architecture/training search to artifact",
+      "Compact GQA transformer with tied embeddings and small dimensions",
+      "Proxy eval with reduced val window and compile disabled for 1x3090"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

@@ -1,8 +1,125 @@
 {
-  "generatedAt": "2026-03-26T06:37:03.475Z",
+  "generatedAt": "2026-03-26T07:08:25.769Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 824,
+      "title": "GatedAttn + ValueResid + XSA6 + HedgeMixer + Legal TTT — val_bpb: 1.08965 (3-seed mean)",
+      "status": "open",
+      "updatedAt": "2026-03-26T07:05:13Z",
+      "headSha": "d7572869ea4e901edaba49917cb0f1f2a688ae26",
+      "generatedAt": "2026-03-26T07:07:03.820Z",
+      "summary": "Adds per-head gated attention scalars and per-block value-residual mixing atop HedgeMixer and XSA6 stack with FP32 control tensors to guide quantized eval.",
+      "tags": [
+        "architecture",
+        "attention",
+        "quantization"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-824.json"
+    },
+    {
+      "prNumber": 823,
+      "title": "Add non-record 16MB submission: MOEA outer-loop proxy F2 on 1xRTX 3090",
+      "status": "open",
+      "updatedAt": "2026-03-26T07:05:04Z",
+      "headSha": "06f3a1fa7350af438b3cf6d727dc3955b8c6b88f",
+      "generatedAt": "2026-03-26T07:07:09.007Z",
+      "summary": "Distills MOEA outer-loop search into a compact GQA transformer with tied embeddings and a runnable proxy eval on 1x RTX 3090.",
+      "tags": [
+        "non-record",
+        "architecture",
+        "compression"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-823.json"
+    },
+    {
+      "prNumber": 822,
+      "title": "Add baseline and depth recurrence submissions (1xH100 20min runs)",
+      "status": "open",
+      "updatedAt": "2026-03-26T07:02:32Z",
+      "headSha": "95ecb93d3f5281e12b4c4ea44866f3a135289f78",
+      "generatedAt": "2026-03-26T07:07:14.750Z",
+      "summary": "Reproduces the 10L Int5/Muon/BigramHash baseline and experiments with 4-layer depth recurrence looped 3x with per-loop LoRA under mixed int5/int6 QAT on 1xH100.",
+      "tags": [
+        "quantization",
+        "muon",
+        "architecture",
+        "sliding-window-eval"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-822.json"
+    },
+    {
+      "prNumber": 820,
+      "title": "[non-record] Masked Diffusion Language Model (val_var_bpb=1.625)",
+      "status": "open",
+      "updatedAt": "2026-03-26T06:55:35Z",
+      "headSha": "6d3293e3dc7284be2a9101b107673647b86c7003",
+      "generatedAt": "2026-03-26T07:07:18.775Z",
+      "summary": "Replaces the autoregressive stack with a masked diffusion LM using bidirectional denoising, timestep-conditioned adaLN, and mixed int6/int8 quant to fit 16MB.",
+      "tags": [
+        "architecture",
+        "quantization",
+        "evaluation",
+        "non-record"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-820.json"
+    },
+    {
+      "prNumber": 819,
+      "title": "Add PES RosehipV1: Precision Error Signal + frontier stack",
+      "status": "open",
+      "updatedAt": "2026-03-26T06:43:13Z",
+      "headSha": "ea241c2b5047fb5b5513dbd59a956139862717c5",
+      "generatedAt": "2026-03-26T07:07:21.889Z",
+      "summary": "Introduces PES RosehipV1 with a Rosehip-inspired Precision Error Signal correction module and a frontier stack combining XSA, VRL, EMA, and LeakyReLU².",
+      "tags": [
+        "architecture",
+        "regularization",
+        "training-schedule"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-819.json"
+    },
     {
       "prNumber": 818,
       "title": "[record] add HWNODE record - 0.5527",
@@ -53,13 +170,13 @@
       "prNumber": 814,
       "title": "Record: X-WING 3D Cubric + Complementary Training (val_bpb=0.4820)",
       "status": "open",
-      "updatedAt": "2026-03-26T05:25:30Z",
-      "headSha": "4ce0d59417ee4edaf677030a71ed910cc6b18167",
-      "generatedAt": "2026-03-26T05:36:47.182Z",
-      "summary": "Shared chunk-updated n-gram tables mix with warm-started 3D cubric alphas and complementary training so the neural model focuses where n-grams falter.",
+      "updatedAt": "2026-03-26T06:52:11Z",
+      "headSha": "3ebaf383d0f8f6eebb13951d758b3c2e29c34d62",
+      "generatedAt": "2026-03-26T07:07:26.881Z",
+      "summary": "Chunk-shared n-gram tables drive a transformer whose 3D cubric alpha multipliers (warm-started) combine with complementary training reweighting to rebalance n-gram mixing.",
       "tags": [
-        "sliding-window-eval",
-        "quantization",
+        "architecture",
+        "evaluation",
         "regularization"
       ],
       "flags": {
@@ -144,17 +261,17 @@
     },
     {
       "prNumber": 810,
-      "title": "Record: EMA-GPU + Multi-Order N-gram Backoff + PE Confidence (val_bpb=0.9393)",
+      "title": "Record: Two-Phase Shared N-gram Cache + EMA-GPU (val_bpb=0.3001)",
       "status": "open",
-      "updatedAt": "2026-03-26T04:43:28Z",
-      "headSha": "7ff8cf76265896333c98dab8c72e92f8c30b4ff0",
-      "generatedAt": "2026-03-26T05:06:59.246Z",
-      "summary": "Keeps EMA on GPU while leveraging GELU pre-enrichment, XSA, and confidence-weighted entropy-adaptive multi-order n-gram backoff for evaluation.",
+      "updatedAt": "2026-03-26T06:49:35Z",
+      "headSha": "c504e5cc8bca46ac8eb289fd04f1a9a832b7aa16",
+      "generatedAt": "2026-03-26T07:07:31.279Z",
+      "summary": "Per-order entropy-weighted n-gram cache with PE-confidence gating, phase-synced sharing, and GPU EMA-enabled GELU pre-enrichment.",
       "tags": [
-        "architecture",
+        "quantization",
         "attention",
-        "evaluation",
-        "training-schedule"
+        "architecture",
+        "evaluation"
       ],
       "flags": {
         "usesValOnly": false,
@@ -949,10 +1066,10 @@
       "prNumber": 769,
       "title": "PROTEUS+STYX — val_bpb 0.8495 (3-seed mean) — LeakyReLU(0.9)² + 5-gram Eval Cache",
       "status": "open",
-      "updatedAt": "2026-03-26T04:40:56Z",
+      "updatedAt": "2026-03-26T06:36:24Z",
       "headSha": "ca847e29a3ce3d61b7cf41f14828a6b95dca13c4",
-      "generatedAt": "2026-03-26T05:07:05.892Z",
-      "summary": "11-layer PROTEUS+STYX uses LeakyReLU(0.9)² and a fixed-alpha backward-looking 5-gram hash cache during sliding-window eval.",
+      "generatedAt": "2026-03-26T07:07:36.582Z",
+      "summary": "Uses PROTEUS+STYX with LeakyReLU(0.9)² and a backward-looking 5-gram hash cache blended into sliding-window eval predictions.",
       "tags": [
         "architecture",
         "evaluation",
@@ -1252,23 +1369,23 @@
       "prNumber": 754,
       "title": "Non-Record: 11L Parallel Muon + LeakyReLU² MLP3x + Legal TTT (val_bpb 1.1253)",
       "status": "open",
-      "updatedAt": "2026-03-26T06:36:16Z",
-      "headSha": "a4ab3ad3e8e581a3ab7d284d1c80ec037af149a2",
-      "generatedAt": "2026-03-26T06:36:58.195Z",
-      "summary": "11L/512d Parallel Muon transformer banks parameters with batched Newton-Schulz, LeakyReLU² MLP3×, legal score-first TTT, and late QAT/quantization.",
+      "updatedAt": "2026-03-26T06:48:32Z",
+      "headSha": "daff73e3f44db97af7b95ddcfb0da3f9416fb921",
+      "generatedAt": "2026-03-26T07:08:14.340Z",
+      "summary": "11L 512d stack mixes Parallel Muon banking with batched Newton-Schulz, LeakyReLU² MLP3x, and legal score-first TTT fine-tuning.",
       "tags": [
+        "muon",
         "architecture",
         "quantization",
-        "evaluation",
-        "val-only"
+        "training-schedule"
       ],
       "flags": {
-        "usesValOnly": true,
-        "usesValOnlyAi": true,
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
         "usesValOnlyCollector": false
       },
       "compatibility": {
-        "valOnlyMatchesCollector": false
+        "valOnlyMatchesCollector": true
       },
       "file": "items/pr-754.json"
     },
@@ -1973,14 +2090,15 @@
       "prNumber": 703,
       "title": "Record: PR549 + MiLe decay + 8-bit Muon + 1.04x LR + Cache+Backout — val_bpb 1.1176",
       "status": "open",
-      "updatedAt": "2026-03-25T11:36:58Z",
-      "headSha": "ec3d8e7f826d6fece5662b4127149192e81cd608",
-      "generatedAt": "2026-03-25T12:01:20.723Z",
-      "summary": "Builds on PR549 by blending MiLe entropy-weighted decay, blockwise int8 Muon momentum, cache+backout residual correction, and a 1.04× LR lift.",
+      "updatedAt": "2026-03-26T06:56:16Z",
+      "headSha": "3c770dd01cbc26aef5c6a05e66b350d4fb9064ca",
+      "generatedAt": "2026-03-26T07:08:19.483Z",
+      "summary": "Combines adaptive MiLe loss, blockwise 8-bit Muon momentum, and Cache+Backout context cleanup atop LeakyReLU² architecture for sharper training focus.",
       "tags": [
+        "regularization",
+        "quantization",
         "optimizer",
-        "training-schedule",
-        "quantization"
+        "architecture"
       ],
       "flags": {
         "usesValOnly": false,
@@ -6357,16 +6475,15 @@
     {
       "prNumber": 430,
       "title": "GatedAttn + ValueResid + XSA6 + HedgeMixer + Legal TTT — val_bpb: 1.08965 (3-seed mean)",
-      "status": "open",
-      "updatedAt": "2026-03-26T06:16:53Z",
+      "status": "closed",
+      "updatedAt": "2026-03-26T07:04:08Z",
       "headSha": "e0bb22c8c700f2282ac400509fb082dfb8c977cf",
-      "generatedAt": "2026-03-26T06:37:03.412Z",
-      "summary": "10-layer GQA stack augments thwu1 base with SwiGLU, value residual+gated attention, XSA, EMA, and AdamW test-time training.",
+      "generatedAt": "2026-03-26T07:08:25.705Z",
+      "summary": "Adds per-head gated attention and per-block value residual scalars atop the HedgeMixer XSA stack while keeping LoRA TTT adaptation for evaluation.",
       "tags": [
+        "architecture",
         "attention",
-        "training-schedule",
-        "optimizer",
-        "architecture"
+        "evaluation"
       ],
       "flags": {
         "usesValOnly": false,

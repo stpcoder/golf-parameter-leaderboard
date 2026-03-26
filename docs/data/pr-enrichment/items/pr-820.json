@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-26T07:07:18.775Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 820,
+    "title": "[non-record] Masked Diffusion Language Model (val_var_bpb=1.625)",
+    "state": "open",
+    "updatedAt": "2026-03-26T06:55:35Z",
+    "headSha": "6d3293e3dc7284be2a9101b107673647b86c7003",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/820",
+    "authorLogin": "mtybadger"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-03-25-MaskedDiffusion/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Replaces the autoregressive stack with a masked diffusion LM using bidirectional denoising, timestep-conditioned adaLN, and mixed int6/int8 quant to fit 16MB.",
+    "tags": [
+      "architecture",
+      "quantization",
+      "evaluation",
+      "non-record"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "masked diffusion bidirectional denoiser",
+      "timestep-conditioned adaLN with GQA-style attention",
+      "int6+int8 quantization with zstd22 compression"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

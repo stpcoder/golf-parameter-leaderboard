@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-26T06:36:58.195Z",
+  "generatedAt": "2026-03-26T07:08:14.340Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 754,
     "title": "Non-Record: 11L Parallel Muon + LeakyReLU² MLP3x + Legal TTT (val_bpb 1.1253)",
     "state": "open",
-    "updatedAt": "2026-03-26T06:36:16Z",
-    "headSha": "a4ab3ad3e8e581a3ab7d284d1c80ec037af149a2",
+    "updatedAt": "2026-03-26T06:48:32Z",
+    "headSha": "daff73e3f44db97af7b95ddcfb0da3f9416fb921",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/754",
     "authorLogin": "aryanbhosale"
   },
@@ -19,25 +19,25 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "11L/512d Parallel Muon transformer banks parameters with batched Newton-Schulz, LeakyReLU² MLP3×, legal score-first TTT, and late QAT/quantization.",
+    "summary": "11L 512d stack mixes Parallel Muon banking with batched Newton-Schulz, LeakyReLU² MLP3x, and legal score-first TTT fine-tuning.",
     "tags": [
+      "muon",
       "architecture",
       "quantization",
-      "evaluation",
-      "val-only"
+      "training-schedule"
     ],
-    "usesValOnly": true,
-    "valOnlyReasoning": "Legal score-first TTT trains on validation chunks via SGD after scoring, so the reported tuning occurs directly on validation data.",
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
     "techniques": [
-      "Parallel Muon parameter banking with batched Newton-Schulz",
-      "LeakyReLU² MLP3× with SmearGate/Gated Attention enhancements",
-      "Legal score-first TTT followed by late QAT int6 quantization"
+      "Parallel Muon banking + batched Newton-Schulz preconditioning",
+      "LeakyReLU(0.5)² MLP3× with SmearGate, gated attention, and U-Net skips",
+      "Legal score-first TTT after EMA+SWA with SGD momentum"
     ]
   },
   "compatibility": {
     "collectorUsesValOnly": false,
-    "aiUsesValOnly": true,
-    "finalUsesValOnly": true,
-    "valOnlyMatchesCollector": false
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
   }
 }

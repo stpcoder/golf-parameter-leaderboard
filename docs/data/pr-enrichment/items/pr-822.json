@@ -1,0 +1,44 @@
+{
+  "generatedAt": "2026-03-26T07:07:14.750Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 822,
+    "title": "Add baseline and depth recurrence submissions (1xH100 20min runs)",
+    "state": "open",
+    "updatedAt": "2026-03-26T07:02:32Z",
+    "headSha": "95ecb93d3f5281e12b4c4ea44866f3a135289f78",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/822",
+    "authorLogin": "henrycashe26"
+  },
+  "inputs": {
+    "hash": "333c1651a7101d4267d971ebe25bd793307b61c975586544bbd6b9a9c3a8cf24",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-26_Baseline_Int5MLP_1xH100_20min/README.md",
+      "records/track_10min_16mb/2026-03-26_Recurrence_4Lx3Loop_LoRA32_1xH100_20min/README.md"
+    ],
+    "submissionCount": 2
+  },
+  "output": {
+    "summary": "Reproduces the 10L Int5/Muon/BigramHash baseline and experiments with 4-layer depth recurrence looped 3x with per-loop LoRA under mixed int5/int6 QAT on 1xH100.",
+    "tags": [
+      "quantization",
+      "muon",
+      "architecture",
+      "sliding-window-eval"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "No validation-only training; standard training regime with validation used for evaluation.",
+    "techniques": [
+      "Mixed int5/int6 quantization-aware training",
+      "BigramHash embeddings with SWA on Muon optimizer",
+      "Depth recurrence with shared layers + per-loop LoRA adaptations"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-26T06:37:03.412Z",
+  "generatedAt": "2026-03-26T07:08:25.705Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 430,
     "title": "GatedAttn + ValueResid + XSA6 + HedgeMixer + Legal TTT — val_bpb: 1.08965 (3-seed mean)",
-    "state": "open",
-    "updatedAt": "2026-03-26T06:16:53Z",
+    "state": "closed",
+    "updatedAt": "2026-03-26T07:04:08Z",
     "headSha": "e0bb22c8c700f2282ac400509fb082dfb8c977cf",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/430",
     "authorLogin": "sahiee-dev"
@@ -19,19 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "10-layer GQA stack augments thwu1 base with SwiGLU, value residual+gated attention, XSA, EMA, and AdamW test-time training.",
+    "summary": "Adds per-head gated attention and per-block value residual scalars atop the HedgeMixer XSA stack while keeping LoRA TTT adaptation for evaluation.",
     "tags": [
+      "architecture",
       "attention",
-      "training-schedule",
-      "optimizer",
-      "architecture"
+      "evaluation"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "SwiGLU MLP with Value Residual and per-layer attention gates",
-      "Exclusive Self Attention on final layers plus EMA shadow weights",
-      "AdamW-based test-time training over validation shards"
+      "Head-wise FP32 gate scalars kept out of quantization",
+      "Block-wise value residual scalars inject initial embedding into residual stream",
+      "LoRA TTT adaptation on validation tokens before scoring"
     ]
   },
   "compatibility": {
