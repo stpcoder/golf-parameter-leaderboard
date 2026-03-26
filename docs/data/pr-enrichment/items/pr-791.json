@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-26T01:05:55.108Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 791,
+    "title": "submission/2026-03-25_WSD_CosineDecay_Schedule",
+    "state": "open",
+    "updatedAt": "2026-03-26T00:59:59Z",
+    "headSha": "be77e070e76a69d3670d5906fa68d46150727b7f",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/791",
+    "authorLogin": "ShihChunHao"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-25_WSD_CosineDecay_Schedule/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Adopted a Warmup-Stable-Decay LR schedule with a long constant peak to avoid early decay on the 10L SmearGate/BigramHash quantized base.",
+    "tags": [
+      "training-schedule",
+      "optimizer",
+      "quantization"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Warmup-Stable-Decay cosine LR schedule",
+      "Peak LR held ~75% of training before decay",
+      "Built on SmearGate + BigramHash quantized stack"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

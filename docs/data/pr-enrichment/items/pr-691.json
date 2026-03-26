@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-25T13:32:45.964Z",
+  "generatedAt": "2026-03-26T01:06:09.076Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 691,
     "title": "11L EMA + GPTQ-lite + Legal Score-First TTT (1.1408 BPB)",
-    "state": "open",
-    "updatedAt": "2026-03-25T13:05:00Z",
+    "state": "closed",
+    "updatedAt": "2026-03-26T01:03:23Z",
     "headSha": "787610be3db0453b2a12a5a99eebb78932f9d9e0",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/691",
     "authorLogin": "xexyz"
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Legal chunk-based score-first TTT scores each 32K validation chunk before three-epoch SGD training on the PR#414 GPTQ-lite stack.",
+    "summary": "Legal chunk-based score-first TTT on the PR #414 stack, scoring each 32K-token chunk via sliding-window eval before SGD+cosine updates and GPTQ-lite quantization.",
     "tags": [
       "val-only",
+      "sliding-window-eval",
       "quantization",
-      "optimizer",
       "training-schedule"
     ],
     "usesValOnly": true,
-    "valOnlyReasoning": "Training is conducted exclusively on validation chunks after scoring them under the legal score-first TTT protocol.",
+    "valOnlyReasoning": "Trains exclusively on scored validation chunks following the legal TTT protocol rather than using a separate training split.",
     "techniques": [
-      "Chunked score-first val-only TTT",
-      "32K-token chunks with SGD+cosine LR",
-      "GPTQ-lite int6 quantization"
+      "score-first chunked TTT with sliding-window evaluation",
+      "SGD with cosine LR decay, momentum, and gradient clipping per chunk",
+      "EMA + Tight SWA with GPTQ-lite int6 quantization"
     ]
   },
   "compatibility": {

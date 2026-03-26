@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-26T01:06:00.745Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 790,
+    "title": "Record: Residual Input Mixing + mixed int6 GPTQ + grouped TTT + MLP 3.5x",
+    "state": "open",
+    "updatedAt": "2026-03-26T00:59:48Z",
+    "headSha": "2f04110d992c3026187d8022335d59c4369453cf",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/790",
+    "authorLogin": "danialht"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-23_MixResiduals_Int6_GPTQ_BigramHash8192/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Denser residual-mixed inputs, 3.5x MLP, and grouped AdamW TTT complement mixed int6 GPTQ on the 11L/512 model within the 600s/16MB budget.",
+    "tags": [
+      "architecture",
+      "quantization",
+      "optimizer"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Dense learned mix of current stream, earlier blocks, and x0 per block",
+      "Mixed int6 per-row GPTQ with early QAT and EMA",
+      "Grouped score-first AdamW TTT separating matrix and control params"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

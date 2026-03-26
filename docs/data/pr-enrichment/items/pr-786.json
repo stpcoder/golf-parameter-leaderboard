@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-26T00:35:47.952Z",
+  "generatedAt": "2026-03-26T01:06:04.658Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 786,
-    "title": "Classical Compression Eval-Time Augmentation (WIP)",
+    "title": "0.8128 BPB: Classical Compression Eval + N-gram Backoff on PR #549 Base",
     "state": "open",
-    "updatedAt": "2026-03-26T00:15:00Z",
-    "headSha": "546ebf3355554e9088939af2c890d181b497bf60",
+    "updatedAt": "2026-03-26T00:54:05Z",
+    "headSha": "a805646e68718b5416acc9e57795fb71ba1d5af9",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/786",
     "authorLogin": "shinegami-2002"
   },
@@ -19,7 +19,7 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Adds cmix/PAQ-style multi-order n-gram backoff, logistic-domain mixing, and planned match/APM steps as eval-time compression augmentations atop PR549 base.",
+    "summary": "Eval-time n-gram backoff with entropy-adaptive mixing augments the PR#549 base to fuse classical compression stats into the neural sliding-window pass.",
     "tags": [
       "evaluation",
       "compression"
@@ -27,9 +27,8 @@
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Multi-order n-gram backoff with entropy-adaptive mixing",
-      "Logistic-domain mixture for extreme probabilities",
-      "Eval-time classical compression stack on PR549"
+      "- Multi-order n-gram backoff with entropy-adaptive alpha mixing",
+      "- Vectorized numpy hash tables and scatter-update evaluation pipeline"
     ]
   },
   "compatibility": {

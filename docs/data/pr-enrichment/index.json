@@ -1,8 +1,78 @@
 {
-  "generatedAt": "2026-03-26T00:36:32.368Z",
+  "generatedAt": "2026-03-26T01:06:14.216Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 792,
+      "title": "11L LeakyReLU² + XSA-all + Full GPTQ + 5-gram Backoff (1.0340 BPB)",
+      "status": "open",
+      "updatedAt": "2026-03-26T01:03:13Z",
+      "headSha": "bd39645ecc2ad18df62c9c38840b333ba783b7a3",
+      "generatedAt": "2026-03-26T01:05:50.145Z",
+      "summary": "11L/512d transformer uses LeakyReLU(0.5)², XSA on every layer, Hessian GPTQ quantization, and entropy-weighted 5-gram backoff during evaluation.",
+      "tags": [
+        "architecture",
+        "attention",
+        "quantization",
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-792.json"
+    },
+    {
+      "prNumber": 791,
+      "title": "submission/2026-03-25_WSD_CosineDecay_Schedule",
+      "status": "open",
+      "updatedAt": "2026-03-26T00:59:59Z",
+      "headSha": "be77e070e76a69d3670d5906fa68d46150727b7f",
+      "generatedAt": "2026-03-26T01:05:55.108Z",
+      "summary": "Adopted a Warmup-Stable-Decay LR schedule with a long constant peak to avoid early decay on the 10L SmearGate/BigramHash quantized base.",
+      "tags": [
+        "training-schedule",
+        "optimizer",
+        "quantization"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-791.json"
+    },
+    {
+      "prNumber": 790,
+      "title": "Record: Residual Input Mixing + mixed int6 GPTQ + grouped TTT + MLP 3.5x",
+      "status": "open",
+      "updatedAt": "2026-03-26T00:59:48Z",
+      "headSha": "2f04110d992c3026187d8022335d59c4369453cf",
+      "generatedAt": "2026-03-26T01:06:00.745Z",
+      "summary": "Denser residual-mixed inputs, 3.5x MLP, and grouped AdamW TTT complement mixed int6 GPTQ on the 11L/512 model within the 600s/16MB budget.",
+      "tags": [
+        "architecture",
+        "quantization",
+        "optimizer"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-790.json"
+    },
     {
       "prNumber": 789,
       "title": "Add non-record submission: Depth Recurrence + TTT + Gradient Checkpointing ",
@@ -53,12 +123,12 @@
     },
     {
       "prNumber": 786,
-      "title": "Classical Compression Eval-Time Augmentation (WIP)",
+      "title": "0.8128 BPB: Classical Compression Eval + N-gram Backoff on PR #549 Base",
       "status": "open",
-      "updatedAt": "2026-03-26T00:15:00Z",
-      "headSha": "546ebf3355554e9088939af2c890d181b497bf60",
-      "generatedAt": "2026-03-26T00:35:47.952Z",
-      "summary": "Adds cmix/PAQ-style multi-order n-gram backoff, logistic-domain mixing, and planned match/APM steps as eval-time compression augmentations atop PR549 base.",
+      "updatedAt": "2026-03-26T00:54:05Z",
+      "headSha": "a805646e68718b5416acc9e57795fb71ba1d5af9",
+      "generatedAt": "2026-03-26T01:06:04.658Z",
+      "summary": "Eval-time n-gram backoff with entropy-adaptive mixing augments the PR#549 base to fuse classical compression stats into the neural sliding-window pass.",
       "tags": [
         "evaluation",
         "compression"
@@ -854,30 +924,6 @@
         "valOnlyMatchesCollector": true
       },
       "file": "items/pr-745.json"
-    },
-    {
-      "prNumber": 744,
-      "title": "WSD Cosine Decay Schedule + 10L Int5-MLP BigramHash SmearGate SWA",
-      "status": "open",
-      "updatedAt": "2026-03-25T16:55:11Z",
-      "headSha": "3466150dd1e0f2bb945c1c1618606eb63fb7ba64",
-      "generatedAt": "2026-03-25T17:02:47.090Z",
-      "summary": "Adds a Warmup-Stable-Decay cosine LR schedule keeping peak LR for 75% of steps atop the SmearGate BigramHash int5/int6 base with SWA.",
-      "tags": [
-        "training-schedule",
-        "architecture",
-        "quantization",
-        "evaluation"
-      ],
-      "flags": {
-        "usesValOnly": false,
-        "usesValOnlyAi": false,
-        "usesValOnlyCollector": false
-      },
-      "compatibility": {
-        "valOnlyMatchesCollector": true
-      },
-      "file": "items/pr-744.json"
     },
     {
       "prNumber": 742,
@@ -1696,15 +1742,15 @@
     {
       "prNumber": 691,
       "title": "11L EMA + GPTQ-lite + Legal Score-First TTT (1.1408 BPB)",
-      "status": "open",
-      "updatedAt": "2026-03-25T13:05:00Z",
+      "status": "closed",
+      "updatedAt": "2026-03-26T01:03:23Z",
       "headSha": "787610be3db0453b2a12a5a99eebb78932f9d9e0",
-      "generatedAt": "2026-03-25T13:32:45.964Z",
-      "summary": "Legal chunk-based score-first TTT scores each 32K validation chunk before three-epoch SGD training on the PR#414 GPTQ-lite stack.",
+      "generatedAt": "2026-03-26T01:06:09.076Z",
+      "summary": "Legal chunk-based score-first TTT on the PR #414 stack, scoring each 32K-token chunk via sliding-window eval before SGD+cosine updates and GPTQ-lite quantization.",
       "tags": [
         "val-only",
+        "sliding-window-eval",
         "quantization",
-        "optimizer",
         "training-schedule"
       ],
       "flags": {
@@ -2834,29 +2880,6 @@
         "valOnlyMatchesCollector": true
       },
       "file": "items/pr-617.json"
-    },
-    {
-      "prNumber": 615,
-      "title": "Record: Residual Input Mixing + mixed int6 GPTQ + grouped TTT + MLP 3.5x",
-      "status": "closed",
-      "updatedAt": "2026-03-25T01:51:15Z",
-      "headSha": "1d2995e88e9217c099513dd5ad75ba3e52035b4e",
-      "generatedAt": "2026-03-25T01:58:33.089Z",
-      "summary": "Dense residual mixing per block plus grouped AdamW TTT adapts a mixed int6 per-row GPTQ model with 3.5x MLP to reuse longer-range features.",
-      "tags": [
-        "architecture",
-        "optimizer",
-        "quantization"
-      ],
-      "flags": {
-        "usesValOnly": false,
-        "usesValOnlyAi": false,
-        "usesValOnlyCollector": false
-      },
-      "compatibility": {
-        "valOnlyMatchesCollector": true
-      },
-      "file": "items/pr-615.json"
     },
     {
       "prNumber": 614,
@@ -10090,13 +10113,14 @@
       "prNumber": 182,
       "title": "Non-record: Linearized Neural Memory + TTT (val_bpb=1.1844)",
       "status": "open",
-      "updatedAt": "2026-03-26T00:30:03Z",
-      "headSha": "0e239fcfe0e4626d46f71294bbf93e043d7c9f31",
-      "generatedAt": "2026-03-26T00:36:32.343Z",
-      "summary": "Adds Titans-style linearized neural memory per block plus LoRA TTT adaptation with int6/FP16 tweaks for the 16MB track.",
+      "updatedAt": "2026-03-26T00:53:39Z",
+      "headSha": "57ae677edb2b8fe2d3d06d7002b4f9f8a5b8c9b2",
+      "generatedAt": "2026-03-26T01:06:14.191Z",
+      "summary": "Adds Titans-style linearized neural memory per block via causal cumsum attention alongside LoRA TTT, overtone init, and quantized layers.",
       "tags": [
         "architecture",
         "attention",
+        "quantization",
         "evaluation"
       ],
       "flags": {

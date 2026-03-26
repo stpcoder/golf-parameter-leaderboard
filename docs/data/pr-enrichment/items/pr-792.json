@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-26T01:05:50.145Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 792,
+    "title": "11L LeakyReLU² + XSA-all + Full GPTQ + 5-gram Backoff (1.0340 BPB)",
+    "state": "open",
+    "updatedAt": "2026-03-26T01:03:13Z",
+    "headSha": "bd39645ecc2ad18df62c9c38840b333ba783b7a3",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/792",
+    "authorLogin": "xexyz"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-26_LeakyReLU2_XSA11_GPTQ_NgramBackoff_1.0340/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "11L/512d transformer uses LeakyReLU(0.5)², XSA on every layer, Hessian GPTQ quantization, and entropy-weighted 5-gram backoff during evaluation.",
+    "tags": [
+      "architecture",
+      "attention",
+      "quantization",
+      "evaluation"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "LeakyReLU(0.5)² backbone with XSA across layers",
+      "Hessian GPTQ int6 calibration",
+      "Entropy-adaptive 5-gram backoff cascade"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}
