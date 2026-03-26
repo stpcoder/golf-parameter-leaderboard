@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-26T15:40:15.608Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 858,
+    "title": "11L 512d Int8+Zlib Baseline (val_bpb 1.2135, 3-seed)",
+    "state": "open",
+    "updatedAt": "2026-03-26T15:17:15Z",
+    "headSha": "eb31c1531a82cc6e00ad39c1a86d85371754ea40",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/858",
+    "authorLogin": "nickferrantelive"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-26_20M_Int8Zlib_11L_MLP3x/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Scaled baseline GPT to 11 layers with Muon optimizer, tied embeddings, and int8+zlib quantization to hit the 16MB cap on 8xH100 SXM.",
+    "tags": [
+      "architecture",
+      "optimizer",
+      "quantization",
+      "compression"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "two additional transformer layers on stock train_gpt.py",
+      "Muon optimizer with tied embeddings and GQA",
+      "per-row int8 quantization plus zlib compression"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

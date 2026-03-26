@@ -1,8 +1,55 @@
 {
-  "generatedAt": "2026-03-26T15:12:23.180Z",
+  "generatedAt": "2026-03-26T15:40:32.144Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 859,
+      "title": "Record: 0.1582 BPB — Learned Mixer Head + No TTT + Matrix LR 0.03",
+      "status": "open",
+      "updatedAt": "2026-03-26T15:29:48Z",
+      "headSha": "548fe6469aebd9efe59d3e3706d3f4d8c2fa5520",
+      "generatedAt": "2026-03-26T15:40:11.682Z",
+      "summary": "Learned mixer head combines transformer states with frozen n-gram experts and a higher matrix LR to beat prior work without any TTT updates.",
+      "tags": [
+        "architecture",
+        "training-schedule",
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-859.json"
+    },
+    {
+      "prNumber": 858,
+      "title": "11L 512d Int8+Zlib Baseline (val_bpb 1.2135, 3-seed)",
+      "status": "open",
+      "updatedAt": "2026-03-26T15:17:15Z",
+      "headSha": "eb31c1531a82cc6e00ad39c1a86d85371754ea40",
+      "generatedAt": "2026-03-26T15:40:15.608Z",
+      "summary": "Scaled baseline GPT to 11 layers with Muon optimizer, tied embeddings, and int8+zlib quantization to hit the 16MB cap on 8xH100 SXM.",
+      "tags": [
+        "architecture",
+        "optimizer",
+        "quantization",
+        "compression"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-858.json"
+    },
     {
       "prNumber": 857,
       "title": "Record: 15L Depth Recurrence + LeakyReLU² + Cosine TTT (3-seed mean val_bpb=1.1093)",
@@ -216,10 +263,10 @@
       "prNumber": 846,
       "title": "Record: Two-Pass N-gram Rescoring (val_bpb 0.1434)",
       "status": "open",
-      "updatedAt": "2026-03-26T14:36:06Z",
+      "updatedAt": "2026-03-26T15:15:13Z",
       "headSha": "e4cea2ccf12853e4b8dbca827216211a68d18311",
-      "generatedAt": "2026-03-26T14:41:13.042Z",
-      "summary": "Two-pass n-gram evaluation rescoring early cold-cache chunks with the full cache after score-first TTT+GPTQ-Int5 export.",
+      "generatedAt": "2026-03-26T15:40:21.449Z",
+      "summary": "Two-pass n-gram eval rescoring uses the full cache for early chunks atop score-first TTT adaptation and GPTQ-Int5 quantization.",
       "tags": [
         "evaluation",
         "quantization",
@@ -307,23 +354,23 @@
       "prNumber": 838,
       "title": "Non-Record: 11L Parallel Muon + LN Scale + LeakyReLU² MLP3x + Legal TTT — val_bpb 1.1215 (3-seed mean)",
       "status": "open",
-      "updatedAt": "2026-03-26T14:38:33Z",
-      "headSha": "ab25191e76658a485f9d1802c46185c95b62938b",
-      "generatedAt": "2026-03-26T14:41:19.939Z",
-      "summary": "11-layer transformer pairs Parallel Muon banking and batched Newton-Schulz with depth-scaled LN, LeakyReLU² MLP3x, and legal score-first TTT SGD.",
+      "updatedAt": "2026-03-26T15:11:03Z",
+      "headSha": "5687f3ca15f7437f45821af8cac7e5d2210fe68d",
+      "generatedAt": "2026-03-26T15:40:32.019Z",
+      "summary": "Parallel Muon banking + LN Scale + LeakyReLU² MLP3x pairs with legal score-first TTT and GPTQ-lite int6 quantization.",
       "tags": [
-        "architecture",
-        "optimizer",
-        "training-schedule",
-        "evaluation"
+        "muon",
+        "quantization",
+        "evaluation",
+        "val-only"
       ],
       "flags": {
-        "usesValOnly": false,
-        "usesValOnlyAi": false,
+        "usesValOnly": true,
+        "usesValOnlyAi": true,
         "usesValOnlyCollector": false
       },
       "compatibility": {
-        "valOnlyMatchesCollector": true
+        "valOnlyMatchesCollector": false
       },
       "file": "items/pr-838.json"
     },
