@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-26T10:08:33.474Z",
+  "generatedAt": "2026-03-26T10:38:56.447Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 347,
     "title": "LongContext 4096 + Full SOTA Stack + QAT Int4/Int6 → 16 Layers",
     "state": "open",
-    "updatedAt": "2026-03-26T10:06:13Z",
-    "headSha": "b371be9fa77efaac742207513bf336badb27652e",
+    "updatedAt": "2026-03-26T10:22:59Z",
+    "headSha": "3c7309738145a46e465af38674bebbd2b82bb63f",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/347",
     "authorLogin": "FlashyFlash3011"
   },
@@ -27,18 +27,18 @@
     "submissionCount": 9
   },
   "output": {
-    "summary": "Builds on PR#549 by training with 4096 context while applying full int4/6 QAT (bank included) to fit 16 layers under 16MB.",
+    "summary": "Extends the PR#549 SOTA stack to 4096 context and 16 layers while pairing nibble-packed int4 depth and int6/int4 QAT (incl. bank weights) for the 16MB record.",
     "tags": [
-      "quantization",
       "architecture",
-      "sliding-window-eval"
+      "quantization",
+      "training-schedule"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "4096-token training context with NTK-scaled Partial RoPE",
-      "Int4/Int6 QAT spanning CastedLinear and bank slices",
-      "Nibble-packed int4 export to host 16 transformer layers within 16MB"
+      "NTK-scaled Partial RoPE plus sliding eval for 4096 context training",
+      "Nibble-packed int4 layers with late STE QAT matching export precision",
+      "Full-model bank QAT and early int6 QAT to harden weights before GPTQ-lite export"
     ]
   },
   "compatibility": {

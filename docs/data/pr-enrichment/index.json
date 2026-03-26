@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-26T10:08:33.526Z",
+  "generatedAt": "2026-03-26T10:38:56.499Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
@@ -1529,16 +1529,16 @@
     },
     {
       "prNumber": 754,
-      "title": "Non-Record: 11L Parallel Muon + LeakyReLU² MLP3x + Legal TTT (val_bpb 1.1253)",
+      "title": "Non-Record: 11L Parallel Muon + LN Scale + LeakyReLU² MLP3x + Legal TTT (val_bpb 1.1215)",
       "status": "open",
-      "updatedAt": "2026-03-26T08:26:25Z",
-      "headSha": "daaad1f6faa5ee75f4de30bdce145465398304f5",
-      "generatedAt": "2026-03-26T08:38:10.112Z",
-      "summary": "Parallel Muon banking with LeakyReLU² MLP and legal score-first TTT on an 11-layer model.",
+      "updatedAt": "2026-03-26T10:32:51Z",
+      "headSha": "f7d9e9245b09ab5aac63458abe7b400d9987aa51",
+      "generatedAt": "2026-03-26T10:38:36.880Z",
+      "summary": "Parallel Muon parameter banking with depth-scaled LN and LeakyReLU² MLP3× feeds legal score-first TTT using sliding-window scoring before SGD.",
       "tags": [
         "architecture",
         "training-schedule",
-        "evaluation"
+        "quantization"
       ],
       "flags": {
         "usesValOnly": false,
@@ -2065,14 +2065,14 @@
       "prNumber": 714,
       "title": "Add 11L RotaryFix + LegalTTT + BIGRAM3072 — val_bpb 1.11869 (3-seed m…",
       "status": "open",
-      "updatedAt": "2026-03-25T13:10:39Z",
-      "headSha": "191c2134d09d6277cd10b418181e9571a53589db",
-      "generatedAt": "2026-03-25T13:32:00.087Z",
-      "summary": "Rotary NTK-scaling now respects 2K seq length while BIGRAM-3072 with late QAT and Parallel Muon feeds Legal TTT scoring under torch.no_grad.",
+      "updatedAt": "2026-03-26T10:22:21Z",
+      "headSha": "3c4db11fe4d83ec991b100adfde69d6688a234cd",
+      "generatedAt": "2026-03-26T10:38:43.468Z",
+      "summary": "Rotary NTK scaling now respects 2048 seq len in both models, paired with BIGRAM3072, prolonged late-QAT, and Legal TTT scoring/retrain protocol.",
       "tags": [
-        "architecture",
+        "attention",
         "quantization",
-        "optimizer",
+        "training-schedule",
         "evaluation"
       ],
       "flags": {
@@ -6471,14 +6471,13 @@
       "prNumber": 437,
       "title": "commit non-record",
       "status": "open",
-      "updatedAt": "2026-03-22T16:54:09Z",
+      "updatedAt": "2026-03-26T10:17:55Z",
       "headSha": "10652297740fd79c9969bbcf65729d2503cf884e",
-      "generatedAt": "2026-03-22T17:11:25.860Z",
-      "summary": "Tiny auxiliary network predicts next-token leading-space signal and injects low-rank residual logit edits via the tied embeddings while keeping the base LM fixed.",
+      "generatedAt": "2026-03-26T10:38:48.586Z",
+      "summary": "Adds a 32-dim auxiliary net predicting leading-space to nudge logits via tied-embedding low-rank residuals.",
       "tags": [
         "architecture",
         "regularization",
-        "tokenization",
         "non-record"
       ],
       "flags": {
@@ -7978,14 +7977,14 @@
       "prNumber": 347,
       "title": "LongContext 4096 + Full SOTA Stack + QAT Int4/Int6 → 16 Layers",
       "status": "open",
-      "updatedAt": "2026-03-26T10:06:13Z",
-      "headSha": "b371be9fa77efaac742207513bf336badb27652e",
-      "generatedAt": "2026-03-26T10:08:33.474Z",
-      "summary": "Builds on PR#549 by training with 4096 context while applying full int4/6 QAT (bank included) to fit 16 layers under 16MB.",
+      "updatedAt": "2026-03-26T10:22:59Z",
+      "headSha": "3c7309738145a46e465af38674bebbd2b82bb63f",
+      "generatedAt": "2026-03-26T10:38:56.447Z",
+      "summary": "Extends the PR#549 SOTA stack to 4096 context and 16 layers while pairing nibble-packed int4 depth and int6/int4 QAT (incl. bank weights) for the 16MB record.",
       "tags": [
-        "quantization",
         "architecture",
-        "sliding-window-eval"
+        "quantization",
+        "training-schedule"
       ],
       "flags": {
         "usesValOnly": false,

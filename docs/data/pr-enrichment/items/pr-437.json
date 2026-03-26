@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-22T17:11:25.860Z",
+  "generatedAt": "2026-03-26T10:38:48.586Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 437,
     "title": "commit non-record",
     "state": "open",
-    "updatedAt": "2026-03-22T16:54:09Z",
+    "updatedAt": "2026-03-26T10:17:55Z",
     "headSha": "10652297740fd79c9969bbcf65729d2503cf884e",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/437",
     "authorLogin": "jupram"
@@ -19,19 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Tiny auxiliary network predicts next-token leading-space signal and injects low-rank residual logit edits via the tied embeddings while keeping the base LM fixed.",
+    "summary": "Adds a 32-dim auxiliary net predicting leading-space to nudge logits via tied-embedding low-rank residuals.",
     "tags": [
       "architecture",
       "regularization",
-      "tokenization",
       "non-record"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Auxiliary bottleneck predicts leading-space signal",
-      "Residual logit edit projected through tied embeddings",
-      "BCE-boundary loss nudges LM logits"
+      "Tiny auxiliary MLP predicts binary next-token boundary",
+      "Low-rank residual edit projected through tied embeddings",
+      "Edit scale initialized at zero so module starts as no-op"
     ]
   },
   "compatibility": {
