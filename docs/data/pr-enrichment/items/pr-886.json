@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-26T21:12:40.932Z",
+  "generatedAt": "2026-03-26T22:12:51.987Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 886,
     "title": "RFC: A framework for deciding the n-gram question",
     "state": "open",
-    "updatedAt": "2026-03-26T20:46:36Z",
-    "headSha": "4555280179944f63c90a7c73572a6a26d8651ee0",
+    "updatedAt": "2026-03-26T22:11:08Z",
+    "headSha": "1f91dfe7c3701910c7ce43d66a6eb7fa8d97edc9",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/886",
     "authorLogin": "abaybektursun"
   },
@@ -19,18 +19,17 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Eval-time n-gram cache mixes causal hash-table counts with the base LM, improving BPB but swelling eval-time state and raising rule questions.",
+    "summary": "Eval-time n-gram caching mixes collided buckets to satisfy min-count thresholds, unlocking BPB gains while exposing 272MB eval-state growth and prompting policy fixes.",
     "tags": [
       "evaluation",
-      "compression",
       "non-record"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Causal hash-table n-gram cache mixed with neural LM outputs",
-      "All-reduce syncing keeps multi-GPU caches consistent",
-      "Proposes eval-time memory/latency caps to reflect deployment limits"
+      "eval-time n-gram cache using collisions to cross min-count thresholds",
+      "all-reduce syncing of per-GPU hash table deltas",
+      "policy proposals capping eval-time state and per-token overhead"
     ]
   },
   "compatibility": {

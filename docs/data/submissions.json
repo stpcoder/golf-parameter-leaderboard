@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-26T21:42:18.300Z",
+  "generatedAt": "2026-03-26T22:12:21.658Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "submissions": [
@@ -380,6 +380,83 @@
         "script": "https://github.com/openai/parameter-golf/blob/4ef9abf6631f13d9781d1fb91b3444dd4e2d63cc/records/track_10min_16mb/2026-03-26_Budgeted_TwoPass_Ngram_8xH100/train_gpt.py",
         "folder": "https://github.com/openai/parameter-golf/tree/4ef9abf6631f13d9781d1fb91b3444dd4e2d63cc/records/track_10min_16mb/2026-03-26_Budgeted_TwoPass_Ngram_8xH100",
         "pr": "https://github.com/openai/parameter-golf/pull/868",
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": false,
+        "hasPullRequest": true,
+        "listedInReadme": false
+      }
+    },
+    {
+      "id": "record-records-track_10min_16mb-2026-03-27_DirichletPhrase_BayesianMixing",
+      "source": "pull_request",
+      "status": "open",
+      "category": "main-track",
+      "track": {
+        "path": "records/track_10min_16mb",
+        "slug": "track_10min_16mb",
+        "label": "10 Minute / 16MB",
+        "official": true,
+        "category": "main-track"
+      },
+      "record": {
+        "folderName": "2026-03-27_DirichletPhrase_BayesianMixing",
+        "folderPath": "records/track_10min_16mb/2026-03-27_DirichletPhrase_BayesianMixing",
+        "submissionPath": "records/track_10min_16mb/2026-03-27_DirichletPhrase_BayesianMixing/submission.json",
+        "readmePath": "records/track_10min_16mb/2026-03-27_DirichletPhrase_BayesianMixing/README.md",
+        "trainLogPath": "records/track_10min_16mb/2026-03-27_DirichletPhrase_BayesianMixing/train.log",
+        "scriptPath": "records/track_10min_16mb/2026-03-27_DirichletPhrase_BayesianMixing/train_gpt.py"
+      },
+      "submission": {
+        "author": "Robert Sneiderman",
+        "githubId": "Robby955",
+        "name": "Two-Level Dirichlet Posterior Mixing (N-gram + Phrase)",
+        "blurb": "Dirichlet-Multinomial posterior predictive at two levels: 15-gram backoff (c=5.0) and phrase suffix matching (probes=[20,16], c=2.0). Neural LM as hierarchical Bayesian base measure. 3-seed mean 0.11968 BPB, std 0.000003. Removing Dirichlet from phrase mixing degrades BPB 8.9x.",
+        "date": "2026-03-27"
+      },
+      "metrics": {
+        "valBpb": 0.11968,
+        "valLoss": null,
+        "preQuantValBpb": null,
+        "preQuantValLoss": null,
+        "stepStop": null,
+        "wallclockSeconds": null,
+        "evalTimeSeconds": null
+      },
+      "artifact": {
+        "bytesTotal": 14905199,
+        "bytesCode": null,
+        "bytesModelInt8Zlib": null
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
+      "pr": {
+        "number": 900,
+        "title": "Record: Two-Level Dirichlet Posterior Mixing — 0.11968 BPB",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/900",
+        "authorLogin": "Robby955",
+        "authorName": null,
+        "createdAt": "2026-03-26T22:07:10Z",
+        "updatedAt": "2026-03-26T22:07:10Z",
+        "headSha": "1e7af66af5a76ef0e235f2ead2558eea8ee5d33c",
+        "headRepo": "Robby955/parameter-golf"
+      },
+      "links": {
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/1e7af66af5a76ef0e235f2ead2558eea8ee5d33c/records/track_10min_16mb/2026-03-27_DirichletPhrase_BayesianMixing/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/1e7af66af5a76ef0e235f2ead2558eea8ee5d33c/records/track_10min_16mb/2026-03-27_DirichletPhrase_BayesianMixing/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/1e7af66af5a76ef0e235f2ead2558eea8ee5d33c/records/track_10min_16mb/2026-03-27_DirichletPhrase_BayesianMixing/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/1e7af66af5a76ef0e235f2ead2558eea8ee5d33c/records/track_10min_16mb/2026-03-27_DirichletPhrase_BayesianMixing/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/1e7af66af5a76ef0e235f2ead2558eea8ee5d33c/records/track_10min_16mb/2026-03-27_DirichletPhrase_BayesianMixing",
+        "pr": "https://github.com/openai/parameter-golf/pull/900",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
       "provenance": {
@@ -7236,7 +7313,7 @@
         "authorLogin": "abaybektursun",
         "authorName": null,
         "createdAt": "2026-03-25T15:03:32Z",
-        "updatedAt": "2026-03-26T21:37:49Z",
+        "updatedAt": "2026-03-26T21:47:13Z",
         "headSha": "713bb3fcd9017ba01d104723b3f873201976bab8",
         "headRepo": "abaybektursun/parameter-golf"
       },
@@ -10019,6 +10096,83 @@
         "script": "https://github.com/openai/parameter-golf/blob/c156b369189207a4e5fe6c62fa035aeddd52084c/records/track_non_record_16mb/2026-03-22_11L_XSA4_EMA_Modal_1.12296_Over16MB/train_gpt.py",
         "folder": "https://github.com/openai/parameter-golf/tree/c156b369189207a4e5fe6c62fa035aeddd52084c/records/track_non_record_16mb/2026-03-22_11L_XSA4_EMA_Modal_1.12296_Over16MB",
         "pr": "https://github.com/openai/parameter-golf/pull/416",
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": false,
+        "hasPullRequest": true,
+        "listedInReadme": false
+      }
+    },
+    {
+      "id": "record-records-track_10min_16mb-2026-03-26_FreqWeightedEmbedding_1-1231",
+      "source": "pull_request",
+      "status": "open",
+      "category": "main-track",
+      "track": {
+        "path": "records/track_10min_16mb",
+        "slug": "track_10min_16mb",
+        "label": "10 Minute / 16MB",
+        "official": true,
+        "category": "main-track"
+      },
+      "record": {
+        "folderName": "2026-03-26_FreqWeightedEmbedding_1.1231",
+        "folderPath": "records/track_10min_16mb/2026-03-26_FreqWeightedEmbedding_1.1231",
+        "submissionPath": "records/track_10min_16mb/2026-03-26_FreqWeightedEmbedding_1.1231/submission.json",
+        "readmePath": "records/track_10min_16mb/2026-03-26_FreqWeightedEmbedding_1.1231/README.md",
+        "trainLogPath": "records/track_10min_16mb/2026-03-26_FreqWeightedEmbedding_1.1231/train.log",
+        "scriptPath": "records/track_10min_16mb/2026-03-26_FreqWeightedEmbedding_1.1231/train_gpt.py"
+      },
+      "submission": {
+        "author": "Liora",
+        "githubId": "YOUR_GITHUB_USERNAME",
+        "name": null,
+        "blurb": null,
+        "date": "2026-03-26T21:54:45Z"
+      },
+      "metrics": {
+        "valBpb": 1.1231,
+        "valLoss": 1.8963,
+        "preQuantValBpb": null,
+        "preQuantValLoss": null,
+        "stepStop": null,
+        "wallclockSeconds": null,
+        "evalTimeSeconds": null
+      },
+      "artifact": {
+        "bytesTotal": null,
+        "bytesCode": null,
+        "bytesModelInt8Zlib": null
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
+      "pr": {
+        "number": 898,
+        "title": "Non-record: Frequency-Weighted Embedding Quantization (1.1231 BPB)",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/898",
+        "authorLogin": "pattern4bots",
+        "authorName": null,
+        "createdAt": "2026-03-26T21:54:45Z",
+        "updatedAt": "2026-03-26T21:54:45Z",
+        "headSha": "554a6ab86eadbaf8d917dd99ee8163bde97783e8",
+        "headRepo": "pattern4bots/parameter-golf"
+      },
+      "links": {
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/554a6ab86eadbaf8d917dd99ee8163bde97783e8/records/track_10min_16mb/2026-03-26_FreqWeightedEmbedding_1.1231/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/554a6ab86eadbaf8d917dd99ee8163bde97783e8/records/track_10min_16mb/2026-03-26_FreqWeightedEmbedding_1.1231/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/554a6ab86eadbaf8d917dd99ee8163bde97783e8/records/track_10min_16mb/2026-03-26_FreqWeightedEmbedding_1.1231/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/554a6ab86eadbaf8d917dd99ee8163bde97783e8/records/track_10min_16mb/2026-03-26_FreqWeightedEmbedding_1.1231/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/554a6ab86eadbaf8d917dd99ee8163bde97783e8/records/track_10min_16mb/2026-03-26_FreqWeightedEmbedding_1.1231",
+        "pr": "https://github.com/openai/parameter-golf/pull/898",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
       "provenance": {
@@ -40043,16 +40197,16 @@
         "authorLogin": "abaybektursun",
         "authorName": null,
         "createdAt": "2026-03-26T19:03:36Z",
-        "updatedAt": "2026-03-26T20:46:36Z",
-        "headSha": "4555280179944f63c90a7c73572a6a26d8651ee0",
+        "updatedAt": "2026-03-26T22:11:08Z",
+        "headSha": "1f91dfe7c3701910c7ce43d66a6eb7fa8d97edc9",
         "headRepo": "abaybektursun/parameter-golf"
       },
       "links": {
-        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/4555280179944f63c90a7c73572a6a26d8651ee0/records/track_non_record_16mb/2026-03-26_EvalTime_NGram_ModelGrowth_Study/submission.json",
-        "readme": "https://github.com/openai/parameter-golf/blob/4555280179944f63c90a7c73572a6a26d8651ee0/records/track_non_record_16mb/2026-03-26_EvalTime_NGram_ModelGrowth_Study/README.md",
-        "trainLog": "https://github.com/openai/parameter-golf/blob/4555280179944f63c90a7c73572a6a26d8651ee0/records/track_non_record_16mb/2026-03-26_EvalTime_NGram_ModelGrowth_Study/train.log",
-        "script": "https://github.com/openai/parameter-golf/blob/4555280179944f63c90a7c73572a6a26d8651ee0/records/track_non_record_16mb/2026-03-26_EvalTime_NGram_ModelGrowth_Study/train_gpt.py",
-        "folder": "https://github.com/openai/parameter-golf/tree/4555280179944f63c90a7c73572a6a26d8651ee0/records/track_non_record_16mb/2026-03-26_EvalTime_NGram_ModelGrowth_Study",
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/1f91dfe7c3701910c7ce43d66a6eb7fa8d97edc9/records/track_non_record_16mb/2026-03-26_EvalTime_NGram_ModelGrowth_Study/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/1f91dfe7c3701910c7ce43d66a6eb7fa8d97edc9/records/track_non_record_16mb/2026-03-26_EvalTime_NGram_ModelGrowth_Study/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/1f91dfe7c3701910c7ce43d66a6eb7fa8d97edc9/records/track_non_record_16mb/2026-03-26_EvalTime_NGram_ModelGrowth_Study/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/1f91dfe7c3701910c7ce43d66a6eb7fa8d97edc9/records/track_non_record_16mb/2026-03-26_EvalTime_NGram_ModelGrowth_Study/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/1f91dfe7c3701910c7ce43d66a6eb7fa8d97edc9/records/track_non_record_16mb/2026-03-26_EvalTime_NGram_ModelGrowth_Study",
         "pr": "https://github.com/openai/parameter-golf/pull/886",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
@@ -40120,8 +40274,8 @@
         "authorLogin": "robbiebusinessacc",
         "authorName": null,
         "createdAt": "2026-03-26T19:26:32Z",
-        "updatedAt": "2026-03-26T19:28:08Z",
-        "headSha": "ddb87dee0d2254f9fc1ce2319b0b69038f7366dd",
+        "updatedAt": "2026-03-26T22:11:17Z",
+        "headSha": "d3864b39d246f989dc923f89006939dc5da28102",
         "headRepo": "robbiebusinessacc/parameter-golf"
       },
       "links": {

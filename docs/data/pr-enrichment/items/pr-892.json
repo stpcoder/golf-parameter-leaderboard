@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-26T19:43:13.547Z",
+  "generatedAt": "2026-03-26T22:12:44.438Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 892,
     "title": "Non-record: Technique Taxonomy — Tier List, Interaction Effects, and BPB Verification Tools",
     "state": "open",
-    "updatedAt": "2026-03-26T19:28:08Z",
-    "headSha": "ddb87dee0d2254f9fc1ce2319b0b69038f7366dd",
+    "updatedAt": "2026-03-26T22:11:17Z",
+    "headSha": "d3864b39d246f989dc923f89006939dc5da28102",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/892",
     "authorLogin": "robbiebusinessacc"
   },
@@ -19,17 +19,17 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Curates a tiered taxonomy of Parameter Golf techniques plus interaction and verification tools to steer non-record submissions.",
+    "summary": "Synthesizes merged Parameter Golf research into a tiered technique taxonomy, interaction matrix, and verification checklist to guide future submissions.",
     "tags": [
       "non-record",
       "evaluation"
     ],
     "usesValOnly": false,
-    "valOnlyReasoning": "Normal research summary, no val-shard training reported.",
+    "valOnlyReasoning": "",
     "techniques": [
-      "Tier list with BPB deltas aggregated from merged PRs",
-      "Interaction matrix highlighting sub-additive technique combos",
-      "Verification checklist and parameter-budget tools for legal compliance"
+      "Tiered BPB impact table across merged techniques",
+      "Interaction effects matrix for stacking guidance",
+      "BPB verification checklist plus n-gram legality tracker"
     ]
   },
   "compatibility": {

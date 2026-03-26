@@ -1,0 +1,40 @@
+{
+  "generatedAt": "2026-03-26T22:12:38.867Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 898,
+    "title": "Non-record: Frequency-Weighted Embedding Quantization (1.1231 BPB)",
+    "state": "open",
+    "updatedAt": "2026-03-26T21:54:45Z",
+    "headSha": "554a6ab86eadbaf8d917dd99ee8163bde97783e8",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/898",
+    "authorLogin": "pattern4bots"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-26_FreqWeightedEmbedding_1.1231/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Frequency-weighted embedding quantization keeps top tokens at int8 while rare ones drop to int6, concentrating precision where most text lies.",
+    "tags": [
+      "quantization",
+      "non-record"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "Not a validation-only training regime.",
+    "techniques": [
+      "Frequency-weighted embedding quantization",
+      "int8 for top 100 tokens, int6 for remaining tokens"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}
