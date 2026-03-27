@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-27T11:45:54.640Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 948,
+    "title": "Two-Level Dirichlet Posterior + Phrase Cache — 0.11556 BPB (3-seed)",
+    "state": "open",
+    "updatedAt": "2026-03-27T11:40:52Z",
+    "headSha": "89b55147bbf1d2f118660d5a3fa2ab39b47c6f41",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/948",
+    "authorLogin": "dentity007"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-27_Dirichlet_Ngram_Phrase_Cache/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Mixes EBLS neural base with two-level Dirichlet/posterior n-gram plus phrase-cache smoothing before GPTQ+LZMA compression.",
+    "tags": [
+      "architecture",
+      "quantization",
+      "compression"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Two-level Dirichlet-Multinomial smoothing blending neural, n-gram, and phrase sources",
+      "Per-order OBCL concentrations with phrase-cache probes to regulate high-order n-grams",
+      "EBLS backbone with GPTQ int6 quantization plus LZMA compression"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

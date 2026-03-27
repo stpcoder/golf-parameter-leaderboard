@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-27T05:14:45.969Z",
+  "generatedAt": "2026-03-27T11:46:07.342Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 859,
-    "title": "Non Record: 0.1582 BPB — Learned Mixer Head + No TTT + Matrix LR 0.03",
+    "title": "Record: 0.1582 BPB — Learned Mixer Head + No TTT + Matrix LR 0.03",
     "state": "open",
-    "updatedAt": "2026-03-27T05:08:22Z",
-    "headSha": "d688b1b7ae8483333dcfd44db67743e0b4e3f3c9",
+    "updatedAt": "2026-03-27T11:26:27Z",
+    "headSha": "e105777aced31916284d10f51292ecd35595d744",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/859",
     "authorLogin": "bigbag"
   },
@@ -19,18 +19,17 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Learned mixer head now trained with a higher matrix LR so it outperforms the prior PR without any TTT while staying within artifact/size limits.",
+    "summary": "Learned mixer head model drops TTT and raises matrix LR to 0.03, relying on frozen n-gram oracle to drive per-token gating.",
     "tags": [
       "architecture",
-      "optimizer",
-      "evaluation"
+      "training-schedule"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Learned mixer head combining transformer states with frozen n-gram experts",
-      "Matrix LR increased to 0.03 via large-scale screening to strengthen mixing weights",
-      "TTT removed so eval uses a single-pass, training-only mixing strategy"
+      "learned mixer head gating with frozen n-gram oracle",
+      "no test-time training with higher matrix LR",
+      "extensive hyperparameter screening for matrix LR"
     ]
   },
   "compatibility": {

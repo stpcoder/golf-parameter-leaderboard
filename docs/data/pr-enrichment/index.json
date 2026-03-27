@@ -1,8 +1,31 @@
 {
-  "generatedAt": "2026-03-27T11:15:34.244Z",
+  "generatedAt": "2026-03-27T11:46:18.058Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 948,
+      "title": "Two-Level Dirichlet Posterior + Phrase Cache — 0.11556 BPB (3-seed)",
+      "status": "open",
+      "updatedAt": "2026-03-27T11:40:52Z",
+      "headSha": "89b55147bbf1d2f118660d5a3fa2ab39b47c6f41",
+      "generatedAt": "2026-03-27T11:45:54.640Z",
+      "summary": "Mixes EBLS neural base with two-level Dirichlet/posterior n-gram plus phrase-cache smoothing before GPTQ+LZMA compression.",
+      "tags": [
+        "architecture",
+        "quantization",
+        "compression"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-948.json"
+    },
     {
       "prNumber": 947,
       "title": "Non-record: Legal Neural-Only No-TTT Alt (8xH100) val_bpb=1.1576",
@@ -678,14 +701,14 @@
       "prNumber": 911,
       "title": "Ternary Reasoner — 12L/768d Capsule-Feedback Universal Transformer",
       "status": "open",
-      "updatedAt": "2026-03-26T23:29:05Z",
-      "headSha": "0af076b075fc98ba10446d763f6f0fe61884a42f",
-      "generatedAt": "2026-03-26T23:42:59.025Z",
-      "summary": "Ternary Reasoner packs ~87M params into ~12MB via a ternary U-Net that iteratively backward-corrects with recurrent capsules, XSA, and eval caching/TTT tricks.",
+      "updatedAt": "2026-03-27T11:40:57Z",
+      "headSha": "31ab9bf817d040d988aebfc24d02c668bfd8ddac",
+      "generatedAt": "2026-03-27T11:46:02.562Z",
+      "summary": "Ternary U-Net uses iterative backward correction with capsule feedback to offset ternary noise while packing 87M params into 12MB.",
       "tags": [
-        "architecture",
         "quantization",
-        "evaluation"
+        "architecture",
+        "attention"
       ],
       "flags": {
         "usesValOnly": false,
@@ -1453,16 +1476,15 @@
     },
     {
       "prNumber": 859,
-      "title": "Non Record: 0.1582 BPB — Learned Mixer Head + No TTT + Matrix LR 0.03",
+      "title": "Record: 0.1582 BPB — Learned Mixer Head + No TTT + Matrix LR 0.03",
       "status": "open",
-      "updatedAt": "2026-03-27T05:08:22Z",
-      "headSha": "d688b1b7ae8483333dcfd44db67743e0b4e3f3c9",
-      "generatedAt": "2026-03-27T05:14:45.969Z",
-      "summary": "Learned mixer head now trained with a higher matrix LR so it outperforms the prior PR without any TTT while staying within artifact/size limits.",
+      "updatedAt": "2026-03-27T11:26:27Z",
+      "headSha": "e105777aced31916284d10f51292ecd35595d744",
+      "generatedAt": "2026-03-27T11:46:07.342Z",
+      "summary": "Learned mixer head model drops TTT and raises matrix LR to 0.03, relying on frozen n-gram oracle to drive per-token gating.",
       "tags": [
         "architecture",
-        "optimizer",
-        "evaluation"
+        "training-schedule"
       ],
       "flags": {
         "usesValOnly": false,
@@ -9647,14 +9669,13 @@
       "prNumber": 347,
       "title": "LongContext 4096 + Full SOTA Stack + QAT Int4/Int6 → 16 Layers",
       "status": "open",
-      "updatedAt": "2026-03-27T11:10:34Z",
-      "headSha": "74c4ce7d489a6afb474cd18a3c6250cc0a16a8a1",
-      "generatedAt": "2026-03-27T11:15:34.195Z",
-      "summary": "Combines PR#549’s full stack with 4k context and expanded quantization experiments (int4 nibble packing, bank QAT, 16L depth) to prep export-ready artifacts.",
+      "updatedAt": "2026-03-27T11:25:00Z",
+      "headSha": "d1563e1aae34773a991fb584ae1d73a563452cb3",
+      "generatedAt": "2026-03-27T11:46:18.007Z",
+      "summary": "Extends PR#549’s SOTA stack to 4096 context while unifying GPTQ-lite int6/int4 QAT (now covering bank weights) to fit 16 layers under 16MB.",
       "tags": [
-        "architecture",
         "quantization",
-        "evaluation"
+        "architecture"
       ],
       "flags": {
         "usesValOnly": false,
