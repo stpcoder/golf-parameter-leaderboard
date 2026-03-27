@@ -1,8 +1,53 @@
 {
-  "generatedAt": "2026-03-27T19:18:19.678Z",
+  "generatedAt": "2026-03-27T19:48:10.645Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 978,
+      "title": "Rerun of #972 with actual full-vocab normalization",
+      "status": "open",
+      "updatedAt": "2026-03-27T19:45:11Z",
+      "headSha": "6aada6ccb6af51539c9b2a11292f95284dfe9b62",
+      "generatedAt": "2026-03-27T19:47:59.291Z",
+      "summary": "Normalizes hashed 1024-token n-gram counts in sliding eval before Bayesian blending with the neural prior to ensure the blended scorer is honestly computed.",
+      "tags": [
+        "evaluation",
+        "regularization",
+        "mixed-precision"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-978.json"
+    },
+    {
+      "prNumber": 977,
+      "title": "LeakyReLU(0.75)² + Legal TTT + Parallel Muon — 1.1185 BPB (3-seed mean)",
+      "status": "open",
+      "updatedAt": "2026-03-27T19:37:17Z",
+      "headSha": "df76b90e765c0346c7a4816c1b7e220915fccde3",
+      "generatedAt": "2026-03-27T19:48:03.881Z",
+      "summary": "Tuned a legal-TTT Muon model by raising the LeakyReLU negative slope to 0.75 and slightly upping LR/warmdown to leverage stronger gradients under 16MB.",
+      "tags": [
+        "architecture",
+        "training-schedule"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-977.json"
+    },
     {
       "prNumber": 976,
       "title": "Add 1.20 BPB submission with Legal TTT and Calibration (9L/448D)",
@@ -93,29 +138,6 @@
         "valOnlyMatchesCollector": true
       },
       "file": "items/pr-973.json"
-    },
-    {
-      "prNumber": 972,
-      "title": "Normalized N-gram + Bayesian First-Match (val_bpb 0.3922)",
-      "status": "open",
-      "updatedAt": "2026-03-27T18:48:09Z",
-      "headSha": "d55045ef7728b4b7a38198f8fd6429c9ffb2ac61",
-      "generatedAt": "2026-03-27T19:18:14.585Z",
-      "summary": "Full-vocab normalized n-gram distributions fused with a Bayesian first-match prior, shared cache, and XSA-enhanced transformer plus GELU pre-enrichment.",
-      "tags": [
-        "quantization",
-        "architecture",
-        "evaluation"
-      ],
-      "flags": {
-        "usesValOnly": false,
-        "usesValOnlyAi": false,
-        "usesValOnlyCollector": false
-      },
-      "compatibility": {
-        "valOnlyMatchesCollector": true
-      },
-      "file": "items/pr-972.json"
     },
     {
       "prNumber": 970,
@@ -1160,16 +1182,16 @@
     },
     {
       "prNumber": 911,
-      "title": "Ternary Reasoner — 12L/768d Capsule-Feedback Universal Transformer",
+      "title": "KoopCaps-HRM Ternary Reasoner — Koopman Capsule Dynamics + Adaptive Halting",
       "status": "open",
-      "updatedAt": "2026-03-27T11:40:57Z",
-      "headSha": "31ab9bf817d040d988aebfc24d02c668bfd8ddac",
-      "generatedAt": "2026-03-27T11:46:02.562Z",
-      "summary": "Ternary U-Net uses iterative backward correction with capsule feedback to offset ternary noise while packing 87M params into 12MB.",
+      "updatedAt": "2026-03-27T19:43:02Z",
+      "headSha": "53ac82e4752efed690284462a61d90dd951655c0",
+      "generatedAt": "2026-03-27T19:48:10.507Z",
+      "summary": "Ternary U-Net with Koopman-driven capsules iteratively predicts corrective updates, coupling Hadamard feedback with adaptive halting and sliding-window carry.",
       "tags": [
-        "quantization",
         "architecture",
-        "attention"
+        "quantization",
+        "evaluation"
       ],
       "flags": {
         "usesValOnly": false,

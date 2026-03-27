@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-27T11:46:02.562Z",
+  "generatedAt": "2026-03-27T19:48:10.507Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 911,
-    "title": "Ternary Reasoner — 12L/768d Capsule-Feedback Universal Transformer",
+    "title": "KoopCaps-HRM Ternary Reasoner — Koopman Capsule Dynamics + Adaptive Halting",
     "state": "open",
-    "updatedAt": "2026-03-27T11:40:57Z",
-    "headSha": "31ab9bf817d040d988aebfc24d02c668bfd8ddac",
+    "updatedAt": "2026-03-27T19:43:02Z",
+    "headSha": "53ac82e4752efed690284462a61d90dd951655c0",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/911",
     "authorLogin": "Akhilesh-Gogikar"
   },
@@ -19,18 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Ternary U-Net uses iterative backward correction with capsule feedback to offset ternary noise while packing 87M params into 12MB.",
+    "summary": "Ternary U-Net with Koopman-driven capsules iteratively predicts corrective updates, coupling Hadamard feedback with adaptive halting and sliding-window carry.",
     "tags": [
-      "quantization",
       "architecture",
-      "attention"
+      "quantization",
+      "evaluation"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "ternary quantized U-Net",
-      "iterative backward correction with capsule feedback",
-      "Hadamard gating plus VRL for semantic flow"
+      "Ternary U-Net with base-3 packing",
+      "Koopman capsule prediction with Hadamard-gated feedback",
+      "Adaptive halting plus cross-window capsule carry in sliding eval"
     ]
   },
   "compatibility": {

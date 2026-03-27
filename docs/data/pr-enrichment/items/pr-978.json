@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-27T19:47:59.291Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 978,
+    "title": "Rerun of #972 with actual full-vocab normalization",
+    "state": "open",
+    "updatedAt": "2026-03-27T19:45:11Z",
+    "headSha": "6aada6ccb6af51539c9b2a11292f95284dfe9b62",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/978",
+    "authorLogin": "AnirudhRahul"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-27_Normalized_Ngram_Bayesian_FirstMatch_0.3922/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Normalizes hashed 1024-token n-gram counts in sliding eval before Bayesian blending with the neural prior to ensure the blended scorer is honestly computed.",
+    "tags": [
+      "evaluation",
+      "regularization",
+      "mixed-precision"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "full-vocab normalized 1024-token n-gram scoring",
+      "Bayesian first-match blend with neural prior",
+      "Int6 QAT quantized model artifact"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

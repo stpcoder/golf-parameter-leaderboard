@@ -1,0 +1,40 @@
+{
+  "generatedAt": "2026-03-27T19:48:03.881Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 977,
+    "title": "LeakyReLU(0.75)² + Legal TTT + Parallel Muon — 1.1185 BPB (3-seed mean)",
+    "state": "open",
+    "updatedAt": "2026-03-27T19:37:17Z",
+    "headSha": "df76b90e765c0346c7a4816c1b7e220915fccde3",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/977",
+    "authorLogin": "michaelwinczuk"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-27_LeakyReLU075_LegalTTT_ParallelMuon_TunedLR/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Tuned a legal-TTT Muon model by raising the LeakyReLU negative slope to 0.75 and slightly upping LR/warmdown to leverage stronger gradients under 16MB.",
+    "tags": [
+      "architecture",
+      "training-schedule"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "LeakyReLU negative_slope tuned to 0.75",
+      "Matrix LR nudged to 0.027 with WARMDOWN_ITERS 3700"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}
