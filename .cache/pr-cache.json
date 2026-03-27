@@ -1,8 +1,8 @@
 {
   "version": 1,
   "sourceRepo": "openai/parameter-golf",
-  "generatedAt": "2026-03-27T07:44:48.798Z",
-  "lastSeenUpdatedAt": "2026-03-27T07:43:05Z",
+  "generatedAt": "2026-03-27T08:14:47.082Z",
+  "lastSeenUpdatedAt": "2026-03-27T08:13:22Z",
   "prs": {
     "1": {
       "number": 1,
@@ -32845,7 +32845,7 @@
     },
     "386": {
       "number": 386,
-      "updatedAt": "2026-03-26T18:09:26Z",
+      "updatedAt": "2026-03-27T08:13:22Z",
       "pr": {
         "number": 386,
         "title": "Depth-recurrent transformer: shared block × 12 passes, val_bpb 1.4061, 4.39MB artifact",
@@ -32856,8 +32856,8 @@
         "authorLogin": "Sambhav242005",
         "authorName": null,
         "createdAt": "2026-03-22T01:35:57Z",
-        "updatedAt": "2026-03-26T18:09:26Z",
-        "headSha": "ba56446c34928d1f188add91bc2eb9d74eb604ed",
+        "updatedAt": "2026-03-27T08:13:22Z",
+        "headSha": "9df9678a6c16d997c47021966de12c730e188292",
         "headRepo": "Sambhav242005/parameter-golf"
       },
       "submissions": []
@@ -77446,7 +77446,7 @@
     },
     "894": {
       "number": 894,
-      "updatedAt": "2026-03-27T07:25:27Z",
+      "updatedAt": "2026-03-27T08:08:23Z",
       "pr": {
         "number": 894,
         "title": "Non-record: Semantic Tube Regularization — Geometry Improves, BPB Doesn't (Compute–Regularization Tradeoff)",
@@ -77457,8 +77457,8 @@
         "authorLogin": "albertorkive",
         "authorName": null,
         "createdAt": "2026-03-26T19:46:10Z",
-        "updatedAt": "2026-03-27T07:25:27Z",
-        "headSha": "b6b46921b1a93f27e2034c8c99a65e7330ea1dac",
+        "updatedAt": "2026-03-27T08:08:23Z",
+        "headSha": "f47a1963316eb36441693f13fc6c7bdcadacefdf",
         "headRepo": "albertorkive/parameter-golf"
       },
       "submissions": []
@@ -78534,7 +78534,7 @@
     },
     "908": {
       "number": 908,
-      "updatedAt": "2026-03-27T07:29:34Z",
+      "updatedAt": "2026-03-27T08:01:05Z",
       "pr": {
         "number": 908,
         "title": "Non-record: Higher-Rank Output Heads — Standard Tied Head Wins on a Frontier 11L Baseline",
@@ -78545,7 +78545,7 @@
         "authorLogin": "albertorkive",
         "authorName": null,
         "createdAt": "2026-03-26T23:06:50Z",
-        "updatedAt": "2026-03-27T07:29:34Z",
+        "updatedAt": "2026-03-27T08:01:05Z",
         "headSha": "c233e73bc9c29ea1aefb1bdf80fdacbb9c85f100",
         "headRepo": "albertorkive/parameter-golf"
       },
