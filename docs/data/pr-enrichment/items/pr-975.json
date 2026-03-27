@@ -1,0 +1,41 @@
+{
+  "generatedAt": "2026-03-27T19:17:57.639Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 975,
+    "title": "Non-record: QNA + SQWA compression thesis (8xH100 SXM)",
+    "state": "open",
+    "updatedAt": "2026-03-27T18:54:04Z",
+    "headSha": "fe607e10da1153321fe110b83f634a69a71df8ac",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/975",
+    "authorLogin": "Abhishek8108"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-03-27_QNA_SQWA_CompressionThesis_8xH100/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Targets the int6 artifact by training with LR-scaled quantization noise and averaging quantized-dequantized EMA snapshots to live in a quant-friendly subspace.",
+    "tags": [
+      "quantization",
+      "training-schedule",
+      "non-record"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Quantization Noise Annealing via LR-scaled uniform int6 noise",
+      "Stochastic Quantized Weight Averaging on EMA snapshots"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

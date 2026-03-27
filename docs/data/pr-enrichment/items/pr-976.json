@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-27T19:17:53.893Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 976,
+    "title": "Add 1.20 BPB submission with Legal TTT and Calibration (9L/448D)",
+    "state": "open",
+    "updatedAt": "2026-03-27T18:59:26Z",
+    "headSha": "c75bbf0e6247636389af611a3a61956e79334ceb",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/976",
+    "authorLogin": "Vibes-me"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-27_LegalTTT_9L_448D/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Standalone 9-layer GPT links Legal TTT schedule with temperature calibration over seq2048 context before int8+zlib quantization for the 10-min/16MB run.",
+    "tags": [
+      "architecture",
+      "training-schedule",
+      "quantization"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Legal TTT schedule tuning",
+      "Long-context seq2048 GPT9L recipe",
+      "Temperature calibration + int8+zlib quantization"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

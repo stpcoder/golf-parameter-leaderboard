@@ -1,16 +1,84 @@
 {
-  "generatedAt": "2026-03-27T18:47:42.592Z",
+  "generatedAt": "2026-03-27T19:18:19.678Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
     {
+      "prNumber": 976,
+      "title": "Add 1.20 BPB submission with Legal TTT and Calibration (9L/448D)",
+      "status": "open",
+      "updatedAt": "2026-03-27T18:59:26Z",
+      "headSha": "c75bbf0e6247636389af611a3a61956e79334ceb",
+      "generatedAt": "2026-03-27T19:17:53.893Z",
+      "summary": "Standalone 9-layer GPT links Legal TTT schedule with temperature calibration over seq2048 context before int8+zlib quantization for the 10-min/16MB run.",
+      "tags": [
+        "architecture",
+        "training-schedule",
+        "quantization"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-976.json"
+    },
+    {
+      "prNumber": 975,
+      "title": "Non-record: QNA + SQWA compression thesis (8xH100 SXM)",
+      "status": "open",
+      "updatedAt": "2026-03-27T18:54:04Z",
+      "headSha": "fe607e10da1153321fe110b83f634a69a71df8ac",
+      "generatedAt": "2026-03-27T19:17:57.639Z",
+      "summary": "Targets the int6 artifact by training with LR-scaled quantization noise and averaging quantized-dequantized EMA snapshots to live in a quant-friendly subspace.",
+      "tags": [
+        "quantization",
+        "training-schedule",
+        "non-record"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-975.json"
+    },
+    {
+      "prNumber": 974,
+      "title": "Non-record: Random Linear Map Adapter Projections — 1.21MB artifact (val_bpb=1.6542)",
+      "status": "open",
+      "updatedAt": "2026-03-27T19:04:07Z",
+      "headSha": "be8e5b938d2b3f04bb4f78355d8e718f8fa315c0",
+      "generatedAt": "2026-03-27T19:18:02.823Z",
+      "summary": "Replacing key projections with seed-regenerated frozen random maps plus tiny LoRA-style adapters to keep most weights implicit.",
+      "tags": [
+        "architecture",
+        "non-record"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-974.json"
+    },
+    {
       "prNumber": 973,
       "title": "Non-record: BESE Novel Tokenizer — 38-Token Structured Alphabet + BPE, 288 Vocab, 12.9MB",
       "status": "open",
-      "updatedAt": "2026-03-27T18:46:12Z",
-      "headSha": "37a8ee106e06733102d3a8fbcb4edfe6008a6809",
-      "generatedAt": "2026-03-27T18:47:29.454Z",
-      "summary": "BESE swaps the default 1,024-token BPE for a 38-token structured alphabet plus 250 BPE merges, cutting vocab size to reclaim embedding budget for extra depth.",
+      "updatedAt": "2026-03-27T18:49:39Z",
+      "headSha": "3be7151200565147b2d58a550122a22f5f7aec6e",
+      "generatedAt": "2026-03-27T19:18:07.271Z",
+      "summary": "BESE swaps the 1,024-token vocab for a 38-token structured alphabet with 250 BPE merges to cut embeddings and free params for extra layers.",
       "tags": [
         "tokenization",
         "compression",
@@ -30,14 +98,14 @@
       "prNumber": 972,
       "title": "Normalized N-gram + Bayesian First-Match (val_bpb 0.3922)",
       "status": "open",
-      "updatedAt": "2026-03-27T18:47:03Z",
+      "updatedAt": "2026-03-27T18:48:09Z",
       "headSha": "d55045ef7728b4b7a38198f8fd6429c9ffb2ac61",
-      "generatedAt": "2026-03-27T18:47:33.812Z",
-      "summary": "Combines full-vocab normalized n-gram scoring with Bayesian first-match smoothing, two-phase shared cache, and XSA-enhanced 10L transformer pre-enrichment.",
+      "generatedAt": "2026-03-27T19:18:14.585Z",
+      "summary": "Full-vocab normalized n-gram distributions fused with a Bayesian first-match prior, shared cache, and XSA-enhanced transformer plus GELU pre-enrichment.",
       "tags": [
-        "evaluation",
-        "attention",
-        "architecture"
+        "quantization",
+        "architecture",
+        "evaluation"
       ],
       "flags": {
         "usesValOnly": false,
@@ -1072,12 +1140,13 @@
       "prNumber": 913,
       "title": "Record: Cache Is All You Need — val_bpb 0.0887, 622KB artifact (3-seed mean)",
       "status": "open",
-      "updatedAt": "2026-03-27T04:54:23Z",
+      "updatedAt": "2026-03-27T19:16:01Z",
       "headSha": "64c9d07a00e618ebd4f74ee9b2e2d6f2a7ef4f58",
-      "generatedAt": "2026-03-27T05:14:41.654Z",
-      "summary": "Eval-only n-gram and phrase caching with adaptive blending augments the tiny GPT baseline scoring to leverage longer contexts for BPB gains.",
+      "generatedAt": "2026-03-27T19:18:19.546Z",
+      "summary": "Adds an eval-time adaptive n-gram and phrase cache atop the tiny GPT baseline, blending logits per sliding window chunk with entropy-weighted mixing.",
       "tags": [
-        "evaluation"
+        "evaluation",
+        "sliding-window-eval"
       ],
       "flags": {
         "usesValOnly": false,

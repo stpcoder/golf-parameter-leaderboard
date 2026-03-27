@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-27T18:47:33.812Z",
+  "generatedAt": "2026-03-27T19:18:14.585Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 972,
     "title": "Normalized N-gram + Bayesian First-Match (val_bpb 0.3922)",
     "state": "open",
-    "updatedAt": "2026-03-27T18:47:03Z",
+    "updatedAt": "2026-03-27T18:48:09Z",
     "headSha": "d55045ef7728b4b7a38198f8fd6429c9ffb2ac61",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/972",
     "authorLogin": "Idan3011"
@@ -19,18 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Combines full-vocab normalized n-gram scoring with Bayesian first-match smoothing, two-phase shared cache, and XSA-enhanced 10L transformer pre-enrichment.",
+    "summary": "Full-vocab normalized n-gram distributions fused with a Bayesian first-match prior, shared cache, and XSA-enhanced transformer plus GELU pre-enrichment.",
     "tags": [
-      "evaluation",
-      "attention",
-      "architecture"
+      "quantization",
+      "architecture",
+      "evaluation"
     ],
     "usesValOnly": false,
-    "valOnlyReasoning": "",
+    "valOnlyReasoning": "Not a val-only training regime.",
     "techniques": [
-      "Full-vocab 1024-token normalized n-gram scoring with beta=2 neural prior mixing",
-      "Two-phase shared cache with first-match backoff across orders 11→2",
-      "XSA on last layers plus GELU pre-enrichment in 10L 512d backbone"
+      "1024-token normalized n-gram scoring with Bayesian first-match blending",
+      "Two-phase shared cache feeding XSA+GELU-pre-enrichment transformer",
+      "Int6 QAT quantization with EMA-accelerated Muon+AdamW training"
     ]
   },
   "compatibility": {
