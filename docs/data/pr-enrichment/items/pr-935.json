@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-27T05:44:30.064Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 935,
+    "title": "Non-record: add HelixRecur v2 shared-depth recurrence submission",
+    "state": "open",
+    "updatedAt": "2026-03-27T05:25:46Z",
+    "headSha": "63b51eef14f337219ff6fe6c9d5bdde6c09311b9",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/935",
+    "authorLogin": "fumbl8"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-03-26_HelixRecur_v2/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "HelixRecur v2 reuses six shared transformer blocks across 11 virtual depths and adds a tiny depth-conditioned scalar modulation table for compact recurrence exploration.",
+    "tags": [
+      "architecture",
+      "training-schedule",
+      "non-record"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Shared-depth recurrence stack over a custom pass schedule",
+      "11×4 virtual-depth table modulating LN/attention/MLP scales",
+      "Retention of donor BigramHash+SmearGate pathways"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

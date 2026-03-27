@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-27T01:44:17.135Z",
+  "generatedAt": "2026-03-27T05:44:50.327Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 818,
     "title": "[record] add HWNODE record - 0.5527",
     "state": "open",
-    "updatedAt": "2026-03-27T01:16:39Z",
+    "updatedAt": "2026-03-27T05:14:21Z",
     "headSha": "54e7686674675775fe43e372d9bf6d5c1e428dab",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/818",
     "authorLogin": "lucamignatti"
@@ -19,16 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Replaces MLPs with spectral-normalized Hammerstein-Wiener Neural ODEs that reuse a shared linear core plus nonlinearities to generate Taylor-expanded virtual depth.",
+    "summary": "Replaces MLPs with shared Hammerstein-Wiener Neural ODE blocks that reuse a Taylor-expanded linear core between nonlinearities to generate virtual depth while applying spectral normalization.",
     "tags": [
       "architecture",
+      "quantization",
       "regularization"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Spectral-normalized HWNODE block wraps a linear ODE core with nonlinearities",
-      "Taylor-series approximation of the matrix exponential to efficiently generate virtual layers"
+      "shared HWNODE block with Taylor-expanded linear flow",
+      "spectral normalization for stability",
+      "virtual depth by looping nonlinear-wrapped ODE steps"
     ]
   },
   "compatibility": {

@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-27T05:14:55.665Z",
+  "generatedAt": "2026-03-27T05:44:59.417Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 182,
     "title": "Non-record: Linearized Neural Memory + TTT (val_bpb=1.1844)",
     "state": "open",
-    "updatedAt": "2026-03-27T05:11:33Z",
-    "headSha": "1c7542315aa1e967742f53641229dd3c142b759c",
+    "updatedAt": "2026-03-27T05:26:05Z",
+    "headSha": "b9370c00a78769e7553be6ad2275f51e7d612816",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/182",
     "authorLogin": "mihir-s-05"
   },
@@ -19,18 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Linearized Titans-style neural memory per block with LoRA TTT, Muon weight decay, and int6/FP16 mixing for a compact 10-layer model.",
+    "summary": "Adds linearized Titans-style neural memory per block via causal cumsum attention, paired with LoRA TTT eval, int6 quantization, Muon WD, and spectral init.",
     "tags": [
       "architecture",
+      "attention",
       "quantization",
       "regularization"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Linearized Titans-style neural memory per block",
-      "LoRA TTT adaptation on Q/K/lm_head",
-      "int6 middle-layer quantization with FP16 embedding bypass"
+      "Linearized Titans-style neural memory updates via causal cumsum attention",
+      "LoRA TTT eval with overtone init and phase-transition residual mixing",
+      "Int6 quantization plus Muon decoupled weight decay and FP16 embedding bypass"
     ]
   },
   "compatibility": {

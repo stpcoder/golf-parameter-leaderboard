@@ -1,8 +1,31 @@
 {
-  "generatedAt": "2026-03-27T05:14:55.689Z",
+  "generatedAt": "2026-03-27T05:44:59.443Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 935,
+      "title": "Non-record: add HelixRecur v2 shared-depth recurrence submission",
+      "status": "open",
+      "updatedAt": "2026-03-27T05:25:46Z",
+      "headSha": "63b51eef14f337219ff6fe6c9d5bdde6c09311b9",
+      "generatedAt": "2026-03-27T05:44:30.064Z",
+      "summary": "HelixRecur v2 reuses six shared transformer blocks across 11 virtual depths and adds a tiny depth-conditioned scalar modulation table for compact recurrence exploration.",
+      "tags": [
+        "architecture",
+        "training-schedule",
+        "non-record"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-935.json"
+    },
     {
       "prNumber": 934,
       "title": "WIP: 1.1xxx BPB - MDL-T Stack (LeakyReLU² + EMA + GPTQ-lite + LateQAT + warmdown3500 + int6+zstd-22)",
@@ -54,10 +77,10 @@
       "prNumber": 932,
       "title": "Non-record: CoDA-GQA Differential Attention — First Differential Attention Submission (val_bpb=1.1580)",
       "status": "open",
-      "updatedAt": "2026-03-27T04:33:36Z",
+      "updatedAt": "2026-03-27T05:23:36Z",
       "headSha": "99a188bff6369b1cb74515f0b283b1ffd0cc2423",
-      "generatedAt": "2026-03-27T04:43:42.472Z",
-      "summary": "Applies CoDA-GQA differential attention with orthogonal noise query rotation and gated subtraction to sharpen Transformer attention without an extra W_q projection.",
+      "generatedAt": "2026-03-27T05:44:34.378Z",
+      "summary": "Adds CoDA-GQA differential attention that subtracts a gated, orthogonally rotated noise stream from standard SDPA outputs without needing a second query projection.",
       "tags": [
         "attention",
         "architecture",
@@ -700,15 +723,15 @@
       "prNumber": 893,
       "title": "Record: Two-Pass Order-12 N-gram Backoff + Parallel Muon — val_bpb 0.1310 (3-seed)",
       "status": "open",
-      "updatedAt": "2026-03-27T04:12:39Z",
-      "headSha": "30f414b5cd732070f5df466f1938ad033c288c65",
-      "generatedAt": "2026-03-27T04:13:49.539Z",
-      "summary": "11L Parallel Muon transformer uses a two-pass order-12 n-gram backoff cache rescoring pipeline with BigramHash/Gated Attention and GPTQ-lite int6 quantization.",
+      "updatedAt": "2026-03-27T05:19:52Z",
+      "headSha": "aff6a980cded172e2bafc44061323fbd591a7c89",
+      "generatedAt": "2026-03-27T05:44:38.589Z",
+      "summary": "Parallel Muon 11-layer transformer with GPTQ-lite quantization rescored via two-pass order-12 N-gram backoff and entropy-adaptive blending.",
       "tags": [
         "muon",
         "architecture",
-        "evaluation",
-        "quantization"
+        "quantization",
+        "evaluation"
       ],
       "flags": {
         "usesValOnly": false,
@@ -791,12 +814,13 @@
       "prNumber": 886,
       "title": "RFC: A framework for deciding the n-gram question",
       "status": "open",
-      "updatedAt": "2026-03-27T00:15:29Z",
-      "headSha": "b564a7f61ae3e6a670183ab8d94a4e10793a38bc",
-      "generatedAt": "2026-03-27T00:43:51.002Z",
-      "summary": "Strictly causal eval-time n-gram caching mixes hash-collided counts with model logits while proposing auxiliary-state and latency caps to curb eval growth.",
+      "updatedAt": "2026-03-27T05:36:34Z",
+      "headSha": "638c49b75be824b691d6a8679d97b1edfdfdcd51",
+      "generatedAt": "2026-03-27T05:44:42.636Z",
+      "summary": "Studied eval-time n-gram caching that stays causal but bloats hash tables to hundreds of MB, highlighting the artifact vs. eval-state gap and proposing caps.",
       "tags": [
         "evaluation",
+        "compression",
         "non-record"
       ],
       "flags": {
@@ -1846,12 +1870,13 @@
       "prNumber": 818,
       "title": "[record] add HWNODE record - 0.5527",
       "status": "open",
-      "updatedAt": "2026-03-27T01:16:39Z",
+      "updatedAt": "2026-03-27T05:14:21Z",
       "headSha": "54e7686674675775fe43e372d9bf6d5c1e428dab",
-      "generatedAt": "2026-03-27T01:44:17.135Z",
-      "summary": "Replaces MLPs with spectral-normalized Hammerstein-Wiener Neural ODEs that reuse a shared linear core plus nonlinearities to generate Taylor-expanded virtual depth.",
+      "generatedAt": "2026-03-27T05:44:50.327Z",
+      "summary": "Replaces MLPs with shared Hammerstein-Wiener Neural ODE blocks that reuse a Taylor-expanded linear core between nonlinearities to generate virtual depth while applying spectral normalization.",
       "tags": [
         "architecture",
+        "quantization",
         "regularization"
       ],
       "flags": {
@@ -12129,12 +12154,13 @@
       "prNumber": 182,
       "title": "Non-record: Linearized Neural Memory + TTT (val_bpb=1.1844)",
       "status": "open",
-      "updatedAt": "2026-03-27T05:11:33Z",
-      "headSha": "1c7542315aa1e967742f53641229dd3c142b759c",
-      "generatedAt": "2026-03-27T05:14:55.665Z",
-      "summary": "Linearized Titans-style neural memory per block with LoRA TTT, Muon weight decay, and int6/FP16 mixing for a compact 10-layer model.",
+      "updatedAt": "2026-03-27T05:26:05Z",
+      "headSha": "b9370c00a78769e7553be6ad2275f51e7d612816",
+      "generatedAt": "2026-03-27T05:44:59.417Z",
+      "summary": "Adds linearized Titans-style neural memory per block via causal cumsum attention, paired with LoRA TTT eval, int6 quantization, Muon WD, and spectral init.",
       "tags": [
         "architecture",
+        "attention",
         "quantization",
         "regularization"
       ],

@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-27T04:43:42.472Z",
+  "generatedAt": "2026-03-27T05:44:34.378Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 932,
     "title": "Non-record: CoDA-GQA Differential Attention — First Differential Attention Submission (val_bpb=1.1580)",
     "state": "open",
-    "updatedAt": "2026-03-27T04:33:36Z",
+    "updatedAt": "2026-03-27T05:23:36Z",
     "headSha": "99a188bff6369b1cb74515f0b283b1ffd0cc2423",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/932",
     "authorLogin": "anthony-maio"
@@ -19,7 +19,7 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Applies CoDA-GQA differential attention with orthogonal noise query rotation and gated subtraction to sharpen Transformer attention without an extra W_q projection.",
+    "summary": "Adds CoDA-GQA differential attention that subtracts a gated, orthogonally rotated noise stream from standard SDPA outputs without needing a second query projection.",
     "tags": [
       "attention",
       "architecture",
@@ -28,9 +28,9 @@
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "orthogonal noise query rotation",
-      "gated subtraction of noise attention",
-      "RMS-normed signal recombination"
+      "Orthogonal rotation of attention query for noise stream",
+      "Gated subtraction of signal and noise followed by RMSNorm",
+      "Reuses same KV cache to avoid extra W_q matrix"
     ]
   },
   "compatibility": {

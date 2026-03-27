@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-27T00:43:51.002Z",
+  "generatedAt": "2026-03-27T05:44:42.636Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 886,
     "title": "RFC: A framework for deciding the n-gram question",
     "state": "open",
-    "updatedAt": "2026-03-27T00:15:29Z",
-    "headSha": "b564a7f61ae3e6a670183ab8d94a4e10793a38bc",
+    "updatedAt": "2026-03-27T05:36:34Z",
+    "headSha": "638c49b75be824b691d6a8679d97b1edfdfdcd51",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/886",
     "authorLogin": "abaybektursun"
   },
@@ -19,17 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Strictly causal eval-time n-gram caching mixes hash-collided counts with model logits while proposing auxiliary-state and latency caps to curb eval growth.",
+    "summary": "Studied eval-time n-gram caching that stays causal but bloats hash tables to hundreds of MB, highlighting the artifact vs. eval-state gap and proposing caps.",
     "tags": [
       "evaluation",
+      "compression",
       "non-record"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "causal eval-time n-gram caches",
-      "hash collision counts trigger min_count threshold",
-      "auxiliary-state and per-token-latency cap proposal"
+      "eval-time n-gram hash-table mixing",
+      "collision-normalization analysis",
+      "auxiliary-state and per-token overhead caps"
     ]
   },
   "compatibility": {
