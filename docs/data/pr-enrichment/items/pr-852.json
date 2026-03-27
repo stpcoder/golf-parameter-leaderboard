@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-26T16:10:30.275Z",
+  "generatedAt": "2026-03-27T01:13:43.747Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 852,
     "title": "Hymba-11L: SOTA High-Density Takeover (1.1189 BPB)",
     "state": "open",
-    "updatedAt": "2026-03-26T15:42:17Z",
+    "updatedAt": "2026-03-27T00:48:50Z",
     "headSha": "b8b44bd26693031d7058a7b1021f35b947bb8536",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/852",
     "authorLogin": "Prush69"
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Hybrid 11-layer Selective Scan + Rotary attention uses parallel Muon sharding and reclaimed time to run 3-epoch test-time training with QAT.",
+    "summary": "11-layer hybrid with Selective Scan+Rotary, overlapping sharded Muon optimizer and 3D parameter banking to enable 3-epoch test-time adaptation with TurboQuant QAT.",
     "tags": [
-      "architecture",
       "optimizer",
-      "quantization",
-      "training-schedule"
+      "architecture",
+      "training-schedule",
+      "quantization"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Selective Scan (Mamba) hybrid with Rotary attention",
-      "Parallel Muon optimizer overlaps gradient reduce_scatter/all_gather with Newton-Schulz orthogonalization",
-      "3-epoch TTT plus TurboQuant QAT and BigramHash embeddings"
+      "Sharded asynchronous Muon optimizer",
+      "3D parameter banking for bulk sharding",
+      "TurboQuant QAT + LeakyReLU acceleration"
     ]
   },
   "compatibility": {

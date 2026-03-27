@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-26T01:06:04.658Z",
+  "generatedAt": "2026-03-27T01:13:51.574Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 786,
     "title": "0.8128 BPB: Classical Compression Eval + N-gram Backoff on PR #549 Base",
     "state": "open",
-    "updatedAt": "2026-03-26T00:54:05Z",
+    "updatedAt": "2026-03-27T01:06:21Z",
     "headSha": "a805646e68718b5416acc9e57795fb71ba1d5af9",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/786",
     "authorLogin": "shinegami-2002"
@@ -19,7 +19,7 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Eval-time n-gram backoff with entropy-adaptive mixing augments the PR#549 base to fuse classical compression stats into the neural sliding-window pass.",
+    "summary": "Eval-time augmentation mixes multi-order n-gram backoff with entropy-adaptive weights over the PR #549 base to capture local repetition without extra artifacts.",
     "tags": [
       "evaluation",
       "compression"
@@ -27,8 +27,9 @@
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "- Multi-order n-gram backoff with entropy-adaptive alpha mixing",
-      "- Vectorized numpy hash tables and scatter-update evaluation pipeline"
+      "Multi-order n-gram backoff",
+      "Entropy-adaptive neural/gram mixing",
+      "Vectorized numpy scoring loop"
     ]
   },
   "compatibility": {

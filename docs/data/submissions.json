@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-27T00:43:25.186Z",
+  "generatedAt": "2026-03-27T01:13:22.144Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "submissions": [
@@ -446,7 +446,7 @@
         "authorLogin": "Robby955",
         "authorName": null,
         "createdAt": "2026-03-26T22:07:10Z",
-        "updatedAt": "2026-03-27T00:40:25Z",
+        "updatedAt": "2026-03-27T00:58:18Z",
         "headSha": "3a9cd5c5d14d54ee462807ca527686181f39af9e",
         "headRepo": "Robby955/parameter-golf"
       },
@@ -2753,13 +2753,13 @@
         "number": 786,
         "title": "0.8128 BPB: Classical Compression Eval + N-gram Backoff on PR #549 Base",
         "state": "open",
-        "draft": true,
+        "draft": false,
         "mergedAt": null,
         "htmlUrl": "https://github.com/openai/parameter-golf/pull/786",
         "authorLogin": "shinegami-2002",
         "authorName": null,
         "createdAt": "2026-03-26T00:15:00Z",
-        "updatedAt": "2026-03-26T00:54:05Z",
+        "updatedAt": "2026-03-27T01:06:21Z",
         "headSha": "a805646e68718b5416acc9e57795fb71ba1d5af9",
         "headRepo": "shinegami-2002/parameter-golf"
       },
@@ -3987,17 +3987,17 @@
         "valOnlyMatches": []
       },
       "pr": {
-        "number": 889,
-        "title": "Record: N-gram Backoff + VRL + LeakyReLU² — val_bpb 0.9642 (3-seed mean)",
+        "number": 915,
+        "title": "Non-record: Fused Softcap+CE Megakernel (1.94x vs torch.compile) + N-gram Backoff",
         "state": "open",
         "draft": false,
         "mergedAt": null,
-        "htmlUrl": "https://github.com/openai/parameter-golf/pull/889",
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/915",
         "authorLogin": "anthony-maio",
         "authorName": null,
-        "createdAt": "2026-03-26T19:13:50Z",
-        "updatedAt": "2026-03-26T19:20:14Z",
-        "headSha": "50ec6bce1d6722caa8d20ad6f6f53fbec9abfdae",
+        "createdAt": "2026-03-27T01:06:34Z",
+        "updatedAt": "2026-03-27T01:06:34Z",
+        "headSha": "15a5cb8c2a5ef20c8498e22dcdec66db7c344330",
         "headRepo": "anthony-maio/parameter-golf"
       },
       "links": {
@@ -4006,7 +4006,7 @@
         "trainLog": "https://github.com/openai/parameter-golf/blob/10556aebcc62c4ddc97ce750b25a23ab9739305b/records/track_10min_16mb/2026-03-26_NgramBackoff_VRL_LeakyReLU2/train.log",
         "script": "https://github.com/openai/parameter-golf/blob/10556aebcc62c4ddc97ce750b25a23ab9739305b/records/track_10min_16mb/2026-03-26_NgramBackoff_VRL_LeakyReLU2/train_gpt.py",
         "folder": "https://github.com/openai/parameter-golf/tree/10556aebcc62c4ddc97ce750b25a23ab9739305b/records/track_10min_16mb/2026-03-26_NgramBackoff_VRL_LeakyReLU2",
-        "pr": "https://github.com/openai/parameter-golf/pull/889",
+        "pr": "https://github.com/openai/parameter-golf/pull/915",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
       "provenance": {
@@ -23406,7 +23406,7 @@
         "authorLogin": "lucamignatti",
         "authorName": null,
         "createdAt": "2026-03-26T06:28:59Z",
-        "updatedAt": "2026-03-27T00:29:37Z",
+        "updatedAt": "2026-03-27T01:06:21Z",
         "headSha": "54e7686674675775fe43e372d9bf6d5c1e428dab",
         "headRepo": "lucamignatti/parameter-golf"
       },
@@ -40428,7 +40428,7 @@
         "authorLogin": "Prush69",
         "authorName": null,
         "createdAt": "2026-03-26T14:20:12Z",
-        "updatedAt": "2026-03-26T15:42:17Z",
+        "updatedAt": "2026-03-27T00:48:50Z",
         "headSha": "b8b44bd26693031d7058a7b1021f35b947bb8536",
         "headRepo": "Prush69/parameter-golf"
       },
