@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-27T01:43:49.535Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 921,
+    "title": "Record: Order-13 Full-Rescore N-gram + 11L Int6 GPTQ — val_bpb 0.0939 (3-seed mean)",
+    "state": "open",
+    "updatedAt": "2026-03-27T01:37:38Z",
+    "headSha": "e6e96b340f0a86ed5ef8c6ef9d67c664017b3337",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/921",
+    "authorLogin": "TimPietrusky"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-26_FullRescore_Order13_Ngram_0.0938/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "11-layer gated-attention/value-residual GPT with Int6 GPTQ and a two-pass order-13 backward n-gram cache that full-rescores via entropy-adaptive mixing.",
+    "tags": [
+      "architecture",
+      "quantization",
+      "evaluation"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Two-pass order-13 backward n-gram cache with entropy-adaptive mixing",
+      "Int6 GPTQ with descending actorder, dead-column handling, and lzma compression",
+      "11-layer gated-attention/value-residual model with GQA and LeakyReLU(0.5)^2"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

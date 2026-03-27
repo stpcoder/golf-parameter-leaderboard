@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-27T01:43:43.814Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 922,
+    "title": "Record: Order-14 N-gram Full-Rescore — val_bpb 0.0972",
+    "state": "open",
+    "updatedAt": "2026-03-27T01:41:36Z",
+    "headSha": "b2f04ddc8f6594d5fb2596d7758e4b03cd9bb8fd",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/922",
+    "authorLogin": "greqone"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-27_NgramOrder14_FullRescore_0.0972/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Score-first eval extends n-gram backoff to order-14 with entropy-adaptive alpha and a stored-prob two-pass full rescore atop the U-Net baseline.",
+    "tags": [
+      "evaluation",
+      "architecture",
+      "quantization"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Order-14 cache-backed n-gram backoff with entropy-adaptive alpha",
+      "Two-pass score-first full rescore using stored neural probabilities and warm cache",
+      "11L U-Net with Muon optimizer and mixed int6 quantization"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

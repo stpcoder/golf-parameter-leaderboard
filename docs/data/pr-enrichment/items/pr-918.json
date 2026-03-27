@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-27T01:43:59.460Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 918,
+    "title": "Record: TurboQuant + Full-Rescore N-gram (val_bpb=0.1653)",
+    "state": "open",
+    "updatedAt": "2026-03-27T01:29:44Z",
+    "headSha": "b707626f04ebe2f962c54785591a135b35089f1e",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/918",
+    "authorLogin": "haikosys"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-26_TurboQuant_NgramRescore_13L576d/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "TurboQuant’s rotation-based Lloyd-Max quantization ups parameter count in 16MB while relying on the two-pass full-rescore n-gram cache eval from PR #870.",
+    "tags": [
+      "quantization",
+      "evaluation",
+      "architecture"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "rotation-based Lloyd-Max quantization",
+      "full-rescore n-gram cache eval",
+      "progressive QAT warmdown"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

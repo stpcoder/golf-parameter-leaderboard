@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-27T01:13:30.149Z",
+  "generatedAt": "2026-03-27T01:44:07.702Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 915,
     "title": "Non-record: Fused Softcap+CE Megakernel (1.94x vs torch.compile) + N-gram Backoff",
     "state": "open",
-    "updatedAt": "2026-03-27T01:06:34Z",
+    "updatedAt": "2026-03-27T01:14:20Z",
     "headSha": "15a5cb8c2a5ef20c8498e22dcdec66db7c344330",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/915",
     "authorLogin": "anthony-maio"
@@ -19,19 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Makora-generated fused softcap+CE CUDA megakernel accelerates the VRL+LeakyReLU² stack while staying compatible with sliding-window eval and n-gram backoff.",
+    "summary": "Makora-generated fused softcap+CE kernel plugged into the 11L VRL+LeakyReLU² stack with entropy-adaptive multi-order n-gram backoff in sliding eval.",
     "tags": [
-      "non-record",
       "architecture",
       "evaluation",
-      "mixed-precision"
+      "non-record"
     ],
     "usesValOnly": false,
-    "valOnlyReasoning": "Not a val-only training regime; regular training with validation evaluation.",
+    "valOnlyReasoning": "",
     "techniques": [
-      "Makora-generated fused softcap and cross-entropy kernel",
-      "bf16 inputs with float32 accumulation for accuracy",
-      "VRL+LeakyReLU² backbone with sliding-window eval plus n-gram backoff"
+      "Makora-generated fused softcap+cross-entropy CUDA megakernel",
+      "VRL + LeakyReLU² base architecture",
+      "Entropy-adaptive multi-order n-gram backoff evaluation"
     ]
   },
   "compatibility": {

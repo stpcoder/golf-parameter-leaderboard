@@ -1,21 +1,136 @@
 {
-  "generatedAt": "2026-03-27T01:13:51.697Z",
+  "generatedAt": "2026-03-27T01:44:28.029Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
     {
+      "prNumber": 922,
+      "title": "Record: Order-14 N-gram Full-Rescore — val_bpb 0.0972",
+      "status": "open",
+      "updatedAt": "2026-03-27T01:41:36Z",
+      "headSha": "b2f04ddc8f6594d5fb2596d7758e4b03cd9bb8fd",
+      "generatedAt": "2026-03-27T01:43:43.814Z",
+      "summary": "Score-first eval extends n-gram backoff to order-14 with entropy-adaptive alpha and a stored-prob two-pass full rescore atop the U-Net baseline.",
+      "tags": [
+        "evaluation",
+        "architecture",
+        "quantization"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-922.json"
+    },
+    {
+      "prNumber": 921,
+      "title": "Record: Order-13 Full-Rescore N-gram + 11L Int6 GPTQ — val_bpb 0.0939 (3-seed mean)",
+      "status": "open",
+      "updatedAt": "2026-03-27T01:37:38Z",
+      "headSha": "e6e96b340f0a86ed5ef8c6ef9d67c664017b3337",
+      "generatedAt": "2026-03-27T01:43:49.535Z",
+      "summary": "11-layer gated-attention/value-residual GPT with Int6 GPTQ and a two-pass order-13 backward n-gram cache that full-rescores via entropy-adaptive mixing.",
+      "tags": [
+        "architecture",
+        "quantization",
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-921.json"
+    },
+    {
+      "prNumber": 919,
+      "title": "Add ConsensusWindow Bypass (FAT-Golf) non-record submission",
+      "status": "open",
+      "updatedAt": "2026-03-27T01:32:00Z",
+      "headSha": "ed85cee767dc2f5244246ee1028ba7892321bcfb",
+      "generatedAt": "2026-03-27T01:43:54.380Z",
+      "summary": "Adds depthwise causal conv embedding + gated deep-layer bypass inspired by ORC FAT-AR to blend local context with attention for stronger post-quant int6 robustness.",
+      "tags": [
+        "architecture",
+        "attention",
+        "quantization",
+        "non-record"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-919.json"
+    },
+    {
+      "prNumber": 918,
+      "title": "Record: TurboQuant + Full-Rescore N-gram (val_bpb=0.1653)",
+      "status": "open",
+      "updatedAt": "2026-03-27T01:29:44Z",
+      "headSha": "b707626f04ebe2f962c54785591a135b35089f1e",
+      "generatedAt": "2026-03-27T01:43:59.460Z",
+      "summary": "TurboQuant’s rotation-based Lloyd-Max quantization ups parameter count in 16MB while relying on the two-pass full-rescore n-gram cache eval from PR #870.",
+      "tags": [
+        "quantization",
+        "evaluation",
+        "architecture"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-918.json"
+    },
+    {
+      "prNumber": 916,
+      "title": "10L + PPM Full-Rescore Order-12 N-gram (0.3461 BPB)",
+      "status": "open",
+      "updatedAt": "2026-03-27T01:25:40Z",
+      "headSha": "1b4cc135825e66322b119b4e7adec4e91b3ebe62",
+      "generatedAt": "2026-03-27T01:44:03.095Z",
+      "summary": "Two-pass eval stores per-token stats then PPM-inspired blend of orders 2-12 with leave-one-out full-cache rescoring to mix neural and n-gram signals.",
+      "tags": [
+        "evaluation",
+        "compression",
+        "architecture"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-916.json"
+    },
+    {
       "prNumber": 915,
       "title": "Non-record: Fused Softcap+CE Megakernel (1.94x vs torch.compile) + N-gram Backoff",
       "status": "open",
-      "updatedAt": "2026-03-27T01:06:34Z",
+      "updatedAt": "2026-03-27T01:14:20Z",
       "headSha": "15a5cb8c2a5ef20c8498e22dcdec66db7c344330",
-      "generatedAt": "2026-03-27T01:13:30.149Z",
-      "summary": "Makora-generated fused softcap+CE CUDA megakernel accelerates the VRL+LeakyReLU² stack while staying compatible with sliding-window eval and n-gram backoff.",
+      "generatedAt": "2026-03-27T01:44:07.702Z",
+      "summary": "Makora-generated fused softcap+CE kernel plugged into the 11L VRL+LeakyReLU² stack with entropy-adaptive multi-order n-gram backoff in sliding eval.",
       "tags": [
-        "non-record",
         "architecture",
         "evaluation",
-        "mixed-precision"
+        "non-record"
       ],
       "flags": {
         "usesValOnly": false,
@@ -70,27 +185,6 @@
         "valOnlyMatchesCollector": true
       },
       "file": "items/pr-913.json"
-    },
-    {
-      "prNumber": 912,
-      "title": "10L + PPM Full-Rescore Order-12 N-gram (0.3461 BPB)",
-      "status": "open",
-      "updatedAt": "2026-03-27T00:11:44Z",
-      "headSha": "eb92389ec34a408ed071a0d04b56cf29fc3f2f4c",
-      "generatedAt": "2026-03-27T00:13:28.587Z",
-      "summary": "Two-pass eval builds a full n-gram cache, then PPM-blends orders 2-12 with leave-one-out counts to complement the 10L GQA model.",
-      "tags": [
-        "evaluation"
-      ],
-      "flags": {
-        "usesValOnly": false,
-        "usesValOnlyAi": false,
-        "usesValOnlyCollector": false
-      },
-      "compatibility": {
-        "valOnlyMatchesCollector": true
-      },
-      "file": "items/pr-912.json"
     },
     {
       "prNumber": 911,
@@ -619,6 +713,29 @@
         "valOnlyMatchesCollector": true
       },
       "file": "items/pr-877.json"
+    },
+    {
+      "prNumber": 876,
+      "title": "10L + Two-Pass Order-11 N-gram Backoff (0.5863 BPB)",
+      "status": "open",
+      "updatedAt": "2026-03-26T17:47:45Z",
+      "headSha": "7a81a23a5ad782a2eaeee36d2fefea894cb9ca9b",
+      "generatedAt": "2026-03-27T01:44:11.815Z",
+      "summary": "10-layer GQA transformer uses two-pass score-first sliding-window eval with hashed high-order n-gram cache and entropy-driven backoff plus int5/int6 quantization.",
+      "tags": [
+        "evaluation",
+        "quantization",
+        "architecture"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-876.json"
     },
     {
       "prNumber": 875,
@@ -1476,14 +1593,13 @@
       "prNumber": 818,
       "title": "[record] add HWNODE record - 0.5527",
       "status": "open",
-      "updatedAt": "2026-03-27T01:06:21Z",
+      "updatedAt": "2026-03-27T01:16:39Z",
       "headSha": "54e7686674675775fe43e372d9bf6d5c1e428dab",
-      "generatedAt": "2026-03-27T01:13:47.438Z",
-      "summary": "Introduces Hammerstein-Wiener Neural ODE blocks that reuse a shared linear core plus nonlinear wrappers to spawn virtual layers via Taylor expansion.",
+      "generatedAt": "2026-03-27T01:44:17.135Z",
+      "summary": "Replaces MLPs with spectral-normalized Hammerstein-Wiener Neural ODEs that reuse a shared linear core plus nonlinearities to generate Taylor-expanded virtual depth.",
       "tags": [
         "architecture",
-        "regularization",
-        "training-schedule"
+        "regularization"
       ],
       "flags": {
         "usesValOnly": false,
@@ -1568,10 +1684,10 @@
       "prNumber": 812,
       "title": "[non-record track] BankLinear: cross-layer shared weight bank with learned + random mixtures",
       "status": "open",
-      "updatedAt": "2026-03-26T05:21:17Z",
+      "updatedAt": "2026-03-27T01:19:04Z",
       "headSha": "2e8b9633af7846ecb6d69d56fa8166cbd58c2287",
-      "generatedAt": "2026-03-26T05:36:56.579Z",
-      "summary": "BankLinear composes per-layer QKV weights from a shared bank of learned and random matrices, letting layers mix reusable bases with their own coefficients.",
+      "generatedAt": "2026-03-27T01:44:20.836Z",
+      "summary": "BankLinear builds QKV weights by mixing layer-specific coefficients over a shared learned + random bank, freeing parameters to enlarge the MLP.",
       "tags": [
         "architecture",
         "attention",
@@ -11808,13 +11924,13 @@
       "prNumber": 181,
       "title": "Aweb Ultimate — 1.1190 BPB | #1 | 11L LeakyReLU² XSA4 EMA TTT",
       "status": "open",
-      "updatedAt": "2026-03-26T18:10:37Z",
-      "headSha": "de6008cfb19b47412822d73d72427b78b4064a1b",
-      "generatedAt": "2026-03-26T18:12:47.778Z",
-      "summary": "Combines an 11L GQA+LeakyReLU² stack with Partial RoPE/U-Net skips, Muon optimizer, GPTQ-lite int6 quant, and sliding-window TTT/EMA evaluation.",
+      "updatedAt": "2026-03-27T01:40:25Z",
+      "headSha": "575d983d4325198755525473ef53ab318a68e179",
+      "generatedAt": "2026-03-27T01:44:28.004Z",
+      "summary": "11-layer LeakyReLU² model with XSA on final layers, Partial RoPE, U-Net skips, SmearGate/BigramHash, Muon optimizer, GPTQ-lite quant, and legal TTT sliding-window eval.",
       "tags": [
         "architecture",
-        "optimizer",
+        "attention",
         "quantization",
         "evaluation"
       ],

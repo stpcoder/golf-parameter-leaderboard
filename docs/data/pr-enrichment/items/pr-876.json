@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-26T18:11:51.562Z",
+  "generatedAt": "2026-03-27T01:44:11.815Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
@@ -12,16 +12,15 @@
     "authorLogin": "Bortlesboat"
   },
   "inputs": {
-    "hash": "c4f8d017d13e812b0ad5a78b677f8350df1124736cd3f84c8d4e37f273206c70",
+    "hash": "333c1651a7101d4267d971ebe25bd793307b61c975586544bbd6b9a9c3a8cf24",
     "readmePaths": [
-      "records/track_10min_16mb/2026-03-26_10L_TwoPass_Order11_Ngram/README.md",
       "records/track_10min_16mb/2026-03-25_10L_NgramBackoff_EntropyAlpha/README.md",
       "records/track_10min_16mb/2026-03-20_Int5MLP_BigramHash_SWA_NeuralCache_TTT/README.md"
     ],
-    "submissionCount": 3
+    "submissionCount": 2
   },
   "output": {
-    "summary": "10L GQA model with mixed int5/int6 quantization uses two-pass order-11 hashed n-gram cache with entropy-adaptive interpolation.",
+    "summary": "10-layer GQA transformer uses two-pass score-first sliding-window eval with hashed high-order n-gram cache and entropy-driven backoff plus int5/int6 quantization.",
     "tags": [
       "evaluation",
       "quantization",
@@ -30,9 +29,9 @@
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Two-pass order-11 hashed n-gram backoff",
-      "Entropy-adaptive gating for cache interpolation",
-      "Mixed int5/int6 quantized GQA architecture"
+      "two-pass score-first sliding-window with order-11 hashed n-gram cache",
+      "entropy-adaptive interpolation for cache/model blending",
+      "mixed int5 MLP and int6 attention quantization with Partial RoPE"
     ]
   },
   "compatibility": {
