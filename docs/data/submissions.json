@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-28T22:55:22.854Z",
+  "generatedAt": "2026-03-28T23:25:36.660Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "submissions": [
@@ -3067,7 +3067,7 @@
         "authorLogin": "newjordan",
         "authorName": null,
         "createdAt": "2026-03-28T16:08:34Z",
-        "updatedAt": "2026-03-28T22:28:49Z",
+        "updatedAt": "2026-03-28T23:12:50Z",
         "headSha": "5f731b386f760ece37b4d4f0fb15cc7332c73b73",
         "headRepo": "newjordan/parameter-golf-1"
       },
@@ -6078,7 +6078,7 @@
         "authorLogin": "newjordan",
         "authorName": null,
         "createdAt": "2026-03-28T16:08:34Z",
-        "updatedAt": "2026-03-28T22:28:49Z",
+        "updatedAt": "2026-03-28T23:12:50Z",
         "headSha": "5f731b386f760ece37b4d4f0fb15cc7332c73b73",
         "headRepo": "newjordan/parameter-golf-1"
       },
@@ -12959,7 +12959,7 @@
     {
       "id": "record-records-track_10min_16mb-2026-03-26_FreqWeightedEmbedding_1-1231",
       "source": "pull_request",
-      "status": "open",
+      "status": "closed",
       "category": "main-track",
       "track": {
         "path": "records/track_10min_16mb",
@@ -13007,14 +13007,14 @@
       "pr": {
         "number": 898,
         "title": "Frequency-Weighted Embedding Quantization (1.1217 BPB)",
-        "state": "open",
+        "state": "closed",
         "draft": false,
         "mergedAt": null,
         "htmlUrl": "https://github.com/openai/parameter-golf/pull/898",
         "authorLogin": "pattern4bots",
         "authorName": null,
         "createdAt": "2026-03-26T21:54:45Z",
-        "updatedAt": "2026-03-27T23:05:01Z",
+        "updatedAt": "2026-03-28T23:07:57Z",
         "headSha": "e484fd2039b43fb0d290ea8fcaa9eebd90f7b3b2",
         "headRepo": "pattern4bots/parameter-golf"
       },
@@ -13025,6 +13025,83 @@
         "script": "https://github.com/openai/parameter-golf/blob/e484fd2039b43fb0d290ea8fcaa9eebd90f7b3b2/records/track_10min_16mb/2026-03-26_FreqWeightedEmbedding_1.1231/train_gpt.py",
         "folder": "https://github.com/openai/parameter-golf/tree/e484fd2039b43fb0d290ea8fcaa9eebd90f7b3b2/records/track_10min_16mb/2026-03-26_FreqWeightedEmbedding_1.1231",
         "pr": "https://github.com/openai/parameter-golf/pull/898",
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": false,
+        "hasPullRequest": true,
+        "listedInReadme": false
+      }
+    },
+    {
+      "id": "record-records-track_10min_16mb-2026-03-28_AdaptivePrecisionEmbeddings_1-1217",
+      "source": "pull_request",
+      "status": "open",
+      "category": "main-track",
+      "track": {
+        "path": "records/track_10min_16mb",
+        "slug": "track_10min_16mb",
+        "label": "10 Minute / 16MB",
+        "official": true,
+        "category": "main-track"
+      },
+      "record": {
+        "folderName": "2026-03-28_AdaptivePrecisionEmbeddings_1.1217",
+        "folderPath": "records/track_10min_16mb/2026-03-28_AdaptivePrecisionEmbeddings_1.1217",
+        "submissionPath": "records/track_10min_16mb/2026-03-28_AdaptivePrecisionEmbeddings_1.1217/submission.json",
+        "readmePath": "records/track_10min_16mb/2026-03-28_AdaptivePrecisionEmbeddings_1.1217/README.md",
+        "trainLogPath": "records/track_10min_16mb/2026-03-28_AdaptivePrecisionEmbeddings_1.1217/train.log",
+        "scriptPath": "records/track_10min_16mb/2026-03-28_AdaptivePrecisionEmbeddings_1.1217/train_gpt.py"
+      },
+      "submission": {
+        "author": "NothingLiva",
+        "githubId": "NothingLiva",
+        "name": null,
+        "blurb": null,
+        "date": "2026-03-27T00:00:00Z"
+      },
+      "metrics": {
+        "valBpb": 1.12176827,
+        "valLoss": 1.89405372,
+        "preQuantValBpb": null,
+        "preQuantValLoss": null,
+        "stepStop": null,
+        "wallclockSeconds": null,
+        "evalTimeSeconds": null
+      },
+      "artifact": {
+        "bytesTotal": 15807424,
+        "bytesCode": null,
+        "bytesModelInt8Zlib": null
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
+      "pr": {
+        "number": 1042,
+        "title": "Record: Adaptive Precision Embedding Quantization (4-seed mean val_bpb=1.1217)",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1042",
+        "authorLogin": "nothingLiva",
+        "authorName": null,
+        "createdAt": "2026-03-28T23:06:05Z",
+        "updatedAt": "2026-03-28T23:06:05Z",
+        "headSha": "fa15c5938fd14e8ecd8b11690c130a3b44abfc4a",
+        "headRepo": "nothingLiva/parameter-golf"
+      },
+      "links": {
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/fa15c5938fd14e8ecd8b11690c130a3b44abfc4a/records/track_10min_16mb/2026-03-28_AdaptivePrecisionEmbeddings_1.1217/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/fa15c5938fd14e8ecd8b11690c130a3b44abfc4a/records/track_10min_16mb/2026-03-28_AdaptivePrecisionEmbeddings_1.1217/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/fa15c5938fd14e8ecd8b11690c130a3b44abfc4a/records/track_10min_16mb/2026-03-28_AdaptivePrecisionEmbeddings_1.1217/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/fa15c5938fd14e8ecd8b11690c130a3b44abfc4a/records/track_10min_16mb/2026-03-28_AdaptivePrecisionEmbeddings_1.1217/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/fa15c5938fd14e8ecd8b11690c130a3b44abfc4a/records/track_10min_16mb/2026-03-28_AdaptivePrecisionEmbeddings_1.1217",
+        "pr": "https://github.com/openai/parameter-golf/pull/1042",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
       "provenance": {
@@ -14411,6 +14488,83 @@
         "script": "https://github.com/openai/parameter-golf/blob/7e2c8fd0127d7867fd13d8d9615f6e598218ae35/records/track_non_record_16mb/2026-03-21_Negative_Results_24hr_8xH100/train_gpt.py",
         "folder": "https://github.com/openai/parameter-golf/tree/7e2c8fd0127d7867fd13d8d9615f6e598218ae35/records/track_non_record_16mb/2026-03-21_Negative_Results_24hr_8xH100",
         "pr": "https://github.com/openai/parameter-golf/pull/375",
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": false,
+        "hasPullRequest": true,
+        "listedInReadme": false
+      }
+    },
+    {
+      "id": "record-records-track_10min_16mb-2026-03-28_PP12_PosteriorPackets_on_SOTA",
+      "source": "pull_request",
+      "status": "open",
+      "category": "main-track",
+      "track": {
+        "path": "records/track_10min_16mb",
+        "slug": "track_10min_16mb",
+        "label": "10 Minute / 16MB",
+        "official": true,
+        "category": "main-track"
+      },
+      "record": {
+        "folderName": "2026-03-28_PP12_PosteriorPackets_on_SOTA",
+        "folderPath": "records/track_10min_16mb/2026-03-28_PP12_PosteriorPackets_on_SOTA",
+        "submissionPath": "records/track_10min_16mb/2026-03-28_PP12_PosteriorPackets_on_SOTA/submission.json",
+        "readmePath": "records/track_10min_16mb/2026-03-28_PP12_PosteriorPackets_on_SOTA/README.md",
+        "trainLogPath": "records/track_10min_16mb/2026-03-28_PP12_PosteriorPackets_on_SOTA/train.log",
+        "scriptPath": "records/track_10min_16mb/2026-03-28_PP12_PosteriorPackets_on_SOTA/train_gpt.py"
+      },
+      "submission": {
+        "author": "okezue",
+        "githubId": "okezue",
+        "name": "Okezue Bell",
+        "blurb": null,
+        "date": "2026-03-28"
+      },
+      "metrics": {
+        "valBpb": 1.1261,
+        "valLoss": null,
+        "preQuantValBpb": null,
+        "preQuantValLoss": null,
+        "stepStop": null,
+        "wallclockSeconds": null,
+        "evalTimeSeconds": 531
+      },
+      "artifact": {
+        "bytesTotal": null,
+        "bytesCode": null,
+        "bytesModelInt8Zlib": null
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
+      "pr": {
+        "number": 1043,
+        "title": "PP12: Bayesian posterior packets + selective gating (1.1261 BPB)",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1043",
+        "authorLogin": "okezue",
+        "authorName": null,
+        "createdAt": "2026-03-28T23:07:58Z",
+        "updatedAt": "2026-03-28T23:14:42Z",
+        "headSha": "8ef2bea1080ed16ae79ee80f18b994a9b0a8e568",
+        "headRepo": "okezue/parameter-golf"
+      },
+      "links": {
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/8ef2bea1080ed16ae79ee80f18b994a9b0a8e568/records/track_10min_16mb/2026-03-28_PP12_PosteriorPackets_on_SOTA/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/8ef2bea1080ed16ae79ee80f18b994a9b0a8e568/records/track_10min_16mb/2026-03-28_PP12_PosteriorPackets_on_SOTA/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/8ef2bea1080ed16ae79ee80f18b994a9b0a8e568/records/track_10min_16mb/2026-03-28_PP12_PosteriorPackets_on_SOTA/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/8ef2bea1080ed16ae79ee80f18b994a9b0a8e568/records/track_10min_16mb/2026-03-28_PP12_PosteriorPackets_on_SOTA/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/8ef2bea1080ed16ae79ee80f18b994a9b0a8e568/records/track_10min_16mb/2026-03-28_PP12_PosteriorPackets_on_SOTA",
+        "pr": "https://github.com/openai/parameter-golf/pull/1043",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
       "provenance": {
@@ -42131,6 +42285,83 @@
         "script": "https://github.com/openai/parameter-golf/blob/e22bfc58b5683e7a7a84ea5cd52b4ea5c90a4c05/records/track_non_record_16mb/2026-03-21_MLX_SOTA_12L_416d_BigramHash10240/train_gpt.py",
         "folder": "https://github.com/openai/parameter-golf/tree/e22bfc58b5683e7a7a84ea5cd52b4ea5c90a4c05/records/track_non_record_16mb/2026-03-21_MLX_SOTA_12L_416d_BigramHash10240",
         "pr": "https://github.com/openai/parameter-golf/pull/342",
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": false,
+        "hasPullRequest": true,
+        "listedInReadme": false
+      }
+    },
+    {
+      "id": "record-records-track_non_record_16mb-2026-03-28_TinyHNet_Byte260_RTX4090",
+      "source": "pull_request",
+      "status": "open",
+      "category": "non-record",
+      "track": {
+        "path": "records/track_non_record_16mb",
+        "slug": "track_non_record_16mb",
+        "label": "Non-record / 16MB",
+        "official": false,
+        "category": "non-record"
+      },
+      "record": {
+        "folderName": "2026-03-28_TinyHNet_Byte260_RTX4090",
+        "folderPath": "records/track_non_record_16mb/2026-03-28_TinyHNet_Byte260_RTX4090",
+        "submissionPath": "records/track_non_record_16mb/2026-03-28_TinyHNet_Byte260_RTX4090/submission.json",
+        "readmePath": "records/track_non_record_16mb/2026-03-28_TinyHNet_Byte260_RTX4090/README.md",
+        "trainLogPath": "records/track_non_record_16mb/2026-03-28_TinyHNet_Byte260_RTX4090/train.log",
+        "scriptPath": "records/track_non_record_16mb/2026-03-28_TinyHNet_Byte260_RTX4090/train_gpt.py"
+      },
+      "submission": {
+        "author": "GreQ (Grzegorz Nowosielski)",
+        "githubId": "greq333",
+        "name": "Tiny H-Net: First Learned Byte-Level Tokenization for Parameter Golf",
+        "blurb": "Non-record submission implementing H-Net (arXiv:2507.07955) at tiny scale: byte-level input with dynamic chunking gate (cosine similarity + STE) that learns to segment raw bytes into variable-length chunks (~4 bytes avg), processed by a 9-layer transformer, expanded via EMA dechunking. Replaces Mamba-2 SSM with pure-PyTorch depthwise causal Conv1d. First-ever sub-100M H-Net. Post-quantization val_bpb 1.8989 under 16MB.",
+        "date": "2026-03-28T22:00:00Z"
+      },
+      "metrics": {
+        "valBpb": 1.9002,
+        "valLoss": 1.3171,
+        "preQuantValBpb": 1.9002,
+        "preQuantValLoss": 1.3171,
+        "stepStop": 20000,
+        "wallclockSeconds": 10175,
+        "evalTimeSeconds": null
+      },
+      "artifact": {
+        "bytesTotal": 15512976,
+        "bytesCode": 69201,
+        "bytesModelInt8Zlib": null
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
+      "pr": {
+        "number": 1044,
+        "title": "H-Net: First Learned Byte-Level Tokenization (README Wishlist) -- 1.90 BPB, 22M params",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1044",
+        "authorLogin": "greqone",
+        "authorName": null,
+        "createdAt": "2026-03-28T23:22:17Z",
+        "updatedAt": "2026-03-28T23:22:19Z",
+        "headSha": "c3aef4c3939ace46a77253de158f0aa05f9c977a",
+        "headRepo": "greqone/parameter-golf"
+      },
+      "links": {
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/c3aef4c3939ace46a77253de158f0aa05f9c977a/records/track_non_record_16mb/2026-03-28_TinyHNet_Byte260_RTX4090/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/c3aef4c3939ace46a77253de158f0aa05f9c977a/records/track_non_record_16mb/2026-03-28_TinyHNet_Byte260_RTX4090/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/c3aef4c3939ace46a77253de158f0aa05f9c977a/records/track_non_record_16mb/2026-03-28_TinyHNet_Byte260_RTX4090/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/c3aef4c3939ace46a77253de158f0aa05f9c977a/records/track_non_record_16mb/2026-03-28_TinyHNet_Byte260_RTX4090/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/c3aef4c3939ace46a77253de158f0aa05f9c977a/records/track_non_record_16mb/2026-03-28_TinyHNet_Byte260_RTX4090",
+        "pr": "https://github.com/openai/parameter-golf/pull/1044",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
       "provenance": {

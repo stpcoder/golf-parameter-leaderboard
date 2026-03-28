@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-27T23:19:42.134Z",
+  "generatedAt": "2026-03-28T23:25:59.709Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 898,
     "title": "Frequency-Weighted Embedding Quantization (1.1217 BPB)",
-    "state": "open",
-    "updatedAt": "2026-03-27T23:05:01Z",
+    "state": "closed",
+    "updatedAt": "2026-03-28T23:07:57Z",
     "headSha": "e484fd2039b43fb0d290ea8fcaa9eebd90f7b3b2",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/898",
     "authorLogin": "pattern4bots"
@@ -19,17 +19,16 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Top 100 frequent tokens get int8 embeddings while the rest remain int6, reducing quantization error for the most common vocabulary.",
+    "summary": "Applies frequency-weighted quantization to embeddings, keeping the top 100 tokens at int8 while rare tokens stay at int6 to preserve precision on common text.",
     "tags": [
       "quantization",
-      "tokenization"
+      "compression"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Frequency-weighted embedding quantization",
-      "Per-token precision split",
-      "Int6 fallback for rare tokens"
+      "Frequency-aware embedding quantization",
+      "Separate dequantization for common vs rare tokens"
     ]
   },
   "compatibility": {

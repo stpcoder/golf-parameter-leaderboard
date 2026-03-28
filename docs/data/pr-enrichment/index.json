@@ -1,8 +1,76 @@
 {
-  "generatedAt": "2026-03-28T22:55:45.355Z",
+  "generatedAt": "2026-03-28T23:25:59.837Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 1044,
+      "title": "H-Net: First Learned Byte-Level Tokenization (README Wishlist) -- 1.90 BPB, 22M params",
+      "status": "open",
+      "updatedAt": "2026-03-28T23:22:19Z",
+      "headSha": "c3aef4c3939ace46a77253de158f0aa05f9c977a",
+      "generatedAt": "2026-03-28T23:25:41.269Z",
+      "summary": "Dynamic byte chunking gate segments raw bytes, feeding compressed chunks through a transformer with pure-PyTorch depthwise conv encoder/decoder.",
+      "tags": [
+        "tokenization",
+        "architecture",
+        "quantization",
+        "non-record"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1044.json"
+    },
+    {
+      "prNumber": 1043,
+      "title": "PP12: Bayesian posterior packets + selective gating (1.1261 BPB)",
+      "status": "open",
+      "updatedAt": "2026-03-28T23:14:42Z",
+      "headSha": "8ef2bea1080ed16ae79ee80f18b994a9b0a8e568",
+      "generatedAt": "2026-03-28T23:25:46.180Z",
+      "summary": "Neural predictions are adaptively blended with Bayesian posterior packets using conjugate bigram updates and a confidence gate to prevent degradation.",
+      "tags": [
+        "evaluation",
+        "regularization"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1043.json"
+    },
+    {
+      "prNumber": 1042,
+      "title": "Record: Adaptive Precision Embedding Quantization (4-seed mean val_bpb=1.1217)",
+      "status": "open",
+      "updatedAt": "2026-03-28T23:06:05Z",
+      "headSha": "fa15c5938fd14e8ecd8b11690c130a3b44abfc4a",
+      "generatedAt": "2026-03-28T23:25:50.567Z",
+      "summary": "Adaptive embedding quantization uses int8 for the top 100 tokens and int6 for the rest to keep frequent tokens precise while compressing the vocabulary.",
+      "tags": [
+        "quantization",
+        "compression"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1042.json"
+    },
     {
       "prNumber": 1041,
       "title": "Non-record: 11L Int5 QAT + Score-First TTT — val_bpb 1.1356 (15.60 MiB)",
@@ -285,14 +353,13 @@
       "prNumber": 1028,
       "title": "Medusa: Unstable — DeltaNet Crawler 0.8104 BPB 10mb file size(best seed), mean 0.9984, Frugendorff continuation",
       "status": "open",
-      "updatedAt": "2026-03-28T22:28:49Z",
+      "updatedAt": "2026-03-28T23:12:50Z",
       "headSha": "5f731b386f760ece37b4d4f0fb15cc7332c73b73",
-      "generatedAt": "2026-03-28T22:55:39.096Z",
-      "summary": "Medusa_IV wires canonical four-head DeltaNet delta_rule into a Frugendorff crawler with loop-aware GPTQ and late-start EMA for quantized int6 training.",
+      "generatedAt": "2026-03-28T23:25:55.916Z",
+      "summary": "Medusa embeds canonical 4-head DeltaNet chunk updates inside a 4-flat+1-crawler Frugendorff loop stack with loop-aware GPTQ and late-start EMA.",
       "tags": [
         "architecture",
         "quantization",
-        "optimizer",
         "training-schedule"
       ],
       "flags": {
@@ -2532,14 +2599,14 @@
     {
       "prNumber": 898,
       "title": "Frequency-Weighted Embedding Quantization (1.1217 BPB)",
-      "status": "open",
-      "updatedAt": "2026-03-27T23:05:01Z",
+      "status": "closed",
+      "updatedAt": "2026-03-28T23:07:57Z",
       "headSha": "e484fd2039b43fb0d290ea8fcaa9eebd90f7b3b2",
-      "generatedAt": "2026-03-27T23:19:42.134Z",
-      "summary": "Top 100 frequent tokens get int8 embeddings while the rest remain int6, reducing quantization error for the most common vocabulary.",
+      "generatedAt": "2026-03-28T23:25:59.709Z",
+      "summary": "Applies frequency-weighted quantization to embeddings, keeping the top 100 tokens at int8 while rare tokens stay at int6 to preserve precision on common text.",
       "tags": [
         "quantization",
-        "tokenization"
+        "compression"
       ],
       "flags": {
         "usesValOnly": false,

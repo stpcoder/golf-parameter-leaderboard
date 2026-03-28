@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-28T22:55:39.096Z",
+  "generatedAt": "2026-03-28T23:25:55.916Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 1028,
     "title": "Medusa: Unstable — DeltaNet Crawler 0.8104 BPB 10mb file size(best seed), mean 0.9984, Frugendorff continuation",
     "state": "open",
-    "updatedAt": "2026-03-28T22:28:49Z",
+    "updatedAt": "2026-03-28T23:12:50Z",
     "headSha": "5f731b386f760ece37b4d4f0fb15cc7332c73b73",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/1028",
     "authorLogin": "newjordan"
@@ -20,19 +20,18 @@
     "submissionCount": 2
   },
   "output": {
-    "summary": "Medusa_IV wires canonical four-head DeltaNet delta_rule into a Frugendorff crawler with loop-aware GPTQ and late-start EMA for quantized int6 training.",
+    "summary": "Medusa embeds canonical 4-head DeltaNet chunk updates inside a 4-flat+1-crawler Frugendorff loop stack with loop-aware GPTQ and late-start EMA.",
     "tags": [
       "architecture",
       "quantization",
-      "optimizer",
       "training-schedule"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Frugendorff crawler with 4 DeltaNet heads",
-      "Loop-aware 2-phase GPTQ plus late-start EMA",
-      "int6+zstd quantized training inside wallclock"
+      "DeltaNet chunk_delta_rule inside Frugendorff 4-flat+1-crawler loops",
+      "Loop-aware two-phase GPTQ calibrating flat then crawler Hessians",
+      "Late-start EMA reinitialized at warmdown onset with SWA cadence"
     ]
   },
   "compatibility": {

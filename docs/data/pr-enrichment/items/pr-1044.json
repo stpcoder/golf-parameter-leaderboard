@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-28T23:25:41.269Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1044,
+    "title": "H-Net: First Learned Byte-Level Tokenization (README Wishlist) -- 1.90 BPB, 22M params",
+    "state": "open",
+    "updatedAt": "2026-03-28T23:22:19Z",
+    "headSha": "c3aef4c3939ace46a77253de158f0aa05f9c977a",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1044",
+    "authorLogin": "greqone"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-03-28_TinyHNet_Byte260_RTX4090/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Dynamic byte chunking gate segments raw bytes, feeding compressed chunks through a transformer with pure-PyTorch depthwise conv encoder/decoder.",
+    "tags": [
+      "tokenization",
+      "architecture",
+      "quantization",
+      "non-record"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Byte-level dynamic chunking via cosine similarity + STE gate",
+      "ChunkLayer/DeChunkLayer vectorized with cumsum scattering",
+      "Depthwise causal Conv1d encoder/decoder replacing SSM"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}
