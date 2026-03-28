@@ -1,8 +1,31 @@
 {
-  "generatedAt": "2026-03-28T03:50:20.481Z",
+  "generatedAt": "2026-03-28T04:20:29.085Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 1001,
+      "title": "Non-record: Three Approaches + Lessons Learned (best: 1.1188 BPB)",
+      "status": "open",
+      "updatedAt": "2026-03-28T03:58:32Z",
+      "headSha": "3390fa45f871d6ebe2c13e2167cfa315585e8579",
+      "generatedAt": "2026-03-28T04:20:21.750Z",
+      "summary": "Uses int5 GPTQ tuning on a d=576 base plus legal s_0-only TTT scoring to shave BPB while obeying artifact and timing limits.",
+      "tags": [
+        "quantization",
+        "evaluation",
+        "non-record"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1001.json"
+    },
     {
       "prNumber": 1000,
       "title": "[WIP] Latent LM with TurboQuant 3-bit Quantization",
@@ -5175,15 +5198,15 @@
       "prNumber": 675,
       "title": "Non-record: LeakyReLU² + LAWA + Ramping WD + Val Training (val_bpb=1.2302, 1xH100)",
       "status": "open",
-      "updatedAt": "2026-03-28T03:14:43Z",
-      "headSha": "b9256c1e659f9cbbdb5ee853b50da4c953040946",
-      "generatedAt": "2026-03-28T03:19:52.912Z",
-      "summary": "Stacks LeakyReLU², LAWA averaging, and ramping weight decay atop a 10-layer baseline while training on the validation set plus int8+lzma compression.",
+      "updatedAt": "2026-03-28T03:51:49Z",
+      "headSha": "6d8d30f0087ba438429382b3a0a9a7242dc551be",
+      "generatedAt": "2026-03-28T04:20:28.987Z",
+      "summary": "10-layer baseline using LeakyReLU(0.5)², LAWA averaging, ramped WD, lzma, and validation-set training on 1xH100 to boost quality within budget.",
       "tags": [
         "val-only",
+        "architecture",
         "training-schedule",
-        "quantization",
-        "non-record"
+        "compression"
       ],
       "flags": {
         "usesValOnly": true,

@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-28T04:20:21.750Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1001,
+    "title": "Non-record: Three Approaches + Lessons Learned (best: 1.1188 BPB)",
+    "state": "open",
+    "updatedAt": "2026-03-28T03:58:32Z",
+    "headSha": "3390fa45f871d6ebe2c13e2167cfa315585e8579",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1001",
+    "authorLogin": "ibarrajo"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-28_NonRecord_ThreeApproaches_ibarrajo/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Uses int5 GPTQ tuning on a d=576 base plus legal s_0-only TTT scoring to shave BPB while obeying artifact and timing limits.",
+    "tags": [
+      "quantization",
+      "evaluation",
+      "non-record"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "int5 GPTQ calibration kept within 600s",
+      "score-first TTT reporting only s_0",
+      "d=576 33.6M base quantized under 16MB"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}
