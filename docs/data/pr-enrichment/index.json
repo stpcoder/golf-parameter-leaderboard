@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-28T21:55:12.641Z",
+  "generatedAt": "2026-03-28T22:25:13.128Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
@@ -2988,13 +2988,12 @@
       "prNumber": 861,
       "title": "Non-record: 11L Int5 QAT + Score-First TTT — val_bpb 1.1326 (15.51 MB)",
       "status": "open",
-      "updatedAt": "2026-03-28T21:12:45Z",
+      "updatedAt": "2026-03-28T22:19:11Z",
       "headSha": "28d45d26f58981b4e4c94acf8748cc38e1d3a93a",
-      "generatedAt": "2026-03-28T21:25:13.867Z",
-      "summary": "11L U-Net pairs Muon+AdamW with Int5 QAT/pruning and score-first TTT plus bigram hashing to squeeze under 16MB.",
+      "generatedAt": "2026-03-28T22:25:12.997Z",
+      "summary": "11-layer U-Net with per-row Int5 QAT, 15% pruning, bigram hash embedding, and score-first TTT on MLP-only params.",
       "tags": [
         "quantization",
-        "optimizer",
         "architecture",
         "training-schedule"
       ],
