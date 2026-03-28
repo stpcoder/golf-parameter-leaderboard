@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-28T06:51:20.376Z",
+  "generatedAt": "2026-03-28T07:21:10.812Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 980,
-    "title": "Record: LOGOS-44 Z=0 ",
+    "title": "Record: LOGOS-44 Z=0 - Toroidal CDMA Field Decoder (44-pass iterative routing)",
     "state": "open",
-    "updatedAt": "2026-03-28T06:47:33Z",
+    "updatedAt": "2026-03-28T06:51:37Z",
     "headSha": "036c2033dd44319825452887969af4adc0d2cd32",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/980",
     "authorLogin": "slowomir33-arch"
@@ -19,18 +19,17 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "LOGOS-44 reuses one toroidal bottleneck 44 times with CDMA field decoding and coherence gating to trade parameters for compute depth.",
+    "summary": "Shared block reruns signal 44 times via toroidal sin·cos bottleneck plus CDMA field decoding, swapping parameters for compute depth.",
     "tags": [
       "architecture",
-      "quantization",
-      "compression"
+      "quantization"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "44 shared-pass toroidal bottleneck routing",
-      "128-signal CDMA field decoder with coherence gate",
-      "Int8 per-row quantization plus zlib compression"
+      "44-pass shared iterative routing",
+      "Toroidal sin·cos bottleneck with CDMA field decoder",
+      "Muon optimizer with int8+zlib quantization"
     ]
   },
   "compatibility": {

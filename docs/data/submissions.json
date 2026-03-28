@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-28T06:50:51.620Z",
+  "generatedAt": "2026-03-28T07:20:58.235Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "submissions": [
@@ -2913,7 +2913,7 @@
         "authorLogin": "newjordan",
         "authorName": null,
         "createdAt": "2026-03-28T00:02:14Z",
-        "updatedAt": "2026-03-28T02:02:59Z",
+        "updatedAt": "2026-03-28T06:56:43Z",
         "headSha": "90741b4c55ca0a0d0f79056dec29da64d7636491",
         "headRepo": "newjordan/parameter-golf-1"
       },
@@ -43349,7 +43349,7 @@
       },
       "pr": {
         "number": 980,
-        "title": "Record: LOGOS-44 Z=0 ",
+        "title": "Record: LOGOS-44 Z=0 - Toroidal CDMA Field Decoder (44-pass iterative routing)",
         "state": "open",
         "draft": false,
         "mergedAt": null,
@@ -43357,7 +43357,7 @@
         "authorLogin": "slowomir33-arch",
         "authorName": null,
         "createdAt": "2026-03-27T20:03:30Z",
-        "updatedAt": "2026-03-28T06:47:33Z",
+        "updatedAt": "2026-03-28T06:51:37Z",
         "headSha": "036c2033dd44319825452887969af4adc0d2cd32",
         "headRepo": "slowomir33-arch/parameter-golf"
       },
@@ -44281,16 +44281,16 @@
         "authorLogin": "Akhilesh-Gogikar",
         "authorName": null,
         "createdAt": "2026-03-26T23:29:05Z",
-        "updatedAt": "2026-03-28T04:26:20Z",
-        "headSha": "5619522dacbc7e6716567ea9e7bf60a562475e7d",
+        "updatedAt": "2026-03-28T07:19:46Z",
+        "headSha": "8538a06e0d14eb5cdece7052a65ac726d6758a22",
         "headRepo": "Akhilesh-Gogikar/parameter-golf"
       },
       "links": {
-        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/5619522dacbc7e6716567ea9e7bf60a562475e7d/records/track_10min_16mb/2026-03-25_Ternary_Feedback_TTT/submission.json",
-        "readme": "https://github.com/openai/parameter-golf/blob/5619522dacbc7e6716567ea9e7bf60a562475e7d/records/track_10min_16mb/2026-03-25_Ternary_Feedback_TTT/README.md",
-        "trainLog": "https://github.com/openai/parameter-golf/blob/5619522dacbc7e6716567ea9e7bf60a562475e7d/records/track_10min_16mb/2026-03-25_Ternary_Feedback_TTT/train.log",
-        "script": "https://github.com/openai/parameter-golf/blob/5619522dacbc7e6716567ea9e7bf60a562475e7d/records/track_10min_16mb/2026-03-25_Ternary_Feedback_TTT/train_gpt.py",
-        "folder": "https://github.com/openai/parameter-golf/tree/5619522dacbc7e6716567ea9e7bf60a562475e7d/records/track_10min_16mb/2026-03-25_Ternary_Feedback_TTT",
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/8538a06e0d14eb5cdece7052a65ac726d6758a22/records/track_10min_16mb/2026-03-25_Ternary_Feedback_TTT/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/8538a06e0d14eb5cdece7052a65ac726d6758a22/records/track_10min_16mb/2026-03-25_Ternary_Feedback_TTT/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/8538a06e0d14eb5cdece7052a65ac726d6758a22/records/track_10min_16mb/2026-03-25_Ternary_Feedback_TTT/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/8538a06e0d14eb5cdece7052a65ac726d6758a22/records/track_10min_16mb/2026-03-25_Ternary_Feedback_TTT/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/8538a06e0d14eb5cdece7052a65ac726d6758a22/records/track_10min_16mb/2026-03-25_Ternary_Feedback_TTT",
         "pr": "https://github.com/openai/parameter-golf/pull/911",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },

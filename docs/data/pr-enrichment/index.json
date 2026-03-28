@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-28T06:51:26.575Z",
+  "generatedAt": "2026-03-28T07:21:15.055Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
@@ -358,14 +358,14 @@
       "prNumber": 990,
       "title": "ClownCar: Frugendorff compression baseline + canonical DeltaNet integration",
       "status": "open",
-      "updatedAt": "2026-03-28T02:02:59Z",
+      "updatedAt": "2026-03-28T06:56:43Z",
       "headSha": "90741b4c55ca0a0d0f79056dec29da64d7636491",
-      "generatedAt": "2026-03-28T02:19:43.105Z",
-      "summary": "Weight-shared crawler loops with dynamic flow instructions plus DeltaNet chunk kernels to cut compute overhead within a tiny param budget.",
+      "generatedAt": "2026-03-28T07:21:04.866Z",
+      "summary": "The Frugendorff crawler loops one shared block four times, recomputing flow instructions per state and widening flat layers to trade saved params for extra capacity under int8 constraints.",
       "tags": [
         "architecture",
-        "compression",
-        "quantization"
+        "quantization",
+        "training-schedule"
       ],
       "flags": {
         "usesValOnly": false,
@@ -564,16 +564,15 @@
     },
     {
       "prNumber": 980,
-      "title": "Record: LOGOS-44 Z=0 ",
+      "title": "Record: LOGOS-44 Z=0 - Toroidal CDMA Field Decoder (44-pass iterative routing)",
       "status": "open",
-      "updatedAt": "2026-03-28T06:47:33Z",
+      "updatedAt": "2026-03-28T06:51:37Z",
       "headSha": "036c2033dd44319825452887969af4adc0d2cd32",
-      "generatedAt": "2026-03-28T06:51:20.376Z",
-      "summary": "LOGOS-44 reuses one toroidal bottleneck 44 times with CDMA field decoding and coherence gating to trade parameters for compute depth.",
+      "generatedAt": "2026-03-28T07:21:10.812Z",
+      "summary": "Shared block reruns signal 44 times via toroidal sin·cos bottleneck plus CDMA field decoding, swapping parameters for compute depth.",
       "tags": [
         "architecture",
-        "quantization",
-        "compression"
+        "quantization"
       ],
       "flags": {
         "usesValOnly": false,
@@ -1788,14 +1787,13 @@
       "prNumber": 911,
       "title": "KoopCaps-HRM Ternary Reasoner — Koopman Capsule Dynamics + Adaptive Halting",
       "status": "open",
-      "updatedAt": "2026-03-28T04:26:20Z",
-      "headSha": "5619522dacbc7e6716567ea9e7bf60a562475e7d",
-      "generatedAt": "2026-03-28T04:50:24.938Z",
-      "summary": "Ternary U-Net iterates with Koopman-driven capsule predictions, Hadamard-gated feedback, and sliding-window carry to squeeze reasoning from limited bytes.",
+      "updatedAt": "2026-03-28T07:19:46Z",
+      "headSha": "8538a06e0d14eb5cdece7052a65ac726d6758a22",
+      "generatedAt": "2026-03-28T07:21:14.923Z",
+      "summary": "Ternary U-Net stacks Hadamard-rotated Koopman capsule dynamics, cold-start gating, and adaptive halting with capsule carry for iterative reasoning in tight budgets.",
       "tags": [
-        "architecture",
         "quantization",
-        "optimizer",
+        "architecture",
         "evaluation"
       ],
       "flags": {
