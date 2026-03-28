@@ -1,37 +1,36 @@
 {
-  "generatedAt": "2026-03-24T14:26:52.212Z",
+  "generatedAt": "2026-03-28T19:54:33.357Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 340,
     "title": "V2 Prototype: SwiGLU + Dropout + MuonWD + MidLayerLoop",
     "state": "open",
-    "updatedAt": "2026-03-24T14:17:37Z",
-    "headSha": "879589afbb3e2be81088204ca472f823a6dda204",
+    "updatedAt": "2026-03-28T19:49:24Z",
+    "headSha": "a53b95d10d4f0182c25deaac0de8f2fe718bea7d",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/340",
     "authorLogin": "starfly-web"
   },
   "inputs": {
     "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
     "readmePaths": [
-      "records/track_non_record_16mb/2026-03-21_SwiGLU_Dropout_MuonWD_MidLayerLoop/README.md"
+      "records/track_10min_16mb/2026-03-21_SwiGLU_Dropout_MuonWD_MidLayerLoop/README.md"
     ],
     "submissionCount": 1
   },
   "output": {
-    "summary": "Prototype pairs SwiGLU MLPs with aggressive MuonWD/dropout and inner-layer recurrence, plus INT8+zlib compression for a 16MB-friendly H100-ready build.",
+    "summary": "Prototype uses SwiGLU MLP with aggressive MuonWD/dropout and inner-layer recurrence to boost effective depth for the 10-minute track.",
     "tags": [
-      "architecture",
-      "muon",
       "regularization",
-      "quantization"
+      "architecture",
+      "compression"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "SwiGLU MLPs with targeted mid-layer recurrence",
-      "MuonWD and 10% dropout across attention/MLP",
-      "INT8+zlib post-training compression"
+      "Aggressive Muon weight decay and 10% dropout across attention/MLP",
+      "SwiGLU MLP plus middle-layer recurrence to increase depth",
+      "INT8+zlib post-training compression pipeline"
     ]
   },
   "compatibility": {

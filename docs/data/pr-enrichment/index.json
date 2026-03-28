@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-28T19:24:23.694Z",
+  "generatedAt": "2026-03-28T19:54:33.401Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
@@ -3056,16 +3056,16 @@
     {
       "prNumber": 854,
       "title": "Non-record: Value Embeddings 8L 512d, 1.3712 bpb (1x RTX 4090)",
-      "status": "open",
-      "updatedAt": "2026-03-28T03:39:07Z",
+      "status": "closed",
+      "updatedAt": "2026-03-28T19:40:24Z",
       "headSha": "193b37d6c310fdfa7989abcd2b6f4c713cd509d1",
-      "generatedAt": "2026-03-28T03:50:20.357Z",
-      "summary": "Autoresearch 8L 512d on RTX 4090 adds alternating gated value embeddings plus SSSL sliding attention and 8192 BPE to enrich context.",
+      "generatedAt": "2026-03-28T19:54:27.603Z",
+      "summary": "Fuses a large value-embedding table into an 8-layer, 512d model with SSSL sliding attention and 8192 BPE vocab on a single RTX 4090.",
       "tags": [
         "architecture",
         "attention",
         "tokenization",
-        "non-record"
+        "quantization"
       ],
       "flags": {
         "usesValOnly": false,
@@ -11110,15 +11110,14 @@
       "prNumber": 340,
       "title": "V2 Prototype: SwiGLU + Dropout + MuonWD + MidLayerLoop",
       "status": "open",
-      "updatedAt": "2026-03-24T14:17:37Z",
-      "headSha": "879589afbb3e2be81088204ca472f823a6dda204",
-      "generatedAt": "2026-03-24T14:26:52.212Z",
-      "summary": "Prototype pairs SwiGLU MLPs with aggressive MuonWD/dropout and inner-layer recurrence, plus INT8+zlib compression for a 16MB-friendly H100-ready build.",
+      "updatedAt": "2026-03-28T19:49:24Z",
+      "headSha": "a53b95d10d4f0182c25deaac0de8f2fe718bea7d",
+      "generatedAt": "2026-03-28T19:54:33.357Z",
+      "summary": "Prototype uses SwiGLU MLP with aggressive MuonWD/dropout and inner-layer recurrence to boost effective depth for the 10-minute track.",
       "tags": [
-        "architecture",
-        "muon",
         "regularization",
-        "quantization"
+        "architecture",
+        "compression"
       ],
       "flags": {
         "usesValOnly": false,

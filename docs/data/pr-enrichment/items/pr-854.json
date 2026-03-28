@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-28T03:50:20.357Z",
+  "generatedAt": "2026-03-28T19:54:27.603Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 854,
     "title": "Non-record: Value Embeddings 8L 512d, 1.3712 bpb (1x RTX 4090)",
-    "state": "open",
-    "updatedAt": "2026-03-28T03:39:07Z",
+    "state": "closed",
+    "updatedAt": "2026-03-28T19:40:24Z",
     "headSha": "193b37d6c310fdfa7989abcd2b6f4c713cd509d1",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/854",
     "authorLogin": "ivanontech"
@@ -20,19 +20,19 @@
     "submissionCount": 2
   },
   "output": {
-    "summary": "Autoresearch 8L 512d on RTX 4090 adds alternating gated value embeddings plus SSSL sliding attention and 8192 BPE to enrich context.",
+    "summary": "Fuses a large value-embedding table into an 8-layer, 512d model with SSSL sliding attention and 8192 BPE vocab on a single RTX 4090.",
     "tags": [
       "architecture",
       "attention",
       "tokenization",
-      "non-record"
+      "quantization"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Gated value embeddings fused every other layer",
-      "SSSL sliding-window attention pattern",
-      "8192 BPE vocab with tied embeddings"
+      "Value-embedding table fused on alternating layers",
+      "SSSL sliding-window attention with 8192 BPE vocab",
+      "Training on single RTX 4090 with Muon+AdamW and int8+zlib quantization"
     ]
   },
   "compatibility": {
