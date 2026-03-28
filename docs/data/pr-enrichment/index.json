@@ -1,8 +1,54 @@
 {
-  "generatedAt": "2026-03-28T22:25:13.128Z",
+  "generatedAt": "2026-03-28T22:55:45.355Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 1041,
+      "title": "Non-record: 11L Int5 QAT + Score-First TTT — val_bpb 1.1356 (15.60 MiB)",
+      "status": "closed",
+      "updatedAt": "2026-03-28T22:36:40Z",
+      "headSha": "8d735ba276acca745ba69a974b380bca4b399978",
+      "generatedAt": "2026-03-28T22:55:28.971Z",
+      "summary": "11-layer U-Net pairs Int5 quantization-aware training with score-first TTT to match the prior config in an independent seed run.",
+      "tags": [
+        "quantization",
+        "architecture",
+        "training-schedule"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1041.json"
+    },
+    {
+      "prNumber": 1040,
+      "title": "Non-record: 11L Int5 QAT + Score-First TTT — val_bpb 1.1336 (15.59 MiB)",
+      "status": "closed",
+      "updatedAt": "2026-03-28T22:36:39Z",
+      "headSha": "95682eb993f5760850ec240236b14556831325fc",
+      "generatedAt": "2026-03-28T22:55:33.201Z",
+      "summary": "11-layer U-Net runs Score-First TTT with Int5 QAT to craft a legal 16MB artifact under inference-mode scoring before training.",
+      "tags": [
+        "architecture",
+        "quantization",
+        "training-schedule"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1040.json"
+    },
     {
       "prNumber": 1039,
       "title": "Add LeakyReLU² + 4ep Legal TTT submission",
@@ -239,13 +285,14 @@
       "prNumber": 1028,
       "title": "Medusa: Unstable — DeltaNet Crawler 0.8104 BPB 10mb file size(best seed), mean 0.9984, Frugendorff continuation",
       "status": "open",
-      "updatedAt": "2026-03-28T19:10:11Z",
+      "updatedAt": "2026-03-28T22:28:49Z",
       "headSha": "5f731b386f760ece37b4d4f0fb15cc7332c73b73",
-      "generatedAt": "2026-03-28T19:24:19.623Z",
-      "summary": "Medusa inserts canonical 4-head DeltaNet chunk_delta_rule into its Frugendorff crawler loops with loop-aware GPTQ quantization and a late-start EMA schedule.",
+      "generatedAt": "2026-03-28T22:55:39.096Z",
+      "summary": "Medusa_IV wires canonical four-head DeltaNet delta_rule into a Frugendorff crawler with loop-aware GPTQ and late-start EMA for quantized int6 training.",
       "tags": [
         "architecture",
         "quantization",
+        "optimizer",
         "training-schedule"
       ],
       "flags": {
@@ -2988,14 +3035,15 @@
       "prNumber": 861,
       "title": "Non-record: 11L Int5 QAT + Score-First TTT — val_bpb 1.1326 (15.51 MB)",
       "status": "open",
-      "updatedAt": "2026-03-28T22:19:11Z",
+      "updatedAt": "2026-03-28T22:38:35Z",
       "headSha": "28d45d26f58981b4e4c94acf8748cc38e1d3a93a",
-      "generatedAt": "2026-03-28T22:25:12.997Z",
-      "summary": "11-layer U-Net with per-row Int5 QAT, 15% pruning, bigram hash embedding, and score-first TTT on MLP-only params.",
+      "generatedAt": "2026-03-28T22:55:45.232Z",
+      "summary": "11-layer U-Net uses int5 QAT with pruning, bigram hash embeddings, and score-first TTT for MLP-only adaptation before eval.",
       "tags": [
         "quantization",
         "architecture",
-        "training-schedule"
+        "training-schedule",
+        "optimizer"
       ],
       "flags": {
         "usesValOnly": false,

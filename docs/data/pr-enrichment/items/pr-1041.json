@@ -1,0 +1,40 @@
+{
+  "generatedAt": "2026-03-28T22:55:28.971Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1041,
+    "title": "Non-record: 11L Int5 QAT + Score-First TTT — val_bpb 1.1356 (15.60 MiB)",
+    "state": "closed",
+    "updatedAt": "2026-03-28T22:36:40Z",
+    "headSha": "8d735ba276acca745ba69a974b380bca4b399978",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1041",
+    "authorLogin": "JoeProAI"
+  },
+  "inputs": {
+    "hash": "072662c123505c465dfcb1e80cbfb797fc5a748edd0e2a3564b0b095cec763f8",
+    "readmePaths": [],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "11-layer U-Net pairs Int5 quantization-aware training with score-first TTT to match the prior config in an independent seed run.",
+    "tags": [
+      "quantization",
+      "architecture",
+      "training-schedule"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Int5 quantization-aware training",
+      "Score-first token training",
+      "11-layer U-Net architecture"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

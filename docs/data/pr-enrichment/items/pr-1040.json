@@ -1,0 +1,40 @@
+{
+  "generatedAt": "2026-03-28T22:55:33.201Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1040,
+    "title": "Non-record: 11L Int5 QAT + Score-First TTT — val_bpb 1.1336 (15.59 MiB)",
+    "state": "closed",
+    "updatedAt": "2026-03-28T22:36:39Z",
+    "headSha": "95682eb993f5760850ec240236b14556831325fc",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1040",
+    "authorLogin": "JoeProAI"
+  },
+  "inputs": {
+    "hash": "072662c123505c465dfcb1e80cbfb797fc5a748edd0e2a3564b0b095cec763f8",
+    "readmePaths": [],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "11-layer U-Net runs Score-First TTT with Int5 QAT to craft a legal 16MB artifact under inference-mode scoring before training.",
+    "tags": [
+      "architecture",
+      "quantization",
+      "training-schedule"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "Standard training; no explicit validation-only regime.",
+    "techniques": [
+      "Score-first TTT scoring before training updates",
+      "Int5 quantization-aware training for compact weights",
+      "U-Net backbone tailored for 16MB constraint"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

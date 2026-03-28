@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-28T22:25:12.997Z",
+  "generatedAt": "2026-03-28T22:55:45.232Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 861,
     "title": "Non-record: 11L Int5 QAT + Score-First TTT — val_bpb 1.1326 (15.51 MB)",
     "state": "open",
-    "updatedAt": "2026-03-28T22:19:11Z",
+    "updatedAt": "2026-03-28T22:38:35Z",
     "headSha": "28d45d26f58981b4e4c94acf8748cc38e1d3a93a",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/861",
     "authorLogin": "JoeProAI"
@@ -19,18 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "11-layer U-Net with per-row Int5 QAT, 15% pruning, bigram hash embedding, and score-first TTT on MLP-only params.",
+    "summary": "11-layer U-Net uses int5 QAT with pruning, bigram hash embeddings, and score-first TTT for MLP-only adaptation before eval.",
     "tags": [
       "quantization",
       "architecture",
-      "training-schedule"
+      "training-schedule",
+      "optimizer"
     ],
     "usesValOnly": false,
-    "valOnlyReasoning": "Not val-only training.",
+    "valOnlyReasoning": "",
     "techniques": [
-      "Int5 per-row QAT with clipping and extended warmdown",
-      "Score-first TTT adapting only MLP projections",
-      "Bigram hash embedding plus pre-quant pruning"
+      "Int5 QAT + 15% pruning for compact weights",
+      "MLP-only score-first TTT adaptation",
+      "Bigram hash embeddings in U-Net token stream"
     ]
   },
   "compatibility": {
