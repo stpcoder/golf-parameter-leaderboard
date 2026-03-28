@@ -1,0 +1,41 @@
+{
+  "generatedAt": "2026-03-28T18:54:24.046Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1032,
+    "title": "[Non-Record] QAT Dead-Code Analysis + 7 Novel Technique Sweep (1xH100)",
+    "state": "open",
+    "updatedAt": "2026-03-28T18:43:13Z",
+    "headSha": "8f3c4d531afe1283917fc73d713d6fba0621c212",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1032",
+    "authorLogin": "wfproc"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-03-28_QAT_DeadCode_Analysis_NovelTechniques_1xH100/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Fixed torch.compile dead-code in Late QAT via tensor-scale STE and swept seven novel low-overhead ideas, showing each ms of overhead hurts on 1xH100.",
+    "tags": [
+      "non-record",
+      "quantization"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Tensor-scale STE to flip Late QAT without recompiles",
+      "Muon-VS, SVD compression, recurrence, and widening tests to quantify per-ms overhead cost",
+      "Anti-layer diagnost ic sweeps plus prune-then-quantize toggles"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

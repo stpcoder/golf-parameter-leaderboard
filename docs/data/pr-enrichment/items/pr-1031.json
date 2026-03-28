@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-28T18:54:30.165Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1031,
+    "title": "Record: MTP-2 Funnel + LeakyReLU(0.75)² + Legal TTT + Parallel Muon",
+    "state": "open",
+    "updatedAt": "2026-03-28T18:38:55Z",
+    "headSha": "02eb7a8d204bbe7956b737210af92b6ee7f1d213",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1031",
+    "authorLogin": "michaelwinczuk"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-27_LeakyReLU075_LegalTTT_ParallelMuon_TunedLR/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Uses lightweight MTP auxiliary loss, tuned LeakyReLU slope, and legal TTT with Muon to enrich gradients without export cost.",
+    "tags": [
+      "architecture",
+      "muon",
+      "training-schedule"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Auxiliary multi-token prediction head pruned before export",
+      "LeakyReLU negative_slope 0.75 squared to boost negative pathway",
+      "Extended warmdown with slightly higher matrix LR to match stronger gradients"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

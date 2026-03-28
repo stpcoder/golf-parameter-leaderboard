@@ -1,8 +1,97 @@
 {
-  "generatedAt": "2026-03-28T18:24:07.750Z",
+  "generatedAt": "2026-03-28T18:54:30.328Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 1034,
+      "title": "Non-record: knowledge distillation teacher-student submission",
+      "status": "open",
+      "updatedAt": "2026-03-28T18:43:36Z",
+      "headSha": "0d128ece74847be9b49a77538b7afb678ceabbd4",
+      "generatedAt": "2026-03-28T18:54:11.625Z",
+      "summary": "Distills a 12L/768 teacher into a 6L/384 student via temperature-scaled KL+CE so only the small student needs to fit the 16MB cap.",
+      "tags": [
+        "non-record",
+        "regularization"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1034.json"
+    },
+    {
+      "prNumber": 1033,
+      "title": "Record: 0.4311 BPB - Complementary Training + Backoff N-gram Mixer + TTT",
+      "status": "open",
+      "updatedAt": "2026-03-28T18:42:40Z",
+      "headSha": "cacbf228f39cb2f71bc681e03cf39701409988e7",
+      "generatedAt": "2026-03-28T18:54:16.944Z",
+      "summary": "Training downweights bigram-friendly tokens so the transformer focuses on cache-hard cases before mixing with an adaptive backoff N-gram cache.",
+      "tags": [
+        "architecture",
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1033.json"
+    },
+    {
+      "prNumber": 1032,
+      "title": "[Non-Record] QAT Dead-Code Analysis + 7 Novel Technique Sweep (1xH100)",
+      "status": "open",
+      "updatedAt": "2026-03-28T18:43:13Z",
+      "headSha": "8f3c4d531afe1283917fc73d713d6fba0621c212",
+      "generatedAt": "2026-03-28T18:54:24.046Z",
+      "summary": "Fixed torch.compile dead-code in Late QAT via tensor-scale STE and swept seven novel low-overhead ideas, showing each ms of overhead hurts on 1xH100.",
+      "tags": [
+        "non-record",
+        "quantization"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1032.json"
+    },
+    {
+      "prNumber": 1031,
+      "title": "Record: MTP-2 Funnel + LeakyReLU(0.75)² + Legal TTT + Parallel Muon",
+      "status": "open",
+      "updatedAt": "2026-03-28T18:38:55Z",
+      "headSha": "02eb7a8d204bbe7956b737210af92b6ee7f1d213",
+      "generatedAt": "2026-03-28T18:54:30.165Z",
+      "summary": "Uses lightweight MTP auxiliary loss, tuned LeakyReLU slope, and legal TTT with Muon to enrich gradients without export cost.",
+      "tags": [
+        "architecture",
+        "muon",
+        "training-schedule"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1031.json"
+    },
     {
       "prNumber": 1030,
       "title": "Record: Single-Pass Packed N-gram + Dirichlet CTW — val_bpb 0.1130 (3-seed mean)",
@@ -1005,28 +1094,6 @@
         "valOnlyMatchesCollector": true
       },
       "file": "items/pr-978.json"
-    },
-    {
-      "prNumber": 977,
-      "title": "LeakyReLU(0.75)² + Legal TTT + Parallel Muon — 1.1185 BPB (3-seed mean)",
-      "status": "open",
-      "updatedAt": "2026-03-27T19:37:17Z",
-      "headSha": "df76b90e765c0346c7a4816c1b7e220915fccde3",
-      "generatedAt": "2026-03-27T19:48:03.881Z",
-      "summary": "Tuned a legal-TTT Muon model by raising the LeakyReLU negative slope to 0.75 and slightly upping LR/warmdown to leverage stronger gradients under 16MB.",
-      "tags": [
-        "architecture",
-        "training-schedule"
-      ],
-      "flags": {
-        "usesValOnly": false,
-        "usesValOnlyAi": false,
-        "usesValOnlyCollector": false
-      },
-      "compatibility": {
-        "valOnlyMatchesCollector": true
-      },
-      "file": "items/pr-977.json"
     },
     {
       "prNumber": 976,
