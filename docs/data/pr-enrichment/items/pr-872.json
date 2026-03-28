@@ -1,0 +1,40 @@
+{
+  "generatedAt": "2026-03-28T00:19:25.371Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 872,
+    "title": "E2E TTT: End-to-End Test-Time Training with Meta-Learning (1.0467 BPB)",
+    "state": "closed",
+    "updatedAt": "2026-03-26T17:20:06Z",
+    "headSha": "9c4b9cf254ae5a885344d010db7d89eac49427c6",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/872",
+    "authorLogin": "gowtham0992"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-25_VRL_FullGPTQ_NgramKNN_1.0970/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Phased MAML-style meta-learning backpropagates through test-time inner updates to adapt the base Transformer for End-to-End TTT evaluation.",
+    "tags": [
+      "training-schedule",
+      "evaluation"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "MAML-style meta-learning via create_graph inner loops",
+      "Inner-loop gradient descent on MLP weights using next-token loss"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

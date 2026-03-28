@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-28T00:19:12.229Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 991,
+    "title": "Record: 33.6M Int5 GPTQ + Score-First TTT (val_bpb=1.1145, 3-seed)",
+    "state": "open",
+    "updatedAt": "2026-03-28T00:04:18Z",
+    "headSha": "4d2a4eda713276c6a31e5b9e07a04bc058c92f75",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/991",
+    "authorLogin": "ibarrajo"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-27_ApproachB_LargerModel_Int5/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Int5-GPTQ compresses a 33.6M model whose evaluation uses legal score-first backward TTT on the final blocks plus post-TTT temperature calibration.",
+    "tags": [
+      "val-only",
+      "quantization",
+      "training-schedule",
+      "evaluation"
+    ],
+    "usesValOnly": true,
+    "valOnlyReasoning": "Score-first backward TTT fine-tunes on validation shards after scoring before the final evaluation.",
+    "techniques": [
+      "- Int5 GPTQ clipping [-16,15] with zstd-22",
+      "- Score-first backward-looking TTT on the last two blocks",
+      "- Post-TTT temperature calibration at T=0.98"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": true,
+    "finalUsesValOnly": true,
+    "valOnlyMatchesCollector": false
+  }
+}

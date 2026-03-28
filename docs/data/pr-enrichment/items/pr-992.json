@@ -1,0 +1,41 @@
+{
+  "generatedAt": "2026-03-28T00:19:05.694Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 992,
+    "title": "[Non-Record] H-Net with Dynamic Sequence Chunking",
+    "state": "open",
+    "updatedAt": "2026-03-28T00:06:25Z",
+    "headSha": "81e66fdcfd83420b492852979726f1117dfd20ab",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/992",
+    "authorLogin": "TimS-ml"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-03-27_HNet_DynamicChunking_Enc2_Inner5_Dec2_512d_Muon/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Implements H-Net with learned dynamic chunking to compress sequences into latent chunks, model them, and upsample for autoregressive decoding on the Parameter Golf stack.",
+    "tags": [
+      "architecture",
+      "non-record"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "DynamicSequenceChunker learns content-dependent boundaries",
+      "Compressed inner transformer followed by learned upsampling",
+      "Adapts GQA+RoPE baseline stack with RMSNorm and Muon"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

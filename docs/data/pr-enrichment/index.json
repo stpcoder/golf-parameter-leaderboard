@@ -1,8 +1,100 @@
 {
-  "generatedAt": "2026-03-27T23:49:04.841Z",
+  "generatedAt": "2026-03-28T00:19:25.497Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 993,
+      "title": "Record: 11L XSA + Mixed INT6 + Adaptive N-gram Cache (2->7 backoff) - val_bpb=0.9631, 3-seed",
+      "status": "open",
+      "updatedAt": "2026-03-28T00:13:56Z",
+      "headSha": "b65409892fedf8bbb8ee023e306246397cb2f16a",
+      "generatedAt": "2026-03-28T00:19:00.616Z",
+      "summary": "Compact 11-layer XSA model uses mixed INT6 post-training quantization, sliding-window eval, and score-first adaptive 2-7 n-gram cache.",
+      "tags": [
+        "architecture",
+        "quantization",
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-993.json"
+    },
+    {
+      "prNumber": 992,
+      "title": "[Non-Record] H-Net with Dynamic Sequence Chunking",
+      "status": "open",
+      "updatedAt": "2026-03-28T00:06:25Z",
+      "headSha": "81e66fdcfd83420b492852979726f1117dfd20ab",
+      "generatedAt": "2026-03-28T00:19:05.694Z",
+      "summary": "Implements H-Net with learned dynamic chunking to compress sequences into latent chunks, model them, and upsample for autoregressive decoding on the Parameter Golf stack.",
+      "tags": [
+        "architecture",
+        "non-record"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-992.json"
+    },
+    {
+      "prNumber": 991,
+      "title": "Record: 33.6M Int5 GPTQ + Score-First TTT (val_bpb=1.1145, 3-seed)",
+      "status": "open",
+      "updatedAt": "2026-03-28T00:04:18Z",
+      "headSha": "4d2a4eda713276c6a31e5b9e07a04bc058c92f75",
+      "generatedAt": "2026-03-28T00:19:12.229Z",
+      "summary": "Int5-GPTQ compresses a 33.6M model whose evaluation uses legal score-first backward TTT on the final blocks plus post-TTT temperature calibration.",
+      "tags": [
+        "val-only",
+        "quantization",
+        "training-schedule",
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": true,
+        "usesValOnlyAi": true,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": false
+      },
+      "file": "items/pr-991.json"
+    },
+    {
+      "prNumber": 990,
+      "title": "ClownCar: Frugendorff compression baseline + canonical DeltaNet integration",
+      "status": "open",
+      "updatedAt": "2026-03-28T00:02:14Z",
+      "headSha": "90741b4c55ca0a0d0f79056dec29da64d7636491",
+      "generatedAt": "2026-03-28T00:19:17.436Z",
+      "summary": "Frugendorff crawler shares a recurrent block with loop-conditioned flow instructions and replaces DeltaNetMemory with the canonical chunk_delta_rule kernel to shrink/accelerate compression.",
+      "tags": [
+        "architecture",
+        "compression",
+        "quantization"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-990.json"
+    },
     {
       "prNumber": 989,
       "title": "QAT x SWA Ablation: SWA sabotages QAT (-3.64 mBPB, 3-seed validated)",
@@ -1960,6 +2052,28 @@
         "valOnlyMatchesCollector": true
       },
       "file": "items/pr-873.json"
+    },
+    {
+      "prNumber": 872,
+      "title": "E2E TTT: End-to-End Test-Time Training with Meta-Learning (1.0467 BPB)",
+      "status": "closed",
+      "updatedAt": "2026-03-26T17:20:06Z",
+      "headSha": "9c4b9cf254ae5a885344d010db7d89eac49427c6",
+      "generatedAt": "2026-03-28T00:19:25.371Z",
+      "summary": "Phased MAML-style meta-learning backpropagates through test-time inner updates to adapt the base Transformer for End-to-End TTT evaluation.",
+      "tags": [
+        "training-schedule",
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-872.json"
     },
     {
       "prNumber": 870,
@@ -4009,29 +4123,6 @@
         "valOnlyMatchesCollector": true
       },
       "file": "items/pr-739.json"
-    },
-    {
-      "prNumber": 738,
-      "title": "Record: VRL + Full GPTQ + 5-gram Cache + Hidden-State kNN-LM (3-seed mean val_bpb=1.0970)",
-      "status": "open",
-      "updatedAt": "2026-03-25T16:34:48Z",
-      "headSha": "c458ceffd39aa103a914a228c6561428216eac1c",
-      "generatedAt": "2026-03-25T17:03:13.499Z",
-      "summary": "Combines VRL stack with GPTQ-int6 quantization and adaptive 5-gram plus hidden-state kNN caches to capture semantic repetition during eval.",
-      "tags": [
-        "quantization",
-        "evaluation",
-        "architecture"
-      ],
-      "flags": {
-        "usesValOnly": false,
-        "usesValOnlyAi": false,
-        "usesValOnlyCollector": false
-      },
-      "compatibility": {
-        "valOnlyMatchesCollector": true
-      },
-      "file": "items/pr-738.json"
     },
     {
       "prNumber": 737,
