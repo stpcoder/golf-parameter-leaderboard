@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-29T18:01:17.019Z",
+  "generatedAt": "2026-03-29T18:31:23.757Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 347,
     "title": "GatedAttn + ValueResidual + Full QAT + lzma-9 + BigramHash(2048)",
     "state": "open",
-    "updatedAt": "2026-03-29T17:40:44Z",
-    "headSha": "6b3441b40ce47a739ae901738ce23bc2c10256c5",
+    "updatedAt": "2026-03-29T18:12:57Z",
+    "headSha": "3277196892c145cf390fa94ac8426903590bc26f",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/347",
     "authorLogin": "FlashyFlash3011"
   },
@@ -19,18 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "GPTQLite stacks GatedAttention/value residual gating with full-run QAT and lzma-9 to restore a 2048 bigram hash within the 16MB budget.",
+    "summary": "Combines per-head gated attention/value residual fusion with step-one int6 QAT and denser BigramHash after lzma-9 compression to squeeze more bits.",
     "tags": [
+      "attention",
       "quantization",
-      "architecture",
-      "compression"
+      "compression",
+      "training-schedule"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "GatedAttention & ValueResidual gating per head",
-      "Full-training GPTQ-lite QAT from the start",
-      "lZMA-9 compression buys BigramHash 2048 budget"
+      "Per-head gated attention with ValueResidual injection",
+      "Full-step GPTQ-lite int6 QAT schedule",
+      "lzma-9 compression enabling 2048 BigramHash"
     ]
   },
   "compatibility": {

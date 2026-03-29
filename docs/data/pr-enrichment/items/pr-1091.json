@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-29T18:30:56.672Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1091,
+    "title": "The Kitchen Sink",
+    "state": "open",
+    "updatedAt": "2026-03-29T18:22:33Z",
+    "headSha": "95a021102f3a84a08c8675b0a0c3db547e978562",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1091",
+    "authorLogin": "MichaelMcCulloch"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-29_FullStack_TTT_Ngram_KNN_TurboQuant/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Train script gates 26 architectural, training, quantization, and eval techniques (hybrid norm, QAT+GPTQ, TTT LoRA, kNN) for parameter golf.",
+    "tags": [
+      "architecture",
+      "quantization",
+      "training-schedule",
+      "evaluation"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Hybrid-norm+activation toggles",
+      "Quantization stack with QAT, GPTQ, OptRot, and pruning",
+      "Eval-time TTT LoRA, n-gram/kNN caches, TurboQuant"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

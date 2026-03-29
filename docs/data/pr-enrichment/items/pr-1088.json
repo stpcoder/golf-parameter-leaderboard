@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-29T18:31:17.908Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1088,
+    "title": "Non-Record Universal Transformer submission. (2x Attention layers, 3 Layer MLP, depth scheduling)",
+    "state": "open",
+    "updatedAt": "2026-03-29T18:09:25Z",
+    "headSha": "e2ae49483e66807be0c52a2126bcef2bd062de2a",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1088",
+    "authorLogin": "serdardoesml"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-03-27_UT_DoubleAttn_3L-MLP/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Shared Universal Transformer block stacks two attention sublayers before a 3-layer MLP with depth biases plus a compile-time depth schedule for efficient training.",
+    "tags": [
+      "architecture",
+      "attention",
+      "training-schedule",
+      "quantization"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Shared UT recurrence with dual attention sublayers",
+      "3-layer MLP with depth-aware pre-norm biases",
+      "Compile-time depth schedule (0:2,2000:6)"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

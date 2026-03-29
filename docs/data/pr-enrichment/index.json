@@ -1,8 +1,104 @@
 {
-  "generatedAt": "2026-03-29T18:01:17.074Z",
+  "generatedAt": "2026-03-29T18:31:23.809Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 1091,
+      "title": "The Kitchen Sink",
+      "status": "open",
+      "updatedAt": "2026-03-29T18:22:33Z",
+      "headSha": "95a021102f3a84a08c8675b0a0c3db547e978562",
+      "generatedAt": "2026-03-29T18:30:56.672Z",
+      "summary": "Train script gates 26 architectural, training, quantization, and eval techniques (hybrid norm, QAT+GPTQ, TTT LoRA, kNN) for parameter golf.",
+      "tags": [
+        "architecture",
+        "quantization",
+        "training-schedule",
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1091.json"
+    },
+    {
+      "prNumber": 1090,
+      "title": "Non-record: 11L XSA + Score-First LoRA TTT (1.1573, 1xH100)",
+      "status": "open",
+      "updatedAt": "2026-03-29T18:18:46Z",
+      "headSha": "b0d7261716c3c1faa4a250d44ec6a7be90a59e23",
+      "generatedAt": "2026-03-29T18:31:05.462Z",
+      "summary": "11-layer Transformer uses XSA on last layers, SwiGLU 3× MLP, SmearGate+U-Net skips, Muon/SWA, mixed int5/6/8 quant, and score-first LoRA TTT per 256-token chunk.",
+      "tags": [
+        "architecture",
+        "attention",
+        "quantization",
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1090.json"
+    },
+    {
+      "prNumber": 1089,
+      "title": "Record Submission: 1.1086 BPB - Turbo-Muon + EngramLite + ParamBanking (11L 512d)",
+      "status": "open",
+      "updatedAt": "2026-03-29T18:10:07Z",
+      "headSha": "4f04effff036c937afe458a910b349530fca81c1",
+      "generatedAt": "2026-03-29T18:31:13.432Z",
+      "summary": "11-layer GPT blends Turbo-Muon optimizer, EngramLite hash embeddings, parameter banking, gated U-Net skips, ValueEmbedding, SmearGate, and GPTQ mixed precision.",
+      "tags": [
+        "optimizer",
+        "architecture",
+        "tokenization",
+        "compression"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1089.json"
+    },
+    {
+      "prNumber": 1088,
+      "title": "Non-Record Universal Transformer submission. (2x Attention layers, 3 Layer MLP, depth scheduling)",
+      "status": "open",
+      "updatedAt": "2026-03-29T18:09:25Z",
+      "headSha": "e2ae49483e66807be0c52a2126bcef2bd062de2a",
+      "generatedAt": "2026-03-29T18:31:17.908Z",
+      "summary": "Shared Universal Transformer block stacks two attention sublayers before a 3-layer MLP with depth biases plus a compile-time depth schedule for efficient training.",
+      "tags": [
+        "architecture",
+        "attention",
+        "training-schedule",
+        "quantization"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1088.json"
+    },
     {
       "prNumber": 1087,
       "title": "Record: 1.1407 BPB — LeakyReLU^2 + Delayed QAT + Score-First TTT",
@@ -11776,14 +11872,15 @@
       "prNumber": 347,
       "title": "GatedAttn + ValueResidual + Full QAT + lzma-9 + BigramHash(2048)",
       "status": "open",
-      "updatedAt": "2026-03-29T17:40:44Z",
-      "headSha": "6b3441b40ce47a739ae901738ce23bc2c10256c5",
-      "generatedAt": "2026-03-29T18:01:17.019Z",
-      "summary": "GPTQLite stacks GatedAttention/value residual gating with full-run QAT and lzma-9 to restore a 2048 bigram hash within the 16MB budget.",
+      "updatedAt": "2026-03-29T18:12:57Z",
+      "headSha": "3277196892c145cf390fa94ac8426903590bc26f",
+      "generatedAt": "2026-03-29T18:31:23.757Z",
+      "summary": "Combines per-head gated attention/value residual fusion with step-one int6 QAT and denser BigramHash after lzma-9 compression to squeeze more bits.",
       "tags": [
+        "attention",
         "quantization",
-        "architecture",
-        "compression"
+        "compression",
+        "training-schedule"
       ],
       "flags": {
         "usesValOnly": false,
