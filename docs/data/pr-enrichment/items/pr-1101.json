@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-29T22:31:55.520Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1101,
+    "title": "Add non-record pre-TTT anchor submission",
+    "state": "open",
+    "updatedAt": "2026-03-29T22:05:18Z",
+    "headSha": "46f4486db4dd359d7c43161b2489a2312834d82d",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1101",
+    "authorLogin": "amrayach"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-03-28_pre_ttt_anchor/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Root train_gpt skeleton inherits donor anchor features with SDPA attention, partial RoPE, and mixed int6/zstd export plus stride-64 sliding eval.",
+    "tags": [
+      "architecture",
+      "attention",
+      "quantization",
+      "evaluation"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "SDPA attention with partial RoPE and NTK scaling",
+      "SmearGate/BigramHash transplant plus U-Net skips",
+      "Mixed int6 + zstd export with stride-64 sliding eval"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

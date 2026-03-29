@@ -1,8 +1,32 @@
 {
-  "generatedAt": "2026-03-29T22:02:10.318Z",
+  "generatedAt": "2026-03-29T22:32:09.266Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 1101,
+      "title": "Add non-record pre-TTT anchor submission",
+      "status": "open",
+      "updatedAt": "2026-03-29T22:05:18Z",
+      "headSha": "46f4486db4dd359d7c43161b2489a2312834d82d",
+      "generatedAt": "2026-03-29T22:31:55.520Z",
+      "summary": "Root train_gpt skeleton inherits donor anchor features with SDPA attention, partial RoPE, and mixed int6/zstd export plus stride-64 sliding eval.",
+      "tags": [
+        "architecture",
+        "attention",
+        "quantization",
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1101.json"
+    },
     {
       "prNumber": 1100,
       "title": "Non-record: LLaDA-MDLM Diffusion — val_var_bpb 1.1465 (first diffusion to beat AR baseline)",
@@ -78,10 +102,10 @@
       "prNumber": 1097,
       "title": "Parameter golf jepa",
       "status": "open",
-      "updatedAt": "2026-03-29T21:52:18Z",
+      "updatedAt": "2026-03-29T22:07:21Z",
       "headSha": "5bed757868cf5b8508d09074ad42dd12e96abdaa",
-      "generatedAt": "2026-03-29T22:01:57.505Z",
-      "summary": "Recast U-Net as JEPA for text compression with a 256-d latent predictor and SIGReg, keeping JEPA components train-only for zero eval cost.",
+      "generatedAt": "2026-03-29T22:32:01.175Z",
+      "summary": "Recasts the U-Net transformer as a JEPA text compressor with a 256-dim latent predictor plus SIGReg training signal that vanishes during inference.",
       "tags": [
         "architecture",
         "regularization",
@@ -14024,15 +14048,15 @@
       "prNumber": 230,
       "title": "Record: Int6 + MLP 3x + NorMuon + SmearGate + BigramHash + OrthoInit + Sliding Window, val_bpb=1.1541",
       "status": "open",
-      "updatedAt": "2026-03-20T21:40:43Z",
+      "updatedAt": "2026-03-29T22:05:54Z",
       "headSha": "f0ab434a41a6b89b1a72f18763ec135fb1e57136",
-      "generatedAt": "2026-03-20T21:55:24.489Z",
-      "summary": "Int6 quantization funds a 3x MLP with orthogonal muP init, NorMuon, SmearGate, and BigramHash token-pair context, evaluated via stride-256 sliding windows.",
+      "generatedAt": "2026-03-29T22:32:09.227Z",
+      "summary": "Int6 quantization funds a 3x MLP NorMuon stack with SmearGate, BigramHash token-pair features, and sliding-window evaluation.",
       "tags": [
         "quantization",
         "architecture",
-        "regularization",
-        "evaluation"
+        "muon",
+        "sliding-window-eval"
       ],
       "flags": {
         "usesValOnly": false,

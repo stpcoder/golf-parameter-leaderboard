@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-29T22:01:36.553Z",
+  "generatedAt": "2026-03-29T22:31:49.376Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "submissions": [
@@ -16499,6 +16499,83 @@
       }
     },
     {
+      "id": "record-records-track_non_record_16mb-2026-03-28_pre_ttt_anchor",
+      "source": "pull_request",
+      "status": "open",
+      "category": "non-record",
+      "track": {
+        "path": "records/track_non_record_16mb",
+        "slug": "track_non_record_16mb",
+        "label": "Non-record / 16MB",
+        "official": false,
+        "category": "non-record"
+      },
+      "record": {
+        "folderName": "2026-03-28_pre_ttt_anchor",
+        "folderPath": "records/track_non_record_16mb/2026-03-28_pre_ttt_anchor",
+        "submissionPath": "records/track_non_record_16mb/2026-03-28_pre_ttt_anchor/submission.json",
+        "readmePath": "records/track_non_record_16mb/2026-03-28_pre_ttt_anchor/README.md",
+        "trainLogPath": "records/track_non_record_16mb/2026-03-28_pre_ttt_anchor/train.log",
+        "scriptPath": "records/track_non_record_16mb/2026-03-28_pre_ttt_anchor/train_gpt.py"
+      },
+      "submission": {
+        "author": "Ammer Ayach",
+        "githubId": "amrayach",
+        "name": "Non-record: Pre-TTT Anchor Port (SDPA)",
+        "blurb": "Clean 2026-03-21-style pre-TTT anchor ported to root skeleton with SDPA backend. 11L 512d 3x MLP, SmearGate, BigramHash, XSA-4, partial RoPE 16/64 with NTK scaling, LN scale, EMA 0.997, mixed int6+zstd, stride-64 sliding eval. 8xH100 SXM5 on Pegasus HPC via NGC 26.03 container.",
+        "date": "2026-03-28T15:44:47+01:00"
+      },
+      "metrics": {
+        "valBpb": 1.12904446,
+        "valLoss": 1.90633923,
+        "preQuantValBpb": 1.14472403,
+        "preQuantValLoss": 1.93281857,
+        "stepStop": null,
+        "wallclockSeconds": null,
+        "evalTimeSeconds": null
+      },
+      "artifact": {
+        "bytesTotal": 15751324,
+        "bytesCode": 58572,
+        "bytesModelInt8Zlib": null
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
+      "pr": {
+        "number": 1101,
+        "title": "Add non-record pre-TTT anchor submission",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1101",
+        "authorLogin": "amrayach",
+        "authorName": null,
+        "createdAt": "2026-03-29T22:05:18Z",
+        "updatedAt": "2026-03-29T22:05:18Z",
+        "headSha": "46f4486db4dd359d7c43161b2489a2312834d82d",
+        "headRepo": "amrayach/parameter-golf"
+      },
+      "links": {
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/46f4486db4dd359d7c43161b2489a2312834d82d/records/track_non_record_16mb/2026-03-28_pre_ttt_anchor/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/46f4486db4dd359d7c43161b2489a2312834d82d/records/track_non_record_16mb/2026-03-28_pre_ttt_anchor/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/46f4486db4dd359d7c43161b2489a2312834d82d/records/track_non_record_16mb/2026-03-28_pre_ttt_anchor/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/46f4486db4dd359d7c43161b2489a2312834d82d/records/track_non_record_16mb/2026-03-28_pre_ttt_anchor/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/46f4486db4dd359d7c43161b2489a2312834d82d/records/track_non_record_16mb/2026-03-28_pre_ttt_anchor",
+        "pr": "https://github.com/openai/parameter-golf/pull/1101",
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": false,
+        "hasPullRequest": true,
+        "listedInReadme": false
+      }
+    },
+    {
       "id": "record-records-track_10min_16mb-2026-03-22_TightSWA_VE128_TTT",
       "source": "pull_request",
       "status": "open",
@@ -23794,7 +23871,7 @@
         "authorLogin": "MatthewHRockwell",
         "authorName": null,
         "createdAt": "2026-03-20T16:40:39Z",
-        "updatedAt": "2026-03-20T21:40:43Z",
+        "updatedAt": "2026-03-29T22:05:54Z",
         "headSha": "f0ab434a41a6b89b1a72f18763ec135fb1e57136",
         "headRepo": "MatthewHRockwell/parameter-golf"
       },
@@ -38809,7 +38886,7 @@
         "authorLogin": "danielxmed",
         "authorName": null,
         "createdAt": "2026-03-29T21:23:41Z",
-        "updatedAt": "2026-03-29T21:52:18Z",
+        "updatedAt": "2026-03-29T22:07:21Z",
         "headSha": "5bed757868cf5b8508d09074ad42dd12e96abdaa",
         "headRepo": "danielxmed/parameter-golf"
       },

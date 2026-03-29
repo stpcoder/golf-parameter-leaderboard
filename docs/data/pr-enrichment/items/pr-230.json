@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-20T21:55:24.489Z",
+  "generatedAt": "2026-03-29T22:32:09.227Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 230,
     "title": "Record: Int6 + MLP 3x + NorMuon + SmearGate + BigramHash + OrthoInit + Sliding Window, val_bpb=1.1541",
     "state": "open",
-    "updatedAt": "2026-03-20T21:40:43Z",
+    "updatedAt": "2026-03-29T22:05:54Z",
     "headSha": "f0ab434a41a6b89b1a72f18763ec135fb1e57136",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/230",
     "authorLogin": "MatthewHRockwell"
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Int6 quantization funds a 3x MLP with orthogonal muP init, NorMuon, SmearGate, and BigramHash token-pair context, evaluated via stride-256 sliding windows.",
+    "summary": "Int6 quantization funds a 3x MLP NorMuon stack with SmearGate, BigramHash token-pair features, and sliding-window evaluation.",
     "tags": [
       "quantization",
       "architecture",
-      "regularization",
-      "evaluation"
+      "muon",
+      "sliding-window-eval"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Int6 per-row quantization enabling a larger MLP",
-      "NorMuon with decoupled weight decay plus orthogonal muP init",
-      "SmearGate+BigramHash token-pair context and sliding-window eval"
+      "Int6 per-row quantization frees room for 3x MLP expansion",
+      "SmearGate plus BigramHash token-pair conditioning before the transformer",
+      "NorMuon with decoupled weight decay and orthogonal muP init"
     ]
   },
   "compatibility": {
