@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-28T06:51:08.992Z",
+  "generatedAt": "2026-03-29T13:29:01.877Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 992,
-    "title": "[Non-Record] H-Net with Dynamic Sequence Chunking",
+    "title": "[Non-Record] First H-Net with Dynamic Sequence Chunking (README Requests for PRs) 1.4129 BPB 11.9 MB",
     "state": "open",
-    "updatedAt": "2026-03-28T06:24:13Z",
+    "updatedAt": "2026-03-29T13:12:13Z",
     "headSha": "81e66fdcfd83420b492852979726f1117dfd20ab",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/992",
     "authorLogin": "TimS-ml"
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Hierarchical H-Net learns content-dependent chunk boundaries to compress sequences, run most work in a latent chunk transformer, then upsample via encoder/decoder-heavy layout.",
+    "summary": "H-Net learns content-aware chunk boundaries to compress sequences, processes them via encoder/chunker/inner/upsample/decoder, and matches the GQA+RoPE+Muon stack.",
     "tags": [
       "architecture",
       "attention",
-      "compression",
+      "mixed-precision",
       "non-record"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "content-dependent dynamic chunking",
-      "encoder-decoder-heavy layout over inner depth",
-      "GQA+RoPE+Muon transformer stack"
+      "DynamicSequenceChunker learned downsampling",
+      "Encoder/inner/decoder layout focus",
+      "GQA+RoPE+ReLU-squared+Muon stack"
     ]
   },
   "compatibility": {
