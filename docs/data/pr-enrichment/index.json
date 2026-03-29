@@ -1,8 +1,32 @@
 {
-  "generatedAt": "2026-03-29T17:00:49.094Z",
+  "generatedAt": "2026-03-29T17:30:41.181Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 1085,
+      "title": "Non-record:11L GQA + MLP 3 + Partial RoPE + Int6 Attn/MLP + QAT40 ",
+      "status": "open",
+      "updatedAt": "2026-03-29T17:17:36Z",
+      "headSha": "6a10c0a488c49f9b2fb86bf28265f6b46055e5d0",
+      "generatedAt": "2026-03-29T17:30:41.015Z",
+      "summary": "11-layer GPT-style model pairs GQA/Partial RoPE with late-stage QAT and mixed Int6 quantization to fit within 16MB while keeping capacity high.",
+      "tags": [
+        "architecture",
+        "quantization",
+        "training-schedule",
+        "non-record"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1085.json"
+    },
     {
       "prNumber": 1084,
       "title": "Non-Record: SLOT Eval-Time Augmentation on PR #549 SOTA Stack",

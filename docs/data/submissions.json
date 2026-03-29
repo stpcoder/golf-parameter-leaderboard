@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-29T17:00:30.656Z",
+  "generatedAt": "2026-03-29T17:30:35.477Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "submissions": [
@@ -36818,6 +36818,83 @@
         "script": "https://github.com/openai/parameter-golf/blob/c509e6aaece047d980686a0e31a2c9f62b3b1bfc/records/track_non_record_16mb/2026-03-20_sp4096_custom_tokenizer/train_gpt.py",
         "folder": "https://github.com/openai/parameter-golf/tree/c509e6aaece047d980686a0e31a2c9f62b3b1bfc/records/track_non_record_16mb/2026-03-20_sp4096_custom_tokenizer",
         "pr": "https://github.com/openai/parameter-golf/pull/293",
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": false,
+        "hasPullRequest": true,
+        "listedInReadme": false
+      }
+    },
+    {
+      "id": "record-records-track_non_record_16mb-2026-03-27_11L_GQA_PartialRoPE_Int6AttnMLP_QAT40",
+      "source": "pull_request",
+      "status": "open",
+      "category": "non-record",
+      "track": {
+        "path": "records/track_non_record_16mb",
+        "slug": "track_non_record_16mb",
+        "label": "Non-record / 16MB",
+        "official": false,
+        "category": "non-record"
+      },
+      "record": {
+        "folderName": "2026-03-27_11L_GQA_PartialRoPE_Int6AttnMLP_QAT40",
+        "folderPath": "records/track_non_record_16mb/2026-03-27_11L_GQA_PartialRoPE_Int6AttnMLP_QAT40",
+        "submissionPath": "records/track_non_record_16mb/2026-03-27_11L_GQA_PartialRoPE_Int6AttnMLP_QAT40/submission.json",
+        "readmePath": "records/track_non_record_16mb/2026-03-27_11L_GQA_PartialRoPE_Int6AttnMLP_QAT40/README.md",
+        "trainLogPath": "records/track_non_record_16mb/2026-03-27_11L_GQA_PartialRoPE_Int6AttnMLP_QAT40/train.log",
+        "scriptPath": "records/track_non_record_16mb/2026-03-27_11L_GQA_PartialRoPE_Int6AttnMLP_QAT40/train_gpt.py"
+      },
+      "submission": {
+        "author": "Aditya Sasidhar",
+        "githubId": "adityasasidhar",
+        "name": "11L GQA + MLP 3 + Partial RoPE + Int6 Attn/MLP + QAT40",
+        "blurb": "Compact GPT-style run with tied embeddings, GQA (8 query heads / 4 KV heads), Partial RoPE on 16 dims, XSA on the last 4 layers, FlashAttention-compatible SDPA, and MLP 3x width. Training uses Muon + AdamW with weight decay, 20-step warmup, wallclock-based LR warmdown over the final 15%, and late QAT over the final 40% of training. Evaluation uses sliding-window validation with stride 96. Export uses mixed low-bit quantization with real packed int6 for MLP fc/proj and attention q/k/v/proj weights, passthrough control tensors, and zlib compression.",
+        "date": "2026-03-27"
+      },
+      "metrics": {
+        "valBpb": 1.28311537,
+        "valLoss": 2.16648655,
+        "preQuantValBpb": 1.2755,
+        "preQuantValLoss": 2.1536,
+        "stepStop": null,
+        "wallclockSeconds": null,
+        "evalTimeSeconds": null
+      },
+      "artifact": {
+        "bytesTotal": 15773227,
+        "bytesCode": 59360,
+        "bytesModelInt8Zlib": null
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
+      "pr": {
+        "number": 1085,
+        "title": "Non-record:11L GQA + MLP 3 + Partial RoPE + Int6 Attn/MLP + QAT40 ",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1085",
+        "authorLogin": "adityasasidhar",
+        "authorName": null,
+        "createdAt": "2026-03-29T17:17:36Z",
+        "updatedAt": "2026-03-29T17:17:36Z",
+        "headSha": "6a10c0a488c49f9b2fb86bf28265f6b46055e5d0",
+        "headRepo": "adityasasidhar/parameter-golf"
+      },
+      "links": {
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/6a10c0a488c49f9b2fb86bf28265f6b46055e5d0/records/track_non_record_16mb/2026-03-27_11L_GQA_PartialRoPE_Int6AttnMLP_QAT40/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/6a10c0a488c49f9b2fb86bf28265f6b46055e5d0/records/track_non_record_16mb/2026-03-27_11L_GQA_PartialRoPE_Int6AttnMLP_QAT40/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/6a10c0a488c49f9b2fb86bf28265f6b46055e5d0/records/track_non_record_16mb/2026-03-27_11L_GQA_PartialRoPE_Int6AttnMLP_QAT40/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/6a10c0a488c49f9b2fb86bf28265f6b46055e5d0/records/track_non_record_16mb/2026-03-27_11L_GQA_PartialRoPE_Int6AttnMLP_QAT40/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/6a10c0a488c49f9b2fb86bf28265f6b46055e5d0/records/track_non_record_16mb/2026-03-27_11L_GQA_PartialRoPE_Int6AttnMLP_QAT40",
+        "pr": "https://github.com/openai/parameter-golf/pull/1085",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
       "provenance": {
