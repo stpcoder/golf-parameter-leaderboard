@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-29T05:27:16.790Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1057,
+    "title": "11L MLP2x + LeakyReLU² + Legal TTT (val_bpb=1.2201, 3-seed mean, std=0.0015)",
+    "state": "open",
+    "updatedAt": "2026-03-29T05:19:41Z",
+    "headSha": "eab5721c111da8cb2026de237e7dd9c5561fd976",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1057",
+    "authorLogin": "Programmerryoki"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-29_11L_MLP2x_LeakyReLU_TTT/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "11L 512d MLP2x with LeakyReLU², BigramHash/U-Net skips, and int6 QAT+GPTQ quantization paired with sliding-window legal SGD TTT adaptation.",
+    "tags": [
+      "architecture",
+      "quantization",
+      "evaluation"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "LeakyReLU² MLP2x with SmearGate, U-Net skips, and XSA",
+      "Int6 QAT training plus GPTQ-lite per-row quantization",
+      "Sliding-window eval with legal score-first SGD TTT (7 epochs)"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

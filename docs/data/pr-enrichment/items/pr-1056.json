@@ -1,0 +1,44 @@
+{
+  "generatedAt": "2026-03-29T05:27:23.984Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1056,
+    "title": "Record: Packed Causal N-gram + Dirichlet Backoff — val_bpb 0.0180 (3-seed    mean)",
+    "state": "open",
+    "updatedAt": "2026-03-29T04:59:12Z",
+    "headSha": "7a5524b35bd81d605f8753148bd852c2762946bd",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1056",
+    "authorLogin": "sofiabod"
+  },
+  "inputs": {
+    "hash": "c4f8d017d13e812b0ad5a78b677f8350df1124736cd3f84c8d4e37f273206c70",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-28_PackedCausal_DirichletBackoff/README.md",
+      "records/track_10min_16mb/2026-03-28_SinglePass_PackedNgram_DirichletCTW/README.md",
+      "records/track_10min_16mb/2026-03-26_OrderAdaptive_9gram_Prefill/README.md"
+    ],
+    "submissionCount": 3
+  },
+  "output": {
+    "summary": "Packed causal n-gram artifact plus Dirichlet posterior mixing blends a 2-layer GPT’s logits with high-order n-gram counts in single-pass score-first eval.",
+    "tags": [
+      "architecture",
+      "compression",
+      "evaluation"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Packed order-2–12 n-gram hash tables zipped into artifact to warm cache from the start",
+      "Greedy Dirichlet posterior backoff with count-confidence gating selects the highest reliable order",
+      "Single-pass score-first sliding-window eval with distributed cache prefill"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}
