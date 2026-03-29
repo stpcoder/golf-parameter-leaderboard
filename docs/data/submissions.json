@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-29T06:57:40.032Z",
+  "generatedAt": "2026-03-29T07:27:44.287Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "submissions": [
@@ -36822,6 +36822,83 @@
       },
       "provenance": {
         "onMain": true,
+        "hasPullRequest": true,
+        "listedInReadme": false
+      }
+    },
+    {
+      "id": "record-records-track_non_record_16mb-2026-03-27_CompiledLeakyReLU2_Slide64Eval_1xRTX4090",
+      "source": "pull_request",
+      "status": "open",
+      "category": "non-record",
+      "track": {
+        "path": "records/track_non_record_16mb",
+        "slug": "track_non_record_16mb",
+        "label": "Non-record / 16MB",
+        "official": false,
+        "category": "non-record"
+      },
+      "record": {
+        "folderName": "2026-03-27_CompiledLeakyReLU2_Slide64Eval_1xRTX4090",
+        "folderPath": "records/track_non_record_16mb/2026-03-27_CompiledLeakyReLU2_Slide64Eval_1xRTX4090",
+        "submissionPath": "records/track_non_record_16mb/2026-03-27_CompiledLeakyReLU2_Slide64Eval_1xRTX4090/submission.json",
+        "readmePath": "records/track_non_record_16mb/2026-03-27_CompiledLeakyReLU2_Slide64Eval_1xRTX4090/README.md",
+        "trainLogPath": "records/track_non_record_16mb/2026-03-27_CompiledLeakyReLU2_Slide64Eval_1xRTX4090/train.log",
+        "scriptPath": "records/track_non_record_16mb/2026-03-27_CompiledLeakyReLU2_Slide64Eval_1xRTX4090/train_gpt.py"
+      },
+      "submission": {
+        "author": "Sree Harinandan",
+        "githubId": "SHN2004",
+        "name": "Compiled LeakyReLU2 + Slide64 Eval (1xRTX4090)",
+        "blurb": "Non-record 1xRTX4090 submission showing that slide64 evaluation transfers cleanly to the compiled leaky 9-layer proxy. The same 600s training setup improves from 1.36461125 flat-eval val_bpb to 1.33207082 with sliding evaluation, while staying under the 16MB artifact cap.",
+        "date": "2026-03-27T00:00:00Z"
+      },
+      "metrics": {
+        "valBpb": 1.33207082,
+        "valLoss": 2.24914289,
+        "preQuantValBpb": 1.3303,
+        "preQuantValLoss": 2.2462,
+        "stepStop": 2301,
+        "wallclockSeconds": 600.007,
+        "evalTimeSeconds": 990.944
+      },
+      "artifact": {
+        "bytesTotal": 14864024,
+        "bytesCode": 62841,
+        "bytesModelInt8Zlib": 14801183
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
+      "pr": {
+        "number": 1063,
+        "title": "Add Compiled LeakyReLU2 + Slide64 Eval non-record submission",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1063",
+        "authorLogin": "SHN2004",
+        "authorName": null,
+        "createdAt": "2026-03-29T07:10:47Z",
+        "updatedAt": "2026-03-29T07:10:47Z",
+        "headSha": "c6f78d3d864b9f385ab35cd3daafc7f0383a7830",
+        "headRepo": "SHN2004/parameter-golf"
+      },
+      "links": {
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/c6f78d3d864b9f385ab35cd3daafc7f0383a7830/records/track_non_record_16mb/2026-03-27_CompiledLeakyReLU2_Slide64Eval_1xRTX4090/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/c6f78d3d864b9f385ab35cd3daafc7f0383a7830/records/track_non_record_16mb/2026-03-27_CompiledLeakyReLU2_Slide64Eval_1xRTX4090/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/c6f78d3d864b9f385ab35cd3daafc7f0383a7830/records/track_non_record_16mb/2026-03-27_CompiledLeakyReLU2_Slide64Eval_1xRTX4090/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/c6f78d3d864b9f385ab35cd3daafc7f0383a7830/records/track_non_record_16mb/2026-03-27_CompiledLeakyReLU2_Slide64Eval_1xRTX4090/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/c6f78d3d864b9f385ab35cd3daafc7f0383a7830/records/track_non_record_16mb/2026-03-27_CompiledLeakyReLU2_Slide64Eval_1xRTX4090",
+        "pr": "https://github.com/openai/parameter-golf/pull/1063",
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": false,
         "hasPullRequest": true,
         "listedInReadme": false
       }

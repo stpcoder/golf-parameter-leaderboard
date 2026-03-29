@@ -1,8 +1,32 @@
 {
-  "generatedAt": "2026-03-29T06:58:03.434Z",
+  "generatedAt": "2026-03-29T07:27:48.851Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 1063,
+      "title": "Add Compiled LeakyReLU2 + Slide64 Eval non-record submission",
+      "status": "open",
+      "updatedAt": "2026-03-29T07:10:47Z",
+      "headSha": "c6f78d3d864b9f385ab35cd3daafc7f0383a7830",
+      "generatedAt": "2026-03-29T07:27:48.694Z",
+      "summary": "Compiled 9-layer LeakyReLU proxy keeps training fixed while adopting stride-64 sliding-window evaluation for richer token context.",
+      "tags": [
+        "sliding-window-eval",
+        "architecture",
+        "evaluation",
+        "non-record"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1063.json"
+    },
     {
       "prNumber": 1061,
       "title": "Causal Oscillator LM: physics-native architecture (BPB 1.34)",
