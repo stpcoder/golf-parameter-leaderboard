@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-29T10:28:10.151Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1067,
+    "title": "BSM (Bounded State Manifold) - A box intersection non-transformer architecture, 1.4242 val BPB",
+    "state": "open",
+    "updatedAt": "2026-03-29T10:02:43Z",
+    "headSha": "76ca7351af0b34cc6b503677c9b323c3895f2c54",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1067",
+    "authorLogin": "dheeren-tejani"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-03-29_BSM_Bounded_State_Manifolds_Non_Transformer_Approach_with_QAT/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "BSM mixes tokens by intersecting causal bounding boxes via dilated pooling before SwiGLU blocks, yielding an O(N) non-attention backbone with ternary QAT.",
+    "tags": [
+      "architecture",
+      "quantization",
+      "non-record"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Bounding-box token mixing via dilated causal max/min pooling",
+      "SwiGLU blocks with zero-initialized down projections",
+      "Ternary quantization-aware linear layers after 85% of training"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

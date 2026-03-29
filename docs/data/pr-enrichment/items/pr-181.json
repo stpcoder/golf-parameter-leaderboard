@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-28T01:19:51.612Z",
+  "generatedAt": "2026-03-29T10:28:18.788Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 181,
     "title": "1.1190 BPB — 11L LeakyReLU² XSA4 PartialRoPE LNScale EMA ParallelMuon TTT",
     "state": "open",
-    "updatedAt": "2026-03-28T00:49:37Z",
-    "headSha": "585c651ee9c27a833b0b9e8bb4a01f2dcaf8a640",
+    "updatedAt": "2026-03-29T10:07:24Z",
+    "headSha": "52205b547a55b39d1e10c063f27b24da389a1cdd",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/181",
     "authorLogin": "manfromnowhere143"
   },
@@ -24,18 +24,19 @@
     "submissionCount": 6
   },
   "output": {
-    "summary": "11-layer LeakyReLU² transformer uses XSA on final layers with Partial RoPE and LN Scale, pairing Parallel Muon+EMA/SWA with GPTQ-lite quant and TTT.",
+    "summary": "Stacks an 11-layer LeakyReLU² transformer with XSA4, Partial RoPE, LN-scale, Parallel Muon+EMA/SWA training, GPTQ-lite int6/int8 quant, and sliding-window TTT eval.",
     "tags": [
       "architecture",
-      "attention",
-      "quantization"
+      "optimizer",
+      "quantization",
+      "evaluation"
     ],
     "usesValOnly": false,
-    "valOnlyReasoning": "",
+    "valOnlyReasoning": "N/A",
     "techniques": [
-      "XSA4 + Partial RoPE and LN Scale stacking",
-      "Parallel Muon optimizer with EMA/SWA and late QAT",
-      "GPTQ-lite int6/int8 quant with SmearGate/BigramHash input enrichments"
+      "11L 512d LeakyReLU² backbone with Partial RoPE+LNScale and XSA on final layers",
+      "Parallel Muon optimizer with EMA+SWA plus Legal Score-First TTT over sliding windows",
+      "GPTQ-lite int6/int8 quantization enriched by SmearGate/BigramHash and ValueEmbedding"
     ]
   },
   "compatibility": {
