@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-30T19:37:53.554Z",
+  "generatedAt": "2026-03-30T20:07:52.700Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "submissions": [
@@ -10236,7 +10236,7 @@
         "authorLogin": "AnirudhRahul",
         "authorName": null,
         "createdAt": "2026-03-30T18:58:12Z",
-        "updatedAt": "2026-03-30T19:32:17Z",
+        "updatedAt": "2026-03-30T20:00:48Z",
         "headSha": "63cc3a350d1f038c9e4ee99ec9af46e2ac2f915b",
         "headRepo": "AnirudhRahul/parameter-golf"
       },
@@ -10704,7 +10704,7 @@
         "authorLogin": "abaybektursun",
         "authorName": null,
         "createdAt": "2026-03-30T00:03:19Z",
-        "updatedAt": "2026-03-30T19:37:00Z",
+        "updatedAt": "2026-03-30T19:49:35Z",
         "headSha": "0df40cc5465a80bd114588fe2e631cd316b9338a",
         "headRepo": "abaybektursun/parameter-golf"
       },
@@ -23940,7 +23940,7 @@
       },
       "pr": {
         "number": 1029,
-        "title": "Non-record: Knowledge Distillation — A Negative\n  Result (val_bpb=1.1553)",
+        "title": "Non-record: Knowledge  Distillation - A Negative Result (val_bpb=1.1529)",
         "state": "open",
         "draft": false,
         "mergedAt": null,
@@ -23948,16 +23948,16 @@
         "authorLogin": "fielding",
         "authorName": null,
         "createdAt": "2026-03-28T17:29:44Z",
-        "updatedAt": "2026-03-30T19:29:52Z",
-        "headSha": "4d8b3045d2d93914145435637399086253cc2406",
+        "updatedAt": "2026-03-30T19:59:49Z",
+        "headSha": "e1eaef9a6ea707c78fdc1f907b4c40aa3b6e8521",
         "headRepo": "fielding/parameter-golf"
       },
       "links": {
-        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/4d8b3045d2d93914145435637399086253cc2406/records/track_non_record_16mb/2026-03-28_Distillation/submission.json",
-        "readme": "https://github.com/openai/parameter-golf/blob/4d8b3045d2d93914145435637399086253cc2406/records/track_non_record_16mb/2026-03-28_Distillation/README.md",
-        "trainLog": "https://github.com/openai/parameter-golf/blob/4d8b3045d2d93914145435637399086253cc2406/records/track_non_record_16mb/2026-03-28_Distillation/train.log",
-        "script": "https://github.com/openai/parameter-golf/blob/4d8b3045d2d93914145435637399086253cc2406/records/track_non_record_16mb/2026-03-28_Distillation/train_gpt.py",
-        "folder": "https://github.com/openai/parameter-golf/tree/4d8b3045d2d93914145435637399086253cc2406/records/track_non_record_16mb/2026-03-28_Distillation",
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/e1eaef9a6ea707c78fdc1f907b4c40aa3b6e8521/records/track_non_record_16mb/2026-03-28_Distillation/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/e1eaef9a6ea707c78fdc1f907b4c40aa3b6e8521/records/track_non_record_16mb/2026-03-28_Distillation/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/e1eaef9a6ea707c78fdc1f907b4c40aa3b6e8521/records/track_non_record_16mb/2026-03-28_Distillation/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/e1eaef9a6ea707c78fdc1f907b4c40aa3b6e8521/records/track_non_record_16mb/2026-03-28_Distillation/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/e1eaef9a6ea707c78fdc1f907b4c40aa3b6e8521/records/track_non_record_16mb/2026-03-28_Distillation",
         "pr": "https://github.com/openai/parameter-golf/pull/1029",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
@@ -53282,7 +53282,7 @@
       },
       "pr": {
         "number": 874,
-        "title": "Non-record: Random Linear Maps + Learned Adapters (val_bpb=1.607, 1.92MB artifact)",
+        "title": "Non-record: Random Linear Maps + Learned Adapters (val_bpb=1.93, 2.4MB artifact)",
         "state": "open",
         "draft": false,
         "mergedAt": null,
@@ -53290,7 +53290,7 @@
         "authorLogin": "fielding",
         "authorName": null,
         "createdAt": "2026-03-26T17:23:09Z",
-        "updatedAt": "2026-03-30T19:33:36Z",
+        "updatedAt": "2026-03-30T20:00:14Z",
         "headSha": "6b211a8bc44fbe80fec1c146b1e060286d4f4246",
         "headRepo": "fielding/parameter-golf"
       },

@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-30T19:38:40.798Z",
+  "generatedAt": "2026-03-30T20:08:12.821Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 1029,
-    "title": "Non-record: Knowledge Distillation — A Negative\n  Result (val_bpb=1.1553)",
+    "title": "Non-record: Knowledge  Distillation - A Negative Result (val_bpb=1.1529)",
     "state": "open",
-    "updatedAt": "2026-03-30T19:29:52Z",
-    "headSha": "4d8b3045d2d93914145435637399086253cc2406",
+    "updatedAt": "2026-03-30T19:59:49Z",
+    "headSha": "e1eaef9a6ea707c78fdc1f907b4c40aa3b6e8521",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/1029",
     "authorLogin": "fielding"
   },
@@ -19,18 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Cached top-32 teacher logits for soft KL distillation, showing step overhead cancels any transfer gains under tight budget.",
+    "summary": "Cached teacher logits to soft-distill an 11-layer student while ablation-testing hard vs soft targets, keeping KL lookups within 10-minute budgets.",
     "tags": [
       "architecture",
       "evaluation",
+      "regularization",
       "non-record"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "cached teacher logits",
-      "soft KL distillation sweep",
-      "step-overhead ablation"
+      "Cached top-32 teacher logits for soft KL targets",
+      "Ablated hard vs soft distillation with warmdown-aware tracking"
     ]
   },
   "compatibility": {

@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-30T19:38:31.815Z",
+  "generatedAt": "2026-03-30T20:08:06.594Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 1105,
     "title": "Record: Fused MLP (Triton+CUTLASS EVT) + MLP 3.5× + Mixed int5/int6 + SLOT + Brotli — 1.1088 BPB (3-seed mean)",
     "state": "open",
-    "updatedAt": "2026-03-30T19:37:00Z",
+    "updatedAt": "2026-03-30T19:49:35Z",
     "headSha": "0df40cc5465a80bd114588fe2e631cd316b9338a",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/1105",
     "authorLogin": "abaybektursun"
@@ -19,18 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Fuses Triton TMA forward and CUTLASS EVT backward MLP kernels, widens the MLP to 3.5×, and uses Hessian-guided mixed int5/int6 plus Brotli to stay under budget.",
+    "summary": "Fuses Triton TMA+CUTLASS EVT MLP kernels, expands the MLP to 3.5×, and uses Hessian-guided mixed int5/int6 quant plus Brotli to keep quality within 16MB.",
     "tags": [
-      "architecture",
       "quantization",
+      "architecture",
       "compression"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Fused Triton TMA forward + CUTLASS EVT backward MLP kernels with precomputed activation gradient",
-      "Hessian-trace mixed int5/int6 quantization to free capacity for 3.5× hidden dim",
-      "Brotli-11 compression with memmap multi-shard GPU-prefetch pipeline"
+      "Fused Triton TMA forward + CUTLASS EVT backward MLP kernels with precomputed activation gradients",
+      "Hessian-ranked mixed int5/int6 GPTQ to free headroom for the 3.5× MLP expansion",
+      "Brotli-11 compression and LR-floor warmdown to stay under 16MB while enabling SLOT eval"
     ]
   },
   "compatibility": {

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-30T19:38:46.637Z",
+  "generatedAt": "2026-03-30T20:08:17.486Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
@@ -53,13 +53,12 @@
       "prNumber": 1145,
       "title": "Record: 1.1109 BPB Loader FullGPTQ XSA11 + online ngram augment",
       "status": "open",
-      "updatedAt": "2026-03-30T19:32:17Z",
+      "updatedAt": "2026-03-30T20:00:48Z",
       "headSha": "63cc3a350d1f038c9e4ee99ec9af46e2ac2f915b",
-      "generatedAt": "2026-03-30T19:38:11.198Z",
-      "summary": "Retunes the GPTQ XSA11 bigram-hash stack with WARMDOWN_ITERS=4000 and layers a causal single-pass n-gram/word-start agreement overlay that boosts hinted tokens online.",
+      "generatedAt": "2026-03-30T20:07:59.401Z",
+      "summary": "Retunes the Loader FullGPTQ XSA11 schedule (WARMDOWN_ITERS=4000) and layers a causal online n-gram/within-word/word-start agreement overlay that boosts a renormalized softmax.",
       "tags": [
         "quantization",
-        "architecture",
         "training-schedule",
         "evaluation"
       ],
@@ -749,13 +748,13 @@
       "prNumber": 1105,
       "title": "Record: Fused MLP (Triton+CUTLASS EVT) + MLP 3.5× + Mixed int5/int6 + SLOT + Brotli — 1.1088 BPB (3-seed mean)",
       "status": "open",
-      "updatedAt": "2026-03-30T19:37:00Z",
+      "updatedAt": "2026-03-30T19:49:35Z",
       "headSha": "0df40cc5465a80bd114588fe2e631cd316b9338a",
-      "generatedAt": "2026-03-30T19:38:31.815Z",
-      "summary": "Fuses Triton TMA forward and CUTLASS EVT backward MLP kernels, widens the MLP to 3.5×, and uses Hessian-guided mixed int5/int6 plus Brotli to stay under budget.",
+      "generatedAt": "2026-03-30T20:08:06.594Z",
+      "summary": "Fuses Triton TMA+CUTLASS EVT MLP kernels, expands the MLP to 3.5×, and uses Hessian-guided mixed int5/int6 quant plus Brotli to keep quality within 16MB.",
       "tags": [
-        "architecture",
         "quantization",
+        "architecture",
         "compression"
       ],
       "flags": {
@@ -1979,15 +1978,16 @@
     },
     {
       "prNumber": 1029,
-      "title": "Non-record: Knowledge Distillation — A Negative\n  Result (val_bpb=1.1553)",
+      "title": "Non-record: Knowledge  Distillation - A Negative Result (val_bpb=1.1529)",
       "status": "open",
-      "updatedAt": "2026-03-30T19:29:52Z",
-      "headSha": "4d8b3045d2d93914145435637399086253cc2406",
-      "generatedAt": "2026-03-30T19:38:40.798Z",
-      "summary": "Cached top-32 teacher logits for soft KL distillation, showing step overhead cancels any transfer gains under tight budget.",
+      "updatedAt": "2026-03-30T19:59:49Z",
+      "headSha": "e1eaef9a6ea707c78fdc1f907b4c40aa3b6e8521",
+      "generatedAt": "2026-03-30T20:08:12.821Z",
+      "summary": "Cached teacher logits to soft-distill an 11-layer student while ablation-testing hard vs soft targets, keeping KL lookups within 10-minute budgets.",
       "tags": [
         "architecture",
         "evaluation",
+        "regularization",
         "non-record"
       ],
       "flags": {
@@ -4477,15 +4477,16 @@
     },
     {
       "prNumber": 874,
-      "title": "Non-record: Random Linear Maps + Learned Adapters (val_bpb=1.607, 1.92MB artifact)",
+      "title": "Non-record: Random Linear Maps + Learned Adapters (val_bpb=1.93, 2.4MB artifact)",
       "status": "open",
-      "updatedAt": "2026-03-30T19:33:36Z",
+      "updatedAt": "2026-03-30T20:00:14Z",
       "headSha": "6b211a8bc44fbe80fec1c146b1e060286d4f4246",
-      "generatedAt": "2026-03-30T19:38:46.512Z",
-      "summary": "Random linear base weights saved via seed regeneration plus small rank-16 adapters learn adjustments, letting artifacts shrink to ~2MB.",
+      "generatedAt": "2026-03-30T20:08:17.358Z",
+      "summary": "Seeded random linear projections supply base weights while tiny learned rank-16 adapters are the only stored params, letting a sub-2.5MB model learn language with tuned depth/rank.",
       "tags": [
         "architecture",
         "compression",
+        "training-schedule",
         "non-record"
       ],
       "flags": {
