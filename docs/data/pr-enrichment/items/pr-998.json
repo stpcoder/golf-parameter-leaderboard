@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-30T05:03:54.512Z",
+  "generatedAt": "2026-03-30T18:07:33.229Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 998,
     "title": "Supersede invalid Conker-5 claim with legal Conker-11 update packet",
     "state": "open",
-    "updatedAt": "2026-03-30T04:58:00Z",
+    "updatedAt": "2026-03-30T17:55:25Z",
     "headSha": "cb7619f66f259b9e1817c66378d47d7298d09708",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/998",
     "authorLogin": "asuramaya"
@@ -19,18 +19,16 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "PR replaces the invalid Conker-5 claim with an audited Conker-11 rerun that enforces Toeplitz causal masks and a global lag cap for a legal submission.",
+    "summary": "PR now serves as a legal Conker-11 rerun with audited strict-causal mask to replace the invalid tandem-residual claim.",
     "tags": [
-      "evaluation",
-      "architecture",
-      "non-record"
+      "non-record",
+      "evaluation"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Fresh-process Conker-11 rerun with global_lag_cap=0.5",
-      "Validity bundle confirms strict Toeplitz causal mask",
-      "Tier-2 fresh-process held-out replay verification"
+      "Fresh Conker-11 rerun with seq_len=256, batch_size=16 recipe",
+      "Structural causal-mask audit verifying strict Toeplitz geometry"
     ]
   },
   "compatibility": {

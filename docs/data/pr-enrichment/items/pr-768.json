@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-25T21:34:24.543Z",
+  "generatedAt": "2026-03-30T18:07:37.531Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 768,
     "title": "Non-record: 1.1201 BPB - Shared ValueEmbedding (tok_emb reuse, layers 5-10) + Legal TTT",
     "state": "open",
-    "updatedAt": "2026-03-25T21:19:48Z",
-    "headSha": "45f5e7b2faf3de85632ebd8ebc1a8468bd98df3d",
+    "updatedAt": "2026-03-30T17:44:10Z",
+    "headSha": "01e3bc8d728fecca82a44a6abd690c871150836b",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/768",
     "authorLogin": "mradassaad"
   },
@@ -19,18 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Reuses token embeddings for ValueEmbedding with learned projection/scales so layers 5-10 share rich gradients atop the Legal TTT stack.",
+    "summary": "Shares the main tok_emb for ValueEmbedding projection so VE can span layers 5-10 while reusing the PR #549 Legal TTT/Parameter Banking stack.",
     "tags": [
       "architecture",
+      "attention",
       "training-schedule",
       "non-record"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Shared VE via tok_emb projection",
-      "Expanded VE depth to layers 5-10",
-      "Legal TTT SGD tuning"
+      "Shared tok_emb ValueEmbedding projection with per-layer scales",
+      "Expanded VE injection through layers 5-10 after freeing parameters",
+      "Built on Legal TTT + Parameter Banking stack"
     ]
   },
   "compatibility": {

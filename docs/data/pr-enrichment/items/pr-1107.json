@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-30T17:37:33.199Z",
+  "generatedAt": "2026-03-30T18:07:25.923Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 1107,
     "title": "Mamba-3 SSD + Attention Hybrid with QAT (1.5633 bpb)",
     "state": "open",
-    "updatedAt": "2026-03-30T17:34:54Z",
-    "headSha": "3559aa74aecb21dbba6c69b0e0422d7d3a50e382",
+    "updatedAt": "2026-03-30T17:55:10Z",
+    "headSha": "be0e56d0ff7dbfd12f051ce5e5caa2c9243d4a23",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/1107",
     "authorLogin": "mradassaad"
   },
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Hybrid Mamba-3 SSD SISO stack with one attention layer, GLU values, and QAT-extended projections for efficient INT6 despite SSD quantization quirks.",
+    "summary": "Hybrid Mamba-3 SISO SSD + single attention layer with GLU values and extended QAT on SSD projections to shrink the quantization gap.",
     "tags": [
-      "quantization",
       "architecture",
-      "training-schedule",
-      "non-record"
+      "quantization",
+      "attention",
+      "training-schedule"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Mamba-3 SSD + single attention hybrid",
-      "Attention GLU values with Muon params",
-      "Extended QAT to SSD projections"
+      "Mamba-3 SISO SSD plus one attention layer hybrid",
+      "QAT covering SSD projection linears",
+      "GLU values in causal attention"
     ]
   },
   "compatibility": {

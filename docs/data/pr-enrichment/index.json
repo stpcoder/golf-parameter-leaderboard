@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-30T17:37:55.134Z",
+  "generatedAt": "2026-03-30T18:07:37.640Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
@@ -562,15 +562,15 @@
       "prNumber": 1107,
       "title": "Mamba-3 SSD + Attention Hybrid with QAT (1.5633 bpb)",
       "status": "open",
-      "updatedAt": "2026-03-30T17:34:54Z",
-      "headSha": "3559aa74aecb21dbba6c69b0e0422d7d3a50e382",
-      "generatedAt": "2026-03-30T17:37:33.199Z",
-      "summary": "Hybrid Mamba-3 SSD SISO stack with one attention layer, GLU values, and QAT-extended projections for efficient INT6 despite SSD quantization quirks.",
+      "updatedAt": "2026-03-30T17:55:10Z",
+      "headSha": "be0e56d0ff7dbfd12f051ce5e5caa2c9243d4a23",
+      "generatedAt": "2026-03-30T18:07:25.923Z",
+      "summary": "Hybrid Mamba-3 SISO SSD + single attention layer with GLU values and extended QAT on SSD projections to shrink the quantization gap.",
       "tags": [
-        "quantization",
         "architecture",
-        "training-schedule",
-        "non-record"
+        "quantization",
+        "attention",
+        "training-schedule"
       ],
       "flags": {
         "usesValOnly": false,
@@ -2380,14 +2380,13 @@
       "prNumber": 998,
       "title": "Supersede invalid Conker-5 claim with legal Conker-11 update packet",
       "status": "open",
-      "updatedAt": "2026-03-30T04:58:00Z",
+      "updatedAt": "2026-03-30T17:55:25Z",
       "headSha": "cb7619f66f259b9e1817c66378d47d7298d09708",
-      "generatedAt": "2026-03-30T05:03:54.512Z",
-      "summary": "PR replaces the invalid Conker-5 claim with an audited Conker-11 rerun that enforces Toeplitz causal masks and a global lag cap for a legal submission.",
+      "generatedAt": "2026-03-30T18:07:33.229Z",
+      "summary": "PR now serves as a legal Conker-11 rerun with audited strict-causal mask to replace the invalid tandem-residual claim.",
       "tags": [
-        "evaluation",
-        "architecture",
-        "non-record"
+        "non-record",
+        "evaluation"
       ],
       "flags": {
         "usesValOnly": false,
@@ -6086,12 +6085,13 @@
       "prNumber": 768,
       "title": "Non-record: 1.1201 BPB - Shared ValueEmbedding (tok_emb reuse, layers 5-10) + Legal TTT",
       "status": "open",
-      "updatedAt": "2026-03-25T21:19:48Z",
-      "headSha": "45f5e7b2faf3de85632ebd8ebc1a8468bd98df3d",
-      "generatedAt": "2026-03-25T21:34:24.543Z",
-      "summary": "Reuses token embeddings for ValueEmbedding with learned projection/scales so layers 5-10 share rich gradients atop the Legal TTT stack.",
+      "updatedAt": "2026-03-30T17:44:10Z",
+      "headSha": "01e3bc8d728fecca82a44a6abd690c871150836b",
+      "generatedAt": "2026-03-30T18:07:37.531Z",
+      "summary": "Shares the main tok_emb for ValueEmbedding projection so VE can span layers 5-10 while reusing the PR #549 Legal TTT/Parameter Banking stack.",
       "tags": [
         "architecture",
+        "attention",
         "training-schedule",
         "non-record"
       ],
