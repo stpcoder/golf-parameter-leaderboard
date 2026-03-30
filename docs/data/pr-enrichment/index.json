@@ -1,8 +1,32 @@
 {
-  "generatedAt": "2026-03-30T04:03:06.943Z",
+  "generatedAt": "2026-03-30T04:33:36.630Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 1118,
+      "title": "Submission: 11L XSA4 + TrigramHash + ValueResidual + Legal TTT (val_bpb=1.1187)",
+      "status": "open",
+      "updatedAt": "2026-03-30T04:15:35Z",
+      "headSha": "8d7b23a2fa9363031490f7290a4fccf4a3ff6ab6",
+      "generatedAt": "2026-03-30T04:33:19.935Z",
+      "summary": "Parameter-banking 11-layer model blends XSA4, Partial RoPE, Bigram+Trigram hash embeddings, and ValueResidual with legal score-first TTT plus int6+lzma compression.",
+      "tags": [
+        "architecture",
+        "attention",
+        "compression",
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1118.json"
+    },
     {
       "prNumber": 1116,
       "title": "Notable Non-Record: JEPA — 1.4447 BPB — Joint Embedding Predictive Architecture for LLMs",
@@ -121,15 +145,15 @@
       "prNumber": 1111,
       "title": "The Kitchen Sink",
       "status": "open",
-      "updatedAt": "2026-03-30T03:20:18Z",
+      "updatedAt": "2026-03-30T04:10:42Z",
       "headSha": "03637df4900ee1150e8bd1263e32b03bd60f2837",
-      "generatedAt": "2026-03-30T03:32:59.108Z",
-      "summary": "Env-var gated 11L/512d training on Muon+QAT with int6 compression plus LoRA/n-gram/kNN/TurboQuant eval stack.",
+      "generatedAt": "2026-03-30T04:33:25.255Z",
+      "summary": "11L/512d transformer with early int6 QAT, HybridNorm/LeakyReLU² tweaks, and layered eval stack (TTT LoRA, n-gram cache, kNN, TurboQuant).",
       "tags": [
+        "architecture",
         "quantization",
-        "optimizer",
         "evaluation",
-        "architecture"
+        "training-schedule"
       ],
       "flags": {
         "usesValOnly": false,
@@ -145,14 +169,14 @@
       "prNumber": 1110,
       "title": "Notable Non-Record: Universal Transformer — 1.2249 BPB — Depth Recurrence with Iteration Embeddings",
       "status": "open",
-      "updatedAt": "2026-03-30T02:42:21Z",
-      "headSha": "c203fe131af62d9cfc0d062611c7e57d156dbda9",
-      "generatedAt": "2026-03-30T03:03:15.782Z",
-      "summary": "Universal Transformer reuses three shared blocks across four iterations, adding per-iteration embeddings/scales to differentiate depth-recursive passes while keeping params small.",
+      "updatedAt": "2026-03-30T04:23:14Z",
+      "headSha": "966d9331d8174a7ba32a450864e8229259e7f3f8",
+      "generatedAt": "2026-03-30T04:33:31.949Z",
+      "summary": "Universal Transformer depth recurrence reuses 3 blocks across 4 iterations with learnable iteration embeddings and scales.",
       "tags": [
         "architecture",
-        "attention",
-        "compression"
+        "quantization",
+        "attention"
       ],
       "flags": {
         "usesValOnly": false,
@@ -283,30 +307,6 @@
         "valOnlyMatchesCollector": true
       },
       "file": "items/pr-1099.json"
-    },
-    {
-      "prNumber": 1098,
-      "title": "Add run_17 8xH100 submission (1.118685, <16MB)",
-      "status": "open",
-      "updatedAt": "2026-03-29T21:35:42Z",
-      "headSha": "69c42df0fc2d5ca6116575713d6a3e61ca7e2a45",
-      "generatedAt": "2026-03-29T22:01:52.169Z",
-      "summary": "Parameter-banked 11-layer GPT uses GQA/XSA4 mix, partial RoPE+hash embeddings, and int6+LZMA quantization with sliding-window legal score-first TTT.",
-      "tags": [
-        "quantization",
-        "sliding-window-eval",
-        "optimizer",
-        "attention"
-      ],
-      "flags": {
-        "usesValOnly": false,
-        "usesValOnlyAi": false,
-        "usesValOnlyCollector": false
-      },
-      "compatibility": {
-        "valOnlyMatchesCollector": true
-      },
-      "file": "items/pr-1098.json"
     },
     {
       "prNumber": 1097,
@@ -5996,10 +5996,10 @@
       "prNumber": 755,
       "title": "Gravity Tokenizer: 1.0321 BPB via ablation leverage vocabulary optimization",
       "status": "open",
-      "updatedAt": "2026-03-29T21:39:58Z",
+      "updatedAt": "2026-03-30T04:18:40Z",
       "headSha": "06749a127e11317556b61f20c5b9fa161d7d1686",
-      "generatedAt": "2026-03-29T22:02:10.205Z",
-      "summary": "Replaces most BPE merges with ablation-leverage scored tokens using GPT-2 loss deltas while keeping the vanilla transformer unchanged.",
+      "generatedAt": "2026-03-30T04:33:36.523Z",
+      "summary": "Selects 765 merge tokens by ablation leverage scores from a frozen GPT-2 reference to reshape the 1024-token vocabulary and enhance per-token modeling.",
       "tags": [
         "tokenization"
       ],

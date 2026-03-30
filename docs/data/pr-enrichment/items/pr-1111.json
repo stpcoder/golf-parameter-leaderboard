@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-30T03:32:59.108Z",
+  "generatedAt": "2026-03-30T04:33:25.255Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 1111,
     "title": "The Kitchen Sink",
     "state": "open",
-    "updatedAt": "2026-03-30T03:20:18Z",
+    "updatedAt": "2026-03-30T04:10:42Z",
     "headSha": "03637df4900ee1150e8bd1263e32b03bd60f2837",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/1111",
     "authorLogin": "MichaelMcCulloch"
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Env-var gated 11L/512d training on Muon+QAT with int6 compression plus LoRA/n-gram/kNN/TurboQuant eval stack.",
+    "summary": "11L/512d transformer with early int6 QAT, HybridNorm/LeakyReLU² tweaks, and layered eval stack (TTT LoRA, n-gram cache, kNN, TurboQuant).",
     "tags": [
+      "architecture",
       "quantization",
-      "optimizer",
       "evaluation",
-      "architecture"
+      "training-schedule"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Env-var driven Muon optimizer, HybridNorm, and activation/MLP toggles on the 11L/512d backbone",
-      "Int6 QAT from step 0 with GPTQ, OptRot, pruning, and zlib compression",
-      "Eval-time TTT LoRA, multi-order n-gram cache, kNN-LM, and TurboQuant KV compression"
+      "- HybridNorm/LeakyReLU²-gated 11L/512d stack",
+      "- Early Muon-led int6 QAT with GPTQ+OptRot+pruning compression",
+      "- Eval-time TTT LoRA plus n-gram cache, kNN-LM, TurboQuant"
     ]
   },
   "compatibility": {

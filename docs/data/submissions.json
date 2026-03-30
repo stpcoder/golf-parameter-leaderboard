@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-30T04:02:54.931Z",
+  "generatedAt": "2026-03-30T04:33:13.252Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "submissions": [
@@ -7002,7 +7002,7 @@
         "authorLogin": "dcrow85",
         "authorName": null,
         "createdAt": "2026-03-25T18:44:05Z",
-        "updatedAt": "2026-03-29T21:39:58Z",
+        "updatedAt": "2026-03-30T04:18:40Z",
         "headSha": "06749a127e11317556b61f20c5b9fa161d7d1686",
         "headRepo": "dcrow85/parameter-golf"
       },
@@ -12543,17 +12543,17 @@
         "valOnlyMatches": []
       },
       "pr": {
-        "number": 1098,
-        "title": "Add run_17 8xH100 submission (1.118685, <16MB)",
+        "number": 1118,
+        "title": "Submission: 11L XSA4 + TrigramHash + ValueResidual + Legal TTT (val_bpb=1.1187)",
         "state": "open",
         "draft": false,
         "mergedAt": null,
-        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1098",
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1118",
         "authorLogin": "adityakm24",
         "authorName": null,
-        "createdAt": "2026-03-29T21:35:42Z",
-        "updatedAt": "2026-03-29T21:35:42Z",
-        "headSha": "69c42df0fc2d5ca6116575713d6a3e61ca7e2a45",
+        "createdAt": "2026-03-30T04:15:35Z",
+        "updatedAt": "2026-03-30T04:15:35Z",
+        "headSha": "8d7b23a2fa9363031490f7290a4fccf4a3ff6ab6",
         "headRepo": "adityakm24/parameter-golf"
       },
       "links": {
@@ -12562,7 +12562,7 @@
         "trainLog": "https://github.com/openai/parameter-golf/blob/69c42df0fc2d5ca6116575713d6a3e61ca7e2a45/records/track_10min_16mb/2026-03-29_Competitive_8xH100_Run17_TTT_1.1159/train.log",
         "script": "https://github.com/openai/parameter-golf/blob/69c42df0fc2d5ca6116575713d6a3e61ca7e2a45/records/track_10min_16mb/2026-03-29_Competitive_8xH100_Run17_TTT_1.1159/train_gpt.py",
         "folder": "https://github.com/openai/parameter-golf/tree/69c42df0fc2d5ca6116575713d6a3e61ca7e2a45/records/track_10min_16mb/2026-03-29_Competitive_8xH100_Run17_TTT_1.1159",
-        "pr": "https://github.com/openai/parameter-golf/pull/1098",
+        "pr": "https://github.com/openai/parameter-golf/pull/1118",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
       "provenance": {
@@ -35421,16 +35421,16 @@
         "authorLogin": "gowtham0992",
         "authorName": null,
         "createdAt": "2026-03-30T02:42:20Z",
-        "updatedAt": "2026-03-30T02:42:21Z",
-        "headSha": "c203fe131af62d9cfc0d062611c7e57d156dbda9",
+        "updatedAt": "2026-03-30T04:23:14Z",
+        "headSha": "966d9331d8174a7ba32a450864e8229259e7f3f8",
         "headRepo": "gowtham0992/parameter-golf"
       },
       "links": {
-        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/c203fe131af62d9cfc0d062611c7e57d156dbda9/records/track_10min_16mb/2026-03-29_Universal_Transformer/submission.json",
-        "readme": "https://github.com/openai/parameter-golf/blob/c203fe131af62d9cfc0d062611c7e57d156dbda9/records/track_10min_16mb/2026-03-29_Universal_Transformer/README.md",
-        "trainLog": "https://github.com/openai/parameter-golf/blob/c203fe131af62d9cfc0d062611c7e57d156dbda9/records/track_10min_16mb/2026-03-29_Universal_Transformer/train.log",
-        "script": "https://github.com/openai/parameter-golf/blob/c203fe131af62d9cfc0d062611c7e57d156dbda9/records/track_10min_16mb/2026-03-29_Universal_Transformer/train_gpt.py",
-        "folder": "https://github.com/openai/parameter-golf/tree/c203fe131af62d9cfc0d062611c7e57d156dbda9/records/track_10min_16mb/2026-03-29_Universal_Transformer",
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/966d9331d8174a7ba32a450864e8229259e7f3f8/records/track_10min_16mb/2026-03-29_Universal_Transformer/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/966d9331d8174a7ba32a450864e8229259e7f3f8/records/track_10min_16mb/2026-03-29_Universal_Transformer/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/966d9331d8174a7ba32a450864e8229259e7f3f8/records/track_10min_16mb/2026-03-29_Universal_Transformer/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/966d9331d8174a7ba32a450864e8229259e7f3f8/records/track_10min_16mb/2026-03-29_Universal_Transformer/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/966d9331d8174a7ba32a450864e8229259e7f3f8/records/track_10min_16mb/2026-03-29_Universal_Transformer",
         "pr": "https://github.com/openai/parameter-golf/pull/1110",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
@@ -48747,7 +48747,7 @@
         "authorLogin": "MichaelMcCulloch",
         "authorName": null,
         "createdAt": "2026-03-30T02:56:58Z",
-        "updatedAt": "2026-03-30T03:20:18Z",
+        "updatedAt": "2026-03-30T04:10:42Z",
         "headSha": "03637df4900ee1150e8bd1263e32b03bd60f2837",
         "headRepo": "MichaelMcCulloch/parameter-golf"
       },
