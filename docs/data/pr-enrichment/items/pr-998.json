@@ -1,34 +1,35 @@
 {
-  "generatedAt": "2026-03-30T18:07:33.229Z",
+  "generatedAt": "2026-03-30T19:08:37.142Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 998,
-    "title": "Supersede invalid Conker-5 claim with legal Conker-11 update packet",
+    "title": "Replace PR #998 with OPC native causal packed-memory non-record packet",
     "state": "open",
-    "updatedAt": "2026-03-30T17:55:25Z",
-    "headSha": "cb7619f66f259b9e1817c66378d47d7298d09708",
+    "updatedAt": "2026-03-30T18:56:04Z",
+    "headSha": "e00a20770dcc38c73b13ff9b29aeecfb3184f5df",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/998",
     "authorLogin": "asuramaya"
   },
   "inputs": {
-    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "hash": "a36662e9918e38cdf05f74d9a75a167994a17c359f8664217fbee3daab8d3263",
     "readmePaths": [
-      "records/track_non_record_16mb/2026-03-27_Conker5_TandemResidual_MLX/README.md"
+      "records/track_non_record_16mb/2026-03-30_OPC_CausalPackedMemory_NativeFullSpecClean/README.md"
     ],
-    "submissionCount": 1
+    "submissionCount": 2
   },
   "output": {
-    "summary": "PR now serves as a legal Conker-11 rerun with audited strict-causal mask to replace the invalid tandem-residual claim.",
+    "summary": "Rebuilds OPC-native causal packed-memory mixture model with unigram/bigram/trigram weights and native legality adapter for the non-record packet.",
     "tags": [
       "non-record",
-      "evaluation"
+      "architecture"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Fresh Conker-11 rerun with seq_len=256, batch_size=16 recipe",
-      "Structural causal-mask audit verifying strict Toeplitz geometry"
+      "Packed unigram/bigram/trigram memory mixture",
+      "Native legality and replay adapter",
+      "Standalone OPC kernel rebuild"
     ]
   },
   "compatibility": {

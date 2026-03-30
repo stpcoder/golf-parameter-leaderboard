@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-30T19:07:39.039Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1146,
+    "title": "Non-record: Elastic Associative Memory as a Language Model, 97% Intelligence Transfer in 14MBs",
+    "state": "open",
+    "updatedAt": "2026-03-30T19:00:14Z",
+    "headSha": "04113fd8731fd421fe4622a0d387f73c6c3b3708",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1146",
+    "authorLogin": "nguthiru"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/2026-03-30_ eam_is_model/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Distills a transformer into a fixed encoder→Elastic Associative Memory→decoder pipeline that reads superposed hidden states and augments them with a kNN cache.",
+    "tags": [
+      "architecture",
+      "compression",
+      "evaluation",
+      "non-record"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Elastic Associative Memory with additive counter superposition",
+      "Encoder/decoder surrounding fixed-memory readout",
+      "Flat kNN store complements associative recall"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

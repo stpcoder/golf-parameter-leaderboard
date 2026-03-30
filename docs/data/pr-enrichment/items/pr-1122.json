@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-30T16:06:54.832Z",
+  "generatedAt": "2026-03-30T19:08:14.905Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 1122,
     "title": "Record: EngramLite + Gated Skips + Full GPTQ + FA3 — val_bpb 1.1146 (1-seed, 2 pending)",
     "state": "open",
-    "updatedAt": "2026-03-30T15:36:56Z",
-    "headSha": "6914cee06e39bb7141de2de42a5fe92e95ee3122",
+    "updatedAt": "2026-03-30T18:54:52Z",
+    "headSha": "6d6feec0ed08bae3c9d5767dbc7509eb85c5dcad",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/1122",
     "authorLogin": "icryo"
   },
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Combines EngramLite gated hash embeddings, Turbo-Muon optimizer tweaks, and Full Hessian GPTQ with FlashAttention3 on an 11-layer SWA model.",
+    "summary": "Combines EngramLite hashing, sigmoid-gated skips, Turbo-Muon, XSA, and FlashAttention3 before full Hessian GPTQ on an 11L 512d stack.",
     "tags": [
       "architecture",
       "optimizer",
       "quantization",
-      "attention"
+      "evaluation"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "EngramLite multi-head bigram+trigram hash with sigmoid-gated U-Net skips",
-      "Turbo-Muon with LeakyReLU(0.3)² and LR floor for optimizer stability",
-      "Full Hessian GPTQ calibration alongside XSA and FlashAttention3 for quantized eval"
+      "- EngramLite hashing + XSA across 11 layers",
+      "- Sigmoid-gated U-Net skips with LeakyReLU² and Turbo-Muon",
+      "- Full Hessian GPTQ calibration with FlashAttention3"
     ]
   },
   "compatibility": {

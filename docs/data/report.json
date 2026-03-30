@@ -1,20 +1,27 @@
 {
-  "generatedAt": "2026-03-30T18:36:59.359Z",
+  "generatedAt": "2026-03-30T19:06:59.956Z",
   "sourceRepo": "openai/parameter-golf",
   "siteRoot": null,
   "tokenConfigured": true,
-  "skipped": [],
+  "skipped": [
+    {
+      "stage": "pull-request-readme",
+      "pr": 998,
+      "submissionPath": "records/track_non_record_16mb/2026-03-30_OPC_CausalPackedMemory_NativeFullSpecClean/audits_bundle/reports/submission.json",
+      "reason": "missing-or-unreadable-readme"
+    }
+  ],
   "errors": [],
   "incremental": {
     "mode": "incremental",
-    "cutoffUpdatedAt": "2026-03-30T18:05:34Z",
+    "cutoffUpdatedAt": "2026-03-30T18:28:43Z",
     "pagesScanned": 2,
     "prsScanned": 200,
-    "prsRefreshed": 2,
-    "prsReused": 198,
+    "prsRefreshed": 10,
+    "prsReused": 190,
     "stoppedEarly": true,
     "refreshFailures": 0,
-    "cacheEntries": 1092,
+    "cacheEntries": 1097,
     "retryWindowRetained": false
   }
 }

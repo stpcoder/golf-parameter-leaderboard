@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-30T19:07:52.967Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1144,
+    "title": "Add PartialRoPE 16/64 experiment records",
+    "state": "open",
+    "updatedAt": "2026-03-30T18:54:16Z",
+    "headSha": "517519b2e3094571fa61ce5562bf11369f27f246",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1144",
+    "authorLogin": "inFaaa"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-03-28_PartialRoPE_16of64_4xRTX3090/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Partial RoPE on 25% of attention dims with longer sequences, smaller batches, and tuned warmdown/SWA plus 10% pruning to shift capacity to content matching.",
+    "tags": [
+      "architecture",
+      "training-schedule",
+      "regularization",
+      "non-record"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "- Partial RoPE on only 16 of 64 dims",
+      "- Doubling seq len while halving batch tokens for more updates",
+      "- Warmdown/SWA tuning with 10% magnitude pruning"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

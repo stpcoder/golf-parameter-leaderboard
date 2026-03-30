@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-30T19:07:59.752Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1143,
+    "title": "Scylla (novel tokenizer) + Legal Score-First TTT (val_bpb: 1.08056553)",
+    "state": "open",
+    "updatedAt": "2026-03-30T18:55:44Z",
+    "headSha": "07c721f05508e6a2ebbe6455de4dc14104d65d05",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1143",
+    "authorLogin": "simon-marcus"
+  },
+  "inputs": {
+    "hash": "333c1651a7101d4267d971ebe25bd793307b61c975586544bbd6b9a9c3a8cf24",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-26_WaterLOO_FullRescore_SelfExclusion_0.0990/README.md",
+      "records/track_10min_16mb/2026-03-30_tm0054_AutoresearchTokenizer_LegalTTT/README.md"
+    ],
+    "submissionCount": 2
+  },
+  "output": {
+    "summary": "TokenMonster-derived Scylla tokenizer found via autoresearch drives retokenized FineWeb bundle with metadata-aware accounting into legal score-first TTT eval.",
+    "tags": [
+      "tokenization",
+      "evaluation"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "autoresearch-driven TokenMonster vocabulary pruning",
+      "full-data retokenization with per-token metadata",
+      "legal score-first TTT evaluation stack"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-28T21:55:06.023Z",
+  "generatedAt": "2026-03-30T19:08:30.527Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 1039,
     "title": "Add LeakyReLU² + 4ep Legal TTT submission",
     "state": "open",
-    "updatedAt": "2026-03-28T21:37:17Z",
-    "headSha": "d92991776dccb93a745a6faff78f1167e791280a",
+    "updatedAt": "2026-03-30T19:03:44Z",
+    "headSha": "8fc315d81548a61cc7d080faa4ee37934923a5fe",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/1039",
     "authorLogin": "yufengli-oai"
   },
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "LeakyReLU² 11-layer GPT with Parameter Banking + Parallel Muon runs legal score-first TTT at lr0.0025 for four epochs while skipping diagnostic pre-evals.",
+    "summary": "Legal TTT tuning adds 4-epoch score-first adaptation with lr 0.0025, LeakyReLU² model, Parallel Muon optimizer, and eval-only checkpoint loading for fast sweeps.",
     "tags": [
       "architecture",
-      "muon",
       "training-schedule",
+      "optimizer",
       "evaluation"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Legal score-first TTT lr0.0025 4-epoch schedule",
-      "Skip pre-TTT diagnostics via eval-only checkpoint",
-      "LeakyReLU² base stack with Parameter Banking + Parallel Muon"
+      "LeakyReLU² + BigramHash + partial RoPE stack",
+      "4-epoch legal score-first TTT at lr 0.0025 with skip-pre-eval budgeting",
+      "Eval-only checkpoint loading for fast TTT sweeps"
     ]
   },
   "compatibility": {

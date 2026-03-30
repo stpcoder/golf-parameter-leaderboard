@@ -1,8 +1,124 @@
 {
-  "generatedAt": "2026-03-30T18:37:39.030Z",
+  "generatedAt": "2026-03-30T19:08:37.294Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 1146,
+      "title": "Non-record: Elastic Associative Memory as a Language Model, 97% Intelligence Transfer in 14MBs",
+      "status": "open",
+      "updatedAt": "2026-03-30T19:00:14Z",
+      "headSha": "04113fd8731fd421fe4622a0d387f73c6c3b3708",
+      "generatedAt": "2026-03-30T19:07:39.039Z",
+      "summary": "Distills a transformer into a fixed encoder→Elastic Associative Memory→decoder pipeline that reads superposed hidden states and augments them with a kNN cache.",
+      "tags": [
+        "architecture",
+        "compression",
+        "evaluation",
+        "non-record"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1146.json"
+    },
+    {
+      "prNumber": 1145,
+      "title": "Record: 1.1109 BPB Loader FullGPTQ XSA11 + online ngram augment",
+      "status": "open",
+      "updatedAt": "2026-03-30T19:07:24Z",
+      "headSha": "63cc3a350d1f038c9e4ee99ec9af46e2ac2f915b",
+      "generatedAt": "2026-03-30T19:07:46.109Z",
+      "summary": "Retunes the GPTQ XSA11 bigram-hash stack with WARMDOWN_ITERS=4000 and adds a causal online n-gram/word-start agreement boost atop the base softmax.",
+      "tags": [
+        "architecture",
+        "evaluation",
+        "quantization"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1145.json"
+    },
+    {
+      "prNumber": 1144,
+      "title": "Add PartialRoPE 16/64 experiment records",
+      "status": "open",
+      "updatedAt": "2026-03-30T18:54:16Z",
+      "headSha": "517519b2e3094571fa61ce5562bf11369f27f246",
+      "generatedAt": "2026-03-30T19:07:52.967Z",
+      "summary": "Partial RoPE on 25% of attention dims with longer sequences, smaller batches, and tuned warmdown/SWA plus 10% pruning to shift capacity to content matching.",
+      "tags": [
+        "architecture",
+        "training-schedule",
+        "regularization",
+        "non-record"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1144.json"
+    },
+    {
+      "prNumber": 1143,
+      "title": "Scylla (novel tokenizer) + Legal Score-First TTT (val_bpb: 1.08056553)",
+      "status": "open",
+      "updatedAt": "2026-03-30T18:55:44Z",
+      "headSha": "07c721f05508e6a2ebbe6455de4dc14104d65d05",
+      "generatedAt": "2026-03-30T19:07:59.752Z",
+      "summary": "TokenMonster-derived Scylla tokenizer found via autoresearch drives retokenized FineWeb bundle with metadata-aware accounting into legal score-first TTT eval.",
+      "tags": [
+        "tokenization",
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1143.json"
+    },
+    {
+      "prNumber": 1142,
+      "title": "SpotlightLFB + Aux-Int6 Compression — 1.1493 BPB (3-seed mean)",
+      "status": "open",
+      "updatedAt": "2026-03-30T18:58:36Z",
+      "headSha": "23c986cc1c6349f49aae80df3aae13c73f906b23",
+      "generatedAt": "2026-03-30T19:08:06.709Z",
+      "summary": "Pairs a 10x448 dense trunk with a single late lexical feature bank injection and int6 auxiliary embedding export to hit speed/size targets.",
+      "tags": [
+        "architecture",
+        "compression",
+        "quantization"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1142.json"
+    },
     {
       "prNumber": 1141,
       "title": "Non-record: AutoResearch Value Embeddings + MLP3x, 1.1801 bpb (1x RTX 4090)",
@@ -307,15 +423,15 @@
       "prNumber": 1122,
       "title": "Record: EngramLite + Gated Skips + Full GPTQ + FA3 — val_bpb 1.1146 (1-seed, 2 pending)",
       "status": "open",
-      "updatedAt": "2026-03-30T15:36:56Z",
-      "headSha": "6914cee06e39bb7141de2de42a5fe92e95ee3122",
-      "generatedAt": "2026-03-30T16:06:54.832Z",
-      "summary": "Combines EngramLite gated hash embeddings, Turbo-Muon optimizer tweaks, and Full Hessian GPTQ with FlashAttention3 on an 11-layer SWA model.",
+      "updatedAt": "2026-03-30T18:54:52Z",
+      "headSha": "6d6feec0ed08bae3c9d5767dbc7509eb85c5dcad",
+      "generatedAt": "2026-03-30T19:08:14.905Z",
+      "summary": "Combines EngramLite hashing, sigmoid-gated skips, Turbo-Muon, XSA, and FlashAttention3 before full Hessian GPTQ on an 11L 512d stack.",
       "tags": [
         "architecture",
         "optimizer",
         "quantization",
-        "attention"
+        "evaluation"
       ],
       "flags": {
         "usesValOnly": false,
@@ -608,17 +724,16 @@
     },
     {
       "prNumber": 1105,
-      "title": "Record: Fused MLP (Triton+CUTLASS EVT) + MLP 3.5× + Mixed int5/int6 + Brotli — 1.1125 BPB (3-seed mean)",
+      "title": "Record: Fused MLP (Triton+CUTLASS EVT) + MLP 3.5× + Mixed int5/int6 + SLOT + Brotli — 1.1086 BPB (seed 314, more seeds running)",
       "status": "open",
-      "updatedAt": "2026-03-30T18:13:40Z",
+      "updatedAt": "2026-03-30T18:58:39Z",
       "headSha": "0df40cc5465a80bd114588fe2e631cd316b9338a",
-      "generatedAt": "2026-03-30T18:37:38.869Z",
-      "summary": "Fuses Triton+CUTLASS MLP kernels, widens the MLP to 3.5× per SVD insight, and uses Hessian mixed int5/int6 quant plus Brotli/LR floor for the 16MB stack.",
+      "generatedAt": "2026-03-30T19:08:25.204Z",
+      "summary": "Fuses Triton TMA forward with CUTLASS EVT backward MLP kernels, widens MLP to 3.5×, and pairs Hessian-guided int5/int6 quantization with Brotli compression.",
       "tags": [
         "architecture",
         "quantization",
-        "compression",
-        "training-schedule"
+        "compression"
       ],
       "flags": {
         "usesValOnly": false,
@@ -1659,14 +1774,14 @@
       "prNumber": 1039,
       "title": "Add LeakyReLU² + 4ep Legal TTT submission",
       "status": "open",
-      "updatedAt": "2026-03-28T21:37:17Z",
-      "headSha": "d92991776dccb93a745a6faff78f1167e791280a",
-      "generatedAt": "2026-03-28T21:55:06.023Z",
-      "summary": "LeakyReLU² 11-layer GPT with Parameter Banking + Parallel Muon runs legal score-first TTT at lr0.0025 for four epochs while skipping diagnostic pre-evals.",
+      "updatedAt": "2026-03-30T19:03:44Z",
+      "headSha": "8fc315d81548a61cc7d080faa4ee37934923a5fe",
+      "generatedAt": "2026-03-30T19:08:30.527Z",
+      "summary": "Legal TTT tuning adds 4-epoch score-first adaptation with lr 0.0025, LeakyReLU² model, Parallel Muon optimizer, and eval-only checkpoint loading for fast sweeps.",
       "tags": [
         "architecture",
-        "muon",
         "training-schedule",
+        "optimizer",
         "evaluation"
       ],
       "flags": {
@@ -2378,15 +2493,15 @@
     },
     {
       "prNumber": 998,
-      "title": "Supersede invalid Conker-5 claim with legal Conker-11 update packet",
+      "title": "Replace PR #998 with OPC native causal packed-memory non-record packet",
       "status": "open",
-      "updatedAt": "2026-03-30T17:55:25Z",
-      "headSha": "cb7619f66f259b9e1817c66378d47d7298d09708",
-      "generatedAt": "2026-03-30T18:07:33.229Z",
-      "summary": "PR now serves as a legal Conker-11 rerun with audited strict-causal mask to replace the invalid tandem-residual claim.",
+      "updatedAt": "2026-03-30T18:56:04Z",
+      "headSha": "e00a20770dcc38c73b13ff9b29aeecfb3184f5df",
+      "generatedAt": "2026-03-30T19:08:37.142Z",
+      "summary": "Rebuilds OPC-native causal packed-memory mixture model with unigram/bigram/trigram weights and native legality adapter for the non-record packet.",
       "tags": [
         "non-record",
-        "evaluation"
+        "architecture"
       ],
       "flags": {
         "usesValOnly": false,
@@ -4268,28 +4383,6 @@
         "valOnlyMatchesCollector": true
       },
       "file": "items/pr-882.json"
-    },
-    {
-      "prNumber": 881,
-      "title": "Record: WaterLOO — Full-Rescore N-gram Cache with Self-Exclusion (val_bpb 0.0990)",
-      "status": "closed",
-      "updatedAt": "2026-03-27T22:35:33Z",
-      "headSha": "c996cee3c4777a8ff8f25563713d60c2aca3e0e5",
-      "generatedAt": "2026-03-27T22:49:34.375Z",
-      "summary": "Full two-pass n-gram rescore builds a global cache but removes each token’s own counts before matching, keeping full-stream scoring fast and structured.",
-      "tags": [
-        "architecture",
-        "evaluation"
-      ],
-      "flags": {
-        "usesValOnly": false,
-        "usesValOnlyAi": false,
-        "usesValOnlyCollector": false
-      },
-      "compatibility": {
-        "valOnlyMatchesCollector": true
-      },
-      "file": "items/pr-881.json"
     },
     {
       "prNumber": 880,

@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-30T19:08:06.709Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1142,
+    "title": "SpotlightLFB + Aux-Int6 Compression — 1.1493 BPB (3-seed mean)",
+    "state": "open",
+    "updatedAt": "2026-03-30T18:58:36Z",
+    "headSha": "23c986cc1c6349f49aae80df3aae13c73f906b23",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1142",
+    "authorLogin": "ymrohit"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-30_SpotlightLFB_AuxInt6_10x448/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Pairs a 10x448 dense trunk with a single late lexical feature bank injection and int6 auxiliary embedding export to hit speed/size targets.",
+    "tags": [
+      "architecture",
+      "compression",
+      "quantization"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "single late lexical steering injection site (previous token, bigram, boundary)",
+      "10×448 dense trunk with VE, skip refiner, and spotlight LFB layer",
+      "auxiliary embeddings quantized to int6 while trunk stays int8+lzma for export legality"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}
