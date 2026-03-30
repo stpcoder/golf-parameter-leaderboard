@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-25T20:03:50.644Z",
+  "generatedAt": "2026-03-30T14:37:38.765Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
@@ -19,15 +19,16 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Eval stacks 2-7-order n-gram backoff with entropy-adaptive alpha to mix cached counts and model output without touching training.",
+    "summary": "11L/512d U-Net reuses training but adds score-first n-gram caching with multi-order backoff (2-7) and entropy-adaptive alpha at eval time.",
     "tags": [
       "evaluation"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Multi-order context-first n-gram backoff cascade",
-      "Entropy-adaptive alpha weighted by model entropy"
+      "Score-first n-gram cache",
+      "Multi-order backoff from 7 to 2",
+      "Entropy-adaptive alpha gating"
     ]
   },
   "compatibility": {

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-24T23:27:52.997Z",
+  "generatedAt": "2026-03-30T14:37:45.426Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
@@ -19,18 +19,17 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Recursive weight sharing fuses flat and crawler loops so few unique blocks support MLP4x depth while GPTQ-aware cadence tweaks tame reuse-induced quantization/EMA issues.",
+    "summary": "Fractal weight sharing loops a small set of blocks (4 unique flat + 2 crawler) to fund 4×MLP depth and bidirectional gated recurrence under GPTQ quantization.",
     "tags": [
       "architecture",
-      "quantization",
-      "training-schedule"
+      "quantization"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Fractal looped blocks enabling deeper depth with shared parameters",
-      "Asymmetric flat+crawler mix to isolate gradient conflict to crawler stages",
-      "GPTQ-aware cadence sweep to stabilize quantized recursion"
+      "Recursive weight sharing loops for depth amplification",
+      "Asymmetric crawler reuse with bidirectional gating",
+      "GPTQ-aware quantization for shared parameters"
     ]
   },
   "compatibility": {

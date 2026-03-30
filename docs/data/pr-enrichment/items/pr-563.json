@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-23T18:47:26.038Z",
+  "generatedAt": "2026-03-30T14:37:50.808Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 563,
     "title": "Add submission: 10L Enhanced with BigramHash(12240) + SOTA techniques",
-    "state": "open",
-    "updatedAt": "2026-03-23T18:23:57Z",
+    "state": "closed",
+    "updatedAt": "2026-03-30T14:16:51Z",
     "headSha": "fc825c02217f17a108c072b2553807d406443908",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/563",
     "authorLogin": "instax-dutta"
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "10-layer GQA transformer uses mixed int5/int6 quantization, BigramHash(12288) with SmearGate recurrence, muon+SWA optimization, and sliding-window eval for compact scoring.",
+    "summary": "10-layer GQA Transformer with U-Net skips and ReLU² uses mixed int5/int6 quant, expanded BigramHash+SmearGate recurrence, and Muon/SWA training.",
     "tags": [
       "quantization",
-      "optimizer",
       "architecture",
-      "evaluation"
+      "training-schedule",
+      "tokenization"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Mixed int5/int6 quantization with muP-scaled ortho init",
-      "BigramHash(12288)+SmearGate recurrence atop U-Net skips",
-      "Muon optimizer with SWA and sliding-window evaluation"
+      "Mixed int5/int6 quantization for MLP/attention",
+      "BigramHash(12288) plus SmearGate recurrence",
+      "Muon optimizer with SWA + sliding-window evaluation"
     ]
   },
   "compatibility": {

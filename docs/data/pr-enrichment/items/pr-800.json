@@ -1,39 +1,36 @@
 {
-  "generatedAt": "2026-03-27T02:13:45.041Z",
+  "generatedAt": "2026-03-30T14:37:25.951Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 800,
     "title": "Record: X-WING — Shared N-gram Tables + Cubric (val_bpb=0.5644)",
-    "state": "open",
-    "updatedAt": "2026-03-27T02:05:12Z",
+    "state": "closed",
+    "updatedAt": "2026-03-30T14:13:35Z",
     "headSha": "7b29d6b5e32db72c66f6a6db26109fda8e46b5e0",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/800",
     "authorLogin": "newjordan"
   },
   "inputs": {
-    "hash": "91206a35b78630edd324560142af570e5c3e70b496d2b7f0a8971106a4fd6406",
+    "hash": "c4f8d017d13e812b0ad5a78b677f8350df1124736cd3f84c8d4e37f273206c70",
     "readmePaths": [
       "records/track_10min_16mb/2026-03-26_XWING_YellowII_3Dcubric_complementary_8xH100/README.md",
       "records/track_10min_16mb/2026-03-26_XWING_shared_tables_cubric_8xH100/README.md",
-      "records/track_10min_16mb/2026-03-25_PodracerIII_cubric_lite_8xH100/README.md",
-      "records/track_10min_16mb/2026-03-25_PodracingII_backoff7gram_8xH100/README.md",
-      "records/track_10min_16mb/2026-03-23_SwiGLU_F1_VRL_LeakyReLU_1.1208/README.md",
-      "records/track_10min_16mb/2026-03-22_SpongeBath_TTT8_Stride32/README.md",
-      "records/track_10min_16mb/2026-03-23_Frugendorff_Squared_6x2_640d_MLP4/README.md"
+      "records/track_10min_16mb/2026-03-23_SwiGLU_F1_VRL_LeakyReLU_1.1208/README.md"
     ],
-    "submissionCount": 7
+    "submissionCount": 3
   },
   "output": {
-    "summary": "Chunked shared n-gram tables give every GPU the full validation history while Cubric per-order alpha adjusts each order’s trust.",
+    "summary": "Chunk-based shared n-gram tables synchronize all ranks’ counts while Cubric per-order adaptive alpha suppresses noisy low orders and boosts reliable higher ones.",
     "tags": [
+      "architecture",
       "evaluation"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "chunk-based shared n-gram tables",
-      "per-order Cubric adaptive alpha scaling"
+      "Chunk-based shared n-gram tables synchronize statistics across ranks",
+      "Cubric per-order adaptive alpha suppresses noisy low orders and boosts reliable higher ones"
     ]
   },
   "compatibility": {

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-25T23:35:37.531Z",
+  "generatedAt": "2026-03-30T14:37:33.582Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
@@ -19,16 +19,16 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Score-first 7-gram backoff U-Net eval learns per-order adaptive alphas, suppressing noisy low orders while boosting high ones for Cubric Lite.",
+    "summary": "11L/512d U-Net adds per-order adaptive alpha scaling to its score-first 7-gram backoff, dampening noisy low orders and boosting reliable high-order matches.",
     "tags": [
       "evaluation"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "score-first multi-order n-gram cache",
-      "entropy-adaptive alpha with per-order multipliers",
-      "eval-time adaptation using already-scored tokens"
+      "score-first 7-gram backoff",
+      "per-order adaptive alpha multipliers",
+      "order-specific noise suppression"
     ]
   },
   "compatibility": {
