@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-30T04:33:13.252Z",
+  "generatedAt": "2026-03-30T05:03:26.422Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "submissions": [
@@ -3366,17 +3366,17 @@
         "valOnlyMatches": []
       },
       "pr": {
-        "number": 1083,
-        "title": "Bandit: ClownCar Crawler x Cubric Ngram9 — 0.4961 BPB, 9.9mb",
+        "number": 1120,
+        "title": "Record: Rascal — val_bpb 1.1099 (3-seed mean)",
         "state": "open",
         "draft": false,
         "mergedAt": null,
-        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1083",
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1120",
         "authorLogin": "newjordan",
         "authorName": null,
-        "createdAt": "2026-03-29T15:59:30Z",
-        "updatedAt": "2026-03-30T02:08:55Z",
-        "headSha": "4efa746c3596aba503b77ad4c5c5181aafab04bd",
+        "createdAt": "2026-03-30T04:57:49Z",
+        "updatedAt": "2026-03-30T05:01:27Z",
+        "headSha": "39ed402b3b11b680e15a3596efd6f3bf385ffee9",
         "headRepo": "newjordan/parameter-golf-1"
       },
       "links": {
@@ -3385,7 +3385,7 @@
         "trainLog": "https://github.com/openai/parameter-golf/blob/7b29d6b5e32db72c66f6a6db26109fda8e46b5e0/records/track_10min_16mb/2026-03-26_XWING_Cubric3D_complementary_8xH100/train.log",
         "script": "https://github.com/openai/parameter-golf/blob/7b29d6b5e32db72c66f6a6db26109fda8e46b5e0/records/track_10min_16mb/2026-03-26_XWING_Cubric3D_complementary_8xH100/train_gpt.py",
         "folder": "https://github.com/openai/parameter-golf/tree/7b29d6b5e32db72c66f6a6db26109fda8e46b5e0/records/track_10min_16mb/2026-03-26_XWING_Cubric3D_complementary_8xH100",
-        "pr": "https://github.com/openai/parameter-golf/pull/1083",
+        "pr": "https://github.com/openai/parameter-golf/pull/1120",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
       "provenance": {
@@ -3520,17 +3520,17 @@
         "valOnlyMatches": []
       },
       "pr": {
-        "number": 1083,
-        "title": "Bandit: ClownCar Crawler x Cubric Ngram9 — 0.4961 BPB, 9.9mb",
+        "number": 1120,
+        "title": "Record: Rascal — val_bpb 1.1099 (3-seed mean)",
         "state": "open",
         "draft": false,
         "mergedAt": null,
-        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1083",
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1120",
         "authorLogin": "newjordan",
         "authorName": null,
-        "createdAt": "2026-03-29T15:59:30Z",
-        "updatedAt": "2026-03-30T02:08:55Z",
-        "headSha": "4efa746c3596aba503b77ad4c5c5181aafab04bd",
+        "createdAt": "2026-03-30T04:57:49Z",
+        "updatedAt": "2026-03-30T05:01:27Z",
+        "headSha": "39ed402b3b11b680e15a3596efd6f3bf385ffee9",
         "headRepo": "newjordan/parameter-golf-1"
       },
       "links": {
@@ -3539,7 +3539,7 @@
         "trainLog": "https://github.com/openai/parameter-golf/blob/4efa746c3596aba503b77ad4c5c5181aafab04bd/records/track_10min_16mb/2026-03-29_Bandit_ClownCar_X_CubricNgram9_8xH100/train.log",
         "script": "https://github.com/openai/parameter-golf/blob/4efa746c3596aba503b77ad4c5c5181aafab04bd/records/track_10min_16mb/2026-03-29_Bandit_ClownCar_X_CubricNgram9_8xH100/train_gpt.py",
         "folder": "https://github.com/openai/parameter-golf/tree/4efa746c3596aba503b77ad4c5c5181aafab04bd/records/track_10min_16mb/2026-03-29_Bandit_ClownCar_X_CubricNgram9_8xH100",
-        "pr": "https://github.com/openai/parameter-golf/pull/1083",
+        "pr": "https://github.com/openai/parameter-golf/pull/1120",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
       "provenance": {
@@ -3906,7 +3906,7 @@
       },
       "pr": {
         "number": 998,
-        "title": "Add Conker-5 tandem residual exact experts non-record submission",
+        "title": "Supersede invalid Conker-5 claim with legal Conker-11 update packet",
         "state": "open",
         "draft": false,
         "mergedAt": null,
@@ -3914,7 +3914,7 @@
         "authorLogin": "asuramaya",
         "authorName": null,
         "createdAt": "2026-03-28T02:27:23Z",
-        "updatedAt": "2026-03-28T18:00:36Z",
+        "updatedAt": "2026-03-30T04:58:00Z",
         "headSha": "cb7619f66f259b9e1817c66378d47d7298d09708",
         "headRepo": "asuramaya/parameter-golf"
       },
@@ -6531,17 +6531,17 @@
         "valOnlyMatches": []
       },
       "pr": {
-        "number": 1083,
-        "title": "Bandit: ClownCar Crawler x Cubric Ngram9 — 0.4961 BPB, 9.9mb",
+        "number": 1120,
+        "title": "Record: Rascal — val_bpb 1.1099 (3-seed mean)",
         "state": "open",
         "draft": false,
         "mergedAt": null,
-        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1083",
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1120",
         "authorLogin": "newjordan",
         "authorName": null,
-        "createdAt": "2026-03-29T15:59:30Z",
-        "updatedAt": "2026-03-30T02:08:55Z",
-        "headSha": "4efa746c3596aba503b77ad4c5c5181aafab04bd",
+        "createdAt": "2026-03-30T04:57:49Z",
+        "updatedAt": "2026-03-30T05:01:27Z",
+        "headSha": "39ed402b3b11b680e15a3596efd6f3bf385ffee9",
         "headRepo": "newjordan/parameter-golf-1"
       },
       "links": {
@@ -6550,7 +6550,7 @@
         "trainLog": "https://github.com/openai/parameter-golf/blob/37df3009ba811f4cfc35a815057d7b7df925b5a2/records/track_10min_16mb/2026-03-27_Medusa_FLA_DeltaNet_NaiveInt6_8xH100/train.log",
         "script": "https://github.com/openai/parameter-golf/blob/37df3009ba811f4cfc35a815057d7b7df925b5a2/records/track_10min_16mb/2026-03-27_Medusa_FLA_DeltaNet_NaiveInt6_8xH100/train_gpt.py",
         "folder": "https://github.com/openai/parameter-golf/tree/37df3009ba811f4cfc35a815057d7b7df925b5a2/records/track_10min_16mb/2026-03-27_Medusa_FLA_DeltaNet_NaiveInt6_8xH100",
-        "pr": "https://github.com/openai/parameter-golf/pull/1083",
+        "pr": "https://github.com/openai/parameter-golf/pull/1120",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
       "provenance": {
@@ -9794,6 +9794,83 @@
       }
     },
     {
+      "id": "record-records-track_10min_16mb-2026-03-30_Rascal_8xH100",
+      "source": "pull_request",
+      "status": "open",
+      "category": "main-track",
+      "track": {
+        "path": "records/track_10min_16mb",
+        "slug": "track_10min_16mb",
+        "label": "10 Minute / 16MB",
+        "official": true,
+        "category": "main-track"
+      },
+      "record": {
+        "folderName": "2026-03-30_Rascal_8xH100",
+        "folderPath": "records/track_10min_16mb/2026-03-30_Rascal_8xH100",
+        "submissionPath": "records/track_10min_16mb/2026-03-30_Rascal_8xH100/submission.json",
+        "readmePath": "records/track_10min_16mb/2026-03-30_Rascal_8xH100/README.md",
+        "trainLogPath": "records/track_10min_16mb/2026-03-30_Rascal_8xH100/train.log",
+        "scriptPath": "records/track_10min_16mb/2026-03-30_Rascal_8xH100/train_gpt.py"
+      },
+      "submission": {
+        "author": "Frosty40",
+        "githubId": "newjordan",
+        "name": "Rascal",
+        "blurb": "Junkyard Rat Rascal II: 11L XSA-all + Parallel Muon + Coprime loader + Bigram2048 + RoPE16 + SWA + Late QAT. No GPTQ — naive int6 embed + 5 layers, zstd-compressed to ~15.5MB. 3-seed mean val_bpb=1.1099 (std 0.0002).",
+        "date": "2026-03-30T00:00:00Z"
+      },
+      "metrics": {
+        "valBpb": 1.1099,
+        "valLoss": null,
+        "preQuantValBpb": null,
+        "preQuantValLoss": null,
+        "stepStop": null,
+        "wallclockSeconds": null,
+        "evalTimeSeconds": null
+      },
+      "artifact": {
+        "bytesTotal": 15554053,
+        "bytesCode": 118521,
+        "bytesModelInt8Zlib": null
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
+      "pr": {
+        "number": 1120,
+        "title": "Record: Rascal — val_bpb 1.1099 (3-seed mean)",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1120",
+        "authorLogin": "newjordan",
+        "authorName": null,
+        "createdAt": "2026-03-30T04:57:49Z",
+        "updatedAt": "2026-03-30T05:01:27Z",
+        "headSha": "39ed402b3b11b680e15a3596efd6f3bf385ffee9",
+        "headRepo": "newjordan/parameter-golf-1"
+      },
+      "links": {
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/39ed402b3b11b680e15a3596efd6f3bf385ffee9/records/track_10min_16mb/2026-03-30_Rascal_8xH100/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/39ed402b3b11b680e15a3596efd6f3bf385ffee9/records/track_10min_16mb/2026-03-30_Rascal_8xH100/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/39ed402b3b11b680e15a3596efd6f3bf385ffee9/records/track_10min_16mb/2026-03-30_Rascal_8xH100/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/39ed402b3b11b680e15a3596efd6f3bf385ffee9/records/track_10min_16mb/2026-03-30_Rascal_8xH100/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/39ed402b3b11b680e15a3596efd6f3bf385ffee9/records/track_10min_16mb/2026-03-30_Rascal_8xH100",
+        "pr": "https://github.com/openai/parameter-golf/pull/1120",
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": false,
+        "hasPullRequest": true,
+        "listedInReadme": false
+      }
+    },
+    {
       "id": "record-records-track_10min_16mb-2026-03-23_LoquiAuris_10L_SWA_StandardTTT_1-1100",
       "source": "pull_request",
       "status": "closed",
@@ -10484,6 +10561,83 @@
         "script": "https://github.com/openai/parameter-golf/blob/7eb6f2410602a4ea5a9f9166104e12dfe8361fd4/records/track_10min_16mb/2026-03-29_V16_CoprimeSWA_EMA_1.1136/train_gpt.py",
         "folder": "https://github.com/openai/parameter-golf/tree/7eb6f2410602a4ea5a9f9166104e12dfe8361fd4/records/track_10min_16mb/2026-03-29_V16_CoprimeSWA_EMA_1.1136",
         "pr": "https://github.com/openai/parameter-golf/pull/1099",
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": false,
+        "hasPullRequest": true,
+        "listedInReadme": false
+      }
+    },
+    {
+      "id": "record-records-track_10min_16mb-2026-03-29_FusedMLP_Brotli_Memmap",
+      "source": "pull_request",
+      "status": "open",
+      "category": "main-track",
+      "track": {
+        "path": "records/track_10min_16mb",
+        "slug": "track_10min_16mb",
+        "label": "10 Minute / 16MB",
+        "official": true,
+        "category": "main-track"
+      },
+      "record": {
+        "folderName": "2026-03-29_FusedMLP_Brotli_Memmap",
+        "folderPath": "records/track_10min_16mb/2026-03-29_FusedMLP_Brotli_Memmap",
+        "submissionPath": "records/track_10min_16mb/2026-03-29_FusedMLP_Brotli_Memmap/submission.json",
+        "readmePath": "records/track_10min_16mb/2026-03-29_FusedMLP_Brotli_Memmap/README.md",
+        "trainLogPath": "records/track_10min_16mb/2026-03-29_FusedMLP_Brotli_Memmap/train.log",
+        "scriptPath": "records/track_10min_16mb/2026-03-29_FusedMLP_Brotli_Memmap/train_gpt.py"
+      },
+      "submission": {
+        "author": "Abay Bektursun",
+        "githubId": "abaybektursun",
+        "name": "Fused MLP (Triton+CUTLASS EVT) + Brotli + Memmap",
+        "blurb": "Fused Triton TMA forward + CUTLASS EVT backward MLP kernels (-3.2ms/step), pre-computed activation gradient, Brotli-11 compression (-581KB vs LZMA-9), memmap multi-shard pipeline, AR self-gen GPTQ int6, BigramHash 3072x112, XSA-all 11 layers. Built on PR 1019 stack. 3-seed mean: 1.1138 BPB / 1.8806 nats. Delta vs leaderboard SOTA: -0.0094 nats. Welch's t=-10.26, p<0.01.",
+        "date": "2026-03-29"
+      },
+      "metrics": {
+        "valBpb": 1.11379249,
+        "valLoss": 1.88058698,
+        "preQuantValBpb": null,
+        "preQuantValLoss": null,
+        "stepStop": null,
+        "wallclockSeconds": null,
+        "evalTimeSeconds": null
+      },
+      "artifact": {
+        "bytesTotal": 15512666,
+        "bytesCode": null,
+        "bytesModelInt8Zlib": null
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
+      "pr": {
+        "number": 1105,
+        "title": "Record: Fused MLP (Triton+CUTLASS EVT) + Brotli + Memmap — 1.1138 BPB",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1105",
+        "authorLogin": "abaybektursun",
+        "authorName": null,
+        "createdAt": "2026-03-30T00:03:19Z",
+        "updatedAt": "2026-03-30T05:02:53Z",
+        "headSha": "5090075301f45b3baf4aab6f7f34a1f31f185b0e",
+        "headRepo": "abaybektursun/parameter-golf"
+      },
+      "links": {
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/5090075301f45b3baf4aab6f7f34a1f31f185b0e/records/track_10min_16mb/2026-03-29_FusedMLP_Brotli_Memmap/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/5090075301f45b3baf4aab6f7f34a1f31f185b0e/records/track_10min_16mb/2026-03-29_FusedMLP_Brotli_Memmap/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/5090075301f45b3baf4aab6f7f34a1f31f185b0e/records/track_10min_16mb/2026-03-29_FusedMLP_Brotli_Memmap/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/5090075301f45b3baf4aab6f7f34a1f31f185b0e/records/track_10min_16mb/2026-03-29_FusedMLP_Brotli_Memmap/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/5090075301f45b3baf4aab6f7f34a1f31f185b0e/records/track_10min_16mb/2026-03-29_FusedMLP_Brotli_Memmap",
+        "pr": "https://github.com/openai/parameter-golf/pull/1105",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
       "provenance": {
@@ -42670,6 +42824,83 @@
         "script": "https://github.com/openai/parameter-golf/blob/a5bad1c292b2c30d98d8d6f89519b031cbe95afd/records/track_non_record_16mb/2026-03-22_MLP3x_WD04_OrthoInit_SlidingEval/train_gpt.py",
         "folder": "https://github.com/openai/parameter-golf/tree/a5bad1c292b2c30d98d8d6f89519b031cbe95afd/records/track_non_record_16mb/2026-03-22_MLP3x_WD04_OrthoInit_SlidingEval",
         "pr": "https://github.com/openai/parameter-golf/pull/444",
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": false,
+        "hasPullRequest": true,
+        "listedInReadme": false
+      }
+    },
+    {
+      "id": "record-records-track_10min_16mb-2026-03-29_Text_Diffusion_MDLM",
+      "source": "pull_request",
+      "status": "open",
+      "category": "main-track",
+      "track": {
+        "path": "records/track_10min_16mb",
+        "slug": "track_10min_16mb",
+        "label": "10 Minute / 16MB",
+        "official": true,
+        "category": "main-track"
+      },
+      "record": {
+        "folderName": "2026-03-29_Text_Diffusion_MDLM",
+        "folderPath": "records/track_10min_16mb/2026-03-29_Text_Diffusion_MDLM",
+        "submissionPath": "records/track_10min_16mb/2026-03-29_Text_Diffusion_MDLM/submission.json",
+        "readmePath": "records/track_10min_16mb/2026-03-29_Text_Diffusion_MDLM/README.md",
+        "trainLogPath": "records/track_10min_16mb/2026-03-29_Text_Diffusion_MDLM/train.log",
+        "scriptPath": "records/track_10min_16mb/2026-03-29_Text_Diffusion_MDLM/train_gpt.py"
+      },
+      "submission": {
+        "author": "gowtham0992",
+        "githubId": "gowtham0992",
+        "name": "Text Diffusion: Masked Diffusion Language Model (MDLM)",
+        "blurb": "First text diffusion submission. MDLM training (Sahoo et al., NeurIPS 2024): random masking at rate t~U(0,1), predict masked tokens, ELBO-weighted loss. SUBS parameterization (carry-over unmasking, zero mask probabilities). Stratified t sampling. Causal attention for AR eval compatibility. Eval: sliding window.",
+        "date": "2026-03-29T00:00:00Z"
+      },
+      "metrics": {
+        "valBpb": 1.4584,
+        "valLoss": 2.4625,
+        "preQuantValBpb": null,
+        "preQuantValLoss": null,
+        "stepStop": null,
+        "wallclockSeconds": null,
+        "evalTimeSeconds": null
+      },
+      "artifact": {
+        "bytesTotal": 11547850,
+        "bytesCode": 73514,
+        "bytesModelInt8Zlib": null
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
+      "pr": {
+        "number": 1119,
+        "title": "Notable Non-Record: Text Diffusion (MDLM) — 1.4584 BPB — Masked Diffusion Language Model",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1119",
+        "authorLogin": "gowtham0992",
+        "authorName": null,
+        "createdAt": "2026-03-30T04:39:08Z",
+        "updatedAt": "2026-03-30T04:39:08Z",
+        "headSha": "4a79475a85e462a18b1d2c90ed61f183ae426dda",
+        "headRepo": "gowtham0992/parameter-golf"
+      },
+      "links": {
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/4a79475a85e462a18b1d2c90ed61f183ae426dda/records/track_10min_16mb/2026-03-29_Text_Diffusion_MDLM/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/4a79475a85e462a18b1d2c90ed61f183ae426dda/records/track_10min_16mb/2026-03-29_Text_Diffusion_MDLM/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/4a79475a85e462a18b1d2c90ed61f183ae426dda/records/track_10min_16mb/2026-03-29_Text_Diffusion_MDLM/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/4a79475a85e462a18b1d2c90ed61f183ae426dda/records/track_10min_16mb/2026-03-29_Text_Diffusion_MDLM/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/4a79475a85e462a18b1d2c90ed61f183ae426dda/records/track_10min_16mb/2026-03-29_Text_Diffusion_MDLM",
+        "pr": "https://github.com/openai/parameter-golf/pull/1119",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
       "provenance": {

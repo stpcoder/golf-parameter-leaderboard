@@ -1,0 +1,46 @@
+{
+  "generatedAt": "2026-03-30T05:03:35.101Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1120,
+    "title": "Record: Rascal — val_bpb 1.1099 (3-seed mean)",
+    "state": "open",
+    "updatedAt": "2026-03-30T05:01:27Z",
+    "headSha": "39ed402b3b11b680e15a3596efd6f3bf385ffee9",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1120",
+    "authorLogin": "newjordan"
+  },
+  "inputs": {
+    "hash": "579bb5ffe0be0c1712f71e5520c59dac8d390132277b2852c9d7b29d19e6e091",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-26_XWING_Cubric3D_complementary_8xH100/README.md",
+      "records/track_10min_16mb/2026-03-29_Bandit_ClownCar_X_CubricNgram9_8xH100/README.md",
+      "records/track_10min_16mb/2026-03-27_Medusa_FLA_DeltaNet_NaiveInt6_8xH100/README.md",
+      "records/track_10min_16mb/2026-03-30_Rascal_8xH100/README.md"
+    ],
+    "submissionCount": 4
+  },
+  "output": {
+    "summary": "11-layer XSA-all net pairs Parallel Muon, coprime loader, SWA, and late QAT with naive int6/zstd compression to hit the 16MB cap without GPTQ.",
+    "tags": [
+      "architecture",
+      "optimizer",
+      "training-schedule",
+      "quantization"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "11-layer XSA-all stack with Parallel Muon optimizer and coprime loader",
+      "Late SWA warmdown plus QAT schedule before int6 quantization",
+      "Naive int6 embeddings compressed with zstd to stay within size limit"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

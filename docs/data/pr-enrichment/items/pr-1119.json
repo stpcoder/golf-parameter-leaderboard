@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-30T05:03:39.955Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1119,
+    "title": "Notable Non-Record: Text Diffusion (MDLM) — 1.4584 BPB — Masked Diffusion Language Model",
+    "state": "open",
+    "updatedAt": "2026-03-30T04:39:08Z",
+    "headSha": "4a79475a85e462a18b1d2c90ed61f183ae426dda",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1119",
+    "authorLogin": "gowtham0992"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-29_Text_Diffusion_MDLM/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Causal 11L Transformer trains with MDLM diffusion steps, SUBS masking, stratified t sampling, and ELBO-weighted loss alongside NTP for sliding eval.",
+    "tags": [
+      "architecture",
+      "training-schedule",
+      "sliding-window-eval"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Causal adaptation of MDLM diffusion with SUBS masking",
+      "Stratified t sampling with ELBO-weighted loss",
+      "Mixed diffusion and next-token prediction training schedule"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

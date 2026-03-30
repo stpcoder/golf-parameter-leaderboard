@@ -1,8 +1,55 @@
 {
-  "generatedAt": "2026-03-30T04:33:36.630Z",
+  "generatedAt": "2026-03-30T05:03:54.655Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 1120,
+      "title": "Record: Rascal — val_bpb 1.1099 (3-seed mean)",
+      "status": "open",
+      "updatedAt": "2026-03-30T05:01:27Z",
+      "headSha": "39ed402b3b11b680e15a3596efd6f3bf385ffee9",
+      "generatedAt": "2026-03-30T05:03:35.101Z",
+      "summary": "11-layer XSA-all net pairs Parallel Muon, coprime loader, SWA, and late QAT with naive int6/zstd compression to hit the 16MB cap without GPTQ.",
+      "tags": [
+        "architecture",
+        "optimizer",
+        "training-schedule",
+        "quantization"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1120.json"
+    },
+    {
+      "prNumber": 1119,
+      "title": "Notable Non-Record: Text Diffusion (MDLM) — 1.4584 BPB — Masked Diffusion Language Model",
+      "status": "open",
+      "updatedAt": "2026-03-30T04:39:08Z",
+      "headSha": "4a79475a85e462a18b1d2c90ed61f183ae426dda",
+      "generatedAt": "2026-03-30T05:03:39.955Z",
+      "summary": "Causal 11L Transformer trains with MDLM diffusion steps, SUBS masking, stratified t sampling, and ELBO-weighted loss alongside NTP for sliding eval.",
+      "tags": [
+        "architecture",
+        "training-schedule",
+        "sliding-window-eval"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1119.json"
+    },
     {
       "prNumber": 1118,
       "title": "Submission: 11L XSA4 + TrigramHash + ValueResidual + Legal TTT (val_bpb=1.1187)",
@@ -235,6 +282,28 @@
         "valOnlyMatchesCollector": true
       },
       "file": "items/pr-1106.json"
+    },
+    {
+      "prNumber": 1105,
+      "title": "Record: Fused MLP (Triton+CUTLASS EVT) + Brotli + Memmap — 1.1138 BPB",
+      "status": "open",
+      "updatedAt": "2026-03-30T05:02:53Z",
+      "headSha": "5090075301f45b3baf4aab6f7f34a1f31f185b0e",
+      "generatedAt": "2026-03-30T05:03:48.512Z",
+      "summary": "Fuses Triton TMA forward and CUTLASS EVT backward MLP kernels with pre-computed LeakyReLU gradients plus Brotli compression and a memmap pipeline.",
+      "tags": [
+        "architecture",
+        "compression"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1105.json"
     },
     {
       "prNumber": 1104,
@@ -564,29 +633,6 @@
         "valOnlyMatchesCollector": true
       },
       "file": "items/pr-1084.json"
-    },
-    {
-      "prNumber": 1083,
-      "title": "Bandit: ClownCar Crawler x Cubric Ngram9 — 0.4961 BPB, 9.9mb",
-      "status": "open",
-      "updatedAt": "2026-03-30T02:08:55Z",
-      "headSha": "4efa746c3596aba503b77ad4c5c5181aafab04bd",
-      "generatedAt": "2026-03-30T02:33:08.728Z",
-      "summary": "Pairs Frugendorff ClownCar crawler with shared-table X-WING ngram oracle (3D Cubric + complementary training) plus loop-aware GPTQ quantization.",
-      "tags": [
-        "architecture",
-        "evaluation",
-        "quantization"
-      ],
-      "flags": {
-        "usesValOnly": false,
-        "usesValOnlyAi": false,
-        "usesValOnlyCollector": false
-      },
-      "compatibility": {
-        "valOnlyMatchesCollector": true
-      },
-      "file": "items/pr-1083.json"
     },
     {
       "prNumber": 1081,
@@ -2051,17 +2097,16 @@
     },
     {
       "prNumber": 998,
-      "title": "Add Conker-5 tandem residual exact experts non-record submission",
+      "title": "Supersede invalid Conker-5 claim with legal Conker-11 update packet",
       "status": "open",
-      "updatedAt": "2026-03-28T18:00:36Z",
+      "updatedAt": "2026-03-30T04:58:00Z",
       "headSha": "cb7619f66f259b9e1817c66378d47d7298d09708",
-      "generatedAt": "2026-03-28T18:24:03.319Z",
-      "summary": "Non-record tandem-trained Conker-3 with sparse exact residual experts and gate-only routing, packaged int6+zlib but later invalidated by a non-strict causal mask.",
+      "generatedAt": "2026-03-30T05:03:54.512Z",
+      "summary": "PR replaces the invalid Conker-5 claim with an audited Conker-11 rerun that enforces Toeplitz causal masks and a global lag cap for a legal submission.",
       "tags": [
+        "evaluation",
         "architecture",
-        "quantization",
-        "non-record",
-        "evaluation"
+        "non-record"
       ],
       "flags": {
         "usesValOnly": false,
