@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-30T05:03:26.422Z",
+  "generatedAt": "2026-03-30T05:33:46.752Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "submissions": [
@@ -3367,7 +3367,7 @@
       },
       "pr": {
         "number": 1120,
-        "title": "Record: Rascal — val_bpb 1.1099 (3-seed mean)",
+        "title": "val_bpb 1.1099 (3-seed mean) Rascal",
         "state": "open",
         "draft": false,
         "mergedAt": null,
@@ -3375,7 +3375,7 @@
         "authorLogin": "newjordan",
         "authorName": null,
         "createdAt": "2026-03-30T04:57:49Z",
-        "updatedAt": "2026-03-30T05:01:27Z",
+        "updatedAt": "2026-03-30T05:05:52Z",
         "headSha": "39ed402b3b11b680e15a3596efd6f3bf385ffee9",
         "headRepo": "newjordan/parameter-golf-1"
       },
@@ -3521,7 +3521,7 @@
       },
       "pr": {
         "number": 1120,
-        "title": "Record: Rascal — val_bpb 1.1099 (3-seed mean)",
+        "title": "val_bpb 1.1099 (3-seed mean) Rascal",
         "state": "open",
         "draft": false,
         "mergedAt": null,
@@ -3529,7 +3529,7 @@
         "authorLogin": "newjordan",
         "authorName": null,
         "createdAt": "2026-03-30T04:57:49Z",
-        "updatedAt": "2026-03-30T05:01:27Z",
+        "updatedAt": "2026-03-30T05:05:52Z",
         "headSha": "39ed402b3b11b680e15a3596efd6f3bf385ffee9",
         "headRepo": "newjordan/parameter-golf-1"
       },
@@ -4310,6 +4310,83 @@
         "script": "https://github.com/openai/parameter-golf/blob/7b786ba0b3dc778d02f179be697a020623a2da36/records/track_10min_16mb/2026-03-25_NgramCache_EntropyAdaptive_0.6672/train_gpt.py",
         "folder": "https://github.com/openai/parameter-golf/tree/7b786ba0b3dc778d02f179be697a020623a2da36/records/track_10min_16mb/2026-03-25_NgramCache_EntropyAdaptive_0.6672",
         "pr": "https://github.com/openai/parameter-golf/pull/770",
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": false,
+        "hasPullRequest": true,
+        "listedInReadme": false
+      }
+    },
+    {
+      "id": "record-records-track_10min_16mb-2026-03-29_HNet_Tokenization",
+      "source": "pull_request",
+      "status": "open",
+      "category": "main-track",
+      "track": {
+        "path": "records/track_10min_16mb",
+        "slug": "track_10min_16mb",
+        "label": "10 Minute / 16MB",
+        "official": true,
+        "category": "main-track"
+      },
+      "record": {
+        "folderName": "2026-03-29_HNet_Tokenization",
+        "folderPath": "records/track_10min_16mb/2026-03-29_HNet_Tokenization",
+        "submissionPath": "records/track_10min_16mb/2026-03-29_HNet_Tokenization/submission.json",
+        "readmePath": "records/track_10min_16mb/2026-03-29_HNet_Tokenization/README.md",
+        "trainLogPath": "records/track_10min_16mb/2026-03-29_HNet_Tokenization/train.log",
+        "scriptPath": "records/track_10min_16mb/2026-03-29_HNet_Tokenization/train_gpt.py"
+      },
+      "submission": {
+        "author": "gowtham0992",
+        "githubId": "gowtham0992",
+        "name": "H-Net Tokenization: Hierarchical Token Processing",
+        "blurb": "First hierarchical tokenization submission. Learned token merge/unmerge layers create multi-resolution processing: encoder at half resolution (merged pairs), decoder at full resolution. Gated merge with softmax weights, per-position unmerge projections. Eval: sliding window.",
+        "date": "2026-03-29T00:00:00Z"
+      },
+      "metrics": {
+        "valBpb": 0.6846,
+        "valLoss": 1.1558,
+        "preQuantValBpb": null,
+        "preQuantValLoss": null,
+        "stepStop": null,
+        "wallclockSeconds": null,
+        "evalTimeSeconds": null
+      },
+      "artifact": {
+        "bytesTotal": 14000183,
+        "bytesCode": 73961,
+        "bytesModelInt8Zlib": null
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
+      "pr": {
+        "number": 1121,
+        "title": "Notable Non-Record: H-Net Tokenization — 0.6846 BPB — Hierarchical Token Processing",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1121",
+        "authorLogin": "gowtham0992",
+        "authorName": null,
+        "createdAt": "2026-03-30T05:06:26Z",
+        "updatedAt": "2026-03-30T05:06:26Z",
+        "headSha": "bb3d03a5358e8f8ab868f6ad8368c60e21324179",
+        "headRepo": "gowtham0992/parameter-golf"
+      },
+      "links": {
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/bb3d03a5358e8f8ab868f6ad8368c60e21324179/records/track_10min_16mb/2026-03-29_HNet_Tokenization/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/bb3d03a5358e8f8ab868f6ad8368c60e21324179/records/track_10min_16mb/2026-03-29_HNet_Tokenization/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/bb3d03a5358e8f8ab868f6ad8368c60e21324179/records/track_10min_16mb/2026-03-29_HNet_Tokenization/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/bb3d03a5358e8f8ab868f6ad8368c60e21324179/records/track_10min_16mb/2026-03-29_HNet_Tokenization/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/bb3d03a5358e8f8ab868f6ad8368c60e21324179/records/track_10min_16mb/2026-03-29_HNet_Tokenization",
+        "pr": "https://github.com/openai/parameter-golf/pull/1121",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
       "provenance": {
@@ -6532,7 +6609,7 @@
       },
       "pr": {
         "number": 1120,
-        "title": "Record: Rascal — val_bpb 1.1099 (3-seed mean)",
+        "title": "val_bpb 1.1099 (3-seed mean) Rascal",
         "state": "open",
         "draft": false,
         "mergedAt": null,
@@ -6540,7 +6617,7 @@
         "authorLogin": "newjordan",
         "authorName": null,
         "createdAt": "2026-03-30T04:57:49Z",
-        "updatedAt": "2026-03-30T05:01:27Z",
+        "updatedAt": "2026-03-30T05:05:52Z",
         "headSha": "39ed402b3b11b680e15a3596efd6f3bf385ffee9",
         "headRepo": "newjordan/parameter-golf-1"
       },
@@ -9843,7 +9920,7 @@
       },
       "pr": {
         "number": 1120,
-        "title": "Record: Rascal — val_bpb 1.1099 (3-seed mean)",
+        "title": "val_bpb 1.1099 (3-seed mean) Rascal",
         "state": "open",
         "draft": false,
         "mergedAt": null,
@@ -9851,7 +9928,7 @@
         "authorLogin": "newjordan",
         "authorName": null,
         "createdAt": "2026-03-30T04:57:49Z",
-        "updatedAt": "2026-03-30T05:01:27Z",
+        "updatedAt": "2026-03-30T05:05:52Z",
         "headSha": "39ed402b3b11b680e15a3596efd6f3bf385ffee9",
         "headRepo": "newjordan/parameter-golf-1"
       },
@@ -10627,16 +10704,16 @@
         "authorLogin": "abaybektursun",
         "authorName": null,
         "createdAt": "2026-03-30T00:03:19Z",
-        "updatedAt": "2026-03-30T05:02:53Z",
-        "headSha": "5090075301f45b3baf4aab6f7f34a1f31f185b0e",
+        "updatedAt": "2026-03-30T05:18:12Z",
+        "headSha": "c27131c5c7b708ef90828c1c4d5e232f1c2cf140",
         "headRepo": "abaybektursun/parameter-golf"
       },
       "links": {
-        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/5090075301f45b3baf4aab6f7f34a1f31f185b0e/records/track_10min_16mb/2026-03-29_FusedMLP_Brotli_Memmap/submission.json",
-        "readme": "https://github.com/openai/parameter-golf/blob/5090075301f45b3baf4aab6f7f34a1f31f185b0e/records/track_10min_16mb/2026-03-29_FusedMLP_Brotli_Memmap/README.md",
-        "trainLog": "https://github.com/openai/parameter-golf/blob/5090075301f45b3baf4aab6f7f34a1f31f185b0e/records/track_10min_16mb/2026-03-29_FusedMLP_Brotli_Memmap/train.log",
-        "script": "https://github.com/openai/parameter-golf/blob/5090075301f45b3baf4aab6f7f34a1f31f185b0e/records/track_10min_16mb/2026-03-29_FusedMLP_Brotli_Memmap/train_gpt.py",
-        "folder": "https://github.com/openai/parameter-golf/tree/5090075301f45b3baf4aab6f7f34a1f31f185b0e/records/track_10min_16mb/2026-03-29_FusedMLP_Brotli_Memmap",
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/c27131c5c7b708ef90828c1c4d5e232f1c2cf140/records/track_10min_16mb/2026-03-29_FusedMLP_Brotli_Memmap/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/c27131c5c7b708ef90828c1c4d5e232f1c2cf140/records/track_10min_16mb/2026-03-29_FusedMLP_Brotli_Memmap/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/c27131c5c7b708ef90828c1c4d5e232f1c2cf140/records/track_10min_16mb/2026-03-29_FusedMLP_Brotli_Memmap/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/c27131c5c7b708ef90828c1c4d5e232f1c2cf140/records/track_10min_16mb/2026-03-29_FusedMLP_Brotli_Memmap/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/c27131c5c7b708ef90828c1c4d5e232f1c2cf140/records/track_10min_16mb/2026-03-29_FusedMLP_Brotli_Memmap",
         "pr": "https://github.com/openai/parameter-golf/pull/1105",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
@@ -10715,6 +10792,83 @@
         "script": "https://github.com/openai/parameter-golf/blob/da4750aa811ed4dfa3a70c915ce3a5711e2d2ec0/records/track_10min_16mb/2026-03-27_ApproachB_LargerModel_Int5/train_gpt.py",
         "folder": "https://github.com/openai/parameter-golf/tree/da4750aa811ed4dfa3a70c915ce3a5711e2d2ec0/records/track_10min_16mb/2026-03-27_ApproachB_LargerModel_Int5",
         "pr": "https://github.com/openai/parameter-golf/pull/1004",
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": false,
+        "hasPullRequest": true,
+        "listedInReadme": false
+      }
+    },
+    {
+      "id": "record-records-track_10min_16mb-2026-03-30_EngramLite_GatedSkips_FullGPTQ_FA3_1-1146",
+      "source": "pull_request",
+      "status": "open",
+      "category": "main-track",
+      "track": {
+        "path": "records/track_10min_16mb",
+        "slug": "track_10min_16mb",
+        "label": "10 Minute / 16MB",
+        "official": true,
+        "category": "main-track"
+      },
+      "record": {
+        "folderName": "2026-03-30_EngramLite_GatedSkips_FullGPTQ_FA3_1.1146",
+        "folderPath": "records/track_10min_16mb/2026-03-30_EngramLite_GatedSkips_FullGPTQ_FA3_1.1146",
+        "submissionPath": "records/track_10min_16mb/2026-03-30_EngramLite_GatedSkips_FullGPTQ_FA3_1.1146/submission.json",
+        "readmePath": "records/track_10min_16mb/2026-03-30_EngramLite_GatedSkips_FullGPTQ_FA3_1.1146/README.md",
+        "trainLogPath": "records/track_10min_16mb/2026-03-30_EngramLite_GatedSkips_FullGPTQ_FA3_1.1146/train.log",
+        "scriptPath": "records/track_10min_16mb/2026-03-30_EngramLite_GatedSkips_FullGPTQ_FA3_1.1146/train_gpt.py"
+      },
+      "submission": {
+        "author": "icryo",
+        "githubId": "icryo",
+        "name": "EngramLite + Gated Skips + Full GPTQ + FA3",
+        "blurb": "11L 512d with EngramLite (multi-head bigram+trigram hash), sigmoid-gated skip connections, LeakyReLU(0.3)², Turbo-Muon (4 NS steps), coprime-stride loader, Full Hessian GPTQ int6+LZMA, XSA on all 11 layers, FA3 Hopper attention. LR floor 0.05. 87.9ms/step, 6667 steps.",
+        "date": "2026-03-30"
+      },
+      "metrics": {
+        "valBpb": 1.1146,
+        "valLoss": null,
+        "preQuantValBpb": null,
+        "preQuantValLoss": null,
+        "stepStop": null,
+        "wallclockSeconds": null,
+        "evalTimeSeconds": null
+      },
+      "artifact": {
+        "bytesTotal": 15711654,
+        "bytesCode": null,
+        "bytesModelInt8Zlib": null
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
+      "pr": {
+        "number": 1122,
+        "title": "Record: EngramLite + Gated Skips + Full GPTQ + FA3 — val_bpb 1.1146 (1-seed, 2 pending)",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1122",
+        "authorLogin": "icryo",
+        "authorName": null,
+        "createdAt": "2026-03-30T05:30:52Z",
+        "updatedAt": "2026-03-30T05:30:52Z",
+        "headSha": "7a90577632ed6b1944c55802abc74f80891c4fed",
+        "headRepo": "icryo/parameter-golf"
+      },
+      "links": {
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/7a90577632ed6b1944c55802abc74f80891c4fed/records/track_10min_16mb/2026-03-30_EngramLite_GatedSkips_FullGPTQ_FA3_1.1146/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/7a90577632ed6b1944c55802abc74f80891c4fed/records/track_10min_16mb/2026-03-30_EngramLite_GatedSkips_FullGPTQ_FA3_1.1146/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/7a90577632ed6b1944c55802abc74f80891c4fed/records/track_10min_16mb/2026-03-30_EngramLite_GatedSkips_FullGPTQ_FA3_1.1146/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/7a90577632ed6b1944c55802abc74f80891c4fed/records/track_10min_16mb/2026-03-30_EngramLite_GatedSkips_FullGPTQ_FA3_1.1146/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/7a90577632ed6b1944c55802abc74f80891c4fed/records/track_10min_16mb/2026-03-30_EngramLite_GatedSkips_FullGPTQ_FA3_1.1146",
+        "pr": "https://github.com/openai/parameter-golf/pull/1122",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
       "provenance": {

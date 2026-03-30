@@ -1,16 +1,62 @@
 {
-  "generatedAt": "2026-03-30T05:03:54.655Z",
+  "generatedAt": "2026-03-30T05:34:10.969Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
     {
-      "prNumber": 1120,
-      "title": "Record: Rascal — val_bpb 1.1099 (3-seed mean)",
+      "prNumber": 1122,
+      "title": "Record: EngramLite + Gated Skips + Full GPTQ + FA3 — val_bpb 1.1146 (1-seed, 2 pending)",
       "status": "open",
-      "updatedAt": "2026-03-30T05:01:27Z",
+      "updatedAt": "2026-03-30T05:30:52Z",
+      "headSha": "7a90577632ed6b1944c55802abc74f80891c4fed",
+      "generatedAt": "2026-03-30T05:33:54.353Z",
+      "summary": "Stacked EngramLite multi-head ngram hashing, sigmoid-gated skips, Turbo-Muon updates, and FlashAttention 3 with full Hessian GPTQ plus a coprime loader.",
+      "tags": [
+        "architecture",
+        "optimizer",
+        "quantization"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1122.json"
+    },
+    {
+      "prNumber": 1121,
+      "title": "Notable Non-Record: H-Net Tokenization — 0.6846 BPB — Hierarchical Token Processing",
+      "status": "open",
+      "updatedAt": "2026-03-30T05:06:26Z",
+      "headSha": "bb3d03a5358e8f8ab868f6ad8368c60e21324179",
+      "generatedAt": "2026-03-30T05:33:58.752Z",
+      "summary": "H-Net learns gated merges and per-position unmerges to run a coarse encoder and full-resolution decoder for hierarchical tokenization.",
+      "tags": [
+        "tokenization",
+        "architecture",
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1121.json"
+    },
+    {
+      "prNumber": 1120,
+      "title": "val_bpb 1.1099 (3-seed mean) Rascal",
+      "status": "open",
+      "updatedAt": "2026-03-30T05:05:52Z",
       "headSha": "39ed402b3b11b680e15a3596efd6f3bf385ffee9",
-      "generatedAt": "2026-03-30T05:03:35.101Z",
-      "summary": "11-layer XSA-all net pairs Parallel Muon, coprime loader, SWA, and late QAT with naive int6/zstd compression to hit the 16MB cap without GPTQ.",
+      "generatedAt": "2026-03-30T05:34:05.930Z",
+      "summary": "Blends an 11-layer XSA-all transformer with Parallel Muon, Coprime loader, RoPE16, Bigram2048, SWA, Late QAT, and naive int6 embed compression.",
       "tags": [
         "architecture",
         "optimizer",
@@ -287,10 +333,10 @@
       "prNumber": 1105,
       "title": "Record: Fused MLP (Triton+CUTLASS EVT) + Brotli + Memmap — 1.1138 BPB",
       "status": "open",
-      "updatedAt": "2026-03-30T05:02:53Z",
-      "headSha": "5090075301f45b3baf4aab6f7f34a1f31f185b0e",
-      "generatedAt": "2026-03-30T05:03:48.512Z",
-      "summary": "Fuses Triton TMA forward and CUTLASS EVT backward MLP kernels with pre-computed LeakyReLU gradients plus Brotli compression and a memmap pipeline.",
+      "updatedAt": "2026-03-30T05:18:12Z",
+      "headSha": "c27131c5c7b708ef90828c1c4d5e232f1c2cf140",
+      "generatedAt": "2026-03-30T05:34:10.804Z",
+      "summary": "Fuses Triton TMA forward and CUTLASS EVT backward MLP kernels, adds precomputed act gradient, Brotli compression, and memmap multi-shard pipeline.",
       "tags": [
         "architecture",
         "compression"

@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-30T05:33:54.353Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1122,
+    "title": "Record: EngramLite + Gated Skips + Full GPTQ + FA3 — val_bpb 1.1146 (1-seed, 2 pending)",
+    "state": "open",
+    "updatedAt": "2026-03-30T05:30:52Z",
+    "headSha": "7a90577632ed6b1944c55802abc74f80891c4fed",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1122",
+    "authorLogin": "icryo"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-30_EngramLite_GatedSkips_FullGPTQ_FA3_1.1146/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Stacked EngramLite multi-head ngram hashing, sigmoid-gated skips, Turbo-Muon updates, and FlashAttention 3 with full Hessian GPTQ plus a coprime loader.",
+    "tags": [
+      "architecture",
+      "optimizer",
+      "quantization"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "EngramLite multi-head bigram+trigram hash embeddings",
+      "Sigmoid-gated skip weighting with Turbo-Muon LR floor",
+      "Full Hessian GPTQ calibration with coprime-stride loader and FA3"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

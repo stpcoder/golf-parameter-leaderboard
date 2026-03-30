@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-30T05:33:58.752Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1121,
+    "title": "Notable Non-Record: H-Net Tokenization — 0.6846 BPB — Hierarchical Token Processing",
+    "state": "open",
+    "updatedAt": "2026-03-30T05:06:26Z",
+    "headSha": "bb3d03a5358e8f8ab868f6ad8368c60e21324179",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1121",
+    "authorLogin": "gowtham0992"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-29_HNet_Tokenization/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "H-Net learns gated merges and per-position unmerges to run a coarse encoder and full-resolution decoder for hierarchical tokenization.",
+    "tags": [
+      "tokenization",
+      "architecture",
+      "evaluation"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Gated token merge/unmerge with per-position projections",
+      "Encoder runs at half resolution before full-resolution decoder",
+      "Sliding-window eval with int6 GPTQ calibration"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

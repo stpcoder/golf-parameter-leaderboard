@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-30T05:03:48.512Z",
+  "generatedAt": "2026-03-30T05:34:10.804Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 1105,
     "title": "Record: Fused MLP (Triton+CUTLASS EVT) + Brotli + Memmap — 1.1138 BPB",
     "state": "open",
-    "updatedAt": "2026-03-30T05:02:53Z",
-    "headSha": "5090075301f45b3baf4aab6f7f34a1f31f185b0e",
+    "updatedAt": "2026-03-30T05:18:12Z",
+    "headSha": "c27131c5c7b708ef90828c1c4d5e232f1c2cf140",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/1105",
     "authorLogin": "abaybektursun"
   },
@@ -19,7 +19,7 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Fuses Triton TMA forward and CUTLASS EVT backward MLP kernels with pre-computed LeakyReLU gradients plus Brotli compression and a memmap pipeline.",
+    "summary": "Fuses Triton TMA forward and CUTLASS EVT backward MLP kernels, adds precomputed act gradient, Brotli compression, and memmap multi-shard pipeline.",
     "tags": [
       "architecture",
       "compression"
@@ -27,9 +27,9 @@
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Fused Triton TMA forward + CUTLASS EVT backward MLP kernels keeping activations in-register",
-      "Pre-compute LeakyReLU gradients to eliminate branching and simplify the EVT epilogue",
-      "Brotli-11 artifact compression with memmap multi-shard + GPU-prefetch data pipeline"
+      "Triton TMA forward + CUTLASS EVT backward fusion",
+      "Pre-computed activation gradient simplifies epilogue",
+      "Brotli-11 artifacts + memmap multi-shard data prefetch"
     ]
   },
   "compatibility": {

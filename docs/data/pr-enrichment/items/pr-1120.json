@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-30T05:03:35.101Z",
+  "generatedAt": "2026-03-30T05:34:05.930Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 1120,
-    "title": "Record: Rascal — val_bpb 1.1099 (3-seed mean)",
+    "title": "val_bpb 1.1099 (3-seed mean) Rascal",
     "state": "open",
-    "updatedAt": "2026-03-30T05:01:27Z",
+    "updatedAt": "2026-03-30T05:05:52Z",
     "headSha": "39ed402b3b11b680e15a3596efd6f3bf385ffee9",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/1120",
     "authorLogin": "newjordan"
@@ -22,7 +22,7 @@
     "submissionCount": 4
   },
   "output": {
-    "summary": "11-layer XSA-all net pairs Parallel Muon, coprime loader, SWA, and late QAT with naive int6/zstd compression to hit the 16MB cap without GPTQ.",
+    "summary": "Blends an 11-layer XSA-all transformer with Parallel Muon, Coprime loader, RoPE16, Bigram2048, SWA, Late QAT, and naive int6 embed compression.",
     "tags": [
       "architecture",
       "optimizer",
@@ -32,9 +32,9 @@
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "11-layer XSA-all stack with Parallel Muon optimizer and coprime loader",
-      "Late SWA warmdown plus QAT schedule before int6 quantization",
-      "Naive int6 embeddings compressed with zstd to stay within size limit"
+      "- 11-layer XSA-all stack with Parallel Muon optimizer",
+      "- Coprime loader + Bigram2048 + RoPE16 input handling",
+      "- SWA + late QAT with naive int6 embedding compression"
     ]
   },
   "compatibility": {
