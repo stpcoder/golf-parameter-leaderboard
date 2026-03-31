@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-31T00:08:59.932Z",
+  "generatedAt": "2026-03-31T00:39:20.408Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
@@ -492,11 +492,12 @@
       "prNumber": 1128,
       "title": "Record: SLOT + LeakyReLU² + Legal Score-First TTT + Parallel Muon — val_bpb 1.1154 (3-seed mean) val_bpb = 1.1154 (3-seed mean, std 0.0002) | ~15.9 MB | 8×H100 SXM",
       "status": "open",
-      "updatedAt": "2026-03-30T10:05:36Z",
+      "updatedAt": "2026-03-31T00:11:14Z",
       "headSha": "0331ed13253a0b3bda6787f18aef3dea3422555b",
-      "generatedAt": "2026-03-30T10:35:51.273Z",
-      "summary": "Inserted SLOT’s per-batch delta tuning between hidden→logit steps during legal score-first TTT on the Parallel Muon stack.",
+      "generatedAt": "2026-03-31T00:39:14.570Z",
+      "summary": "Stacks SLOT per-batch delta optimization atop score-first TTT + Parallel Muon base stack to adapt the last hidden layer during eval scoring.",
       "tags": [
+        "muon",
         "evaluation",
         "optimizer",
         "non-record"
@@ -2653,15 +2654,15 @@
       "prNumber": 996,
       "title": "Pre-Enrichment + EMA + SmearGate + XSA4 (val_bpb=1.1470(mean), …",
       "status": "open",
-      "updatedAt": "2026-03-30T02:21:07Z",
+      "updatedAt": "2026-03-31T00:25:23Z",
       "headSha": "efa0dd17bae1c097e23e2212aca0364d0f51d073",
-      "generatedAt": "2026-03-30T02:33:20.696Z",
-      "summary": "Keeps EMA on GPU and extends the embedding stream with GELU pre-enrichment, SmearGate/BigramHash, and XSA4 plus sliding-window eval for faster quantized training.",
+      "generatedAt": "2026-03-31T00:39:20.265Z",
+      "summary": "GELU pre-enrichment + SmearGate bigram/GQA architecture, GPU-resident EMA, XSA on final layers, and sliding-window scoring for a compact int6 model.",
       "tags": [
-        "architecture",
+        "sliding-window-eval",
         "quantization",
-        "training-schedule",
-        "evaluation"
+        "optimizer",
+        "architecture"
       ],
       "flags": {
         "usesValOnly": false,
