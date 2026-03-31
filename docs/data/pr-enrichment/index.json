@@ -1,8 +1,32 @@
 {
-  "generatedAt": "2026-03-31T01:39:56.821Z",
+  "generatedAt": "2026-03-31T02:10:07.277Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 1160,
+      "title": "Non-record: Distributed 8xH100 Polar STE + QJL KV-cache baseline",
+      "status": "closed",
+      "updatedAt": "2026-03-31T02:04:02Z",
+      "headSha": "4c95362771783e716f55750bf4ef30a96ddef64e",
+      "generatedAt": "2026-03-31T02:09:51.631Z",
+      "summary": "Polar STE quantization plus native QJL KV-cache running under 8xH100 DDP with artifact export/reload and final autoregressive eval validation.",
+      "tags": [
+        "architecture",
+        "quantization",
+        "evaluation",
+        "non-record"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1160.json"
+    },
     {
       "prNumber": 1159,
       "title": "Add non-record 16MB submission: Dirichlet PPM + Legal TTT on 8xH100",
@@ -75,10 +99,10 @@
       "prNumber": 1154,
       "title": "Non-record: Polar STE QAT for structural weights",
       "status": "open",
-      "updatedAt": "2026-03-31T01:02:46Z",
-      "headSha": "6c83cbb07c5859e06ee430e7a60a34b40119c28d",
-      "generatedAt": "2026-03-31T01:09:26.119Z",
-      "summary": "Adds Polar STE QAT for structural weights, polar export helpers, and distributed-safe KV evaluations with artifact isolation for the non-record run.",
+      "updatedAt": "2026-03-31T02:03:47Z",
+      "headSha": "8979432f5ba7931266d7aab5206b594017acfb1b",
+      "generatedAt": "2026-03-31T02:09:58.610Z",
+      "summary": "Adds Polar STE QAT for structural weights, shared polar export helpers, and a distributed-safe KV-cache evaluation path for the non-record submission.",
       "tags": [
         "quantization",
         "evaluation",
@@ -353,10 +377,10 @@
       "prNumber": 1138,
       "title": "Non-record: Whole-Model GTA Megakernel Draft + Manual CUDA Reverse Pass",
       "status": "open",
-      "updatedAt": "2026-03-31T01:28:19Z",
+      "updatedAt": "2026-03-31T02:06:48Z",
       "headSha": "a57d6b8f5a6695b32cabe54b472c524290b4e4ee",
-      "generatedAt": "2026-03-31T01:39:47.218Z",
-      "summary": "Packed-GTA whole-model CUDA trainer pairs inline extension cuBLAS forward/eval kernels with a manual packed-buffer reverse pass for the megakernel baseline.",
+      "generatedAt": "2026-03-31T02:10:07.108Z",
+      "summary": "Standalone packed-GTA trainer with inline CUDA/cuBLAS whole-model forward+eval and manual packed-buffer reverse pass for megakernel prototyping.",
       "tags": [
         "non-record",
         "architecture",

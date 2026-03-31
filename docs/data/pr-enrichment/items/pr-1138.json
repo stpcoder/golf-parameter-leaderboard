@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-31T01:39:47.218Z",
+  "generatedAt": "2026-03-31T02:10:07.108Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 1138,
     "title": "Non-record: Whole-Model GTA Megakernel Draft + Manual CUDA Reverse Pass",
     "state": "open",
-    "updatedAt": "2026-03-31T01:28:19Z",
+    "updatedAt": "2026-03-31T02:06:48Z",
     "headSha": "a57d6b8f5a6695b32cabe54b472c524290b4e4ee",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/1138",
     "authorLogin": "greqone"
@@ -19,7 +19,7 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Packed-GTA whole-model CUDA trainer pairs inline extension cuBLAS forward/eval kernels with a manual packed-buffer reverse pass for the megakernel baseline.",
+    "summary": "Standalone packed-GTA trainer with inline CUDA/cuBLAS whole-model forward+eval and manual packed-buffer reverse pass for megakernel prototyping.",
     "tags": [
       "non-record",
       "architecture",
@@ -28,9 +28,9 @@
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Inline CUDA+cuBLAS whole-model forward/eval path",
-      "Manual packed-buffer reverse pass",
-      "Flat fp32 packed GTA state representation"
+      "Inline CUDA megakernel forward/eval kernels",
+      "cuBLAS-backed whole-model projection path",
+      "Manual packed-buffer reverse pass"
     ]
   },
   "compatibility": {

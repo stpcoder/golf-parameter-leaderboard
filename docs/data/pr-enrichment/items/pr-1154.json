@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-31T01:09:26.119Z",
+  "generatedAt": "2026-03-31T02:09:58.610Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 1154,
     "title": "Non-record: Polar STE QAT for structural weights",
     "state": "open",
-    "updatedAt": "2026-03-31T01:02:46Z",
-    "headSha": "6c83cbb07c5859e06ee430e7a60a34b40119c28d",
+    "updatedAt": "2026-03-31T02:03:47Z",
+    "headSha": "8979432f5ba7931266d7aab5206b594017acfb1b",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/1154",
     "authorLogin": "LucasErcolano"
   },
@@ -19,7 +19,7 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Adds Polar STE QAT for structural weights, polar export helpers, and distributed-safe KV evaluations with artifact isolation for the non-record run.",
+    "summary": "Adds Polar STE QAT for structural weights, shared polar export helpers, and a distributed-safe KV-cache evaluation path for the non-record submission.",
     "tags": [
       "quantization",
       "evaluation",
@@ -28,9 +28,9 @@
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "- Polar STE QAT plus export path for structural tensors",
-      "- Polar row encode/decode with zlib artifact roundtrip checks",
-      "- DDP-safe KV evaluation harness for final validation"
+      "Polar STE QAT for structural weights",
+      "Polar row encode/decode helpers with zlib export",
+      "Distributed-safe KV-cache evaluation"
     ]
   },
   "compatibility": {

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-31T01:39:41.731Z",
+  "generatedAt": "2026-03-31T02:09:43.978Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "submissions": [
@@ -10706,7 +10706,7 @@
         "createdAt": "2026-03-25T19:01:53Z",
         "updatedAt": "2026-03-29T06:29:36Z",
         "headSha": "777ed6762dd2ecc442170772776727eca9f74391",
-        "headRepo": "fielding/parameter-golf"
+        "headRepo": "fielding/agora-parameter-golf"
       },
       "links": {
         "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/777ed6762dd2ecc442170772776727eca9f74391/records/track_10min_16mb/2026-03-25_TTT_Aggressive_SGD/submission.json",
@@ -24104,7 +24104,7 @@
         "createdAt": "2026-03-28T17:29:44Z",
         "updatedAt": "2026-03-30T19:59:49Z",
         "headSha": "e1eaef9a6ea707c78fdc1f907b4c40aa3b6e8521",
-        "headRepo": "fielding/parameter-golf"
+        "headRepo": "fielding/agora-parameter-golf"
       },
       "links": {
         "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/e1eaef9a6ea707c78fdc1f907b4c40aa3b6e8521/records/track_non_record_16mb/2026-03-28_Distillation/submission.json",
@@ -45123,7 +45123,7 @@
         "authorLogin": "greqone",
         "authorName": null,
         "createdAt": "2026-03-30T16:44:28Z",
-        "updatedAt": "2026-03-31T01:28:19Z",
+        "updatedAt": "2026-03-31T02:06:48Z",
         "headSha": "a57d6b8f5a6695b32cabe54b472c524290b4e4ee",
         "headRepo": "greqone/parameter-golf"
       },
@@ -47895,8 +47895,8 @@
         "authorLogin": "LucasErcolano",
         "authorName": null,
         "createdAt": "2026-03-30T21:54:03Z",
-        "updatedAt": "2026-03-31T01:02:46Z",
-        "headSha": "6c83cbb07c5859e06ee430e7a60a34b40119c28d",
+        "updatedAt": "2026-03-31T02:03:47Z",
+        "headSha": "8979432f5ba7931266d7aab5206b594017acfb1b",
         "headRepo": "LucasErcolano/parameter-golf"
       },
       "links": {
@@ -48060,6 +48060,83 @@
         "script": "https://github.com/openai/parameter-golf/blob/6cbb2436e46b2bbc4ada3c93d2b390d37b50a499/records/track_10min_16mb/2026-03-30_GELU_MLP/train_gpt.py",
         "folder": "https://github.com/openai/parameter-golf/tree/6cbb2436e46b2bbc4ada3c93d2b390d37b50a499/records/track_10min_16mb/2026-03-30_GELU_MLP",
         "pr": "https://github.com/openai/parameter-golf/pull/1134",
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": false,
+        "hasPullRequest": true,
+        "listedInReadme": false
+      }
+    },
+    {
+      "id": "record-records-track_non_record_16mb-2026-03-30_Distributed_H100x8_PolarSTE_QJL_Baseline",
+      "source": "pull_request",
+      "status": "closed",
+      "category": "non-record",
+      "track": {
+        "path": "records/track_non_record_16mb",
+        "slug": "track_non_record_16mb",
+        "label": "Non-record / 16MB",
+        "official": false,
+        "category": "non-record"
+      },
+      "record": {
+        "folderName": "2026-03-30_Distributed_H100x8_PolarSTE_QJL_Baseline",
+        "folderPath": "records/track_non_record_16mb/2026-03-30_Distributed_H100x8_PolarSTE_QJL_Baseline",
+        "submissionPath": "records/track_non_record_16mb/2026-03-30_Distributed_H100x8_PolarSTE_QJL_Baseline/submission.json",
+        "readmePath": "records/track_non_record_16mb/2026-03-30_Distributed_H100x8_PolarSTE_QJL_Baseline/README.md",
+        "trainLogPath": "records/track_non_record_16mb/2026-03-30_Distributed_H100x8_PolarSTE_QJL_Baseline/train.log",
+        "scriptPath": "records/track_non_record_16mb/2026-03-30_Distributed_H100x8_PolarSTE_QJL_Baseline/train_gpt.py"
+      },
+      "submission": {
+        "author": "Lucas Ercolano",
+        "githubId": "LucasErcolano",
+        "name": "Distributed 8xH100 Polar STE + QJL KV-cache baseline",
+        "blurb": "Non-record Hopper baseline validating Polar STE structural-weight QAT plus native QJL KV-cache eval under 8xH100 DDP. The run completed in 592.209s without deadlocks, stayed under 16MB with a 14,751,006-byte polar+zlib artifact, and exposed a large teacher-forced vs autoregressive KV gap (1.4594 vs 2.1283 BPB), so it is submitted as infrastructure validation rather than a leaderboard claim.",
+        "date": "2026-03-30T00:00:00Z"
+      },
+      "metrics": {
+        "valBpb": 2.12830032,
+        "valLoss": 3.78602759,
+        "preQuantValBpb": null,
+        "preQuantValLoss": null,
+        "stepStop": 3382,
+        "wallclockSeconds": 592.209,
+        "evalTimeSeconds": null
+      },
+      "artifact": {
+        "bytesTotal": 14875186,
+        "bytesCode": 124180,
+        "bytesModelInt8Zlib": null
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
+      "pr": {
+        "number": 1160,
+        "title": "Non-record: Distributed 8xH100 Polar STE + QJL KV-cache baseline",
+        "state": "closed",
+        "draft": true,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1160",
+        "authorLogin": "LucasErcolano",
+        "authorName": null,
+        "createdAt": "2026-03-31T02:00:28Z",
+        "updatedAt": "2026-03-31T02:04:02Z",
+        "headSha": "4c95362771783e716f55750bf4ef30a96ddef64e",
+        "headRepo": "LucasErcolano/parameter-golf"
+      },
+      "links": {
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/4c95362771783e716f55750bf4ef30a96ddef64e/records/track_non_record_16mb/2026-03-30_Distributed_H100x8_PolarSTE_QJL_Baseline/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/4c95362771783e716f55750bf4ef30a96ddef64e/records/track_non_record_16mb/2026-03-30_Distributed_H100x8_PolarSTE_QJL_Baseline/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/4c95362771783e716f55750bf4ef30a96ddef64e/records/track_non_record_16mb/2026-03-30_Distributed_H100x8_PolarSTE_QJL_Baseline/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/4c95362771783e716f55750bf4ef30a96ddef64e/records/track_non_record_16mb/2026-03-30_Distributed_H100x8_PolarSTE_QJL_Baseline/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/4c95362771783e716f55750bf4ef30a96ddef64e/records/track_non_record_16mb/2026-03-30_Distributed_H100x8_PolarSTE_QJL_Baseline",
+        "pr": "https://github.com/openai/parameter-golf/pull/1160",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
       "provenance": {
@@ -53754,7 +53831,7 @@
         "createdAt": "2026-03-26T17:23:09Z",
         "updatedAt": "2026-03-30T20:00:14Z",
         "headSha": "6b211a8bc44fbe80fec1c146b1e060286d4f4246",
-        "headRepo": "fielding/parameter-golf"
+        "headRepo": "fielding/agora-parameter-golf"
       },
       "links": {
         "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/6b211a8bc44fbe80fec1c146b1e060286d4f4246/records/track_non_record_16mb/2026-03-26_RandomLinearMaps/submission.json",

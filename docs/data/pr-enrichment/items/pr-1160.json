@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-31T02:09:51.631Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1160,
+    "title": "Non-record: Distributed 8xH100 Polar STE + QJL KV-cache baseline",
+    "state": "closed",
+    "updatedAt": "2026-03-31T02:04:02Z",
+    "headSha": "4c95362771783e716f55750bf4ef30a96ddef64e",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1160",
+    "authorLogin": "LucasErcolano"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-03-30_Distributed_H100x8_PolarSTE_QJL_Baseline/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Polar STE quantization plus native QJL KV-cache running under 8xH100 DDP with artifact export/reload and final autoregressive eval validation.",
+    "tags": [
+      "architecture",
+      "quantization",
+      "evaluation",
+      "non-record"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Polar STE QAT + QJL KV-cache stack",
+      "DDP-ready export/reload with rank-0 KV eval",
+      "600s wallclock budgeting fix"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}
