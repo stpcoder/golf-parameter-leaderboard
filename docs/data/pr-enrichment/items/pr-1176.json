@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-31T13:44:21.114Z",
+  "generatedAt": "2026-03-31T19:15:12.463Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 1176,
     "title": "Record: QK-Gain 4.0 + XSA-11 + Muon-TTT + SLOT — val_bpb 1.0914 (3-seed mean)",
     "state": "open",
-    "updatedAt": "2026-03-31T13:20:39Z",
+    "updatedAt": "2026-03-31T18:53:45Z",
     "headSha": "cc1ad3b313c61aa3af41b44c655d57570d67cf6b",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/1176",
     "authorLogin": "bigbag"
@@ -19,18 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Extends PR #1135 with qk_gain=4, XSA on every layer, Muon TTT, and SLOT test-time delta tuning for sharper eval adaptivity.",
+    "summary": "Extends the 11-layer Muon baseline by boosting Q/K gain, enabling XSA on every layer, turning on Muon-TTT, and tuning SLOT deltas per batch at eval time.",
     "tags": [
+      "muon",
       "attention",
-      "architecture",
       "evaluation"
     ],
     "usesValOnly": false,
-    "valOnlyReasoning": "Not a val-only training regime; uses standard training plus eval-time adaptations.",
+    "valOnlyReasoning": "",
     "techniques": [
-      "QK gain 4.0 with XSA on every layer",
-      "Score-first Muon TTT epochs",
-      "SLOT per-batch delta tuning"
+      "QK gain 4.0 with XSA across all 11 layers",
+      "Score-first Muon TTT enabled",
+      "SLOT per-batch delta optimization during evaluation"
     ]
   },
   "compatibility": {

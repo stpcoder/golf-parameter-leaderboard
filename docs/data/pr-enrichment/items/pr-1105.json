@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-31T17:45:03.437Z",
+  "generatedAt": "2026-03-31T19:15:24.811Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 1105,
     "title": "Record: Fused MLP (Triton+CUTLASS EVT) + MLP 3.5× + Mixed int5/int6 + Brotli — 1.1125 BPB (3-seed mean)",
     "state": "open",
-    "updatedAt": "2026-03-31T17:37:59Z",
+    "updatedAt": "2026-03-31T19:03:20Z",
     "headSha": "920cea57be16c068be5560fc3404f603543d03b8",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/1105",
     "authorLogin": "abaybektursun"
@@ -19,18 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Fuses Triton TMA forward + CUTLASS EVT backward MLP kernels, widens MLP to 3.5× hidden dim, and pairs Hessian-mixed int5/int6 quantization with Brotli compression.",
+    "summary": "Fuse Triton TMA/CUTLASS EVT MLP kernels, widen MLP to 3.5×, and pair Hessian-ranked mixed int5/int6 GPTQ with Brotli compression.",
     "tags": [
+      "architecture",
       "quantization",
-      "compression",
-      "architecture"
+      "compression"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Fused Triton TMA + CUTLASS EVT MLP kernels with pre-computed activation gradient",
-      "3.5× MLP width driven by SVD-based capacity analysis",
-      "Hessian-trace mixed int5/int6 quantization alongside Brotli-11 compression"
+      "- Fused Triton TMA forward and CUTLASS EVT backward kernels with precomputed activation gradient for the squared LeakyReLU MLP.",
+      "- Expand MLP width to 3.5× guided by SVD-ranked capacity analysis while using Hessian-ranked mixed int5/int6 GPTQ to stay under budget.",
+      "- Brotli-11 payload compression and LR floor warmdown to fit the 16 MB cap without retraining regressions."
     ]
   },
   "compatibility": {

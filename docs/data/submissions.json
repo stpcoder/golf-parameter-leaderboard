@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-31T18:44:55.987Z",
+  "generatedAt": "2026-03-31T19:15:04.699Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "submissions": [
@@ -10690,7 +10690,7 @@
       },
       "pr": {
         "number": 1145,
-        "title": "Record: 1.1109 BPB FullGPTQ XSA11 + online ngram augment",
+        "title": "Record: 1.1109 BPB FullGPTQ XSA11 + online (legal) ngram augment",
         "state": "open",
         "draft": false,
         "mergedAt": null,
@@ -10698,7 +10698,7 @@
         "authorLogin": "AnirudhRahul",
         "authorName": null,
         "createdAt": "2026-03-30T18:58:12Z",
-        "updatedAt": "2026-03-30T22:28:59Z",
+        "updatedAt": "2026-03-31T19:00:04Z",
         "headSha": "63cc3a350d1f038c9e4ee99ec9af46e2ac2f915b",
         "headRepo": "AnirudhRahul/parameter-golf"
       },
@@ -11166,7 +11166,7 @@
         "authorLogin": "abaybektursun",
         "authorName": null,
         "createdAt": "2026-03-30T00:03:19Z",
-        "updatedAt": "2026-03-31T17:37:59Z",
+        "updatedAt": "2026-03-31T19:03:20Z",
         "headSha": "920cea57be16c068be5560fc3404f603543d03b8",
         "headRepo": "abaybektursun/parameter-golf"
       },
@@ -51750,7 +51750,7 @@
         "authorLogin": "bigbag",
         "authorName": null,
         "createdAt": "2026-03-31T09:45:23Z",
-        "updatedAt": "2026-03-31T13:20:39Z",
+        "updatedAt": "2026-03-31T18:53:45Z",
         "headSha": "cc1ad3b313c61aa3af41b44c655d57570d67cf6b",
         "headRepo": "bigbag/parameter-golf"
       },

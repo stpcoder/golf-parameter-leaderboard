@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-31T18:45:11.945Z",
+  "generatedAt": "2026-03-31T19:15:24.970Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
@@ -195,13 +195,13 @@
       "prNumber": 1176,
       "title": "Record: QK-Gain 4.0 + XSA-11 + Muon-TTT + SLOT — val_bpb 1.0914 (3-seed mean)",
       "status": "open",
-      "updatedAt": "2026-03-31T13:20:39Z",
+      "updatedAt": "2026-03-31T18:53:45Z",
       "headSha": "cc1ad3b313c61aa3af41b44c655d57570d67cf6b",
-      "generatedAt": "2026-03-31T13:44:21.114Z",
-      "summary": "Extends PR #1135 with qk_gain=4, XSA on every layer, Muon TTT, and SLOT test-time delta tuning for sharper eval adaptivity.",
+      "generatedAt": "2026-03-31T19:15:12.463Z",
+      "summary": "Extends the 11-layer Muon baseline by boosting Q/K gain, enabling XSA on every layer, turning on Muon-TTT, and tuning SLOT deltas per batch at eval time.",
       "tags": [
+        "muon",
         "attention",
-        "architecture",
         "evaluation"
       ],
       "flags": {
@@ -653,16 +653,16 @@
     },
     {
       "prNumber": 1145,
-      "title": "Record: 1.1109 BPB FullGPTQ XSA11 + online ngram augment",
+      "title": "Record: 1.1109 BPB FullGPTQ XSA11 + online (legal) ngram augment",
       "status": "open",
-      "updatedAt": "2026-03-30T22:28:59Z",
+      "updatedAt": "2026-03-31T19:00:04Z",
       "headSha": "63cc3a350d1f038c9e4ee99ec9af46e2ac2f915b",
-      "generatedAt": "2026-03-30T22:38:39.103Z",
-      "summary": "Retuned GPTQ XSA11 bigram-hash stack with WARMDOWN_ITERS=4000 and added a single-pass causal online n-gram agreement overlay boosting normalized softmax.",
+      "generatedAt": "2026-03-31T19:15:18.466Z",
+      "summary": "Retunes a GPTQ XSA11 bigram-hash stack and adds a single-pass causal online n-gram agreement overlay during eval.",
       "tags": [
         "architecture",
-        "evaluation",
-        "training-schedule"
+        "training-schedule",
+        "evaluation"
       ],
       "flags": {
         "usesValOnly": false,
@@ -1350,14 +1350,14 @@
       "prNumber": 1105,
       "title": "Record: Fused MLP (Triton+CUTLASS EVT) + MLP 3.5× + Mixed int5/int6 + Brotli — 1.1125 BPB (3-seed mean)",
       "status": "open",
-      "updatedAt": "2026-03-31T17:37:59Z",
+      "updatedAt": "2026-03-31T19:03:20Z",
       "headSha": "920cea57be16c068be5560fc3404f603543d03b8",
-      "generatedAt": "2026-03-31T17:45:03.437Z",
-      "summary": "Fuses Triton TMA forward + CUTLASS EVT backward MLP kernels, widens MLP to 3.5× hidden dim, and pairs Hessian-mixed int5/int6 quantization with Brotli compression.",
+      "generatedAt": "2026-03-31T19:15:24.811Z",
+      "summary": "Fuse Triton TMA/CUTLASS EVT MLP kernels, widen MLP to 3.5×, and pair Hessian-ranked mixed int5/int6 GPTQ with Brotli compression.",
       "tags": [
+        "architecture",
         "quantization",
-        "compression",
-        "architecture"
+        "compression"
       ],
       "flags": {
         "usesValOnly": false,
