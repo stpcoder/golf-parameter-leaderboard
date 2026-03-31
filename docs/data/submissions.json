@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-31T04:40:40.236Z",
+  "generatedAt": "2026-03-31T05:11:19.916Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "submissions": [
@@ -14334,6 +14334,83 @@
         "script": "https://github.com/openai/parameter-golf/blob/281a26e10733e564da0aaf1b9384b192930de79b/records/track_10min_16mb/2026-03-25_FullGPTQ_XSA4_ScoreFirstTTT/train_gpt.py",
         "folder": "https://github.com/openai/parameter-golf/tree/281a26e10733e564da0aaf1b9384b192930de79b/records/track_10min_16mb/2026-03-25_FullGPTQ_XSA4_ScoreFirstTTT",
         "pr": "https://github.com/openai/parameter-golf/pull/734",
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": false,
+        "hasPullRequest": true,
+        "listedInReadme": false
+      }
+    },
+    {
+      "id": "record-records-track_non_record_16mb-2026-03-31_11L_NativeFlowMatcher_LegalTTT",
+      "source": "pull_request",
+      "status": "open",
+      "category": "non-record",
+      "track": {
+        "path": "records/track_non_record_16mb",
+        "slug": "track_non_record_16mb",
+        "label": "Non-record / 16MB",
+        "official": false,
+        "category": "non-record"
+      },
+      "record": {
+        "folderName": "2026-03-31_11L_NativeFlowMatcher_LegalTTT",
+        "folderPath": "records/track_non_record_16mb/2026-03-31_11L_NativeFlowMatcher_LegalTTT",
+        "submissionPath": "records/track_non_record_16mb/2026-03-31_11L_NativeFlowMatcher_LegalTTT/submission.json",
+        "readmePath": "records/track_non_record_16mb/2026-03-31_11L_NativeFlowMatcher_LegalTTT/README.md",
+        "trainLogPath": "records/track_non_record_16mb/2026-03-31_11L_NativeFlowMatcher_LegalTTT/train.log",
+        "scriptPath": "records/track_non_record_16mb/2026-03-31_11L_NativeFlowMatcher_LegalTTT/train_gpt.py"
+      },
+      "submission": {
+        "author": "Christopher-Lee-McClendon",
+        "githubId": "Christopher-Lee-McClendon",
+        "name": null,
+        "blurb": null,
+        "date": "2026-03-31"
+      },
+      "metrics": {
+        "valBpb": 1.1199065,
+        "valLoss": null,
+        "preQuantValBpb": null,
+        "preQuantValLoss": null,
+        "stepStop": null,
+        "wallclockSeconds": null,
+        "evalTimeSeconds": null
+      },
+      "artifact": {
+        "bytesTotal": null,
+        "bytesCode": null,
+        "bytesModelInt8Zlib": null
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
+      "pr": {
+        "number": 1170,
+        "title": "Non-record: 11L NativeFlowMatcher + Legal TTT — val_bpb 1.1199 (single seed)",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1170",
+        "authorLogin": "Christopher-Lee-McClendon",
+        "authorName": null,
+        "createdAt": "2026-03-31T04:52:31Z",
+        "updatedAt": "2026-03-31T04:52:31Z",
+        "headSha": "a8177a2e5d720b538059d544328ec59a3587d19c",
+        "headRepo": "Christopher-Lee-McClendon/parameter-golf"
+      },
+      "links": {
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/a8177a2e5d720b538059d544328ec59a3587d19c/records/track_non_record_16mb/2026-03-31_11L_NativeFlowMatcher_LegalTTT/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/a8177a2e5d720b538059d544328ec59a3587d19c/records/track_non_record_16mb/2026-03-31_11L_NativeFlowMatcher_LegalTTT/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/a8177a2e5d720b538059d544328ec59a3587d19c/records/track_non_record_16mb/2026-03-31_11L_NativeFlowMatcher_LegalTTT/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/a8177a2e5d720b538059d544328ec59a3587d19c/records/track_non_record_16mb/2026-03-31_11L_NativeFlowMatcher_LegalTTT/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/a8177a2e5d720b538059d544328ec59a3587d19c/records/track_non_record_16mb/2026-03-31_11L_NativeFlowMatcher_LegalTTT",
+        "pr": "https://github.com/openai/parameter-golf/pull/1170",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
       "provenance": {

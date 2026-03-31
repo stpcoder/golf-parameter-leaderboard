@@ -1,8 +1,32 @@
 {
-  "generatedAt": "2026-03-31T04:10:48.554Z",
+  "generatedAt": "2026-03-31T05:11:27.594Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 1170,
+      "title": "Non-record: 11L NativeFlowMatcher + Legal TTT — val_bpb 1.1199 (single seed)",
+      "status": "open",
+      "updatedAt": "2026-03-31T04:52:31Z",
+      "headSha": "a8177a2e5d720b538059d544328ec59a3587d19c",
+      "generatedAt": "2026-03-31T05:11:27.408Z",
+      "summary": "NativeFlowMatcher’s OT-CFM velocity net learns gated hidden-state corrections within an 11L transformer while combining sliding-window eval with legal score-first TTT.",
+      "tags": [
+        "architecture",
+        "quantization",
+        "evaluation",
+        "non-record"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1170.json"
+    },
     {
       "prNumber": 1169,
       "title": "Turbo-Muon + EngramLite + ParamBanking + GPTQ Reserve Opt — val_bpb 1.1126 (3-seed mean)",

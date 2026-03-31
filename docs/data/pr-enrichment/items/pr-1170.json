@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-31T05:11:27.408Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1170,
+    "title": "Non-record: 11L NativeFlowMatcher + Legal TTT — val_bpb 1.1199 (single seed)",
+    "state": "open",
+    "updatedAt": "2026-03-31T04:52:31Z",
+    "headSha": "a8177a2e5d720b538059d544328ec59a3587d19c",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1170",
+    "authorLogin": "Christopher-Lee-McClendon"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-03-31_11L_NativeFlowMatcher_LegalTTT/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "NativeFlowMatcher’s OT-CFM velocity net learns gated hidden-state corrections within an 11L transformer while combining sliding-window eval with legal score-first TTT.",
+    "tags": [
+      "architecture",
+      "quantization",
+      "evaluation",
+      "non-record"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Gated OT-CFM velocity net trained alongside AR loss",
+      "Legal score-first test-time training on sliding-window eval",
+      "Mixed int6/int5 quantization with zstd compression for 16MB artifact"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}
