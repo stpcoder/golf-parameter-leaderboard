@@ -1,8 +1,32 @@
 {
-  "generatedAt": "2026-03-31T16:45:04.512Z",
+  "generatedAt": "2026-03-31T17:15:13.539Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 1185,
+      "title": "[10min_16mb] 0.9641 BPB: LeakyReLU² + Score-First TTT + N-gram Backoff Cache",
+      "status": "open",
+      "updatedAt": "2026-03-31T16:48:30Z",
+      "headSha": "20650e7373c169d15896593c004553adf111082f",
+      "generatedAt": "2026-03-31T17:15:05.475Z",
+      "summary": "11L GQA transformer with LeakyReLU², VE, and gated attention uses score-first legal TTT plus entropy-scaled Laplace-smoothed n-gram backoff cache.",
+      "tags": [
+        "architecture",
+        "quantization",
+        "training-schedule",
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1185.json"
+    },
     {
       "prNumber": 1184,
       "title": "Record: Scylla + Full GPTQ + XSA-all + FA3 — val_bpb 0.9485 (3-seed mean)",
@@ -726,14 +750,13 @@
       "prNumber": 1140,
       "title": "Crawler —  8.8MB -1.1874 BPB (3-seed mean, 8xH100, 600s)",
       "status": "open",
-      "updatedAt": "2026-03-31T16:39:33Z",
+      "updatedAt": "2026-03-31T17:07:39Z",
       "headSha": "11949489d4de7d8fa9b5cbd4dba71f6e4f7baf88",
-      "generatedAt": "2026-03-31T16:45:04.347Z",
-      "summary": "Micro Crawler iterates a shared causal coordination block over three horizons to refine a fuzzy representation before int8-aware training and int6 compression.",
+      "generatedAt": "2026-03-31T17:15:13.356Z",
+      "summary": "Micro Crawler pairs 4 flat XSA layers with a shared crawler block run over three causal horizons, iteratively refining fuzzy reps with int8 QAT.",
       "tags": [
         "architecture",
-        "quantization",
-        "training-schedule"
+        "quantization"
       ],
       "flags": {
         "usesValOnly": false,

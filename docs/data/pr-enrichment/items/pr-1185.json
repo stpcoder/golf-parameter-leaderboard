@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-31T17:15:05.475Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1185,
+    "title": "[10min_16mb] 0.9641 BPB: LeakyReLU² + Score-First TTT + N-gram Backoff Cache",
+    "state": "open",
+    "updatedAt": "2026-03-31T16:48:30Z",
+    "headSha": "20650e7373c169d15896593c004553adf111082f",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1185",
+    "authorLogin": "skoustav35"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-31_LeakyReLU2_LegalTTT_NGramCache_XSA/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "11L GQA transformer with LeakyReLU², VE, and gated attention uses score-first legal TTT plus entropy-scaled Laplace-smoothed n-gram backoff cache.",
+    "tags": [
+      "architecture",
+      "quantization",
+      "training-schedule",
+      "evaluation"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Score-first legal TTT using SGD updates after backward scoring",
+      "Entropy-adaptive Laplace-smoothed multi-order n-gram backoff cache",
+      "Int6 per-row quantization with Muon+Adam optimizer split"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-31T16:44:54.079Z",
+  "generatedAt": "2026-03-31T17:14:57.553Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "submissions": [
@@ -3452,7 +3452,7 @@
         "authorLogin": "newjordan",
         "authorName": null,
         "createdAt": "2026-03-30T17:18:30Z",
-        "updatedAt": "2026-03-31T16:39:33Z",
+        "updatedAt": "2026-03-31T17:07:39Z",
         "headSha": "11949489d4de7d8fa9b5cbd4dba71f6e4f7baf88",
         "headRepo": "newjordan/parameter-golf-1"
       },
@@ -3606,7 +3606,7 @@
         "authorLogin": "newjordan",
         "authorName": null,
         "createdAt": "2026-03-30T17:18:30Z",
-        "updatedAt": "2026-03-31T16:39:33Z",
+        "updatedAt": "2026-03-31T17:07:39Z",
         "headSha": "11949489d4de7d8fa9b5cbd4dba71f6e4f7baf88",
         "headRepo": "newjordan/parameter-golf-1"
       },
@@ -6252,6 +6252,83 @@
       }
     },
     {
+      "id": "record-records-track_10min_16mb-2026-03-31_LeakyReLU2_LegalTTT_NGramCache_XSA",
+      "source": "pull_request",
+      "status": "open",
+      "category": "main-track",
+      "track": {
+        "path": "records/track_10min_16mb",
+        "slug": "track_10min_16mb",
+        "label": "10 Minute / 16MB",
+        "official": true,
+        "category": "main-track"
+      },
+      "record": {
+        "folderName": "2026-03-31_LeakyReLU2_LegalTTT_NGramCache_XSA",
+        "folderPath": "records/track_10min_16mb/2026-03-31_LeakyReLU2_LegalTTT_NGramCache_XSA",
+        "submissionPath": "records/track_10min_16mb/2026-03-31_LeakyReLU2_LegalTTT_NGramCache_XSA/submission.json",
+        "readmePath": "records/track_10min_16mb/2026-03-31_LeakyReLU2_LegalTTT_NGramCache_XSA/README.md",
+        "trainLogPath": "records/track_10min_16mb/2026-03-31_LeakyReLU2_LegalTTT_NGramCache_XSA/train.log",
+        "scriptPath": "records/track_10min_16mb/2026-03-31_LeakyReLU2_LegalTTT_NGramCache_XSA/train_gpt.py"
+      },
+      "submission": {
+        "author": "Koustav Sarkar",
+        "githubId": "skoustav",
+        "name": "LeakyReLU² + Legal Score-First TTT + N-gram Backoff Cache + Gated Attention",
+        "blurb": "11L XSA-5 + Score-first TTT (SGD, 3ep, 32K chunks, stride 64) + multi-order N-gram backoff cache (order 9, Laplace-smoothed, entropy-adaptive alpha) + gated attention + value residual + VE(128) on layers 8,9,10 + MTP-2 + BigramHash(2048) + CROWN-Q + LeakyReLU(0.5)². N-gram cache uses community-contested eval-time technique (see PR #727, issue #677). 3-seed exact mean: 0.96412237 BPB / 1.62735261 nats.",
+        "date": "2026-03-30"
+      },
+      "metrics": {
+        "valBpb": 0.96412237,
+        "valLoss": 1.62735261,
+        "preQuantValBpb": null,
+        "preQuantValLoss": null,
+        "stepStop": null,
+        "wallclockSeconds": null,
+        "evalTimeSeconds": null
+      },
+      "artifact": {
+        "bytesTotal": 15989583,
+        "bytesCode": 115769,
+        "bytesModelInt8Zlib": null
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
+      "pr": {
+        "number": 1185,
+        "title": "[10min_16mb] 0.9641 BPB: LeakyReLU² + Score-First TTT + N-gram Backoff Cache",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1185",
+        "authorLogin": "skoustav35",
+        "authorName": null,
+        "createdAt": "2026-03-31T16:48:30Z",
+        "updatedAt": "2026-03-31T16:48:30Z",
+        "headSha": "20650e7373c169d15896593c004553adf111082f",
+        "headRepo": "skoustav35/parameter-golf"
+      },
+      "links": {
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/20650e7373c169d15896593c004553adf111082f/records/track_10min_16mb/2026-03-31_LeakyReLU2_LegalTTT_NGramCache_XSA/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/20650e7373c169d15896593c004553adf111082f/records/track_10min_16mb/2026-03-31_LeakyReLU2_LegalTTT_NGramCache_XSA/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/20650e7373c169d15896593c004553adf111082f/records/track_10min_16mb/2026-03-31_LeakyReLU2_LegalTTT_NGramCache_XSA/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/20650e7373c169d15896593c004553adf111082f/records/track_10min_16mb/2026-03-31_LeakyReLU2_LegalTTT_NGramCache_XSA/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/20650e7373c169d15896593c004553adf111082f/records/track_10min_16mb/2026-03-31_LeakyReLU2_LegalTTT_NGramCache_XSA",
+        "pr": "https://github.com/openai/parameter-golf/pull/1185",
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": false,
+        "hasPullRequest": true,
+        "listedInReadme": false
+      }
+    },
+    {
       "id": "record-records-track_10min_16mb-2026-03-26_NgramBackoff_VRL_LeakyReLU2",
       "source": "pull_request",
       "status": "open",
@@ -6694,7 +6771,7 @@
         "authorLogin": "newjordan",
         "authorName": null,
         "createdAt": "2026-03-30T17:18:30Z",
-        "updatedAt": "2026-03-31T16:39:33Z",
+        "updatedAt": "2026-03-31T17:07:39Z",
         "headSha": "11949489d4de7d8fa9b5cbd4dba71f6e4f7baf88",
         "headRepo": "newjordan/parameter-golf-1"
       },
@@ -10236,7 +10313,7 @@
         "authorLogin": "newjordan",
         "authorName": null,
         "createdAt": "2026-03-30T17:18:30Z",
-        "updatedAt": "2026-03-31T16:39:33Z",
+        "updatedAt": "2026-03-31T17:07:39Z",
         "headSha": "11949489d4de7d8fa9b5cbd4dba71f6e4f7baf88",
         "headRepo": "newjordan/parameter-golf-1"
       },
@@ -32110,7 +32187,7 @@
         "authorLogin": "newjordan",
         "authorName": null,
         "createdAt": "2026-03-30T17:18:30Z",
-        "updatedAt": "2026-03-31T16:39:33Z",
+        "updatedAt": "2026-03-31T17:07:39Z",
         "headSha": "11949489d4de7d8fa9b5cbd4dba71f6e4f7baf88",
         "headRepo": "newjordan/parameter-golf-1"
       },
@@ -56909,7 +56986,7 @@
         "authorLogin": "newjordan",
         "authorName": null,
         "createdAt": "2026-03-30T17:18:30Z",
-        "updatedAt": "2026-03-31T16:39:33Z",
+        "updatedAt": "2026-03-31T17:07:39Z",
         "headSha": "11949489d4de7d8fa9b5cbd4dba71f6e4f7baf88",
         "headRepo": "newjordan/parameter-golf-1"
       },
