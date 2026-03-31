@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-30T20:38:12.105Z",
+  "generatedAt": "2026-03-31T01:09:32.072Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 1105,
     "title": "Record: Fused MLP (Triton+CUTLASS EVT) + MLP 3.5× + Mixed int5/int6 + SLOT + Brotli — 1.1088 BPB (3-seed mean)",
     "state": "open",
-    "updatedAt": "2026-03-30T20:26:03Z",
+    "updatedAt": "2026-03-31T00:53:06Z",
     "headSha": "0df40cc5465a80bd114588fe2e631cd316b9338a",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/1105",
     "authorLogin": "abaybektursun"
@@ -19,7 +19,7 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Fuses Triton/CUTLASS MLP kernels, widens the MLP to 3.5×, and applies Hessian-guided mixed int5/int6 GPTQ plus Brotli compression and SLOT eval.",
+    "summary": "Fuses Triton/CUTLASS MLP kernels, expands MLP to 3.5×, and uses Hessian-guided mixed int5/int6 plus Brotli to fit under 16MB.",
     "tags": [
       "architecture",
       "quantization",
@@ -30,8 +30,8 @@
     "valOnlyReasoning": "",
     "techniques": [
       "Fused Triton TMA forward + CUTLASS EVT backward MLP kernels",
-      "Hessian-trace mixed int5/int6 GPTQ enabling a 3.5× LeakyReLU MLP",
-      "SLOT eval with Brotli-11 artifact compression"
+      "MLP 3.5× widening with Hessian-based mixed int5/int6 GPTQ allocation",
+      "Brotli-11 compression plus SLOT eval-time tuning"
     ]
   },
   "compatibility": {

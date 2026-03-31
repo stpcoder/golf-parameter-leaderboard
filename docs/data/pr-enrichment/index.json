@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-31T00:39:20.408Z",
+  "generatedAt": "2026-03-31T01:09:32.231Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
@@ -75,10 +75,10 @@
       "prNumber": 1154,
       "title": "Non-record: Polar STE QAT for structural weights",
       "status": "open",
-      "updatedAt": "2026-03-30T22:37:31Z",
-      "headSha": "b39370597cddbb83c6115bb71e4d768b9605b0a1",
-      "generatedAt": "2026-03-30T22:38:33.364Z",
-      "summary": "Adds Polar STE QAT on CastedLinear structural weights with polar export/roundtrip and an artifact isolation harness for polar+zlib validation.",
+      "updatedAt": "2026-03-31T01:02:46Z",
+      "headSha": "6c83cbb07c5859e06ee430e7a60a34b40119c28d",
+      "generatedAt": "2026-03-31T01:09:26.119Z",
+      "summary": "Adds Polar STE QAT for structural weights, polar export helpers, and distributed-safe KV evaluations with artifact isolation for the non-record run.",
       "tags": [
         "quantization",
         "evaluation",
@@ -886,10 +886,10 @@
       "prNumber": 1105,
       "title": "Record: Fused MLP (Triton+CUTLASS EVT) + MLP 3.5× + Mixed int5/int6 + SLOT + Brotli — 1.1088 BPB (3-seed mean)",
       "status": "open",
-      "updatedAt": "2026-03-30T20:26:03Z",
+      "updatedAt": "2026-03-31T00:53:06Z",
       "headSha": "0df40cc5465a80bd114588fe2e631cd316b9338a",
-      "generatedAt": "2026-03-30T20:38:12.105Z",
-      "summary": "Fuses Triton/CUTLASS MLP kernels, widens the MLP to 3.5×, and applies Hessian-guided mixed int5/int6 GPTQ plus Brotli compression and SLOT eval.",
+      "generatedAt": "2026-03-31T01:09:32.072Z",
+      "summary": "Fuses Triton/CUTLASS MLP kernels, expands MLP to 3.5×, and uses Hessian-guided mixed int5/int6 plus Brotli to fit under 16MB.",
       "tags": [
         "architecture",
         "quantization",
