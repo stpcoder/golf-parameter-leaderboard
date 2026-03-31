@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-31T06:11:25.595Z",
+  "generatedAt": "2026-03-31T06:41:33.687Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "submissions": [
@@ -9785,6 +9785,83 @@
         "script": "https://github.com/openai/parameter-golf/blob/aef01ee4b91efc3f9ef0164b713b13551db91bf2/records/track_10min_16mb/2026-03-23_11L_EMA_AdamWTTT10ep_1.1027/train_gpt.py",
         "folder": "https://github.com/openai/parameter-golf/tree/aef01ee4b91efc3f9ef0164b713b13551db91bf2/records/track_10min_16mb/2026-03-23_11L_EMA_AdamWTTT10ep_1.1027",
         "pr": "https://github.com/openai/parameter-golf/pull/442",
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": false,
+        "hasPullRequest": true,
+        "listedInReadme": false
+      }
+    },
+    {
+      "id": "record-records-track_10min_16mb-2026-03-31_SLOT_SplitLR_GPTQ_XSA_1-1015",
+      "source": "pull_request",
+      "status": "open",
+      "category": "main-track",
+      "track": {
+        "path": "records/track_10min_16mb",
+        "slug": "track_10min_16mb",
+        "label": "10 Minute / 16MB",
+        "official": true,
+        "category": "main-track"
+      },
+      "record": {
+        "folderName": "2026-03-31_SLOT_SplitLR_GPTQ_XSA_1.1015",
+        "folderPath": "records/track_10min_16mb/2026-03-31_SLOT_SplitLR_GPTQ_XSA_1.1015",
+        "submissionPath": "records/track_10min_16mb/2026-03-31_SLOT_SplitLR_GPTQ_XSA_1.1015/submission.json",
+        "readmePath": "records/track_10min_16mb/2026-03-31_SLOT_SplitLR_GPTQ_XSA_1.1015/README.md",
+        "trainLogPath": "records/track_10min_16mb/2026-03-31_SLOT_SplitLR_GPTQ_XSA_1.1015/train.log",
+        "scriptPath": "records/track_10min_16mb/2026-03-31_SLOT_SplitLR_GPTQ_XSA_1.1015/train_gpt.py"
+      },
+      "submission": {
+        "author": "dexhunter",
+        "githubId": "dexhunter",
+        "name": "SLOT + Split-LR + Full GPTQ + Sigmoid-Gated Skips + Soft-Round QAT + XSA-all",
+        "blurb": "SLOT eval-time delta optimization (lr=0.005, 8 AdamW steps per batch) + split early/late Muon LR (0.025/0.030) + Full Hessian GPTQ int6 + sigmoid-gated U-Net skip connections + soft-round QAT with alpha ramp + Brotli-11 byte-shuffle compression + BigramHash(2816x160) + code minification (23KB wrapper). 3-seed mean: 1.1015 (std 0.0011). Built on PR #1019 by @abaybektursun.",
+        "date": "2026-03-31"
+      },
+      "metrics": {
+        "valBpb": 1.1015,
+        "valLoss": null,
+        "preQuantValBpb": null,
+        "preQuantValLoss": null,
+        "stepStop": null,
+        "wallclockSeconds": null,
+        "evalTimeSeconds": null
+      },
+      "artifact": {
+        "bytesTotal": 15658061,
+        "bytesCode": null,
+        "bytesModelInt8Zlib": null
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
+      "pr": {
+        "number": 1172,
+        "title": "Record: SLOT + Split-LR + Full GPTQ + XSA-all — val_bpb 1.1015 (3-seed mean)",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1172",
+        "authorLogin": "dexhunter",
+        "authorName": null,
+        "createdAt": "2026-03-31T06:22:04Z",
+        "updatedAt": "2026-03-31T06:22:04Z",
+        "headSha": "99b080be7ee758616038526f297e9e4f8680734c",
+        "headRepo": "dexhunter/parameter-golf"
+      },
+      "links": {
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/99b080be7ee758616038526f297e9e4f8680734c/records/track_10min_16mb/2026-03-31_SLOT_SplitLR_GPTQ_XSA_1.1015/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/99b080be7ee758616038526f297e9e4f8680734c/records/track_10min_16mb/2026-03-31_SLOT_SplitLR_GPTQ_XSA_1.1015/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/99b080be7ee758616038526f297e9e4f8680734c/records/track_10min_16mb/2026-03-31_SLOT_SplitLR_GPTQ_XSA_1.1015/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/99b080be7ee758616038526f297e9e4f8680734c/records/track_10min_16mb/2026-03-31_SLOT_SplitLR_GPTQ_XSA_1.1015/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/99b080be7ee758616038526f297e9e4f8680734c/records/track_10min_16mb/2026-03-31_SLOT_SplitLR_GPTQ_XSA_1.1015",
+        "pr": "https://github.com/openai/parameter-golf/pull/1172",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
       "provenance": {
@@ -49908,6 +49985,83 @@
         "script": "https://github.com/openai/parameter-golf/blob/4886f248020f2e8dbf6ec70c2db8c9b113f9fe2e/records/track_non_record_16mb/2026-03-23_RIOM_v1_recur/train_gpt.py",
         "folder": "https://github.com/openai/parameter-golf/tree/4886f248020f2e8dbf6ec70c2db8c9b113f9fe2e/records/track_non_record_16mb/2026-03-23_RIOM_v1_recur",
         "pr": "https://github.com/openai/parameter-golf/pull/698",
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": false,
+        "hasPullRequest": true,
+        "listedInReadme": false
+      }
+    },
+    {
+      "id": "record-records-track_non_record_16mb-2026-03-23_Ternary_QAT_vs_Int5",
+      "source": "pull_request",
+      "status": "open",
+      "category": "non-record",
+      "track": {
+        "path": "records/track_non_record_16mb",
+        "slug": "track_non_record_16mb",
+        "label": "Non-record / 16MB",
+        "official": false,
+        "category": "non-record"
+      },
+      "record": {
+        "folderName": "2026-03-23_Ternary_QAT_vs_Int5",
+        "folderPath": "records/track_non_record_16mb/2026-03-23_Ternary_QAT_vs_Int5",
+        "submissionPath": "records/track_non_record_16mb/2026-03-23_Ternary_QAT_vs_Int5/submission.json",
+        "readmePath": "records/track_non_record_16mb/2026-03-23_Ternary_QAT_vs_Int5/README.md",
+        "trainLogPath": "records/track_non_record_16mb/2026-03-23_Ternary_QAT_vs_Int5/train.log",
+        "scriptPath": "records/track_non_record_16mb/2026-03-23_Ternary_QAT_vs_Int5/train_gpt.py"
+      },
+      "submission": {
+        "author": "imitation-alpha",
+        "githubId": "imitation-alpha",
+        "name": "Ternary QAT vs Int5 Proxy Study (1xRTX2060)",
+        "blurb": "Non-record 16MB submission documenting a FineWeb-based proxy study of BitNet-style ternary QAT. Full ternary underperformed, but mixed ternary scaled to 11L d=640 reached 3.2609 post-quant val_bpb at 13.61MB total and repeated at 3.2611 on a second seed, effectively matching a proxy int5 baseline while using fewer bytes.",
+        "date": "2026-03-30"
+      },
+      "metrics": {
+        "valBpb": 3.26090698,
+        "valLoss": 5.50657913,
+        "preQuantValBpb": 3.2485,
+        "preQuantValLoss": 5.4857,
+        "stepStop": 600,
+        "wallclockSeconds": 395,
+        "evalTimeSeconds": null
+      },
+      "artifact": {
+        "bytesTotal": 13609639,
+        "bytesCode": 62303,
+        "bytesModelInt8Zlib": null
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
+      "pr": {
+        "number": 1173,
+        "title": "Add non-record 16MB submission: Ternary QAT vs Int5 proxy study",
+        "state": "open",
+        "draft": true,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1173",
+        "authorLogin": "imitation-alpha",
+        "authorName": null,
+        "createdAt": "2026-03-31T06:24:34Z",
+        "updatedAt": "2026-03-31T06:24:34Z",
+        "headSha": "f8b2e8846d53492e66e56b0974a38b907542ea69",
+        "headRepo": "imitation-alpha/parameter-golf"
+      },
+      "links": {
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/f8b2e8846d53492e66e56b0974a38b907542ea69/records/track_non_record_16mb/2026-03-23_Ternary_QAT_vs_Int5/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/f8b2e8846d53492e66e56b0974a38b907542ea69/records/track_non_record_16mb/2026-03-23_Ternary_QAT_vs_Int5/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/f8b2e8846d53492e66e56b0974a38b907542ea69/records/track_non_record_16mb/2026-03-23_Ternary_QAT_vs_Int5/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/f8b2e8846d53492e66e56b0974a38b907542ea69/records/track_non_record_16mb/2026-03-23_Ternary_QAT_vs_Int5/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/f8b2e8846d53492e66e56b0974a38b907542ea69/records/track_non_record_16mb/2026-03-23_Ternary_QAT_vs_Int5",
+        "pr": "https://github.com/openai/parameter-golf/pull/1173",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
       "provenance": {

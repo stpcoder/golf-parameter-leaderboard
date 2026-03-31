@@ -1,0 +1,41 @@
+{
+  "generatedAt": "2026-03-31T06:41:39.783Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1173,
+    "title": "Add non-record 16MB submission: Ternary QAT vs Int5 proxy study",
+    "state": "open",
+    "updatedAt": "2026-03-31T06:24:34Z",
+    "headSha": "f8b2e8846d53492e66e56b0974a38b907542ea69",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1173",
+    "authorLogin": "imitation-alpha"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-03-23_Ternary_QAT_vs_Int5/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Mixed ternary QAT reallocated byte savings to an 11-layer d=640 model, matching int5 proxy quality while staying under 16MB.",
+    "tags": [
+      "quantization",
+      "compression",
+      "non-record"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "TernaryLinear STE weights plus mixed quant mode for aggressive compression",
+      "Post-export quantized evaluation on FineWeb proxy split"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}
