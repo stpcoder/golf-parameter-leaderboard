@@ -1,0 +1,39 @@
+{
+  "generatedAt": "2026-03-31T02:40:05.963Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1163,
+    "title": "[record] LR warmdown v1 (WARMDOWN_ITERS=900) with confirmed 10-min runs",
+    "state": "open",
+    "updatedAt": "2026-03-31T02:39:08Z",
+    "headSha": "67f6c44803953c8237de7494c83be84a98f23aec",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1163",
+    "authorLogin": "intelligentiaomni"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-31_LR_Warmdown_V1/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Tune the baseline warmup/warmdown timing (WARMDOWN_ITERS=900) to smooth late optimization while leaving optimizer rates untouched.",
+    "tags": [
+      "training-schedule"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Warmup/warmdown timing shift (WARMDOWN_ITERS=900)",
+      "Baseline optimizer LR values untouched"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

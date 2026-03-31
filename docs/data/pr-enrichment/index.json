@@ -1,8 +1,29 @@
 {
-  "generatedAt": "2026-03-31T02:10:07.277Z",
+  "generatedAt": "2026-03-31T02:40:21.546Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 1163,
+      "title": "[record] LR warmdown v1 (WARMDOWN_ITERS=900) with confirmed 10-min runs",
+      "status": "open",
+      "updatedAt": "2026-03-31T02:39:08Z",
+      "headSha": "67f6c44803953c8237de7494c83be84a98f23aec",
+      "generatedAt": "2026-03-31T02:40:05.963Z",
+      "summary": "Tune the baseline warmup/warmdown timing (WARMDOWN_ITERS=900) to smooth late optimization while leaving optimizer rates untouched.",
+      "tags": [
+        "training-schedule"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1163.json"
+    },
     {
       "prNumber": 1160,
       "title": "Non-record: Distributed 8xH100 Polar STE + QJL KV-cache baseline",
@@ -330,14 +351,15 @@
       "prNumber": 1140,
       "title": "Crawler —  8.8MB -1.1874 BPB (3-seed mean, 8xH100, 600s)",
       "status": "open",
-      "updatedAt": "2026-03-30T19:36:15Z",
+      "updatedAt": "2026-03-31T02:30:23Z",
       "headSha": "11949489d4de7d8fa9b5cbd4dba71f6e4f7baf88",
-      "generatedAt": "2026-03-30T19:38:20.405Z",
-      "summary": "Micro Crawler pairs 4 flat XSA layers with a shared crawler block looped three times, using crawler QAT and int6+zstd packing to hit ~9.4MB.",
+      "generatedAt": "2026-03-31T02:40:14.676Z",
+      "summary": "Micro Crawler shares one crawler block across three causal-horizon loops to iteratively sharpen representations before int6 quantization.",
       "tags": [
         "architecture",
+        "attention",
         "quantization",
-        "training-schedule"
+        "compression"
       ],
       "flags": {
         "usesValOnly": false,
@@ -910,10 +932,10 @@
       "prNumber": 1105,
       "title": "Record: Fused MLP (Triton+CUTLASS EVT) + MLP 3.5× + Mixed int5/int6 + SLOT + Brotli — 1.1088 BPB (3-seed mean)",
       "status": "open",
-      "updatedAt": "2026-03-31T00:53:06Z",
+      "updatedAt": "2026-03-31T02:26:55Z",
       "headSha": "0df40cc5465a80bd114588fe2e631cd316b9338a",
-      "generatedAt": "2026-03-31T01:09:32.072Z",
-      "summary": "Fuses Triton/CUTLASS MLP kernels, expands MLP to 3.5×, and uses Hessian-guided mixed int5/int6 plus Brotli to fit under 16MB.",
+      "generatedAt": "2026-03-31T02:40:21.383Z",
+      "summary": "Fused MLP kernels, a 3.5× MLP, and Hessian-guided mixed int5/int6 quantization reclaim throughput while fitting 16MB with Brotli.",
       "tags": [
         "architecture",
         "quantization",

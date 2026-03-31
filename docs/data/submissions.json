@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-31T02:09:43.978Z",
+  "generatedAt": "2026-03-31T02:40:00.431Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "submissions": [
@@ -3452,7 +3452,7 @@
         "authorLogin": "newjordan",
         "authorName": null,
         "createdAt": "2026-03-30T17:18:30Z",
-        "updatedAt": "2026-03-30T19:36:15Z",
+        "updatedAt": "2026-03-31T02:30:23Z",
         "headSha": "11949489d4de7d8fa9b5cbd4dba71f6e4f7baf88",
         "headRepo": "newjordan/parameter-golf-1"
       },
@@ -3606,7 +3606,7 @@
         "authorLogin": "newjordan",
         "authorName": null,
         "createdAt": "2026-03-30T17:18:30Z",
-        "updatedAt": "2026-03-30T19:36:15Z",
+        "updatedAt": "2026-03-31T02:30:23Z",
         "headSha": "11949489d4de7d8fa9b5cbd4dba71f6e4f7baf88",
         "headRepo": "newjordan/parameter-golf-1"
       },
@@ -6617,7 +6617,7 @@
         "authorLogin": "newjordan",
         "authorName": null,
         "createdAt": "2026-03-30T17:18:30Z",
-        "updatedAt": "2026-03-30T19:36:15Z",
+        "updatedAt": "2026-03-31T02:30:23Z",
         "headSha": "11949489d4de7d8fa9b5cbd4dba71f6e4f7baf88",
         "headRepo": "newjordan/parameter-golf-1"
       },
@@ -10005,7 +10005,7 @@
         "authorLogin": "newjordan",
         "authorName": null,
         "createdAt": "2026-03-30T17:18:30Z",
-        "updatedAt": "2026-03-30T19:36:15Z",
+        "updatedAt": "2026-03-31T02:30:23Z",
         "headSha": "11949489d4de7d8fa9b5cbd4dba71f6e4f7baf88",
         "headRepo": "newjordan/parameter-golf-1"
       },
@@ -10781,7 +10781,7 @@
         "authorLogin": "abaybektursun",
         "authorName": null,
         "createdAt": "2026-03-30T00:03:19Z",
-        "updatedAt": "2026-03-31T00:53:06Z",
+        "updatedAt": "2026-03-31T02:26:55Z",
         "headSha": "0df40cc5465a80bd114588fe2e631cd316b9338a",
         "headRepo": "abaybektursun/parameter-golf"
       },
@@ -31494,7 +31494,7 @@
         "authorLogin": "newjordan",
         "authorName": null,
         "createdAt": "2026-03-30T17:18:30Z",
-        "updatedAt": "2026-03-30T19:36:15Z",
+        "updatedAt": "2026-03-31T02:30:23Z",
         "headSha": "11949489d4de7d8fa9b5cbd4dba71f6e4f7baf88",
         "headRepo": "newjordan/parameter-golf-1"
       },
@@ -50461,6 +50461,83 @@
       }
     },
     {
+      "id": "record-records-track_10min_16mb-2026-03-31_LR_Warmdown_V1",
+      "source": "pull_request",
+      "status": "open",
+      "category": "main-track",
+      "track": {
+        "path": "records/track_10min_16mb",
+        "slug": "track_10min_16mb",
+        "label": "10 Minute / 16MB",
+        "official": true,
+        "category": "main-track"
+      },
+      "record": {
+        "folderName": "2026-03-31_LR_Warmdown_V1",
+        "folderPath": "records/track_10min_16mb/2026-03-31_LR_Warmdown_V1",
+        "submissionPath": "records/track_10min_16mb/2026-03-31_LR_Warmdown_V1/submission.json",
+        "readmePath": "records/track_10min_16mb/2026-03-31_LR_Warmdown_V1/README.md",
+        "trainLogPath": "records/track_10min_16mb/2026-03-31_LR_Warmdown_V1/train.log",
+        "scriptPath": "records/track_10min_16mb/2026-03-31_LR_Warmdown_V1/train_gpt.py"
+      },
+      "submission": {
+        "author": "intelligentiaomni",
+        "githubId": "intelligentiaomni",
+        "name": null,
+        "blurb": null,
+        "date": "2026-03-31"
+      },
+      "metrics": {
+        "valBpb": null,
+        "valLoss": null,
+        "preQuantValBpb": null,
+        "preQuantValLoss": null,
+        "stepStop": null,
+        "wallclockSeconds": null,
+        "evalTimeSeconds": null
+      },
+      "artifact": {
+        "bytesTotal": null,
+        "bytesCode": null,
+        "bytesModelInt8Zlib": null
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
+      "pr": {
+        "number": 1163,
+        "title": "[record] LR warmdown v1 (WARMDOWN_ITERS=900) with confirmed 10-min runs",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1163",
+        "authorLogin": "intelligentiaomni",
+        "authorName": null,
+        "createdAt": "2026-03-31T02:32:05Z",
+        "updatedAt": "2026-03-31T02:39:08Z",
+        "headSha": "67f6c44803953c8237de7494c83be84a98f23aec",
+        "headRepo": "intelligentiaomni/parameter-golf"
+      },
+      "links": {
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/67f6c44803953c8237de7494c83be84a98f23aec/records/track_10min_16mb/2026-03-31_LR_Warmdown_V1/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/67f6c44803953c8237de7494c83be84a98f23aec/records/track_10min_16mb/2026-03-31_LR_Warmdown_V1/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/67f6c44803953c8237de7494c83be84a98f23aec/records/track_10min_16mb/2026-03-31_LR_Warmdown_V1/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/67f6c44803953c8237de7494c83be84a98f23aec/records/track_10min_16mb/2026-03-31_LR_Warmdown_V1/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/67f6c44803953c8237de7494c83be84a98f23aec/records/track_10min_16mb/2026-03-31_LR_Warmdown_V1",
+        "pr": "https://github.com/openai/parameter-golf/pull/1163",
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": false,
+        "hasPullRequest": true,
+        "listedInReadme": false
+      }
+    },
+    {
       "id": "record-records-track_10min_16mb-2026-03-30_EGGROLL_PostGPTQ_BinRefinement",
       "source": "pull_request",
       "status": "open",
@@ -55600,7 +55677,7 @@
         "authorLogin": "newjordan",
         "authorName": null,
         "createdAt": "2026-03-30T17:18:30Z",
-        "updatedAt": "2026-03-30T19:36:15Z",
+        "updatedAt": "2026-03-31T02:30:23Z",
         "headSha": "11949489d4de7d8fa9b5cbd4dba71f6e4f7baf88",
         "headRepo": "newjordan/parameter-golf-1"
       },
