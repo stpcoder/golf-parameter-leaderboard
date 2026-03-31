@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-31T07:11:51.321Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1174,
+    "title": "[Non-Record] 5L MLP×4 EMA=0.97 Optuna — GH200 proxy, val_bpb=1.3069 (int6+zlib)",
+    "state": "open",
+    "updatedAt": "2026-03-31T07:00:20Z",
+    "headSha": "64923b54c52d3961aeec19c4ded1098d29620454",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1174",
+    "authorLogin": "Okropniak"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-03-31_5L_MLP4_EMA097_Optuna_GH200proxy/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Proxy 5-layer GQA bigram Transformer with Optuna-tuned optimizer, reduced warmdown, and EMA tweaks to inform full H100 scaling.",
+    "tags": [
+      "architecture",
+      "optimizer",
+      "training-schedule",
+      "non-record"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Optuna v1 TPE optimizer tuning",
+      "Warmdown_iters reduced with lower EMA decay",
+      "GQA + bigram 5-layer Transformer backbone"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

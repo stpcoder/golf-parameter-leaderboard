@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-31T06:41:33.687Z",
+  "generatedAt": "2026-03-31T07:11:44.900Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "submissions": [
@@ -9796,7 +9796,7 @@
     {
       "id": "record-records-track_10min_16mb-2026-03-31_SLOT_SplitLR_GPTQ_XSA_1-1015",
       "source": "pull_request",
-      "status": "open",
+      "status": "closed",
       "category": "main-track",
       "track": {
         "path": "records/track_10min_16mb",
@@ -9844,14 +9844,14 @@
       "pr": {
         "number": 1172,
         "title": "Record: SLOT + Split-LR + Full GPTQ + XSA-all — val_bpb 1.1015 (3-seed mean)",
-        "state": "open",
+        "state": "closed",
         "draft": false,
         "mergedAt": null,
         "htmlUrl": "https://github.com/openai/parameter-golf/pull/1172",
         "authorLogin": "dexhunter",
         "authorName": null,
         "createdAt": "2026-03-31T06:22:04Z",
-        "updatedAt": "2026-03-31T06:22:04Z",
+        "updatedAt": "2026-03-31T07:03:27Z",
         "headSha": "99b080be7ee758616038526f297e9e4f8680734c",
         "headRepo": "dexhunter/parameter-golf"
       },
@@ -11628,7 +11628,7 @@
         "authorLogin": "AnubhavBharadwaaj",
         "authorName": null,
         "createdAt": "2026-03-30T09:43:20Z",
-        "updatedAt": "2026-03-31T00:11:14Z",
+        "updatedAt": "2026-03-31T07:03:45Z",
         "headSha": "0331ed13253a0b3bda6787f18aef3dea3422555b",
         "headRepo": "AnubhavBharadwaaj/parameter-golf"
       },
@@ -13322,7 +13322,7 @@
         "authorLogin": "AnubhavBharadwaaj",
         "authorName": null,
         "createdAt": "2026-03-30T09:43:20Z",
-        "updatedAt": "2026-03-31T00:11:14Z",
+        "updatedAt": "2026-03-31T07:03:45Z",
         "headSha": "0331ed13253a0b3bda6787f18aef3dea3422555b",
         "headRepo": "AnubhavBharadwaaj/parameter-golf"
       },
@@ -14631,7 +14631,7 @@
         "authorLogin": "AnubhavBharadwaaj",
         "authorName": null,
         "createdAt": "2026-03-30T09:43:20Z",
-        "updatedAt": "2026-03-31T00:11:14Z",
+        "updatedAt": "2026-03-31T07:03:45Z",
         "headSha": "0331ed13253a0b3bda6787f18aef3dea3422555b",
         "headRepo": "AnubhavBharadwaaj/parameter-golf"
       },
@@ -40052,6 +40052,83 @@
         "script": "https://github.com/openai/parameter-golf/blob/1fc2f703b55584080e7fd2a737c2f0fec59fd2c1/records/track_non_record_16mb/2026-03-28_LeakyReLU_BigramHash_Int5Int6_SlidingWindow/train_gpt.py",
         "folder": "https://github.com/openai/parameter-golf/tree/1fc2f703b55584080e7fd2a737c2f0fec59fd2c1/records/track_non_record_16mb/2026-03-28_LeakyReLU_BigramHash_Int5Int6_SlidingWindow",
         "pr": "https://github.com/openai/parameter-golf/pull/1027",
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": false,
+        "hasPullRequest": true,
+        "listedInReadme": false
+      }
+    },
+    {
+      "id": "record-records-track_non_record_16mb-2026-03-31_5L_MLP4_EMA097_Optuna_GH200proxy",
+      "source": "pull_request",
+      "status": "open",
+      "category": "non-record",
+      "track": {
+        "path": "records/track_non_record_16mb",
+        "slug": "track_non_record_16mb",
+        "label": "Non-record / 16MB",
+        "official": false,
+        "category": "non-record"
+      },
+      "record": {
+        "folderName": "2026-03-31_5L_MLP4_EMA097_Optuna_GH200proxy",
+        "folderPath": "records/track_non_record_16mb/2026-03-31_5L_MLP4_EMA097_Optuna_GH200proxy",
+        "submissionPath": "records/track_non_record_16mb/2026-03-31_5L_MLP4_EMA097_Optuna_GH200proxy/submission.json",
+        "readmePath": "records/track_non_record_16mb/2026-03-31_5L_MLP4_EMA097_Optuna_GH200proxy/README.md",
+        "trainLogPath": "records/track_non_record_16mb/2026-03-31_5L_MLP4_EMA097_Optuna_GH200proxy/train.log",
+        "scriptPath": "records/track_non_record_16mb/2026-03-31_5L_MLP4_EMA097_Optuna_GH200proxy/train_gpt.py"
+      },
+      "submission": {
+        "author": "pzydron",
+        "githubId": "Okropniak",
+        "name": "5L MLP×4 EMA=0.97 Optuna v1 — GH200 MIG proxy",
+        "blurb": "Proxy-scale submission (GH200 MIG 3g.48gb, 600s). 5-layer 512-dim GQA+XSA transformer with MLP×4, Bigram-4096+1024dim bypass layer, EMA=0.97, Optuna v1 TPE optimizer tuning (25 trials). val_bpb=1.3246 (float, post-EMA) / 1.3069 (int6+zlib, stride=64). Not a SOTA record — proxy hardware. Requesting H100 access for full competition run.",
+        "date": "2026-03-31"
+      },
+      "metrics": {
+        "valBpb": 1.3069,
+        "valLoss": 2.2066,
+        "preQuantValBpb": null,
+        "preQuantValLoss": null,
+        "stepStop": null,
+        "wallclockSeconds": null,
+        "evalTimeSeconds": null
+      },
+      "artifact": {
+        "bytesTotal": 13212714,
+        "bytesCode": 70494,
+        "bytesModelInt8Zlib": null
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
+      "pr": {
+        "number": 1174,
+        "title": "[Non-Record] 5L MLP×4 EMA=0.97 Optuna — GH200 proxy, val_bpb=1.3069 (int6+zlib)",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1174",
+        "authorLogin": "Okropniak",
+        "authorName": null,
+        "createdAt": "2026-03-31T07:00:20Z",
+        "updatedAt": "2026-03-31T07:00:20Z",
+        "headSha": "64923b54c52d3961aeec19c4ded1098d29620454",
+        "headRepo": "Okropniak/parameter-golf"
+      },
+      "links": {
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/64923b54c52d3961aeec19c4ded1098d29620454/records/track_non_record_16mb/2026-03-31_5L_MLP4_EMA097_Optuna_GH200proxy/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/64923b54c52d3961aeec19c4ded1098d29620454/records/track_non_record_16mb/2026-03-31_5L_MLP4_EMA097_Optuna_GH200proxy/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/64923b54c52d3961aeec19c4ded1098d29620454/records/track_non_record_16mb/2026-03-31_5L_MLP4_EMA097_Optuna_GH200proxy/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/64923b54c52d3961aeec19c4ded1098d29620454/records/track_non_record_16mb/2026-03-31_5L_MLP4_EMA097_Optuna_GH200proxy/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/64923b54c52d3961aeec19c4ded1098d29620454/records/track_non_record_16mb/2026-03-31_5L_MLP4_EMA097_Optuna_GH200proxy",
+        "pr": "https://github.com/openai/parameter-golf/pull/1174",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
       "provenance": {

@@ -1,8 +1,32 @@
 {
-  "generatedAt": "2026-03-31T06:41:47.959Z",
+  "generatedAt": "2026-03-31T07:12:05.590Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 1174,
+      "title": "[Non-Record] 5L MLP×4 EMA=0.97 Optuna — GH200 proxy, val_bpb=1.3069 (int6+zlib)",
+      "status": "open",
+      "updatedAt": "2026-03-31T07:00:20Z",
+      "headSha": "64923b54c52d3961aeec19c4ded1098d29620454",
+      "generatedAt": "2026-03-31T07:11:51.321Z",
+      "summary": "Proxy 5-layer GQA bigram Transformer with Optuna-tuned optimizer, reduced warmdown, and EMA tweaks to inform full H100 scaling.",
+      "tags": [
+        "architecture",
+        "optimizer",
+        "training-schedule",
+        "non-record"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1174.json"
+    },
     {
       "prNumber": 1173,
       "title": "Add non-record 16MB submission: Ternary QAT vs Int5 proxy study",
@@ -29,14 +53,15 @@
     {
       "prNumber": 1172,
       "title": "Record: SLOT + Split-LR + Full GPTQ + XSA-all — val_bpb 1.1015 (3-seed mean)",
-      "status": "open",
-      "updatedAt": "2026-03-31T06:22:04Z",
+      "status": "closed",
+      "updatedAt": "2026-03-31T07:03:27Z",
       "headSha": "99b080be7ee758616038526f297e9e4f8680734c",
-      "generatedAt": "2026-03-31T06:41:47.762Z",
-      "summary": "Uses split early/late Muon LR, sigmoid-gated skips, soft-round GPTQ QAT, larger BigramHash, and SLOT eval deltas atop the sliding-window stack.",
+      "generatedAt": "2026-03-31T07:11:57.667Z",
+      "summary": "Combines sliding-window SLOT eval delta tuning with split Muon LR, sigmoid-gated skips, soft-round QAT, and compression tweaks on a GPTQ stack.",
       "tags": [
+        "architecture",
+        "optimizer",
         "quantization",
-        "muon",
         "evaluation"
       ],
       "flags": {
@@ -722,14 +747,14 @@
       "prNumber": 1128,
       "title": "Record: SLOT + LeakyReLU² + Legal Score-First TTT + Parallel Muon — val_bpb 1.1154 (3-seed mean) val_bpb = 1.1154 (3-seed mean, std 0.0002) | ~15.9 MB | 8×H100 SXM",
       "status": "open",
-      "updatedAt": "2026-03-31T00:11:14Z",
+      "updatedAt": "2026-03-31T07:03:45Z",
       "headSha": "0331ed13253a0b3bda6787f18aef3dea3422555b",
-      "generatedAt": "2026-03-31T00:39:14.570Z",
-      "summary": "Stacks SLOT per-batch delta optimization atop score-first TTT + Parallel Muon base stack to adapt the last hidden layer during eval scoring.",
+      "generatedAt": "2026-03-31T07:12:05.425Z",
+      "summary": "Legal score-first TTT stack with per-batch SLOT delta tuning at the hidden-to-logit layer atop LeakyReLU² + Parallel Muon base for evaluation adaptation.",
       "tags": [
-        "muon",
         "evaluation",
         "optimizer",
+        "architecture",
         "non-record"
       ],
       "flags": {
