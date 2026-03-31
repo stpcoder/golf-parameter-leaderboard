@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-28T00:50:22.204Z",
+  "generatedAt": "2026-03-31T01:39:56.796Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 187,
-    "title": "Record: EMA-GPU + Multi-Order N-gram Backoff + PE Confidence (val_bpb=0.9393)",
+    "title": "[Closed] EMA + Multi-Order N-gram Backoff + PE Confidence (val_bpb=0.9393)",
     "state": "closed",
-    "updatedAt": "2026-03-26T04:37:25Z",
+    "updatedAt": "2026-03-31T01:20:41Z",
     "headSha": "7e07f4d14d0ec0a74edff7d1cf92d80ac392a88c",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/187",
     "authorLogin": "Idan3011"
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "GPU-resident EMA plus GELU pre-enrichment/XSA, then entropy-adaptive multi-order n-gram caching with PE confidence to guide sliding eval mixing.",
+    "summary": "Keeps EMA state on GPU while combining GELU pre-enrichment/XSA with score-first multi-order n-gram backoff modulated by PE confidence.",
     "tags": [
       "architecture",
       "attention",
-      "quantization",
-      "evaluation"
+      "evaluation",
+      "quantization"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "GPU-resident EMA state for faster iterations",
-      "Entropy-adaptive multi-order n-gram backoff with score-first cache",
-      "Pre-enrichment confidence modulates n-gram/model mixing"
+      "GPU-resident EMA updates",
+      "score-first multi-order n-gram backoff with entropy-adaptive PE confidence",
+      "GELU pre-enrichment plus XSA layers"
     ]
   },
   "compatibility": {

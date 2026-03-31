@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-31T01:09:19.817Z",
+  "generatedAt": "2026-03-31T01:39:41.731Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "submissions": [
@@ -31255,7 +31255,7 @@
       },
       "pr": {
         "number": 187,
-        "title": "Record: EMA-GPU + Multi-Order N-gram Backoff + PE Confidence (val_bpb=0.9393)",
+        "title": "[Closed] EMA + Multi-Order N-gram Backoff + PE Confidence (val_bpb=0.9393)",
         "state": "closed",
         "draft": false,
         "mergedAt": null,
@@ -31263,7 +31263,7 @@
         "authorLogin": "Idan3011",
         "authorName": null,
         "createdAt": "2026-03-20T07:23:51Z",
-        "updatedAt": "2026-03-26T04:37:25Z",
+        "updatedAt": "2026-03-31T01:20:41Z",
         "headSha": "7e07f4d14d0ec0a74edff7d1cf92d80ac392a88c",
         "headRepo": "Idan3011/parameter-golf"
       },
@@ -40272,7 +40272,7 @@
         "authorLogin": "danielxmed",
         "authorName": null,
         "createdAt": "2026-03-29T21:23:41Z",
-        "updatedAt": "2026-03-29T23:50:21Z",
+        "updatedAt": "2026-03-31T01:36:49Z",
         "headSha": "5bed757868cf5b8508d09074ad42dd12e96abdaa",
         "headRepo": "danielxmed/parameter-golf"
       },
@@ -45057,6 +45057,83 @@
         "script": "https://github.com/openai/parameter-golf/blob/34e14808c1b8168d4056e6462c46af7a0569b9ad/records/track_non_record_16mb/2026-03-22_Autoresearch_LowRankQ_FinalTailQ_TiedEmbFloat_1x5090/train_gpt.py",
         "folder": "https://github.com/openai/parameter-golf/tree/34e14808c1b8168d4056e6462c46af7a0569b9ad/records/track_non_record_16mb/2026-03-22_Autoresearch_LowRankQ_FinalTailQ_TiedEmbFloat_1x5090",
         "pr": "https://github.com/openai/parameter-golf/pull/432",
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": false,
+        "hasPullRequest": true,
+        "listedInReadme": false
+      }
+    },
+    {
+      "id": "record-records-track_non_record_16mb-2026-03-28_WholeModelMegakernel_GTA9x512",
+      "source": "pull_request",
+      "status": "open",
+      "category": "non-record",
+      "track": {
+        "path": "records/track_non_record_16mb",
+        "slug": "track_non_record_16mb",
+        "label": "Non-record / 16MB",
+        "official": false,
+        "category": "non-record"
+      },
+      "record": {
+        "folderName": "2026-03-28_WholeModelMegakernel_GTA9x512",
+        "folderPath": "records/track_non_record_16mb/2026-03-28_WholeModelMegakernel_GTA9x512",
+        "submissionPath": "records/track_non_record_16mb/2026-03-28_WholeModelMegakernel_GTA9x512/submission.json",
+        "readmePath": "records/track_non_record_16mb/2026-03-28_WholeModelMegakernel_GTA9x512/README.md",
+        "trainLogPath": "records/track_non_record_16mb/2026-03-28_WholeModelMegakernel_GTA9x512/train.log",
+        "scriptPath": "records/track_non_record_16mb/2026-03-28_WholeModelMegakernel_GTA9x512/train_gpt.py"
+      },
+      "submission": {
+        "author": "GreQ + Codex",
+        "githubId": "GreQ",
+        "name": "Whole-Model GTA CUDA Path",
+        "blurb": "Standalone packed-GTA non-record draft with an inline CUDA plus cuBLAS whole-model forward/eval path and a manual packed-buffer reverse pass. A finished 1x RTX PRO 6000 Blackwell run reached pre-quant 1.4984 BPB and post-quant 1.5345 BPB under the 16 MB artifact cap.",
+        "date": "2026-03-30T22:23:02Z"
+      },
+      "metrics": {
+        "valBpb": 1.53454775,
+        "valLoss": 2.5910196,
+        "preQuantValBpb": 1.4984,
+        "preQuantValLoss": 2.53,
+        "stepStop": 723,
+        "wallclockSeconds": 7206.646,
+        "evalTimeSeconds": null
+      },
+      "artifact": {
+        "bytesTotal": 8519424,
+        "bytesCode": 130009,
+        "bytesModelInt8Zlib": 8389415
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
+      "pr": {
+        "number": 1138,
+        "title": "Non-record: Whole-Model GTA Megakernel Draft + Manual CUDA Reverse Pass",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1138",
+        "authorLogin": "greqone",
+        "authorName": null,
+        "createdAt": "2026-03-30T16:44:28Z",
+        "updatedAt": "2026-03-31T01:28:19Z",
+        "headSha": "a57d6b8f5a6695b32cabe54b472c524290b4e4ee",
+        "headRepo": "greqone/parameter-golf"
+      },
+      "links": {
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/a57d6b8f5a6695b32cabe54b472c524290b4e4ee/records/track_non_record_16mb/2026-03-28_WholeModelMegakernel_GTA9x512/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/a57d6b8f5a6695b32cabe54b472c524290b4e4ee/records/track_non_record_16mb/2026-03-28_WholeModelMegakernel_GTA9x512/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/a57d6b8f5a6695b32cabe54b472c524290b4e4ee/records/track_non_record_16mb/2026-03-28_WholeModelMegakernel_GTA9x512/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/a57d6b8f5a6695b32cabe54b472c524290b4e4ee/records/track_non_record_16mb/2026-03-28_WholeModelMegakernel_GTA9x512/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/a57d6b8f5a6695b32cabe54b472c524290b4e4ee/records/track_non_record_16mb/2026-03-28_WholeModelMegakernel_GTA9x512",
+        "pr": "https://github.com/openai/parameter-golf/pull/1138",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
       "provenance": {
@@ -50375,83 +50452,6 @@
         "script": "https://github.com/openai/parameter-golf/blob/03ea861d08adaf5640dde25eaa12b1ac2645f7ae/records/track_10min_16mb/2026-03-30_EGGROLL_PostGPTQ_BinRefinement/train_gpt.py",
         "folder": "https://github.com/openai/parameter-golf/tree/03ea861d08adaf5640dde25eaa12b1ac2645f7ae/records/track_10min_16mb/2026-03-30_EGGROLL_PostGPTQ_BinRefinement",
         "pr": "https://github.com/openai/parameter-golf/pull/1156",
-        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
-      },
-      "provenance": {
-        "onMain": false,
-        "hasPullRequest": true,
-        "listedInReadme": false
-      }
-    },
-    {
-      "id": "record-records-track_non_record_16mb-2026-03-28_WholeModelMegakernel_GTA9x512",
-      "source": "pull_request",
-      "status": "open",
-      "category": "non-record",
-      "track": {
-        "path": "records/track_non_record_16mb",
-        "slug": "track_non_record_16mb",
-        "label": "Non-record / 16MB",
-        "official": false,
-        "category": "non-record"
-      },
-      "record": {
-        "folderName": "2026-03-28_WholeModelMegakernel_GTA9x512",
-        "folderPath": "records/track_non_record_16mb/2026-03-28_WholeModelMegakernel_GTA9x512",
-        "submissionPath": "records/track_non_record_16mb/2026-03-28_WholeModelMegakernel_GTA9x512/submission.json",
-        "readmePath": "records/track_non_record_16mb/2026-03-28_WholeModelMegakernel_GTA9x512/README.md",
-        "trainLogPath": "records/track_non_record_16mb/2026-03-28_WholeModelMegakernel_GTA9x512/train.log",
-        "scriptPath": "records/track_non_record_16mb/2026-03-28_WholeModelMegakernel_GTA9x512/train_gpt.py"
-      },
-      "submission": {
-        "author": "GreQ + Codex",
-        "githubId": "GreQ",
-        "name": "Whole-Model GTA CUDA Path",
-        "blurb": "Standalone packed-GTA non-record draft with an inline CUDA plus cuBLAS whole-model forward/eval path, a manual packed-buffer reverse pass, and a local RTX 4090 benchmark log.",
-        "date": "2026-03-30T16:50:00Z"
-      },
-      "metrics": {
-        "valBpb": null,
-        "valLoss": null,
-        "preQuantValBpb": null,
-        "preQuantValLoss": null,
-        "stepStop": null,
-        "wallclockSeconds": null,
-        "evalTimeSeconds": null
-      },
-      "artifact": {
-        "bytesTotal": null,
-        "bytesCode": 130009,
-        "bytesModelInt8Zlib": null
-      },
-      "flags": {
-        "usesValOnly": false
-      },
-      "detection": {
-        "valOnlyConfidence": "none",
-        "valOnlyMatches": []
-      },
-      "pr": {
-        "number": 1138,
-        "title": "Non-record: Whole-Model GTA Megakernel Draft + Manual CUDA Reverse Pass",
-        "state": "open",
-        "draft": false,
-        "mergedAt": null,
-        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1138",
-        "authorLogin": "greqone",
-        "authorName": null,
-        "createdAt": "2026-03-30T16:44:28Z",
-        "updatedAt": "2026-03-30T21:21:52Z",
-        "headSha": "17b8acf855b1d14f9a1e4bda4d0a36c96e789be9",
-        "headRepo": "greqone/parameter-golf"
-      },
-      "links": {
-        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/17b8acf855b1d14f9a1e4bda4d0a36c96e789be9/records/track_non_record_16mb/2026-03-28_WholeModelMegakernel_GTA9x512/submission.json",
-        "readme": "https://github.com/openai/parameter-golf/blob/17b8acf855b1d14f9a1e4bda4d0a36c96e789be9/records/track_non_record_16mb/2026-03-28_WholeModelMegakernel_GTA9x512/README.md",
-        "trainLog": "https://github.com/openai/parameter-golf/blob/17b8acf855b1d14f9a1e4bda4d0a36c96e789be9/records/track_non_record_16mb/2026-03-28_WholeModelMegakernel_GTA9x512/train.log",
-        "script": "https://github.com/openai/parameter-golf/blob/17b8acf855b1d14f9a1e4bda4d0a36c96e789be9/records/track_non_record_16mb/2026-03-28_WholeModelMegakernel_GTA9x512/train_gpt.py",
-        "folder": "https://github.com/openai/parameter-golf/tree/17b8acf855b1d14f9a1e4bda4d0a36c96e789be9/records/track_non_record_16mb/2026-03-28_WholeModelMegakernel_GTA9x512",
-        "pr": "https://github.com/openai/parameter-golf/pull/1138",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
       "provenance": {
