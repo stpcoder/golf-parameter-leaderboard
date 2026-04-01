@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-04-01T20:55:02.323Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1232,
+    "title": "feat: Non-record 11L PR940 Stack (no n-gram in use) + 20k Steps + Legal TTT (1.0929 BPB)",
+    "state": "open",
+    "updatedAt": "2026-04-01T20:33:52Z",
+    "headSha": "b82a6294c55555134d70e919b08f756c03d5268f",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1232",
+    "authorLogin": "Christopher-Lee-McClendon"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-04-01_11L_PR940_20kSteps_ScalingStudy_LegalTTT/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Extends the PR940 stack with gated attention/value residual and all-layer XSA, training the 11L Muon model through a 12k-step warmdown and legal score-first TTT.",
+    "tags": [
+      "architecture",
+      "attention",
+      "training-schedule",
+      "optimizer"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "LeakyReLU² MLP + gated attention/value residual on all 11 layers",
+      "Cosine warmdown from 8k–20k steps with large token batches",
+      "Muon optimizer paired with legal score-first TTT evaluations"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

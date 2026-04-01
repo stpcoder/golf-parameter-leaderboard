@@ -1,8 +1,80 @@
 {
-  "generatedAt": "2026-04-01T20:24:53.334Z",
+  "generatedAt": "2026-04-01T20:55:42.596Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 1232,
+      "title": "feat: Non-record 11L PR940 Stack (no n-gram in use) + 20k Steps + Legal TTT (1.0929 BPB)",
+      "status": "open",
+      "updatedAt": "2026-04-01T20:33:52Z",
+      "headSha": "b82a6294c55555134d70e919b08f756c03d5268f",
+      "generatedAt": "2026-04-01T20:55:02.323Z",
+      "summary": "Extends the PR940 stack with gated attention/value residual and all-layer XSA, training the 11L Muon model through a 12k-step warmdown and legal score-first TTT.",
+      "tags": [
+        "architecture",
+        "attention",
+        "training-schedule",
+        "optimizer"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1232.json"
+    },
+    {
+      "prNumber": 1231,
+      "title": "Non-record: Stable Growing Recurrence, Progressive Depth + Error Feedback ",
+      "status": "open",
+      "updatedAt": "2026-04-01T20:30:34Z",
+      "headSha": "f0dc83bd47369a6c031917a644d4a53daa2217be",
+      "generatedAt": "2026-04-01T20:55:11.746Z",
+      "summary": "Progressively grow recurrence passes while using learnable residual scaling, error-feedback, and Jacobian-proxy regularization to stabilize depth reuse.",
+      "tags": [
+        "val-only",
+        "architecture",
+        "training-schedule",
+        "regularization"
+      ],
+      "flags": {
+        "usesValOnly": true,
+        "usesValOnlyAi": true,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": false
+      },
+      "file": "items/pr-1231.json"
+    },
+    {
+      "prNumber": 1230,
+      "title": "Stable Growing Recurrence: Progressive Depth + Error Feedback (non-record)",
+      "status": "closed",
+      "updatedAt": "2026-04-01T20:28:42Z",
+      "headSha": "c0db831d60211e582ddac1f33a385ef18ac941c9",
+      "generatedAt": "2026-04-01T20:55:26.434Z",
+      "summary": "Progressively grows recurrence depth late in training with contractive residual scaling, error feedback, and a Jacobian proxy for int6 multi-pass stability.",
+      "tags": [
+        "architecture",
+        "training-schedule",
+        "regularization",
+        "quantization"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1230.json"
+    },
     {
       "prNumber": 1229,
       "title": "Record: Scored-Position SLOT + Per-Sample Delta + GPTQ (val_bpb: 0.9300)",
@@ -822,15 +894,14 @@
       "prNumber": 1184,
       "title": "Record: Scylla + Full GPTQ + XSA-all + FA3 — val_bpb 0.9485 (3-seed mean)",
       "status": "open",
-      "updatedAt": "2026-04-01T02:18:38Z",
+      "updatedAt": "2026-04-01T20:27:59Z",
       "headSha": "4cbc43f290f4cf4efde795163b3e8db9f86dfaf8",
-      "generatedAt": "2026-04-01T02:49:26.756Z",
-      "summary": "Applies the Scylla tokenizer atop PR #1060’s stack with Full Hessian GPTQ, XSA on every layer, FlashAttention, and a coprime loader for a modern quantized run.",
+      "generatedAt": "2026-04-01T20:55:35.173Z",
+      "summary": "Pairs the Scylla 998-token vocabulary with PR#1060's full GPTQ/XSA/FlashAttention stack to update tokenizer+training synergy.",
       "tags": [
-        "quantization",
-        "attention",
         "tokenization",
-        "architecture"
+        "quantization",
+        "attention"
       ],
       "flags": {
         "usesValOnly": false,
@@ -1059,13 +1130,13 @@
       "prNumber": 1170,
       "title": "Non-record: 11L NativeFlowMatcher + Legal TTT — val_bpb 1.1199 (3-seed mean no-TTT: 1.1225)",
       "status": "open",
-      "updatedAt": "2026-04-01T03:53:43Z",
-      "headSha": "e75f03e5f8560eaab00cdd25997bd8e6c027c7aa",
-      "generatedAt": "2026-04-01T04:19:53.588Z",
-      "summary": "Integrates a gated NativeFlowMatcher OT-CFM velocity head with the transformer and applies legal TTT sliding evaluation corrections in the 11L budget setting.",
+      "updatedAt": "2026-04-01T20:28:35Z",
+      "headSha": "039f4e8912563e9da40c29e631379132c21ae81c",
+      "generatedAt": "2026-04-01T20:55:42.422Z",
+      "summary": "Integrates a NativeFlowMatcher OT-CFM velocity module that gates residual corrections into transformer hidden states alongside legal score-first TTT and tight int6/int5 quantization.",
       "tags": [
         "architecture",
-        "training-schedule",
+        "quantization",
         "evaluation",
         "non-record"
       ],

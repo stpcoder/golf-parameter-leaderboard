@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-01T20:24:39.416Z",
+  "generatedAt": "2026-04-01T20:54:54.036Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "submissions": [
@@ -5688,7 +5688,7 @@
         "authorLogin": "icryo",
         "authorName": null,
         "createdAt": "2026-03-31T16:01:28Z",
-        "updatedAt": "2026-04-01T02:18:38Z",
+        "updatedAt": "2026-04-01T20:27:59Z",
         "headSha": "4cbc43f290f4cf4efde795163b3e8db9f86dfaf8",
         "headRepo": "icryo/parameter-golf"
       },
@@ -9486,6 +9486,83 @@
       }
     },
     {
+      "id": "record-records-track_non_record_16mb-2026-04-01_11L_PR940_20kSteps_ScalingStudy_LegalTTT",
+      "source": "pull_request",
+      "status": "open",
+      "category": "non-record",
+      "track": {
+        "path": "records/track_non_record_16mb",
+        "slug": "track_non_record_16mb",
+        "label": "Non-record / 16MB",
+        "official": false,
+        "category": "non-record"
+      },
+      "record": {
+        "folderName": "2026-04-01_11L_PR940_20kSteps_ScalingStudy_LegalTTT",
+        "folderPath": "records/track_non_record_16mb/2026-04-01_11L_PR940_20kSteps_ScalingStudy_LegalTTT",
+        "submissionPath": "records/track_non_record_16mb/2026-04-01_11L_PR940_20kSteps_ScalingStudy_LegalTTT/submission.json",
+        "readmePath": "records/track_non_record_16mb/2026-04-01_11L_PR940_20kSteps_ScalingStudy_LegalTTT/README.md",
+        "trainLogPath": "records/track_non_record_16mb/2026-04-01_11L_PR940_20kSteps_ScalingStudy_LegalTTT/train.log",
+        "scriptPath": "records/track_non_record_16mb/2026-04-01_11L_PR940_20kSteps_ScalingStudy_LegalTTT/train_gpt.py"
+      },
+      "submission": {
+        "author": "Christopher-Lee-McClendon",
+        "githubId": "Christopher-Lee-McClendon",
+        "name": "Christopher Lee McClendon",
+        "blurb": null,
+        "date": "2026-04-01"
+      },
+      "metrics": {
+        "valBpb": 1.0929,
+        "valLoss": null,
+        "preQuantValBpb": null,
+        "preQuantValLoss": null,
+        "stepStop": null,
+        "wallclockSeconds": null,
+        "evalTimeSeconds": null
+      },
+      "artifact": {
+        "bytesTotal": null,
+        "bytesCode": null,
+        "bytesModelInt8Zlib": null
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
+      "pr": {
+        "number": 1232,
+        "title": "feat: Non-record 11L PR940 Stack (no n-gram in use) + 20k Steps + Legal TTT (1.0929 BPB)",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1232",
+        "authorLogin": "Christopher-Lee-McClendon",
+        "authorName": null,
+        "createdAt": "2026-04-01T20:31:50Z",
+        "updatedAt": "2026-04-01T20:33:52Z",
+        "headSha": "b82a6294c55555134d70e919b08f756c03d5268f",
+        "headRepo": "Christopher-Lee-McClendon/parameter-golf"
+      },
+      "links": {
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/b82a6294c55555134d70e919b08f756c03d5268f/records/track_non_record_16mb/2026-04-01_11L_PR940_20kSteps_ScalingStudy_LegalTTT/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/b82a6294c55555134d70e919b08f756c03d5268f/records/track_non_record_16mb/2026-04-01_11L_PR940_20kSteps_ScalingStudy_LegalTTT/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/b82a6294c55555134d70e919b08f756c03d5268f/records/track_non_record_16mb/2026-04-01_11L_PR940_20kSteps_ScalingStudy_LegalTTT/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/b82a6294c55555134d70e919b08f756c03d5268f/records/track_non_record_16mb/2026-04-01_11L_PR940_20kSteps_ScalingStudy_LegalTTT/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/b82a6294c55555134d70e919b08f756c03d5268f/records/track_non_record_16mb/2026-04-01_11L_PR940_20kSteps_ScalingStudy_LegalTTT",
+        "pr": "https://github.com/openai/parameter-golf/pull/1232",
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": false,
+        "hasPullRequest": true,
+        "listedInReadme": false
+      }
+    },
+    {
       "id": "record-records-weyhe_submission",
       "source": "pull_request",
       "status": "closed",
@@ -12572,6 +12649,83 @@
       }
     },
     {
+      "id": "record-records-track_non_record_16mb-2026-03-26_Stable_Growing_Recurrance",
+      "source": "pull_request",
+      "status": "open",
+      "category": "non-record",
+      "track": {
+        "path": "records/track_non_record_16mb",
+        "slug": "track_non_record_16mb",
+        "label": "Non-record / 16MB",
+        "official": false,
+        "category": "non-record"
+      },
+      "record": {
+        "folderName": "2026-03-26_Stable_Growing_Recurrance",
+        "folderPath": "records/track_non_record_16mb/2026-03-26_Stable_Growing_Recurrance",
+        "submissionPath": "records/track_non_record_16mb/2026-03-26_Stable_Growing_Recurrance/submission.json",
+        "readmePath": "records/track_non_record_16mb/2026-03-26_Stable_Growing_Recurrance/README.md",
+        "trainLogPath": "records/track_non_record_16mb/2026-03-26_Stable_Growing_Recurrance/train.log",
+        "scriptPath": "records/track_non_record_16mb/2026-03-26_Stable_Growing_Recurrance/train_gpt.py"
+      },
+      "submission": {
+        "author": "nestamidavaine",
+        "githubId": "nestamidavaine",
+        "name": "Recurrent Depth with Progressive Pass Growth + Error Feedback",
+        "blurb": "Progressive depth recurrence (1->2->3 passes) with error feedback + jacobian proxy stabilization. Late growth preserves fast step times for most of training, avoiding the step/capacity trade-off that makes naive recurrence impractical. 3-seed mean: 1.1163 (std 0.0013), -0.0031 vs PR #549 LeakyReLU baseline (1.1194). Built on PR #414 stack with Parallel Muon (PR #399). All artifacts under 16MB, all eval under 10 min.",
+        "date": "2026-04-01"
+      },
+      "metrics": {
+        "valBpb": 1.1163,
+        "valLoss": null,
+        "preQuantValBpb": null,
+        "preQuantValLoss": null,
+        "stepStop": null,
+        "wallclockSeconds": 600,
+        "evalTimeSeconds": null
+      },
+      "artifact": {
+        "bytesTotal": 15995558,
+        "bytesCode": 58186,
+        "bytesModelInt8Zlib": null
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
+      "pr": {
+        "number": 1231,
+        "title": "Non-record: Stable Growing Recurrence, Progressive Depth + Error Feedback ",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1231",
+        "authorLogin": "nestamidavaine",
+        "authorName": null,
+        "createdAt": "2026-04-01T20:29:59Z",
+        "updatedAt": "2026-04-01T20:30:34Z",
+        "headSha": "f0dc83bd47369a6c031917a644d4a53daa2217be",
+        "headRepo": "nestamidavaine/parameter-golf"
+      },
+      "links": {
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/c0db831d60211e582ddac1f33a385ef18ac941c9/records/track_non_record_16mb/2026-03-26_Stable_Growing_Recurrance/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/c0db831d60211e582ddac1f33a385ef18ac941c9/records/track_non_record_16mb/2026-03-26_Stable_Growing_Recurrance/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/c0db831d60211e582ddac1f33a385ef18ac941c9/records/track_non_record_16mb/2026-03-26_Stable_Growing_Recurrance/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/c0db831d60211e582ddac1f33a385ef18ac941c9/records/track_non_record_16mb/2026-03-26_Stable_Growing_Recurrance/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/c0db831d60211e582ddac1f33a385ef18ac941c9/records/track_non_record_16mb/2026-03-26_Stable_Growing_Recurrance",
+        "pr": "https://github.com/openai/parameter-golf/pull/1231",
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": false,
+        "hasPullRequest": true,
+        "listedInReadme": false
+      }
+    },
+    {
       "id": "record-records-track_10min_16mb-2026-03-23_FullGPTQ_LeakyReLU_ParallelMuon",
       "source": "pull_request",
       "status": "closed",
@@ -15247,16 +15401,16 @@
         "authorLogin": "Christopher-Lee-McClendon",
         "authorName": null,
         "createdAt": "2026-03-31T04:52:31Z",
-        "updatedAt": "2026-04-01T03:53:43Z",
-        "headSha": "e75f03e5f8560eaab00cdd25997bd8e6c027c7aa",
+        "updatedAt": "2026-04-01T20:28:35Z",
+        "headSha": "039f4e8912563e9da40c29e631379132c21ae81c",
         "headRepo": "Christopher-Lee-McClendon/parameter-golf"
       },
       "links": {
-        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/e75f03e5f8560eaab00cdd25997bd8e6c027c7aa/records/track_non_record_16mb/2026-03-31_11L_NativeFlowMatcher_LegalTTT/submission.json",
-        "readme": "https://github.com/openai/parameter-golf/blob/e75f03e5f8560eaab00cdd25997bd8e6c027c7aa/records/track_non_record_16mb/2026-03-31_11L_NativeFlowMatcher_LegalTTT/README.md",
-        "trainLog": "https://github.com/openai/parameter-golf/blob/e75f03e5f8560eaab00cdd25997bd8e6c027c7aa/records/track_non_record_16mb/2026-03-31_11L_NativeFlowMatcher_LegalTTT/train.log",
-        "script": "https://github.com/openai/parameter-golf/blob/e75f03e5f8560eaab00cdd25997bd8e6c027c7aa/records/track_non_record_16mb/2026-03-31_11L_NativeFlowMatcher_LegalTTT/train_gpt.py",
-        "folder": "https://github.com/openai/parameter-golf/tree/e75f03e5f8560eaab00cdd25997bd8e6c027c7aa/records/track_non_record_16mb/2026-03-31_11L_NativeFlowMatcher_LegalTTT",
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/039f4e8912563e9da40c29e631379132c21ae81c/records/track_non_record_16mb/2026-03-31_11L_NativeFlowMatcher_LegalTTT/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/039f4e8912563e9da40c29e631379132c21ae81c/records/track_non_record_16mb/2026-03-31_11L_NativeFlowMatcher_LegalTTT/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/039f4e8912563e9da40c29e631379132c21ae81c/records/track_non_record_16mb/2026-03-31_11L_NativeFlowMatcher_LegalTTT/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/039f4e8912563e9da40c29e631379132c21ae81c/records/track_non_record_16mb/2026-03-31_11L_NativeFlowMatcher_LegalTTT/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/039f4e8912563e9da40c29e631379132c21ae81c/records/track_non_record_16mb/2026-03-31_11L_NativeFlowMatcher_LegalTTT",
         "pr": "https://github.com/openai/parameter-golf/pull/1170",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
@@ -57699,6 +57853,83 @@
       }
     },
     {
+      "id": "record-records-track_10min_16mb-2026-03-26_RecurrentSOTA_Feedback",
+      "source": "pull_request",
+      "status": "closed",
+      "category": "main-track",
+      "track": {
+        "path": "records/track_10min_16mb",
+        "slug": "track_10min_16mb",
+        "label": "10 Minute / 16MB",
+        "official": true,
+        "category": "main-track"
+      },
+      "record": {
+        "folderName": "2026-03-26_RecurrentSOTA_Feedback",
+        "folderPath": "records/track_10min_16mb/2026-03-26_RecurrentSOTA_Feedback",
+        "submissionPath": "records/track_10min_16mb/2026-03-26_RecurrentSOTA_Feedback/submission.json",
+        "readmePath": "records/track_10min_16mb/2026-03-26_RecurrentSOTA_Feedback/README.md",
+        "trainLogPath": "records/track_10min_16mb/2026-03-26_RecurrentSOTA_Feedback/train.log",
+        "scriptPath": "records/track_10min_16mb/2026-03-26_RecurrentSOTA_Feedback/train_gpt.py"
+      },
+      "submission": {
+        "author": "abaybektursun",
+        "githubId": "abaybektursun",
+        "name": "Recurrent Depth: 2-Pass Train + 4-Pass Eval with Error Feedback",
+        "blurb": "Depth recurrence with contractive hidden states (ResidualScale + Jacobian proxy) and quantization error feedback. Train 2-pass core (layers 4-6), eval 4-pass with TTT (freeze=0). Solves PR #363's quantization error amplification via learned error correction. Built on PR #414 stack + PR #399 Parallel Muon.",
+        "date": "2026-03-27"
+      },
+      "metrics": {
+        "valBpb": null,
+        "valLoss": null,
+        "preQuantValBpb": null,
+        "preQuantValLoss": null,
+        "stepStop": null,
+        "wallclockSeconds": null,
+        "evalTimeSeconds": null
+      },
+      "artifact": {
+        "bytesTotal": null,
+        "bytesCode": null,
+        "bytesModelInt8Zlib": null
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
+      "pr": {
+        "number": 1230,
+        "title": "Stable Growing Recurrence: Progressive Depth + Error Feedback (non-record)",
+        "state": "closed",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1230",
+        "authorLogin": "nestamidavaine",
+        "authorName": null,
+        "createdAt": "2026-04-01T20:27:22Z",
+        "updatedAt": "2026-04-01T20:28:42Z",
+        "headSha": "c0db831d60211e582ddac1f33a385ef18ac941c9",
+        "headRepo": "nestamidavaine/parameter-golf"
+      },
+      "links": {
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/c0db831d60211e582ddac1f33a385ef18ac941c9/records/track_10min_16mb/2026-03-26_RecurrentSOTA_Feedback/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/c0db831d60211e582ddac1f33a385ef18ac941c9/records/track_10min_16mb/2026-03-26_RecurrentSOTA_Feedback/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/c0db831d60211e582ddac1f33a385ef18ac941c9/records/track_10min_16mb/2026-03-26_RecurrentSOTA_Feedback/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/c0db831d60211e582ddac1f33a385ef18ac941c9/records/track_10min_16mb/2026-03-26_RecurrentSOTA_Feedback/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/c0db831d60211e582ddac1f33a385ef18ac941c9/records/track_10min_16mb/2026-03-26_RecurrentSOTA_Feedback",
+        "pr": "https://github.com/openai/parameter-golf/pull/1230",
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": false,
+        "hasPullRequest": true,
+        "listedInReadme": false
+      }
+    },
+    {
       "id": "record-records-track_non_record_16mb-2026-03-26_RandomLinearMaps",
       "source": "pull_request",
       "status": "open",
@@ -61309,6 +61540,83 @@
         "script": "https://github.com/openai/parameter-golf/blob/8dd90897ab7b5bde0c7e84a68271dcfdc6bde3cf/records/track_10min_16mb/2026-03-25_QAT_Int4MLP_12L/train_gpt.py",
         "folder": "https://github.com/openai/parameter-golf/tree/8dd90897ab7b5bde0c7e84a68271dcfdc6bde3cf/records/track_10min_16mb/2026-03-25_QAT_Int4MLP_12L",
         "pr": "https://github.com/openai/parameter-golf/pull/910",
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": false,
+        "hasPullRequest": true,
+        "listedInReadme": false
+      }
+    },
+    {
+      "id": "record-records-track_10min_16mb-2026-03-25_RecurrentCore_LearnedFeedback_QAT",
+      "source": "pull_request",
+      "status": "closed",
+      "category": "main-track",
+      "track": {
+        "path": "records/track_10min_16mb",
+        "slug": "track_10min_16mb",
+        "label": "10 Minute / 16MB",
+        "official": true,
+        "category": "main-track"
+      },
+      "record": {
+        "folderName": "2026-03-25_RecurrentCore_LearnedFeedback_QAT",
+        "folderPath": "records/track_10min_16mb/2026-03-25_RecurrentCore_LearnedFeedback_QAT",
+        "submissionPath": "records/track_10min_16mb/2026-03-25_RecurrentCore_LearnedFeedback_QAT/submission.json",
+        "readmePath": "records/track_10min_16mb/2026-03-25_RecurrentCore_LearnedFeedback_QAT/README.md",
+        "trainLogPath": "records/track_10min_16mb/2026-03-25_RecurrentCore_LearnedFeedback_QAT/train.log",
+        "scriptPath": "records/track_10min_16mb/2026-03-25_RecurrentCore_LearnedFeedback_QAT/train_gpt.py"
+      },
+      "submission": {
+        "author": "nesta.midavaine",
+        "githubId": "nesta.midavaine",
+        "name": "Recurrent Core + Learned Feedback + Full-Rollout QAT",
+        "blurb": "Shared recurrent core (stem/core/tail partitioning) with STE fake-quantized core weights, low-rank error-feedback correction, and recurrence-safe TTT. Built on the LeakyReLU² + Legal TTT + Parallel Muon record (1.1194 BPB). Three script variants: QAT-only baseline, fixed feedback, learned feedback.",
+        "date": "2026-03-25"
+      },
+      "metrics": {
+        "valBpb": null,
+        "valLoss": null,
+        "preQuantValBpb": null,
+        "preQuantValLoss": null,
+        "stepStop": null,
+        "wallclockSeconds": null,
+        "evalTimeSeconds": null
+      },
+      "artifact": {
+        "bytesTotal": null,
+        "bytesCode": null,
+        "bytesModelInt8Zlib": null
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
+      "pr": {
+        "number": 1230,
+        "title": "Stable Growing Recurrence: Progressive Depth + Error Feedback (non-record)",
+        "state": "closed",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1230",
+        "authorLogin": "nestamidavaine",
+        "authorName": null,
+        "createdAt": "2026-04-01T20:27:22Z",
+        "updatedAt": "2026-04-01T20:28:42Z",
+        "headSha": "c0db831d60211e582ddac1f33a385ef18ac941c9",
+        "headRepo": "nestamidavaine/parameter-golf"
+      },
+      "links": {
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/c0db831d60211e582ddac1f33a385ef18ac941c9/records/track_10min_16mb/2026-03-25_RecurrentCore_LearnedFeedback_QAT/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/c0db831d60211e582ddac1f33a385ef18ac941c9/records/track_10min_16mb/2026-03-25_RecurrentCore_LearnedFeedback_QAT/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/c0db831d60211e582ddac1f33a385ef18ac941c9/records/track_10min_16mb/2026-03-25_RecurrentCore_LearnedFeedback_QAT/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/c0db831d60211e582ddac1f33a385ef18ac941c9/records/track_10min_16mb/2026-03-25_RecurrentCore_LearnedFeedback_QAT/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/c0db831d60211e582ddac1f33a385ef18ac941c9/records/track_10min_16mb/2026-03-25_RecurrentCore_LearnedFeedback_QAT",
+        "pr": "https://github.com/openai/parameter-golf/pull/1230",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
       "provenance": {

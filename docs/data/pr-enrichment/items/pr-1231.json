@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-04-01T20:55:11.746Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1231,
+    "title": "Non-record: Stable Growing Recurrence, Progressive Depth + Error Feedback ",
+    "state": "open",
+    "updatedAt": "2026-04-01T20:30:34Z",
+    "headSha": "f0dc83bd47369a6c031917a644d4a53daa2217be",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1231",
+    "authorLogin": "nestamidavaine"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-03-26_Stable_Growing_Recurrance/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Progressively grow recurrence passes while using learnable residual scaling, error-feedback, and Jacobian-proxy regularization to stabilize depth reuse.",
+    "tags": [
+      "val-only",
+      "architecture",
+      "training-schedule",
+      "regularization"
+    ],
+    "usesValOnly": true,
+    "valOnlyReasoning": "Legal TTT trains on already-scored validation chunks between sliding-window evaluations.",
+    "techniques": [
+      "Progressive pass schedule (1→2→3) late in training",
+      "Residual-scale + rank-2 error feedback stabilizes recurrence",
+      "Jacobian-proxy loss keeps multi-pass dynamics contractive"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": true,
+    "finalUsesValOnly": true,
+    "valOnlyMatchesCollector": false
+  }
+}

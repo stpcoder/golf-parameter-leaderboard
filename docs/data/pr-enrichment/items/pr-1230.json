@@ -1,0 +1,44 @@
+{
+  "generatedAt": "2026-04-01T20:55:26.434Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1230,
+    "title": "Stable Growing Recurrence: Progressive Depth + Error Feedback (non-record)",
+    "state": "closed",
+    "updatedAt": "2026-04-01T20:28:42Z",
+    "headSha": "c0db831d60211e582ddac1f33a385ef18ac941c9",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1230",
+    "authorLogin": "nestamidavaine"
+  },
+  "inputs": {
+    "hash": "333c1651a7101d4267d971ebe25bd793307b61c975586544bbd6b9a9c3a8cf24",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-26_RecurrentSOTA_Feedback/README.md",
+      "records/track_10min_16mb/2026-03-25_RecurrentCore_LearnedFeedback_QAT/README.md"
+    ],
+    "submissionCount": 2
+  },
+  "output": {
+    "summary": "Progressively grows recurrence depth late in training with contractive residual scaling, error feedback, and a Jacobian proxy for int6 multi-pass stability.",
+    "tags": [
+      "architecture",
+      "training-schedule",
+      "regularization",
+      "quantization"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "late-growth recurrence schedule",
+      "per-pass residual scaling plus Jacobian proxy",
+      "low-rank error feedback before recurrence"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}
