@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-26T23:44:04.317Z",
+  "generatedAt": "2026-04-01T15:53:33.828Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 905,
     "title": "Non-record: Prefix-Conditioned Suffix Diffusion — True Discrete Diffusion (diffusion_pll_bpb=1.8587)",
     "state": "open",
-    "updatedAt": "2026-03-26T22:30:54Z",
-    "headSha": "bc8b5e76cc68d9b4790f1177c05b85c285890746",
+    "updatedAt": "2026-04-01T15:37:07Z",
+    "headSha": "58bb9f4ec49a15cace440c1d8750c4c6ab3eb8f4",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/905",
     "authorLogin": "anthony-maio"
   },
@@ -19,7 +19,7 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Prototype true discrete diffusion that denoises suffixes conditioned on clean prefixes via timestep/role embeddings and absorbing-mask corruption for an approximate PLL eval.",
+    "summary": "Trains a discrete diffusion model that denoises suffix tokens conditioned on clean prefixes via absorbing-mask corruption and timestep/role embeddings.",
     "tags": [
       "architecture",
       "evaluation",
@@ -28,9 +28,9 @@
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Prefix-conditioned absorbing-mask suffix denoising",
-      "Timestep and prefix/suffix role embeddings",
-      "Approximate prefix-conditioned PLL evaluation"
+      "Prefix-conditioned suffix diffusion with absorbing-mask corruption",
+      "Denoising loss focused on suffix tokens using timestep and role embeddings",
+      "Approximate prefix-conditioned diffusion PLL scoring"
     ]
   },
   "compatibility": {

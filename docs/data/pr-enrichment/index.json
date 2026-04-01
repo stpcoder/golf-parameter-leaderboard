@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-01T15:23:24.602Z",
+  "generatedAt": "2026-04-01T15:53:47.020Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
@@ -4120,15 +4120,15 @@
       "prNumber": 974,
       "title": "Non-record: Random Linear Map Adapter Projections — 1.21MB artifact (val_bpb=1.6542)",
       "status": "open",
-      "updatedAt": "2026-03-29T23:16:01Z",
-      "headSha": "6087af53d7558cccdd768556ae4544f7305f44df",
-      "generatedAt": "2026-03-29T23:32:15.292Z",
-      "summary": "Random seeded Rademacher projections replace most attention weights with learned LoRA adapters reconstructing matrices for a tiny artifact budget.",
+      "updatedAt": "2026-04-01T15:38:34Z",
+      "headSha": "bb9e853516d90c74b1c196c2f905447196c7f077",
+      "generatedAt": "2026-04-01T15:53:23.433Z",
+      "summary": "Replaces most dense projections with seed-regenerated frozen Rademacher maps plus tiny LoRA adapters to minimize artifact size.",
       "tags": [
+        "non-record",
         "architecture",
         "compression",
-        "regularization",
-        "non-record"
+        "attention"
       ],
       "flags": {
         "usesValOnly": false,
@@ -4814,10 +4814,10 @@
       "prNumber": 932,
       "title": "Non-record: CoDA-GQA Differential Attention — First Differential Attention Submission (val_bpb=1.1580)",
       "status": "open",
-      "updatedAt": "2026-03-27T05:23:36Z",
-      "headSha": "99a188bff6369b1cb74515f0b283b1ffd0cc2423",
-      "generatedAt": "2026-03-27T05:44:34.378Z",
-      "summary": "Adds CoDA-GQA differential attention that subtracts a gated, orthogonally rotated noise stream from standard SDPA outputs without needing a second query projection.",
+      "updatedAt": "2026-04-01T15:34:56Z",
+      "headSha": "6e5025682ee4df17889ee81c756507d4ca99c41a",
+      "generatedAt": "2026-04-01T15:53:28.266Z",
+      "summary": "CoDA-GQA sharpens attention by subtracting gated rotated noise queries sharing K/V without a second Wq, trading dual SDPA overhead for sharper signal.",
       "tags": [
         "attention",
         "architecture",
@@ -5298,10 +5298,10 @@
       "prNumber": 905,
       "title": "Non-record: Prefix-Conditioned Suffix Diffusion — True Discrete Diffusion (diffusion_pll_bpb=1.8587)",
       "status": "open",
-      "updatedAt": "2026-03-26T22:30:54Z",
-      "headSha": "bc8b5e76cc68d9b4790f1177c05b85c285890746",
-      "generatedAt": "2026-03-26T23:44:04.317Z",
-      "summary": "Prototype true discrete diffusion that denoises suffixes conditioned on clean prefixes via timestep/role embeddings and absorbing-mask corruption for an approximate PLL eval.",
+      "updatedAt": "2026-04-01T15:37:07Z",
+      "headSha": "58bb9f4ec49a15cace440c1d8750c4c6ab3eb8f4",
+      "generatedAt": "2026-04-01T15:53:33.828Z",
+      "summary": "Trains a discrete diffusion model that denoises suffix tokens conditioned on clean prefixes via absorbing-mask corruption and timestep/role embeddings.",
       "tags": [
         "architecture",
         "evaluation",
@@ -5321,11 +5321,12 @@
       "prNumber": 904,
       "title": "Non-record: Diffusion-Noised Teacher AR Hybrid (val_bpb=1.2734, 8xH100)",
       "status": "open",
-      "updatedAt": "2026-03-26T22:29:55Z",
-      "headSha": "8828d3a1a433968bc73505aa6c0d8deee0407c55",
-      "generatedAt": "2026-03-26T23:44:10.586Z",
-      "summary": "Standard AR transformer is trained with diffusion-inspired noised inputs, blending clean and corrupted losses while ramping noise to build robust representations.",
+      "updatedAt": "2026-04-01T15:36:04Z",
+      "headSha": "4a82ac90dd898331d46f1efb770f4d4d49f7b8c5",
+      "generatedAt": "2026-04-01T15:53:41.690Z",
+      "summary": "Standard AR transformer trained with diffusion-inspired auxiliary loss that ramps corruption from 5–35% while interpolating clean and noisy losses.",
       "tags": [
+        "architecture",
         "regularization",
         "training-schedule",
         "non-record"
@@ -14320,14 +14321,15 @@
       "prNumber": 321,
       "title": "Add record: Optimizer Tuning + Sliding Window Eval (val_bpb=1.1864)",
       "status": "open",
-      "updatedAt": "2026-03-27T03:55:20Z",
-      "headSha": "c2fb71404e962c6f99186f38f3e86bfc33b9c62e",
-      "generatedAt": "2026-04-01T03:19:22.699Z",
-      "summary": "Retunes muon+Adam hyperparams, trains with 2048-step context, and evaluates via stride-64 sliding windows on the unchanged 9x512 ReLU² model.",
+      "updatedAt": "2026-04-01T15:34:07Z",
+      "headSha": "d64725894dbd3acc6704fa472b75cc804fe1138b",
+      "generatedAt": "2026-04-01T15:53:46.974Z",
+      "summary": "Tuned warmdown, muon steps, grad clipping, and scalar LR while training at seq2048 and using sliding-window eval, keeping the baseline arch with int8+zlib compression.",
       "tags": [
         "optimizer",
+        "training-schedule",
         "evaluation",
-        "training-schedule"
+        "compression"
       ],
       "flags": {
         "usesValOnly": false,

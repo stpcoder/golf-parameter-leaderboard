@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-27T05:44:34.378Z",
+  "generatedAt": "2026-04-01T15:53:28.266Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 932,
     "title": "Non-record: CoDA-GQA Differential Attention — First Differential Attention Submission (val_bpb=1.1580)",
     "state": "open",
-    "updatedAt": "2026-03-27T05:23:36Z",
-    "headSha": "99a188bff6369b1cb74515f0b283b1ffd0cc2423",
+    "updatedAt": "2026-04-01T15:34:56Z",
+    "headSha": "6e5025682ee4df17889ee81c756507d4ca99c41a",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/932",
     "authorLogin": "anthony-maio"
   },
@@ -19,7 +19,7 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Adds CoDA-GQA differential attention that subtracts a gated, orthogonally rotated noise stream from standard SDPA outputs without needing a second query projection.",
+    "summary": "CoDA-GQA sharpens attention by subtracting gated rotated noise queries sharing K/V without a second Wq, trading dual SDPA overhead for sharper signal.",
     "tags": [
       "attention",
       "architecture",
@@ -28,9 +28,9 @@
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Orthogonal rotation of attention query for noise stream",
-      "Gated subtraction of signal and noise followed by RMSNorm",
-      "Reuses same KV cache to avoid extra W_q matrix"
+      "orthogonal rotation noise query with shared KV",
+      "lambda-gated subtraction and RMSNorm output",
+      "coarse CoDA on-ramp via sigmoid(-6)"
     ]
   },
   "compatibility": {

@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-04-01T03:19:22.699Z",
+  "generatedAt": "2026-04-01T15:53:46.974Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 321,
     "title": "Add record: Optimizer Tuning + Sliding Window Eval (val_bpb=1.1864)",
     "state": "open",
-    "updatedAt": "2026-03-27T03:55:20Z",
-    "headSha": "c2fb71404e962c6f99186f38f3e86bfc33b9c62e",
+    "updatedAt": "2026-04-01T15:34:07Z",
+    "headSha": "d64725894dbd3acc6704fa472b75cc804fe1138b",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/321",
     "authorLogin": "andreanjos"
   },
@@ -19,18 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Retunes muon+Adam hyperparams, trains with 2048-step context, and evaluates via stride-64 sliding windows on the unchanged 9x512 ReLU² model.",
+    "summary": "Tuned warmdown, muon steps, grad clipping, and scalar LR while training at seq2048 and using sliding-window eval, keeping the baseline arch with int8+zlib compression.",
     "tags": [
       "optimizer",
+      "training-schedule",
       "evaluation",
-      "training-schedule"
+      "compression"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "muon optimizer tweaks: warmdown 10k, grad clip 1, beta2 0.99, scalar lr 0.02",
-      "train at 2048 tokens with the baseline 9x512 ReLU² layout",
-      "stride-64 sliding-window eval scoring last tokens"
+      "Seq2048 training with extended warmdown and tuned muon backend",
+      "Sliding-window stride-64 evaluation to give each token maximum context",
+      "Int8+zlib artifact to stay under the 16MB cap"
     ]
   },
   "compatibility": {

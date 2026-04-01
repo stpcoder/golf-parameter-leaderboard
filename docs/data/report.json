@@ -1,22 +1,17 @@
 {
-  "generatedAt": "2026-04-01T15:22:35.916Z",
+  "generatedAt": "2026-04-01T15:52:48.455Z",
   "sourceRepo": "openai/parameter-golf",
   "siteRoot": null,
   "tokenConfigured": true,
-  "skipped": [
-    {
-      "pr": 1222,
-      "reason": "no-record-submission-json"
-    }
-  ],
+  "skipped": [],
   "errors": [],
   "incremental": {
     "mode": "incremental",
-    "cutoffUpdatedAt": "2026-04-01T14:51:21Z",
+    "cutoffUpdatedAt": "2026-04-01T15:13:14Z",
     "pagesScanned": 2,
     "prsScanned": 200,
-    "prsRefreshed": 2,
-    "prsReused": 198,
+    "prsRefreshed": 5,
+    "prsReused": 195,
     "stoppedEarly": true,
     "refreshFailures": 0,
     "cacheEntries": 1168,
