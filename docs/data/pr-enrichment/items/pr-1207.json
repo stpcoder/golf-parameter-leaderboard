@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-04-01T04:19:36.904Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1207,
+    "title": "HYDRA-Ω: SLOT-Optimized Parameter-Efficient Language Model (WIP)",
+    "state": "open",
+    "updatedAt": "2026-04-01T04:06:18Z",
+    "headSha": "cf96c24e5e8ea0085cea6e5e1f10935920dda2ad",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1207",
+    "authorLogin": "RAVINDRA8008"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-04-01_HYDRA_OMEGA/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Small 11-layer transformer shifts gains to eval adaptation via SLOT hidden-state deltas, score-first TTT, and Full-Hessian GPTQ int6 quantization.",
+    "tags": [
+      "evaluation",
+      "quantization",
+      "optimizer"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "SLOT hidden-state delta optimization",
+      "Score-first test-time training freezing early blocks",
+      "Full-Hessian GPTQ int6 quantization"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

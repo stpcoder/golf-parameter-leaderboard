@@ -1,8 +1,52 @@
 {
-  "generatedAt": "2026-04-01T03:49:21.729Z",
+  "generatedAt": "2026-04-01T04:20:01.598Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 1208,
+      "title": "Nightcrawler — 1.17651313 val_bpb (seed 444)",
+      "status": "open",
+      "updatedAt": "2026-04-01T04:17:29Z",
+      "headSha": "6f8e09379ad12584f20f925fdcced3462f706501",
+      "generatedAt": "2026-04-01T04:19:33.081Z",
+      "summary": "Adds a fifth flat transformer layer on each side of the crawler bottleneck and shares TAP encoder connections across crawler loops.",
+      "tags": [
+        "architecture"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1208.json"
+    },
+    {
+      "prNumber": 1207,
+      "title": "HYDRA-Ω: SLOT-Optimized Parameter-Efficient Language Model (WIP)",
+      "status": "open",
+      "updatedAt": "2026-04-01T04:06:18Z",
+      "headSha": "cf96c24e5e8ea0085cea6e5e1f10935920dda2ad",
+      "generatedAt": "2026-04-01T04:19:36.904Z",
+      "summary": "Small 11-layer transformer shifts gains to eval adaptation via SLOT hidden-state deltas, score-first TTT, and Full-Hessian GPTQ int6 quantization.",
+      "tags": [
+        "evaluation",
+        "quantization",
+        "optimizer"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1207.json"
+    },
     {
       "prNumber": 1206,
       "title": "Non-record: Universal Transformer (4h unlimited compute track)",
@@ -427,23 +471,23 @@
       "prNumber": 1185,
       "title": "[10min_16mb] 0.9641 BPB: LeakyReLU² + Score-First TTT + N-gram Backoff Cache",
       "status": "open",
-      "updatedAt": "2026-03-31T16:48:30Z",
-      "headSha": "20650e7373c169d15896593c004553adf111082f",
-      "generatedAt": "2026-03-31T17:15:05.475Z",
-      "summary": "11L GQA transformer with LeakyReLU², VE, and gated attention uses score-first legal TTT plus entropy-scaled Laplace-smoothed n-gram backoff cache.",
+      "updatedAt": "2026-04-01T04:11:10Z",
+      "headSha": "37fcb26e424ca7a5eb56013e313850cb6d8807b0",
+      "generatedAt": "2026-04-01T04:19:47.210Z",
+      "summary": "11-layer GQA model with LeakyReLU², gated attention, XSA-5, int6 quantization, score-first TTT, and a Laplace multi-order n-gram cache.",
       "tags": [
+        "val-only",
         "architecture",
-        "quantization",
-        "training-schedule",
+        "attention",
         "evaluation"
       ],
       "flags": {
-        "usesValOnly": false,
-        "usesValOnlyAi": false,
+        "usesValOnly": true,
+        "usesValOnlyAi": true,
         "usesValOnlyCollector": false
       },
       "compatibility": {
-        "valOnlyMatchesCollector": true
+        "valOnlyMatchesCollector": false
       },
       "file": "items/pr-1185.json"
     },
@@ -688,10 +732,10 @@
       "prNumber": 1170,
       "title": "Non-record: 11L NativeFlowMatcher + Legal TTT — val_bpb 1.1199 (3-seed mean no-TTT: 1.1225)",
       "status": "open",
-      "updatedAt": "2026-04-01T02:32:36Z",
+      "updatedAt": "2026-04-01T03:53:43Z",
       "headSha": "e75f03e5f8560eaab00cdd25997bd8e6c027c7aa",
-      "generatedAt": "2026-04-01T02:49:31.214Z",
-      "summary": "Adds OT-CFM NativeFlowMatcher as a gated residual correction on hidden states and evaluates it with legal score-first TTT on the 11L Muon transformer.",
+      "generatedAt": "2026-04-01T04:19:53.588Z",
+      "summary": "Integrates a gated NativeFlowMatcher OT-CFM velocity head with the transformer and applies legal TTT sliding evaluation corrections in the 11L budget setting.",
       "tags": [
         "architecture",
         "training-schedule",
@@ -1165,28 +1209,6 @@
         "valOnlyMatchesCollector": true
       },
       "file": "items/pr-1141.json"
-    },
-    {
-      "prNumber": 1140,
-      "title": "Crawler —  8.8MB -1.1874 BPB (3-seed mean, 8xH100, 600s)",
-      "status": "open",
-      "updatedAt": "2026-04-01T03:29:32Z",
-      "headSha": "11949489d4de7d8fa9b5cbd4dba71f6e4f7baf88",
-      "generatedAt": "2026-04-01T03:49:14.924Z",
-      "summary": "Micro Crawler reuses a single crawler block over three looped causal horizons to iteratively refine inputs while QAT'd int8 MLPs keep the model ~9MB.",
-      "tags": [
-        "architecture",
-        "quantization"
-      ],
-      "flags": {
-        "usesValOnly": false,
-        "usesValOnlyAi": false,
-        "usesValOnlyCollector": false
-      },
-      "compatibility": {
-        "valOnlyMatchesCollector": true
-      },
-      "file": "items/pr-1140.json"
     },
     {
       "prNumber": 1139,
@@ -1748,16 +1770,16 @@
     },
     {
       "prNumber": 1105,
-      "title": "Record: Fused MLP (Triton+CUTLASS EVT) + MLP 3.5× + Mixed int5/int6 + Brotli — 1.1125 BPB (3-seed mean)",
+      "title": "Record: Fused MLP (Triton+CUTLASS EVT) + Fast Causal N-Gram Tilt & Subword Certainty— 1.1052 BPB (3-seed mean)",
       "status": "open",
-      "updatedAt": "2026-04-01T03:40:36Z",
-      "headSha": "2d58d1926406df8183bea4c08e6a8df5acd92132",
-      "generatedAt": "2026-04-01T03:49:21.569Z",
-      "summary": "Fuses Triton TMA forward and CUTLASS EVT backward MLP kernels, widens MLP to 3.5×, and uses Hessian-guided int5/int6 quantization with Brotli compression.",
+      "updatedAt": "2026-04-01T04:18:52Z",
+      "headSha": "d854d6256eae65f973882ad006a4c0ebf8c24dca",
+      "generatedAt": "2026-04-01T04:20:01.433Z",
+      "summary": "Fuses Triton TMA forward + CUTLASS EVT backward MLP kernels, widens MLP 3.5×, and uses Hessian-driven mixed int5/int6 quantization with Brotli packaging.",
       "tags": [
         "architecture",
         "quantization",
-        "compression"
+        "evaluation"
       ],
       "flags": {
         "usesValOnly": false,
