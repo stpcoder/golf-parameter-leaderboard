@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-04-01T13:52:31.698Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1221,
+    "title": "Non-record: Oscillatory Recurrence at Layer 0 (1.1915 BPB, 3-seed)",
+    "state": "open",
+    "updatedAt": "2026-04-01T13:41:48Z",
+    "headSha": "ef6d4d104d41e9d035988510011720aeb3260b1a",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1221",
+    "authorLogin": "amabito"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-04-01_Oscillatory_Recurrence_Layer0/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Hybrid stack starts with an oscillatory TRN recurrence layer before ten Transformer blocks to let recurrence inform attention-aware encoding.",
+    "tags": [
+      "architecture",
+      "attention",
+      "evaluation",
+      "quantization"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Oscillatory TRN at layer 0 before standard Transformer stack",
+      "Muon+Adam mix with warmdown SWA for stable training",
+      "Sliding-window eval plus per-tensor dynamic quantization"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

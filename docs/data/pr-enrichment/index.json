@@ -1,8 +1,32 @@
 {
-  "generatedAt": "2026-04-01T13:22:25.322Z",
+  "generatedAt": "2026-04-01T13:52:31.879Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 1221,
+      "title": "Non-record: Oscillatory Recurrence at Layer 0 (1.1915 BPB, 3-seed)",
+      "status": "open",
+      "updatedAt": "2026-04-01T13:41:48Z",
+      "headSha": "ef6d4d104d41e9d035988510011720aeb3260b1a",
+      "generatedAt": "2026-04-01T13:52:31.698Z",
+      "summary": "Hybrid stack starts with an oscillatory TRN recurrence layer before ten Transformer blocks to let recurrence inform attention-aware encoding.",
+      "tags": [
+        "architecture",
+        "attention",
+        "evaluation",
+        "quantization"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1221.json"
+    },
     {
       "prNumber": 1219,
       "title": "Record: PR #1105 + window attn + mixed seq_len — 1.1084 bpb (3-seed mean) 1.1084 bpb",
@@ -13752,30 +13776,6 @@
         "valOnlyMatchesCollector": true
       },
       "file": "items/pr-355.json"
-    },
-    {
-      "prNumber": 354,
-      "title": "[Non-record] MLA + SmearGate + BigramHash + SWA — pre-quant 1.2838 bpb",
-      "status": "open",
-      "updatedAt": "2026-03-21T16:57:41Z",
-      "headSha": "6c4d699f71942cd70eded445004f7e5af826d673",
-      "generatedAt": "2026-03-21T17:34:46.382Z",
-      "summary": "Stacked MLA attention, SmearGate MLP, BigramHash embeddings, and SWA under Muon tackle parameter efficiency before quantizing to int5/int6.",
-      "tags": [
-        "attention",
-        "architecture",
-        "optimizer",
-        "quantization"
-      ],
-      "flags": {
-        "usesValOnly": false,
-        "usesValOnlyAi": false,
-        "usesValOnlyCollector": false
-      },
-      "compatibility": {
-        "valOnlyMatchesCollector": true
-      },
-      "file": "items/pr-354.json"
     },
     {
       "prNumber": 352,

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-01T13:22:17.174Z",
+  "generatedAt": "2026-04-01T13:52:23.657Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "submissions": [
@@ -33978,6 +33978,83 @@
       }
     },
     {
+      "id": "record-records-track_non_record_16mb-2026-04-01_Oscillatory_Recurrence_Layer0",
+      "source": "pull_request",
+      "status": "open",
+      "category": "non-record",
+      "track": {
+        "path": "records/track_non_record_16mb",
+        "slug": "track_non_record_16mb",
+        "label": "Non-record / 16MB",
+        "official": false,
+        "category": "non-record"
+      },
+      "record": {
+        "folderName": "2026-04-01_Oscillatory_Recurrence_Layer0",
+        "folderPath": "records/track_non_record_16mb/2026-04-01_Oscillatory_Recurrence_Layer0",
+        "submissionPath": "records/track_non_record_16mb/2026-04-01_Oscillatory_Recurrence_Layer0/submission.json",
+        "readmePath": "records/track_non_record_16mb/2026-04-01_Oscillatory_Recurrence_Layer0/README.md",
+        "trainLogPath": "records/track_non_record_16mb/2026-04-01_Oscillatory_Recurrence_Layer0/train.log",
+        "scriptPath": "records/track_non_record_16mb/2026-04-01_Oscillatory_Recurrence_Layer0/train_gpt.py"
+      },
+      "submission": {
+        "author": "amabito",
+        "githubId": "amabito",
+        "name": "Oscillatory Recurrence at Layer 0",
+        "blurb": "11L hybrid (1 TRN + 10 Transformer). TRN oscillatory recurrence at layer 0 gives +0.031 BPP per-step quality over pure Transformer, but 13ms/step overhead costs 0.009 BPP at 600s finish. Only oscillatory recurrence submission in Parameter Golf.",
+        "date": "2026-04-01"
+      },
+      "metrics": {
+        "valBpb": 1.1915,
+        "valLoss": null,
+        "preQuantValBpb": null,
+        "preQuantValLoss": null,
+        "stepStop": null,
+        "wallclockSeconds": null,
+        "evalTimeSeconds": null
+      },
+      "artifact": {
+        "bytesTotal": 15177260,
+        "bytesCode": 157260,
+        "bytesModelInt8Zlib": null
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
+      "pr": {
+        "number": 1221,
+        "title": "Non-record: Oscillatory Recurrence at Layer 0 (1.1915 BPB, 3-seed)",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1221",
+        "authorLogin": "amabito",
+        "authorName": null,
+        "createdAt": "2026-04-01T13:41:48Z",
+        "updatedAt": "2026-04-01T13:41:48Z",
+        "headSha": "ef6d4d104d41e9d035988510011720aeb3260b1a",
+        "headRepo": "amabito/parameter-golf"
+      },
+      "links": {
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/ef6d4d104d41e9d035988510011720aeb3260b1a/records/track_non_record_16mb/2026-04-01_Oscillatory_Recurrence_Layer0/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/ef6d4d104d41e9d035988510011720aeb3260b1a/records/track_non_record_16mb/2026-04-01_Oscillatory_Recurrence_Layer0/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/ef6d4d104d41e9d035988510011720aeb3260b1a/records/track_non_record_16mb/2026-04-01_Oscillatory_Recurrence_Layer0/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/ef6d4d104d41e9d035988510011720aeb3260b1a/records/track_non_record_16mb/2026-04-01_Oscillatory_Recurrence_Layer0/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/ef6d4d104d41e9d035988510011720aeb3260b1a/records/track_non_record_16mb/2026-04-01_Oscillatory_Recurrence_Layer0",
+        "pr": "https://github.com/openai/parameter-golf/pull/1221",
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": false,
+        "hasPullRequest": true,
+        "listedInReadme": false
+      }
+    },
+    {
       "id": "record-records-track_non_record_16mb-2026-03-31_RandomMapAdapters_TrainEval",
       "source": "pull_request",
       "status": "open",
@@ -43748,83 +43825,6 @@
         "script": "https://github.com/openai/parameter-golf/blob/bca5086f76bfe786ecf85fdf9e71f4a5f8e65253/records/track_non_record_16mb/2026_03_24_seq-v_curriculum/train_gpt.py",
         "folder": "https://github.com/openai/parameter-golf/tree/bca5086f76bfe786ecf85fdf9e71f4a5f8e65253/records/track_non_record_16mb/2026_03_24_seq-v_curriculum",
         "pr": "https://github.com/openai/parameter-golf/pull/737",
-        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
-      },
-      "provenance": {
-        "onMain": false,
-        "hasPullRequest": true,
-        "listedInReadme": false
-      }
-    },
-    {
-      "id": "record-records-track_non_record_16mb-2026-03-21_MLA_SmearGate_BigramHash",
-      "source": "pull_request",
-      "status": "open",
-      "category": "non-record",
-      "track": {
-        "path": "records/track_non_record_16mb",
-        "slug": "track_non_record_16mb",
-        "label": "Non-record / 16MB",
-        "official": false,
-        "category": "non-record"
-      },
-      "record": {
-        "folderName": "2026-03-21_MLA_SmearGate_BigramHash",
-        "folderPath": "records/track_non_record_16mb/2026-03-21_MLA_SmearGate_BigramHash",
-        "submissionPath": "records/track_non_record_16mb/2026-03-21_MLA_SmearGate_BigramHash/submission.json",
-        "readmePath": "records/track_non_record_16mb/2026-03-21_MLA_SmearGate_BigramHash/README.md",
-        "trainLogPath": "records/track_non_record_16mb/2026-03-21_MLA_SmearGate_BigramHash/train.log",
-        "scriptPath": "records/track_non_record_16mb/2026-03-21_MLA_SmearGate_BigramHash/train_gpt.py"
-      },
-      "submission": {
-        "author": "Skrisps26",
-        "githubId": "skrisps26",
-        "name": "skrisps",
-        "blurb": null,
-        "date": "2026-03-21T16:43:25Z"
-      },
-      "metrics": {
-        "valBpb": 1.3559,
-        "valLoss": null,
-        "preQuantValBpb": null,
-        "preQuantValLoss": null,
-        "stepStop": null,
-        "wallclockSeconds": null,
-        "evalTimeSeconds": null
-      },
-      "artifact": {
-        "bytesTotal": null,
-        "bytesCode": null,
-        "bytesModelInt8Zlib": null
-      },
-      "flags": {
-        "usesValOnly": false
-      },
-      "detection": {
-        "valOnlyConfidence": "none",
-        "valOnlyMatches": []
-      },
-      "pr": {
-        "number": 354,
-        "title": "[Non-record] MLA + SmearGate + BigramHash + SWA — pre-quant 1.2838 bpb",
-        "state": "open",
-        "draft": false,
-        "mergedAt": null,
-        "htmlUrl": "https://github.com/openai/parameter-golf/pull/354",
-        "authorLogin": "Skrisps26",
-        "authorName": null,
-        "createdAt": "2026-03-21T16:43:25Z",
-        "updatedAt": "2026-03-21T16:57:41Z",
-        "headSha": "6c4d699f71942cd70eded445004f7e5af826d673",
-        "headRepo": "Skrisps26/parameter-golf"
-      },
-      "links": {
-        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/6c4d699f71942cd70eded445004f7e5af826d673/records/track_non_record_16mb/2026-03-21_MLA_SmearGate_BigramHash/submission.json",
-        "readme": "https://github.com/openai/parameter-golf/blob/6c4d699f71942cd70eded445004f7e5af826d673/records/track_non_record_16mb/2026-03-21_MLA_SmearGate_BigramHash/README.md",
-        "trainLog": "https://github.com/openai/parameter-golf/blob/6c4d699f71942cd70eded445004f7e5af826d673/records/track_non_record_16mb/2026-03-21_MLA_SmearGate_BigramHash/train.log",
-        "script": "https://github.com/openai/parameter-golf/blob/6c4d699f71942cd70eded445004f7e5af826d673/records/track_non_record_16mb/2026-03-21_MLA_SmearGate_BigramHash/train_gpt.py",
-        "folder": "https://github.com/openai/parameter-golf/tree/6c4d699f71942cd70eded445004f7e5af826d673/records/track_non_record_16mb/2026-03-21_MLA_SmearGate_BigramHash",
-        "pr": "https://github.com/openai/parameter-golf/pull/354",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
       "provenance": {
