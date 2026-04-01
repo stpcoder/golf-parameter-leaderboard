@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-01T13:52:31.879Z",
+  "generatedAt": "2026-04-01T14:22:48.902Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
@@ -79,13 +79,13 @@
       "prNumber": 1217,
       "title": "Record: MuonEq-R + Context-Only SLOT + QK_GAIN=5.0 — val_bpb 1.1027 (3-seed mean)",
       "status": "open",
-      "updatedAt": "2026-04-01T12:24:13Z",
+      "updatedAt": "2026-04-01T14:09:35Z",
       "headSha": "1b462047cba314e27afefd29c42463bb8ad06985",
-      "generatedAt": "2026-04-01T12:52:14.747Z",
-      "summary": "Combine MuonEq-R orthogonalization, QK_GAIN=5.0 scaling, and causal context-only SLOT for sliding evaluation.",
+      "generatedAt": "2026-04-01T14:22:42.394Z",
+      "summary": "Pairs MuonEq-R row-normalized orthogonalization, a QK_GAIN=5.0 sweep, and causal context-only SLOT delta tuning in sliding-window eval.",
       "tags": [
+        "muon",
         "optimizer",
-        "attention",
         "evaluation"
       ],
       "flags": {
@@ -1983,14 +1983,15 @@
       "prNumber": 1105,
       "title": "Record: Fused MLP (Triton+CUTLASS EVT) + Fast Causal N-Gram Tilt & Subword Certainty— 1.1052 BPB (3-seed mean)",
       "status": "open",
-      "updatedAt": "2026-04-01T04:46:06Z",
-      "headSha": "d854d6256eae65f973882ad006a4c0ebf8c24dca",
-      "generatedAt": "2026-04-01T04:49:30.504Z",
-      "summary": "Fuses Triton TMA forward + CUTLASS EVT backward MLP kernels, widens MLP 3.5× with Hessian-guided mixed int5/int6 quant, and adds a fast causal n-gram tilt.",
+      "updatedAt": "2026-04-01T13:58:28Z",
+      "headSha": "d381a51b26b3ccb063b11618e06ef203459b3fce",
+      "generatedAt": "2026-04-01T14:22:48.742Z",
+      "summary": "Combines Triton/CUTLASS-fused MLP kernels, Hessian-guided mixed int5/int6 quant to unlock a 3.5× MLP, and GPU causal n-gram tilt plus Brotli.",
       "tags": [
-        "quantization",
         "architecture",
-        "evaluation"
+        "quantization",
+        "evaluation",
+        "compression"
       ],
       "flags": {
         "usesValOnly": false,
