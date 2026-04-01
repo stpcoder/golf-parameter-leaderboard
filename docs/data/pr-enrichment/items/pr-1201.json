@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-31T21:45:45.181Z",
+  "generatedAt": "2026-04-01T01:48:31.083Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 1201,
     "title": "records: add 2026-03-27 TrigramHash run, harden quantization safety, and clean docs",
     "state": "closed",
-    "updatedAt": "2026-03-31T21:32:27Z",
+    "updatedAt": "2026-04-01T01:43:11Z",
     "headSha": "8274cbfc37be74c1f81d08ed0a7723de9e3e50af",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/1201",
     "authorLogin": "Mister2005"
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Combines TrigramHash embeddings, value-residual attention, bank-level QAT with GradQuant, MTP heads, and Adam TTT for fast 16MB track submissions.",
+    "summary": "TrigramHash embeddings with value-residual fusion, bank-level GradQuant/QAT, MTP heads, and Adam-mode score-first TTT for the 10min/16MB quantized run.",
     "tags": [
       "quantization",
-      "attention",
       "architecture",
-      "optimizer"
+      "optimizer",
+      "training-schedule"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "TrigramHash embedding with value-residual attention blend",
-      "Bank-level QAT plus GradQuant tiering with MTP-aware training",
-      "Adam-compatible TTT pipeline and lzma-compressed exports"
+      "TrigramHash embeddings fused with value residual paths",
+      "Bank-level GradQuant tiered quantization with MTP-excluded export",
+      "Adam-mode legal score-first TTT"
     ]
   },
   "compatibility": {

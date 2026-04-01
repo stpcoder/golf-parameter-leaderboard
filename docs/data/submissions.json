@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-01T01:17:43.239Z",
+  "generatedAt": "2026-04-01T01:48:17.404Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "submissions": [
@@ -5688,7 +5688,7 @@
         "authorLogin": "icryo",
         "authorName": null,
         "createdAt": "2026-03-31T16:01:28Z",
-        "updatedAt": "2026-03-31T16:01:28Z",
+        "updatedAt": "2026-04-01T01:31:39Z",
         "headSha": "4cbc43f290f4cf4efde795163b3e8db9f86dfaf8",
         "headRepo": "icryo/parameter-golf"
       },
@@ -21803,6 +21803,83 @@
         "script": "https://github.com/openai/parameter-golf/blob/2107e74514f4e4c22423ec2c5a629c104ee81e4d/records/track_10min_16mb/2026-03-22_BigramContext_MixedQuant_SWA/train_gpt.py",
         "folder": "https://github.com/openai/parameter-golf/tree/2107e74514f4e4c22423ec2c5a629c104ee81e4d/records/track_10min_16mb/2026-03-22_BigramContext_MixedQuant_SWA",
         "pr": "https://github.com/openai/parameter-golf/pull/447",
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": false,
+        "hasPullRequest": true,
+        "listedInReadme": false
+      }
+    },
+    {
+      "id": "record-records-track_10min_16mb-2026-04-01_TurboMuon_EngramLite_Improved",
+      "source": "pull_request",
+      "status": "open",
+      "category": "main-track",
+      "track": {
+        "path": "records/track_10min_16mb",
+        "slug": "track_10min_16mb",
+        "label": "10 Minute / 16MB",
+        "official": true,
+        "category": "main-track"
+      },
+      "record": {
+        "folderName": "2026-04-01_TurboMuon_EngramLite_Improved",
+        "folderPath": "records/track_10min_16mb/2026-04-01_TurboMuon_EngramLite_Improved",
+        "submissionPath": "records/track_10min_16mb/2026-04-01_TurboMuon_EngramLite_Improved/submission.json",
+        "readmePath": "records/track_10min_16mb/2026-04-01_TurboMuon_EngramLite_Improved/README.md",
+        "trainLogPath": "records/track_10min_16mb/2026-04-01_TurboMuon_EngramLite_Improved/train.log",
+        "scriptPath": "records/track_10min_16mb/2026-04-01_TurboMuon_EngramLite_Improved/train_gpt.py"
+      },
+      "submission": {
+        "author": "SergheiBrinza",
+        "githubId": "SergheiBrinza",
+        "name": "Serghei Brinza",
+        "blurb": null,
+        "date": "2026-04-01"
+      },
+      "metrics": {
+        "valBpb": 1.1431,
+        "valLoss": null,
+        "preQuantValBpb": null,
+        "preQuantValLoss": null,
+        "stepStop": null,
+        "wallclockSeconds": null,
+        "evalTimeSeconds": null
+      },
+      "artifact": {
+        "bytesTotal": null,
+        "bytesCode": null,
+        "bytesModelInt8Zlib": null
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
+      "pr": {
+        "number": 1205,
+        "title": "Non-record: Turbo-Muon + EngramLite(10240) + VE(8,9,10) — val_bpb 1.1431",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1205",
+        "authorLogin": "SergheiBrinza",
+        "authorName": null,
+        "createdAt": "2026-04-01T01:18:36Z",
+        "updatedAt": "2026-04-01T01:21:30Z",
+        "headSha": "974948e5cb33c769020f2509525da866bd42f0a3",
+        "headRepo": "SergheiBrinza/parameter-golf"
+      },
+      "links": {
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/974948e5cb33c769020f2509525da866bd42f0a3/records/track_10min_16mb/2026-04-01_TurboMuon_EngramLite_Improved/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/974948e5cb33c769020f2509525da866bd42f0a3/records/track_10min_16mb/2026-04-01_TurboMuon_EngramLite_Improved/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/974948e5cb33c769020f2509525da866bd42f0a3/records/track_10min_16mb/2026-04-01_TurboMuon_EngramLite_Improved/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/974948e5cb33c769020f2509525da866bd42f0a3/records/track_10min_16mb/2026-04-01_TurboMuon_EngramLite_Improved/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/974948e5cb33c769020f2509525da866bd42f0a3/records/track_10min_16mb/2026-04-01_TurboMuon_EngramLite_Improved",
+        "pr": "https://github.com/openai/parameter-golf/pull/1205",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
       "provenance": {
@@ -38954,17 +39031,17 @@
         "valOnlyMatches": []
       },
       "pr": {
-        "number": 370,
-        "title": "Add submission: Mixed Quantization + BigramHash + SWA (val_bpb 1.2421)",
+        "number": 1205,
+        "title": "Non-record: Turbo-Muon + EngramLite(10240) + VE(8,9,10) — val_bpb 1.1431",
         "state": "open",
         "draft": false,
         "mergedAt": null,
-        "htmlUrl": "https://github.com/openai/parameter-golf/pull/370",
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1205",
         "authorLogin": "SergheiBrinza",
         "authorName": null,
-        "createdAt": "2026-03-21T20:43:26Z",
-        "updatedAt": "2026-03-21T20:43:26Z",
-        "headSha": "3b714bc75630767daafaf387a30fbbda1e0a36f6",
+        "createdAt": "2026-04-01T01:18:36Z",
+        "updatedAt": "2026-04-01T01:21:30Z",
+        "headSha": "974948e5cb33c769020f2509525da866bd42f0a3",
         "headRepo": "SergheiBrinza/parameter-golf"
       },
       "links": {
@@ -38973,7 +39050,7 @@
         "trainLog": "https://github.com/openai/parameter-golf/blob/3b714bc75630767daafaf387a30fbbda1e0a36f6/records/track_10min_16mb/2026-03-21_MixedQuant_BigramHash_SWA/train.log",
         "script": "https://github.com/openai/parameter-golf/blob/3b714bc75630767daafaf387a30fbbda1e0a36f6/records/track_10min_16mb/2026-03-21_MixedQuant_BigramHash_SWA/train_gpt.py",
         "folder": "https://github.com/openai/parameter-golf/tree/3b714bc75630767daafaf387a30fbbda1e0a36f6/records/track_10min_16mb/2026-03-21_MixedQuant_BigramHash_SWA",
-        "pr": "https://github.com/openai/parameter-golf/pull/370",
+        "pr": "https://github.com/openai/parameter-golf/pull/1205",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
       "provenance": {
@@ -47510,7 +47587,7 @@
         "authorLogin": "Mister2005",
         "authorName": null,
         "createdAt": "2026-03-31T21:13:20Z",
-        "updatedAt": "2026-03-31T21:32:27Z",
+        "updatedAt": "2026-04-01T01:43:11Z",
         "headSha": "8274cbfc37be74c1f81d08ed0a7723de9e3e50af",
         "headRepo": "Mister2005/parameter-golf"
       },

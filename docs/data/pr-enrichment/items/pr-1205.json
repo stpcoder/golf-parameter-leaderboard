@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-04-01T01:48:24.387Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1205,
+    "title": "Non-record: Turbo-Muon + EngramLite(10240) + VE(8,9,10) — val_bpb 1.1431",
+    "state": "open",
+    "updatedAt": "2026-04-01T01:21:30Z",
+    "headSha": "974948e5cb33c769020f2509525da866bd42f0a3",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1205",
+    "authorLogin": "SergheiBrinza"
+  },
+  "inputs": {
+    "hash": "333c1651a7101d4267d971ebe25bd793307b61c975586544bbd6b9a9c3a8cf24",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-04-01_TurboMuon_EngramLite_Improved/README.md",
+      "records/track_10min_16mb/2026-03-21_MixedQuant_BigramHash_SWA/README.md"
+    ],
+    "submissionCount": 2
+  },
+  "output": {
+    "summary": "Turbo-Muon + EngramLite widened n-gram coverage and VE placement with higher LR/warmdown, then packed everything via int5 GPTQ/pruning to stay ≤16MB.",
+    "tags": [
+      "architecture",
+      "training-schedule",
+      "quantization"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Turbo-Muon + higher LR, warmdown tweaks",
+      "EngramLite 10240x48 with VE at layers 8-10",
+      "Int5 GPTQ with selective pruning"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

@@ -1,8 +1,31 @@
 {
-  "generatedAt": "2026-04-01T01:17:50.211Z",
+  "generatedAt": "2026-04-01T01:48:37.047Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 1205,
+      "title": "Non-record: Turbo-Muon + EngramLite(10240) + VE(8,9,10) — val_bpb 1.1431",
+      "status": "open",
+      "updatedAt": "2026-04-01T01:21:30Z",
+      "headSha": "974948e5cb33c769020f2509525da866bd42f0a3",
+      "generatedAt": "2026-04-01T01:48:24.387Z",
+      "summary": "Turbo-Muon + EngramLite widened n-gram coverage and VE placement with higher LR/warmdown, then packed everything via int5 GPTQ/pruning to stay ≤16MB.",
+      "tags": [
+        "architecture",
+        "training-schedule",
+        "quantization"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1205.json"
+    },
     {
       "prNumber": 1204,
       "title": "Record: ParallelResiduals + MiniDepthRecurrence, 1.1063 BPB / 1.8679 nats, -0.0072 vs PR #1179, -0.0143 vs merged SOTA",
@@ -78,15 +101,15 @@
       "prNumber": 1201,
       "title": "records: add 2026-03-27 TrigramHash run, harden quantization safety, and clean docs",
       "status": "closed",
-      "updatedAt": "2026-03-31T21:32:27Z",
+      "updatedAt": "2026-04-01T01:43:11Z",
       "headSha": "8274cbfc37be74c1f81d08ed0a7723de9e3e50af",
-      "generatedAt": "2026-03-31T21:45:45.181Z",
-      "summary": "Combines TrigramHash embeddings, value-residual attention, bank-level QAT with GradQuant, MTP heads, and Adam TTT for fast 16MB track submissions.",
+      "generatedAt": "2026-04-01T01:48:31.083Z",
+      "summary": "TrigramHash embeddings with value-residual fusion, bank-level GradQuant/QAT, MTP heads, and Adam-mode score-first TTT for the 10min/16MB quantized run.",
       "tags": [
         "quantization",
-        "attention",
         "architecture",
-        "optimizer"
+        "optimizer",
+        "training-schedule"
       ],
       "flags": {
         "usesValOnly": false,
@@ -403,15 +426,15 @@
       "prNumber": 1184,
       "title": "Record: Scylla + Full GPTQ + XSA-all + FA3 — val_bpb 0.9485 (3-seed mean)",
       "status": "open",
-      "updatedAt": "2026-03-31T16:01:28Z",
+      "updatedAt": "2026-04-01T01:31:39Z",
       "headSha": "4cbc43f290f4cf4efde795163b3e8db9f86dfaf8",
-      "generatedAt": "2026-03-31T16:14:29.020Z",
-      "summary": "Merges Scylla tokenization with PR #1060’s stack: XSA on all layers, FlashAttention 3, coprime loader, and full Hessian GPTQ quantization.",
+      "generatedAt": "2026-04-01T01:48:36.874Z",
+      "summary": "Combines the Scylla tokenizer with the PR #1060 stack to run full Hessian GPTQ, XSA on every layer, and FA3 attention for a modern quantized LM build.",
       "tags": [
         "tokenization",
-        "attention",
         "quantization",
-        "muon"
+        "attention",
+        "architecture"
       ],
       "flags": {
         "usesValOnly": false,
@@ -13255,29 +13278,6 @@
         "valOnlyMatchesCollector": true
       },
       "file": "items/pr-372.json"
-    },
-    {
-      "prNumber": 370,
-      "title": "Add submission: Mixed Quantization + BigramHash + SWA (val_bpb 1.2421)",
-      "status": "open",
-      "updatedAt": "2026-03-21T20:43:26Z",
-      "headSha": "3b714bc75630767daafaf387a30fbbda1e0a36f6",
-      "generatedAt": "2026-03-21T21:05:03.228Z",
-      "summary": "10-layer Transformer with U-Net skips, ReLU² MLP, BigramHash inputs, and mixed INT6/INT8 quantization trained with Muon + SWA and zstd-22 compression.",
-      "tags": [
-        "architecture",
-        "quantization",
-        "optimizer"
-      ],
-      "flags": {
-        "usesValOnly": false,
-        "usesValOnlyAi": false,
-        "usesValOnlyCollector": false
-      },
-      "compatibility": {
-        "valOnlyMatchesCollector": true
-      },
-      "file": "items/pr-370.json"
     },
     {
       "prNumber": 369,
