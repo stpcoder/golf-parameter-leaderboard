@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-01T09:50:56.171Z",
+  "generatedAt": "2026-04-01T10:21:22.279Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "submissions": [
@@ -23891,6 +23891,83 @@
       }
     },
     {
+      "id": "record-records-track_10min_16mb-2026-04-01_11L_INT6_XSA_all",
+      "source": "pull_request",
+      "status": "open",
+      "category": "main-track",
+      "track": {
+        "path": "records/track_10min_16mb",
+        "slug": "track_10min_16mb",
+        "label": "10 Minute / 16MB",
+        "official": true,
+        "category": "main-track"
+      },
+      "record": {
+        "folderName": "2026-04-01_11L_INT6_XSA_all",
+        "folderPath": "records/track_10min_16mb/2026-04-01_11L_INT6_XSA_all",
+        "submissionPath": "records/track_10min_16mb/2026-04-01_11L_INT6_XSA_all/submission.json",
+        "readmePath": "records/track_10min_16mb/2026-04-01_11L_INT6_XSA_all/README.md",
+        "trainLogPath": "records/track_10min_16mb/2026-04-01_11L_INT6_XSA_all/train.log",
+        "scriptPath": "records/track_10min_16mb/2026-04-01_11L_INT6_XSA_all/train_gpt.py"
+      },
+      "submission": {
+        "author": "Harsh Soni",
+        "githubId": "SoHarshH",
+        "name": "11L INT6 XSA-all + EMA + VE — ttt_bpb 1.1487 (unsubmittable: 19MB)",
+        "blurb": "11-layer INT6 QAT (mlp+attn+bigram) with XSA on all 11 layers, EMA(0.997), Value Embeddings (ve_dim=128, last 2 layers), Partial RoPE (16/64 dims), LN Scale 1/sqrt(layer+1), LZMA preset=9. ttt_bpb=1.1487, new quality best. Artifact is 19.03MB — over 16MB budget due to INT6 entropy being less compressible than INT4 under LZMA. GPTQ needed to compress below 16MB.",
+        "date": "2026-04-01"
+      },
+      "metrics": {
+        "valBpb": 1.1487,
+        "valLoss": null,
+        "preQuantValBpb": null,
+        "preQuantValLoss": null,
+        "stepStop": null,
+        "wallclockSeconds": null,
+        "evalTimeSeconds": null
+      },
+      "artifact": {
+        "bytesTotal": 19030284,
+        "bytesCode": null,
+        "bytesModelInt8Zlib": null
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
+      "pr": {
+        "number": 1216,
+        "title": "11L INT6 XSA-all + EMA + VE — ttt_bpb 1.1487",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1216",
+        "authorLogin": "SoHarshh",
+        "authorName": null,
+        "createdAt": "2026-04-01T09:58:54Z",
+        "updatedAt": "2026-04-01T09:58:54Z",
+        "headSha": "3da1210277138786caa79e8258cf10699d6cd019",
+        "headRepo": "SoHarshh/parameter-golf"
+      },
+      "links": {
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/3da1210277138786caa79e8258cf10699d6cd019/records/track_10min_16mb/2026-04-01_11L_INT6_XSA_all/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/3da1210277138786caa79e8258cf10699d6cd019/records/track_10min_16mb/2026-04-01_11L_INT6_XSA_all/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/3da1210277138786caa79e8258cf10699d6cd019/records/track_10min_16mb/2026-04-01_11L_INT6_XSA_all/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/3da1210277138786caa79e8258cf10699d6cd019/records/track_10min_16mb/2026-04-01_11L_INT6_XSA_all/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/3da1210277138786caa79e8258cf10699d6cd019/records/track_10min_16mb/2026-04-01_11L_INT6_XSA_all",
+        "pr": "https://github.com/openai/parameter-golf/pull/1216",
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": false,
+        "hasPullRequest": true,
+        "listedInReadme": false
+      }
+    },
+    {
       "id": "record-records-track_10min_16mb-2026-03-21_10L_MLP3x_BigramHash_SWA_Stride32",
       "source": "pull_request",
       "status": "open",
@@ -26509,6 +26586,83 @@
       }
     },
     {
+      "id": "record-records-track_10min_16mb-2026-03-28_12L_banked_VE",
+      "source": "pull_request",
+      "status": "open",
+      "category": "main-track",
+      "track": {
+        "path": "records/track_10min_16mb",
+        "slug": "track_10min_16mb",
+        "label": "10 Minute / 16MB",
+        "official": true,
+        "category": "main-track"
+      },
+      "record": {
+        "folderName": "2026-03-28_12L_banked_VE",
+        "folderPath": "records/track_10min_16mb/2026-03-28_12L_banked_VE",
+        "submissionPath": "records/track_10min_16mb/2026-03-28_12L_banked_VE/submission.json",
+        "readmePath": "records/track_10min_16mb/2026-03-28_12L_banked_VE/README.md",
+        "trainLogPath": "records/track_10min_16mb/2026-03-28_12L_banked_VE/train.log",
+        "scriptPath": "records/track_10min_16mb/2026-03-28_12L_banked_VE/train_gpt.py"
+      },
+      "submission": {
+        "author": "Harsh Soni",
+        "githubId": "SoHarshH",
+        "name": "12L banked + Parallel Muon + Value Embeddings — ttt_bpb 1.1571",
+        "blurb": "12-layer INT4 bQAT with model banking (3D weight tensors: qo/kv/mlp_up/mlp_down banks), Parallel Muon (async reduce-scatter over banked grads, no DDP), Value Embeddings (ve_dim=128, last 2 layers), EMA(0.997) with QAT-reset. Banking eliminates per-layer grad copy overhead: 138ms/step vs 148ms, yielding 4358 steps in 10 min (300 more than v7_ve). ttt_bpb=1.15711, new best.",
+        "date": "2026-03-28"
+      },
+      "metrics": {
+        "valBpb": 1.1571,
+        "valLoss": null,
+        "preQuantValBpb": null,
+        "preQuantValLoss": null,
+        "stepStop": null,
+        "wallclockSeconds": null,
+        "evalTimeSeconds": null
+      },
+      "artifact": {
+        "bytesTotal": 16465445,
+        "bytesCode": null,
+        "bytesModelInt8Zlib": null
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
+      "pr": {
+        "number": 1216,
+        "title": "11L INT6 XSA-all + EMA + VE — ttt_bpb 1.1487",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1216",
+        "authorLogin": "SoHarshh",
+        "authorName": null,
+        "createdAt": "2026-04-01T09:58:54Z",
+        "updatedAt": "2026-04-01T09:58:54Z",
+        "headSha": "3da1210277138786caa79e8258cf10699d6cd019",
+        "headRepo": "SoHarshh/parameter-golf"
+      },
+      "links": {
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/3da1210277138786caa79e8258cf10699d6cd019/records/track_10min_16mb/2026-03-28_12L_banked_VE/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/3da1210277138786caa79e8258cf10699d6cd019/records/track_10min_16mb/2026-03-28_12L_banked_VE/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/3da1210277138786caa79e8258cf10699d6cd019/records/track_10min_16mb/2026-03-28_12L_banked_VE/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/3da1210277138786caa79e8258cf10699d6cd019/records/track_10min_16mb/2026-03-28_12L_banked_VE/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/3da1210277138786caa79e8258cf10699d6cd019/records/track_10min_16mb/2026-03-28_12L_banked_VE",
+        "pr": "https://github.com/openai/parameter-golf/pull/1216",
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": false,
+        "hasPullRequest": true,
+        "listedInReadme": false
+      }
+    },
+    {
       "id": "record-records-track_non_record_16mb-2026-03-24_11L_XSA_SwiGLU_LoRATTT_1xH100",
       "source": "pull_request",
       "status": "open",
@@ -27327,17 +27481,17 @@
         "valOnlyMatches": []
       },
       "pr": {
-        "number": 1009,
-        "title": "12L INT4 bQAT + Value Embeddings — val_bpb 1.1588",
+        "number": 1216,
+        "title": "11L INT6 XSA-all + EMA + VE — ttt_bpb 1.1487",
         "state": "open",
         "draft": false,
         "mergedAt": null,
-        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1009",
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1216",
         "authorLogin": "SoHarshh",
         "authorName": null,
-        "createdAt": "2026-03-28T08:06:32Z",
-        "updatedAt": "2026-04-01T05:13:48Z",
-        "headSha": "f25c703a2de658e499ac46f3d21a90b99850b0b1",
+        "createdAt": "2026-04-01T09:58:54Z",
+        "updatedAt": "2026-04-01T09:58:54Z",
+        "headSha": "3da1210277138786caa79e8258cf10699d6cd019",
         "headRepo": "SoHarshh/parameter-golf"
       },
       "links": {
@@ -27346,7 +27500,7 @@
         "trainLog": "https://github.com/openai/parameter-golf/blob/8f803e96c525a092e20acba7409e6c4f1b8fa27a/records/track_10min_16mb/2026-03-28_12L_INT4_bQAT_VE/train.log",
         "script": "https://github.com/openai/parameter-golf/blob/8f803e96c525a092e20acba7409e6c4f1b8fa27a/records/track_10min_16mb/2026-03-28_12L_INT4_bQAT_VE/train_gpt.py",
         "folder": "https://github.com/openai/parameter-golf/tree/8f803e96c525a092e20acba7409e6c4f1b8fa27a/records/track_10min_16mb/2026-03-28_12L_INT4_bQAT_VE",
-        "pr": "https://github.com/openai/parameter-golf/pull/1009",
+        "pr": "https://github.com/openai/parameter-golf/pull/1216",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
       "provenance": {
@@ -28944,17 +29098,17 @@
         "valOnlyMatches": []
       },
       "pr": {
-        "number": 1009,
-        "title": "12L INT4 bQAT + Value Embeddings — val_bpb 1.1588",
+        "number": 1216,
+        "title": "11L INT6 XSA-all + EMA + VE — ttt_bpb 1.1487",
         "state": "open",
         "draft": false,
         "mergedAt": null,
-        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1009",
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1216",
         "authorLogin": "SoHarshh",
         "authorName": null,
-        "createdAt": "2026-03-28T08:06:32Z",
-        "updatedAt": "2026-04-01T05:13:48Z",
-        "headSha": "f25c703a2de658e499ac46f3d21a90b99850b0b1",
+        "createdAt": "2026-04-01T09:58:54Z",
+        "updatedAt": "2026-04-01T09:58:54Z",
+        "headSha": "3da1210277138786caa79e8258cf10699d6cd019",
         "headRepo": "SoHarshh/parameter-golf"
       },
       "links": {
@@ -28963,7 +29117,7 @@
         "trainLog": "https://github.com/openai/parameter-golf/blob/f25c703a2de658e499ac46f3d21a90b99850b0b1/records/track_10min_16mb/2026-03-28_13L_INT4_attn_failed/train.log",
         "script": "https://github.com/openai/parameter-golf/blob/f25c703a2de658e499ac46f3d21a90b99850b0b1/records/track_10min_16mb/2026-03-28_13L_INT4_attn_failed/train_gpt.py",
         "folder": "https://github.com/openai/parameter-golf/tree/f25c703a2de658e499ac46f3d21a90b99850b0b1/records/track_10min_16mb/2026-03-28_13L_INT4_attn_failed",
-        "pr": "https://github.com/openai/parameter-golf/pull/1009",
+        "pr": "https://github.com/openai/parameter-golf/pull/1216",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
       "provenance": {

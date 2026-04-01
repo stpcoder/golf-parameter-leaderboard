@@ -1,8 +1,31 @@
 {
-  "generatedAt": "2026-04-01T08:51:08.504Z",
+  "generatedAt": "2026-04-01T10:21:31.654Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 1216,
+      "title": "11L INT6 XSA-all + EMA + VE — ttt_bpb 1.1487",
+      "status": "open",
+      "updatedAt": "2026-04-01T09:58:54Z",
+      "headSha": "3da1210277138786caa79e8258cf10699d6cd019",
+      "generatedAt": "2026-04-01T10:21:31.475Z",
+      "summary": "Banked 12L INT4 bQAT model uses Parallel Muon reduce-scatter and value embeddings plus EMA/QAT resets to speed steps and boost quality before quantization.",
+      "tags": [
+        "architecture",
+        "muon",
+        "quantization"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1216.json"
+    },
     {
       "prNumber": 1215,
       "title": "12L rANS + LeakyReLU(0.95)² + Soft XSA (1.1601 BPB, non_record_16mb)",
@@ -3395,29 +3418,6 @@
         "valOnlyMatchesCollector": true
       },
       "file": "items/pr-1011.json"
-    },
-    {
-      "prNumber": 1009,
-      "title": "12L INT4 bQAT + Value Embeddings — val_bpb 1.1588",
-      "status": "open",
-      "updatedAt": "2026-04-01T05:13:48Z",
-      "headSha": "f25c703a2de658e499ac46f3d21a90b99850b0b1",
-      "generatedAt": "2026-04-01T05:19:23.031Z",
-      "summary": "INT4 bQAT with EMA-reset, U-Net skips, XSA, and value embeddings that reinject token identity into V layers 10-11 boost per-step quality in 12L model.",
-      "tags": [
-        "quantization",
-        "architecture",
-        "training-schedule"
-      ],
-      "flags": {
-        "usesValOnly": false,
-        "usesValOnlyAi": false,
-        "usesValOnlyCollector": false
-      },
-      "compatibility": {
-        "valOnlyMatchesCollector": true
-      },
-      "file": "items/pr-1009.json"
     },
     {
       "prNumber": 1008,

@@ -1,0 +1,45 @@
+{
+  "generatedAt": "2026-04-01T10:21:31.475Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1216,
+    "title": "11L INT6 XSA-all + EMA + VE — ttt_bpb 1.1487",
+    "state": "open",
+    "updatedAt": "2026-04-01T09:58:54Z",
+    "headSha": "3da1210277138786caa79e8258cf10699d6cd019",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1216",
+    "authorLogin": "SoHarshh"
+  },
+  "inputs": {
+    "hash": "579bb5ffe0be0c1712f71e5520c59dac8d390132277b2852c9d7b29d19e6e091",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-04-01_11L_INT6_XSA_all/README.md",
+      "records/track_10min_16mb/2026-03-28_12L_banked_VE/README.md",
+      "records/track_10min_16mb/2026-03-28_12L_INT4_bQAT_VE/README.md",
+      "records/track_10min_16mb/2026-03-28_13L_INT4_attn_failed/README.md"
+    ],
+    "submissionCount": 4
+  },
+  "output": {
+    "summary": "Banked 12L INT4 bQAT model uses Parallel Muon reduce-scatter and value embeddings plus EMA/QAT resets to speed steps and boost quality before quantization.",
+    "tags": [
+      "architecture",
+      "muon",
+      "quantization"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Banked 3D weight tensors eliminate grad copies so Parallel Muon runs faster",
+      "INT4 bQAT with EMA averaging and QAT-reset coordination",
+      "Value embeddings reintroduced into final V projections for late-layer refinement"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}
