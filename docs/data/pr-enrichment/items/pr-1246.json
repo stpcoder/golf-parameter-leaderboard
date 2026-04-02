@@ -1,25 +1,26 @@
 {
-  "generatedAt": "2026-04-02T15:03:10.073Z",
+  "generatedAt": "2026-04-02T16:03:37.275Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 1246,
     "title": "Record: Trinity Ternary GPT — val_bpb 0.9650 (ternary roundtrip)",
     "state": "open",
-    "updatedAt": "2026-04-02T14:37:28Z",
-    "headSha": "dd773c8120b712b6302dd3e4fa99df3e08c9d09f",
+    "updatedAt": "2026-04-02T15:49:24Z",
+    "headSha": "489839262f86ac29d4c76f19263f5b01483ce002",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/1246",
     "authorLogin": "deborahnelson8788726"
   },
   "inputs": {
-    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "hash": "333c1651a7101d4267d971ebe25bd793307b61c975586544bbd6b9a9c3a8cf24",
     "readmePaths": [
-      "records/track_10min_16mb/2026-04-01_Trinity_Ternary_ReluSq_UNet_NeoMuon/README.md"
+      "records/track_10min_16mb/2026-04-01_Trinity_Ternary_ReluSq_UNet_NeoMuon/README.md",
+      "records/track_10min_16mb/2026-04-02_Trinity_Hybrid_Ternary_GPTQ_XSA/README.md"
     ],
-    "submissionCount": 1
+    "submissionCount": 2
   },
   "output": {
-    "summary": "Trinity-inspired GPT uses BitNet ternary QAT, relu² MLP, Partial RoPE and NeoMuon tweaks to fit ~71M params under 16MB.",
+    "summary": "BitNet b1.58 ternary QAT from step 0 packs a relu² U-Net GPT (Partial RoPE, NeoMuon, Z-loss) into base-3 encoding to squeeze ~72M params under 16MB.",
     "tags": [
       "quantization",
       "architecture",
@@ -29,9 +30,9 @@
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "BitNet b1.58 ternary QAT with absmean scaling",
-      "relu² 4× MLP with Partial RoPE and U-Net skips",
-      "NeoMuon optimizer plus EMA/warmdown schedule"
+      "BitNet b1.58 ternary QAT with base-3 packing",
+      "NeoMuon optimizer with EMA/Z-loss for ternary STE",
+      "Partial RoPE plus relu² MLP4× expansions"
     ]
   },
   "compatibility": {

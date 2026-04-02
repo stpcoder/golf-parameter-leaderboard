@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-02T15:33:35.701Z",
+  "generatedAt": "2026-04-02T16:03:44.289Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
@@ -217,10 +217,10 @@
       "prNumber": 1246,
       "title": "Record: Trinity Ternary GPT — val_bpb 0.9650 (ternary roundtrip)",
       "status": "open",
-      "updatedAt": "2026-04-02T14:37:28Z",
-      "headSha": "dd773c8120b712b6302dd3e4fa99df3e08c9d09f",
-      "generatedAt": "2026-04-02T15:03:10.073Z",
-      "summary": "Trinity-inspired GPT uses BitNet ternary QAT, relu² MLP, Partial RoPE and NeoMuon tweaks to fit ~71M params under 16MB.",
+      "updatedAt": "2026-04-02T15:49:24Z",
+      "headSha": "489839262f86ac29d4c76f19263f5b01483ce002",
+      "generatedAt": "2026-04-02T16:03:37.275Z",
+      "summary": "BitNet b1.58 ternary QAT from step 0 packs a relu² U-Net GPT (Partial RoPE, NeoMuon, Z-loss) into base-3 encoding to squeeze ~72M params under 16MB.",
       "tags": [
         "quantization",
         "architecture",
@@ -543,23 +543,23 @@
       "prNumber": 1231,
       "title": "Non-record: Stable Growing Recurrence, Progressive Depth + Error Feedback (1.1163 BPB)",
       "status": "open",
-      "updatedAt": "2026-04-02T07:37:49Z",
+      "updatedAt": "2026-04-02T15:50:36Z",
       "headSha": "f0dc83bd47369a6c031917a644d4a53daa2217be",
-      "generatedAt": "2026-04-02T07:59:29.673Z",
-      "summary": "Progressive 1→2→3 recurrence passes with contractive residual scaling, error feedback, and Jacobian proxy regularization to keep recurrence practical under 600s/16MB limits.",
+      "generatedAt": "2026-04-02T16:03:44.112Z",
+      "summary": "Late-grow recurrence from 1→3 passes with learnable residual scaling, Jacobian proxy regularization, and low-rank error feedback to keep int6 dynamics stable under 10‑min TTT.",
       "tags": [
+        "val-only",
         "architecture",
         "training-schedule",
-        "regularization",
-        "quantization"
+        "regularization"
       ],
       "flags": {
-        "usesValOnly": false,
-        "usesValOnlyAi": false,
+        "usesValOnly": true,
+        "usesValOnlyAi": true,
         "usesValOnlyCollector": false
       },
       "compatibility": {
-        "valOnlyMatchesCollector": true
+        "valOnlyMatchesCollector": false
       },
       "file": "items/pr-1231.json"
     },
