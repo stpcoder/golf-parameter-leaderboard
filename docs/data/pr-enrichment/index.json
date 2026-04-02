@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-02T05:28:47.619Z",
+  "generatedAt": "2026-04-02T05:59:00.541Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
@@ -2492,17 +2492,17 @@
     },
     {
       "prNumber": 1105,
-      "title": "Record: Fused MLP (Triton+CUTLASS EVT) + Fast Causal N-Gram Tilt & Subword Certainty— 1.1052 BPB (3-seed mean)",
+      "title": "Record: Fused MLP (Triton+CUTLASS EVT) + Fast Causal N-Gram Tilt & Subword Certainty (3-seed mean)",
       "status": "open",
-      "updatedAt": "2026-04-02T05:26:59Z",
-      "headSha": "17d5028b13d4ed383271ab66be075a177ef39171",
-      "generatedAt": "2026-04-02T05:28:37.169Z",
-      "summary": "Fuses Triton TMA forward and CUTLASS EVT backward MLP kernels, widens MLP + Hessian-guided mixed int5/int6 quant, and adds fast n-gram tilt memory.",
+      "updatedAt": "2026-04-02T05:58:37Z",
+      "headSha": "850e1450c13991b12575ab04b5a18e2b7a21251e",
+      "generatedAt": "2026-04-02T05:59:00.381Z",
+      "summary": "Fuses Triton TMA/CUTLASS EVT kernels with cached act-grad, expands MLP + Hessian-guided mixed int5/int6 quant, and adds a fast sparse causal n-gram tilt memory.",
       "tags": [
-        "architecture",
         "quantization",
-        "evaluation",
-        "compression"
+        "architecture",
+        "training-schedule",
+        "evaluation"
       ],
       "flags": {
         "usesValOnly": false,
