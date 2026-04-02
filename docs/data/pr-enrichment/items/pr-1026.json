@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-28T15:53:24.420Z",
+  "generatedAt": "2026-04-02T06:30:05.071Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 1026,
     "title": "N-gram Cache + Entropy-Adaptive Alpha: 1.0945 BPB",
-    "state": "open",
-    "updatedAt": "2026-03-28T15:42:56Z",
+    "state": "closed",
+    "updatedAt": "2026-04-02T06:08:48Z",
     "headSha": "2767cdae1d210a28eb45dcc853f77d30747a6680",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/1026",
     "authorLogin": "danielxmed"
@@ -19,19 +19,16 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Order-7 byte N-gram cache with entropy-adaptive alpha interpolates CPU cache logps with GPU logits, replacing TTT while the base model uses GPTQ-lite int6 plus EMA+SWA.",
+    "summary": "Order-7 N-gram cache with entropy-adaptive alpha interpolates byte-frequency predictions with logits while overlapping CPU cache scoring with sliding-window eval.",
     "tags": [
-      "quantization",
-      "optimizer",
-      "evaluation",
-      "sliding-window-eval"
+      "evaluation"
     ],
     "usesValOnly": false,
-    "valOnlyReasoning": "Training uses standard track data; no validation-only regime was employed.",
+    "valOnlyReasoning": "",
     "techniques": [
-      "Entropy-adaptive alpha scales cache weight by per-token NLL",
-      "CPU-based N-gram cache runs concurrently with GPU sliding-window eval",
-      "Base stack couples GPTQ-lite int6 quantization with EMA(0.997)+SWA(50)"
+      "Entropy-scaled interpolation of high-order byte N-gram stats with model logits",
+      "CPU-based cache scoring overlaps GPU sliding-window eval",
+      "Strict backoff across N-gram orders when context absent"
     ]
   },
   "compatibility": {

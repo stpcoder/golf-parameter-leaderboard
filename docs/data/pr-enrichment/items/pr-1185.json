@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-04-01T04:19:47.210Z",
+  "generatedAt": "2026-04-02T06:29:39.707Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 1185,
     "title": "[10min_16mb] 0.9641 BPB: LeakyReLU² + Score-First TTT + N-gram Backoff Cache",
-    "state": "open",
-    "updatedAt": "2026-04-01T04:11:10Z",
+    "state": "closed",
+    "updatedAt": "2026-04-02T06:26:43Z",
     "headSha": "37fcb26e424ca7a5eb56013e313850cb6d8807b0",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/1185",
     "authorLogin": "skoustav35"
@@ -19,25 +19,25 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "11-layer GQA model with LeakyReLU², gated attention, XSA-5, int6 quantization, score-first TTT, and a Laplace multi-order n-gram cache.",
+    "summary": "11L LeakyReLU² GQA transformer with gated attention, Score-first TTT, Laplace-smoothed n-gram backoff cache, and int6 quantization.",
     "tags": [
-      "val-only",
       "architecture",
-      "attention",
-      "evaluation"
+      "evaluation",
+      "optimizer",
+      "quantization"
     ],
-    "usesValOnly": true,
-    "valOnlyReasoning": "Performs legal score-first test-time training with SGD updates on validation chunks before scoring.",
+    "usesValOnly": false,
+    "valOnlyReasoning": "Not a val-only training regime.",
     "techniques": [
-      "LeakyReLU² GQA + gated attention/XSA-5 + VE/BigramHash int6 quantization",
-      "Score-first SGD TTT over 32K-token chunks and stride 64 prior to updates",
-      "Laplace-smoothed multi-order n-gram backoff cache at evaluation"
+      "LeakyReLU² gated XSA-5 stack with value residuals and VE on top layers",
+      "Score-first legal TTT paired with entropy-adaptive Laplace-smoothed n-gram backoff cache",
+      "Int6 per-row quantization on Muon/Adam training with CROWN-Q late penalty"
     ]
   },
   "compatibility": {
     "collectorUsesValOnly": false,
-    "aiUsesValOnly": true,
-    "finalUsesValOnly": true,
-    "valOnlyMatchesCollector": false
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
   }
 }
