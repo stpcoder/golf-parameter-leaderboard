@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-02T09:30:16.641Z",
+  "generatedAt": "2026-04-02T10:00:26.201Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "submissions": [
@@ -10852,7 +10852,7 @@
         "authorLogin": "msisovic",
         "authorName": null,
         "createdAt": "2026-04-01T00:46:06Z",
-        "updatedAt": "2026-04-02T09:22:34Z",
+        "updatedAt": "2026-04-02T09:51:35Z",
         "headSha": "e01b7e19895e09efb97c415ad6e32e60d6b4842b",
         "headRepo": "msisovic/parameter-golf"
       },
@@ -47838,6 +47838,83 @@
       }
     },
     {
+      "id": "record-records-track_non_record_16mb-2026-04-02_Meadow_TextDiffusion_Retrodiction_TTT_DepthRecurrence",
+      "source": "pull_request",
+      "status": "open",
+      "category": "non-record",
+      "track": {
+        "path": "records/track_non_record_16mb",
+        "slug": "track_non_record_16mb",
+        "label": "Non-record / 16MB",
+        "official": false,
+        "category": "non-record"
+      },
+      "record": {
+        "folderName": "2026-04-02_Meadow_TextDiffusion_Retrodiction_TTT_DepthRecurrence",
+        "folderPath": "records/track_non_record_16mb/2026-04-02_Meadow_TextDiffusion_Retrodiction_TTT_DepthRecurrence",
+        "submissionPath": "records/track_non_record_16mb/2026-04-02_Meadow_TextDiffusion_Retrodiction_TTT_DepthRecurrence/submission.json",
+        "readmePath": "records/track_non_record_16mb/2026-04-02_Meadow_TextDiffusion_Retrodiction_TTT_DepthRecurrence/README.md",
+        "trainLogPath": "records/track_non_record_16mb/2026-04-02_Meadow_TextDiffusion_Retrodiction_TTT_DepthRecurrence/train.log",
+        "scriptPath": "records/track_non_record_16mb/2026-04-02_Meadow_TextDiffusion_Retrodiction_TTT_DepthRecurrence/train_gpt.py"
+      },
+      "submission": {
+        "author": "Sheng-Kai Huang",
+        "githubId": "akaiHuang",
+        "name": "Text Diffusion + Retrodiction + TTT + Depth Recurrence — 5 Wishlist Techniques",
+        "blurb": null,
+        "date": "2026-04-02"
+      },
+      "metrics": {
+        "valBpb": 1.497,
+        "valLoss": null,
+        "preQuantValBpb": null,
+        "preQuantValLoss": null,
+        "stepStop": null,
+        "wallclockSeconds": null,
+        "evalTimeSeconds": null
+      },
+      "artifact": {
+        "bytesTotal": null,
+        "bytesCode": null,
+        "bytesModelInt8Zlib": null
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
+      "pr": {
+        "number": 1255,
+        "title": "Non-record Submission: Text Diffusion + Retrodiction + TTT + Depth Recurrence",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1255",
+        "authorLogin": "akaiHuang",
+        "authorName": null,
+        "createdAt": "2026-04-02T09:43:59Z",
+        "updatedAt": "2026-04-02T09:54:45Z",
+        "headSha": "9e487838560a6a2cc714467225727663e418f60f",
+        "headRepo": "akaiHuang/parameter-golf"
+      },
+      "links": {
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/9e487838560a6a2cc714467225727663e418f60f/records/track_non_record_16mb/2026-04-02_Meadow_TextDiffusion_Retrodiction_TTT_DepthRecurrence/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/9e487838560a6a2cc714467225727663e418f60f/records/track_non_record_16mb/2026-04-02_Meadow_TextDiffusion_Retrodiction_TTT_DepthRecurrence/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/9e487838560a6a2cc714467225727663e418f60f/records/track_non_record_16mb/2026-04-02_Meadow_TextDiffusion_Retrodiction_TTT_DepthRecurrence/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/9e487838560a6a2cc714467225727663e418f60f/records/track_non_record_16mb/2026-04-02_Meadow_TextDiffusion_Retrodiction_TTT_DepthRecurrence/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/9e487838560a6a2cc714467225727663e418f60f/records/track_non_record_16mb/2026-04-02_Meadow_TextDiffusion_Retrodiction_TTT_DepthRecurrence",
+        "pr": "https://github.com/openai/parameter-golf/pull/1255",
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": false,
+        "hasPullRequest": true,
+        "listedInReadme": false
+      }
+    },
+    {
       "id": "record-records-track_non_record_16mb-2026-03-31_Retrodiction_PetzRecoveryMap_16L_M1Max",
       "source": "pull_request",
       "status": "open",
@@ -47886,17 +47963,17 @@
         "valOnlyMatches": []
       },
       "pr": {
-        "number": 1183,
-        "title": "  Non-record: Retrodiction Training (Petz Recovery Map) — val_bpb 1.508",
+        "number": 1255,
+        "title": "Non-record Submission: Text Diffusion + Retrodiction + TTT + Depth Recurrence",
         "state": "open",
         "draft": false,
         "mergedAt": null,
-        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1183",
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1255",
         "authorLogin": "akaiHuang",
         "authorName": null,
-        "createdAt": "2026-03-31T15:58:32Z",
-        "updatedAt": "2026-03-31T15:58:32Z",
-        "headSha": "a320923c09c31877057f887f288be891b3cd1794",
+        "createdAt": "2026-04-02T09:43:59Z",
+        "updatedAt": "2026-04-02T09:54:45Z",
+        "headSha": "9e487838560a6a2cc714467225727663e418f60f",
         "headRepo": "akaiHuang/parameter-golf"
       },
       "links": {
@@ -47905,7 +47982,7 @@
         "trainLog": "https://github.com/openai/parameter-golf/blob/a320923c09c31877057f887f288be891b3cd1794/records/track_non_record_16mb/2026-03-31_Retrodiction_PetzRecoveryMap_16L_M1Max/train.log",
         "script": "https://github.com/openai/parameter-golf/blob/a320923c09c31877057f887f288be891b3cd1794/records/track_non_record_16mb/2026-03-31_Retrodiction_PetzRecoveryMap_16L_M1Max/train_gpt.py",
         "folder": "https://github.com/openai/parameter-golf/tree/a320923c09c31877057f887f288be891b3cd1794/records/track_non_record_16mb/2026-03-31_Retrodiction_PetzRecoveryMap_16L_M1Max",
-        "pr": "https://github.com/openai/parameter-golf/pull/1183",
+        "pr": "https://github.com/openai/parameter-golf/pull/1255",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
       "provenance": {

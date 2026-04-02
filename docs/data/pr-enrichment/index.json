@@ -1,8 +1,32 @@
 {
-  "generatedAt": "2026-04-02T09:30:28.911Z",
+  "generatedAt": "2026-04-02T10:00:56.183Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 1255,
+      "title": "Non-record Submission: Text Diffusion + Retrodiction + TTT + Depth Recurrence",
+      "status": "open",
+      "updatedAt": "2026-04-02T09:54:45Z",
+      "headSha": "9e487838560a6a2cc714467225727663e418f60f",
+      "generatedAt": "2026-04-02T10:00:49.492Z",
+      "summary": "Retrodiction-trained AR pairs with CDM diffusion and coarse-to-fine evaluation via sequential unmasking, plus TTT/depth recurrence on v4096 tokens.",
+      "tags": [
+        "architecture",
+        "evaluation",
+        "tokenization",
+        "non-record"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1255.json"
+    },
     {
       "prNumber": 1254,
       "title": "Record: XSA + LoRA TTT (val_bpb=1.1070)",
@@ -913,14 +937,14 @@
       "prNumber": 1204,
       "title": "Record: ParallelResiduals + MiniDepthRecurrence, 1.1063 BPB / 1.8679 nats, -0.0072 vs PR #1179, -0.0143 vs merged SOTA",
       "status": "open",
-      "updatedAt": "2026-04-02T09:22:34Z",
+      "updatedAt": "2026-04-02T09:51:35Z",
       "headSha": "e01b7e19895e09efb97c415ad6e32e60d6b4842b",
-      "generatedAt": "2026-04-02T09:30:28.738Z",
-      "summary": "Combines parallel residual lanes from layer 7 with delayed mini depth recurrence and AR-GPTQ mixed quantization to recover depth within the 10-minute budget.",
+      "generatedAt": "2026-04-02T10:00:56.004Z",
+      "summary": "Ports mixed-quant AR GPTQ and adds layer7+ parallel residual lanes alongside delayed mini depth recurrence with untied repeated MLPs.",
       "tags": [
         "architecture",
-        "quantization",
-        "training-schedule"
+        "training-schedule",
+        "quantization"
       ],
       "flags": {
         "usesValOnly": false,
@@ -1328,30 +1352,6 @@
         "valOnlyMatchesCollector": true
       },
       "file": "items/pr-1184.json"
-    },
-    {
-      "prNumber": 1183,
-      "title": "  Non-record: Retrodiction Training (Petz Recovery Map) — val_bpb 1.508",
-      "status": "open",
-      "updatedAt": "2026-03-31T15:58:32Z",
-      "headSha": "a320923c09c31877057f887f288be891b3cd1794",
-      "generatedAt": "2026-03-31T16:14:34.243Z",
-      "summary": "Adds a Petz-inspired retrodiction loss training on reversed sequences alongside causal AR to learn bidirectional signals with zero inference cost.",
-      "tags": [
-        "regularization",
-        "training-schedule",
-        "quantization",
-        "non-record"
-      ],
-      "flags": {
-        "usesValOnly": false,
-        "usesValOnlyAi": false,
-        "usesValOnlyCollector": false
-      },
-      "compatibility": {
-        "valOnlyMatchesCollector": true
-      },
-      "file": "items/pr-1183.json"
     },
     {
       "prNumber": 1182,

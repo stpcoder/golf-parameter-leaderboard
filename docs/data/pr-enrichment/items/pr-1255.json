@@ -1,0 +1,44 @@
+{
+  "generatedAt": "2026-04-02T10:00:49.492Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1255,
+    "title": "Non-record Submission: Text Diffusion + Retrodiction + TTT + Depth Recurrence",
+    "state": "open",
+    "updatedAt": "2026-04-02T09:54:45Z",
+    "headSha": "9e487838560a6a2cc714467225727663e418f60f",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1255",
+    "authorLogin": "akaiHuang"
+  },
+  "inputs": {
+    "hash": "333c1651a7101d4267d971ebe25bd793307b61c975586544bbd6b9a9c3a8cf24",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-04-02_Meadow_TextDiffusion_Retrodiction_TTT_DepthRecurrence/README.md",
+      "records/track_non_record_16mb/2026-03-31_Retrodiction_PetzRecoveryMap_16L_M1Max/README.md"
+    ],
+    "submissionCount": 2
+  },
+  "output": {
+    "summary": "Retrodiction-trained AR pairs with CDM diffusion and coarse-to-fine evaluation via sequential unmasking, plus TTT/depth recurrence on v4096 tokens.",
+    "tags": [
+      "architecture",
+      "evaluation",
+      "tokenization",
+      "non-record"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Retrodiction auxiliary loss",
+      "Text diffusion (CDM) sequential-unmasking eval",
+      "TTT and depth recurrence tuning"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

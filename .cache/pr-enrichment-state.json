@@ -2,7 +2,7 @@
   "version": 1,
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
-  "generatedAt": "2026-04-02T09:30:28.911Z",
+  "generatedAt": "2026-04-02T10:00:56.183Z",
   "prs": {
     "6": {
       "signature": "2026-03-20-pr-enrichment-v2-approach-first:11373420c1f50e6a83599fb25bb73f38a6555cb7:closed:2026-03-18T18:34:32Z",
@@ -4762,12 +4762,6 @@
       "updatedAt": "2026-03-31T17:17:29Z",
       "headSha": "60822cd54da08eb6faff9c3104f242ce07e39448"
     },
-    "1183": {
-      "signature": "2026-03-20-pr-enrichment-v2-approach-first:a320923c09c31877057f887f288be891b3cd1794:open:2026-03-31T15:58:32Z",
-      "file": "items/pr-1183.json",
-      "updatedAt": "2026-03-31T15:58:32Z",
-      "headSha": "a320923c09c31877057f887f288be891b3cd1794"
-    },
     "1184": {
       "signature": "2026-03-20-pr-enrichment-v2-approach-first:4cbc43f290f4cf4efde795163b3e8db9f86dfaf8:open:2026-04-01T20:27:59Z",
       "file": "items/pr-1184.json",
@@ -4871,9 +4865,9 @@
       "headSha": "ec99c18a53561f83f32ce2630a934013bb2f2473"
     },
     "1204": {
-      "signature": "2026-03-20-pr-enrichment-v2-approach-first:e01b7e19895e09efb97c415ad6e32e60d6b4842b:open:2026-04-02T09:22:34Z",
+      "signature": "2026-03-20-pr-enrichment-v2-approach-first:e01b7e19895e09efb97c415ad6e32e60d6b4842b:open:2026-04-02T09:51:35Z",
       "file": "items/pr-1204.json",
-      "updatedAt": "2026-04-02T09:22:34Z",
+      "updatedAt": "2026-04-02T09:51:35Z",
       "headSha": "e01b7e19895e09efb97c415ad6e32e60d6b4842b"
     },
     "1205": {
@@ -5109,6 +5103,12 @@
       "file": "items/pr-1254.json",
       "updatedAt": "2026-04-02T09:26:24Z",
       "headSha": "17a3e18496788059d26ab82e572e2f58113d9f18"
+    },
+    "1255": {
+      "signature": "2026-03-20-pr-enrichment-v2-approach-first:9e487838560a6a2cc714467225727663e418f60f:open:2026-04-02T09:54:45Z",
+      "file": "items/pr-1255.json",
+      "updatedAt": "2026-04-02T09:54:45Z",
+      "headSha": "9e487838560a6a2cc714467225727663e418f60f"
     }
   }
 }
