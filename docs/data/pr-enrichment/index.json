@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-02T14:02:04.762Z",
+  "generatedAt": "2026-04-02T14:32:28.340Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
@@ -709,15 +709,15 @@
       "prNumber": 1218,
       "title": "Record: 4096-Vocab + 4.0-MLP-mult + 0.085-WD + Simplifications — val_bpb 1.09785 (3-seed mean)",
       "status": "open",
-      "updatedAt": "2026-04-02T02:47:20Z",
+      "updatedAt": "2026-04-02T14:18:55Z",
       "headSha": "4421a8d90c6e653bf36e2cbc59c08691d82f46af",
-      "generatedAt": "2026-04-02T02:57:38.579Z",
-      "summary": "Swapped to 4096 vocab with uniform XSA layers, stronger WD+mlp4, coprime loader plus GPTQ/Brotli and sigmoid-gated UNet skips for a streamlined larger model.",
+      "generatedAt": "2026-04-02T14:32:28.165Z",
+      "summary": "Expanded vocab and all-layer XSA with stronger WD/MLP mult, simplified Muon stack, plus Hessian-aware GPTQ and byte-shuffle compression.",
       "tags": [
         "architecture",
         "regularization",
         "quantization",
-        "optimizer"
+        "compression"
       ],
       "flags": {
         "usesValOnly": false,
