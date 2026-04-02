@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-02T10:00:26.201Z",
+  "generatedAt": "2026-04-02T11:01:00.272Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "submissions": [
@@ -51557,12 +51557,12 @@
         "author": "Akhilesh-Gogikar",
         "githubId": "Akhilesh-Gogikar",
         "name": "Ternary Koopman-Attention Hybrid (TKA-H) v5",
-        "blurb": "Pareto-optimal hybrid reasoner alternating 4 Attention and 4 Koopman-SSM layers using Shared-Block Recurrence (2 unique blocks tiled across depth). Employs an 8-stage convergence stack including 3-Phase Curriculum Sequencer (256->1024), Stochastic Depth (0.1), Ternary Noise Injection (0.05), and Self-Distillation KL-anchoring. Features EngramHash v2, EMA shadow weights, and NeoMuon momentum warmup. Crushes the 2.2 BPB barrier within the 16MB/10min constraint.",
+        "blurb": "Pareto-optimal hybrid reasoner alternating 4 Attention and 4 Koopman-SSM layers using Shared-Block Recurrence (2 unique blocks tiled across depth). Employs an 8-stage convergence stack including 3-Phase Curriculum Sequencer (256->1024), Stochastic Depth (0.1), Ternary Noise Injection (0.02), and Self-Distillation KL-anchoring. Features EngramHash v2, EMA shadow weights (start@40%), NeoMuon with tuned LR (0.03/matrix, 0.045/embed), fast curriculum (15/40 phase split), and shortened warmdown (35%). Tuned via systematic 15-min ablation sweep across curriculum timing, LR, and noise.",
         "date": "2026-04-02T00:00:00Z"
       },
       "metrics": {
-        "valBpb": 1.9653,
-        "valLoss": 3.3287,
+        "valBpb": 1.9589,
+        "valLoss": 3.3179,
         "preQuantValBpb": null,
         "preQuantValLoss": null,
         "stepStop": null,
@@ -51570,7 +51570,7 @@
         "evalTimeSeconds": null
       },
       "artifact": {
-        "bytesTotal": 990834,
+        "bytesTotal": 991210,
         "bytesCode": 124566,
         "bytesModelInt8Zlib": null
       },
@@ -51591,16 +51591,16 @@
         "authorLogin": "Akhilesh-Gogikar",
         "authorName": null,
         "createdAt": "2026-03-26T23:29:05Z",
-        "updatedAt": "2026-04-02T07:50:46Z",
-        "headSha": "4f19faddc7d2e8931851357f5467f001b9a971bf",
+        "updatedAt": "2026-04-02T10:27:37Z",
+        "headSha": "813eee70d5f4f3f00275756c9d32df98cad1551e",
         "headRepo": "Akhilesh-Gogikar/parameter-golf"
       },
       "links": {
-        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/4f19faddc7d2e8931851357f5467f001b9a971bf/records/track_10min_16mb/2026-03-25_Ternary_Feedback_TTT/submission.json",
-        "readme": "https://github.com/openai/parameter-golf/blob/4f19faddc7d2e8931851357f5467f001b9a971bf/records/track_10min_16mb/2026-03-25_Ternary_Feedback_TTT/README.md",
-        "trainLog": "https://github.com/openai/parameter-golf/blob/4f19faddc7d2e8931851357f5467f001b9a971bf/records/track_10min_16mb/2026-03-25_Ternary_Feedback_TTT/train.log",
-        "script": "https://github.com/openai/parameter-golf/blob/4f19faddc7d2e8931851357f5467f001b9a971bf/records/track_10min_16mb/2026-03-25_Ternary_Feedback_TTT/train_gpt.py",
-        "folder": "https://github.com/openai/parameter-golf/tree/4f19faddc7d2e8931851357f5467f001b9a971bf/records/track_10min_16mb/2026-03-25_Ternary_Feedback_TTT",
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/813eee70d5f4f3f00275756c9d32df98cad1551e/records/track_10min_16mb/2026-03-25_Ternary_Feedback_TTT/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/813eee70d5f4f3f00275756c9d32df98cad1551e/records/track_10min_16mb/2026-03-25_Ternary_Feedback_TTT/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/813eee70d5f4f3f00275756c9d32df98cad1551e/records/track_10min_16mb/2026-03-25_Ternary_Feedback_TTT/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/813eee70d5f4f3f00275756c9d32df98cad1551e/records/track_10min_16mb/2026-03-25_Ternary_Feedback_TTT/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/813eee70d5f4f3f00275756c9d32df98cad1551e/records/track_10min_16mb/2026-03-25_Ternary_Feedback_TTT",
         "pr": "https://github.com/openai/parameter-golf/pull/911",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
