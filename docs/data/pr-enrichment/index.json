@@ -1,8 +1,32 @@
 {
-  "generatedAt": "2026-04-02T22:05:17.311Z",
+  "generatedAt": "2026-04-02T22:35:26.602Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 1270,
+      "title": "Non-Record: Unified Attention + FA3 + 1hr training (val_bpb=1.1088)",
+      "status": "open",
+      "updatedAt": "2026-04-02T22:34:30Z",
+      "headSha": "5db964ebd28636a3cdea422373b44d6d6e92f9e1",
+      "generatedAt": "2026-04-02T22:35:26.401Z",
+      "summary": "Training the unified-attention+FA3 architecture for 1hr with a long warmdown and delayed QAT start to probe its unlimited-compute scaling.",
+      "tags": [
+        "attention",
+        "architecture",
+        "training-schedule",
+        "non-record"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1270.json"
+    },
     {
       "prNumber": 1268,
       "title": "Non-record: Mamba3 Hybrid + GPTQ Long Context (1.1875 BPB)",

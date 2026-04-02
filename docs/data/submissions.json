@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-02T22:04:55.910Z",
+  "generatedAt": "2026-04-02T22:35:20.287Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "submissions": [
@@ -11248,6 +11248,83 @@
         "script": "https://github.com/openai/parameter-golf/blob/8ab5217009ea9e20f2f858f9aef5f0bd8c16c4c0/records/track_10min_16mb/2026-03-28_JEPA_AdamW_TTT_FA3_GPTQ/train_gpt.py",
         "folder": "https://github.com/openai/parameter-golf/tree/8ab5217009ea9e20f2f858f9aef5f0bd8c16c4c0/records/track_10min_16mb/2026-03-28_JEPA_AdamW_TTT_FA3_GPTQ",
         "pr": "https://github.com/openai/parameter-golf/pull/1006",
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": false,
+        "hasPullRequest": true,
+        "listedInReadme": false
+      }
+    },
+    {
+      "id": "record-records-track_non_record_16mb-2026-04-01_UnifiedAttention_FA3_1hour",
+      "source": "pull_request",
+      "status": "open",
+      "category": "non-record",
+      "track": {
+        "path": "records/track_non_record_16mb",
+        "slug": "track_non_record_16mb",
+        "label": "Non-record / 16MB",
+        "official": false,
+        "category": "non-record"
+      },
+      "record": {
+        "folderName": "2026-04-01_UnifiedAttention_FA3_1hour",
+        "folderPath": "records/track_non_record_16mb/2026-04-01_UnifiedAttention_FA3_1hour",
+        "submissionPath": "records/track_non_record_16mb/2026-04-01_UnifiedAttention_FA3_1hour/submission.json",
+        "readmePath": "records/track_non_record_16mb/2026-04-01_UnifiedAttention_FA3_1hour/README.md",
+        "trainLogPath": "records/track_non_record_16mb/2026-04-01_UnifiedAttention_FA3_1hour/train.log",
+        "scriptPath": "records/track_non_record_16mb/2026-04-01_UnifiedAttention_FA3_1hour/train_gpt.py"
+      },
+      "submission": {
+        "author": "VirajDeshwal",
+        "githubId": "VirajDeshwal",
+        "name": "Viraj Deshwal",
+        "blurb": null,
+        "date": "2026-04-02T22:34:30Z"
+      },
+      "metrics": {
+        "valBpb": 1.1088,
+        "valLoss": null,
+        "preQuantValBpb": null,
+        "preQuantValLoss": null,
+        "stepStop": null,
+        "wallclockSeconds": null,
+        "evalTimeSeconds": 501
+      },
+      "artifact": {
+        "bytesTotal": null,
+        "bytesCode": null,
+        "bytesModelInt8Zlib": null
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
+      "pr": {
+        "number": 1270,
+        "title": "Non-Record: Unified Attention + FA3 + 1hr training (val_bpb=1.1088)",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1270",
+        "authorLogin": "VirajDeshwal",
+        "authorName": null,
+        "createdAt": "2026-04-02T22:34:30Z",
+        "updatedAt": "2026-04-02T22:34:30Z",
+        "headSha": "5db964ebd28636a3cdea422373b44d6d6e92f9e1",
+        "headRepo": "VirajDeshwal/parameter-golf"
+      },
+      "links": {
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/5db964ebd28636a3cdea422373b44d6d6e92f9e1/records/track_non_record_16mb/2026-04-01_UnifiedAttention_FA3_1hour/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/5db964ebd28636a3cdea422373b44d6d6e92f9e1/records/track_non_record_16mb/2026-04-01_UnifiedAttention_FA3_1hour/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/5db964ebd28636a3cdea422373b44d6d6e92f9e1/records/track_non_record_16mb/2026-04-01_UnifiedAttention_FA3_1hour/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/5db964ebd28636a3cdea422373b44d6d6e92f9e1/records/track_non_record_16mb/2026-04-01_UnifiedAttention_FA3_1hour/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/5db964ebd28636a3cdea422373b44d6d6e92f9e1/records/track_non_record_16mb/2026-04-01_UnifiedAttention_FA3_1hour",
+        "pr": "https://github.com/openai/parameter-golf/pull/1270",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
       "provenance": {

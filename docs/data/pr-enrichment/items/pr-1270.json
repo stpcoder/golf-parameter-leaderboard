@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-04-02T22:35:26.401Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1270,
+    "title": "Non-Record: Unified Attention + FA3 + 1hr training (val_bpb=1.1088)",
+    "state": "open",
+    "updatedAt": "2026-04-02T22:34:30Z",
+    "headSha": "5db964ebd28636a3cdea422373b44d6d6e92f9e1",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1270",
+    "authorLogin": "VirajDeshwal"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-04-01_UnifiedAttention_FA3_1hour/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Training the unified-attention+FA3 architecture for 1hr with a long warmdown and delayed QAT start to probe its unlimited-compute scaling.",
+    "tags": [
+      "attention",
+      "architecture",
+      "training-schedule",
+      "non-record"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Unified attention replaces separate Q/K/V for FA3 routing focus",
+      "Increased warmdown iterations with QAT delayed to 85%",
+      "1hr schedule to explore scaling beyond 10min record run"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}
