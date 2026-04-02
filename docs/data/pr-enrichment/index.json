@@ -1,8 +1,55 @@
 {
-  "generatedAt": "2026-04-02T15:03:17.382Z",
+  "generatedAt": "2026-04-02T15:33:35.701Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 1258,
+      "title": "11L INT7 + MuonWD + SWA (preliminary)",
+      "status": "open",
+      "updatedAt": "2026-04-02T15:30:14Z",
+      "headSha": "8762e08702c518f72746f6dc442fbd5632cff0a1",
+      "generatedAt": "2026-04-02T15:33:27.140Z",
+      "summary": "Transformer uses INT7 quantization with MuonWD and SWA to fit 11 layers at d512 inside 16MB.",
+      "tags": [
+        "quantization",
+        "optimizer",
+        "architecture"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1258.json"
+    },
+    {
+      "prNumber": 1257,
+      "title": "Add: 11L Complement Training + TTT + No-JEPA submission (val_bpb 1.0855)",
+      "status": "open",
+      "updatedAt": "2026-04-02T15:18:43Z",
+      "headSha": "58dbb07087909448fee6bee758bef025c93505cd",
+      "generatedAt": "2026-04-02T15:33:35.518Z",
+      "summary": "Combines complement loss weighting to focus on hard tokens with TTT adaptation and disables JEPA during 8xA100 training.",
+      "tags": [
+        "val-only",
+        "training-schedule",
+        "regularization",
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": true,
+        "usesValOnlyAi": true,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": false
+      },
+      "file": "items/pr-1257.json"
+    },
     {
       "prNumber": 1256,
       "title": "Non-record: LeakyReLU(0.5)^2 on SmearGate + BigramHash + Int6 stack (1.1444 bpb)",
