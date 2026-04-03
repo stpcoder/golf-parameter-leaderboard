@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-04-02T23:36:06.553Z",
+  "generatedAt": "2026-04-03T04:08:23.674Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 1262,
     "title": "Starter kit: align submission schema and path safety",
     "state": "open",
-    "updatedAt": "2026-04-02T23:31:27Z",
+    "updatedAt": "2026-04-03T03:46:48Z",
     "headSha": "c15023ec345bf7b3a622a52d71eea6eb7d567873",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/1262",
     "authorLogin": "SID-6921"
@@ -20,16 +20,16 @@
     "submissionCount": 2
   },
   "output": {
-    "summary": "Starter kit normalizes submission schema/track names, adjusts prepare_submission to 10min/non_record 16MB options, and adds run-name/path-safety guards.",
+    "summary": "Normalizes submission schema/track naming and adds run-name sanitization plus path traversal guards for safer starter-kit outputs.",
     "tags": [
-      "non-record"
+      "non-record",
+      "evaluation"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Normalized submission schema and track naming",
-      "Updated prepare_submission track options",
-      "Sanitized run names with resolve-time guards"
+      "Normalized submission schema and track identifiers",
+      "Sanitized run-name inputs with resolve-time path guards"
     ]
   },
   "compatibility": {

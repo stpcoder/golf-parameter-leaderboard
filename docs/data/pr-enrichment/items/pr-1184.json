@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-04-01T20:55:35.173Z",
+  "generatedAt": "2026-04-03T04:08:27.846Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 1184,
     "title": "Record: Scylla + Full GPTQ + XSA-all + FA3 — val_bpb 0.9485 (3-seed mean)",
-    "state": "open",
-    "updatedAt": "2026-04-01T20:27:59Z",
+    "state": "closed",
+    "updatedAt": "2026-04-03T03:45:28Z",
     "headSha": "4cbc43f290f4cf4efde795163b3e8db9f86dfaf8",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/1184",
     "authorLogin": "icryo"
@@ -19,7 +19,7 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Pairs the Scylla 998-token vocabulary with PR#1060's full GPTQ/XSA/FlashAttention stack to update tokenizer+training synergy.",
+    "summary": "Pairs the Scylla 998-token tokenizer with the PR#1060 stack—Full Hessian GPTQ, XSA on every layer, FA3 attention, and coprime shard loading—to boost the 11L model.",
     "tags": [
       "tokenization",
       "quantization",
@@ -28,9 +28,9 @@
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "- 998-token Scylla TokenMonster vocabulary",
-      "- Full Hessian GPTQ with XSA on all 11 layers and FlashAttention 3",
-      "- Coprime-stride multi-shard loader for diverse batches"
+      "Scylla 998-token retokenizer on FineWeb shards",
+      "Full Hessian GPTQ + FlashAttention 3 with XSA across all layers",
+      "Coprime-stride multi-shard loader for diverse batches"
     ]
   },
   "compatibility": {
