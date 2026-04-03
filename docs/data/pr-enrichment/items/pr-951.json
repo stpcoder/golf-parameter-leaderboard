@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-04-03T13:09:55.832Z",
+  "generatedAt": "2026-04-03T14:40:29.514Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 951,
     "title": "16L XSA-all + INT4 MLP QAT + GPTQ + EMA + Partial RoPE + 30ep Cosine TTT",
     "state": "open",
-    "updatedAt": "2026-04-03T12:57:05Z",
-    "headSha": "990ccad71125bc014ce3980268c0ffc6aafb6229",
+    "updatedAt": "2026-04-03T14:26:31Z",
+    "headSha": "6c3f567b7083b9253e39443d35d07a92f186780c",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/951",
     "authorLogin": "Bharath-970"
   },
   "inputs": {
-    "hash": "8743b98f2918610d518b9a6a2fd24d8e80242fd1a0441e46c13b0aa4f2275d78",
+    "hash": "d5710b774727f16247315f1fa052dc13cd6b7383b795dc9c8e19343dffa1c5a9",
     "readmePaths": [
       "records/track_10min_16mb/2026-03-22_Int4MLP_11L_QAT/README.md",
       "records/track_10min_16mb/2026-03-23_12L_Int4MLP_Bigram20480_Trigram/README.md",
@@ -21,28 +21,28 @@
       "records/track_10min_16mb/2026-03-24_13L_XSA4_GPTQ_EMA_PartialRoPE/README.md",
       "records/track_10min_16mb/2026-03-25_14L_XSA6_GPTQ_EMA_PartialRoPE/README.md"
     ],
-    "submissionCount": 8
+    "submissionCount": 9
   },
   "output": {
-    "summary": "Uses XSA-all KV sharing, INT4/QAT+GPTQ-lite quantization, EMA, and partial RoPE before 30-epoch cosine TTT and sliding-window eval.",
+    "summary": "XSA-all 16-layer model uses int4 MLP QAT+GPTQ-lite, hashed n-gram embeddings, EMA, partial RoPE, and val-only cosine TTT.",
     "tags": [
+      "val-only",
       "quantization",
-      "architecture",
       "optimizer",
-      "training-schedule"
+      "architecture"
     ],
-    "usesValOnly": false,
-    "valOnlyReasoning": "",
+    "usesValOnly": true,
+    "valOnlyReasoning": "Per-epoch cosine-scheduled AdamW fine-tuning on validation tokens for 30 epochs (TTT) after EMA snapshot.",
     "techniques": [
-      "Shared KV via XSA-all for compact 16-layer stack",
-      "INT4 nibble QAT plus GPTQ-lite quantization with EMA and partial RoPE",
-      "30-epoch cosine TTT on val tokens with stride-32 sliding eval"
+      "Shared KV XSA-all depth expansion to squeeze more layers into 16MB",
+      "INT4 nibble MLP QAT with GPTQ-lite clipping plus INT6 attention/NG embeddings",
+      "Val-only 30-epoch cosine TTT with EMA and partial RoPE regularization"
     ]
   },
   "compatibility": {
     "collectorUsesValOnly": false,
-    "aiUsesValOnly": false,
-    "finalUsesValOnly": false,
-    "valOnlyMatchesCollector": true
+    "aiUsesValOnly": true,
+    "finalUsesValOnly": true,
+    "valOnlyMatchesCollector": false
   }
 }

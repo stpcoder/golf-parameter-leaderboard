@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-04-03T14:40:08.217Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1303,
+    "title": "Record: SLOT + QK-Gain 4.0 + XSA-11 — val_bpb 0.9462 (3-seed mean)",
+    "state": "open",
+    "updatedAt": "2026-04-03T14:38:31Z",
+    "headSha": "1100a2ed0be9e1c5947abe16765af8c7a1ced8a4",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1303",
+    "authorLogin": "anthony-maio"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-04-02_SLOT_QKGain4_XSA11_TTT/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Adds SLOT per-sample delta/logit bias tuning atop a VRL+LeakyReLU base with QK-Gain 4.0 and XSA on every layer for eval-time refinement.",
+    "tags": [
+      "attention",
+      "architecture",
+      "evaluation"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "- SLOT per-sequence delta and logit bias optimized at eval with frozen weights",
+      "- QK-Gain 4.0 per-head query scaling paired with XSA across all 11 layers",
+      "- Score-first eval uses cosine LR schedule and 16 AdamW steps over scored positions"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

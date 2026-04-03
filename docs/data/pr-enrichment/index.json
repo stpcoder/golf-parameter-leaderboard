@@ -1,8 +1,31 @@
 {
-  "generatedAt": "2026-04-03T14:09:50.206Z",
+  "generatedAt": "2026-04-03T14:40:29.653Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 1303,
+      "title": "Record: SLOT + QK-Gain 4.0 + XSA-11 — val_bpb 0.9462 (3-seed mean)",
+      "status": "open",
+      "updatedAt": "2026-04-03T14:38:31Z",
+      "headSha": "1100a2ed0be9e1c5947abe16765af8c7a1ced8a4",
+      "generatedAt": "2026-04-03T14:40:08.217Z",
+      "summary": "Adds SLOT per-sample delta/logit bias tuning atop a VRL+LeakyReLU base with QK-Gain 4.0 and XSA on every layer for eval-time refinement.",
+      "tags": [
+        "attention",
+        "architecture",
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1303.json"
+    },
     {
       "prNumber": 1302,
       "title": "Record: Split-LR + N-gram Agreement + Full GPTQ — val_bpb 1.1079 (3-seed mean)",
@@ -101,12 +124,12 @@
     },
     {
       "prNumber": 1296,
-      "title": "Record: SP4096 + Depth Recurrence + MuonEq-R + Full GPTQ — val_bpb 1.0926 (3-seed mean)",
+      "title": "Record: SP4096 + Depth Recurrence + Parallel Residuals + MuonEq-R + Full GPTQ — val_bpb 1.0904 (3-seed mean)",
       "status": "open",
-      "updatedAt": "2026-04-03T12:59:39Z",
-      "headSha": "d2388de6b1bc543ae90eef63d1f40dd2f3eeb89a",
-      "generatedAt": "2026-04-03T13:09:37.374Z",
-      "summary": "SP4096 tokenization with larger MLP, depth recurrence on layers 4/5, MuonEq-R optimizer, and full GPTQ int6/Brotli compression.",
+      "updatedAt": "2026-04-03T14:16:48Z",
+      "headSha": "02340cdb7699a4b295a6beb9abb158849560b135",
+      "generatedAt": "2026-04-03T14:40:13.426Z",
+      "summary": "Uses SP4096 tokenization, widened MLP, depth recurrence, parallel residual lanes, MuonEq-R, and int6 GPTQ compression for the 10min/16MB track.",
       "tags": [
         "architecture",
         "optimizer",
@@ -126,14 +149,14 @@
       "prNumber": 1295,
       "title": "[Submission] Random LinearMaps + LoRA Adapters",
       "status": "open",
-      "updatedAt": "2026-04-03T10:11:14Z",
+      "updatedAt": "2026-04-03T14:28:03Z",
       "headSha": "77cec218435a8e89988eeb01687d85ae7434cfc8",
-      "generatedAt": "2026-04-03T10:39:04.513Z",
-      "summary": "Train LoRA adapters atop a frozen RNG-generated 12-layer backbone, saving only adapters and the seed so the 70M-parameter backbone costs zero artifact bytes.",
+      "generatedAt": "2026-04-03T14:40:19.679Z",
+      "summary": "Train LoRA adapters on a frozen, seed-generated random backbone, storing only adapters plus seed and compressing them for 16MB submissions.",
       "tags": [
         "architecture",
-        "compression",
-        "optimizer"
+        "quantization",
+        "muon"
       ],
       "flags": {
         "usesValOnly": false,
@@ -5835,23 +5858,23 @@
       "prNumber": 951,
       "title": "16L XSA-all + INT4 MLP QAT + GPTQ + EMA + Partial RoPE + 30ep Cosine TTT",
       "status": "open",
-      "updatedAt": "2026-04-03T12:57:05Z",
-      "headSha": "990ccad71125bc014ce3980268c0ffc6aafb6229",
-      "generatedAt": "2026-04-03T13:09:55.832Z",
-      "summary": "Uses XSA-all KV sharing, INT4/QAT+GPTQ-lite quantization, EMA, and partial RoPE before 30-epoch cosine TTT and sliding-window eval.",
+      "updatedAt": "2026-04-03T14:26:31Z",
+      "headSha": "6c3f567b7083b9253e39443d35d07a92f186780c",
+      "generatedAt": "2026-04-03T14:40:29.514Z",
+      "summary": "XSA-all 16-layer model uses int4 MLP QAT+GPTQ-lite, hashed n-gram embeddings, EMA, partial RoPE, and val-only cosine TTT.",
       "tags": [
+        "val-only",
         "quantization",
-        "architecture",
         "optimizer",
-        "training-schedule"
+        "architecture"
       ],
       "flags": {
-        "usesValOnly": false,
-        "usesValOnlyAi": false,
+        "usesValOnly": true,
+        "usesValOnlyAi": true,
         "usesValOnlyCollector": false
       },
       "compatibility": {
-        "valOnlyMatchesCollector": true
+        "valOnlyMatchesCollector": false
       },
       "file": "items/pr-951.json"
     },
