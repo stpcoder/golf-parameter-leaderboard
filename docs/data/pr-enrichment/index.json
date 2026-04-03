@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-03T15:40:14.595Z",
+  "generatedAt": "2026-04-03T16:10:09.777Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
@@ -148,15 +148,15 @@
     },
     {
       "prNumber": 1296,
-      "title": "Record: SP4096 + Depth Recurrence + Parallel Residuals + MuonEq-R + Full GPTQ — val_bpb 1.0904 (3-seed mean)",
+      "title": "Record: SP4096 + Depth Recurrence + Parallel Residuals + MuonEq-R + QK-Gain 5.0 — val_bpb 1.0897 (3-seed mean)",
       "status": "open",
-      "updatedAt": "2026-04-03T14:16:48Z",
-      "headSha": "02340cdb7699a4b295a6beb9abb158849560b135",
-      "generatedAt": "2026-04-03T14:40:13.426Z",
-      "summary": "Uses SP4096 tokenization, widened MLP, depth recurrence, parallel residual lanes, MuonEq-R, and int6 GPTQ compression for the 10min/16MB track.",
+      "updatedAt": "2026-04-03T15:40:33Z",
+      "headSha": "acdf503bc32ee52ffd6e5c2bce91f72197ae813b",
+      "generatedAt": "2026-04-03T16:10:09.585Z",
+      "summary": "Uses SP4096 vocab with depth recurrence, parallel residuals, MuonEq-R, and QK-Gain before full GPTQ int6 packaging for compressed deployment.",
       "tags": [
         "architecture",
-        "optimizer",
+        "muon",
         "quantization"
       ],
       "flags": {
