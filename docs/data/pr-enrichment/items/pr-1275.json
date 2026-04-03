@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-04-03T01:06:29.543Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1275,
+    "title": "Non-record: Asymmetric 1/10 Split — 1.1492 pre-quant BPB on 8xH100 (one-line change)",
+    "state": "open",
+    "updatedAt": "2026-04-03T00:53:59Z",
+    "headSha": "1a40bded844bdaea22a692952d79406e8b26044e",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1275",
+    "authorLogin": "ranausmanai"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-04-03_AsymmetricSplit_1to10_EncoderDecoder/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Setting num_encoder_layers=1 shifts almost all depth to the decoder, improving BPB without added compute on the hourglass model.",
+    "tags": [
+      "non-record",
+      "architecture",
+      "evaluation"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Decoder-focused hourglass split",
+      "One-line encoder-layer reduction",
+      "Validated on 8xH100 SOTA stack"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

@@ -1,8 +1,31 @@
 {
-  "generatedAt": "2026-04-03T00:06:06.714Z",
+  "generatedAt": "2026-04-03T01:06:34.771Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 1275,
+      "title": "Non-record: Asymmetric 1/10 Split — 1.1492 pre-quant BPB on 8xH100 (one-line change)",
+      "status": "open",
+      "updatedAt": "2026-04-03T00:53:59Z",
+      "headSha": "1a40bded844bdaea22a692952d79406e8b26044e",
+      "generatedAt": "2026-04-03T01:06:29.543Z",
+      "summary": "Setting num_encoder_layers=1 shifts almost all depth to the decoder, improving BPB without added compute on the hourglass model.",
+      "tags": [
+        "non-record",
+        "architecture",
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1275.json"
+    },
     {
       "prNumber": 1274,
       "title": "Record: Scylla + Parallel Residuals + Depth Recurrence + Legal TTT — val_bpb 1.0876 (3-seed mean)",
@@ -3333,16 +3356,16 @@
     },
     {
       "prNumber": 1073,
-      "title": "Non-record: Deep Supervision on M4 MacBook",
+      "title": "Non-record: 27 Systematic Experiments on M4 MacBook (Deep Supervision, LR Tuning, Batch Scaling, Architecture)",
       "status": "open",
-      "updatedAt": "2026-03-30T11:45:55Z",
-      "headSha": "58df5b4864f10f36c8fa9ba56d944da5609c6bfd",
-      "generatedAt": "2026-03-30T12:05:33.153Z",
-      "summary": "Combined encoder-decoder deep supervision with higher LR and clipping to regularize 300-step large-batch U-Net training before scaling.",
+      "updatedAt": "2026-04-03T01:04:13Z",
+      "headSha": "009f445f065cc0d6681610fac1a20e93b3a1401c",
+      "generatedAt": "2026-04-03T01:06:34.616Z",
+      "summary": "Systematically explored deep supervision regularizer, LR tuning, and decoder-heavy architectures on M4 to guide asymmetric split and short-run scaling.",
       "tags": [
         "architecture",
-        "regularization",
         "optimizer",
+        "regularization",
         "non-record"
       ],
       "flags": {

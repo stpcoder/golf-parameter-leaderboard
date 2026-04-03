@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-03T00:36:02.361Z",
+  "generatedAt": "2026-04-03T01:06:20.023Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "submissions": [
@@ -50324,9 +50324,9 @@
       "submission": {
         "author": "Rana Usman",
         "githubId": "ranausmanai",
-        "name": "Systematic Exploration: Deep Supervision, LR Tuning, Architecture (M4 MacBook)",
-        "blurb": "Non-record M4 MacBook submission: 27 experiments across deep supervision, learning rate tuning, batch scaling, architecture changes, and convergence techniques. Best: 1.6414 int8_bpb via LR 0.08 at 128K batch. Found deep supervision gives -0.05 BPB at equal batch size (novel technique), LR 0.08 beats default by -0.025, and grad clipping helps -0.019.",
-        "date": "2026-03-30T00:00:00Z"
+        "name": "Asymmetric 1/10 Encoder-Decoder Split + Systematic Exploration",
+        "blurb": "One-line change: setting num_encoder_layers=1 (instead of num_layers//2) monotonically improves BPB. Validated on baseline code (-0.016 BPB across 4 split ratios on RTX 5090) and SOTA code (-0.004 BPB). 8xH100 partial run reached 1.1492 pre-quant BPB at step 5666/9000 (FA2 speed bottleneck prevented full training). Background: 27 systematic experiments on M4 MacBook exploring deep supervision, LR tuning, batch scaling, and architecture.",
+        "date": "2026-04-03T00:00:00Z"
       },
       "metrics": {
         "valBpb": 1.6414,
@@ -50351,7 +50351,7 @@
       },
       "pr": {
         "number": 1073,
-        "title": "Non-record: Deep Supervision on M4 MacBook",
+        "title": "Non-record: 27 Systematic Experiments on M4 MacBook (Deep Supervision, LR Tuning, Batch Scaling, Architecture)",
         "state": "open",
         "draft": false,
         "mergedAt": null,
@@ -50359,16 +50359,16 @@
         "authorLogin": "ranausmanai",
         "authorName": null,
         "createdAt": "2026-03-29T11:50:49Z",
-        "updatedAt": "2026-03-30T11:45:55Z",
-        "headSha": "58df5b4864f10f36c8fa9ba56d944da5609c6bfd",
+        "updatedAt": "2026-04-03T01:04:13Z",
+        "headSha": "009f445f065cc0d6681610fac1a20e93b3a1401c",
         "headRepo": "ranausmanai/parameter-golf"
       },
       "links": {
-        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/58df5b4864f10f36c8fa9ba56d944da5609c6bfd/records/track_non_record_16mb/2026-03-29_DeepSupervision_BatchScaling_M4MacBook/submission.json",
-        "readme": "https://github.com/openai/parameter-golf/blob/58df5b4864f10f36c8fa9ba56d944da5609c6bfd/records/track_non_record_16mb/2026-03-29_DeepSupervision_BatchScaling_M4MacBook/README.md",
-        "trainLog": "https://github.com/openai/parameter-golf/blob/58df5b4864f10f36c8fa9ba56d944da5609c6bfd/records/track_non_record_16mb/2026-03-29_DeepSupervision_BatchScaling_M4MacBook/train.log",
-        "script": "https://github.com/openai/parameter-golf/blob/58df5b4864f10f36c8fa9ba56d944da5609c6bfd/records/track_non_record_16mb/2026-03-29_DeepSupervision_BatchScaling_M4MacBook/train_gpt.py",
-        "folder": "https://github.com/openai/parameter-golf/tree/58df5b4864f10f36c8fa9ba56d944da5609c6bfd/records/track_non_record_16mb/2026-03-29_DeepSupervision_BatchScaling_M4MacBook",
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/009f445f065cc0d6681610fac1a20e93b3a1401c/records/track_non_record_16mb/2026-03-29_DeepSupervision_BatchScaling_M4MacBook/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/009f445f065cc0d6681610fac1a20e93b3a1401c/records/track_non_record_16mb/2026-03-29_DeepSupervision_BatchScaling_M4MacBook/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/009f445f065cc0d6681610fac1a20e93b3a1401c/records/track_non_record_16mb/2026-03-29_DeepSupervision_BatchScaling_M4MacBook/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/009f445f065cc0d6681610fac1a20e93b3a1401c/records/track_non_record_16mb/2026-03-29_DeepSupervision_BatchScaling_M4MacBook/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/009f445f065cc0d6681610fac1a20e93b3a1401c/records/track_non_record_16mb/2026-03-29_DeepSupervision_BatchScaling_M4MacBook",
         "pr": "https://github.com/openai/parameter-golf/pull/1073",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
@@ -55842,6 +55842,83 @@
         "script": "https://github.com/openai/parameter-golf/blob/381ece0b8f6f876cdea2b10e3e411d12d9ea8010/records/track_10min_16mb/2026-03-XX_DepthRecurrence_eb1386/train_gpt.py",
         "folder": "https://github.com/openai/parameter-golf/tree/381ece0b8f6f876cdea2b10e3e411d12d9ea8010/records/track_10min_16mb/2026-03-XX_DepthRecurrence_eb1386",
         "pr": "https://github.com/openai/parameter-golf/pull/449",
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": false,
+        "hasPullRequest": true,
+        "listedInReadme": false
+      }
+    },
+    {
+      "id": "record-records-track_non_record_16mb-2026-04-03_AsymmetricSplit_1to10_EncoderDecoder",
+      "source": "pull_request",
+      "status": "open",
+      "category": "non-record",
+      "track": {
+        "path": "records/track_non_record_16mb",
+        "slug": "track_non_record_16mb",
+        "label": "Non-record / 16MB",
+        "official": false,
+        "category": "non-record"
+      },
+      "record": {
+        "folderName": "2026-04-03_AsymmetricSplit_1to10_EncoderDecoder",
+        "folderPath": "records/track_non_record_16mb/2026-04-03_AsymmetricSplit_1to10_EncoderDecoder",
+        "submissionPath": "records/track_non_record_16mb/2026-04-03_AsymmetricSplit_1to10_EncoderDecoder/submission.json",
+        "readmePath": "records/track_non_record_16mb/2026-04-03_AsymmetricSplit_1to10_EncoderDecoder/README.md",
+        "trainLogPath": "records/track_non_record_16mb/2026-04-03_AsymmetricSplit_1to10_EncoderDecoder/train.log",
+        "scriptPath": "records/track_non_record_16mb/2026-04-03_AsymmetricSplit_1to10_EncoderDecoder/train_gpt.py"
+      },
+      "submission": {
+        "author": "Rana Usman",
+        "githubId": "ranausmanai",
+        "name": "Asymmetric 1/10 Encoder-Decoder Split: 1.1492 pre-quant BPB on 8xH100",
+        "blurb": "One-line change (num_encoder_layers=1 instead of num_layers//2) gives monotonic improvement: -0.016 BPB on baseline, -0.004 on SOTA. 8xH100 run hit 1.1492 pre-quant BPB at step 5666/9000 before FA2 speed bottleneck and pod crash prevented completion. With FA3 and full 9000 steps, estimated top-10 finish. See PR #1073 for 27 background experiments on M4 MacBook.",
+        "date": "2026-04-03T00:00:00Z"
+      },
+      "metrics": {
+        "valBpb": null,
+        "valLoss": null,
+        "preQuantValBpb": null,
+        "preQuantValLoss": null,
+        "stepStop": null,
+        "wallclockSeconds": null,
+        "evalTimeSeconds": null
+      },
+      "artifact": {
+        "bytesTotal": null,
+        "bytesCode": null,
+        "bytesModelInt8Zlib": null
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
+      "pr": {
+        "number": 1275,
+        "title": "Non-record: Asymmetric 1/10 Split — 1.1492 pre-quant BPB on 8xH100 (one-line change)",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1275",
+        "authorLogin": "ranausmanai",
+        "authorName": null,
+        "createdAt": "2026-04-03T00:53:59Z",
+        "updatedAt": "2026-04-03T00:53:59Z",
+        "headSha": "1a40bded844bdaea22a692952d79406e8b26044e",
+        "headRepo": "ranausmanai/parameter-golf"
+      },
+      "links": {
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/1a40bded844bdaea22a692952d79406e8b26044e/records/track_non_record_16mb/2026-04-03_AsymmetricSplit_1to10_EncoderDecoder/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/1a40bded844bdaea22a692952d79406e8b26044e/records/track_non_record_16mb/2026-04-03_AsymmetricSplit_1to10_EncoderDecoder/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/1a40bded844bdaea22a692952d79406e8b26044e/records/track_non_record_16mb/2026-04-03_AsymmetricSplit_1to10_EncoderDecoder/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/1a40bded844bdaea22a692952d79406e8b26044e/records/track_non_record_16mb/2026-04-03_AsymmetricSplit_1to10_EncoderDecoder/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/1a40bded844bdaea22a692952d79406e8b26044e/records/track_non_record_16mb/2026-04-03_AsymmetricSplit_1to10_EncoderDecoder",
+        "pr": "https://github.com/openai/parameter-golf/pull/1275",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
       "provenance": {
