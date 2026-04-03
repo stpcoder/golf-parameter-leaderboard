@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-04-03T16:40:31.251Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1305,
+    "title": "[Non-record] Scaled Byte-level H-Net matches 4-hour subword-level baseline (H-Net val_bpb = 1.2070)",
+    "state": "open",
+    "updatedAt": "2026-04-03T16:10:44Z",
+    "headSha": "1b7a4ac4d62663e7373cd860d9893dd0b0096a29",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1305",
+    "authorLogin": "DariusFeher"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-04-01_Scaled_HNet_Byte260_and_Sp1024/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Scaled 12-layer byte-level H-Net with GQA/INT6 GPTQ, QAT, compile-friendly chunking, and sliding-window eval to match the 4h baseline.",
+    "tags": [
+      "architecture",
+      "quantization",
+      "sliding-window-eval",
+      "non-record"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "12L H-Net (3/6/3) setup with fixed chunk cap for torch.compile",
+      "INT6 GPTQ + QAT training with zstd-22 compression",
+      "Stride-64 sliding-window evaluation"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

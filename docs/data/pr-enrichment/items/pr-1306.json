@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-04-03T16:40:25.422Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1306,
+    "title": "Record: Causal SLOT + Pre-quant TTT — val_bpb 1.0846 (3-seed mean)",
+    "state": "open",
+    "updatedAt": "2026-04-03T16:39:16Z",
+    "headSha": "d43a0f3695b2a01ec5231fc646fbcbc87f32e99b",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1306",
+    "authorLogin": "resouer"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-04-03_CausalSLOT-PreQuantTTT-CoprimeLoader_1.0846/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Causal SLOT optimizes deltas from prior tokens, pre-quant AdamW TTT adapts EMA weights before GPTQ, and coprime-stride sampling mixes shards.",
+    "tags": [
+      "quantization",
+      "optimizer",
+      "evaluation"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "causal SLOT delta updates on context-only tokens",
+      "pre-quant AdamW TTT on EMA before GPTQ quantization",
+      "coprime-stride multi-shard data loader"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

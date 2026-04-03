@@ -1,8 +1,55 @@
 {
-  "generatedAt": "2026-04-03T16:10:09.777Z",
+  "generatedAt": "2026-04-03T16:40:31.439Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 1306,
+      "title": "Record: Causal SLOT + Pre-quant TTT — val_bpb 1.0846 (3-seed mean)",
+      "status": "open",
+      "updatedAt": "2026-04-03T16:39:16Z",
+      "headSha": "d43a0f3695b2a01ec5231fc646fbcbc87f32e99b",
+      "generatedAt": "2026-04-03T16:40:25.422Z",
+      "summary": "Causal SLOT optimizes deltas from prior tokens, pre-quant AdamW TTT adapts EMA weights before GPTQ, and coprime-stride sampling mixes shards.",
+      "tags": [
+        "quantization",
+        "optimizer",
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1306.json"
+    },
+    {
+      "prNumber": 1305,
+      "title": "[Non-record] Scaled Byte-level H-Net matches 4-hour subword-level baseline (H-Net val_bpb = 1.2070)",
+      "status": "open",
+      "updatedAt": "2026-04-03T16:10:44Z",
+      "headSha": "1b7a4ac4d62663e7373cd860d9893dd0b0096a29",
+      "generatedAt": "2026-04-03T16:40:31.251Z",
+      "summary": "Scaled 12-layer byte-level H-Net with GQA/INT6 GPTQ, QAT, compile-friendly chunking, and sliding-window eval to match the 4h baseline.",
+      "tags": [
+        "architecture",
+        "quantization",
+        "sliding-window-eval",
+        "non-record"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1305.json"
+    },
     {
       "prNumber": 1304,
       "title": "Add DeepFloor non-record submission candidate",

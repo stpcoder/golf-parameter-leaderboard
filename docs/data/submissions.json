@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-03T16:10:04.360Z",
+  "generatedAt": "2026-04-03T16:40:17.173Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "submissions": [
@@ -9092,6 +9092,83 @@
         "script": "https://github.com/openai/parameter-golf/blob/302f714bebadaf8727f448690f0e138bf3da9b8f/records/track_10min_16mb/2026-04-02_PROTEUS_v16_Scylla/train_gpt.py",
         "folder": "https://github.com/openai/parameter-golf/tree/302f714bebadaf8727f448690f0e138bf3da9b8f/records/track_10min_16mb/2026-04-02_PROTEUS_v16_Scylla",
         "pr": "https://github.com/openai/parameter-golf/pull/1289",
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": false,
+        "hasPullRequest": true,
+        "listedInReadme": false
+      }
+    },
+    {
+      "id": "record-records-track_10min_16mb-2026-04-03_CausalSLOT-PreQuantTTT-CoprimeLoader_1-0846",
+      "source": "pull_request",
+      "status": "open",
+      "category": "main-track",
+      "track": {
+        "path": "records/track_10min_16mb",
+        "slug": "track_10min_16mb",
+        "label": "10 Minute / 16MB",
+        "official": true,
+        "category": "main-track"
+      },
+      "record": {
+        "folderName": "2026-04-03_CausalSLOT-PreQuantTTT-CoprimeLoader_1.0846",
+        "folderPath": "records/track_10min_16mb/2026-04-03_CausalSLOT-PreQuantTTT-CoprimeLoader_1.0846",
+        "submissionPath": "records/track_10min_16mb/2026-04-03_CausalSLOT-PreQuantTTT-CoprimeLoader_1.0846/submission.json",
+        "readmePath": "records/track_10min_16mb/2026-04-03_CausalSLOT-PreQuantTTT-CoprimeLoader_1.0846/README.md",
+        "trainLogPath": "records/track_10min_16mb/2026-04-03_CausalSLOT-PreQuantTTT-CoprimeLoader_1.0846/train.log",
+        "scriptPath": "records/track_10min_16mb/2026-04-03_CausalSLOT-PreQuantTTT-CoprimeLoader_1.0846/train_gpt.py"
+      },
+      "submission": {
+        "author": "resouer",
+        "githubId": "resouer",
+        "name": "Causal SLOT + Pre-quant AdamW TTT + Coprime-stride Loader",
+        "blurb": "Provably causal per-chunk delta optimization (causal SLOT) + 6-epoch pre-quant AdamW TTT + coprime-stride multi-shard data loading on Full Hessian GPTQ int6 stack. 3-seed mean 1.0846 bpb (std 0.0007).",
+        "date": "2026-04-03"
+      },
+      "metrics": {
+        "valBpb": 1.0846,
+        "valLoss": null,
+        "preQuantValBpb": null,
+        "preQuantValLoss": null,
+        "stepStop": null,
+        "wallclockSeconds": null,
+        "evalTimeSeconds": null
+      },
+      "artifact": {
+        "bytesTotal": 15952885,
+        "bytesCode": null,
+        "bytesModelInt8Zlib": null
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
+      "pr": {
+        "number": 1306,
+        "title": "Record: Causal SLOT + Pre-quant TTT — val_bpb 1.0846 (3-seed mean)",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1306",
+        "authorLogin": "resouer",
+        "authorName": null,
+        "createdAt": "2026-04-03T16:29:29Z",
+        "updatedAt": "2026-04-03T16:39:16Z",
+        "headSha": "d43a0f3695b2a01ec5231fc646fbcbc87f32e99b",
+        "headRepo": "resouer/parameter-golf"
+      },
+      "links": {
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/d43a0f3695b2a01ec5231fc646fbcbc87f32e99b/records/track_10min_16mb/2026-04-03_CausalSLOT-PreQuantTTT-CoprimeLoader_1.0846/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/d43a0f3695b2a01ec5231fc646fbcbc87f32e99b/records/track_10min_16mb/2026-04-03_CausalSLOT-PreQuantTTT-CoprimeLoader_1.0846/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/d43a0f3695b2a01ec5231fc646fbcbc87f32e99b/records/track_10min_16mb/2026-04-03_CausalSLOT-PreQuantTTT-CoprimeLoader_1.0846/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/d43a0f3695b2a01ec5231fc646fbcbc87f32e99b/records/track_10min_16mb/2026-04-03_CausalSLOT-PreQuantTTT-CoprimeLoader_1.0846/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/d43a0f3695b2a01ec5231fc646fbcbc87f32e99b/records/track_10min_16mb/2026-04-03_CausalSLOT-PreQuantTTT-CoprimeLoader_1.0846",
+        "pr": "https://github.com/openai/parameter-golf/pull/1306",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
       "provenance": {
@@ -38666,6 +38743,83 @@
         "script": "https://github.com/openai/parameter-golf/blob/697f820632b8682a927a1c37957498b0ae64dd4b/records/track_non_record_16mb/2026-03-26_DepthRecurrence_XSA_LeakyReLU/train_gpt.py",
         "folder": "https://github.com/openai/parameter-golf/tree/697f820632b8682a927a1c37957498b0ae64dd4b/records/track_non_record_16mb/2026-03-26_DepthRecurrence_XSA_LeakyReLU",
         "pr": "https://github.com/openai/parameter-golf/pull/895",
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": false,
+        "hasPullRequest": true,
+        "listedInReadme": false
+      }
+    },
+    {
+      "id": "record-records-track_non_record_16mb-2026-04-01_Scaled_HNet_Byte260_and_Sp1024",
+      "source": "pull_request",
+      "status": "open",
+      "category": "non-record",
+      "track": {
+        "path": "records/track_non_record_16mb",
+        "slug": "track_non_record_16mb",
+        "label": "Non-record / 16MB",
+        "official": false,
+        "category": "non-record"
+      },
+      "record": {
+        "folderName": "2026-04-01_Scaled_HNet_Byte260_and_Sp1024",
+        "folderPath": "records/track_non_record_16mb/2026-04-01_Scaled_HNet_Byte260_and_Sp1024",
+        "submissionPath": "records/track_non_record_16mb/2026-04-01_Scaled_HNet_Byte260_and_Sp1024/submission.json",
+        "readmePath": "records/track_non_record_16mb/2026-04-01_Scaled_HNet_Byte260_and_Sp1024/README.md",
+        "trainLogPath": "records/track_non_record_16mb/2026-04-01_Scaled_HNet_Byte260_and_Sp1024/train.log",
+        "scriptPath": "records/track_non_record_16mb/2026-04-01_Scaled_HNet_Byte260_and_Sp1024/train_gpt.py"
+      },
+      "submission": {
+        "author": "Darius Feher",
+        "githubId": "DariusFeher",
+        "name": "Scaled Byte-level H-Net matches 4-hour subword-level baseline (1.2070 BPB)",
+        "blurb": "12L H-Net (3 Encoder + 6 Main + 3 Decoder) + byte260 + GQA KV4 + INT6 GPTQ + QAT + zstd-22 + Stride-64 Sliding Eval. Closes the gap from 1.36 BPB (PR #1104) to 1.2070 BPB, matching the 4-hour baseline (1.2074) and a comparable sp1024 H-Net (1.2107). Includes byte260 vs sp1024 comparison, analysis of compile-chunking truncation effects, and dynamic chunking at inference.",
+        "date": "2026-04-03"
+      },
+      "metrics": {
+        "valBpb": 1.20701869,
+        "valLoss": 0.83842396,
+        "preQuantValBpb": null,
+        "preQuantValLoss": null,
+        "stepStop": 153381,
+        "wallclockSeconds": 14400,
+        "evalTimeSeconds": null
+      },
+      "artifact": {
+        "bytesTotal": 15781479,
+        "bytesCode": 83709,
+        "bytesModelInt8Zlib": null
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
+      "pr": {
+        "number": 1305,
+        "title": "[Non-record] Scaled Byte-level H-Net matches 4-hour subword-level baseline (H-Net val_bpb = 1.2070)",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1305",
+        "authorLogin": "DariusFeher",
+        "authorName": null,
+        "createdAt": "2026-04-03T16:10:44Z",
+        "updatedAt": "2026-04-03T16:10:44Z",
+        "headSha": "1b7a4ac4d62663e7373cd860d9893dd0b0096a29",
+        "headRepo": "DariusFeher/parameter-golf"
+      },
+      "links": {
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/1b7a4ac4d62663e7373cd860d9893dd0b0096a29/records/track_non_record_16mb/2026-04-01_Scaled_HNet_Byte260_and_Sp1024/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/1b7a4ac4d62663e7373cd860d9893dd0b0096a29/records/track_non_record_16mb/2026-04-01_Scaled_HNet_Byte260_and_Sp1024/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/1b7a4ac4d62663e7373cd860d9893dd0b0096a29/records/track_non_record_16mb/2026-04-01_Scaled_HNet_Byte260_and_Sp1024/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/1b7a4ac4d62663e7373cd860d9893dd0b0096a29/records/track_non_record_16mb/2026-04-01_Scaled_HNet_Byte260_and_Sp1024/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/1b7a4ac4d62663e7373cd860d9893dd0b0096a29/records/track_non_record_16mb/2026-04-01_Scaled_HNet_Byte260_and_Sp1024",
+        "pr": "https://github.com/openai/parameter-golf/pull/1305",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
       "provenance": {
