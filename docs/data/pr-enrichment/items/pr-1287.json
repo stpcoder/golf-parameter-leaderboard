@@ -1,0 +1,44 @@
+{
+  "generatedAt": "2026-04-03T06:08:29.835Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1287,
+    "title": "Record: Vocab4096 + MLP4.0x + WD0.085 - val_bpb 1.1048 (3-seed mean)",
+    "state": "open",
+    "updatedAt": "2026-04-03T05:43:07Z",
+    "headSha": "7c64c907b045f3cc02d69da17310abaec55355c4",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1287",
+    "authorLogin": "dentity007"
+  },
+  "inputs": {
+    "hash": "333c1651a7101d4267d971ebe25bd793307b61c975586544bbd6b9a9c3a8cf24",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-04-03_Vocab4096_MLPMult4_WD085_1.1048/README.md",
+      "records/track_non_record_16mb/2026-03-31_MambaSSMHybrid/README.md"
+    ],
+    "submissionCount": 2
+  },
+  "output": {
+    "summary": "Wider 11-layer GPT with MLP 4x, 4k vocab, and high weight decay plus simplified stack to fit brotli-int6 artifacts under 16MB.",
+    "tags": [
+      "architecture",
+      "quantization",
+      "compression",
+      "optimizer"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "MLP×4 width with vocab4096",
+      "aggressive weight decay to ease compression",
+      "byte-shuffle + brotli-11 int6 pipeline"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}
