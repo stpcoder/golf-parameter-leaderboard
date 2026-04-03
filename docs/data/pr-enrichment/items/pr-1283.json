@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-04-03T04:08:18.437Z",
+  "generatedAt": "2026-04-03T04:38:19.472Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 1283,
     "title": "Ouroboros — 1.13727008 val_bpb (seed 444)",
     "state": "open",
-    "updatedAt": "2026-04-03T04:02:21Z",
+    "updatedAt": "2026-04-03T04:25:12Z",
     "headSha": "af4700c9db57621ddc706f8094ff4f3419b96155",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/1283",
     "authorLogin": "newjordan"
@@ -27,7 +27,7 @@
     "submissionCount": 9
   },
   "output": {
-    "summary": "Stacking loop-aware GPTQ, high QK gain init, and a 2-loop 9-flat crawler while switching to brotli int6 artifacts for faster, tighter training runs.",
+    "summary": "Ouroboros stacks loop-aware GPTQ, brotli compression, higher QK gain, and 2-loop recurrence on a 9-flat crawler platform.",
     "tags": [
       "architecture",
       "quantization",
@@ -35,11 +35,11 @@
       "training-schedule"
     ],
     "usesValOnly": false,
-    "valOnlyReasoning": "",
+    "valOnlyReasoning": "Standard training run; no val-only regime.",
     "techniques": [
-      "Loop-aware GPTQ re-calibrates crawler quantization",
-      "QK gain 4.0 + 2-loop cadence on 9-flat transformer stack",
-      "Brotli-compressed int6 artifact to stay under size cap"
+      "Loop-aware GPTQ recalibrates crawler loops",
+      "Brotli replaces zstd to reclaim artifact headroom",
+      "Higher QK gain plus 2-loop cadence on 9-flat crawler"
     ]
   },
   "compatibility": {
