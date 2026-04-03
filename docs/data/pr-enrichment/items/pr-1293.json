@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-04-03T09:38:36.584Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1293,
+    "title": "Non-record: Universal Transformer with Adaptive Computation Time",
+    "state": "open",
+    "updatedAt": "2026-04-03T09:33:05Z",
+    "headSha": "c3e767b6b84e5a5b59144b416b605418c677d18a",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1293",
+    "authorLogin": "5en5e1"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-04-03_UniversalTransformer_ACT/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Depth-recurrent Universal Transformer reuses 9 shared blocks across two passes with ACT halting and pass embeddings to raise effective depth within the 16MB cap.",
+    "tags": [
+      "architecture",
+      "compression",
+      "muon",
+      "non-record"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Shared-transformer blocks reused for multiple passes",
+      "Per-token ACT halting head with ponder cost",
+      "Pass embeddings to signal recursion depth"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

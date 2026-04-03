@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-03T09:08:25.866Z",
+  "generatedAt": "2026-04-03T09:38:29.800Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "submissions": [
@@ -42131,6 +42131,83 @@
         "script": "https://github.com/openai/parameter-golf/blob/b57868f96947df6e529755cd6fc4392bde117d91/records/track_non_record_16mb/2026-03-22_1xH100_Systematic_HyperOpt_129exp/train_gpt.py",
         "folder": "https://github.com/openai/parameter-golf/tree/b57868f96947df6e529755cd6fc4392bde117d91/records/track_non_record_16mb/2026-03-22_1xH100_Systematic_HyperOpt_129exp",
         "pr": "https://github.com/openai/parameter-golf/pull/436",
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": false,
+        "hasPullRequest": true,
+        "listedInReadme": false
+      }
+    },
+    {
+      "id": "record-records-track_non_record_16mb-2026-04-03_UniversalTransformer_ACT",
+      "source": "pull_request",
+      "status": "open",
+      "category": "non-record",
+      "track": {
+        "path": "records/track_non_record_16mb",
+        "slug": "track_non_record_16mb",
+        "label": "Non-record / 16MB",
+        "official": false,
+        "category": "non-record"
+      },
+      "record": {
+        "folderName": "2026-04-03_UniversalTransformer_ACT",
+        "folderPath": "records/track_non_record_16mb/2026-04-03_UniversalTransformer_ACT",
+        "submissionPath": "records/track_non_record_16mb/2026-04-03_UniversalTransformer_ACT/submission.json",
+        "readmePath": "records/track_non_record_16mb/2026-04-03_UniversalTransformer_ACT/README.md",
+        "trainLogPath": "records/track_non_record_16mb/2026-04-03_UniversalTransformer_ACT/train.log",
+        "scriptPath": "records/track_non_record_16mb/2026-04-03_UniversalTransformer_ACT/train_gpt.py"
+      },
+      "submission": {
+        "author": "Farcas Antonio Matei",
+        "githubId": "5en5e1",
+        "name": "Universal Transformer with ACT",
+        "blurb": "Depth-recurrent Universal Transformer with Adaptive Computation Time. 9 shared layers × 2 passes = 18 effective depth at ~15.8MB. Nearly matches baseline BPB with half the training steps, demonstrating recursion value under parameter constraints.",
+        "date": "2026-04-03T00:00:00Z"
+      },
+      "metrics": {
+        "valBpb": 1.24094165,
+        "valLoss": 2.095278,
+        "preQuantValBpb": null,
+        "preQuantValLoss": null,
+        "stepStop": null,
+        "wallclockSeconds": null,
+        "evalTimeSeconds": null
+      },
+      "artifact": {
+        "bytesTotal": 15792804,
+        "bytesCode": 49574,
+        "bytesModelInt8Zlib": null
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
+      "pr": {
+        "number": 1293,
+        "title": "Non-record: Universal Transformer with Adaptive Computation Time",
+        "state": "open",
+        "draft": true,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1293",
+        "authorLogin": "5en5e1",
+        "authorName": null,
+        "createdAt": "2026-04-03T09:33:05Z",
+        "updatedAt": "2026-04-03T09:33:05Z",
+        "headSha": "c3e767b6b84e5a5b59144b416b605418c677d18a",
+        "headRepo": "5en5e1/parameter-golf"
+      },
+      "links": {
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/c3e767b6b84e5a5b59144b416b605418c677d18a/records/track_non_record_16mb/2026-04-03_UniversalTransformer_ACT/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/c3e767b6b84e5a5b59144b416b605418c677d18a/records/track_non_record_16mb/2026-04-03_UniversalTransformer_ACT/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/c3e767b6b84e5a5b59144b416b605418c677d18a/records/track_non_record_16mb/2026-04-03_UniversalTransformer_ACT/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/c3e767b6b84e5a5b59144b416b605418c677d18a/records/track_non_record_16mb/2026-04-03_UniversalTransformer_ACT/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/c3e767b6b84e5a5b59144b416b605418c677d18a/records/track_non_record_16mb/2026-04-03_UniversalTransformer_ACT",
+        "pr": "https://github.com/openai/parameter-golf/pull/1293",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
       "provenance": {

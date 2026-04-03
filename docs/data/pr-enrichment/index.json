@@ -1,8 +1,32 @@
 {
-  "generatedAt": "2026-04-03T08:38:49.234Z",
+  "generatedAt": "2026-04-03T09:38:36.777Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 1293,
+      "title": "Non-record: Universal Transformer with Adaptive Computation Time",
+      "status": "open",
+      "updatedAt": "2026-04-03T09:33:05Z",
+      "headSha": "c3e767b6b84e5a5b59144b416b605418c677d18a",
+      "generatedAt": "2026-04-03T09:38:36.584Z",
+      "summary": "Depth-recurrent Universal Transformer reuses 9 shared blocks across two passes with ACT halting and pass embeddings to raise effective depth within the 16MB cap.",
+      "tags": [
+        "architecture",
+        "compression",
+        "muon",
+        "non-record"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1293.json"
+    },
     {
       "prNumber": 1291,
       "title": "Record: Vocab4096 + MLP4.0x + SLOT - val_bpb 1.0925 (3-seed mean)",
