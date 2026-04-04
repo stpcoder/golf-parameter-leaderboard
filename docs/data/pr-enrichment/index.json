@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-04T15:51:54.050Z",
+  "generatedAt": "2026-04-04T16:21:15.344Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
@@ -337,12 +337,13 @@
       "prNumber": 1333,
       "title": "Record: SP4096 + Depth Recurrence + Parallel Residuals + Causal SLOT-16 — val_bpb 1.0766 (3-seed mean)",
       "status": "open",
-      "updatedAt": "2026-04-04T15:17:40Z",
+      "updatedAt": "2026-04-04T16:06:26Z",
       "headSha": "7ed3f08e61281dbab846f6215fbf5005e8a8379d",
-      "generatedAt": "2026-04-04T15:21:12.867Z",
-      "summary": "SP4096 stacks depth recurrence, parallel residuals, MuonEq-R/QK gain, and GPTQ compression while evaluating with causal SLOT per-batch delta tuning on past context.",
+      "generatedAt": "2026-04-04T16:21:04.059Z",
+      "summary": "SP4096 model uses depth recurrence, parallel residuals, MuonEq-R/QK-gain with GPTQ int6 compression and causal SLOT delta adaptation on context-only tokens.",
       "tags": [
         "architecture",
+        "muon",
         "quantization",
         "evaluation"
       ],
@@ -4221,15 +4222,15 @@
       "prNumber": 1107,
       "title": "Mamba-3 SSD + Attention Hybrid with QAT (1.5633 bpb)",
       "status": "open",
-      "updatedAt": "2026-04-04T15:23:51Z",
-      "headSha": "159ac5c2a6c8a1f2e3360c3ba3b4eba26e756f31",
-      "generatedAt": "2026-04-04T15:51:47.654Z",
-      "summary": "Hybridizes Mamba-3 SISO SSD blocks with one attention layer, Muon optimizer, and extends QAT to SSD projections for INT6 deployment.",
+      "updatedAt": "2026-04-04T16:14:10Z",
+      "headSha": "8bb085443c89cdd365066eb6ccaf99d5d06ee41c",
+      "generatedAt": "2026-04-04T16:21:09.286Z",
+      "summary": "Hybrid Mamba-3 SSD stack with a lone attention layer, GLU values, and Muon optimizer, while QAT now covers Mamba projections to curb quant gaps.",
       "tags": [
         "architecture",
         "quantization",
-        "optimizer",
-        "training-schedule"
+        "training-schedule",
+        "non-record"
       ],
       "flags": {
         "usesValOnly": false,
@@ -4292,14 +4293,13 @@
       "prNumber": 1104,
       "title": "[Non-record] 1-Stage Byte-level H-Net at 17.5M: Dynamic Chunking Learns Whitespace-aligned (Word-like) Boundaries (39x-91x fewer params than H-Net paper)",
       "status": "open",
-      "updatedAt": "2026-04-04T15:45:13Z",
+      "updatedAt": "2026-04-04T16:10:35Z",
       "headSha": "e3ea22adc4582aabf47c22c5e46d73ec3393b589",
-      "generatedAt": "2026-04-04T15:51:53.893Z",
-      "summary": "Byte-level H-Net uses dynamic chunking in its E-M-D layout to learn whitespace-aligned chunks from raw bytes while matched ablations compare to subword runs.",
+      "generatedAt": "2026-04-04T16:21:15.186Z",
+      "summary": "Byte-level 1-stage H-Net uses dynamic chunking on raw bytes with multi-GPU DDP and boundary metrics to rival subword chunking.",
       "tags": [
         "architecture",
         "tokenization",
-        "evaluation",
         "non-record"
       ],
       "flags": {
