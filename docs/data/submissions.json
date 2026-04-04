@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-04T07:16:32.138Z",
+  "generatedAt": "2026-04-04T07:46:29.521Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "submissions": [
@@ -4156,6 +4156,83 @@
         "script": "https://github.com/openai/parameter-golf/blob/6c1b833be9b0e11e468c01b92f87a8f5ed395b84/records/track_10min_16mb/2026-03-26_DepthRecurrence_NgramBackoff_0.6360/train_gpt.py",
         "folder": "https://github.com/openai/parameter-golf/tree/6c1b833be9b0e11e468c01b92f87a8f5ed395b84/records/track_10min_16mb/2026-03-26_DepthRecurrence_NgramBackoff_0.6360",
         "pr": "https://github.com/openai/parameter-golf/pull/808",
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": false,
+        "hasPullRequest": true,
+        "listedInReadme": false
+      }
+    },
+    {
+      "id": "record-records-track_10min_16mb-2026-04-04_PerSample_SLOT_TTT_AdamW24step_LR024_Stride96",
+      "source": "pull_request",
+      "status": "open",
+      "category": "main-track",
+      "track": {
+        "path": "records/track_10min_16mb",
+        "slug": "track_10min_16mb",
+        "label": "10 Minute / 16MB",
+        "official": true,
+        "category": "main-track"
+      },
+      "record": {
+        "folderName": "2026-04-04_PerSample_SLOT_TTT_AdamW24step_LR024_Stride96",
+        "folderPath": "records/track_10min_16mb/2026-04-04_PerSample_SLOT_TTT_AdamW24step_LR024_Stride96",
+        "submissionPath": "records/track_10min_16mb/2026-04-04_PerSample_SLOT_TTT_AdamW24step_LR024_Stride96/submission.json",
+        "readmePath": "records/track_10min_16mb/2026-04-04_PerSample_SLOT_TTT_AdamW24step_LR024_Stride96/README.md",
+        "trainLogPath": "records/track_10min_16mb/2026-04-04_PerSample_SLOT_TTT_AdamW24step_LR024_Stride96/train.log",
+        "scriptPath": "records/track_10min_16mb/2026-04-04_PerSample_SLOT_TTT_AdamW24step_LR024_Stride96/train_gpt.py"
+      },
+      "submission": {
+        "author": "Renqian Luo",
+        "githubId": "renqianluo",
+        "name": "Per-Sample SLOT with AdamW 24-step LR=0.024 + TTT-AdamW-1ep-Freeze10 + Stride=96 + GPTQ DAMP=0.005",
+        "blurb": "Per-sample SLOT evaluation: each input sequence gets its own [bsz,1,512] hidden state delta and [bsz,1,1024] logit bias (1536 total per-sequence parameters), optimized with AdamW (24 steps, cosine LR 0.024→0.001) on the scored positions (last stride=96 tokens per window). Evaluation uses stride=96 for SLOT (reducing number of windows by 33% vs stride=64). TTT with AdamW 1ep (lr=0.001, freeze 10/11 blocks, ~274s). Per-sample SLOT captures sequence-level statistical patterns (topic/style/domain/vocabulary distribution) much better than global delta approaches. 3-seed mean BPB: 0.63614 (seeds 1337/42/314). Competition-legal: ~274s TTT + ~305s SLOT = ~579s total (~9.65 min on 8xH100). Key innovation: Per-sequence parameter fitting (hidden delta + logit bias) tuned directly on scored tokens enables ~43% BPB reduction from base model (0.636 from 1.118), far exceeding global delta SLOT approaches (~10% gain). Higher LR=0.024 (vs default 0.012) takes larger AdamW steps and converges to much better minimum in 24 steps. Stride=96 reduces total windows from 15236 to 10158 (33% fewer), enabling 24 optimization steps within the 10-minute budget.",
+        "date": "2026-04-04"
+      },
+      "metrics": {
+        "valBpb": 0.63613632,
+        "valLoss": 1.07408668,
+        "preQuantValBpb": null,
+        "preQuantValLoss": null,
+        "stepStop": null,
+        "wallclockSeconds": null,
+        "evalTimeSeconds": null
+      },
+      "artifact": {
+        "bytesTotal": null,
+        "bytesCode": null,
+        "bytesModelInt8Zlib": null
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
+      "pr": {
+        "number": 1329,
+        "title": "Record: Per-Sample SLOT + TTT + LR=0.024 + Stride=96 — val_bpb 0.63614 (3-seed mean)",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1329",
+        "authorLogin": "renqianluo",
+        "authorName": null,
+        "createdAt": "2026-04-04T07:35:11Z",
+        "updatedAt": "2026-04-04T07:35:11Z",
+        "headSha": "0c7bd5ee4f099cafc8c9ccbb170820a4656f0881",
+        "headRepo": "renqianluo/parameter-golf"
+      },
+      "links": {
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/24c9d7fabe84e14307591dceb665756790854f96/records/track_10min_16mb/2026-04-04_PerSample_SLOT_TTT_AdamW24step_LR024_Stride96/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/24c9d7fabe84e14307591dceb665756790854f96/records/track_10min_16mb/2026-04-04_PerSample_SLOT_TTT_AdamW24step_LR024_Stride96/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/24c9d7fabe84e14307591dceb665756790854f96/records/track_10min_16mb/2026-04-04_PerSample_SLOT_TTT_AdamW24step_LR024_Stride96/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/24c9d7fabe84e14307591dceb665756790854f96/records/track_10min_16mb/2026-04-04_PerSample_SLOT_TTT_AdamW24step_LR024_Stride96/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/24c9d7fabe84e14307591dceb665756790854f96/records/track_10min_16mb/2026-04-04_PerSample_SLOT_TTT_AdamW24step_LR024_Stride96",
+        "pr": "https://github.com/openai/parameter-golf/pull/1329",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
       "provenance": {
