@@ -1,8 +1,31 @@
 {
-  "generatedAt": "2026-04-04T08:17:42.869Z",
+  "generatedAt": "2026-04-04T08:48:01.467Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 1332,
+      "title": "Record: SP4096 + Polar Express NS + MuonEq-R + WD=0.090 — 1.0959 BPB (3-seed mean)",
+      "status": "open",
+      "updatedAt": "2026-04-04T08:20:17Z",
+      "headSha": "22eb98c634430271aee2bbad446c5f98a87dd82d",
+      "generatedAt": "2026-04-04T08:47:56.795Z",
+      "summary": "Extends SP4096 with 4-step Polar Express NS, MuonEq-R row-normalized gradients, higher WD, and XSA across layers for quant-friendly compression.",
+      "tags": [
+        "quantization",
+        "muon",
+        "regularization"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1332.json"
+    },
     {
       "prNumber": 1331,
       "title": "Record: MuonEq-R + 3-Layer Recurrence + WD=0.095 + MLR=0.022 + All-Int6 — val_bpb 1.0900 (3-seed mean)",
@@ -12447,14 +12470,14 @@
       "prNumber": 559,
       "title": "Non-record: TernaryRecurrentGPT - ternary 1.58-bit MLP + depth recurrence (1xL4 val_bpb=1.5348)",
       "status": "open",
-      "updatedAt": "2026-04-03T07:08:21Z",
-      "headSha": "d4832a927034099650a42476e22fd4b351218f62",
-      "generatedAt": "2026-04-03T07:38:47.923Z",
-      "summary": "Depth-recurrent GPT looping 7 layers twice with SmearGate+BigramHash and late STE-based 1.58-bit ternary MLP weights plus SWA-enhanced Muon+AdamW.",
+      "updatedAt": "2026-04-04T08:27:43Z",
+      "headSha": "efccb0f127dd8552f7425118e282e269718874e5",
+      "generatedAt": "2026-04-04T08:48:01.389Z",
+      "summary": "Depth-recurrent 7-layer GPT loops over ternary 1.58-bit STE-quantized MLPs with BigramHash/SmearGate, pairing Muon matrix updates and AdamW scalars with SWA.",
       "tags": [
-        "architecture",
         "quantization",
-        "training-schedule"
+        "architecture",
+        "optimizer"
       ],
       "flags": {
         "usesValOnly": false,

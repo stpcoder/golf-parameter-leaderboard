@@ -1,0 +1,40 @@
+{
+  "generatedAt": "2026-04-04T08:47:56.795Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1332,
+    "title": "Record: SP4096 + Polar Express NS + MuonEq-R + WD=0.090 — 1.0959 BPB (3-seed mean)",
+    "state": "open",
+    "updatedAt": "2026-04-04T08:20:17Z",
+    "headSha": "22eb98c634430271aee2bbad446c5f98a87dd82d",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1332",
+    "authorLogin": "Omrigotlieb"
+  },
+  "inputs": {
+    "hash": "072662c123505c465dfcb1e80cbfb797fc5a748edd0e2a3564b0b095cec763f8",
+    "readmePaths": [],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Extends SP4096 with 4-step Polar Express NS, MuonEq-R row-normalized gradients, higher WD, and XSA across layers for quant-friendly compression.",
+    "tags": [
+      "quantization",
+      "muon",
+      "regularization"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "4-step Polar Express NS for faster orthogonalization",
+      "MuonEq-R row-normalizes gradients before Newton-Schulz",
+      "Stronger WD plus XSA on all layers for quant-friendly compression"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}
