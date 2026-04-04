@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-04T19:21:45.098Z",
+  "generatedAt": "2026-04-04T19:51:59.866Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "submissions": [
@@ -59624,6 +59624,83 @@
       }
     },
     {
+      "id": "record-records-non-record-multi-cube-face-letter-assignment",
+      "source": "pull_request",
+      "status": "open",
+      "category": "unknown",
+      "track": {
+        "path": "records/non-record",
+        "slug": "non-record",
+        "label": "non-record",
+        "official": false,
+        "category": "unknown"
+      },
+      "record": {
+        "folderName": "multi-cube-face-letter-assignment",
+        "folderPath": "records/non-record/multi-cube-face-letter-assignment",
+        "submissionPath": "records/non-record/multi-cube-face-letter-assignment/submission.json",
+        "readmePath": "records/non-record/multi-cube-face-letter-assignment/README.md",
+        "trainLogPath": "records/non-record/multi-cube-face-letter-assignment/train.log",
+        "scriptPath": "records/non-record/multi-cube-face-letter-assignment/train_gpt.py"
+      },
+      "submission": {
+        "author": "Sebastian Lasowski",
+        "githubId": "teslaeco",
+        "name": "multi-cube-face-letter-assignment",
+        "blurb": null,
+        "date": "2026-04-04T19:31:49Z"
+      },
+      "metrics": {
+        "valBpb": null,
+        "valLoss": null,
+        "preQuantValBpb": null,
+        "preQuantValLoss": null,
+        "stepStop": null,
+        "wallclockSeconds": null,
+        "evalTimeSeconds": null
+      },
+      "artifact": {
+        "bytesTotal": null,
+        "bytesCode": null,
+        "bytesModelInt8Zlib": null
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
+      "pr": {
+        "number": 1356,
+        "title": "Multi-Cube Face Letter Assignment (Non-Record Submission)",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1356",
+        "authorLogin": "teslaeco",
+        "authorName": null,
+        "createdAt": "2026-04-04T19:31:49Z",
+        "updatedAt": "2026-04-04T19:31:49Z",
+        "headSha": "be309ec50c4906652634ee976bbabf186e4aa2a8",
+        "headRepo": "Terraforming-Planet/multi-cube-face-letter-assignment"
+      },
+      "links": {
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/be309ec50c4906652634ee976bbabf186e4aa2a8/records/non-record/multi-cube-face-letter-assignment/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/be309ec50c4906652634ee976bbabf186e4aa2a8/records/non-record/multi-cube-face-letter-assignment/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/be309ec50c4906652634ee976bbabf186e4aa2a8/records/non-record/multi-cube-face-letter-assignment/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/be309ec50c4906652634ee976bbabf186e4aa2a8/records/non-record/multi-cube-face-letter-assignment/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/be309ec50c4906652634ee976bbabf186e4aa2a8/records/non-record/multi-cube-face-letter-assignment",
+        "pr": "https://github.com/openai/parameter-golf/pull/1356",
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": false,
+        "hasPullRequest": true,
+        "listedInReadme": false
+      }
+    },
+    {
       "id": "record-records-track_10min_16mb-2026-04-04_DiscriminativeTTT_1-0807",
       "source": "pull_request",
       "status": "open",
@@ -60451,7 +60528,7 @@
         "authorLogin": "ranausmanai",
         "authorName": null,
         "createdAt": "2026-04-03T00:53:59Z",
-        "updatedAt": "2026-04-04T03:52:32Z",
+        "updatedAt": "2026-04-04T19:29:08Z",
         "headSha": "1a40bded844bdaea22a692952d79406e8b26044e",
         "headRepo": "ranausmanai/parameter-golf"
       },

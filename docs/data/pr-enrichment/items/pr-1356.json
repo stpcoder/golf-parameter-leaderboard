@@ -1,0 +1,39 @@
+{
+  "generatedAt": "2026-04-04T19:52:06.686Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1356,
+    "title": "Multi-Cube Face Letter Assignment (Non-Record Submission)",
+    "state": "open",
+    "updatedAt": "2026-04-04T19:31:49Z",
+    "headSha": "be309ec50c4906652634ee976bbabf186e4aa2a8",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1356",
+    "authorLogin": "teslaeco"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/non-record/multi-cube-face-letter-assignment/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Focuses on constraint-aware global assignment of 18 letters across six cubes to capture structured reasoning rather than independent face predictions.",
+    "tags": [
+      "non-record"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "constraint-aware global letter assignment",
+      "treats cubes as single structured system"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}
