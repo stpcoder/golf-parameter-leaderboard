@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-04T12:49:31.993Z",
+  "generatedAt": "2026-04-04T13:50:39.987Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
@@ -2965,14 +2965,14 @@
     {
       "prNumber": 1180,
       "title": "Loss function comparison (CE vs P2 variants) under parameter-golf constraints",
-      "status": "open",
-      "updatedAt": "2026-04-01T07:24:17Z",
+      "status": "closed",
+      "updatedAt": "2026-04-04T13:35:11Z",
       "headSha": "827b05787c397d51b93381260cf3f5b80bc95c8c",
-      "generatedAt": "2026-04-01T07:50:28.729Z",
-      "summary": "Parameter-golf GPT uses P2 loss, wallclock-aware warmdown, residual mixing/conv token mixer, and Muon+Adam split to co-design training and quantized compression.",
+      "generatedAt": "2026-04-04T13:50:25.570Z",
+      "summary": "GPT11x512 employs P2 difficulty-aware loss, wallclock-aligned warmdown, residual mixing with a conv token mixer, and Muon+Adam split under compression-aware QAT.",
       "tags": [
-        "optimizer",
         "architecture",
+        "optimizer",
         "training-schedule",
         "compression"
       ],
@@ -4407,15 +4407,15 @@
       "prNumber": 1085,
       "title": "Non-record:11L GQA + MLP 3 + Partial RoPE + Int6 Attn/MLP + QAT40 ",
       "status": "open",
-      "updatedAt": "2026-04-04T09:24:43Z",
-      "headSha": "50cfb82a7a7130139bbc14c6c06e240ef2db8899",
-      "generatedAt": "2026-04-04T09:48:45.316Z",
-      "summary": "11-layer GPT uses GQA/XSA with partial RoPE, 3x MLP, Muon+AdamW warmdown, and late QAT40 to adapt Int6 attention/MLP quantization.",
+      "updatedAt": "2026-04-04T13:43:24Z",
+      "headSha": "383417e3b7a483c5be51e33c479e60d330e1c6ab",
+      "generatedAt": "2026-04-04T13:50:35.256Z",
+      "summary": "11-layer GPT uses GQA with partial RoPE, 3x MLP, sliding eval, and late QAT/LR warmdown to tolerate aggressive Int6 quantization.",
       "tags": [
-        "sliding-window-eval",
+        "architecture",
         "quantization",
-        "optimizer",
-        "architecture"
+        "training-schedule",
+        "evaluation"
       ],
       "flags": {
         "usesValOnly": false,
@@ -4761,11 +4761,11 @@
     {
       "prNumber": 1061,
       "title": "Causal Oscillator LM: physics-native architecture (BPB 1.34)",
-      "status": "open",
-      "updatedAt": "2026-03-30T13:19:01Z",
+      "status": "closed",
+      "updatedAt": "2026-04-04T13:43:56Z",
       "headSha": "54ba8cfc2bf3a0bda2bbf4264263b780f82fef27",
-      "generatedAt": "2026-03-30T13:36:57.053Z",
-      "summary": "Causal Oscillator LM encodes context via damped harmonic oscillator impulse responses and FFT causal convolutions before attention, sidestepping traditional transformer blocks.",
+      "generatedAt": "2026-04-04T13:50:39.828Z",
+      "summary": "Damped harmonic oscillators generate causal context via FFT before attention, letting physics-critical and coupling weights follow separate quantization.",
       "tags": [
         "architecture",
         "quantization",

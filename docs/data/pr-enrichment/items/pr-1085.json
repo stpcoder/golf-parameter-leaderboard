@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-04-04T09:48:45.316Z",
+  "generatedAt": "2026-04-04T13:50:35.256Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 1085,
     "title": "Non-record:11L GQA + MLP 3 + Partial RoPE + Int6 Attn/MLP + QAT40 ",
     "state": "open",
-    "updatedAt": "2026-04-04T09:24:43Z",
-    "headSha": "50cfb82a7a7130139bbc14c6c06e240ef2db8899",
+    "updatedAt": "2026-04-04T13:43:24Z",
+    "headSha": "383417e3b7a483c5be51e33c479e60d330e1c6ab",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/1085",
     "authorLogin": "adityasasidhar"
   },
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "11-layer GPT uses GQA/XSA with partial RoPE, 3x MLP, Muon+AdamW warmdown, and late QAT40 to adapt Int6 attention/MLP quantization.",
+    "summary": "11-layer GPT uses GQA with partial RoPE, 3x MLP, sliding eval, and late QAT/LR warmdown to tolerate aggressive Int6 quantization.",
     "tags": [
-      "sliding-window-eval",
+      "architecture",
       "quantization",
-      "optimizer",
-      "architecture"
+      "training-schedule",
+      "evaluation"
     ],
     "usesValOnly": false,
-    "valOnlyReasoning": "N/A",
+    "valOnlyReasoning": "",
     "techniques": [
-      "11-layer GQA/XSA with partial RoPE",
-      "Late QAT40 for Int6 attention/MLP weights",
-      "Muon+AdamW with warmdown schedule"
+      "Grouped query attention with partial RoPE",
+      "Late 40% QAT plus LR warmdown",
+      "Int6 quantization with zlib-compressed export"
     ]
   },
   "compatibility": {

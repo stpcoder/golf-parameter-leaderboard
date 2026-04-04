@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-04T13:20:06.787Z",
+  "generatedAt": "2026-04-04T13:50:18.080Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "submissions": [
@@ -8641,7 +8641,7 @@
     {
       "id": "record-records-track_10min_16mb-2026-03-31_SR_CM_P2Loss",
       "source": "pull_request",
-      "status": "open",
+      "status": "closed",
       "category": "main-track",
       "track": {
         "path": "records/track_10min_16mb",
@@ -8689,14 +8689,14 @@
       "pr": {
         "number": 1180,
         "title": "Loss function comparison (CE vs P2 variants) under parameter-golf constraints",
-        "state": "open",
+        "state": "closed",
         "draft": false,
         "mergedAt": null,
         "htmlUrl": "https://github.com/openai/parameter-golf/pull/1180",
         "authorLogin": "estesryan",
         "authorName": null,
         "createdAt": "2026-03-31T11:32:19Z",
-        "updatedAt": "2026-04-01T07:24:17Z",
+        "updatedAt": "2026-04-04T13:35:11Z",
         "headSha": "827b05787c397d51b93381260cf3f5b80bc95c8c",
         "headRepo": "estesryan/parameter-golf"
       },
@@ -45200,16 +45200,16 @@
         "authorLogin": "adityasasidhar",
         "authorName": null,
         "createdAt": "2026-03-29T17:17:36Z",
-        "updatedAt": "2026-04-04T09:24:43Z",
-        "headSha": "50cfb82a7a7130139bbc14c6c06e240ef2db8899",
+        "updatedAt": "2026-04-04T13:43:24Z",
+        "headSha": "383417e3b7a483c5be51e33c479e60d330e1c6ab",
         "headRepo": "adityasasidhar/parameter-golf"
       },
       "links": {
-        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/50cfb82a7a7130139bbc14c6c06e240ef2db8899/records/track_non_record_16mb/2026-03-27_11L_GQA_PartialRoPE_Int6AttnMLP_QAT40/submission.json",
-        "readme": "https://github.com/openai/parameter-golf/blob/50cfb82a7a7130139bbc14c6c06e240ef2db8899/records/track_non_record_16mb/2026-03-27_11L_GQA_PartialRoPE_Int6AttnMLP_QAT40/README.md",
-        "trainLog": "https://github.com/openai/parameter-golf/blob/50cfb82a7a7130139bbc14c6c06e240ef2db8899/records/track_non_record_16mb/2026-03-27_11L_GQA_PartialRoPE_Int6AttnMLP_QAT40/train.log",
-        "script": "https://github.com/openai/parameter-golf/blob/50cfb82a7a7130139bbc14c6c06e240ef2db8899/records/track_non_record_16mb/2026-03-27_11L_GQA_PartialRoPE_Int6AttnMLP_QAT40/train_gpt.py",
-        "folder": "https://github.com/openai/parameter-golf/tree/50cfb82a7a7130139bbc14c6c06e240ef2db8899/records/track_non_record_16mb/2026-03-27_11L_GQA_PartialRoPE_Int6AttnMLP_QAT40",
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/383417e3b7a483c5be51e33c479e60d330e1c6ab/records/track_non_record_16mb/2026-03-27_11L_GQA_PartialRoPE_Int6AttnMLP_QAT40/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/383417e3b7a483c5be51e33c479e60d330e1c6ab/records/track_non_record_16mb/2026-03-27_11L_GQA_PartialRoPE_Int6AttnMLP_QAT40/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/383417e3b7a483c5be51e33c479e60d330e1c6ab/records/track_non_record_16mb/2026-03-27_11L_GQA_PartialRoPE_Int6AttnMLP_QAT40/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/383417e3b7a483c5be51e33c479e60d330e1c6ab/records/track_non_record_16mb/2026-03-27_11L_GQA_PartialRoPE_Int6AttnMLP_QAT40/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/383417e3b7a483c5be51e33c479e60d330e1c6ab/records/track_non_record_16mb/2026-03-27_11L_GQA_PartialRoPE_Int6AttnMLP_QAT40",
         "pr": "https://github.com/openai/parameter-golf/pull/1085",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
@@ -46839,7 +46839,7 @@
     {
       "id": "record-records-track_10min_16mb-2026-03-29_CausalOscillatorLM",
       "source": "pull_request",
-      "status": "open",
+      "status": "closed",
       "category": "main-track",
       "track": {
         "path": "records/track_10min_16mb",
@@ -46887,14 +46887,14 @@
       "pr": {
         "number": 1061,
         "title": "Causal Oscillator LM: physics-native architecture (BPB 1.34)",
-        "state": "open",
+        "state": "closed",
         "draft": false,
         "mergedAt": null,
         "htmlUrl": "https://github.com/openai/parameter-golf/pull/1061",
         "authorLogin": "rolandnsharp",
         "authorName": null,
         "createdAt": "2026-03-29T06:23:37Z",
-        "updatedAt": "2026-03-30T13:19:01Z",
+        "updatedAt": "2026-04-04T13:43:56Z",
         "headSha": "54ba8cfc2bf3a0bda2bbf4264263b780f82fef27",
         "headRepo": "rolandnsharp/parameter-golf"
       },

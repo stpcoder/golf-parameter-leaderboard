@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-04-01T07:50:28.729Z",
+  "generatedAt": "2026-04-04T13:50:25.570Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 1180,
     "title": "Loss function comparison (CE vs P2 variants) under parameter-golf constraints",
-    "state": "open",
-    "updatedAt": "2026-04-01T07:24:17Z",
+    "state": "closed",
+    "updatedAt": "2026-04-04T13:35:11Z",
     "headSha": "827b05787c397d51b93381260cf3f5b80bc95c8c",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/1180",
     "authorLogin": "estesryan"
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Parameter-golf GPT uses P2 loss, wallclock-aware warmdown, residual mixing/conv token mixer, and Muon+Adam split to co-design training and quantized compression.",
+    "summary": "GPT11x512 employs P2 difficulty-aware loss, wallclock-aligned warmdown, residual mixing with a conv token mixer, and Muon+Adam split under compression-aware QAT.",
     "tags": [
-      "optimizer",
       "architecture",
+      "optimizer",
       "training-schedule",
       "compression"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "P2 difficulty-scaled loss prioritizing low-confidence tokens",
-      "Wallclock-aware learning-rate warmdown tailored to the 10-minute cap",
-      "Muon+Adam split with conv token mixing and late-stage int6 QAT"
+      "P2 loss for low-confidence token focus",
+      "wallclock-aware warmdown plus late QAT toward int6 targets",
+      "residual mixing and conv token mixer with Muon/Adam optimizer split"
     ]
   },
   "compatibility": {

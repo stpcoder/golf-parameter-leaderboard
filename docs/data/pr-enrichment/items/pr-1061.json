@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-30T13:36:57.053Z",
+  "generatedAt": "2026-04-04T13:50:39.828Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 1061,
     "title": "Causal Oscillator LM: physics-native architecture (BPB 1.34)",
-    "state": "open",
-    "updatedAt": "2026-03-30T13:19:01Z",
+    "state": "closed",
+    "updatedAt": "2026-04-04T13:43:56Z",
     "headSha": "54ba8cfc2bf3a0bda2bbf4264263b780f82fef27",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/1061",
     "authorLogin": "rolandnsharp"
@@ -19,18 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Causal Oscillator LM encodes context via damped harmonic oscillator impulse responses and FFT causal convolutions before attention, sidestepping traditional transformer blocks.",
+    "summary": "Damped harmonic oscillators generate causal context via FFT before attention, letting physics-critical and coupling weights follow separate quantization.",
     "tags": [
       "architecture",
       "quantization",
       "attention"
     ],
     "usesValOnly": false,
-    "valOnlyReasoning": "Standard training; no explicit val-only regime reported.",
+    "valOnlyReasoning": "",
     "techniques": [
-      "FFT-based causal convolution of oscillator impulse responses",
-      "Attention layers operating on physics-enriched states",
-      "Muon optimizer for attention weights plus AdamW on oscillator parameters"
+      "physics-based oscillator bank for causal context",
+      "FFT-based causal convolution feeding attention",
+      "precision-separated quantization for physics vs coupling"
     ]
   },
   "compatibility": {
