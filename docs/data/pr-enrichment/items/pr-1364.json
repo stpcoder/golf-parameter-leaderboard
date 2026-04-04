@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-04-04T23:23:43.492Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1364,
+    "title": "Record: Pre-quant AdamW TTT + QK-Gain 4.0 — val_bpb 1.1025 (3-seed mean)",
+    "state": "open",
+    "updatedAt": "2026-04-04T23:13:01Z",
+    "headSha": "9f305b033adaa899d72823fe88e9554c71e714eb",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1364",
+    "authorLogin": "stukenov"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-04-05_PreQuantTTT_QKGain4_1.1025/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Run AdamW TTT on the EMA weights before Full Hessian GPTQ so QK-Gain‑tuned architecture quantizes cleanly for sliding-window evaluation.",
+    "tags": [
+      "optimizer",
+      "quantization",
+      "architecture"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Pre-quant AdamW TTT adaptation on EMA weights",
+      "Full Hessian GPTQ after adaptation",
+      "QK-Gain 4.0 architecture tweaks"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

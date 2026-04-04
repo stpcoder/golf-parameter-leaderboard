@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-04T22:53:15.941Z",
+  "generatedAt": "2026-04-04T23:23:35.414Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "submissions": [
@@ -7233,7 +7233,7 @@
         "authorLogin": "renqianluo",
         "authorName": null,
         "createdAt": "2026-04-03T23:52:29Z",
-        "updatedAt": "2026-04-03T23:52:29Z",
+        "updatedAt": "2026-04-04T23:15:17Z",
         "headSha": "a49a3130390f2b7e6f81285011529d9852458054",
         "headRepo": "renqianluo/parameter-golf"
       },
@@ -9543,7 +9543,7 @@
         "authorLogin": "resouer",
         "authorName": null,
         "createdAt": "2026-04-03T16:29:29Z",
-        "updatedAt": "2026-04-03T16:39:16Z",
+        "updatedAt": "2026-04-04T23:15:27Z",
         "headSha": "d43a0f3695b2a01ec5231fc646fbcbc87f32e99b",
         "headRepo": "resouer/parameter-golf"
       },
@@ -12326,6 +12326,83 @@
         "script": "https://github.com/openai/parameter-golf/blob/99b080be7ee758616038526f297e9e4f8680734c/records/track_10min_16mb/2026-03-31_SLOT_SplitLR_GPTQ_XSA_1.1015/train_gpt.py",
         "folder": "https://github.com/openai/parameter-golf/tree/99b080be7ee758616038526f297e9e4f8680734c/records/track_10min_16mb/2026-03-31_SLOT_SplitLR_GPTQ_XSA_1.1015",
         "pr": "https://github.com/openai/parameter-golf/pull/1172",
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": false,
+        "hasPullRequest": true,
+        "listedInReadme": false
+      }
+    },
+    {
+      "id": "record-records-track_10min_16mb-2026-04-05_PreQuantTTT_QKGain4_1-1025",
+      "source": "pull_request",
+      "status": "open",
+      "category": "main-track",
+      "track": {
+        "path": "records/track_10min_16mb",
+        "slug": "track_10min_16mb",
+        "label": "10 Minute / 16MB",
+        "official": true,
+        "category": "main-track"
+      },
+      "record": {
+        "folderName": "2026-04-05_PreQuantTTT_QKGain4_1.1025",
+        "folderPath": "records/track_10min_16mb/2026-04-05_PreQuantTTT_QKGain4_1.1025",
+        "submissionPath": "records/track_10min_16mb/2026-04-05_PreQuantTTT_QKGain4_1.1025/submission.json",
+        "readmePath": "records/track_10min_16mb/2026-04-05_PreQuantTTT_QKGain4_1.1025/README.md",
+        "trainLogPath": "records/track_10min_16mb/2026-04-05_PreQuantTTT_QKGain4_1.1025/train.log",
+        "scriptPath": "records/track_10min_16mb/2026-04-05_PreQuantTTT_QKGain4_1.1025/train_gpt.py"
+      },
+      "submission": {
+        "author": "stukenov",
+        "githubId": "stukenov",
+        "name": null,
+        "blurb": null,
+        "date": "2026-04-04T23:13:00Z"
+      },
+      "metrics": {
+        "valBpb": 1.1025,
+        "valLoss": null,
+        "preQuantValBpb": null,
+        "preQuantValLoss": null,
+        "stepStop": null,
+        "wallclockSeconds": null,
+        "evalTimeSeconds": 500
+      },
+      "artifact": {
+        "bytesTotal": null,
+        "bytesCode": null,
+        "bytesModelInt8Zlib": null
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
+      "pr": {
+        "number": 1364,
+        "title": "Record: Pre-quant AdamW TTT + QK-Gain 4.0 — val_bpb 1.1025 (3-seed mean)",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1364",
+        "authorLogin": "stukenov",
+        "authorName": null,
+        "createdAt": "2026-04-04T23:13:00Z",
+        "updatedAt": "2026-04-04T23:13:01Z",
+        "headSha": "9f305b033adaa899d72823fe88e9554c71e714eb",
+        "headRepo": "stukenov/parameter-golf"
+      },
+      "links": {
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/9f305b033adaa899d72823fe88e9554c71e714eb/records/track_10min_16mb/2026-04-05_PreQuantTTT_QKGain4_1.1025/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/9f305b033adaa899d72823fe88e9554c71e714eb/records/track_10min_16mb/2026-04-05_PreQuantTTT_QKGain4_1.1025/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/9f305b033adaa899d72823fe88e9554c71e714eb/records/track_10min_16mb/2026-04-05_PreQuantTTT_QKGain4_1.1025/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/9f305b033adaa899d72823fe88e9554c71e714eb/records/track_10min_16mb/2026-04-05_PreQuantTTT_QKGain4_1.1025/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/9f305b033adaa899d72823fe88e9554c71e714eb/records/track_10min_16mb/2026-04-05_PreQuantTTT_QKGain4_1.1025",
+        "pr": "https://github.com/openai/parameter-golf/pull/1364",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
       "provenance": {
@@ -60066,7 +60143,7 @@
         "authorLogin": "resouer",
         "authorName": null,
         "createdAt": "2026-04-04T15:40:21Z",
-        "updatedAt": "2026-04-04T15:40:21Z",
+        "updatedAt": "2026-04-04T23:15:34Z",
         "headSha": "4ede046aac47273388f3b4d02de228292faa8a50",
         "headRepo": "resouer/parameter-golf"
       },

@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-04-04T00:13:53.630Z",
+  "generatedAt": "2026-04-04T23:24:01.229Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 1318,
     "title": "Record: TTT-AdamW + SLOT L-BFGS25 LogitDelta + GPTQ DAMP=0.005 — val_bpb 1.00955",
     "state": "open",
-    "updatedAt": "2026-04-03T23:52:29Z",
+    "updatedAt": "2026-04-04T23:15:17Z",
     "headSha": "a49a3130390f2b7e6f81285011529d9852458054",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/1318",
     "authorLogin": "renqianluo"
@@ -19,19 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "One-epoch AdamW TTT on the final block plus sliding-window logit-space SLOT delta tuning with lowered GPTQ damping for sharper eval adaptation.",
+    "summary": "Combines test-time AdamW tuning, logit-space SLOT L-BFGS delta optimization, and reduced GPTQ damping for aggressive int6 evaluation.",
     "tags": [
       "quantization",
       "sliding-window-eval",
-      "optimizer",
-      "evaluation"
+      "optimizer"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "- AdamW TTT on last transformer block before scoring",
-      "- Sliding-window L-BFGS logit delta with focal loss and delta clipping",
-      "- GPTQ int6 with 0.005 Hessian damping and val-data calibration"
+      "TTT AdamW adaptation on final block before scoring",
+      "SLOT logit-space global delta with L-BFGS history and focal tokens",
+      "GPTQ int6 with damp=0.005 for tighter weight error compensation"
     ]
   },
   "compatibility": {

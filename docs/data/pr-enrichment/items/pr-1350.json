@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-04-04T15:51:31.347Z",
+  "generatedAt": "2026-04-04T23:23:49.580Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 1350,
     "title": "Record: L-BFGS Causal SLOT — val_bpb 1.0046 (3-seed mean)",
     "state": "open",
-    "updatedAt": "2026-04-04T15:40:21Z",
+    "updatedAt": "2026-04-04T23:15:34Z",
     "headSha": "4ede046aac47273388f3b4d02de228292faa8a50",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/1350",
     "authorLogin": "resouer"
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Applies L-BFGS causal logit SLOT on past tokens with pre-quant AdamW TTT and coprime shard sampling before GPTQ.",
+    "summary": "Adds causal-only L-BFGS logit SLOT eval with warm-start focal loss plus pre-quant AdamW TTT and coprime loader tweaks.",
     "tags": [
+      "evaluation",
       "optimizer",
       "training-schedule",
-      "quantization",
-      "evaluation"
+      "quantization"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "L-BFGS causal logit SLOT optimizing only prior-context losses",
-      "Pre-quant AdamW TTT on EMA weights before GPTQ",
-      "Coprime-stride weighted shard loader with QK_GAIN/WARMDOWN tweaks"
+      "Causal L-BFGS SLOT optimizing context-only logits",
+      "Pre-quant AdamW TTT plus GPTQ config tweaks",
+      "Coprime-stride weighted shard sampling"
     ]
   },
   "compatibility": {

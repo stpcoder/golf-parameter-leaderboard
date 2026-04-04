@@ -1,8 +1,31 @@
 {
-  "generatedAt": "2026-04-04T22:23:39.074Z",
+  "generatedAt": "2026-04-04T23:24:06.551Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 1364,
+      "title": "Record: Pre-quant AdamW TTT + QK-Gain 4.0 — val_bpb 1.1025 (3-seed mean)",
+      "status": "open",
+      "updatedAt": "2026-04-04T23:13:01Z",
+      "headSha": "9f305b033adaa899d72823fe88e9554c71e714eb",
+      "generatedAt": "2026-04-04T23:23:43.492Z",
+      "summary": "Run AdamW TTT on the EMA weights before Full Hessian GPTQ so QK-Gain‑tuned architecture quantizes cleanly for sliding-window evaluation.",
+      "tags": [
+        "optimizer",
+        "quantization",
+        "architecture"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1364.json"
+    },
     {
       "prNumber": 1362,
       "title": "[Non-record] GPTQ Hessian Int6 quantization",
@@ -237,15 +260,15 @@
       "prNumber": 1350,
       "title": "Record: L-BFGS Causal SLOT — val_bpb 1.0046 (3-seed mean)",
       "status": "open",
-      "updatedAt": "2026-04-04T15:40:21Z",
+      "updatedAt": "2026-04-04T23:15:34Z",
       "headSha": "4ede046aac47273388f3b4d02de228292faa8a50",
-      "generatedAt": "2026-04-04T15:51:31.347Z",
-      "summary": "Applies L-BFGS causal logit SLOT on past tokens with pre-quant AdamW TTT and coprime shard sampling before GPTQ.",
+      "generatedAt": "2026-04-04T23:23:49.580Z",
+      "summary": "Adds causal-only L-BFGS logit SLOT eval with warm-start focal loss plus pre-quant AdamW TTT and coprime loader tweaks.",
       "tags": [
+        "evaluation",
         "optimizer",
         "training-schedule",
-        "quantization",
-        "evaluation"
+        "quantization"
       ],
       "flags": {
         "usesValOnly": false,
@@ -822,15 +845,14 @@
       "prNumber": 1318,
       "title": "Record: TTT-AdamW + SLOT L-BFGS25 LogitDelta + GPTQ DAMP=0.005 — val_bpb 1.00955",
       "status": "open",
-      "updatedAt": "2026-04-03T23:52:29Z",
+      "updatedAt": "2026-04-04T23:15:17Z",
       "headSha": "a49a3130390f2b7e6f81285011529d9852458054",
-      "generatedAt": "2026-04-04T00:13:53.630Z",
-      "summary": "One-epoch AdamW TTT on the final block plus sliding-window logit-space SLOT delta tuning with lowered GPTQ damping for sharper eval adaptation.",
+      "generatedAt": "2026-04-04T23:24:01.229Z",
+      "summary": "Combines test-time AdamW tuning, logit-space SLOT L-BFGS delta optimization, and reduced GPTQ damping for aggressive int6 evaluation.",
       "tags": [
         "quantization",
         "sliding-window-eval",
-        "optimizer",
-        "evaluation"
+        "optimizer"
       ],
       "flags": {
         "usesValOnly": false,
@@ -1053,14 +1075,13 @@
       "prNumber": 1306,
       "title": "Record: Causal SLOT + Pre-quant TTT — val_bpb 1.0846 (3-seed mean)",
       "status": "open",
-      "updatedAt": "2026-04-03T16:39:16Z",
+      "updatedAt": "2026-04-04T23:15:27Z",
       "headSha": "d43a0f3695b2a01ec5231fc646fbcbc87f32e99b",
-      "generatedAt": "2026-04-03T16:40:25.422Z",
-      "summary": "Causal SLOT optimizes deltas from prior tokens, pre-quant AdamW TTT adapts EMA weights before GPTQ, and coprime-stride sampling mixes shards.",
+      "generatedAt": "2026-04-04T23:24:06.364Z",
+      "summary": "Causal SLOT limits delta updates to already-scored tokens, paired with pre-quant AdamW TTT and a coprime-stride loader for Full Hessian GPTQ eval.",
       "tags": [
-        "quantization",
-        "optimizer",
-        "evaluation"
+        "evaluation",
+        "optimizer"
       ],
       "flags": {
         "usesValOnly": false,
