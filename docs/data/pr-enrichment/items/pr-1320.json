@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-04-04T02:44:55.245Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1320,
+    "title": "Non-record: TTT chunk ordering does not improve BPB — negative results from 7 ordering variants",
+    "state": "open",
+    "updatedAt": "2026-04-04T02:24:35Z",
+    "headSha": "6517c702d66eff662061b2684b03db88f0f0d350",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1320",
+    "authorLogin": "jpfeiffe"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-04_NonRecord_TTT_Ordering_NegativeResults/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Tested document ordering/clustering variants for score-first TTT, finding sequential order with always-update wins despite embedding-transfer signal.",
+    "tags": [
+      "evaluation",
+      "architecture",
+      "non-record"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "score-first TTT with all-GPU-per-chunk updates",
+      "document embedding ordering and clustering experiments",
+      "alignment-gating oracle vs always-update analysis"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

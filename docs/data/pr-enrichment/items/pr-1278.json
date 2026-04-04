@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-04-04T02:14:46.052Z",
+  "generatedAt": "2026-04-04T02:45:11.059Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 1278,
     "title": "Record: SLOT-32 + Partial Depth Recurrence — val_bpb 0.7736 (3-seed mean) ",
     "state": "open",
-    "updatedAt": "2026-04-04T02:12:53Z",
-    "headSha": "e348405e1102624855eebc744c57d6d3a766dc10",
+    "updatedAt": "2026-04-04T02:25:58Z",
+    "headSha": "ddbeb489e2c41a98906861e86202885da65761a8",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/1278",
     "authorLogin": "GitGeeks"
   },
@@ -19,18 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Combines SLOT-32 scoring with partial depth recurrence (repeat layers 4/5 + iter conditioning) on XSA-11 to squeeze more tokens.",
+    "summary": "SLOT-32 delta tuning with 32 AdamW steps at LR 0.015 and conditioned partial depth recurrence repeating layers 4-5 to mimic a 13-layer network.",
     "tags": [
-      "architecture",
       "training-schedule",
+      "architecture",
       "quantization"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "32-step SLOT tuning with higher LR and cosine->0.001 decay",
-      "Partial depth recurrence on layers 4/5 with iter_embed/iter_gate conditioning",
-      "Late QAT+int6 compression with EMA/SWA weight averaging"
+      "32-step SLOT delta tuning with cosine decay and stride-96 eval masking",
+      "Partial depth recurrence repeating layers 4 and 5 with iter_embed/iter_gate conditioning",
+      "Late QAT followed by int6+LZMA compression"
     ]
   },
   "compatibility": {
