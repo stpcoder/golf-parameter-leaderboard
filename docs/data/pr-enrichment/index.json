@@ -1,8 +1,32 @@
 {
-  "generatedAt": "2026-04-04T21:23:10.903Z",
+  "generatedAt": "2026-04-04T21:52:56.048Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 1361,
+      "title": "1.1220 bpb: GPTQ + EMA + XSA-all + BigramHash3072 (11L 512dim)",
+      "status": "open",
+      "updatedAt": "2026-04-04T21:49:37Z",
+      "headSha": "6d1035e351ab076c54f946e83b43c17ff275b613",
+      "generatedAt": "2026-04-04T21:52:55.841Z",
+      "summary": "11-layer GQA model injects BigramHash inputs and XSA everywhere, then applies EMA plus late QAT before Hessian-based GPTQ INT6 quantization.",
+      "tags": [
+        "architecture",
+        "attention",
+        "quantization",
+        "training-schedule"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1361.json"
+    },
     {
       "prNumber": 1360,
       "title": "Non-record: Gaussian per-token loss reweighting — what goes wrong and why (+0.014 bpb)",

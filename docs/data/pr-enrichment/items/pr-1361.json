@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-04-04T21:52:55.841Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1361,
+    "title": "1.1220 bpb: GPTQ + EMA + XSA-all + BigramHash3072 (11L 512dim)",
+    "state": "open",
+    "updatedAt": "2026-04-04T21:49:37Z",
+    "headSha": "6d1035e351ab076c54f946e83b43c17ff275b613",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1361",
+    "authorLogin": "jorge-asenjo"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-04-04_GPTQ_EMA_XSA11_BigramHash/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "11-layer GQA model injects BigramHash inputs and XSA everywhere, then applies EMA plus late QAT before Hessian-based GPTQ INT6 quantization.",
+    "tags": [
+      "architecture",
+      "attention",
+      "quantization",
+      "training-schedule"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "- BigramHash inputs with exclusive self-attention across layers",
+      "- EMA-prepped late QAT followed by GPTQ Hessian INT6 quant",
+      "- Muon/AdamW mix with warmdown schedule (SWA compared)"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}
