@@ -1,20 +1,20 @@
 {
-  "generatedAt": "2026-04-04T17:51:46.726Z",
+  "generatedAt": "2026-04-04T18:21:28.525Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
     {
       "prNumber": 1353,
-      "title": "Non-record: 11L XSA-All + EMA + Legal GPTQ on 1xH100 PCIe (1.15466807 bpb)",
+      "title": "Non-record: 11L XSA-All + EMA + Legal GPTQ on 1xH100 PCIe (1.1546 bpb)",
       "status": "open",
-      "updatedAt": "2026-04-04T17:49:16Z",
+      "updatedAt": "2026-04-04T17:51:58Z",
       "headSha": "a62bc41631b53d7c19575c9e00bfbb6ed0144e05",
-      "generatedAt": "2026-04-04T17:51:33.448Z",
-      "summary": "11-layer all-XSA stack with EMA smoothing plus hardened GPTQ export and pre-quant checkpointing on a single H100 PCIe non-record run.",
+      "generatedAt": "2026-04-04T18:21:28.316Z",
+      "summary": "11-layer all-XSA model with EMA-stabilized training exported via hardened GPTQ on a single H100 PCIe for a non-record unlimited compute submission.",
       "tags": [
         "architecture",
         "quantization",
-        "regularization",
+        "evaluation",
         "non-record"
       ],
       "flags": {

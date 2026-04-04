@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-04T17:51:27.930Z",
+  "generatedAt": "2026-04-04T18:21:23.323Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "submissions": [
@@ -30100,7 +30100,7 @@
       },
       "pr": {
         "number": 1353,
-        "title": "Non-record: 11L XSA-All + EMA + Legal GPTQ on 1xH100 PCIe (1.15466807 bpb)",
+        "title": "Non-record: 11L XSA-All + EMA + Legal GPTQ on 1xH100 PCIe (1.1546 bpb)",
         "state": "open",
         "draft": false,
         "mergedAt": null,
@@ -30108,7 +30108,7 @@
         "authorLogin": "Rtx09x",
         "authorName": null,
         "createdAt": "2026-04-04T17:49:16Z",
-        "updatedAt": "2026-04-04T17:49:16Z",
+        "updatedAt": "2026-04-04T17:51:58Z",
         "headSha": "a62bc41631b53d7c19575c9e00bfbb6ed0144e05",
         "headRepo": "Rtx09x/parameter-golf"
       },
