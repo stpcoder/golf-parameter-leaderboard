@@ -1,8 +1,32 @@
 {
-  "generatedAt": "2026-04-03T23:43:35.393Z",
+  "generatedAt": "2026-04-04T00:13:53.819Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 1318,
+      "title": "Record: TTT-AdamW + SLOT L-BFGS25 LogitDelta + GPTQ DAMP=0.005 — val_bpb 1.00955",
+      "status": "open",
+      "updatedAt": "2026-04-03T23:52:29Z",
+      "headSha": "a49a3130390f2b7e6f81285011529d9852458054",
+      "generatedAt": "2026-04-04T00:13:53.630Z",
+      "summary": "One-epoch AdamW TTT on the final block plus sliding-window logit-space SLOT delta tuning with lowered GPTQ damping for sharper eval adaptation.",
+      "tags": [
+        "quantization",
+        "sliding-window-eval",
+        "optimizer",
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1318.json"
+    },
     {
       "prNumber": 1316,
       "title": "Full-Depth MLP Megakernel + Fused Attention Preprocessing (non-record)",

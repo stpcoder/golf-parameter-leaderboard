@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-03T23:43:29.559Z",
+  "generatedAt": "2026-04-04T00:13:44.964Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "submissions": [
@@ -7013,6 +7013,83 @@
         "script": "https://github.com/openai/parameter-golf/blob/37df3009ba811f4cfc35a815057d7b7df925b5a2/records/track_10min_16mb/2026-03-27_Medusa_FLA_DeltaNet_NaiveInt6_8xH100/train_gpt.py",
         "folder": "https://github.com/openai/parameter-golf/tree/37df3009ba811f4cfc35a815057d7b7df925b5a2/records/track_10min_16mb/2026-03-27_Medusa_FLA_DeltaNet_NaiveInt6_8xH100",
         "pr": "https://github.com/openai/parameter-golf/pull/1308",
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": false,
+        "hasPullRequest": true,
+        "listedInReadme": false
+      }
+    },
+    {
+      "id": "record-records-track_10min_16mb-2026-04-03_FA3_TTT_LBFGS25_LogitDelta_GPTQ_DAMP005_DeltaClip5_History20_WarmStart_Focal128_Freeze10",
+      "source": "pull_request",
+      "status": "open",
+      "category": "main-track",
+      "track": {
+        "path": "records/track_10min_16mb",
+        "slug": "track_10min_16mb",
+        "label": "10 Minute / 16MB",
+        "official": true,
+        "category": "main-track"
+      },
+      "record": {
+        "folderName": "2026-04-03_FA3_TTT_LBFGS25_LogitDelta_GPTQ_DAMP005_DeltaClip5_History20_WarmStart_Focal128_Freeze10",
+        "folderPath": "records/track_10min_16mb/2026-04-03_FA3_TTT_LBFGS25_LogitDelta_GPTQ_DAMP005_DeltaClip5_History20_WarmStart_Focal128_Freeze10",
+        "submissionPath": "records/track_10min_16mb/2026-04-03_FA3_TTT_LBFGS25_LogitDelta_GPTQ_DAMP005_DeltaClip5_History20_WarmStart_Focal128_Freeze10/submission.json",
+        "readmePath": "records/track_10min_16mb/2026-04-03_FA3_TTT_LBFGS25_LogitDelta_GPTQ_DAMP005_DeltaClip5_History20_WarmStart_Focal128_Freeze10/README.md",
+        "trainLogPath": "records/track_10min_16mb/2026-04-03_FA3_TTT_LBFGS25_LogitDelta_GPTQ_DAMP005_DeltaClip5_History20_WarmStart_Focal128_Freeze10/train.log",
+        "scriptPath": "records/track_10min_16mb/2026-04-03_FA3_TTT_LBFGS25_LogitDelta_GPTQ_DAMP005_DeltaClip5_History20_WarmStart_Focal128_Freeze10/train_gpt.py"
+      },
+      "submission": {
+        "author": "Renqian Luo",
+        "githubId": "renqianluo",
+        "name": "FA3 + TTT-AdamW-1ep-Freeze10 + SLOT L-BFGS25 LogitDelta History20 WarmStart Focal128 DeltaClip5 + GPTQ DAMP=0.005 + MTP + QK-Gain",
+        "blurb": "FA3 (torch 2.9.1+cu128, ~91ms/step) + TTT (Test-Time Training, 1ep AdamW lr=0.001, freeze 10/11 blocks, ~276s) + SLOT eval-time tuning with L-BFGS optimizer (strong-Wolfe, max_iter=25, history_size=20, warm-start=True, delta_clip=5.0) in LOGIT SPACE (vocab=1024) + FOCAL_TOKENS=128 per sliding window + GPTQ Hessian damping factor=0.005 (vs default 0.01) for more aggressive weight error compensation + MTP(2 heads, 0.1 weight) + QK_GAIN_INIT=4.0 + Full Hessian GPTQ int6 (val-data calibration) + BigramHash(3072,112) + SoftSTE. 3-seed mean BPB: 1.00955 (seeds 1337/42/314). Competition-legal: ~276s TTT + ~292s SLOT = ~568s total (~9.5 min on 8xH100). Key innovation: Lower GPTQ Hessian damping (0.005 vs 0.01 default) reduces regularization of the Hessian matrix inversion, allowing more accurate weight error compensation during GPTQ int6 quantization. Result: improved base int6 BPB (1.1165-1.1175 vs 1.1187-1.1189 with damp=0.01), which directly translates to better final SLOT BPB. LBFGS25+FOCAL128 config unchanged from previous record.",
+        "date": "2026-04-03"
+      },
+      "metrics": {
+        "valBpb": 1.00955151,
+        "valLoss": 1.70458092,
+        "preQuantValBpb": null,
+        "preQuantValLoss": null,
+        "stepStop": null,
+        "wallclockSeconds": null,
+        "evalTimeSeconds": null
+      },
+      "artifact": {
+        "bytesTotal": null,
+        "bytesCode": null,
+        "bytesModelInt8Zlib": null
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
+      "pr": {
+        "number": 1318,
+        "title": "Record: TTT-AdamW + SLOT L-BFGS25 LogitDelta + GPTQ DAMP=0.005 — val_bpb 1.00955",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1318",
+        "authorLogin": "renqianluo",
+        "authorName": null,
+        "createdAt": "2026-04-03T23:52:29Z",
+        "updatedAt": "2026-04-03T23:52:29Z",
+        "headSha": "a49a3130390f2b7e6f81285011529d9852458054",
+        "headRepo": "renqianluo/parameter-golf"
+      },
+      "links": {
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/a49a3130390f2b7e6f81285011529d9852458054/records/track_10min_16mb/2026-04-03_FA3_TTT_LBFGS25_LogitDelta_GPTQ_DAMP005_DeltaClip5_History20_WarmStart_Focal128_Freeze10/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/a49a3130390f2b7e6f81285011529d9852458054/records/track_10min_16mb/2026-04-03_FA3_TTT_LBFGS25_LogitDelta_GPTQ_DAMP005_DeltaClip5_History20_WarmStart_Focal128_Freeze10/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/a49a3130390f2b7e6f81285011529d9852458054/records/track_10min_16mb/2026-04-03_FA3_TTT_LBFGS25_LogitDelta_GPTQ_DAMP005_DeltaClip5_History20_WarmStart_Focal128_Freeze10/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/a49a3130390f2b7e6f81285011529d9852458054/records/track_10min_16mb/2026-04-03_FA3_TTT_LBFGS25_LogitDelta_GPTQ_DAMP005_DeltaClip5_History20_WarmStart_Focal128_Freeze10/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/a49a3130390f2b7e6f81285011529d9852458054/records/track_10min_16mb/2026-04-03_FA3_TTT_LBFGS25_LogitDelta_GPTQ_DAMP005_DeltaClip5_History20_WarmStart_Focal128_Freeze10",
+        "pr": "https://github.com/openai/parameter-golf/pull/1318",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
       "provenance": {

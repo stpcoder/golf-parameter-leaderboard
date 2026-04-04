@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-04-04T00:13:53.630Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1318,
+    "title": "Record: TTT-AdamW + SLOT L-BFGS25 LogitDelta + GPTQ DAMP=0.005 — val_bpb 1.00955",
+    "state": "open",
+    "updatedAt": "2026-04-03T23:52:29Z",
+    "headSha": "a49a3130390f2b7e6f81285011529d9852458054",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1318",
+    "authorLogin": "renqianluo"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-04-03_FA3_TTT_LBFGS25_LogitDelta_GPTQ_DAMP005_DeltaClip5_History20_WarmStart_Focal128_Freeze10/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "One-epoch AdamW TTT on the final block plus sliding-window logit-space SLOT delta tuning with lowered GPTQ damping for sharper eval adaptation.",
+    "tags": [
+      "quantization",
+      "sliding-window-eval",
+      "optimizer",
+      "evaluation"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "- AdamW TTT on last transformer block before scoring",
+      "- Sliding-window L-BFGS logit delta with focal loss and delta clipping",
+      "- GPTQ int6 with 0.005 Hessian damping and val-data calibration"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}
