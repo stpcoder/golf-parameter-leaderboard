@@ -1,21 +1,44 @@
 {
-  "generatedAt": "2026-04-04T06:16:36.435Z",
+  "generatedAt": "2026-04-04T06:46:47.857Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
     {
+      "prNumber": 1326,
+      "title": "Record: SP4096 + Depth Recurrence + Parallel Residuals + MuonEq-R + Legal TTT — val_bpb 1.0896 (3-seed mean)",
+      "status": "open",
+      "updatedAt": "2026-04-04T06:33:15Z",
+      "headSha": "5bc39abb0222a86a1ad59d6c74b507f7ab294457",
+      "generatedAt": "2026-04-04T06:46:30.113Z",
+      "summary": "Depth recurrence in layers 4-5 plus parallel residuals from layer 7 pair with MuonEq-R/QK-Gain and legal score-first TTT on SP4096.",
+      "tags": [
+        "architecture",
+        "attention",
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1326.json"
+    },
+    {
       "prNumber": 1325,
       "title": "Record Submission: Poly5 Softcap + Z-Loss + YaRN + Zstd-22 + Stride-16 (on PR #549 stack)",
       "status": "open",
-      "updatedAt": "2026-04-04T06:14:58Z",
-      "headSha": "70546cc3035577ab6c8f4b0ad836a4add7e00a94",
-      "generatedAt": "2026-04-04T06:16:36.236Z",
-      "summary": "Combines poly5 softcap, Z-loss, YaRN RoPE, stride-16 sliding eval, and zstd-22 compression atop the PR #549 stack.",
+      "updatedAt": "2026-04-04T06:45:52Z",
+      "headSha": "3a770369d85e84de3f5ea756470606835e7b2a0d",
+      "generatedAt": "2026-04-04T06:46:34.670Z",
+      "summary": "Adds adaptive focal CE, RVQ quantization, and progressive depth warmup atop the Poly5+YaRN stack with zstd-22 compression and stride-16 eval.",
       "tags": [
-        "sliding-window-eval",
-        "compression",
         "regularization",
-        "positional-encoding"
+        "quantization",
+        "training-schedule",
+        "compression"
       ],
       "flags": {
         "usesValOnly": false,
@@ -74,16 +97,15 @@
     },
     {
       "prNumber": 1322,
-      "title": "Lucky V — 1.08746285 val_bpb (seed 444)",
+      "title": "Lucky V — 1.08540457 val_bpb (seed 444)",
       "status": "open",
-      "updatedAt": "2026-04-04T05:04:49Z",
-      "headSha": "6a9158b1fd452546be260d63d2da47bd538360b1",
-      "generatedAt": "2026-04-04T05:16:01.788Z",
-      "summary": "Rascal-style 11-layer transformer pairs MuonEq-R plus high QK gain with Flash Attention, VE layers, and sliding-window SLOT test-time adaptation.",
+      "updatedAt": "2026-04-04T06:37:44Z",
+      "headSha": "8b6f58bc41cf66c74f7e35f9732812313029a7f1",
+      "generatedAt": "2026-04-04T06:46:39.390Z",
+      "summary": "Lucky V combines MuonEq-R Newton-Schulz optimizer tweaks with per-head QK scaling, FlashAttention, and SLOT-backed sliding-window eval adaptation.",
       "tags": [
-        "muon",
-        "sliding-window-eval",
-        "quantization",
+        "optimizer",
+        "attention",
         "evaluation"
       ],
       "flags": {
@@ -9954,14 +9976,15 @@
       "prNumber": 710,
       "title": "Submission: 11L EMA + GPTQ-lite + Int6 (val_bpb: 1.1240)",
       "status": "open",
-      "updatedAt": "2026-03-25T16:38:45Z",
-      "headSha": "698bbba7f534d1e5cf7c0263daa17aef2408554f",
-      "generatedAt": "2026-03-25T17:03:20.973Z",
-      "summary": "11-layer GQA-style transformer uses EMA+tight SWA, Partial RoPE/XSA, Muon + warmdown, and late QAT/GPTQ-lite for int6+zstd compression.",
+      "updatedAt": "2026-04-04T06:45:22Z",
+      "headSha": "fb7ada8128603b969a77c38c3ae175ba55a76f5b",
+      "generatedAt": "2026-04-04T06:46:47.755Z",
+      "summary": "11-layer GQA transformer with ReLU²/U-Net skips, EMA/SWA, late QAT, and per-row GPTQ-lite int6 clipping driven by Muon optimizer.",
       "tags": [
+        "architecture",
         "quantization",
         "optimizer",
-        "architecture"
+        "training-schedule"
       ],
       "flags": {
         "usesValOnly": false,

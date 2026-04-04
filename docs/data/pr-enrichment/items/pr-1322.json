@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-04-04T05:16:01.788Z",
+  "generatedAt": "2026-04-04T06:46:39.390Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 1322,
-    "title": "Lucky V — 1.08746285 val_bpb (seed 444)",
+    "title": "Lucky V — 1.08540457 val_bpb (seed 444)",
     "state": "open",
-    "updatedAt": "2026-04-04T05:04:49Z",
-    "headSha": "6a9158b1fd452546be260d63d2da47bd538360b1",
+    "updatedAt": "2026-04-04T06:37:44Z",
+    "headSha": "8b6f58bc41cf66c74f7e35f9732812313029a7f1",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/1322",
     "authorLogin": "newjordan"
   },
@@ -19,19 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Rascal-style 11-layer transformer pairs MuonEq-R plus high QK gain with Flash Attention, VE layers, and sliding-window SLOT test-time adaptation.",
+    "summary": "Lucky V combines MuonEq-R Newton-Schulz optimizer tweaks with per-head QK scaling, FlashAttention, and SLOT-backed sliding-window eval adaptation.",
     "tags": [
-      "muon",
-      "sliding-window-eval",
-      "quantization",
+      "optimizer",
+      "attention",
       "evaluation"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "MuonEq-R with row-normalized momentum and extra Newton-Schulz steps",
-      "Per-head QK gain, VE layers, and Flash Attention 3 in 11-layer core",
-      "Sliding-window SLOT test-time adaptation (32 steps, lr 0.04)"
+      "MuonEq-R Newton-Schulz optimizer with row-normalized momentum",
+      "Per-head QK_GAIN=5 in FlashAttention 3",
+      "Sliding-window evaluation plus SLOT32 test-time adaptation"
     ]
   },
   "compatibility": {

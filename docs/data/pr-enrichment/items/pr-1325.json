@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-04-04T06:16:36.236Z",
+  "generatedAt": "2026-04-04T06:46:34.670Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 1325,
     "title": "Record Submission: Poly5 Softcap + Z-Loss + YaRN + Zstd-22 + Stride-16 (on PR #549 stack)",
     "state": "open",
-    "updatedAt": "2026-04-04T06:14:58Z",
-    "headSha": "70546cc3035577ab6c8f4b0ad836a4add7e00a94",
+    "updatedAt": "2026-04-04T06:45:52Z",
+    "headSha": "3a770369d85e84de3f5ea756470606835e7b2a0d",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/1325",
     "authorLogin": "monisha-max"
   },
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Combines poly5 softcap, Z-loss, YaRN RoPE, stride-16 sliding eval, and zstd-22 compression atop the PR #549 stack.",
+    "summary": "Adds adaptive focal CE, RVQ quantization, and progressive depth warmup atop the Poly5+YaRN stack with zstd-22 compression and stride-16 eval.",
     "tags": [
-      "sliding-window-eval",
-      "compression",
       "regularization",
-      "positional-encoding"
+      "quantization",
+      "training-schedule",
+      "compression"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "poly5 softcap and Z-loss logit regularizer",
-      "YaRN RoPE tuned for 2048 tokens",
-      "stride-16 sliding eval paired with zstd-22 compression"
+      "Adaptive focal cross-entropy reweights tokens by confidence to focus gradients",
+      "Residual vector quantization with int6 base plus int4 residual keeps artifact compact",
+      "Progressive depth warmup freezes/unfreezes layers in stages for cleaner deep gradients"
     ]
   },
   "compatibility": {
