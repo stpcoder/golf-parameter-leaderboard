@@ -1,8 +1,31 @@
 {
-  "generatedAt": "2026-04-05T17:59:21.466Z",
+  "generatedAt": "2026-04-05T18:29:19.741Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 1387,
+      "title": "Non-record submission: Depth-Recurrent U-Net Transformer",
+      "status": "open",
+      "updatedAt": "2026-04-05T18:25:30Z",
+      "headSha": "218b9d2ea5de5f9d8373a03c1d3d62418fcf6eed",
+      "generatedAt": "2026-04-05T18:29:14.887Z",
+      "summary": "Weight-tied depth recurrence reuses shared encoder/decoder U-Net blocks so a wider Universal Transformer variant fits the budget.",
+      "tags": [
+        "architecture",
+        "depth-width",
+        "non-record"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1387.json"
+    },
     {
       "prNumber": 1386,
       "title": "Non-record submission: 11L XSA4 + EMA + BigramHash3072 + LZMA (1.1452 BPB)",
@@ -123,13 +146,14 @@
       "prNumber": 1380,
       "title": "Non-record: Cosine LR Schedule — -0.070 BPB improvement + Focal Loss Investigation (corrected)",
       "status": "open",
-      "updatedAt": "2026-04-05T17:52:36Z",
-      "headSha": "41f223020d988441b2d27dafba7c8ae5e4f54384",
-      "generatedAt": "2026-04-05T17:59:15.919Z",
-      "summary": "Cosine annealing replaces linear warmdown (stacked with a 1/10 encoder-decoder split) for consistent BPB gains; focal loss proved to be a training-only artifact.",
+      "updatedAt": "2026-04-05T18:03:02Z",
+      "headSha": "1a6be007d6631e8c2c00cc730d12ae207774d4e6",
+      "generatedAt": "2026-04-05T18:29:19.522Z",
+      "summary": "Replacing linear warmdown with cosine annealing in lr_mul and stacking the asymmetric 1/10 encoder-decoder split, while documenting focal-loss evaluation pitfalls.",
       "tags": [
         "training-schedule",
         "architecture",
+        "regularization",
         "non-record"
       ],
       "flags": {

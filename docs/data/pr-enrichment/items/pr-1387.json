@@ -1,0 +1,41 @@
+{
+  "generatedAt": "2026-04-05T18:29:14.887Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1387,
+    "title": "Non-record submission: Depth-Recurrent U-Net Transformer",
+    "state": "open",
+    "updatedAt": "2026-04-05T18:25:30Z",
+    "headSha": "218b9d2ea5de5f9d8373a03c1d3d62418fcf6eed",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1387",
+    "authorLogin": "Muhammad-Ahmed-Rayyan"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-03-30_DepthRecurrent_UNetTransformer/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Weight-tied depth recurrence reuses shared encoder/decoder U-Net blocks so a wider Universal Transformer variant fits the budget.",
+    "tags": [
+      "architecture",
+      "depth-width",
+      "non-record"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Shared encoder/decoder recurrence (Universal Transformer-style)",
+      "Preserved U-Net skips while widening to dim=1024"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

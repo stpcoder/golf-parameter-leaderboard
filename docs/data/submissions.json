@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-05T17:58:54.498Z",
+  "generatedAt": "2026-04-05T18:29:07.931Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "submissions": [
@@ -47068,6 +47068,83 @@
       }
     },
     {
+      "id": "record-records-track_non_record_16mb-2026-03-30_DepthRecurrent_UNetTransformer",
+      "source": "pull_request",
+      "status": "open",
+      "category": "non-record",
+      "track": {
+        "path": "records/track_non_record_16mb",
+        "slug": "track_non_record_16mb",
+        "label": "Non-record / 16MB",
+        "official": false,
+        "category": "non-record"
+      },
+      "record": {
+        "folderName": "2026-03-30_DepthRecurrent_UNetTransformer",
+        "folderPath": "records/track_non_record_16mb/2026-03-30_DepthRecurrent_UNetTransformer",
+        "submissionPath": "records/track_non_record_16mb/2026-03-30_DepthRecurrent_UNetTransformer/submission.json",
+        "readmePath": "records/track_non_record_16mb/2026-03-30_DepthRecurrent_UNetTransformer/README.md",
+        "trainLogPath": "records/track_non_record_16mb/2026-03-30_DepthRecurrent_UNetTransformer/train.log",
+        "scriptPath": "records/track_non_record_16mb/2026-03-30_DepthRecurrent_UNetTransformer/train_gpt.py"
+      },
+      "submission": {
+        "author": "Muhammad Ahmed Rayyan",
+        "githubId": "Muhammad-Ahmed-Rayyan",
+        "name": "Depth-Recurrent U-Net Transformer (Universal Transformer Variant)",
+        "blurb": "Depth-recurrent U-Net transformer with shared encoder/decoder blocks (Universal Transformer variant). Weight tying frees 16MB budget for wider model (dim=1024 vs baseline dim=512). Run on 1x A10 GPU.",
+        "date": "2026-03-30"
+      },
+      "metrics": {
+        "valBpb": 1.2919,
+        "valLoss": null,
+        "preQuantValBpb": null,
+        "preQuantValLoss": null,
+        "stepStop": null,
+        "wallclockSeconds": null,
+        "evalTimeSeconds": null
+      },
+      "artifact": {
+        "bytesTotal": 14428120,
+        "bytesCode": 49507,
+        "bytesModelInt8Zlib": null
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
+      "pr": {
+        "number": 1387,
+        "title": "Non-record submission: Depth-Recurrent U-Net Transformer",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1387",
+        "authorLogin": "Muhammad-Ahmed-Rayyan",
+        "authorName": null,
+        "createdAt": "2026-04-05T18:08:05Z",
+        "updatedAt": "2026-04-05T18:25:30Z",
+        "headSha": "218b9d2ea5de5f9d8373a03c1d3d62418fcf6eed",
+        "headRepo": "Muhammad-Ahmed-Rayyan/parameter-golf"
+      },
+      "links": {
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/218b9d2ea5de5f9d8373a03c1d3d62418fcf6eed/records/track_non_record_16mb/2026-03-30_DepthRecurrent_UNetTransformer/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/218b9d2ea5de5f9d8373a03c1d3d62418fcf6eed/records/track_non_record_16mb/2026-03-30_DepthRecurrent_UNetTransformer/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/218b9d2ea5de5f9d8373a03c1d3d62418fcf6eed/records/track_non_record_16mb/2026-03-30_DepthRecurrent_UNetTransformer/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/218b9d2ea5de5f9d8373a03c1d3d62418fcf6eed/records/track_non_record_16mb/2026-03-30_DepthRecurrent_UNetTransformer/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/218b9d2ea5de5f9d8373a03c1d3d62418fcf6eed/records/track_non_record_16mb/2026-03-30_DepthRecurrent_UNetTransformer",
+        "pr": "https://github.com/openai/parameter-golf/pull/1387",
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": false,
+        "hasPullRequest": true,
+        "listedInReadme": false
+      }
+    },
+    {
       "id": "record-records-track_non_record_16mb-2026-03-23_Dense2048_Sliding64_Ablations",
       "source": "pull_request",
       "status": "open",
@@ -61375,16 +61452,16 @@
         "authorLogin": "ranausmanai",
         "authorName": null,
         "createdAt": "2026-04-05T12:37:07Z",
-        "updatedAt": "2026-04-05T17:52:36Z",
-        "headSha": "41f223020d988441b2d27dafba7c8ae5e4f54384",
+        "updatedAt": "2026-04-05T18:03:02Z",
+        "headSha": "1a6be007d6631e8c2c00cc730d12ae207774d4e6",
         "headRepo": "ranausmanai/parameter-golf"
       },
       "links": {
-        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/41f223020d988441b2d27dafba7c8ae5e4f54384/records/track_non_record_16mb/2026-04-05_FocalLoss_CosineLR_LanguageModeling/submission.json",
-        "readme": "https://github.com/openai/parameter-golf/blob/41f223020d988441b2d27dafba7c8ae5e4f54384/records/track_non_record_16mb/2026-04-05_FocalLoss_CosineLR_LanguageModeling/README.md",
-        "trainLog": "https://github.com/openai/parameter-golf/blob/41f223020d988441b2d27dafba7c8ae5e4f54384/records/track_non_record_16mb/2026-04-05_FocalLoss_CosineLR_LanguageModeling/train.log",
-        "script": "https://github.com/openai/parameter-golf/blob/41f223020d988441b2d27dafba7c8ae5e4f54384/records/track_non_record_16mb/2026-04-05_FocalLoss_CosineLR_LanguageModeling/train_gpt.py",
-        "folder": "https://github.com/openai/parameter-golf/tree/41f223020d988441b2d27dafba7c8ae5e4f54384/records/track_non_record_16mb/2026-04-05_FocalLoss_CosineLR_LanguageModeling",
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/1a6be007d6631e8c2c00cc730d12ae207774d4e6/records/track_non_record_16mb/2026-04-05_FocalLoss_CosineLR_LanguageModeling/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/1a6be007d6631e8c2c00cc730d12ae207774d4e6/records/track_non_record_16mb/2026-04-05_FocalLoss_CosineLR_LanguageModeling/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/1a6be007d6631e8c2c00cc730d12ae207774d4e6/records/track_non_record_16mb/2026-04-05_FocalLoss_CosineLR_LanguageModeling/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/1a6be007d6631e8c2c00cc730d12ae207774d4e6/records/track_non_record_16mb/2026-04-05_FocalLoss_CosineLR_LanguageModeling/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/1a6be007d6631e8c2c00cc730d12ae207774d4e6/records/track_non_record_16mb/2026-04-05_FocalLoss_CosineLR_LanguageModeling",
         "pr": "https://github.com/openai/parameter-golf/pull/1380",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },

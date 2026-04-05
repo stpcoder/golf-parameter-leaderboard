@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-04-05T17:59:15.919Z",
+  "generatedAt": "2026-04-05T18:29:19.522Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 1380,
     "title": "Non-record: Cosine LR Schedule — -0.070 BPB improvement + Focal Loss Investigation (corrected)",
     "state": "open",
-    "updatedAt": "2026-04-05T17:52:36Z",
-    "headSha": "41f223020d988441b2d27dafba7c8ae5e4f54384",
+    "updatedAt": "2026-04-05T18:03:02Z",
+    "headSha": "1a6be007d6631e8c2c00cc730d12ae207774d4e6",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/1380",
     "authorLogin": "ranausmanai"
   },
@@ -19,18 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Cosine annealing replaces linear warmdown (stacked with a 1/10 encoder-decoder split) for consistent BPB gains; focal loss proved to be a training-only artifact.",
+    "summary": "Replacing linear warmdown with cosine annealing in lr_mul and stacking the asymmetric 1/10 encoder-decoder split, while documenting focal-loss evaluation pitfalls.",
     "tags": [
       "training-schedule",
       "architecture",
+      "regularization",
       "non-record"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Cosine-annealed lr_mul() with min_lr_frac floor",
-      "Asymmetric 1/10 encoder-decoder layer ratio stacking",
-      "Focal loss evaluation bug fix keeps weighting training-only"
+      "Cosine LR annealing via min_lr_frac + 0.5*(1+cos(pi*progress))",
+      "Asymmetric 1 encoder layer / 10 decoder layer configuration",
+      "Focal loss fix: apply (1-pt)^γ weighting only during training"
     ]
   },
   "compatibility": {
