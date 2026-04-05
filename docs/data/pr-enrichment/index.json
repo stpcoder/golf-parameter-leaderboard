@@ -1,8 +1,54 @@
 {
-  "generatedAt": "2026-04-05T20:29:55.574Z",
+  "generatedAt": "2026-04-05T21:00:26.031Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 1393,
+      "title": "[Submission] SwiGLU MLP (under 16MB)",
+      "status": "open",
+      "updatedAt": "2026-04-05T20:52:11Z",
+      "headSha": "21c92c4632a23bc9ac203cd666556f95d7332739",
+      "generatedAt": "2026-04-05T21:00:08.329Z",
+      "summary": "Swapped GPT ReLU² MLP for SwiGLU gating, shrunk width to meet 16MB cap, and clipped gradients for stable quantization-aware training.",
+      "tags": [
+        "architecture",
+        "regularization"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1393.json"
+    },
+    {
+      "prNumber": 1392,
+      "title": "Add record: SP4096 + Depth Recurrence + Parallel Residuals + QK-Gain + Brotli (1.1020 BPB)",
+      "status": "open",
+      "updatedAt": "2026-04-05T20:31:14Z",
+      "headSha": "46b43b328ea6103cd41e4b284ec5937ab19cd2d4",
+      "generatedAt": "2026-04-05T21:00:13.108Z",
+      "summary": "Leverages SP4096 vocabulary with depth recurrence, learned parallel residual merging, QK-gain, MuonEq-R optimizer, dense GPTQ calibration, and Brotli compression.",
+      "tags": [
+        "tokenization",
+        "architecture",
+        "optimizer",
+        "compression"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1392.json"
+    },
     {
       "prNumber": 1389,
       "title": "Non-record: GPTQ-lite Scale Clamp Fix + 6-bit Packing + Depth Recurrence on Stack B",
@@ -2238,17 +2284,17 @@
     },
     {
       "prNumber": 1269,
-      "title": "[Submission] Jtss-ux - 1.1301 BPB (10min_16mb)",
+      "title": "30-Layer Recursive GPT (10 Physical x 3 Recursive) + VRL + Parallel Muon",
       "status": "open",
-      "updatedAt": "2026-04-03T07:27:33Z",
+      "updatedAt": "2026-04-05T20:38:46Z",
       "headSha": "31b40945d9123d3ca3990bce995dc294478d27e9",
-      "generatedAt": "2026-04-03T07:38:37.564Z",
-      "summary": "Recursive 10-layer GPT expands to 30 layers with VRL/MTP hashing, LeakyReLU², Parallel Muon banking optimizer, and legal score-first TTT on validation chunks.",
+      "generatedAt": "2026-04-05T21:00:19.723Z",
+      "summary": "Three-level recursive stacking of a 10-layer GPT complements VRL/MTP, Parameter Banking+Parallel Muon, and LeakyReLU² while running legal score-first TTT on validation chunks.",
       "tags": [
         "val-only",
+        "architecture",
         "optimizer",
-        "training-schedule",
-        "architecture"
+        "training-schedule"
       ],
       "flags": {
         "usesValOnly": true,
@@ -8619,10 +8665,10 @@
       "prNumber": 877,
       "title": "Non-record: sin² activation + causal screening pipeline",
       "status": "open",
-      "updatedAt": "2026-04-05T20:22:01Z",
-      "headSha": "faaa0f0ee1380685d317233cd5699cab4b218a19",
-      "generatedAt": "2026-04-05T20:29:55.451Z",
-      "summary": "Swapped relu² for sin² in GPT MLPs while using a causal DAG-guided screening pipeline to surface periodic activations and adaptive multi-token ideas.",
+      "updatedAt": "2026-04-05T20:53:44Z",
+      "headSha": "d4b212424af6455799a2bdb116670f04cc07e6af",
+      "generatedAt": "2026-04-05T21:00:25.895Z",
+      "summary": "sin² periodic activation replaces relu² in GPT MLPs via causal DAG-guided screening plus adaptive multi-token prediction and selective loss probes.",
       "tags": [
         "architecture",
         "evaluation",

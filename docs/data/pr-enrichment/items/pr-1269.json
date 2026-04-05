@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-04-03T07:38:37.564Z",
+  "generatedAt": "2026-04-05T21:00:19.723Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 1269,
-    "title": "[Submission] Jtss-ux - 1.1301 BPB (10min_16mb)",
+    "title": "30-Layer Recursive GPT (10 Physical x 3 Recursive) + VRL + Parallel Muon",
     "state": "open",
-    "updatedAt": "2026-04-03T07:27:33Z",
+    "updatedAt": "2026-04-05T20:38:46Z",
     "headSha": "31b40945d9123d3ca3990bce995dc294478d27e9",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/1269",
     "authorLogin": "Jtss-ux"
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Recursive 10-layer GPT expands to 30 layers with VRL/MTP hashing, LeakyReLU², Parallel Muon banking optimizer, and legal score-first TTT on validation chunks.",
+    "summary": "Three-level recursive stacking of a 10-layer GPT complements VRL/MTP, Parameter Banking+Parallel Muon, and LeakyReLU² while running legal score-first TTT on validation chunks.",
     "tags": [
       "val-only",
+      "architecture",
       "optimizer",
-      "training-schedule",
-      "architecture"
+      "training-schedule"
     ],
     "usesValOnly": true,
-    "valOnlyReasoning": "Legal score-first TTT iteratively trains on scored validation chunks before final scoring, so updates occur exclusively on validation shards.",
+    "valOnlyReasoning": "Legal score-first TTT runs SGD adaptation on validation chunks right after stateless scoring, so training occurs on val data.",
     "techniques": [
-      "3× recursion with VRL/MTP and Bigram/Trigram hashing",
-      "LeakyReLU(0.5)² MLPs + Parallel Muon/Parameter Banking optimizer",
-      "Legal score-first TTT over validation chunks"
+      "Recursive GPT depth with VRL+MTP",
+      "LeakyReLU(0.5)² plus Parameter Banking/Parallel Muon optimizer",
+      "Score-first TTT on validation chunks"
     ]
   },
   "compatibility": {

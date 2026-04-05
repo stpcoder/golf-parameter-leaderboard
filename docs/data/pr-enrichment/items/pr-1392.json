@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-04-05T21:00:13.108Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1392,
+    "title": "Add record: SP4096 + Depth Recurrence + Parallel Residuals + QK-Gain + Brotli (1.1020 BPB)",
+    "state": "open",
+    "updatedAt": "2026-04-05T20:31:14Z",
+    "headSha": "46b43b328ea6103cd41e4b284ec5937ab19cd2d4",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1392",
+    "authorLogin": "Its-Just-Crump"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-04-05_SP4096_DepthRecur_ParallelResid_Brotli/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Leverages SP4096 vocabulary with depth recurrence, learned parallel residual merging, QK-gain, MuonEq-R optimizer, dense GPTQ calibration, and Brotli compression.",
+    "tags": [
+      "tokenization",
+      "architecture",
+      "optimizer",
+      "compression"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Depth recurrence on layers 4-5",
+      "Parallel residual merging with learned lane weights",
+      "MuonEq-R + QK-Gain + dense GPTQ calibration"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}
