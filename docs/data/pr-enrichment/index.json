@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-05T15:57:56.634Z",
+  "generatedAt": "2026-04-05T16:59:31.731Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
@@ -489,14 +489,12 @@
       "prNumber": 1356,
       "title": "Multi-Cube Face Letter Assignment (Non-Record Submission)",
       "status": "open",
-      "updatedAt": "2026-04-05T15:47:54Z",
-      "headSha": "277cc3351ac9a3e3f7f8aa37423c1a7c8888c5b8",
-      "generatedAt": "2026-04-05T15:57:56.435Z",
-      "summary": "Prototype enforces global, constraint-aware letter assignment across six cubes by modeling each sample as a single structured system requiring consistent symbols.",
+      "updatedAt": "2026-04-05T16:52:37Z",
+      "headSha": "bbbbfdd9d690e2d0809e00c0f4f7013c021d6b46",
+      "generatedAt": "2026-04-05T16:59:05.204Z",
+      "summary": "Prototype enforces global constraint-aware letter assignment across six cubes to treat the puzzle as a single structured reasoning system.",
       "tags": [
-        "non-record",
-        "architecture",
-        "regularization"
+        "non-record"
       ],
       "flags": {
         "usesValOnly": false,
@@ -605,15 +603,14 @@
     {
       "prNumber": 1351,
       "title": "Record: Discriminative TTT — val_bpb 1.0807 (3-seed mean)",
-      "status": "open",
-      "updatedAt": "2026-04-04T15:40:40Z",
+      "status": "closed",
+      "updatedAt": "2026-04-05T16:57:15Z",
       "headSha": "dbb4448d1fb7ddb68731bd884af5895de554107f",
-      "generatedAt": "2026-04-04T15:51:23.146Z",
-      "summary": "Pre-quant discriminative TTT with per-block adaptive learning rates and coprime-stride sampling before GPTQ quantization.",
+      "generatedAt": "2026-04-05T16:59:09.324Z",
+      "summary": "Pre-quant AdamW TTT uses discriminative per-block LR scaling (0.3× to 1.0×) with coprime loader tweaks before GPTQ quantization.",
       "tags": [
         "training-schedule",
-        "optimizer",
-        "compression"
+        "optimizer"
       ],
       "flags": {
         "usesValOnly": false,
@@ -628,15 +625,15 @@
     {
       "prNumber": 1350,
       "title": "Record: L-BFGS Causal SLOT — val_bpb 1.0046 (3-seed mean)",
-      "status": "open",
-      "updatedAt": "2026-04-05T04:00:11Z",
+      "status": "closed",
+      "updatedAt": "2026-04-05T16:56:49Z",
       "headSha": "4ede046aac47273388f3b4d02de228292faa8a50",
-      "generatedAt": "2026-04-05T04:25:18.006Z",
-      "summary": "Causal L-BFGS logit-space SLOT after pre-quant AdamW TTT and coprime loader keeps delta optimization restricted to already-scored context tokens.",
+      "generatedAt": "2026-04-05T16:59:15.599Z",
+      "summary": "Eval-time L-BFGS optimizes causal logit-space SLOT deltas (focal loss, warm-start) with pre-quant AdamW TTT and coprime-shard tweaks for compliant sliding eval.",
       "tags": [
         "optimizer",
-        "quantization",
-        "evaluation"
+        "evaluation",
+        "quantization"
       ],
       "flags": {
         "usesValOnly": false,
@@ -1141,16 +1138,16 @@
     },
     {
       "prNumber": 1322,
-      "title": "Lucky V — 1.08540457 val_bpb (seed 444)",
-      "status": "open",
-      "updatedAt": "2026-04-04T15:12:14Z",
+      "title": "closed.",
+      "status": "closed",
+      "updatedAt": "2026-04-05T16:41:46Z",
       "headSha": "8b6f58bc41cf66c74f7e35f9732812313029a7f1",
-      "generatedAt": "2026-04-04T15:21:20.053Z",
-      "summary": "Lucky V pairs Rascal II transformer tweaks with MuonEq-R optimizer, late int6 QAT, and sliding-window SLOT test-time adaptation for eval gains.",
+      "generatedAt": "2026-04-05T16:59:18.770Z",
+      "summary": "11-layer Rascal II couples MuonEq-R + QK gain tweaks with int6 QAT and sliding-window SLOT adaptation for evaluation.",
       "tags": [
         "architecture",
         "optimizer",
-        "quantization",
+        "attention",
         "evaluation"
       ],
       "flags": {
@@ -1820,15 +1817,14 @@
     {
       "prNumber": 1286,
       "title": "Lucky IV — 1.09626897 val_bpb (seed 444)",
-      "status": "open",
-      "updatedAt": "2026-04-03T05:43:42Z",
+      "status": "closed",
+      "updatedAt": "2026-04-05T16:44:12Z",
       "headSha": "9a8da75b9ede18c402289f6b92f126f8ccc8c80f",
-      "generatedAt": "2026-04-03T06:08:38.163Z",
-      "summary": "Rascal II stack with brotli byte-shuffle plus 24-step context-only SLOT test-time AdamW adaptation at inference.",
+      "generatedAt": "2026-04-05T16:59:24.289Z",
+      "summary": "Rascal II with brotli byte-shuffle runs 24-step context-only SLOT test-time AdamW updates to refine context positions at inference.",
       "tags": [
         "architecture",
-        "evaluation",
-        "training-schedule"
+        "evaluation"
       ],
       "flags": {
         "usesValOnly": false,
@@ -1891,11 +1887,11 @@
     {
       "prNumber": 1282,
       "title": "Slot Machine — 1.10350531 val_bpb (seed 444)",
-      "status": "open",
-      "updatedAt": "2026-04-03T03:27:50Z",
+      "status": "closed",
+      "updatedAt": "2026-04-05T16:44:38Z",
       "headSha": "9e7d33fdddb73493f643239e91eb9e1ba91bbe34",
-      "generatedAt": "2026-04-03T03:37:47.305Z",
-      "summary": "Rascal II with brotli byte-shuffle compression and context-only SLOT 8-step test-time optimization.",
+      "generatedAt": "2026-04-05T16:59:31.534Z",
+      "summary": "Rascal II base with brotli+byte-shuffle compression and a legal context-only SLOT 8-step test-time optimization.",
       "tags": [
         "compression",
         "evaluation"

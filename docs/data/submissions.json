@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-05T16:27:55.392Z",
+  "generatedAt": "2026-04-05T16:58:57.528Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "submissions": [
@@ -9950,7 +9950,7 @@
     {
       "id": "record-records-track_10min_16mb-2026-04-04_Lucky_V_8xH100",
       "source": "pull_request",
-      "status": "open",
+      "status": "closed",
       "category": "main-track",
       "track": {
         "path": "records/track_10min_16mb",
@@ -9997,15 +9997,15 @@
       },
       "pr": {
         "number": 1322,
-        "title": "Lucky V — 1.08540457 val_bpb (seed 444)",
-        "state": "open",
+        "title": "closed.",
+        "state": "closed",
         "draft": false,
         "mergedAt": null,
         "htmlUrl": "https://github.com/openai/parameter-golf/pull/1322",
         "authorLogin": "newjordan",
         "authorName": null,
         "createdAt": "2026-04-04T04:50:40Z",
-        "updatedAt": "2026-04-04T15:12:14Z",
+        "updatedAt": "2026-04-05T16:41:46Z",
         "headSha": "8b6f58bc41cf66c74f7e35f9732812313029a7f1",
         "headRepo": "newjordan/parameter-golf-1"
       },
@@ -12106,7 +12106,7 @@
     {
       "id": "record-records-track_10min_16mb-2026-04-03_Lucky_IV_8xH100",
       "source": "pull_request",
-      "status": "open",
+      "status": "closed",
       "category": "main-track",
       "track": {
         "path": "records/track_10min_16mb",
@@ -12154,14 +12154,14 @@
       "pr": {
         "number": 1286,
         "title": "Lucky IV — 1.09626897 val_bpb (seed 444)",
-        "state": "open",
+        "state": "closed",
         "draft": false,
         "mergedAt": null,
         "htmlUrl": "https://github.com/openai/parameter-golf/pull/1286",
         "authorLogin": "newjordan",
         "authorName": null,
         "createdAt": "2026-04-03T05:39:09Z",
-        "updatedAt": "2026-04-03T05:43:42Z",
+        "updatedAt": "2026-04-05T16:44:12Z",
         "headSha": "9a8da75b9ede18c402289f6b92f126f8ccc8c80f",
         "headRepo": "newjordan/parameter-golf-1"
       },
@@ -12799,7 +12799,7 @@
     {
       "id": "record-records-track_10min_16mb-2026-04-03_Slot_Machine_8xH100",
       "source": "pull_request",
-      "status": "open",
+      "status": "closed",
       "category": "main-track",
       "track": {
         "path": "records/track_10min_16mb",
@@ -12847,14 +12847,14 @@
       "pr": {
         "number": 1282,
         "title": "Slot Machine — 1.10350531 val_bpb (seed 444)",
-        "state": "open",
+        "state": "closed",
         "draft": false,
         "mergedAt": null,
         "htmlUrl": "https://github.com/openai/parameter-golf/pull/1282",
         "authorLogin": "newjordan",
         "authorName": null,
         "createdAt": "2026-04-03T03:24:44Z",
-        "updatedAt": "2026-04-03T03:27:50Z",
+        "updatedAt": "2026-04-05T16:44:38Z",
         "headSha": "9e7d33fdddb73493f643239e91eb9e1ba91bbe34",
         "headRepo": "newjordan/parameter-golf-1"
       },
@@ -61298,16 +61298,16 @@
         "authorLogin": "teslaeco",
         "authorName": null,
         "createdAt": "2026-04-04T19:31:49Z",
-        "updatedAt": "2026-04-05T15:47:54Z",
-        "headSha": "277cc3351ac9a3e3f7f8aa37423c1a7c8888c5b8",
+        "updatedAt": "2026-04-05T16:52:37Z",
+        "headSha": "bbbbfdd9d690e2d0809e00c0f4f7013c021d6b46",
         "headRepo": "Terraforming-Planet/multi-cube-face-letter-assignment"
       },
       "links": {
-        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/277cc3351ac9a3e3f7f8aa37423c1a7c8888c5b8/records/non-record/multi-cube-face-letter-assignment/submission.json",
-        "readme": "https://github.com/openai/parameter-golf/blob/277cc3351ac9a3e3f7f8aa37423c1a7c8888c5b8/records/non-record/multi-cube-face-letter-assignment/README.md",
-        "trainLog": "https://github.com/openai/parameter-golf/blob/277cc3351ac9a3e3f7f8aa37423c1a7c8888c5b8/records/non-record/multi-cube-face-letter-assignment/train.log",
-        "script": "https://github.com/openai/parameter-golf/blob/277cc3351ac9a3e3f7f8aa37423c1a7c8888c5b8/records/non-record/multi-cube-face-letter-assignment/train_gpt.py",
-        "folder": "https://github.com/openai/parameter-golf/tree/277cc3351ac9a3e3f7f8aa37423c1a7c8888c5b8/records/non-record/multi-cube-face-letter-assignment",
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/bbbbfdd9d690e2d0809e00c0f4f7013c021d6b46/records/non-record/multi-cube-face-letter-assignment/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/bbbbfdd9d690e2d0809e00c0f4f7013c021d6b46/records/non-record/multi-cube-face-letter-assignment/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/bbbbfdd9d690e2d0809e00c0f4f7013c021d6b46/records/non-record/multi-cube-face-letter-assignment/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/bbbbfdd9d690e2d0809e00c0f4f7013c021d6b46/records/non-record/multi-cube-face-letter-assignment/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/bbbbfdd9d690e2d0809e00c0f4f7013c021d6b46/records/non-record/multi-cube-face-letter-assignment",
         "pr": "https://github.com/openai/parameter-golf/pull/1356",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
@@ -61320,7 +61320,7 @@
     {
       "id": "record-records-track_10min_16mb-2026-04-04_DiscriminativeTTT_1-0807",
       "source": "pull_request",
-      "status": "open",
+      "status": "closed",
       "category": "main-track",
       "track": {
         "path": "records/track_10min_16mb",
@@ -61368,14 +61368,14 @@
       "pr": {
         "number": 1351,
         "title": "Record: Discriminative TTT — val_bpb 1.0807 (3-seed mean)",
-        "state": "open",
+        "state": "closed",
         "draft": false,
         "mergedAt": null,
         "htmlUrl": "https://github.com/openai/parameter-golf/pull/1351",
         "authorLogin": "resouer",
         "authorName": null,
         "createdAt": "2026-04-04T15:40:40Z",
-        "updatedAt": "2026-04-04T15:40:40Z",
+        "updatedAt": "2026-04-05T16:57:15Z",
         "headSha": "dbb4448d1fb7ddb68731bd884af5895de554107f",
         "headRepo": "resouer/parameter-golf"
       },
@@ -61397,7 +61397,7 @@
     {
       "id": "record-records-track_10min_16mb-2026-04-04_LBFGS-CausalSLOT_1-0046",
       "source": "pull_request",
-      "status": "open",
+      "status": "closed",
       "category": "main-track",
       "track": {
         "path": "records/track_10min_16mb",
@@ -61445,14 +61445,14 @@
       "pr": {
         "number": 1350,
         "title": "Record: L-BFGS Causal SLOT — val_bpb 1.0046 (3-seed mean)",
-        "state": "open",
+        "state": "closed",
         "draft": false,
         "mergedAt": null,
         "htmlUrl": "https://github.com/openai/parameter-golf/pull/1350",
         "authorLogin": "resouer",
         "authorName": null,
         "createdAt": "2026-04-04T15:40:21Z",
-        "updatedAt": "2026-04-05T04:00:11Z",
+        "updatedAt": "2026-04-05T16:56:49Z",
         "headSha": "4ede046aac47273388f3b4d02de228292faa8a50",
         "headRepo": "resouer/parameter-golf"
       },

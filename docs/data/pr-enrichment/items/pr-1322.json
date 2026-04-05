@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-04-04T15:21:20.053Z",
+  "generatedAt": "2026-04-05T16:59:18.770Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 1322,
-    "title": "Lucky V — 1.08540457 val_bpb (seed 444)",
-    "state": "open",
-    "updatedAt": "2026-04-04T15:12:14Z",
+    "title": "closed.",
+    "state": "closed",
+    "updatedAt": "2026-04-05T16:41:46Z",
     "headSha": "8b6f58bc41cf66c74f7e35f9732812313029a7f1",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/1322",
     "authorLogin": "newjordan"
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Lucky V pairs Rascal II transformer tweaks with MuonEq-R optimizer, late int6 QAT, and sliding-window SLOT test-time adaptation for eval gains.",
+    "summary": "11-layer Rascal II couples MuonEq-R + QK gain tweaks with int6 QAT and sliding-window SLOT adaptation for evaluation.",
     "tags": [
       "architecture",
       "optimizer",
-      "quantization",
+      "attention",
       "evaluation"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "MuonEq-R optimizer with extra Newton-Schulz iterations",
-      "Late int6 QAT plus brotli compression",
-      "Sliding-window evaluation with SLOT hidden-state deltas"
+      "MuonEq-R row-normalized momentum for Newton-Schulz",
+      "Per-head QK gain init=5 with FlashAttention 3",
+      "Sliding-window eval with 32-step SLOT adaptation"
     ]
   },
   "compatibility": {
