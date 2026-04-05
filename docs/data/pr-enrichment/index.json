@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-05T00:24:56.523Z",
+  "generatedAt": "2026-04-05T00:54:10.349Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
@@ -234,12 +234,12 @@
     },
     {
       "prNumber": 1354,
-      "title": "Record: varlen+fused mlp+ttt (bpb=1.1092)",
+      "title": "Record: varlen+fused mlp+ttt (bpb=1.1093)",
       "status": "open",
-      "updatedAt": "2026-04-05T00:18:54Z",
-      "headSha": "8315ff3cab5f5664aab71168353dc36a96532a5c",
-      "generatedAt": "2026-04-05T00:24:39.710Z",
-      "summary": "Uses Flash Attention varlen doc packing, a fused Triton MLP kernel, and lean LoRA test-time training to speed training and boost long-context eval.",
+      "updatedAt": "2026-04-05T00:43:40Z",
+      "headSha": "90ee30878f586df955a4985115e947b6a482ab45",
+      "generatedAt": "2026-04-05T00:54:10.154Z",
+      "summary": "Packed docs via FlashAttention varlen with cu_seqlens, fused Triton MLP kernel, and LoRA-based test-time training with smaller-RMSProp chunks.",
       "tags": [
         "attention",
         "architecture",

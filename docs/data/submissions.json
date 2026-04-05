@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-05T00:24:12.867Z",
+  "generatedAt": "2026-04-05T00:54:01.143Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "submissions": [
@@ -13385,7 +13385,7 @@
       },
       "pr": {
         "number": 1354,
-        "title": "Record: varlen+fused mlp+ttt (bpb=1.1092)",
+        "title": "Record: varlen+fused mlp+ttt (bpb=1.1093)",
         "state": "open",
         "draft": false,
         "mergedAt": null,
@@ -13393,16 +13393,16 @@
         "authorLogin": "samacqua",
         "authorName": null,
         "createdAt": "2026-04-04T19:01:24Z",
-        "updatedAt": "2026-04-05T00:18:54Z",
-        "headSha": "8315ff3cab5f5664aab71168353dc36a96532a5c",
+        "updatedAt": "2026-04-05T00:43:40Z",
+        "headSha": "90ee30878f586df955a4985115e947b6a482ab45",
         "headRepo": "samacqua/parameter-golf"
       },
       "links": {
-        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/8315ff3cab5f5664aab71168353dc36a96532a5c/records/track_10min_16mb/2026-04-04_VarLenAttn_FusedMLP_TTT/submission.json",
-        "readme": "https://github.com/openai/parameter-golf/blob/8315ff3cab5f5664aab71168353dc36a96532a5c/records/track_10min_16mb/2026-04-04_VarLenAttn_FusedMLP_TTT/README.md",
-        "trainLog": "https://github.com/openai/parameter-golf/blob/8315ff3cab5f5664aab71168353dc36a96532a5c/records/track_10min_16mb/2026-04-04_VarLenAttn_FusedMLP_TTT/train.log",
-        "script": "https://github.com/openai/parameter-golf/blob/8315ff3cab5f5664aab71168353dc36a96532a5c/records/track_10min_16mb/2026-04-04_VarLenAttn_FusedMLP_TTT/train_gpt.py",
-        "folder": "https://github.com/openai/parameter-golf/tree/8315ff3cab5f5664aab71168353dc36a96532a5c/records/track_10min_16mb/2026-04-04_VarLenAttn_FusedMLP_TTT",
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/90ee30878f586df955a4985115e947b6a482ab45/records/track_10min_16mb/2026-04-04_VarLenAttn_FusedMLP_TTT/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/90ee30878f586df955a4985115e947b6a482ab45/records/track_10min_16mb/2026-04-04_VarLenAttn_FusedMLP_TTT/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/90ee30878f586df955a4985115e947b6a482ab45/records/track_10min_16mb/2026-04-04_VarLenAttn_FusedMLP_TTT/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/90ee30878f586df955a4985115e947b6a482ab45/records/track_10min_16mb/2026-04-04_VarLenAttn_FusedMLP_TTT/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/90ee30878f586df955a4985115e947b6a482ab45/records/track_10min_16mb/2026-04-04_VarLenAttn_FusedMLP_TTT",
         "pr": "https://github.com/openai/parameter-golf/pull/1354",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
