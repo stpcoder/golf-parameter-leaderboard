@@ -1,19 +1,20 @@
 {
-  "generatedAt": "2026-04-05T13:27:46.940Z",
+  "generatedAt": "2026-04-05T13:57:55.308Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
     {
       "prNumber": 1381,
-      "title": "Record: Cautious Muon + SP4096 + Depth Recurrence — val_bpb 1.1604",
+      "title": "Cautious Muon + SP4096 + Depth Recurrence — val_bpb 1.1604 (non-record)",
       "status": "open",
-      "updatedAt": "2026-04-05T13:21:26Z",
-      "headSha": "ab0e4302e64862ff1cecd12382851cd9ca0b5c95",
-      "generatedAt": "2026-04-05T13:27:46.738Z",
-      "summary": "Applies Cautious Muon masking to Muon's Newton-Schulz updates atop the SP4096 depth-recurrent, parallel-residual stack.",
+      "updatedAt": "2026-04-05T13:36:16Z",
+      "headSha": "a6070d3e54dd8d13bc6f2b37c2b5448e5c0b28f3",
+      "generatedAt": "2026-04-05T13:57:48.299Z",
+      "summary": "Adds cautious masking to Muon optimizer in SP4096 depth-recurrence stack with parallel residuals and GPTQ compression.",
       "tags": [
         "optimizer",
-        "architecture"
+        "architecture",
+        "quantization"
       ],
       "flags": {
         "usesValOnly": false,
@@ -2469,10 +2470,10 @@
       "prNumber": 1246,
       "title": "Record: Trinity Ternary GPT — val_bpb 0.9650 (ternary roundtrip)",
       "status": "open",
-      "updatedAt": "2026-04-04T17:11:14Z",
-      "headSha": "ed6bb6f7fd7e49db1ead31f86b3cc0bd3a0ea3ca",
-      "generatedAt": "2026-04-04T17:21:32.703Z",
-      "summary": "Trinity-inspired ternary GPTQ packs BitNet weights via base-3 encoding, widens MLP, and blends Partial RoPE, NeoMuon, EMA/SWA to fit 16MB.",
+      "updatedAt": "2026-04-05T13:27:58Z",
+      "headSha": "24bdadacbebd55330f07749bfcd0bf54517a486a",
+      "generatedAt": "2026-04-05T13:57:55.127Z",
+      "summary": "Trinity-inspired BitNet ternary QAT widens the MLP stack with Partial RoPE and NeoMuon plus EMA/SWA to fit 16MB under Base-3 packing.",
       "tags": [
         "quantization",
         "architecture",

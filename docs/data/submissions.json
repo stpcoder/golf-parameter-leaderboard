@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-05T13:27:39.726Z",
+  "generatedAt": "2026-04-05T13:57:41.646Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "submissions": [
@@ -21407,16 +21407,16 @@
         "authorLogin": "deborahnelson8788726",
         "authorName": null,
         "createdAt": "2026-04-02T02:44:32Z",
-        "updatedAt": "2026-04-04T17:11:14Z",
-        "headSha": "ed6bb6f7fd7e49db1ead31f86b3cc0bd3a0ea3ca",
+        "updatedAt": "2026-04-05T13:27:58Z",
+        "headSha": "24bdadacbebd55330f07749bfcd0bf54517a486a",
         "headRepo": "deborahnelson8788726/parameter-golf"
       },
       "links": {
-        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/ed6bb6f7fd7e49db1ead31f86b3cc0bd3a0ea3ca/records/track_10min_16mb/2026-04-02_Trinity_Hybrid_Ternary_GPTQ_XSA/submission.json",
-        "readme": "https://github.com/openai/parameter-golf/blob/ed6bb6f7fd7e49db1ead31f86b3cc0bd3a0ea3ca/records/track_10min_16mb/2026-04-02_Trinity_Hybrid_Ternary_GPTQ_XSA/README.md",
-        "trainLog": "https://github.com/openai/parameter-golf/blob/ed6bb6f7fd7e49db1ead31f86b3cc0bd3a0ea3ca/records/track_10min_16mb/2026-04-02_Trinity_Hybrid_Ternary_GPTQ_XSA/train.log",
-        "script": "https://github.com/openai/parameter-golf/blob/ed6bb6f7fd7e49db1ead31f86b3cc0bd3a0ea3ca/records/track_10min_16mb/2026-04-02_Trinity_Hybrid_Ternary_GPTQ_XSA/train_gpt.py",
-        "folder": "https://github.com/openai/parameter-golf/tree/ed6bb6f7fd7e49db1ead31f86b3cc0bd3a0ea3ca/records/track_10min_16mb/2026-04-02_Trinity_Hybrid_Ternary_GPTQ_XSA",
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/24bdadacbebd55330f07749bfcd0bf54517a486a/records/track_10min_16mb/2026-04-02_Trinity_Hybrid_Ternary_GPTQ_XSA/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/24bdadacbebd55330f07749bfcd0bf54517a486a/records/track_10min_16mb/2026-04-02_Trinity_Hybrid_Ternary_GPTQ_XSA/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/24bdadacbebd55330f07749bfcd0bf54517a486a/records/track_10min_16mb/2026-04-02_Trinity_Hybrid_Ternary_GPTQ_XSA/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/24bdadacbebd55330f07749bfcd0bf54517a486a/records/track_10min_16mb/2026-04-02_Trinity_Hybrid_Ternary_GPTQ_XSA/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/24bdadacbebd55330f07749bfcd0bf54517a486a/records/track_10min_16mb/2026-04-02_Trinity_Hybrid_Ternary_GPTQ_XSA",
         "pr": "https://github.com/openai/parameter-golf/pull/1246",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
@@ -33231,8 +33231,8 @@
         "author": "X-Abhishek-X",
         "githubId": "X-Abhishek-X",
         "name": "Cautious Muon + SP4096 + Depth Recurrence + Parallel Residuals",
-        "blurb": "Applies Cautious Muon (arXiv:2411.16085) to the Muon optimizer — masks Newton-Schulz updates where the orthogonalized direction disagrees with the raw gradient sign, providing ~1.47x effective convergence per step with zero parameter overhead. Built on PR #1334 (aryanbhosale) base with SP4096 vocabulary, depth recurrence (layers 4,5), parallel residuals (from layer 7), MuonEq-R, QK-Gain 5.0, and full GPTQ INT6 + Brotli compression. Mean val_bpb = 1.1604 (3 seeds, std = 0.0033).",
-        "date": "2026-04-05"
+        "blurb": "Non-record submission. Applies Cautious Muon (arXiv:2411.16085) to the Muon optimizer — masks Newton-Schulz updates where the orthogonalized direction disagrees with the raw gradient sign, providing ~1.47x effective convergence per step with zero parameter overhead. Built on PR #1334 (aryanbhosale) base with SP4096 vocabulary, depth recurrence (layers 4,5), parallel residuals (from layer 7), MuonEq-R, QK-Gain 5.0, and full GPTQ INT6 + Brotli compression. Mean val_bpb = 1.1604 (3 seeds, std = 0.0033).",
+        "date": "2026-04-05T00:00:00Z"
       },
       "metrics": {
         "valBpb": 1.16043988,
@@ -33244,8 +33244,8 @@
         "evalTimeSeconds": null
       },
       "artifact": {
-        "bytesTotal": null,
-        "bytesCode": null,
+        "bytesTotal": 15179504,
+        "bytesCode": 24659,
         "bytesModelInt8Zlib": null
       },
       "flags": {
@@ -33257,7 +33257,7 @@
       },
       "pr": {
         "number": 1381,
-        "title": "Record: Cautious Muon + SP4096 + Depth Recurrence — val_bpb 1.1604",
+        "title": "Cautious Muon + SP4096 + Depth Recurrence — val_bpb 1.1604 (non-record)",
         "state": "open",
         "draft": false,
         "mergedAt": null,
@@ -33265,16 +33265,16 @@
         "authorLogin": "X-Abhishek-X",
         "authorName": null,
         "createdAt": "2026-04-05T13:12:14Z",
-        "updatedAt": "2026-04-05T13:21:26Z",
-        "headSha": "ab0e4302e64862ff1cecd12382851cd9ca0b5c95",
+        "updatedAt": "2026-04-05T13:36:16Z",
+        "headSha": "a6070d3e54dd8d13bc6f2b37c2b5448e5c0b28f3",
         "headRepo": "X-Abhishek-X/parameter-golf"
       },
       "links": {
-        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/ab0e4302e64862ff1cecd12382851cd9ca0b5c95/records/track_10min_16mb/2026-04-05_CautiousMuon_SP4096_DepthRecur/submission.json",
-        "readme": "https://github.com/openai/parameter-golf/blob/ab0e4302e64862ff1cecd12382851cd9ca0b5c95/records/track_10min_16mb/2026-04-05_CautiousMuon_SP4096_DepthRecur/README.md",
-        "trainLog": "https://github.com/openai/parameter-golf/blob/ab0e4302e64862ff1cecd12382851cd9ca0b5c95/records/track_10min_16mb/2026-04-05_CautiousMuon_SP4096_DepthRecur/train.log",
-        "script": "https://github.com/openai/parameter-golf/blob/ab0e4302e64862ff1cecd12382851cd9ca0b5c95/records/track_10min_16mb/2026-04-05_CautiousMuon_SP4096_DepthRecur/train_gpt.py",
-        "folder": "https://github.com/openai/parameter-golf/tree/ab0e4302e64862ff1cecd12382851cd9ca0b5c95/records/track_10min_16mb/2026-04-05_CautiousMuon_SP4096_DepthRecur",
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/a6070d3e54dd8d13bc6f2b37c2b5448e5c0b28f3/records/track_10min_16mb/2026-04-05_CautiousMuon_SP4096_DepthRecur/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/a6070d3e54dd8d13bc6f2b37c2b5448e5c0b28f3/records/track_10min_16mb/2026-04-05_CautiousMuon_SP4096_DepthRecur/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/a6070d3e54dd8d13bc6f2b37c2b5448e5c0b28f3/records/track_10min_16mb/2026-04-05_CautiousMuon_SP4096_DepthRecur/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/a6070d3e54dd8d13bc6f2b37c2b5448e5c0b28f3/records/track_10min_16mb/2026-04-05_CautiousMuon_SP4096_DepthRecur/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/a6070d3e54dd8d13bc6f2b37c2b5448e5c0b28f3/records/track_10min_16mb/2026-04-05_CautiousMuon_SP4096_DepthRecur",
         "pr": "https://github.com/openai/parameter-golf/pull/1381",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
