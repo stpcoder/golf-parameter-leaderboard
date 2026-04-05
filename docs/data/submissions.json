@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-05T00:54:01.143Z",
+  "generatedAt": "2026-04-05T01:24:28.578Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "submissions": [
@@ -40888,7 +40888,7 @@
         "authorLogin": "DariusFeher",
         "authorName": null,
         "createdAt": "2026-04-03T16:10:44Z",
-        "updatedAt": "2026-04-03T16:10:44Z",
+        "updatedAt": "2026-04-05T01:08:15Z",
         "headSha": "1b7a4ac4d62663e7373cd860d9893dd0b0096a29",
         "headRepo": "DariusFeher/parameter-golf"
       },
@@ -47367,6 +47367,83 @@
         "script": "https://github.com/openai/parameter-golf/blob/dbd032d269a0436bb8ccbb82f10e80687372c0cd/records/track_non_record_16mb/2026-04-03_JEPA_LatentPredictiveWorldModel/train_gpt.py",
         "folder": "https://github.com/openai/parameter-golf/tree/dbd032d269a0436bb8ccbb82f10e80687372c0cd/records/track_non_record_16mb/2026-04-03_JEPA_LatentPredictiveWorldModel",
         "pr": "https://github.com/openai/parameter-golf/pull/1312",
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": false,
+        "hasPullRequest": true,
+        "listedInReadme": false
+      }
+    },
+    {
+      "id": "record-records-track_non_record_16mb-2026-04-05_10L_SpatioTemporal_SNN",
+      "source": "pull_request",
+      "status": "open",
+      "category": "non-record",
+      "track": {
+        "path": "records/track_non_record_16mb",
+        "slug": "track_non_record_16mb",
+        "label": "Non-record / 16MB",
+        "official": false,
+        "category": "non-record"
+      },
+      "record": {
+        "folderName": "2026-04-05_10L_SpatioTemporal_SNN",
+        "folderPath": "records/track_non_record_16mb/2026-04-05_10L_SpatioTemporal_SNN",
+        "submissionPath": "records/track_non_record_16mb/2026-04-05_10L_SpatioTemporal_SNN/submission.json",
+        "readmePath": "records/track_non_record_16mb/2026-04-05_10L_SpatioTemporal_SNN/README.md",
+        "trainLogPath": "records/track_non_record_16mb/2026-04-05_10L_SpatioTemporal_SNN/train.log",
+        "scriptPath": "records/track_non_record_16mb/2026-04-05_10L_SpatioTemporal_SNN/train_gpt.py"
+      },
+      "submission": {
+        "author": "Koei Yoshida",
+        "githubId": "ieuko",
+        "name": "Spatio-Temporal SNN Transformer",
+        "blurb": "10 Layers Spiking-MLP + ArcTan Surrogate Gradients + RBF Time Encoding on sp1024. Pushing the limits of biologically-inspired Spiking LLMs in a 10-minute constraint.",
+        "date": "2026-04-05T00:00:00Z"
+      },
+      "metrics": {
+        "valBpb": 1.33185251,
+        "valLoss": 2.24877717,
+        "preQuantValBpb": null,
+        "preQuantValLoss": null,
+        "stepStop": null,
+        "wallclockSeconds": null,
+        "evalTimeSeconds": null
+      },
+      "artifact": {
+        "bytesTotal": 15794883,
+        "bytesCode": 51275,
+        "bytesModelInt8Zlib": null
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
+      "pr": {
+        "number": 1367,
+        "title": "Non-Record: 10L Spatio-Temporal SNN (BPB: 1.3319)",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1367",
+        "authorLogin": "ieuko",
+        "authorName": null,
+        "createdAt": "2026-04-05T01:11:26Z",
+        "updatedAt": "2026-04-05T01:11:26Z",
+        "headSha": "cfc35fc61f94078ce96d535faedd58c71cb03a20",
+        "headRepo": "ieuko/parameter-golf"
+      },
+      "links": {
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/cfc35fc61f94078ce96d535faedd58c71cb03a20/records/track_non_record_16mb/2026-04-05_10L_SpatioTemporal_SNN/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/cfc35fc61f94078ce96d535faedd58c71cb03a20/records/track_non_record_16mb/2026-04-05_10L_SpatioTemporal_SNN/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/cfc35fc61f94078ce96d535faedd58c71cb03a20/records/track_non_record_16mb/2026-04-05_10L_SpatioTemporal_SNN/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/cfc35fc61f94078ce96d535faedd58c71cb03a20/records/track_non_record_16mb/2026-04-05_10L_SpatioTemporal_SNN/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/cfc35fc61f94078ce96d535faedd58c71cb03a20/records/track_non_record_16mb/2026-04-05_10L_SpatioTemporal_SNN",
+        "pr": "https://github.com/openai/parameter-golf/pull/1367",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
       "provenance": {
@@ -60836,16 +60913,16 @@
         "authorLogin": "JulianTang2027",
         "authorName": null,
         "createdAt": "2026-04-04T21:14:33Z",
-        "updatedAt": "2026-04-04T21:14:33Z",
-        "headSha": "3870e25f804127453bd7d4f1b94665dbd3394788",
+        "updatedAt": "2026-04-05T01:15:51Z",
+        "headSha": "e13ac320ce6e0b3a05314ef4d5dc30ca7aaa1083",
         "headRepo": "JulianTang2027/parameter-golf"
       },
       "links": {
-        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/3870e25f804127453bd7d4f1b94665dbd3394788/records/track_non_record_16mb/2026-04-04_GaussianTokenWeighting_NegativeResult/submission.json",
-        "readme": "https://github.com/openai/parameter-golf/blob/3870e25f804127453bd7d4f1b94665dbd3394788/records/track_non_record_16mb/2026-04-04_GaussianTokenWeighting_NegativeResult/README.md",
-        "trainLog": "https://github.com/openai/parameter-golf/blob/3870e25f804127453bd7d4f1b94665dbd3394788/records/track_non_record_16mb/2026-04-04_GaussianTokenWeighting_NegativeResult/train.log",
-        "script": "https://github.com/openai/parameter-golf/blob/3870e25f804127453bd7d4f1b94665dbd3394788/records/track_non_record_16mb/2026-04-04_GaussianTokenWeighting_NegativeResult/train_gpt.py",
-        "folder": "https://github.com/openai/parameter-golf/tree/3870e25f804127453bd7d4f1b94665dbd3394788/records/track_non_record_16mb/2026-04-04_GaussianTokenWeighting_NegativeResult",
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/e13ac320ce6e0b3a05314ef4d5dc30ca7aaa1083/records/track_non_record_16mb/2026-04-04_GaussianTokenWeighting_NegativeResult/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/e13ac320ce6e0b3a05314ef4d5dc30ca7aaa1083/records/track_non_record_16mb/2026-04-04_GaussianTokenWeighting_NegativeResult/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/e13ac320ce6e0b3a05314ef4d5dc30ca7aaa1083/records/track_non_record_16mb/2026-04-04_GaussianTokenWeighting_NegativeResult/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/e13ac320ce6e0b3a05314ef4d5dc30ca7aaa1083/records/track_non_record_16mb/2026-04-04_GaussianTokenWeighting_NegativeResult/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/e13ac320ce6e0b3a05314ef4d5dc30ca7aaa1083/records/track_non_record_16mb/2026-04-04_GaussianTokenWeighting_NegativeResult",
         "pr": "https://github.com/openai/parameter-golf/pull/1360",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },

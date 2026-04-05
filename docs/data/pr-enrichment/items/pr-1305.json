@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-04-03T16:40:31.251Z",
+  "generatedAt": "2026-04-05T01:24:51.112Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 1305,
     "title": "[Non-record] Scaled Byte-level H-Net matches 4-hour subword-level baseline (H-Net val_bpb = 1.2070)",
     "state": "open",
-    "updatedAt": "2026-04-03T16:10:44Z",
+    "updatedAt": "2026-04-05T01:08:15Z",
     "headSha": "1b7a4ac4d62663e7373cd860d9893dd0b0096a29",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/1305",
     "authorLogin": "DariusFeher"
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Scaled 12-layer byte-level H-Net with GQA/INT6 GPTQ, QAT, compile-friendly chunking, and sliding-window eval to match the 4h baseline.",
+    "summary": "Scaled byte260 H-Net (12L OL3) applies INT6 GPTQ/QAT with torch.compile-friendly chunking and sliding-window eval to match the 4h subword baseline.",
     "tags": [
       "architecture",
       "quantization",
-      "sliding-window-eval",
+      "evaluation",
       "non-record"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "12L H-Net (3/6/3) setup with fixed chunk cap for torch.compile",
-      "INT6 GPTQ + QAT training with zstd-22 compression",
-      "Stride-64 sliding-window evaluation"
+      "Scaled 12L H-Net byte260 with OL3 encoder/main/decoder",
+      "INT6 GPTQ + QAT for compact quantized weights",
+      "Fixed chunk cap for torch.compile plus stride-64 sliding eval"
     ]
   },
   "compatibility": {

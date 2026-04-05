@@ -1,8 +1,32 @@
 {
-  "generatedAt": "2026-04-05T00:54:10.349Z",
+  "generatedAt": "2026-04-05T01:24:51.316Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 1367,
+      "title": "Non-Record: 10L Spatio-Temporal SNN (BPB: 1.3319)",
+      "status": "open",
+      "updatedAt": "2026-04-05T01:11:26Z",
+      "headSha": "cfc35fc61f94078ce96d535faedd58c71cb03a20",
+      "generatedAt": "2026-04-05T01:24:36.764Z",
+      "summary": "Non-record 10-layer Spiking Transformer pairs Spiking-MLP with ArcTan surrogate gradients and RBF temporal encoding to run autoregressive text within tight limits.",
+      "tags": [
+        "architecture",
+        "optimizer",
+        "quantization",
+        "non-record"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1367.json"
+    },
     {
       "prNumber": 1366,
       "title": "Non-record: EMA+SWA Tight Averaging with Fused TTT LoRA + Sliding Window (1.1371 BPB)",
@@ -121,13 +145,12 @@
       "prNumber": 1360,
       "title": "Non-record: Gaussian per-token loss reweighting — what goes wrong and why (+0.014 bpb)",
       "status": "open",
-      "updatedAt": "2026-04-04T21:14:33Z",
-      "headSha": "3870e25f804127453bd7d4f1b94665dbd3394788",
-      "generatedAt": "2026-04-04T21:22:54.351Z",
-      "summary": "Adds Gaussian per-token loss weighting around the batch mean on PR #180 and shows the reshaped objective hurts the actual bpb despite better weighted val loss.",
+      "updatedAt": "2026-04-05T01:15:51Z",
+      "headSha": "e13ac320ce6e0b3a05314ef4d5dc30ca7aaa1083",
+      "generatedAt": "2026-04-05T01:24:45.415Z",
+      "summary": "Adds Gaussian per-token loss weighting around batch mean to focus gradients on mid-difficulty tokens atop PR #180 and documents why it regresses.",
       "tags": [
         "regularization",
-        "evaluation",
         "non-record"
       ],
       "flags": {
@@ -1166,14 +1189,14 @@
       "prNumber": 1305,
       "title": "[Non-record] Scaled Byte-level H-Net matches 4-hour subword-level baseline (H-Net val_bpb = 1.2070)",
       "status": "open",
-      "updatedAt": "2026-04-03T16:10:44Z",
+      "updatedAt": "2026-04-05T01:08:15Z",
       "headSha": "1b7a4ac4d62663e7373cd860d9893dd0b0096a29",
-      "generatedAt": "2026-04-03T16:40:31.251Z",
-      "summary": "Scaled 12-layer byte-level H-Net with GQA/INT6 GPTQ, QAT, compile-friendly chunking, and sliding-window eval to match the 4h baseline.",
+      "generatedAt": "2026-04-05T01:24:51.112Z",
+      "summary": "Scaled byte260 H-Net (12L OL3) applies INT6 GPTQ/QAT with torch.compile-friendly chunking and sliding-window eval to match the 4h subword baseline.",
       "tags": [
         "architecture",
         "quantization",
-        "sliding-window-eval",
+        "evaluation",
         "non-record"
       ],
       "flags": {
