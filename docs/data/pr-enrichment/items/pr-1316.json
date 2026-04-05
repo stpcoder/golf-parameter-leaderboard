@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-04-03T22:43:27.375Z",
+  "generatedAt": "2026-04-05T06:56:14.216Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 1316,
     "title": "Full-Depth MLP Megakernel + Fused Attention Preprocessing (non-record)",
     "state": "open",
-    "updatedAt": "2026-04-03T22:38:29Z",
-    "headSha": "b6a76b33a3fad706686d0577736d3b9397395fe7",
+    "updatedAt": "2026-04-05T06:49:12Z",
+    "headSha": "27ce0acf3403e681904ccb82d0b29c514106ebe4",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/1316",
     "authorLogin": "AR6420"
   },
@@ -19,18 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Tile-engine inspired Triton kernels keep the 1536-dim MLP register-resident while fusing QK RMSNorm+RoPE+q_gain to shrink prep memory.",
+    "summary": "Tile-engine-inspired Triton fusion keeps the 1536-dim MLP intermediate in registers across gate/activation/down projections while condensing attention RMSNorm+RoPE preprocessing.",
     "tags": [
       "architecture",
       "attention",
       "non-record"
     ],
     "usesValOnly": false,
-    "valOnlyReasoning": "",
+    "valOnlyReasoning": "not a val-only regime",
     "techniques": [
-      "full-depth MLP megakernel with tiled register accumulation",
-      "fused attention preprocessing (RMSNorm+RoPE+q_gain)",
-      "tile-engine memory-hierarchy metaphor"
+      "Register-resident full-depth MLP megakernel",
+      "Tiled BLOCK_K=64 accumulation avoids HBM spills for the 1536-dim hidden state",
+      "Fused QK RMSNorm+RoPE+gain preprocessing kernels"
     ]
   },
   "compatibility": {

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-05T05:55:45.949Z",
+  "generatedAt": "2026-04-05T06:56:14.403Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
@@ -1071,10 +1071,10 @@
       "prNumber": 1316,
       "title": "Full-Depth MLP Megakernel + Fused Attention Preprocessing (non-record)",
       "status": "open",
-      "updatedAt": "2026-04-03T22:38:29Z",
-      "headSha": "b6a76b33a3fad706686d0577736d3b9397395fe7",
-      "generatedAt": "2026-04-03T22:43:27.375Z",
-      "summary": "Tile-engine inspired Triton kernels keep the 1536-dim MLP register-resident while fusing QK RMSNorm+RoPE+q_gain to shrink prep memory.",
+      "updatedAt": "2026-04-05T06:49:12Z",
+      "headSha": "27ce0acf3403e681904ccb82d0b29c514106ebe4",
+      "generatedAt": "2026-04-05T06:56:14.216Z",
+      "summary": "Tile-engine-inspired Triton fusion keeps the 1536-dim MLP intermediate in registers across gate/activation/down projections while condensing attention RMSNorm+RoPE preprocessing.",
       "tags": [
         "architecture",
         "attention",

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-05T06:25:34.862Z",
+  "generatedAt": "2026-04-05T06:56:05.504Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "submissions": [
@@ -22656,6 +22656,83 @@
         "onMain": true,
         "hasPullRequest": true,
         "listedInReadme": true
+      }
+    },
+    {
+      "id": "record-records-track_non_record_16mb-2026-04-03_MegakernelFusion_TileEngine",
+      "source": "pull_request",
+      "status": "open",
+      "category": "non-record",
+      "track": {
+        "path": "records/track_non_record_16mb",
+        "slug": "track_non_record_16mb",
+        "label": "Non-record / 16MB",
+        "official": false,
+        "category": "non-record"
+      },
+      "record": {
+        "folderName": "2026-04-03_MegakernelFusion_TileEngine",
+        "folderPath": "records/track_non_record_16mb/2026-04-03_MegakernelFusion_TileEngine",
+        "submissionPath": "records/track_non_record_16mb/2026-04-03_MegakernelFusion_TileEngine/submission.json",
+        "readmePath": "records/track_non_record_16mb/2026-04-03_MegakernelFusion_TileEngine/README.md",
+        "trainLogPath": "records/track_non_record_16mb/2026-04-03_MegakernelFusion_TileEngine/train.log",
+        "scriptPath": "records/track_non_record_16mb/2026-04-03_MegakernelFusion_TileEngine/train_gpt.py"
+      },
+      "submission": {
+        "author": "Adarsh Reddy Balanolla",
+        "githubId": "AR6420",
+        "name": "Full-Depth MLP Megakernel + Fused Attention Preprocessing",
+        "blurb": "Tile engine-inspired block-level Triton fusion: entire MLP forward pass runs in a single kernel where the 1536-dim intermediate is processed via tiled register accumulation and never materializes in HBM. Fused QK RMSNorm + RoPE + q_gain reduces attention preprocessing from 6+ to 2 kernel launches. 41% memory reduction. Based on PR #1019 (abaybektursun).",
+        "date": "2026-04-04"
+      },
+      "metrics": {
+        "valBpb": 1.131,
+        "valLoss": 1.9096,
+        "preQuantValBpb": null,
+        "preQuantValLoss": null,
+        "stepStop": null,
+        "wallclockSeconds": null,
+        "evalTimeSeconds": null
+      },
+      "artifact": {
+        "bytesTotal": null,
+        "bytesCode": null,
+        "bytesModelInt8Zlib": null
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
+      "pr": {
+        "number": 1316,
+        "title": "Full-Depth MLP Megakernel + Fused Attention Preprocessing (non-record)",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1316",
+        "authorLogin": "AR6420",
+        "authorName": null,
+        "createdAt": "2026-04-03T22:38:29Z",
+        "updatedAt": "2026-04-05T06:49:12Z",
+        "headSha": "27ce0acf3403e681904ccb82d0b29c514106ebe4",
+        "headRepo": "AR6420/parameter-golf"
+      },
+      "links": {
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/27ce0acf3403e681904ccb82d0b29c514106ebe4/records/track_non_record_16mb/2026-04-03_MegakernelFusion_TileEngine/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/27ce0acf3403e681904ccb82d0b29c514106ebe4/records/track_non_record_16mb/2026-04-03_MegakernelFusion_TileEngine/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/27ce0acf3403e681904ccb82d0b29c514106ebe4/records/track_non_record_16mb/2026-04-03_MegakernelFusion_TileEngine/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/27ce0acf3403e681904ccb82d0b29c514106ebe4/records/track_non_record_16mb/2026-04-03_MegakernelFusion_TileEngine/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/27ce0acf3403e681904ccb82d0b29c514106ebe4/records/track_non_record_16mb/2026-04-03_MegakernelFusion_TileEngine",
+        "pr": "https://github.com/openai/parameter-golf/pull/1316",
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": false,
+        "hasPullRequest": true,
+        "listedInReadme": false
       }
     },
     {
@@ -61925,83 +62002,6 @@
         "script": "https://github.com/openai/parameter-golf/blob/03ac49cdcacaab22183d0d4c7fb171bcc059fada/records/track_10min_16mb/2026-04-03_SLOT24_LR012_Stride96/train_gpt.py",
         "folder": "https://github.com/openai/parameter-golf/tree/03ac49cdcacaab22183d0d4c7fb171bcc059fada/records/track_10min_16mb/2026-04-03_SLOT24_LR012_Stride96",
         "pr": "https://github.com/openai/parameter-golf/pull/1313",
-        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
-      },
-      "provenance": {
-        "onMain": false,
-        "hasPullRequest": true,
-        "listedInReadme": false
-      }
-    },
-    {
-      "id": "record-records-track_non_record_16mb-2026-04-03_MegakernelFusion_TileEngine",
-      "source": "pull_request",
-      "status": "open",
-      "category": "non-record",
-      "track": {
-        "path": "records/track_non_record_16mb",
-        "slug": "track_non_record_16mb",
-        "label": "Non-record / 16MB",
-        "official": false,
-        "category": "non-record"
-      },
-      "record": {
-        "folderName": "2026-04-03_MegakernelFusion_TileEngine",
-        "folderPath": "records/track_non_record_16mb/2026-04-03_MegakernelFusion_TileEngine",
-        "submissionPath": "records/track_non_record_16mb/2026-04-03_MegakernelFusion_TileEngine/submission.json",
-        "readmePath": "records/track_non_record_16mb/2026-04-03_MegakernelFusion_TileEngine/README.md",
-        "trainLogPath": "records/track_non_record_16mb/2026-04-03_MegakernelFusion_TileEngine/train.log",
-        "scriptPath": "records/track_non_record_16mb/2026-04-03_MegakernelFusion_TileEngine/train_gpt.py"
-      },
-      "submission": {
-        "author": "Adarsh Reddy Balanolla",
-        "githubId": "AR6420",
-        "name": "Full-Depth MLP Megakernel + Fused Attention Preprocessing",
-        "blurb": "Tile engine-inspired block-level Triton fusion: entire MLP forward pass runs in a single kernel where the 1536-dim intermediate is processed via tiled register accumulation and never materializes in HBM. Fused QK RMSNorm + RoPE + q_gain reduces attention preprocessing from 6+ to 2 kernel launches. 41% memory reduction. Based on PR #1019 (abaybektursun).",
-        "date": "2026-04-03"
-      },
-      "metrics": {
-        "valBpb": null,
-        "valLoss": null,
-        "preQuantValBpb": null,
-        "preQuantValLoss": null,
-        "stepStop": null,
-        "wallclockSeconds": null,
-        "evalTimeSeconds": null
-      },
-      "artifact": {
-        "bytesTotal": null,
-        "bytesCode": null,
-        "bytesModelInt8Zlib": null
-      },
-      "flags": {
-        "usesValOnly": false
-      },
-      "detection": {
-        "valOnlyConfidence": "none",
-        "valOnlyMatches": []
-      },
-      "pr": {
-        "number": 1316,
-        "title": "Full-Depth MLP Megakernel + Fused Attention Preprocessing (non-record)",
-        "state": "open",
-        "draft": false,
-        "mergedAt": null,
-        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1316",
-        "authorLogin": "AR6420",
-        "authorName": null,
-        "createdAt": "2026-04-03T22:38:29Z",
-        "updatedAt": "2026-04-03T22:38:29Z",
-        "headSha": "b6a76b33a3fad706686d0577736d3b9397395fe7",
-        "headRepo": "AR6420/parameter-golf"
-      },
-      "links": {
-        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/b6a76b33a3fad706686d0577736d3b9397395fe7/records/track_non_record_16mb/2026-04-03_MegakernelFusion_TileEngine/submission.json",
-        "readme": "https://github.com/openai/parameter-golf/blob/b6a76b33a3fad706686d0577736d3b9397395fe7/records/track_non_record_16mb/2026-04-03_MegakernelFusion_TileEngine/README.md",
-        "trainLog": "https://github.com/openai/parameter-golf/blob/b6a76b33a3fad706686d0577736d3b9397395fe7/records/track_non_record_16mb/2026-04-03_MegakernelFusion_TileEngine/train.log",
-        "script": "https://github.com/openai/parameter-golf/blob/b6a76b33a3fad706686d0577736d3b9397395fe7/records/track_non_record_16mb/2026-04-03_MegakernelFusion_TileEngine/train_gpt.py",
-        "folder": "https://github.com/openai/parameter-golf/tree/b6a76b33a3fad706686d0577736d3b9397395fe7/records/track_non_record_16mb/2026-04-03_MegakernelFusion_TileEngine",
-        "pr": "https://github.com/openai/parameter-golf/pull/1316",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
       "provenance": {
