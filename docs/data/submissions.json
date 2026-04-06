@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-06T15:04:22.446Z",
+  "generatedAt": "2026-04-06T15:34:28.306Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "submissions": [
@@ -9851,7 +9851,7 @@
         "authorLogin": "erichroepke",
         "authorName": null,
         "createdAt": "2026-04-06T14:46:25Z",
-        "updatedAt": "2026-04-06T14:46:25Z",
+        "updatedAt": "2026-04-06T15:12:15Z",
         "headSha": "bf03f501f0e322be0c59ca122e8aeb7834fc0d89",
         "headRepo": "erichroepke/parameter-golf"
       },
@@ -15472,7 +15472,7 @@
         "authorLogin": "AnirudhRahul",
         "authorName": null,
         "createdAt": "2026-03-30T18:58:12Z",
-        "updatedAt": "2026-03-31T19:00:04Z",
+        "updatedAt": "2026-04-06T15:06:21Z",
         "headSha": "63cc3a350d1f038c9e4ee99ec9af46e2ac2f915b",
         "headRepo": "AnirudhRahul/parameter-golf"
       },
@@ -58233,6 +58233,83 @@
       }
     },
     {
+      "id": "record-records-track_non_record_16mb-2026-04-06_StateSpaceHybrid_AttentionAnchors",
+      "source": "pull_request",
+      "status": "open",
+      "category": "non-record",
+      "track": {
+        "path": "records/track_non_record_16mb",
+        "slug": "track_non_record_16mb",
+        "label": "Non-record / 16MB",
+        "official": false,
+        "category": "non-record"
+      },
+      "record": {
+        "folderName": "2026-04-06_StateSpaceHybrid_AttentionAnchors",
+        "folderPath": "records/track_non_record_16mb/2026-04-06_StateSpaceHybrid_AttentionAnchors",
+        "submissionPath": "records/track_non_record_16mb/2026-04-06_StateSpaceHybrid_AttentionAnchors/submission.json",
+        "readmePath": "records/track_non_record_16mb/2026-04-06_StateSpaceHybrid_AttentionAnchors/README.md",
+        "trainLogPath": "records/track_non_record_16mb/2026-04-06_StateSpaceHybrid_AttentionAnchors/train.log",
+        "scriptPath": "records/track_non_record_16mb/2026-04-06_StateSpaceHybrid_AttentionAnchors/train_gpt.py"
+      },
+      "submission": {
+        "author": "Greg / Codex AutoResearch",
+        "githubId": "greqone",
+        "name": "Non-record: state-space hybrid with attention anchors",
+        "blurb": "Local Blackwell scaling result on the standard scorer path. Layout AAASSASSS keeps more lower-layer attention, uses S4D-style state-space blocks from a compile-friendly architecture family, exports ssm.* tensors in float16, and retains ENABLE_TORCH_COMPILE=0 for the promoted kept run.",
+        "date": "2026-04-06T00:00:00Z"
+      },
+      "metrics": {
+        "valBpb": 1.84399667,
+        "valLoss": 3.11351113,
+        "preQuantValBpb": null,
+        "preQuantValLoss": null,
+        "stepStop": null,
+        "wallclockSeconds": null,
+        "evalTimeSeconds": null
+      },
+      "artifact": {
+        "bytesTotal": 14781218,
+        "bytesCode": 57756,
+        "bytesModelInt8Zlib": 14723462
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
+      "pr": {
+        "number": 1404,
+        "title": "Non-record: state-space hybrid with attention anchors",
+        "state": "open",
+        "draft": true,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1404",
+        "authorLogin": "greqone",
+        "authorName": null,
+        "createdAt": "2026-04-06T03:33:53Z",
+        "updatedAt": "2026-04-06T15:15:00Z",
+        "headSha": "e849134f251fe0f504ff7b5f94f283867293e54f",
+        "headRepo": "greqone/parameter-golf"
+      },
+      "links": {
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/e849134f251fe0f504ff7b5f94f283867293e54f/records/track_non_record_16mb/2026-04-06_StateSpaceHybrid_AttentionAnchors/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/e849134f251fe0f504ff7b5f94f283867293e54f/records/track_non_record_16mb/2026-04-06_StateSpaceHybrid_AttentionAnchors/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/e849134f251fe0f504ff7b5f94f283867293e54f/records/track_non_record_16mb/2026-04-06_StateSpaceHybrid_AttentionAnchors/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/e849134f251fe0f504ff7b5f94f283867293e54f/records/track_non_record_16mb/2026-04-06_StateSpaceHybrid_AttentionAnchors/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/e849134f251fe0f504ff7b5f94f283867293e54f/records/track_non_record_16mb/2026-04-06_StateSpaceHybrid_AttentionAnchors",
+        "pr": "https://github.com/openai/parameter-golf/pull/1404",
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": false,
+        "hasPullRequest": true,
+        "listedInReadme": false
+      }
+    },
+    {
       "id": "record-records-track_non_record_16mb-2026-03-19_Deep14x416_KV2_SP1024_MLX_750it",
       "source": "pull_request",
       "status": "open",
@@ -61227,83 +61304,6 @@
         "script": "https://github.com/openai/parameter-golf/blob/6de701e4ee5ae190f3925cef9723c45b0f6b39c9/records/track_non_record_16mb/2026-03-22_AutoPrecisionBudget_10L_1xH100/train_gpt.py",
         "folder": "https://github.com/openai/parameter-golf/tree/6de701e4ee5ae190f3925cef9723c45b0f6b39c9/records/track_non_record_16mb/2026-03-22_AutoPrecisionBudget_10L_1xH100",
         "pr": "https://github.com/openai/parameter-golf/pull/431",
-        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
-      },
-      "provenance": {
-        "onMain": false,
-        "hasPullRequest": true,
-        "listedInReadme": false
-      }
-    },
-    {
-      "id": "record-records-track_non_record_16mb-2026-04-06_StateSpaceHybrid_AttentionAnchors",
-      "source": "pull_request",
-      "status": "open",
-      "category": "non-record",
-      "track": {
-        "path": "records/track_non_record_16mb",
-        "slug": "track_non_record_16mb",
-        "label": "Non-record / 16MB",
-        "official": false,
-        "category": "non-record"
-      },
-      "record": {
-        "folderName": "2026-04-06_StateSpaceHybrid_AttentionAnchors",
-        "folderPath": "records/track_non_record_16mb/2026-04-06_StateSpaceHybrid_AttentionAnchors",
-        "submissionPath": "records/track_non_record_16mb/2026-04-06_StateSpaceHybrid_AttentionAnchors/submission.json",
-        "readmePath": "records/track_non_record_16mb/2026-04-06_StateSpaceHybrid_AttentionAnchors/README.md",
-        "trainLogPath": "records/track_non_record_16mb/2026-04-06_StateSpaceHybrid_AttentionAnchors/train.log",
-        "scriptPath": "records/track_non_record_16mb/2026-04-06_StateSpaceHybrid_AttentionAnchors/train_gpt.py"
-      },
-      "submission": {
-        "author": "Greg / Codex AutoResearch",
-        "githubId": "greqone",
-        "name": "Non-record: state-space hybrid with attention anchors",
-        "blurb": "Fixed-step local sign-of-life on the standard scorer path. Layout AASSSASSS with exact attention anchors, S4D-style state-space blocks from a compile-friendly architecture family, and an export policy that keeps ssm.* tensors in float16 while the kept run itself uses ENABLE_TORCH_COMPILE=0.",
-        "date": "2026-04-06T00:00:00Z"
-      },
-      "metrics": {
-        "valBpb": 3.15875948,
-        "valLoss": 5.33343307,
-        "preQuantValBpb": null,
-        "preQuantValLoss": null,
-        "stepStop": null,
-        "wallclockSeconds": null,
-        "evalTimeSeconds": null
-      },
-      "artifact": {
-        "bytesTotal": 12403935,
-        "bytesCode": 57756,
-        "bytesModelInt8Zlib": 12346179
-      },
-      "flags": {
-        "usesValOnly": false
-      },
-      "detection": {
-        "valOnlyConfidence": "none",
-        "valOnlyMatches": []
-      },
-      "pr": {
-        "number": 1404,
-        "title": "Non-record: state-space hybrid with attention anchors",
-        "state": "open",
-        "draft": true,
-        "mergedAt": null,
-        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1404",
-        "authorLogin": "greqone",
-        "authorName": null,
-        "createdAt": "2026-04-06T03:33:53Z",
-        "updatedAt": "2026-04-06T14:19:12Z",
-        "headSha": "9aed7700e0ce7ba5df7933663479814dfb93742b",
-        "headRepo": "greqone/parameter-golf"
-      },
-      "links": {
-        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/9aed7700e0ce7ba5df7933663479814dfb93742b/records/track_non_record_16mb/2026-04-06_StateSpaceHybrid_AttentionAnchors/submission.json",
-        "readme": "https://github.com/openai/parameter-golf/blob/9aed7700e0ce7ba5df7933663479814dfb93742b/records/track_non_record_16mb/2026-04-06_StateSpaceHybrid_AttentionAnchors/README.md",
-        "trainLog": "https://github.com/openai/parameter-golf/blob/9aed7700e0ce7ba5df7933663479814dfb93742b/records/track_non_record_16mb/2026-04-06_StateSpaceHybrid_AttentionAnchors/train.log",
-        "script": "https://github.com/openai/parameter-golf/blob/9aed7700e0ce7ba5df7933663479814dfb93742b/records/track_non_record_16mb/2026-04-06_StateSpaceHybrid_AttentionAnchors/train_gpt.py",
-        "folder": "https://github.com/openai/parameter-golf/tree/9aed7700e0ce7ba5df7933663479814dfb93742b/records/track_non_record_16mb/2026-04-06_StateSpaceHybrid_AttentionAnchors",
-        "pr": "https://github.com/openai/parameter-golf/pull/1404",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
       "provenance": {

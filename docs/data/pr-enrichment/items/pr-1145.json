@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-31T19:15:18.466Z",
+  "generatedAt": "2026-04-06T15:34:44.028Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 1145,
     "title": "Record: 1.1109 BPB FullGPTQ XSA11 + online (legal) ngram augment",
     "state": "open",
-    "updatedAt": "2026-03-31T19:00:04Z",
+    "updatedAt": "2026-04-06T15:06:21Z",
     "headSha": "63cc3a350d1f038c9e4ee99ec9af46e2ac2f915b",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/1145",
     "authorLogin": "AnirudhRahul"
@@ -19,17 +19,15 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Retunes a GPTQ XSA11 bigram-hash stack and adds a single-pass causal online n-gram agreement overlay during eval.",
+    "summary": "Retunes WARMDOWN_ITERS and layers a causal n-gram agreement evaluator that boosts one prefix-hinted token per position atop GPTQ XSA11.",
     "tags": [
-      "architecture",
       "training-schedule",
       "evaluation"
     ],
     "usesValOnly": false,
-    "valOnlyReasoning": "Uses standard training; the val-only component is an eval-time overlay.",
+    "valOnlyReasoning": "",
     "techniques": [
-      "GPTQ XSA11 bigram-hash backbone",
-      "Retuned schedule with WARMDOWN_ITERS=4000",
+      "Retuned WARMDOWN_ITERS schedule",
       "Single-pass causal n-gram agreement overlay"
     ]
   },
