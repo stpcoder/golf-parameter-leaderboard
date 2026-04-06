@@ -1,8 +1,31 @@
 {
-  "generatedAt": "2026-04-06T18:35:08.951Z",
+  "generatedAt": "2026-04-06T19:06:32.511Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 1424,
+      "title": "Non-record: Extended Compute Scaling Analysis (50K steps, 1.0858 BPB, 3 seeds (each run ~12 hours on 4xA100MIG))",
+      "status": "open",
+      "updatedAt": "2026-04-06T19:03:31Z",
+      "headSha": "e73d565a36ff869ce7c190444a5c1fee2158beb5",
+      "generatedAt": "2026-04-06T19:05:41.488Z",
+      "summary": "Extends PR#549's LeakyReLU²+TTT+Parallel Muon stack to 50K steps on 4×A100 MIG, highlighting long warmdown compression recovery and compute-scaled TTT gains.",
+      "tags": [
+        "non-record",
+        "training-schedule",
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1424.json"
+    },
     {
       "prNumber": 1423,
       "title": "Record: SP8192 + Pre-Quant TTT + QK-Gain 5.0 + Depth Recurrence + MuonEq-R — val_bpb 1.0791 (3-seed mean)",
@@ -78,10 +101,10 @@
       "prNumber": 1420,
       "title": "Record: Triple Loop + Fused Kernels + Parallel Residuals + N-gram Tilt; val_bpb 1.08014 (5-seed mean)",
       "status": "open",
-      "updatedAt": "2026-04-06T18:29:15Z",
-      "headSha": "96103dfaeeeed8b80de2b3a8059408b06c46de34",
-      "generatedAt": "2026-04-06T18:35:03.879Z",
-      "summary": "Triple-loop recurrence with earlier activation, fused MLP kernels, parallel residuals, and causal eval-time n-gram tilt improve throughput and calibration.",
+      "updatedAt": "2026-04-06T18:54:52Z",
+      "headSha": "9f0ba5f21d2d31d6592339bd310ab6cafc477656",
+      "generatedAt": "2026-04-06T19:05:47.633Z",
+      "summary": "Triple-loop recurrence with earlier activation plus fused Triton/CUTLASS MLP kernels, GPT-J parallel residuals, and eval-time causal n-gram tilt.",
       "tags": [
         "architecture",
         "training-schedule",
@@ -354,30 +377,6 @@
       "file": "items/pr-1408.json"
     },
     {
-      "prNumber": 1407,
-      "title": "Non-record: Extended Compute Scaling Analysis (20K steps, 1.0960 BPB, 3 seeds (each run ~6 hours on 4xA100MIG))",
-      "status": "open",
-      "updatedAt": "2026-04-06T05:19:30Z",
-      "headSha": "80311efcf92cfcacccce16a39c529851bd2811d0",
-      "generatedAt": "2026-04-06T08:33:33.841Z",
-      "summary": "Extended-run of PR #549 stack for 20k steps on 4×A100 MIG to chart warmdown-driven BPB drops and artifact-size recovery under unlimited compute.",
-      "tags": [
-        "non-record",
-        "training-schedule",
-        "regularization",
-        "evaluation"
-      ],
-      "flags": {
-        "usesValOnly": false,
-        "usesValOnlyAi": false,
-        "usesValOnlyCollector": false
-      },
-      "compatibility": {
-        "valOnlyMatchesCollector": true
-      },
-      "file": "items/pr-1407.json"
-    },
-    {
       "prNumber": 1406,
       "title": "Record: 11L Depth Recurrence + Discriminative Pre-Quant TTT (8xH100) — val_bpb 1.0887 (3-seed mean)",
       "status": "open",
@@ -429,14 +428,14 @@
       "prNumber": 1404,
       "title": "Non-record: state-space hybrid with attention anchors",
       "status": "open",
-      "updatedAt": "2026-04-06T15:15:00Z",
-      "headSha": "e849134f251fe0f504ff7b5f94f283867293e54f",
-      "generatedAt": "2026-04-06T15:34:38.592Z",
-      "summary": "Hybrid AAASSASSS layout mixes attention anchors with compile-friendly S4D-Lin state-space blocks and float16 ssm export on the standard scorer path.",
+      "updatedAt": "2026-04-06T18:38:56Z",
+      "headSha": "475ef6458285dc5d0d0340e92983d6bb9457ccbe",
+      "generatedAt": "2026-04-06T19:05:53.747Z",
+      "summary": "Front-load attention with layout AAAAAAASS and targeted fp16 export for state-space tensors to keep a compile-friendly hybrid on a single-shard Blackwell continuation.",
       "tags": [
         "architecture",
         "quantization",
-        "attention",
+        "evaluation",
         "non-record"
       ],
       "flags": {
@@ -616,12 +615,13 @@
       "prNumber": 1394,
       "title": "Record: SP8192 + GPTQ Embeddings + Depth Recurrence + MuonEq-R + SDClip  — val_bpb 1.08563 (5 seed mean)",
       "status": "open",
-      "updatedAt": "2026-04-05T21:06:33Z",
+      "updatedAt": "2026-04-06T18:46:34Z",
       "headSha": "f4fa11fe7671036dd1e3b945e405750f21ddecfc",
-      "generatedAt": "2026-04-05T21:30:09.315Z",
-      "summary": "Shared-loop layers 4-5 with GPTQ-quantized embeddings, MuonEq-R, and STD-based clipping over an 8k vocab keep the compressed model under 16MB.",
+      "generatedAt": "2026-04-06T19:05:57.615Z",
+      "summary": "Loops layers 4-5 via depth recurrence, expands to SP8192 vocab, GPTQ-quantizes embeddings, and pairs row-normalized Muon with std-based clipping.",
       "tags": [
         "quantization",
+        "muon",
         "architecture",
         "tokenization"
       ],
@@ -4154,13 +4154,14 @@
       "prNumber": 1196,
       "title": "Non-record: LLM-JEPA — Joint Embedding Prediction (val_bpb 2.2020)",
       "status": "open",
-      "updatedAt": "2026-04-01T02:46:20Z",
+      "updatedAt": "2026-04-06T18:57:55Z",
       "headSha": "4914d51d7e88871c796094de1c3cc721f43c4358",
-      "generatedAt": "2026-04-01T02:48:58.409Z",
-      "summary": "Adds JEPA head where context embeddings predict target span embeddings via a lightweight MLP auxiliary loss alongside AR training.",
+      "generatedAt": "2026-04-06T19:06:01.964Z",
+      "summary": "Adds a JEPA auxiliary loss by training a lightweight context-to-target embedding predictor with stop-gradient while keeping the exported AR head intact.",
       "tags": [
         "architecture",
         "training-schedule",
+        "evaluation",
         "non-record"
       ],
       "flags": {
@@ -4177,12 +4178,13 @@
       "prNumber": 1195,
       "title": "Non-record: Learning Adapters on Random Linear Maps (val_bpb 2.2017)",
       "status": "open",
-      "updatedAt": "2026-04-01T02:46:18Z",
+      "updatedAt": "2026-04-06T18:57:30Z",
       "headSha": "f2c462d8f5a580209f86a0b0db5c6e25cc44699c",
-      "generatedAt": "2026-04-01T02:49:03.140Z",
-      "summary": "Trains a transformer with all projection matrices frozen as random orthogonal maps, learning only diagonal scale/shift adapters (~0.5% params).",
+      "generatedAt": "2026-04-06T19:06:07.073Z",
+      "summary": "Freezes all transformer weight matrices as random orthogonal maps and trains only diagonal scale+shift adapters to probe random projection structure.",
       "tags": [
         "architecture",
+        "compression",
         "non-record"
       ],
       "flags": {
@@ -4199,15 +4201,15 @@
       "prNumber": 1194,
       "title": "Non-record: Text Diffusion (MDLM) — Masked Discrete Diffusion (val_bpb 3.3801)",
       "status": "open",
-      "updatedAt": "2026-04-01T02:46:17Z",
+      "updatedAt": "2026-04-06T18:57:02Z",
       "headSha": "a6f3a3469650f3ef8b8d2706e6e718129e8ebfb9",
-      "generatedAt": "2026-04-01T02:49:07.491Z",
-      "summary": "Hybrid text generation couples 30/70 AR and masked diffusion losses with bidirectional masking plus causal eval attention for a diffusion-first submission.",
+      "generatedAt": "2026-04-06T19:06:11.445Z",
+      "summary": "MDLM text diffusion trains with 30% causal AR and 70% bidirectional masked diffusion under a cosine masking schedule, then evaluates with causal attention.",
       "tags": [
         "architecture",
-        "training-schedule",
         "attention",
-        "non-record"
+        "training-schedule",
+        "evaluation"
       ],
       "flags": {
         "usesValOnly": false,
@@ -4223,10 +4225,10 @@
       "prNumber": 1193,
       "title": "Non-record: Universal Transformer + Adaptive Density (val_bpb 1.4390)",
       "status": "open",
-      "updatedAt": "2026-04-01T02:46:15Z",
+      "updatedAt": "2026-04-06T18:54:56Z",
       "headSha": "952a223e13aebb788359eccae5577aba0f1a8ea1",
-      "generatedAt": "2026-04-01T02:49:12.389Z",
-      "summary": "Loops a single shared transformer block 12× with per-iteration scales and a sparse-to-dense curriculum to explore universal transformer recurrence.",
+      "generatedAt": "2026-04-06T19:06:16.448Z",
+      "summary": "Shared-depth Universal Transformer loops one block 12× with per-iteration params and sparse-to-dense curriculum for stable recurrence.",
       "tags": [
         "architecture",
         "training-schedule",
@@ -4247,11 +4249,12 @@
       "prNumber": 1192,
       "title": "Non-record: Fused Triton Megakernels — RMSNorm + LeakyReLU² (val_bpb 1.3560)",
       "status": "open",
-      "updatedAt": "2026-04-01T02:46:14Z",
+      "updatedAt": "2026-04-06T18:59:16Z",
       "headSha": "c22ffe99c73611cb7255851e81b5c940ab606098",
-      "generatedAt": "2026-04-01T02:49:17.229Z",
-      "summary": "Fuses RMSNorm and LeakyReLU² into Triton megakernels for faster evaluation while keeping PyTorch training and fallback compatibility.",
+      "generatedAt": "2026-04-06T19:06:21.153Z",
+      "summary": "Evaluation uses fused Triton megakernels for RMSNorm and squared LeakyReLU, reducing launch overhead so more iterations fit the budget.",
       "tags": [
+        "architecture",
         "evaluation",
         "non-record"
       ],
@@ -4269,13 +4272,13 @@
       "prNumber": 1191,
       "title": "Non-record: H-Net Dynamic Chunking — Learned Tokenization Layer (val_bpb 1.3587)",
       "status": "open",
-      "updatedAt": "2026-04-01T02:46:12Z",
+      "updatedAt": "2026-04-06T18:58:48Z",
       "headSha": "c4cf7174371e392462c864c1d6025e73a55b44f4",
-      "generatedAt": "2026-04-01T02:49:22.265Z",
-      "summary": "Adds an H-Net-inspired learned chunker that predicts soft boundaries and blends neighbouring embeddings before the transformer stack.",
+      "generatedAt": "2026-04-06T19:06:25.755Z",
+      "summary": "Adds a lightweight learned dynamic chunking layer that predicts soft boundaries between BPE tokens to blend embeddings before the transformer.",
       "tags": [
-        "tokenization",
         "architecture",
+        "tokenization",
         "non-record"
       ],
       "flags": {
@@ -12301,14 +12304,13 @@
     },
     {
       "prNumber": 675,
-      "title": "Record: Hypergradient SLOT-24 — val_bpb 0.7625 (3-seed mean)",
+      "title": "Record: L-BFGS SLOT — val_bpb 0.5793 (3-seed mean)",
       "status": "open",
-      "updatedAt": "2026-04-06T17:42:08Z",
-      "headSha": "0dd4ddca393280f862e8c3c778918d97645a9faf",
-      "generatedAt": "2026-04-06T18:05:25.023Z",
-      "summary": "Replaces SLOT-24’s fixed cosine LR with hypergradient descent so each eval step adapts its learning rate based on current and previous gradient alignment.",
+      "updatedAt": "2026-04-06T18:55:16Z",
+      "headSha": "e056825c3a6981ced672838534d93dc673b47e28",
+      "generatedAt": "2026-04-06T19:06:32.417Z",
+      "summary": "SLOT swaps AdamW for an 8-step L-BFGS (history=10, strong Wolfe) to leverage curvature in the tiny 1,536-parameter per-sample update.",
       "tags": [
-        "training-schedule",
         "optimizer",
         "non-record"
       ],

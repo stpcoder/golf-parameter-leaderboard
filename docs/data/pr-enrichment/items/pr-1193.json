@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-04-01T02:49:12.389Z",
+  "generatedAt": "2026-04-06T19:06:16.448Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 1193,
     "title": "Non-record: Universal Transformer + Adaptive Density (val_bpb 1.4390)",
     "state": "open",
-    "updatedAt": "2026-04-01T02:46:15Z",
+    "updatedAt": "2026-04-06T18:54:56Z",
     "headSha": "952a223e13aebb788359eccae5577aba0f1a8ea1",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/1193",
     "authorLogin": "dentity007"
@@ -19,7 +19,7 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Loops a single shared transformer block 12× with per-iteration scales and a sparse-to-dense curriculum to explore universal transformer recurrence.",
+    "summary": "Shared-depth Universal Transformer loops one block 12× with per-iteration params and sparse-to-dense curriculum for stable recurrence.",
     "tags": [
       "architecture",
       "training-schedule",
@@ -29,9 +29,9 @@
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Shared-weight block looped 12× with per-step scale embeddings",
-      "Sparse-to-dense 50% adaptive density curriculum",
-      "Compresses 4.56M params into 2.87MB"
+      "Shared-weight block with per-iteration scale/shift parameters",
+      "50% sparse-to-dense curriculum for gradient stabilization during recurrence",
+      "Int6 + brotli compression keeping artifacts under 3MB"
     ]
   },
   "compatibility": {

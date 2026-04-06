@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-04-06T19:05:41.488Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1424,
+    "title": "Non-record: Extended Compute Scaling Analysis (50K steps, 1.0858 BPB, 3 seeds (each run ~12 hours on 4xA100MIG))",
+    "state": "open",
+    "updatedAt": "2026-04-06T19:03:31Z",
+    "headSha": "e73d565a36ff869ce7c190444a5c1fee2158beb5",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1424",
+    "authorLogin": "OnlyJundong"
+  },
+  "inputs": {
+    "hash": "333c1651a7101d4267d971ebe25bd793307b61c975586544bbd6b9a9c3a8cf24",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-04-06_ExtendedCompute_50K_12hours_4xA100MIG_ScalingAnalysis/README.md",
+      "records/track_non_record_16mb/2026-04-06_ExtendedCompute_20K_6hours_4xA100MIG_ScalingAnalysis/README.md"
+    ],
+    "submissionCount": 2
+  },
+  "output": {
+    "summary": "Extends PR#549's LeakyReLU²+TTT+Parallel Muon stack to 50K steps on 4×A100 MIG, highlighting long warmdown compression recovery and compute-scaled TTT gains.",
+    "tags": [
+      "non-record",
+      "training-schedule",
+      "evaluation"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "Standard training run; no val-only regime.",
+    "techniques": [
+      "Extended warmdown-driven compression recovery",
+      "Power-law compute scaling to 50K steps",
+      "TTT gains tracked across compute budgets"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

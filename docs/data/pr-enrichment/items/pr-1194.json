@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-04-01T02:49:07.491Z",
+  "generatedAt": "2026-04-06T19:06:11.445Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 1194,
     "title": "Non-record: Text Diffusion (MDLM) — Masked Discrete Diffusion (val_bpb 3.3801)",
     "state": "open",
-    "updatedAt": "2026-04-01T02:46:17Z",
+    "updatedAt": "2026-04-06T18:57:02Z",
     "headSha": "a6f3a3469650f3ef8b8d2706e6e718129e8ebfb9",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/1194",
     "authorLogin": "dentity007"
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Hybrid text generation couples 30/70 AR and masked diffusion losses with bidirectional masking plus causal eval attention for a diffusion-first submission.",
+    "summary": "MDLM text diffusion trains with 30% causal AR and 70% bidirectional masked diffusion under a cosine masking schedule, then evaluates with causal attention.",
     "tags": [
       "architecture",
-      "training-schedule",
       "attention",
-      "non-record"
+      "training-schedule",
+      "evaluation"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Hybrid AR and masked diffusion losses (30/70 split)",
-      "Bidirectional attention for masked prediction, causal for autoregressive evaluation",
-      "Cosine masking schedule for diffusion training"
+      "hybrid AR/diffusion loss split",
+      "cosine masking curriculum",
+      "bidirectional training with causal eval"
     ]
   },
   "compatibility": {

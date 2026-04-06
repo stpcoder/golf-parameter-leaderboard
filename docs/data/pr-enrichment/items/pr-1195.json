@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-04-01T02:49:03.140Z",
+  "generatedAt": "2026-04-06T19:06:07.073Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 1195,
     "title": "Non-record: Learning Adapters on Random Linear Maps (val_bpb 2.2017)",
     "state": "open",
-    "updatedAt": "2026-04-01T02:46:18Z",
+    "updatedAt": "2026-04-06T18:57:30Z",
     "headSha": "f2c462d8f5a580209f86a0b0db5c6e25cc44699c",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/1195",
     "authorLogin": "dentity007"
@@ -19,16 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Trains a transformer with all projection matrices frozen as random orthogonal maps, learning only diagonal scale/shift adapters (~0.5% params).",
+    "summary": "Freezes all transformer weight matrices as random orthogonal maps and trains only diagonal scale+shift adapters to probe random projection structure.",
     "tags": [
       "architecture",
+      "compression",
       "non-record"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Frozen random orthogonal Q/K/V/proj/up/down weights",
-      "Trainable diagonal scale and shift adapters only"
+      "Frozen random orthogonal projections for Q/K/V/proj/MLP layers",
+      "Train only diagonal scale and shift adapters (~0.5% of params)",
+      "Measures how much language structure emerges from random maps plus element-wise tweaks"
     ]
   },
   "compatibility": {

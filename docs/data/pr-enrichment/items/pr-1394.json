@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-04-05T21:30:09.315Z",
+  "generatedAt": "2026-04-06T19:05:57.615Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 1394,
     "title": "Record: SP8192 + GPTQ Embeddings + Depth Recurrence + MuonEq-R + SDClip  — val_bpb 1.08563 (5 seed mean)",
     "state": "open",
-    "updatedAt": "2026-04-05T21:06:33Z",
+    "updatedAt": "2026-04-06T18:46:34Z",
     "headSha": "f4fa11fe7671036dd1e3b945e405750f21ddecfc",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/1394",
     "authorLogin": "clarkkev"
@@ -19,18 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Shared-loop layers 4-5 with GPTQ-quantized embeddings, MuonEq-R, and STD-based clipping over an 8k vocab keep the compressed model under 16MB.",
+    "summary": "Loops layers 4-5 via depth recurrence, expands to SP8192 vocab, GPTQ-quantizes embeddings, and pairs row-normalized Muon with std-based clipping.",
     "tags": [
       "quantization",
+      "muon",
       "architecture",
       "tokenization"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "GPTQ embeddings plus sigma-scaled SDClip",
-      "Looped layers 4-5 sharing params",
-      "Row-normalized MuonEq-R with 8k vocab"
+      "depth recurrence over shared layers 4-5",
+      "GPTQ embeddings with std-scaled clip thresholds",
+      "row-normalized MuonEq-R"
     ]
   },
   "compatibility": {

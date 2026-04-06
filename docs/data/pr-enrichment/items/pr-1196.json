@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-04-01T02:48:58.409Z",
+  "generatedAt": "2026-04-06T19:06:01.964Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 1196,
     "title": "Non-record: LLM-JEPA — Joint Embedding Prediction (val_bpb 2.2020)",
     "state": "open",
-    "updatedAt": "2026-04-01T02:46:20Z",
+    "updatedAt": "2026-04-06T18:57:55Z",
     "headSha": "4914d51d7e88871c796094de1c3cc721f43c4358",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/1196",
     "authorLogin": "dentity007"
@@ -19,18 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Adds JEPA head where context embeddings predict target span embeddings via a lightweight MLP auxiliary loss alongside AR training.",
+    "summary": "Adds a JEPA auxiliary loss by training a lightweight context-to-target embedding predictor with stop-gradient while keeping the exported AR head intact.",
     "tags": [
       "architecture",
       "training-schedule",
+      "evaluation",
       "non-record"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Context embeddings predict target spans through JEPA auxiliary head",
-      "Stop-gradient targets keep JEPA predictions stable",
-      "Lightweight MLP learns span embeddings separate from export"
+      "JEPA auxiliary loss with lightweight predictor head",
+      "Stop-gradient BYOL-style regression on target span embeddings",
+      "Inference exports only the AR head to drop the JEPA predictor"
     ]
   },
   "compatibility": {
