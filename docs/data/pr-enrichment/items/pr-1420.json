@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-04-06T18:05:07.432Z",
+  "generatedAt": "2026-04-06T18:35:03.879Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 1420,
     "title": "Record: Triple Loop + Fused Kernels + Parallel Residuals + N-gram Tilt; val_bpb 1.08014 (5-seed mean)",
     "state": "open",
-    "updatedAt": "2026-04-06T17:56:12Z",
-    "headSha": "d0b01cbe37e18ce6dd1d3ba3ddb2ea058de5348d",
+    "updatedAt": "2026-04-06T18:29:15Z",
+    "headSha": "96103dfaeeeed8b80de2b3a8059408b06c46de34",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/1420",
     "authorLogin": "abaybektursun"
   },
@@ -19,18 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Triple-loop recurrence with fused MLP kernels, GPT-J parallel residuals, and causal eval-time n-gram tilt to squeeze more depth and throughput before scoring.",
+    "summary": "Triple-loop recurrence with earlier activation, fused MLP kernels, parallel residuals, and causal eval-time n-gram tilt improve throughput and calibration.",
     "tags": [
       "architecture",
       "training-schedule",
       "evaluation"
     ],
     "usesValOnly": false,
-    "valOnlyReasoning": "Standard training regime; no val-only optimization steps were used.",
+    "valOnlyReasoning": "",
     "techniques": [
-      "Triple-loop recurrence with earlier activation",
-      "Triton TMA + CUTLASS EVT fused MLP kernels",
-      "Causal eval-time n-gram tilt"
+      "Triple-loop recurrence (NUM_LOOPS=3) with earlier enable to add virtual depth",
+      "Fused Triton TMA forward + CUTLASS EVT backward MLP kernels for faster steps",
+      "Causal eval-time n-gram tilt that biases logits via prefix-only hints"
     ]
   },
   "compatibility": {
