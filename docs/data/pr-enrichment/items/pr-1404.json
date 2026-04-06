@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-04-06T19:05:53.747Z",
+  "generatedAt": "2026-04-06T22:06:00.878Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 1404,
     "title": "Non-record: state-space hybrid with attention anchors",
     "state": "open",
-    "updatedAt": "2026-04-06T18:38:56Z",
-    "headSha": "475ef6458285dc5d0d0340e92983d6bb9457ccbe",
+    "updatedAt": "2026-04-06T21:52:20Z",
+    "headSha": "28e7be3bb6d5e934ec12511fabf987c8b4afe7dd",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/1404",
     "authorLogin": "greqone"
   },
@@ -19,19 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Front-load attention with layout AAAAAAASS and targeted fp16 export for state-space tensors to keep a compile-friendly hybrid on a single-shard Blackwell continuation.",
+    "summary": "Hybrid model keeps six attention blocks and three SSM blocks, compact fp16 export for recurrent params, and stays compile-friendly while running with compile disabled.",
     "tags": [
       "architecture",
       "quantization",
-      "evaluation",
       "non-record"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Hybrid SSM-attention stack (AAAAAAASS) with short SSM tail",
-      "Float16 export limited to ssm_coeff/log_decay/ssm_d to cut bytes",
-      "Scorer-path Blackwell continuation matched by wallclock on one shard"
+      "Score-clean state-space hybrid with 6A/3S layout",
+      "Targeted fp16 export for ssm_coeff/log_decay/d to preserve bytes",
+      "Compile-friendly design evaluated with ENABLE_TORCH_COMPILE=0"
     ]
   },
   "compatibility": {

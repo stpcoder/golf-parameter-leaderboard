@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-04-06T21:36:00.869Z",
+  "generatedAt": "2026-04-06T22:06:07.995Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 877,
     "title": "Non-record: sin² activation + causal screening pipeline",
     "state": "open",
-    "updatedAt": "2026-04-06T21:35:26Z",
-    "headSha": "756497a79ecfbd549967029044d70129f6d91b58",
+    "updatedAt": "2026-04-06T21:58:07Z",
+    "headSha": "46174679923675b5e784b4608d3884e57defa7b4",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/877",
     "authorLogin": "clthuang"
   },
@@ -20,7 +20,7 @@
     "submissionCount": 2
   },
   "output": {
-    "summary": "Automated causal screening swapped MLP relu² for sin² to probe periodic activations while leaving the baseline architecture and training unchanged.",
+    "summary": "Causal-DAG screening replaced MLP relu² with sin² to retain squared outputs while adding smooth periodic gradients via an automated experimentation pipeline.",
     "tags": [
       "architecture",
       "evaluation",
@@ -29,9 +29,9 @@
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Periodic sin² replacement for relu² in MLP layers",
-      "Causal-DAG guided screening pipeline evaluating 24 interventions",
-      "Exploring adaptive multi-token prediction and selective rho-1 loss masking"
+      "sin² periodic MLP activation preserving squared outputs",
+      "automated causal-DAG screening pipeline",
+      "adaptive multi-token prediction and selective loss masking explorations"
     ]
   },
   "compatibility": {
