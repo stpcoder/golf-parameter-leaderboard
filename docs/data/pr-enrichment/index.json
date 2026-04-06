@@ -1,8 +1,32 @@
 {
-  "generatedAt": "2026-04-06T19:06:32.511Z",
+  "generatedAt": "2026-04-06T19:36:05.386Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 1425,
+      "title": "Non-record: PROTEUS Feature Ablation - Parallel Residuals + Mixed INT5/INT6 + TTT on DGX Spark GB10",
+      "status": "open",
+      "updatedAt": "2026-04-06T19:17:05Z",
+      "headSha": "81b30eeaa7187b06b78620272a94058cc5810ddd",
+      "generatedAt": "2026-04-06T19:35:48.141Z",
+      "summary": "Ablates PROTEUS v1.6 stack with parallel residual dual-stream blocks, mixed INT5/INT6 quantization, and SLOT/TTT tweaks on GB10.",
+      "tags": [
+        "architecture",
+        "quantization",
+        "evaluation",
+        "non-record"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1425.json"
+    },
     {
       "prNumber": 1424,
       "title": "Non-record: Extended Compute Scaling Analysis (50K steps, 1.0858 BPB, 3 seeds (each run ~12 hours on 4xA100MIG))",
@@ -101,13 +125,13 @@
       "prNumber": 1420,
       "title": "Record: Triple Loop + Fused Kernels + Parallel Residuals + N-gram Tilt; val_bpb 1.08014 (5-seed mean)",
       "status": "open",
-      "updatedAt": "2026-04-06T18:54:52Z",
-      "headSha": "9f0ba5f21d2d31d6592339bd310ab6cafc477656",
-      "generatedAt": "2026-04-06T19:05:47.633Z",
-      "summary": "Triple-loop recurrence with earlier activation plus fused Triton/CUTLASS MLP kernels, GPT-J parallel residuals, and eval-time causal n-gram tilt.",
+      "updatedAt": "2026-04-06T19:33:38Z",
+      "headSha": "635dd75de72f86ec71c73a8abdc22ff60216a363",
+      "generatedAt": "2026-04-06T19:35:54.764Z",
+      "summary": "Triple-loop depth recurrence, surgical Triton/CUTLASS fused MLP kernels, GPT-J parallel residuals, and causal eval-time n-gram tilt.",
       "tags": [
         "architecture",
-        "training-schedule",
+        "attention",
         "evaluation"
       ],
       "flags": {
@@ -195,14 +219,14 @@
       "prNumber": 1416,
       "title": "Record: SP8192 + Pre-Quant TTT — val_bpb 1.07948 (3-seed mean)",
       "status": "open",
-      "updatedAt": "2026-04-06T15:12:15Z",
+      "updatedAt": "2026-04-06T19:27:16Z",
       "headSha": "bf03f501f0e322be0c59ca122e8aeb7834fc0d89",
-      "generatedAt": "2026-04-06T15:34:35.593Z",
-      "summary": "Pre-quant AdamW TTT adapts the SP8192 base before SDClip/GPTQ compression so full-precision weights quantize after targeted fine-tuning.",
+      "generatedAt": "2026-04-06T19:35:59.481Z",
+      "summary": "Stacked SP8192 skip-gate depth-recurrence base with pre-quant AdamW TTT so the FP model adapts before SDClip/GPTQ compression.",
       "tags": [
+        "architecture",
         "quantization",
-        "training-schedule",
-        "architecture"
+        "training-schedule"
       ],
       "flags": {
         "usesValOnly": false,
@@ -2471,30 +2495,6 @@
         "valOnlyMatchesCollector": true
       },
       "file": "items/pr-1293.json"
-    },
-    {
-      "prNumber": 1291,
-      "title": "Record: Vocab4096 + MLP4.0x + SLOT - val_bpb 1.0925 (3-seed mean)",
-      "status": "open",
-      "updatedAt": "2026-04-03T07:54:53Z",
-      "headSha": "e48c8d2bffcc6caa52be918513d11e6a5ae1de38",
-      "generatedAt": "2026-04-03T08:08:32.293Z",
-      "summary": "11L GQA+MLP4x transformer with vocab4096 applies int6 Hessian GPTQ and sliding-window eval plus SLOT per-batch delta tuning for final scoring.",
-      "tags": [
-        "quantization",
-        "architecture",
-        "evaluation",
-        "sliding-window-eval"
-      ],
-      "flags": {
-        "usesValOnly": false,
-        "usesValOnlyAi": false,
-        "usesValOnlyCollector": false
-      },
-      "compatibility": {
-        "valOnlyMatchesCollector": true
-      },
-      "file": "items/pr-1291.json"
     },
     {
       "prNumber": 1290,
@@ -9256,10 +9256,10 @@
       "prNumber": 877,
       "title": "Non-record: sin² activation + causal screening pipeline",
       "status": "open",
-      "updatedAt": "2026-04-06T18:19:50Z",
-      "headSha": "78c32e3c6286683ddebb92b97b6f76e501f03302",
-      "generatedAt": "2026-04-06T18:35:08.834Z",
-      "summary": "Replaces relu² MLP activation with sin² via causal screening that explores adaptive multi-token prediction and selective loss masking.",
+      "updatedAt": "2026-04-06T19:22:06Z",
+      "headSha": "24e5820d5bfbf9e4dfa129027ea9a95ce289f721",
+      "generatedAt": "2026-04-06T19:36:05.265Z",
+      "summary": "Replaces relu² MLP activation with sin² and uses a causal-DAG-guided screening pipeline plus adaptive MTP/Rho-1 ideas to surface promising changes.",
       "tags": [
         "architecture",
         "evaluation",

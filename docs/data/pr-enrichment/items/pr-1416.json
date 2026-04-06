@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-04-06T15:34:35.593Z",
+  "generatedAt": "2026-04-06T19:35:59.481Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 1416,
     "title": "Record: SP8192 + Pre-Quant TTT — val_bpb 1.07948 (3-seed mean)",
     "state": "open",
-    "updatedAt": "2026-04-06T15:12:15Z",
+    "updatedAt": "2026-04-06T19:27:16Z",
     "headSha": "bf03f501f0e322be0c59ca122e8aeb7834fc0d89",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/1416",
     "authorLogin": "erichroepke"
@@ -19,18 +19,17 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Pre-quant AdamW TTT adapts the SP8192 base before SDClip/GPTQ compression so full-precision weights quantize after targeted fine-tuning.",
+    "summary": "Stacked SP8192 skip-gate depth-recurrence base with pre-quant AdamW TTT so the FP model adapts before SDClip/GPTQ compression.",
     "tags": [
+      "architecture",
       "quantization",
-      "training-schedule",
-      "architecture"
+      "training-schedule"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Pre-quant AdamW TTT fine-tunes the EMA model prior to SDClip/GPTQ compression",
-      "SP8192 setup with skip gates, depth recurrence, and MuonEq-R optimizer as the shared backbone",
-      "SDClip/GPTQ quantizes embeddings and weights using std-scaled clipping for tighter compression"
+      "Pre-quant AdamW TTT adapts FP weights before GPTQ",
+      "SP8192 base with depth recurrence, skip gates, GPTQ embeddings, and SDClip"
     ]
   },
   "compatibility": {
