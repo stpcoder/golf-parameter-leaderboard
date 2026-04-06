@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-04-06T14:34:18.177Z",
+  "generatedAt": "2026-04-06T16:35:27.569Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 1405,
     "title": "Record: Scylla + GPTQ + BH3072 — val_bpb 1.0856 (3-seed mean)",
     "state": "open",
-    "updatedAt": "2026-04-06T14:09:32Z",
+    "updatedAt": "2026-04-06T16:28:14Z",
     "headSha": "b965076d78d8b81a891fdf99cd0a0aea18895381",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/1405",
     "authorLogin": "anthony-maio"
@@ -19,7 +19,7 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Combines Scylla tokenizer, AR self-gen GPTQ int6, BigramHash 3072x112, VRL, and XSA-11 tweaks with EMA/SWA and late QAT.",
+    "summary": "Combines Scylla tokenization with AR self-gen GPTQ int6 on a VRL-enhanced 11-layer GQA architecture plus BigramHash compression to stay under 16MB.",
     "tags": [
       "tokenization",
       "quantization",
@@ -29,9 +29,9 @@
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Scylla tokenizer with 998-vocab TokenMonster",
-      "GPTQ int6 with Cholesky compensation and self-generated calibration",
-      "EMA/SWA and late QAT on VRL/XSA-11 architecture"
+      "Scylla tokenizer + BigramHash 3072x112 for denser tokens",
+      "AR self-gen Full Hessian GPTQ int6 with Cholesky compensation",
+      "VRL+XSA layers, QK-Gain, EMA+SWA, Late QAT to polish compressed model"
     ]
   },
   "compatibility": {

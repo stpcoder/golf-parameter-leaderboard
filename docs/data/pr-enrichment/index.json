@@ -1,8 +1,102 @@
 {
-  "generatedAt": "2026-04-06T16:04:58.865Z",
+  "generatedAt": "2026-04-06T16:35:32.601Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 1421,
+      "title": "[Record] 11L Depth Recurrence + EMA Tuning (0.9965) — val_bpb 1.0925",
+      "status": "open",
+      "updatedAt": "2026-04-06T16:33:59Z",
+      "headSha": "aaa954cf92b7f7801fb3764bd41416557185b6d6",
+      "generatedAt": "2026-04-06T16:35:03.748Z",
+      "summary": "Builds on the depth-recurrence transformer architecture and tunes EMA decay for cleaner GPTQ int6 quantization.",
+      "tags": [
+        "architecture",
+        "training-schedule",
+        "quantization"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1421.json"
+    },
+    {
+      "prNumber": 1420,
+      "title": "Record: Triple Loop + Fused Kernels + Parallel Residuals + N-gram Tilt; val_bpb 1.08014 (5-seed mean)",
+      "status": "open",
+      "updatedAt": "2026-04-06T16:26:57Z",
+      "headSha": "c166cf9b99b46d08b795938bdfcfb45dc57e3521",
+      "generatedAt": "2026-04-06T16:35:10.323Z",
+      "summary": "Add earlier triple-loop recurrence with GPT-J-style parallel residuals, fused MLP kernels, and eval-time causal n-gram tilt for extra depth-throughput.",
+      "tags": [
+        "architecture",
+        "training-schedule",
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1420.json"
+    },
+    {
+      "prNumber": 1419,
+      "title": "Runpod ar selfgen nextsteps",
+      "status": "closed",
+      "updatedAt": "2026-04-06T16:14:52Z",
+      "headSha": "e29aa1fcc1b0cd96e4a9a09e6d251437225d81db",
+      "generatedAt": "2026-04-06T16:35:16.230Z",
+      "summary": "Uses autoregressive self-generated calibration for full-Hessian GPTQ while extending XSA to every layer and widening BigramHash to stay legal without external data.",
+      "tags": [
+        "quantization",
+        "architecture",
+        "attention",
+        "compression"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1419.json"
+    },
+    {
+      "prNumber": 1418,
+      "title": "Non-record: Autoresearch-Guided Optimization — 100+ Experiments + Negative Results",
+      "status": "open",
+      "updatedAt": "2026-04-06T16:04:47Z",
+      "headSha": "3e7354ef88bb5f81ac935124ad9625e7dd48eba4",
+      "generatedAt": "2026-04-06T16:35:22.600Z",
+      "summary": "Autoresearch-driven sweeps with SLOT logit-bias checks map MuonEq-R/optimizer tweaks and QK-Gain settings while logging quantization regressions.",
+      "tags": [
+        "optimizer",
+        "evaluation",
+        "training-schedule",
+        "non-record"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1418.json"
+    },
     {
       "prNumber": 1417,
       "title": "Mixed INT5/INT6 QAT from step 1 (1.3039 bpb)",
@@ -263,10 +357,10 @@
       "prNumber": 1405,
       "title": "Record: Scylla + GPTQ + BH3072 — val_bpb 1.0856 (3-seed mean)",
       "status": "open",
-      "updatedAt": "2026-04-06T14:09:32Z",
+      "updatedAt": "2026-04-06T16:28:14Z",
       "headSha": "b965076d78d8b81a891fdf99cd0a0aea18895381",
-      "generatedAt": "2026-04-06T14:34:18.177Z",
-      "summary": "Combines Scylla tokenizer, AR self-gen GPTQ int6, BigramHash 3072x112, VRL, and XSA-11 tweaks with EMA/SWA and late QAT.",
+      "generatedAt": "2026-04-06T16:35:27.569Z",
+      "summary": "Combines Scylla tokenization with AR self-gen GPTQ int6 on a VRL-enhanced 11-layer GQA architecture plus BigramHash compression to stay under 16MB.",
       "tags": [
         "tokenization",
         "quantization",
@@ -12161,13 +12255,14 @@
       "prNumber": 675,
       "title": "Record: Hypergradient SLOT-24 — val_bpb 0.7625 (3-seed mean)",
       "status": "open",
-      "updatedAt": "2026-04-06T01:00:53Z",
-      "headSha": "0b8e387b0493c9a9ac7a0e2338d887f3e158d045",
-      "generatedAt": "2026-04-06T08:35:30.571Z",
-      "summary": "Hypergradient descent replaces SLOT's fixed cosine LR, adapting stepsizes per eval sample to match each document's optimization landscape.",
+      "updatedAt": "2026-04-06T16:30:52Z",
+      "headSha": "2504fce04cd64523aba2199bbbf070be05dbd286",
+      "generatedAt": "2026-04-06T16:35:32.507Z",
+      "summary": "Replaces SLOT-24's fixed cosine LR schedule with hypergradient descent that tweaks the step size per sample via gradient alignment during score-first evaluation.",
       "tags": [
+        "training-schedule",
+        "sliding-window-eval",
         "evaluation",
-        "optimizer",
         "non-record"
       ],
       "flags": {

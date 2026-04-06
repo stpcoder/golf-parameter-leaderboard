@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-04-06T16:35:22.600Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1418,
+    "title": "Non-record: Autoresearch-Guided Optimization — 100+ Experiments + Negative Results",
+    "state": "open",
+    "updatedAt": "2026-04-06T16:04:47Z",
+    "headSha": "3e7354ef88bb5f81ac935124ad9625e7dd48eba4",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1418",
+    "authorLogin": "Park-Tae-Hwan"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-04-06_MuonEqR_SLOT_QKGain3/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Autoresearch-driven sweeps with SLOT logit-bias checks map MuonEq-R/optimizer tweaks and QK-Gain settings while logging quantization regressions.",
+    "tags": [
+      "optimizer",
+      "evaluation",
+      "training-schedule",
+      "non-record"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Autoresearch hyperparameter sweep pipeline",
+      "SLOT logit-bias evaluation overlay",
+      "MuonEq-R optimizer regression logging"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-04-06T08:35:30.571Z",
+  "generatedAt": "2026-04-06T16:35:32.507Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 675,
     "title": "Record: Hypergradient SLOT-24 — val_bpb 0.7625 (3-seed mean)",
     "state": "open",
-    "updatedAt": "2026-04-06T01:00:53Z",
-    "headSha": "0b8e387b0493c9a9ac7a0e2338d887f3e158d045",
+    "updatedAt": "2026-04-06T16:30:52Z",
+    "headSha": "2504fce04cd64523aba2199bbbf070be05dbd286",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/675",
     "authorLogin": "ChideraIbe123"
   },
@@ -20,17 +20,18 @@
     "submissionCount": 2
   },
   "output": {
-    "summary": "Hypergradient descent replaces SLOT's fixed cosine LR, adapting stepsizes per eval sample to match each document's optimization landscape.",
+    "summary": "Replaces SLOT-24's fixed cosine LR schedule with hypergradient descent that tweaks the step size per sample via gradient alignment during score-first evaluation.",
     "tags": [
+      "training-schedule",
+      "sliding-window-eval",
       "evaluation",
-      "optimizer",
       "non-record"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Hypergradient descent adapts SLOT learning rates per step",
-      "Score-first SLOT evaluation with frozen states and no eval-time data access"
+      "Hypergradient descent adapts LR by current/previous gradient dot product",
+      "Score-first SLOT-24 evaluation with frozen model"
     ]
   },
   "compatibility": {
